@@ -1,0 +1,786 @@
+<?php
+
+$Rodada = array();
+
+$Cache[1] = explode(',', '1,2,3,4,5,6,8,9,7,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36');
+$Cache[2] = explode(',', '1,10,19,23,6,15,24,33,2,21,26,29,7,16,25,34,3,20,30,32,8,11,17,35,4,13,22,31,9,18,27,36,5,12,14,28');
+$Cache[3] = explode(',', '1,11,21,31,5,15,25,35,9,10,24,30,4,14,20,34,8,18,19,29,3,13,23,33,2,7,17,28,12,22,27,32,6,16,26,36');
+$Cache[4] = explode(',', '1,8,20,27,4,6,23,25,2,18,26,30,14,16,28,35,9,12,21,33,5,7,15,22,3,11,24,31,10,17,29,36,13,19,32,34');
+$Cache[5] = explode(',', '1,22,30,33,4,15,26,28,18,20,21,35,11,16,23,34,2,6,8,29,5,10,13,24,12,17,19,27,3,9,31,32,7,14,25,36');
+$Cache[6] = explode(',', '1,5,17,18,9,13,28,31,11,12,29,30,14,26,27,34,6,10,25,33,8,15,21,35,3,7,22,23,2,19,20,36,4,16,24,32');
+$Cache[7] = explode(',', '1,3,6,12,4,7,27,31,9,20,22,29,13,14,16,18,5,11,15,33,2,23,24,25,8,10,19,26,17,21,30,32,28,34,35,36');
+$Cache[8] = explode(',', '1,15,19,29,22,24,27,28,2,9,12,30,7,17,18,34,6,10,20,25,4,5,26,35,3,13,21,33,8,11,16,36,14,23,31,32');
+$Cache[9] = explode(',', '1,9,21,25,17,22,31,35,2,10,27,29,8,14,24,34,4,11,15,30,6,13,23,28,3,5,7,19,12,16,20,33,18,26,32,36');
+$Cache[10] = explode(',', '1,2,8,13,12,17,23,24,4,7,9,20,14,19,33,35,11,18,25,32,10,15,27,31,3,21,28,36,5,16,29,30,6,22,26,34');
+$Cache[11] = explode(',', '1,14,24,36,3,10,18,21,2,6,11,19,15,23,32,34,7,13,29,33,12,20,26,31,4,8,25,30,9,16,27,35,5,17,22,28');
+$Cache[12] = explode(',', '1,7,19,30,9,11,14,29,6,12,24,35,20,23,27,36,3,16,31,34,10,13,17,26,4,5,18,25,8,21,28,32,2,15,22,33');
+
+foreach($Cache as $key => $value) {
+  foreach($value as $keyP => $valueP) {
+    $Rodada[$key][$valueP] = 1;
+  }
+}
+
+echo "\r\n\r\nRodadas";
+
+$Jogaram = array();
+
+for ($x=1;$x<=36;$x++) {
+  $Jogaram[$x] = array();
+}
+
+foreach($Rodada as $key => $value) {
+  echo "\r\n$".str_pad($key, 2, " ", STR_PAD_LEFT)."=";
+  $g=0;
+  $Grupo = array();
+
+  foreach($value as $keyP => $valueP) {
+    echo str_pad($keyP, 2, " ", STR_PAD_LEFT);
+
+    $g++;
+
+    $Grupo[$g] = $keyP;
+
+    if ($g == 4) {
+      $g=0;
+      echo " | ";
+
+    } else {
+      echo ", ";
+    }
+
+  }
+}
+foreach($Rodada as $key => $value) {
+  echo "\r\n$".str_pad($key, 2, " ", STR_PAD_LEFT)."=";
+  $g=0;
+  $Grupo = array();
+
+  foreach($value as $keyP => $valueP) {
+    echo str_pad($keyP, 2, " ", STR_PAD_LEFT);
+
+    $g++;
+
+    $Grupo[$g] = $keyP;
+
+    if ($g == 4) {
+      $g=0;
+      echo " | ";
+
+      // echo "<pre>".print_r($Grupo, 1);
+
+      $Jogaram[$Grupo[1]][$Grupo[2]]++;
+      $Jogaram[$Grupo[1]][$Grupo[3]]++;
+      $Jogaram[$Grupo[1]][$Grupo[4]]++;
+
+      $Jogaram[$Grupo[2]][$Grupo[1]]++;
+      $Jogaram[$Grupo[2]][$Grupo[3]]++;
+      $Jogaram[$Grupo[2]][$Grupo[4]]++;
+
+      $Jogaram[$Grupo[3]][$Grupo[1]]++;
+      $Jogaram[$Grupo[3]][$Grupo[2]]++;
+      $Jogaram[$Grupo[3]][$Grupo[4]]++;
+
+      $Jogaram[$Grupo[4]][$Grupo[1]]++;
+      $Jogaram[$Grupo[4]][$Grupo[2]]++;
+      $Jogaram[$Grupo[4]][$Grupo[3]]++;
+
+      $Grupo = array();
+
+    } else {
+      echo ", ";
+    }
+
+  }
+}
+
+echo "\r\n\r\nJogadores X Jogadores";
+
+foreach($Jogaram as $key => $value) {
+  echo "\r\n".str_pad($key, 2, " ", STR_PAD_LEFT)."(".str_pad(count($value), 2, " ", STR_PAD_LEFT).")=";
+  $Total = 0;
+  $MoreThen = array();
+
+  ksort($value);
+
+  foreach($value as $keyP => $valueP) {
+    echo str_pad($keyP, 2, " ", STR_PAD_LEFT);
+
+    $Total += $valueP;
+
+    echo "($valueP)";
+
+    $MoreThen[$valueP]++;
+
+    echo " ";
+  }
+
+  echo " <-[$Total]";
+
+  if ($MoreThen[2]) echo "-[(2)".$MoreThen[2]."]";
+  if ($MoreThen[3]) echo "-[(3)".$MoreThen[3]."]";
+  if ($MoreThen[4]) echo "-[(4)".$MoreThen[4]."]";
+  if ($MoreThen[5]) echo "-[(5)".$MoreThen[5]."]";
+}
+
+die();
+
+// 36 - Pessoas
+// 13 - Rodadas
+//  8 - Posicaos
+
+// 01 02 03 04  05 06 07 08   09 10 11 12  13 14 15 16  17 18 19 20  21 22 23 24  25 26 27 28  29 30 31 32  33 34 35 36
+
+// 01 05 09 13  17 31 25 29   33 02 06 10  14 18 22 26  30 34 03 07  11 15 19 23  27 31 35 04  08 12 16 20  24 28 32 36
+
+// 01 06 10 14  18 22 26 30   34 02 07 11  15 19 23 27  31 35 03 08  12 16 20 24  28 32 36 03  05 09 13 17  21 25 29 33
+
+// 01 07 11 15  19 23 27 31   35 04 08 12  16 20 24 28  32 36 05 09  13 17 21 25  29 33 02 06  10 14 18 22  26 30 34
+
+
+
+$Rodada = array();
+$Posicao = array();
+$Jogadores = array();
+$Jogaram = array();
+
+for ($x=1;$x<=36;$x++) {
+$Jogaram[$x] = array();
+}
+
+// $Rodada[1][1];
+// $Jogadores[1][1]=1;
+
+function Rodada($Ro, &$P1) {
+  global $Rodada;
+
+  while ($Rodada[$Ro][$P1 = rand(1, 36)]) {
+    // echo " RoI[$P1]";
+
+    $Rodada[$Ro][$P1] = 1;
+  }
+
+   // echo " RoD[$P1]";
+
+  $Rodada[$Ro][$P1] = 1;
+}
+
+function RodadaDisponivel($Ro, &$P2) {
+  global $Rodada;
+
+  while ($Rodada[$Ro][$P2 = rand(1, 36)]) {
+    // echo " RDI[$Ro][$P2]";
+    // if ($P2++ > 36) $P2 = 1;
+  }
+
+  // echo " RDD[$P2]";
+}
+
+function Posicao($P, $Ro, &$P2) {
+  global $Posicao, $Jogadores, $Rodada, $Jogaram;
+
+  $Maximo = 1;
+  $Loop = array();
+
+  while (1) {
+    RodadaDisponivel($Ro, $P2);
+
+    $Loop[$P2] = 1; // Contar se já passou dos 36, se passou, aceitar o que tiver com 2, 3, 4 e assim por diante.
+
+    $NaoJogou = 1;
+
+    // echo " P[$Ro, $P, $P2]";
+
+    if ($P > 1) {
+      foreach($Posicao as $key => $value) {
+        if ($Jogaram[$P2][$value] == $Maximo || $Jogaram[$value][$P2] == $Maximo) $NaoJogou = 0;
+      }
+
+      if (!$NaoJogou && count($Loop) + count($Rodada[$Ro]) == 36) {
+        $Maximo++;
+        $Loop = array();
+      }
+
+
+      if ($NaoJogou) {
+        $Posicao[$P] = $P2;
+
+        foreach($Posicao as $key => $value) {
+          $Jogadores[$P2][$value] = 1;
+          $Jogadores[$value][$P2] = 1;
+
+          // if ($Jogadores[$P2][$value]++ > 1) echo " [$P][$value]=".$Jogadores[$P][$value];
+          // if ($Jogadores[$value][$P2]++ > 1) echo " [$value][$P]=".$Jogadores[$value][$P];
+        }
+        break;
+      } else {
+        if ($P2++ > 36) $P2 = 1;
+      }
+    }
+  }
+}
+
+for ($Ro = 1; $Ro <= 13; $Ro++) {
+  echo "\r\n\r\n$Ro rodada\r\n";
+
+  $G = 0;
+  for ($j = 1; $j <= 36; $j += 4) {
+    Rodada($Ro, $P1);
+
+    $P2 = $P1;
+
+    $Posicao = array();
+
+    $Posicao[1] = $P1;
+
+    $J1 = $P1;
+    $G++;
+    echo "$P2";
+
+    Posicao(2, $Ro, $P2);
+    $Rodada[$Ro][$P2] = 1;
+    $J2 = $P2;
+    echo ", $P2";
+
+    Posicao(3, $Ro, $P2);
+    $Rodada[$Ro][$P2] = 1;
+    $J3 = $P2;
+    echo ", $P2";
+
+    Posicao(4, $Ro, $P2);
+    $Rodada[$Ro][$P2] = 1;
+    $J4 = $P2;
+    echo ", $P2  ";
+
+    $Jogaram[$J1][$J2]++;
+    $Jogaram[$J1][$J3]++;
+    $Jogaram[$J1][$J4]++;
+
+    $Jogaram[$J2][$J1]++;
+    $Jogaram[$J2][$J3]++;
+    $Jogaram[$J2][$J4]++;
+
+    $Jogaram[$J3][$J1]++;
+    $Jogaram[$J3][$J2]++;
+    $Jogaram[$J3][$J4]++;
+
+    $Jogaram[$J4][$J1]++;
+    $Jogaram[$J4][$J2]++;
+    $Jogaram[$J4][$J3]++;
+
+  }
+}
+
+echo "\r\n\r\nJogadores X Jogadores";
+
+foreach($Jogaram as $key => $value) {
+  echo "\r\n$key(".count($value).")=";
+  $Total = 0;
+  $MoreThen = array();
+
+  foreach($value as $keyP => $valueP) {
+    echo "$keyP";
+
+    $Total += $valueP;
+
+    if ($valueP > 1) echo "($valueP)";
+
+    $MoreThen[$valueP]++;
+
+    echo ", ";
+  }
+
+  echo " <-[$Total]";
+
+  if ($MoreThen[2]) echo "-[(2)".$MoreThen[2]."]";
+  if ($MoreThen[3]) echo "-[(3)".$MoreThen[3]."]";
+  if ($MoreThen[4]) echo "-[(4)".$MoreThen[4]."]";
+  if ($MoreThen[5]) echo "-[(5)".$MoreThen[5]."]";
+}
+
+echo "\r\n\r\nRodadas";
+
+$Jogaram = array();
+
+for ($x=1;$x<=36;$x++) {
+  $Jogaram[$x] = array();
+}
+
+foreach($Rodada as $key => $value) {
+  echo "\r\n$key=";
+  $g=0;
+  $Grupo = array();
+
+  foreach($value as $keyP => $valueP) {
+    echo "$keyP";
+
+    $g++;
+
+    $Grupo[$g] = $keyP;
+
+    if ($g == 4) {
+      $g=0;
+      echo " | ";
+
+      // echo "<pre>".print_r($Grupo, 1);
+
+      $Jogaram[$Grupo[1]][$Grupo[2]]++;
+      $Jogaram[$Grupo[1]][$Grupo[3]]++;
+      $Jogaram[$Grupo[1]][$Grupo[4]]++;
+
+      $Jogaram[$Grupo[2]][$Grupo[1]]++;
+      $Jogaram[$Grupo[2]][$Grupo[3]]++;
+      $Jogaram[$Grupo[2]][$Grupo[4]]++;
+
+      $Jogaram[$Grupo[3]][$Grupo[1]]++;
+      $Jogaram[$Grupo[3]][$Grupo[2]]++;
+      $Jogaram[$Grupo[3]][$Grupo[4]]++;
+
+      $Jogaram[$Grupo[4]][$Grupo[1]]++;
+      $Jogaram[$Grupo[4]][$Grupo[2]]++;
+      $Jogaram[$Grupo[4]][$Grupo[3]]++;
+
+      $Grupo = array();
+
+    } else {
+      echo ", ";
+    }
+
+  }
+}
+
+echo "\r\n\r\nJogadores X Jogadores";
+
+foreach($Jogaram as $key => $value) {
+  echo "\r\n$key(".count($value).")=";
+  $Total = 0;
+  $MoreThen = array();
+
+  foreach($value as $keyP => $valueP) {
+    echo "$keyP";
+
+    $Total += $valueP;
+
+    if ($valueP > 1) echo "($valueP)";
+
+    $MoreThen[$valueP]++;
+
+    echo ", ";
+  }
+
+  echo " <-[$Total]";
+
+  if ($MoreThen[2]) echo "-[(2)".$MoreThen[2]."]";
+  if ($MoreThen[3]) echo "-[(3)".$MoreThen[3]."]";
+  if ($MoreThen[4]) echo "-[(4)".$MoreThen[4]."]";
+  if ($MoreThen[5]) echo "-[(5)".$MoreThen[5]."]";
+}
+
+die();
+echo "\r\n\r\n";
+
+foreach($Player as $key => $value) {
+  echo "\r\n$key=";
+  foreach($value as $keyP => $valueP) {
+    echo "$keyP";
+
+    if ($valueP) echo "($valueP)";
+
+    echo ", ";
+  }
+}
+
+echo "\r\n\r\n";
+
+foreach($Pl as $key => $value) {
+  echo "\r\n$key=";
+  foreach($value as $keyP => $valueP) {
+    if ($keyP) {
+      echo "$keyP";
+
+      if ($valueP > 1) echo "($valueP)";
+
+      echo ", ";
+    }
+  }
+}
+
+die();
+$P = array();
+
+$Player = array();
+
+for ($x = 1;$x<=36;$x++) {
+  $Pl[$x] = array();
+
+  $Pl[$x][0] = "Player $x";
+
+  $Player[$x] = array();
+}
+
+for ($Ro = 1; $Ro <= 13; $Ro++) {
+  echo "\r\n\r\n$Ro rodada\r\n";
+  $P = 0;
+
+  switch ($Ro) {
+    case 2:
+      $P  = 1;
+      $PI = 4;
+      break;
+
+    case 3:
+      $P  = 2;
+      $PI = 4;
+      break;
+
+    case 4:
+      $P  = 3;
+      $PI = 4;
+      break;
+
+    case 5:
+      $P  = 0;
+      $PI = 12;
+      break;
+
+    case 6:
+      $P  = 1;
+      $PI = 12;
+      break;
+
+    case 7:
+      $P  = 2;
+      $PI = 12;
+      break;
+
+    case 8:
+      $P  = 3;
+      $PI = 12;
+      break;
+
+    case 9:
+      $P  = 36;
+      $PI = -4;
+      break;
+
+    case 10:
+      $P  = 35;
+      $PI = -4;
+      break;
+
+    case 11:
+      $P  = 34;
+      $PI = -4;
+      break;
+
+    case 12:
+      $P  = 33;
+      $PI = -4;
+      break;
+
+    case 13:
+      $P  = 36;
+      $PI = -12;
+      break;
+
+  default:
+    $P = 0;
+    $PI = 1;
+    $PP = 0;
+
+  }
+
+  // echo "\r\nP=$P";
+  // echo "\r\nPI=$PI";
+  // echo "\r\nPP=$PP";
+  echo "\r\n";
+
+  $PlayerG = array();
+
+  for ($j = 1; $j <= 36; $j++) {
+    $P += $PI;
+
+    if ($P > 36) $P = $P - 36 + 1;
+    if ($P < 1) $P = $P + 36 - 1;
+
+    echo $P;
+
+    foreach($PlayerG as $key => $value) {
+      $Player[$P][$value]++;
+      $Player[$value][$P]++;
+    }
+    if ($P > 1) {
+      $PlayerG[$P] = $P;
+    } else {
+      $PlayerG = array();
+    }
+
+    if ($P++ >= 3) {
+      echo "   ";
+
+      $P = 0;
+    } else {
+      echo ", ";
+    }
+
+    $R[1][$Ro] = $P;
+
+    $blnOk = 1;
+
+    for ($i = 1;$i <= $PG; $i++) {
+      $PX = $AG[$i];
+
+      if (($Pl[$PX][$P] || $Pl[$P][$PX]) && $P != $PX) $blnOk = 0;
+
+      // echo "\r\n      $PN - AG[$i]=".$AG[$i]." - P[$PN][$PX]=".$Pl[$PN][$PX]." - $blnOk";;
+    }
+
+    if ($blnOk && $PA != $P) {
+      $PG++;
+      $AG[$PG] = $P;
+      $strGrupo .= ",".$P;
+
+      $P[$Ro][$PR] .= ",".$P;
+
+      for ($i = 1;$i < $PG; $i++) {
+        $PX = $AG[$i];
+
+        $Pl[$P][$PX]++;
+        $Pl[$PX][$P]++;
+      }
+    }
+  }
+}
+
+echo "\r\n\r\n";
+
+foreach($Player as $key => $value) {
+  echo "\r\n$key=";
+  foreach($value as $keyP => $valueP) {
+    echo "$keyP";
+
+    if ($valueP) echo "($valueP)";
+
+    echo ", ";
+  }
+}
+
+echo "\r\n\r\n";
+
+foreach($Pl as $key => $value) {
+  echo "\r\n$key=";
+  foreach($value as $keyP => $valueP) {
+    if ($keyP) {
+      echo "$keyP";
+
+      if ($valueP > 1) echo "($valueP)";
+
+      echo ", ";
+    }
+  }
+}
+
+die();
+
+
+$P = array();
+$AG = array();
+$PR = 0;
+
+for ($PA = 1;$PA <= 37; $PA++) {
+  // echo "\r\nPA=$PA";
+
+  $PN = 0;
+
+  $PR++;
+
+  for ($R = 1; $R <= 13; $R++) {
+    // echo "\r\n  R=$R";
+
+    $PG = 1;
+    $strGrupo = "";
+
+    $P[$R][$PR] = $PA;
+
+    $AG[1] = $PA;
+
+    while ($PG < 4 && $PN < 36) {
+      $PN++;
+      // echo "\r\n    PG=$PG - PN=$PN";
+
+      $blnOk = 1;
+
+      for ($i = 1;$i <= $PG; $i++) {
+        $PX = $AG[$i];
+
+        if (($Pl[$PX][$PN] || $Pl[$PN][$PX]) && $PN != $PX) $blnOk = 0;
+
+        // echo "\r\n      $PN - AG[$i]=".$AG[$i]." - P[$PN][$PX]=".$Pl[$PN][$PX]." - $blnOk";;
+      }
+
+      if ($blnOk && $PA != $PN) {
+        $PG++;
+        $AG[$PG] = $PN;
+        $strGrupo .= ",".$PN;
+
+        $P[$Ro][$PR] .= ",".$PN;
+
+        for ($i = 1;$i < $PG; $i++) {
+          $PX = $AG[$i];
+
+          $Pl[$PN][$PX] = 1;
+          $Pl[$PX][$PN] = 1;
+        }
+      }
+    }
+
+    if ($strGrupo) {
+      echo "\r\n      ".$PA.$strGrupo;
+
+      $P[$R][$PR] = $PA.$strGrupo;
+
+    }
+  }
+}
+
+die();
+
+$PN = 1;
+$strGrupo = $PN;
+$P = 1;
+$R = 1;
+$PG = 1;
+
+$PA = $PN;
+
+echo "\r\n$R Rodada\r\n";
+
+while ($R <= 13) {
+  $PN++;
+
+  if ($PN > 36) $PN = 1;
+
+  $blnOk = 1;
+
+  for ($i = 1;$i <= $PG; $i++) {
+    $PX = $AG[$i];
+
+    if (($Pl[$PX][$PN] || $Pl[$PN][$PX]) && $PN != $PX) $blnOk = 0;
+
+    // echo "\r\n$PN - AG[$i]=".$AG[$i]." - P[$PN][$PX]=".$Pl[$PN][$PX]." - $blnOk";;
+  }
+
+  if ($blnOk && $PA != $PN) {
+    $PG++;
+    $AG[$PG] = $PN;
+    $strGrupo .= ",".$PN;
+
+    for ($i = 1;$i < $PG; $i++) {
+      $PX = $AG[$i];
+
+      $Pl[$PN][$PX] = 1;
+      $Pl[$PX][$PN] = 1;
+    }
+  }
+
+  if ($strGrupo && $PG > 3) {
+    $PG = 1;
+    echo $strGrupo." | ";
+    $PN++;
+    if ($PN > 36) $PN = 1;
+    $strGrupo = $PN;
+    $P++;
+    $PA = $PN;
+
+  }
+
+  if ($P > 9) {
+    $P = 1;
+    $R++;
+    echo "\r\n\r\n$R Rodada\r\n";
+  }
+}
+die();
+
+// $Pl[$x][1] = 1;
+
+$intJogadores = 0;
+
+for ($P1 = 1;$P1 <= 18;$P1++) {
+  echo "\r\n\r\n$P1 Pessoa\r\n";
+
+  for ($P = 1;$P <= 8;$P++) {
+    echo "\r\n  $P grupo\r\n";
+
+    $PG = 1;
+    $strGrupo = $P1;
+
+    $PN=0;
+
+    $AG = array();
+
+    $AG[$PG] = $P1;
+
+    while ($PG < 4 && $PN < 36) {
+      $PN++;
+
+      $blnOk = 1;
+
+      for ($i = 1;$i <= $PG; $i++) {
+        $PX = $AG[$i];
+
+        if (($Pl[$PX][$PN] || $Pl[$PN][$PX]) && $PN != $PX) $blnOk = 0;
+
+        // echo "\r\n$PN - AG[$i]=".$AG[$i]." - P[$PN][$PX]=".$Pl[$PN][$PX]." - $blnOk";;
+      }
+
+      if ($blnOk && $P1 != $PN) {
+        $PG++;
+        $AG[$PG] = $PN;
+        $strGrupo .= ",".$PN;
+
+        for ($i = 1;$i < $PG; $i++) {
+          $PX = $AG[$i];
+
+          $Pl[$PN][$PX] = 1;
+          $Pl[$PX][$PN] = 1;
+        }
+      }
+    }
+    if ($strGrupo) echo "    ".$strGrupo." ";
+    // ob_flush(); flush();
+  }
+}
+die();
+
+  if (!$Pl[$P1][$PN] && $P1 != $PN) {
+    $Pl[$P1][$PN] = 1;
+    $PG++;
+    $RG[$intRodada][$P][$PN]=1;
+    $strGrupo .= ",".$PN;
+  }
+
+  for ($P1 = 1;$P1 < 37;$P1++) {
+    echo "\r\n\r\n$P1 Pessoa\r\n";
+
+    for ($intRodada = 1; $intRodada < 14; $intRodada++) {
+      echo "\r\n$intRodada Rodada";
+
+      while ($PG < 4 && $PN < 36) {
+        $PN++;
+        // echo "$PN, ";
+
+        echo "\r\nP[$P1][$PN]=".$Pl[$P1][$PN];
+
+        if (!$Pl[$P1][$PN] && $P1 != $PN) {
+          $Pl[$P1][$PN] = 1;
+          $PG++;
+          $RG[$intRodada][$P][$PN]=1;
+          $strGrupo .= ",".$PN;
+        }
+      }
+      if ($strGrupo) echo $strGrupo." ";
+    }
+  }
+
+?>

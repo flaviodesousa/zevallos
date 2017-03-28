@@ -1,0 +1,193 @@
+#!/usr/bin/env php
+<?php # vim:ts=2:sw=2:et:ft=php:
+/* For licensing and copyright terms, see the file named LICENSE */
+// called as:
+// hg-commit-hook what [mtrackconfig]
+// the cwd is the repo path
+
+putenv("GATEWAY_INTERFACE=");
+
+$action = $argv[1];
+if (isset($argv[2])) {
+  putenv("MTRACK_CONFIG_FILE=" . $argv[2]);
+}
+include dirname(__FILE__) . '/../inc/common.php';
+if (file_exists(MTrackConfig::get('core', 'vardir') . '/.initializing')) {
+  exit(0);
+}
+
+ini_set('display_errors', true);
+$HG = MTrackConfig::get('tools', 'hg');
+if (!strlen($HG)) {
+  $HG = $_ENV['HG'];
+}
+$HG_NODE = $_ENV['HG_NODE'];
+if (!isset($_ENV['HG_PARENT1']) || !strlen($_ENV['HG_PARENT1'])) {
+  # figure out the parent
+  $p = stream_get_contents(run($HG, 'log', "-r$HG_NODE",
+         '--template', '{parents}'));
+  foreach (preg_split("/\s+/", $p) as $item) {
+    if (preg_match("/^(\d+):(\S+)$/", $item, $M)) {
+      if ($M[1] >= 0) {
+        $HG_PARENT1 = $M[2];
+        break;
+      }
+    }
+  }
+} else {
+  $HG_PARENT1 = $_ENV['HG_PARENT1'];
+}
+
+
+class HgCommitHookBridge implements IMTrackCommitHookBridge2 {
+  var $repo;
+  function __construct($repo) {
+    $this->repo = $repo;
+  }
+
+  function getChanges() {
+    global $HG_NODE;
+    global $HG;
+    $cs = array();
+    $log = popen("$HG log -r$HG_NODE: --template '{node|short}\n{author|email}\n{date|hgdate}\n{desc|nonempty|tabindent}\n'", 'r');
+    $line = fgets($log);
+    do {
+      $c = new MTrackCommitHookChangeEvent;
+
+      $node = trim($line);
+      $c->hash = $node;
+      $c->rev = "[changeset:" . $this->repo->getBrowseRootName() . ",$node]";
+
+      $author = trim(fgets($log));
+      $c->changeby = mtrack_canon_username($author);
+
+      $date = fgets($log);
+      if (!preg_match("/^(\d+)\s+\d+$/", $date, $M)) {
+        throw new Exception("failed to parse date $date");
+      }
+      $c->ctime = MTrackDB::unixtime((int)$M[1]);
+
+      $msg = fgets($log);
+      do {
+        $line = fgets($log);
+        if ($line === false) {
+          break;
+        }
+        if (preg_match("/^[a-fA-F0-9]+$/", $line)) {
+          break;
+        }
+        $msg .= substr($line, 1);
+      } while (true);
+      $c->changelog = rtrim($msg);
+      $cs[] = $c;
+    } while ($line !== false);
+
+    return $cs;
+  }
+
+  function enumChangedOrModifiedFileNames() {
+    global $HG;
+    global $HG_NODE;
+
+    $files = array();
+    $fp = popen("$HG log -r$HG_NODE: --template '{files}\n'", 'r');
+    while (($line = fgets($fp)) !== false) {
+      foreach (preg_split("/\s+/", $line) as $path) {
+        if (strlen($path)) {
+          $files[] = $path;
+        }
+      }
+    }
+    return $files;
+  }
+
+  function getCommitMessage() {
+    global $HG;
+    global $HG_NODE;
+    $fp = popen("$HG log -r$HG_NODE: --template '{desc}\n\n'", 'r');
+    $log = stream_get_contents($fp);
+    $log = preg_replace('/\[(\d+)\]/',
+      "[changeset:" . $this->repo->getBrowseRootName() . ",\$1]", $log);
+    return $log;
+  }
+
+  function getFileStream($path) {
+    global $HG;
+    global $HG_NODE;
+    return popen("$HG cat $path", 'r');
+  }
+
+  function getChangesetDescriptor() {
+    global $HG_NODE;
+    global $HG;
+    $cs = array();
+    $nodes = popen("$HG log -r$HG_NODE: --template '{node|short}\n'", 'r');
+    while (($line = fgets($nodes)) !== false) {
+      $n = trim($line);
+      $cs[] = '[changeset:' . $this->repo->getBrowseRootName() . ",$n]";
+    }
+    return join(", ", $cs);
+  }
+}
+
+try {
+  $repo = MTrackRepo::loadByLocation(getcwd());
+  $bridge = new HgCommitHookBridge($repo);
+  /* for pushes, respect OS indication of who this is, unless we don't
+   * know; we'll use the info from the changeset in that case */
+  $author = 'anonymous';
+  if (strstr($action, 'group')) {
+    $author = MTrackAuth::whoami();
+  }
+  if ($author == 'anonymous') {
+    $author = trim(
+              shell_exec("$HG log -r$HG_NODE: --template '{author|email}'"));
+  }
+  $author = mtrack_canon_username($author);
+  MTrackAuth::su($author);
+  $checker = new MTrackCommitChecker($repo);
+  switch ($action) {
+    case 'pretxncommit':
+    case 'pretxnchangegroup':
+      $checker->preCommit($bridge);
+      break;
+    default:
+      $checker->postCommit($bridge);
+  }
+  exit(0);
+} catch (Exception $e) {
+  /* Errors must render to STDERR, or they won't show up in the hg client */
+  fwrite(STDERR, "\n" . $e->getMessage() .
+    "\n\n" .
+    $e->getTraceAsString() .
+    "\n\n ** Commit failed [$action]\n");
+
+  exit(1);
+}
+
+function run()
+{
+  $args = func_get_args();
+  $all_args = array();
+  foreach ($args as $a) {
+    if (is_array($a)) {
+      foreach ($a as $arg) {
+         $all_args[] = $arg;
+      }
+    } else {
+      $all_args[] = $a;
+    }
+  }
+
+  $cmd = '';
+
+  foreach ($all_args as $i => $arg) {
+    if ($i > 0) {
+      $cmd .= ' ';
+    }
+    $cmd .= escapeshellarg($arg);
+  }
+
+//  echo $cmd, "\n";
+  return popen($cmd, 'r');
+}

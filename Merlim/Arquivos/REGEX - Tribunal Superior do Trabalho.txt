@@ -1,0 +1,20 @@
+Fonte: Tribunal Superior do trabalho
+
+URL: http://www.tst.gov.br/
+
+
+LIsta de Notícias, hora e minutos
+  URL: http://ext02.tst.jus.br/pls/no01/no_noticiasNOVO.Inicio?p_cod_area_noticia=ASCS
+  REGEX: %(?P<hour>\d+):(?P<minute>\d+)\w+ - <a href="NO_NOTICIASNOVO.Exibe_Noticia?.+?=ASCS">(?P<list>.+?)</a>%i
+
+Título e Data da notícia
+  URL: http://ext02.tst.jus.br/pls/no01/NO_NOTICIASNOVO.Exibe_Noticia?p_cod_noticia=11123&p_cod_area_noticia=ASCS
+  REGEX: %<div class="c7"><strong>(?P<day>\d+)/(?P<moth>\d+)/(?P<year>\d+)</strong></div><div class="c7"><strong>(?P<title>.+?)</strong></div>%i
+
+Corpo:
+  URL: http://ext02.tst.jus.br/pls/no01/NO_NOTICIASNOVO.Exibe_Noticia?p_cod_noticia=11123&p_cod_area_noticia=ASCS
+  REGEX: %<p>(?P<body>.+?)<p>Esta notícia foi acessada \d+ vezes.</p>%i
+
+
+
+

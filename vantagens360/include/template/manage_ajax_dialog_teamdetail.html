@@ -1,0 +1,27 @@
+<div id="order-pay-dialog" class="order-pay-dialog-c" style="width:480px;">
+	<h3><span id="order-pay-dialog-close" class="close" onclick="return X.boxClose();">Fechar</span>Detalhes da oferta</h3>
+	<div style="overflow-x:hidden;padding:10px;">
+	<table width="96%" align="center" class="coupons-table">
+		<tr><td width="80"><b>Item:</b></td><td><b>{$team['title']}</b></td></tr>
+		<tr><td><b>Data: </b></td><td>Inicia: <b>${date('d-m-Y',$team['begin_time'])}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finaliza: <b>${date('d-m-Y',$team['end_time'])}</b></td></tr>
+
+		<tr><td><b>Status: </b></td><td><span style="color:#F00;font-weight:bold;">${state_explain($team)}</span><!--{if $team['close_time']&&$team['now_number']>=$team['min_number']&&$team['delivery']!='express'}-->&nbsp;&nbsp;<span style="color:#F8C;font-weight:bold;"><!--{if ($team['teamcoupon'])}-->&lt;{$INI['system']['couponname']}Não enviado&gt;<!--{else}-->&lt;{$INI['system']['couponname']} Enviado&gt;<!--{/if}--></span><!--{/if}--></td></tr>
+		<tr><td><b>Limite </b></td><td>No minimo {$team['min_number']}&nbsp;&nbsp;&nbsp;&nbsp;No máximo ${$team['max_number']==0?'Sem limite':$team['max_number']}</td></tr>
+		<tr><td><b>Preço: </b></td><td>Market price: <b>${moneyit($team['market_price'])}</b>&nbsp;reais&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Preço: <b>${moneyit($team['team_price'])}</b>&nbsp;reais</td></tr>
+		<tr><th colspan="2"><hr/></th></td>
+		<tr><td><b>status: </b></td><td><b>{$team['now_number']}</b>&nbsp;, total&nbsp;<b>{$paycount}</b>&nbsp; compradores &nbsp;<b>{$buycount}</b>&nbsp;
+		</td></tr>
+		<tr><td><b>Pagamento: </b></td><td>Online:<b>${moneyit($onlinepay)}</b>&nbsp;reais&nbsp;&nbsp;&nbsp;&nbsp;Credito: <b>${moneyit($creditpay)}</b>&nbsp;reais</td></tr>
+		<tr><td><b>Balanço </b></td><td>Pago: <b>${moneyit($onlinepay+$creditpay)}</b>&nbsp;reais&nbsp;&nbsp;&nbsp;&nbsp;por ticket: <b>${moneyit($cardpay)}</b>&nbsp;reais</td></tr>
+	<!--{if $team['needline']}-->
+		<tr><th colspan="2"><hr/></th></td>
+		<tr><td colspan="2">
+			<!--{if $team['noticesubscribe']}--><button style="padding:0;" id="dialog_subscribe_button_id" onclick="if(confirm('Enviando email, por favor espere, OK?')){this.disabled=true;return X.misc.noticenext({$team['id']},0);}">Email notificação&nbsp;(<span id="dialog_subscribe_count_id">0</span>/{$subcount})</button>&nbsp;<!--{/if}-->
+			<!--{if $team['noticesms']}--><button id="dialog_sms_button_id" onclick="if(confirm('Enviando ok?')){this.disabled=true;return X.misc.noticesms({$team['id']},0);}">SMS &nbsp;(<span id="dialog_sms_count_id">0</span>/{$couponcount})</button>&nbsp;<!--{/if}-->
+			<!--{if $team['teamcoupon']}--><button onclick="this.disabled=true;return X.manage.teamcoupon({$team['id']});">Enviar cupom automaticamente&nbsp;({$couponcount}/{$buycount})</button>&nbsp;<!--{/if}-->
+		</td></tr>
+	<!--{/if}-->
+	</table>
+	</div>
+</div>
+

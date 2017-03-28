@@ -1,0 +1,31 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.godaddy.com	TRUE	/	FALSE	1999999999	ASP.NET_SessionId	c411rv45a5buyyqn4z34kprz
+godaddy.com	TRUE	/	FALSE	1999999999	adc1	US
+godaddy.com	TRUE	/	FALSE	1999999999	flag1	cflag=br
+godaddy.com	TRUE	/	FALSE	1999999999	currency1	potableSourceStr=BRL
+godaddy.com	TRUE	/	FALSE	1999999999	currencypopin1	cdisplaypopin=true
+godaddy.com	TRUE	/	FALSE	1999999999	SplitValue1	84
+godaddy.com	TRUE	/	FALSE	1999999999	fromcountrybrlchfjpy1	cdisplaypopin=true
+.godaddy.com	TRUE	/	FALSE	1999999999	pathway	dfc10fc1-bcf2-4fa8-9236-ed7bebd463ee
+.godaddy.com	TRUE	/	FALSE	1999999999	pagecount	1
+img.godaddy.com	TRUE	/	FALSE	1999999999	fb_pagecount	1
+img.godaddy.com	TRUE	/	FALSE	1999999999	fb_session	S_TOUCH=03/01/2011 14:58:29&pathway=dfc10fc1-bcf2-4fa8-9236-ed7bebd463ee&V_DATE=03/01/2011 07:58:29
+.godaddy.com	TRUE	/	FALSE	1999999999	visitor	vid=dfc10fc1-bcf2-4fa8-9236-ed7bebd463ee
+.godaddy.com	TRUE	/	FALSE	1999999999	ShopperId1	cixaqcwhcguiggjhkgpakfffrfsgnjwe
+www.godaddy.com	TRUE	/	FALSE	1999999999	HPBackground	DanicaImageOne
+godaddy.com	TRUE	/	FALSE	1999999999	BlueLithium	fjqbvgahmdyandhhkhjamaxgyjoaxeqj
+godaddy.com	TRUE	/	FALSE	1999999999	GoogleADServicesgoogleadwords	fjqbvgahmdyandhhkhjamaxgyjoaxeqj
+www.godaddy.com	TRUE	/	FALSE	1999999999	ASPSESSIONIDCESCRTSA	FBALOAOBKFEMOEFGOOHKKMFM
+godaddy.com	TRUE	/	FALSE	1999999999	GoogleADServicesgoogleadwordssearch	jiyebbpdnhdekckiccaikjbbifhivgpd
+godaddy.com	TRUE	/	FALSE	1999999999	BlueLithium_domainsearch	jiyebbpdnhdekckiccaikjbbifhivgpd
+.godaddy.com	TRUE	/	FALSE	1999999999	domainYardVal	%2D1
+.godaddy.com	TRUE	/	FALSE	1999999999	serverVersion	A
+www.godaddy.com	TRUE	/	FALSE	1999999999	ASPSESSIONIDCASCRTSA	LFALOAOBJDDPCLLCFNEIGIPE
+.godaddy.com	TRUE	/	FALSE	1999999999	traffic	testcookie
+.godaddy.com	TRUE	/	FALSE	1999999999	traffic	testcookie
+godaddy.com	TRUE	/	FALSE	1999999999	traffic	cookies=1&referrer=http://www.godaddy.com/&sitename=www.godaddy.com&page=/domains/domain_offer.aspx&server=M1PWCORPWEB153&status=200 OK&querystring=ci=5867&app_hdr=0&shopper=&privatelabelid=1&isc=&clientip=189.74.152.144&referringpath=dfc10fc1-bcf2-4fa8-9236-ed7bebd463ee&referringdomain=&split=84
+.godaddy.com	TRUE	/	FALSE	1999999999	traffic	testcookie
+.godaddy.com	TRUE	/	FALSE	1999999999	traffic	testcookie
+.godaddy.com	TRUE	/	FALSE	1999999999	traffic	testcookie
+

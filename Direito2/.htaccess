@@ -1,0 +1,231 @@
+php_value upload_max_filesize 1024M
+php_value post_max_size 1024M
+
+ServerSignature Off
+
+<FilesMatch "\.(ttf|otf|eot|woff|css)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
+
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+AddType application/vnd.ms-fontobject eot
+AddType font/truetype ttf
+AddType font/opentype otf
+AddType application/x-font-woff woff
+
+AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json
+
+RewriteEngine on
+# RewriteOptions MaxRedirects=10
+# RewriteLogLevel 3
+# RewriteLog "C:/My Dropbox/ZYCWeb/Direito2/direito2.log"
+
+# ReadmeName /ztag/dir/readme.html
+# HeaderName /ztag/dir/header.shtml
+
+IndexOptions +FoldersFirst +IgnoreCase +DescriptionWidth=* +NameWidth=* +ScanHTMLTitles
+
+Options +FollowSymLinks
+
+DirectoryIndex index.ztag default.ztag index.php default.php index.html index.htm
+
+RewriteBase /
+
+ErrorDocument 401 /index.php?o=400&p=%{REQUEST_URI}&e=401
+ErrorDocument 402 /index.php?o=400&p=%{REQUEST_URI}&e=402
+ErrorDocument 403 /index.php?o=400&p=%{REQUEST_URI}&e=403
+ErrorDocument 404 /index.php?o=400&p=%{REQUEST_URI}&e=404
+
+#ErrorDocument 400 /400_BAD_REQUEST
+#ErrorDocument 401 /401_UNAUTHORIZED
+#ErrorDocument 402 /402_PAYMENT_REQUIRED
+#ErrorDocument 403 /403_FORBIDDEN
+#ErrorDocument 404 /404_NOT_FOUND
+
+# RewriteCond %{REQUEST_URI} ^/(stats/|missing\.html|failed_auth\.html|error/).* [NC]
+# RewriteRule .* - [L]
+
+# RewriteCond %{ENV:REDIRECT_STATUS} 200
+# RewriteRule .* - [L]
+
+#iPhone - Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1A543a Safari/419.3
+# RewriteCond %{HTTP_USER_AGENT}  iPhone;
+# RewriteRule ^/(.*)$       http://mobi.direito2.com.br/$1 [R]
+
+# RewriteCond %{HTTP_USER_AGENT} ^.*(Android|2.0\ MMP|240x320|AvantGo|BlackBerry|Blazer|Cellphone|Danger|DoCoMo|Elaine/3.0|EudoraWeb|hiptop|IEMobile|iPhone).*$ [NC]
+# RewriteRule ^(.+)$ /mobile/$1 [L]
+
+# RewriteCond %{DOCUMENT_ROOT}/cache%{REQUEST_URI}/index.html -f
+# RewriteRule . /cache%{REQUEST_URI}/index.html
+
+# Configura o Robots certo para o WWW, PROC e PUB
+#RewriteCond %{SERVER_NAME}   proc\.direito2\.com\.br$  [I]
+#RewriteRule ^/robots\.txt$   /robotsproc.txt  [U,I,L]
+
+#RewriteCond %{SERVER_NAME}   pub\.direito2\.com\.br$  [I]
+#RewriteRule ^/robots\.txt$   /robotspub.txt  [U,I,L]
+
+# Envia todos os dominios para o www.Direito2.com.br menos os de desenvolvimento
+# RewriteCond %{HTTP_HOST} !^www\.direito2\.com.br$ [NC]
+# RewriteCond %{HTTP_HOST} !^direito21\.zyc\.com\.br$ [NC]
+# RewriteCond %{HTTP_HOST} !^direito2\.zyc\.com\.br$ [NC]
+# RewriteCond %{HTTP_HOST} !^old\.d2.net\.br$ [NC]
+# RewriteCond %{HTTP_HOST} !^old1\.d2\.net\.br$ [NC]
+# RewriteRule ^(.*)$ http://www.direito2.com.br/$1 [R=301,L]
+
+# Anti-Hotlinking
+# RewriteCond %{HTTP_REFERER} !^$
+# RewriteCond %{HTTP_REFERER} !^http://(www\.)?direito2\.com\.br/.*$ [NC]
+# RewriteRule ^.*\.(bmp|tif|gif|jpg|jpeg|jpe|png)$ - [F]
+
+# Redireciona os Hotlinkers
+# RewriteCond %{HTTP_REFERER} !^$
+# RewriteCond %{HTTP_REFERER} !^http://(www\.)?direito2\.com\.br/.*$ [NC]
+# RewriteRule ^.*\.(bmp|tif|gif|jpg|jpeg|jpe|png)$ http://google.com [R]
+
+# AddHandler custom-processor .ztag
+# Action custom-processor /ztag/ztag.php
+
+# For zTag scripts
+RewriteRule ^(.+)\.ztag$ /ztag/ztag.php?temp=$1.ztag [QSA,NC,L]
+
+# QSA - query string append
+# NC - no case
+# R  [=code] - force redirect
+# L - last rule
+# F - force URL to be forbidden
+
+# DOCUMENT_ROOT - /home/webroot/askapache.com
+# HOST - www.askapache.com
+# HTTP_REFERER - http://www.askapache.com/pro/mod_rewrite/catch.php?k=i
+# HTTP_USER_AGENT - Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9) Firefox/3.0.1
+# QUERY_STRING - k=i
+# REQUEST_FILENAME - /home/webroot/askapache.com/pro/mod_rewrite/index.php
+# SCRIPT_FILENAME  - /home/webroot/askapache.com/pro/mod_rewrite/index.php
+# REQUEST_URI - /pro/mod_rewrite/index.php
+# SCRIPT_URL  - /pro/mod_rewrite/index.php
+# SCRIPT_URI  - http://www.askapache.com/pro/mod_rewrite/index.php
+# SERVER_NAME - www.askapache.com
+# THE_REQUEST - GET /pro/mod_rewrite/index.php?k=i HTTP/1.1
+
+# f - FILE_EXISTS
+# s - FILE_SIZE
+# l - FILE_LINK
+# d - FILE_DIR
+# x - FILE_XBIT
+# U - LU_URL
+# F - LU_FILE
+# > - STR_GT
+# < - STR_LT
+# = - STR_EQ
+
+RewriteCond %{REQUEST_URI} !^.*/$
+RewriteCond %{REQUEST_URI} !^.*//.*$
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{QUERY_STRING} !.*=.*
+#RewriteCond %{HTTP:Cookie} !^.*(comment_author_|wordpress_logged_in|wp-postpass_).*$
+#RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
+#RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP_USER_AGENT} !^.*(2.0\ MMP|240x320|400X240|AvantGo|BlackBerry|Blazer|Cellphone|Danger|DoCoMo|Elaine/3.0|EudoraWeb|Googlebot-Mobile|hiptop|IEMobile|KYOCERA/WX310K|LG/U990|MIDP-2.|MMEF20|MOT-V|NetFront|Newt|Nintendo\ Wii|Nitro|Nokia|Opera\ Mini|Palm|PlayStation\ Portable|portalmmm|Proxinet|ProxiNet|SHARP-TQ-GX10|SHG-i900|Small|SonyEricsson|Symbian\ OS|SymbianOS|TS21i-10|UP.Browser|UP.Link|webOS|Windows\ CE|WinWAP|YahooSeeker/M1A1-R2D2|iPhone|iPod|Android|BlackBerry9530|LG-TU915\ Obigo|LGE\ VX|webOS|Nokia5800).* [NC]
+RewriteCond %{HTTP_user_agent} !^(w3c\ |w3c-|acs-|alav|alca|amoi|audi|avan|benq|bird|blac|blaz|brew|cell|cldc|cmd-|dang|doco|eric|hipt|htc_|inno|ipaq|ipod|jigs|kddi|keji|leno|lg-c|lg-d|lg-g|lge-|lg/u|maui|maxo|midp|mits|mmef|mobi|mot-|moto|mwbp|nec-|newt|noki|palm|pana|pant|phil|play|port|prox|qwap|sage|sams|sany|sch-|sec-|send|seri|sgh-|shar|sie-|siem|smal|smar|sony|sph-|symb|t-mo|teli|tim-|tosh|tsm-|upg1|upsi|vk-v|voda|wap-|wapa|wapi|wapp|wapr|webc|winw|winw|xda\ |xda-).* [NC]
+RewriteCond %{DOCUMENT_ROOT}/cache/$1.htm -f
+RewriteRule ^(.*) "/cache/$1.htm" [L]
+
+RewriteCond %{REQUEST_URI} !^.*/$
+RewriteCond %{REQUEST_URI} !^.*//.*$
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{QUERY_STRING} !.*=.*
+#RewriteCond %{HTTP:Cookie} !^.*(comment_author_|wordpress_logged_in|wp-postpass_).*$
+#RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
+#RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP_USER_AGENT} !^.*(2.0\ MMP|240x320|400X240|AvantGo|BlackBerry|Blazer|Cellphone|Danger|DoCoMo|Elaine/3.0|EudoraWeb|Googlebot-Mobile|hiptop|IEMobile|KYOCERA/WX310K|LG/U990|MIDP-2.|MMEF20|MOT-V|NetFront|Newt|Nintendo\ Wii|Nitro|Nokia|Opera\ Mini|Palm|PlayStation\ Portable|portalmmm|Proxinet|ProxiNet|SHARP-TQ-GX10|SHG-i900|Small|SonyEricsson|Symbian\ OS|SymbianOS|TS21i-10|UP.Browser|UP.Link|webOS|Windows\ CE|WinWAP|YahooSeeker/M1A1-R2D2|iPhone|iPod|Android|BlackBerry9530|LG-TU915\ Obigo|LGE\ VX|webOS|Nokia5800).* [NC]
+RewriteCond %{HTTP_user_agent} !^(w3c\ |w3c-|acs-|alav|alca|amoi|audi|avan|benq|bird|blac|blaz|brew|cell|cldc|cmd-|dang|doco|eric|hipt|htc_|inno|ipaq|ipod|jigs|kddi|keji|leno|lg-c|lg-d|lg-g|lge-|lg/u|maui|maxo|midp|mits|mmef|mobi|mot-|moto|mwbp|nec-|newt|noki|palm|pana|pant|phil|play|port|prox|qwap|sage|sams|sany|sch-|sec-|send|seri|sgh-|shar|sie-|siem|smal|smar|sony|sph-|symb|t-mo|teli|tim-|tosh|tsm-|upg1|upsi|vk-v|voda|wap-|wapa|wapi|wapp|wapr|webc|winw|winw|xda\ |xda-).* [NC]
+RewriteCond %{DOCUMENT_ROOT}/cache/$1/index.htm -f
+RewriteRule ^(.*) "/cache/$1/index.htm" [L]
+
+# PaginaSTFNoticias.htm
+RewriteRule ^Pagina(\w+)Noticias\.htm*$ /$1 [R=301,L,NC]
+
+# /rssAGUNoticias.xml
+RewriteRule ^rss(\w+)Noticias\.xml*$ /index.php?p=$1&feed=2 [QSA,NC,L]
+RewriteRule ^rss2(\w+)Noticias\.xml*$ /index.php?p=$1&feed=2 [QSA,NC,L]
+RewriteRule ^atom(\w+)Noticias\.xml*$ /index.php?p=$1&feed=3 [QSA,NC,L]
+RewriteRule ^rdf(\w+)Noticias\.xml*$ /index.php?p=$1&feed=4 [QSA,NC,L]
+
+RewriteRule ^rss\.xml/*$ /index.php?feed=2 [QSA,NC,L]
+RewriteRule ^rss2\.xml/*$ /index.php?feed=2 [QSA,NC,L]
+RewriteRule ^atom\.xml/*$ /index.php?feed=3 [QSA,NC,L]
+RewriteRule ^rdf\.xml/*$ /index.php?feed=4 [QSA,NC,L]
+
+RewriteCond %{REQUEST_URI} ^PrevisaoTempo(\w+)\.(json|xml)$
+RewriteCond %{REQUEST_FILENAME} !-f [NC]
+RewriteRule ^PrevisaoTempo(\w+)\.(json|xml)$ /saveDataXML.php?o=101&e=$1y=$2 [QSA,NC,L]
+
+RewriteCond %{REQUEST_URI} ^PrevisaoTempo(\w+)\.(\w+)\.(json|xml)$
+RewriteCond %{REQUEST_FILENAME} !-f [NC]
+RewriteRule ^PrevisaoTempo(\w+)\.(\w+)\.(json|xml)$ /saveDataXML.php?o=101&e=$1&c=$2y=$3 [QSA,NC,L]
+
+# /busca
+RewriteRule ^(busca)/*$ /index.php?o=7&p=/$1 [QSA,NC,L]
+
+# /clima
+# RewriteCond %{REQUEST_URI}    ^/clima/*$ [NC]
+RewriteRule ^(clima)/*$ /index.php?o=9&p=/$1&f=/index.htm [QSA,NC,L]
+
+# /cotacoes
+# RewriteCond %{REQUEST_URI}    ^/cotacoes/*$ [NC]
+RewriteRule ^(cotacoes)/*$ /index.php?o=10&p=/$1&f=/index.htm [QSA,NC,L]
+
+# /noticias
+# RewriteCond %{REQUEST_URI}    ^/noticias/*$ [NC]
+# RewriteRule ^noticias/*$ /ztag/ztag.php?temp=listYear.ztag [NC,L]
+RewriteRule ^(noticias)/*$ /index.php?o=1&p=/$1&f=/index.htm [QSA,NC,L]
+
+# /noticias/1988
+# RewriteCond %{REQUEST_URI}            ^/noticias/\d+/*$ [NC]
+# RewriteRule ^noticias/(\d+)/*$ /ztag/ztag.php?temp=listMonth.ztag&y=$1 [QSA,NC,L]
+RewriteRule ^(noticias/(\d+))/*$ /index.php?o=2&p=/$1&f=index.htm&y=$2 [QSA,NC,L]
+
+# /noticias/1988/jan
+# RewriteCond %{REQUEST_URI}            ^/noticias/\d+/\w+/*$
+# RewriteRule ^noticias/(\d+)/(\w+)/*$ /ztag/ztag.php?temp=listDay.ztag&y=$1&m=$2 [QSA,NC,L]
+RewriteRule ^(noticias/(\d+)/(\w+))/*$ /index.php?o=3&p=/$1&f=index.htm&y=$2&m=$3 [QSA,NC,L]
+
+# /noticias/1988/jan/6
+# RewriteCond %{REQUEST_URI}            ^/noticias/\d+/\w+\d+/*$ [NC]
+# RewriteRule ^noticias/(\d+)/(\w+)/(\d+)/*$ /ztag/ztag.php?temp=listSource.ztag&y=$1&m=$2&d=$3 [QSA,NC,L]
+RewriteRule ^(noticias/(\d+)/(\w+)/(\d+))/*$  /index.php?o=4&p=/$1&f=index.htm&y=$2&m=$3&d=$4 [QSA,NC,L]
+
+# /stf/2011/abr/19/
+# RewriteCond %{REQUEST_URI}            ^/\w+/\d+/\w+\d+/*$
+# RewriteRule ^(\w+)/(\d+)/(\w+)/(\d+)/*$ /ztag/ztag.php?temp=listNews.ztag&s=$1&y=$2&m=$3&d=$4 [QSA,NC,L]
+RewriteRule ^((\w+)/(\d+)/(\w+)/(\d+))/*$ /index.php?o=5&p=/$1&f=index.htm&s=$2&y=$3&m=$4&d=$5 [QSA,NC,L]
+
+# /tjro/1988/jan/6/pleno-aprova-pccs-e-greve-no-judiciario-chega-ao-fim
+# RewriteCond %{REQUEST_URI}            ^/\w+/\d+/\w+\d+/.*$
+# RewriteRule ^((\w+)/(\d+)/(\w+)/(\d+)/([^/]+))/*$ /ztag/ztag.php?temp=showNews.ztag&p=/$1.htm&s=$2&y=$3&m=$4&d=$5&n=$6 [QSA,NC,L]
+RewriteRule ^((\w+)/(\d+)/(\w+)/(\d+))/([^/]+)/*$ /index.php?o=6&p=/$1&f=$6.htm&s=$2&y=$3&m=$4&d=$5&n=$6 [QSA,NC,L]
+
+RewriteRule ^(\w+)/*$ /index.php?o=8&p=$1&f=index.htm [QSA,NC,L]
+
+# RewriteCond %{DOCUMENT_ROOT}/cache%{REQUEST_URI}.html -f
+# RewriteRule . /cache%{REQUEST_URI}.html [NC,L]
+
+ # [U,L]
+
+# para definir a página em construção
+#RewriteCond %{HTTP_HOST} ^lugarmedi\.co$ [NC]
+#RewriteCond %{REQUEST_URI} ^/.*\.ztag$ [NC]
+#RewriteRule .* http://lugarmedi.co/construction.html [L,R=302]
+
+# Muda sempre para o dominio lugarmedi.co
+#RewriteCond %{HTTP_HOST} !^lugarmedico\d?\.zyc.com\.br$ [NC]
+#RewriteCond %{HTTP_HOST} !^lugarmedi\.co$ [NC]
+#RewriteRule ^(.*)$ http://lugarmedi.co/$1 [R=301,L]
+
+# http://www.direito2.com.br/noticias/2011/
+#RewriteCond %{HTTP_HOST} !^lugarmedico\d?\.zyc.com\.br$ [NC]
+RewriteRule ^(.*)\.ztag$ /ztag/ztag.php?temp=$1.ztag [QSA,NC,L]

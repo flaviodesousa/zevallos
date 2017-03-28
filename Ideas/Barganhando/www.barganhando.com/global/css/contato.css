@@ -1,0 +1,44 @@
+.coluna, #infoContato {float:left;}
+/*.coluna {width:440px;}*/
+
+#contato label {display:block; margin:0 0 5px 0; font-size:22px; color:#820000}
+#contato input, #contato select,  #contato textarea {font:14px Arial, Helvetica, sans-serif; color:#666; border:1px solid #ccc}
+#contato input, #contato textarea {padding:0 5px 0 5px; }
+#contato input {height:30px; line-height:30px;  border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;}
+#contato select {width:168px; margin:8px 0 0 7px; border:0;}
+#contato textarea {padding-top:5px; height:100px; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;}
+#contato button {display:block; text-indent:-9000px; width:75px; height:33px; background:url(../images/btnEnviar.png) no-repeat; cursor:pointer;}
+
+/*#contato ul, #contato ul li {float:left;}*/
+#contato ul li {margin:0 0 20px 0;}
+
+
+#contato .afasta-campos {margin-right:6px;}
+#contato .afasta-combos {margin-right:30px;}
+
+#contato p {margin:0 0 10px 0;}
+
+.campos {float:left;}
+.campos-um {width:480px;}
+.campos-dois {width:470px;}
+.campos-dois_i {width:460px;}
+.campos-tres {width:240px}
+.campos-quatro {width:230px}
+
+
+#contato .campo-um {width:430px !important;}
+#contato .campo-dois {width:333px !important;}
+#contato .campo-tres {width:189px !important;}
+#contato .campo-quatro {width:905px !important;}
+
+#contato .combo-list {display:block; width:185px; height:30px; border:1px solid #ccc;}
+
+#infoContato {width:453px; margin:0 0 0 50px;}
+#infoContato h3 {margin:0 0 5px 0; font-size:22px; color:#820000;}
+#infoContato p {margin:0 0 5px 0;}
+#infoContato span {display:block; width:453px; border:4px solid #820000}
+#infoContato address {margin:10px 0 10px 0; padding:0 0 5px 0; color:#666; text-align:right; border-bottom:1px solid #ccc}
+#infoContato .atendimento {margin:10px 0 0 0; text-align:right; }
+#infoContato .atendimento h4 {margin:0 0 10px 0; font-weight:bolder; font-size:16px; color:#333}
+#infoContato .atendimento p {color:#666}
+#infoContato .atendimento p a {color:#000}

@@ -1,0 +1,7 @@
+<zsession:unset name="userLogged" />
+<zsession:unset name="userName" />
+<zsession:unset name="userLogin" />
+<zsession:unset name="userLoginError" />
+
+<zheader:location value="logon.ztag" />
+

@@ -1,0 +1,446 @@
+@charset "utf-8";
+/*<![CDATA[*/
+
+/* $Id: all.css,v 1.0 2010/05/10 14:00:00 twig Exp $ */
+/*
+	Use this for base styles for media=all
+*/
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+*:active
+{
+	outline: none;
+}
+
+/* <!-- Tags */
+
+html
+{
+	overflow-y: scroll; /* Force vertical scrollbar chrome */
+}
+body, select, textarea, input, button {
+	font-family: Arial, Helvetica, sans-serif;
+}
+body {
+	font-size: 62.5%;
+	line-height: normal;
+	color: #333;
+	background: #fff none left top repeat-x;
+}
+img {
+	border: 0 none;
+	vertical-align: top;
+}
+table {
+	width: 100%;
+	border: 0 none;
+	border-collapse: collapse;
+	margin: 0;
+}
+p {
+	margin: 0.8em 0 0.5em 0;
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: normal;
+	line-height: normal;
+}
+ul, ol
+{
+	margin: 0.5em 0;
+	padding: 0 0 0 1.5em;
+}
+li
+{
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin: 0 0 0.8em 0.8em;
+}
+ul li
+{
+	list-style: disc;
+}
+ul li ul li
+{
+	list-style: circle;
+}
+ol li
+{
+	list-style: decimal;
+}
+ol li ol li
+{
+	list-style: lower-latin;
+}
+label
+{
+	cursor: pointer;
+}
+legend
+{
+	display: none;
+}
+fieldset
+{
+	border: 0 none;
+}
+sup {
+	line-height: 0;
+	vertical-align: super;
+	font-size: 75%;
+}
+a
+{
+	text-decoration: none;
+}
+a:link, a:visited, a:active {
+	color: #0e5796;
+}
+a:hover
+{
+	text-decoration: underline;
+}
+b
+{
+	font-weight: normal;
+}
+
+.clearer {
+	clear: both;
+	float: none;
+	line-height: 0;
+	font-size: 0;
+	height: 0;
+	overflow: hidden;
+}
+.clearerfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.hide {
+	display: none;
+	visibility: hidden;
+}
+.show {
+	display: block;
+	visibility: visible;
+}
+.fltL {
+	float: left;
+	margin: 0;
+	text-align: left;
+}
+.fltR {
+	float: right;
+	margin: 0;
+	text-align: right;
+}
+
+button {
+	cursor: pointer;
+}
+input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: normal;
+	overflow: hidden;
+}
+input.inputBox {
+	border: 1px solid #cccccc;
+	height: 18px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding-left: 4px;
+}
+input.checkBox {
+	margin-right: 7px;
+	vertical-align: top;
+	cursor: pointer;
+}
+input.radio {
+	margin-right: 7px;
+	vertical-align: top;
+	cursor: pointer;
+}
+input.button {
+	height: 24px;
+	vertical-align: top;
+	cursor: pointer;
+}
+input.submit {
+	height: 24px;
+	vertical-align: top;
+	cursor: pointer;
+}
+input.cancel {
+	height: 24px;
+	vertical-align: top;
+	cursor: pointer;
+}
+input.frmError, textarea.frmError, select.frmError {
+	background-color: #F4DAA3;
+}
+input.fileUpload {
+	margin-top: 2px;
+	margin-bottom: 2px;
+	height: 20px;
+}
+select {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+select.selectBox {
+	border: 1px solid #cccccc;
+	height: 20px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	cursor: pointer;
+}
+select.selectBox[disabled] {
+	cursor: default;
+}
+select.selectBox.multiple {
+	height: auto !important;
+}
+optgroup {
+	margin-left: 4px;
+}
+option {
+	padding-left: 4px;
+}
+textarea {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: normal;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+textarea.textareaBox
+{
+	border: 1px solid #cccccc;
+	height: 45px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding-left: 4px;
+}
+
+#tpl_anchor {
+	background: transparent url(../images/template/bgs/bg_tpl-anchor_x.png) left top repeat-x scroll;
+}
+#tpl_page {
+	width: 1002px;
+	margin: 0 auto;
+}
+#tpl_header {
+	background: transparent url(../images/template/bgs/bg_tpl-header_x.gif) left top repeat-x scroll;
+	height: 96px;
+	margin-bottom: 8px;
+	overflow: hidden;
+}
+#tpl_header .logo {
+	width: 142px;
+	height: 94px;
+	overflow: hidden;
+}
+#tpl_header .buttons {
+	margin: 45px 16px 0 0;
+}
+#tpl_header .buttons a.button {
+	display: inline-block;
+	width: 86px;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	line-height: 30px;
+	text-decoration: none;
+	margin: 0 3px;
+	cursor: pointer;
+	position: relative;
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	outline: 0 none;
+}
+#tpl_header .buttons a.button:active {
+	top: 1px;
+}
+#tpl_header .buttons a.button:active, #tpl_header .buttons a.focus {
+	outline: 0 none;
+}
+#tpl_header .buttons a.button span.left {
+	display: block;
+	background: transparent url(../images/template/bgs/sprite_form-buttons.gif) left top no-repeat scroll;
+	margin-right: 5px;
+}
+#tpl_header .buttons a.button span.right {
+	display: block;
+	width: 5px;
+	height: 30px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: transparent url(../images/template/bgs/sprite_form-buttons.gif) right bottom no-repeat scroll;
+}
+#tpl_header .social-media {
+	margin: 45px 24px 0 0;
+}
+#tpl_header .social-media .label {
+	font-size: 1.1em;
+	color: #41aeff;
+	line-height: 31px;
+	vertical-align: top;
+	display: inline-block;
+	margin-right: 10px;
+}
+#tpl_header .social-media a {
+	margin: 0 6px;
+}
+
+
+
+
+/* <!-- Generic jQuery Tabs */
+
+ul.tabs
+{
+	padding: 0;
+	margin: 0;
+}
+ul.tabs li
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 1em;
+}
+ul.tabs li.tab {
+	float: left;
+	display: inline;
+	cursor: pointer;
+}
+ul.tabs li.tab.on {
+}
+ul.tabs li.tab a {
+	display: block;
+	text-decoration: none;
+}
+ul.tabs li.tab a:hover {
+	text-decoration: underline;
+}
+ul.tabs li.tab :focus
+{
+	outline: none;
+}
+.tabset .tab-container {
+	padding: 16px 8px;
+}
+.tabset .tab-content {
+}
+
+.aTop
+{
+	text-align: right;
+	font-size: 1.1em;
+	margin: 10px 0 8px 0;
+	clear: both;
+}
+
+/* Generic jQuery Tabs --> */
+
+/* <!-- Awesome Buttons 
+http://www.zurb.com/blog_uploads/0000/0617/buttons-03.html */
+
+.awesome, .awesome:visited {
+	background: #222 url(../images/awesome/alert-overlay.png) repeat-x;
+	display: inline-block;
+	padding: 5px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	position: relative;
+	cursor: pointer;
+	outline: 0 none;
+}
+.awesome:hover {
+	background-color: #111;
+	color: #fff;
+}
+.awesome:active {
+	top: 1px;
+}
+.awesome:active, .awesome:focus {
+	outline: 0 none;
+}
+.small.awesome, .small.awesome:visited {
+	font-size: 11px;
+	padding: 0;
+}
+.awesome, .awesome:visited,  .medium.awesome, .medium.awesome:visited {
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 1;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+/* Awesome Buttons --> */
+
+/* Copied from blue.css in boxie */
+	/* box for user info, settings and logout */
+	#tpl_header #userbox {
+		background: url(../images/template/bgs/userbox.png) no-repeat;
+		position: relative;
+		float: right;
+		width: 225px;
+		min-height: 65px;
+		line-height: 1.3;
+		-moz-border-radius-bottomleft:4px;
+		-moz-border-radius-bottomright:4px;
+		margin-top:24px;
+		min-height:58px;
+		text-align:left;
+	}
+	#tpl_header #userbox .inner {padding: 12px 50px 0 55px;}
+	#tpl_header #userbox a#logout {border: 0; position: absolute; right: 14px; top: 21px; display: block; width: 23px; height: 24px; overflow: hidden; line-height: 1; font-size: 90%; color: #41AEFF;}
+	#tpl_header #userbox a#logout .ir {background: url(../graphics/template/bgs/logout.html);}
+	#tpl_header #userbox a#logout:hover .ir,
+	#tpl_header #userbox a#logout:focus .ir,
+	#tpl_header #userbox a#logout:active .ir {background-position: -23px 0;}
+	#tpl_header #userbox strong {font-size: 120%; font-weight: normal; color: #fff;}
+	#tpl_header #userbox a {border-color: #427da9; color: #41AEFF; text-decoration: underline;}
+	#tpl_header #userbox a:hover,
+	#tpl_header #userbox a:active,
+	#tpl_header #userbox a:focus {border-color: #9bc4e3; color: #fff; text-decoration: none; }
+	#tpl_header #userbox ul { margin:0; padding:0;}
+	#tpl_header #userbox ul li {display: inline; font-size: 1em; margin:0; padding:0;}
+	#tpl_header #userbox ul a {float: left; margin-right: 7px;}
+	#tpl_header #userbox .ir {
+		display:block;
+		height:100%;
+		left:0;
+		position:absolute;
+		top:0;
+		width:100%;
+	}
+
+
+/* CSS3 */
+.txtShadowed {
+	text-shadow: #333 0 0 2px;
+}
+
+/*]]>*/

@@ -1,0 +1,106 @@
+<?php
+/**
+ * @autor Emerson Casas Salvador - salvaemerson@gmail.com
+ */
+
+
+$pacrudText[0] = 'Installation';
+$pacrudText[1] = 'General Settings';
+$pacrudText[2] = 'Database';
+$pacrudText[3] = 'Create config files';
+$pacrudText[4] = 'Permission denied, type the following command to enable write access to "%s" directory';
+$pacrudText[5] = 'Then press F5 to refresh';
+$pacrudText[6] = 'Creating username';
+$pacrudText[7] = 'Error creating username';
+$pacrudText[8] = 'Creating database';
+$pacrudText[9] = 'Error creating database';
+$pacrudText[10] = 'Creating paCRUD database tables';
+$pacrudText[11] = 'Error creating paCRUD database tables';
+$pacrudText[12] = 'The files has been saved in "example" directory, move it to application directory';
+$pacrudText[13] = 'Done!';
+$pacrudText[14] = 'Click here';
+$pacrudText[15] = 'to access your application';
+$pacrudText[16] = 'Autenttication';
+$pacrudText[17] = 'Username';
+$pacrudText[18] = 'Password';
+$pacrudText[19] = 'Access';
+$pacrudText[20] = 'exit';
+$pacrudText[21] = 'Username or password wrong';
+$pacrudText[22] = 'Writing file';
+$pacrudText[23] = 'Conectivity problem with database server';
+$pacrudText[24] = 'Loading';
+$pacrudText[25] = 'do not remove this lines';
+$pacrudText[26] = 'installation aborted';
+$pacrudText[27] = 'sgdb not suported';
+$pacrudText[28] = 'unknown to pacrudError';
+$pacrudText[29] = 'Conectivity problem with database server for user';
+$pacrudText[30] = 'Property xmlFile not specified from pacrudSearch object';
+$pacrudText[31] = 'Your browser not support Ajax XMLHttpRequest';
+$pacrudText[32] = 'Error while get data from ';
+$pacrudText[33] = 'Unknow format "';
+$pacrudText[34] = 'XML format invalid for "';
+$pacrudText[35] = 'Records found';
+$pacrudText[36] = 'Showing from';
+$pacrudText[37] = 'Page';
+$pacrudText[38] = 'from';
+$pacrudText[39] = 'to';
+$pacrudText[40] = 'Search';
+$pacrudText[41] = 'All';
+$pacrudText[42] = 'Register';
+$pacrudText[43] = 'contains';
+$pacrudText[44] = 'not contains';
+$pacrudText[45] = 'begins with';
+$pacrudText[46] = 'ends with';
+$pacrudText[47] = 'not begins with';
+$pacrudText[48] = 'not ends with';
+$pacrudText[49] = 'equals';
+$pacrudText[50] = 'different';
+$pacrudText[51] = 'less than';
+$pacrudText[52] = 'greater than';
+$pacrudText[53] = 'less than or equals';
+$pacrudText[54] = 'greater than or equals';
+
+$pacrudText[55] = 'sem traducao';
+$pacrudText[56] = 'sem traducao';
+$pacrudText[57] = 'sem traducao';
+$pacrudText[58] = 'sem traducao';
+$pacrudText[59] = 'sem traducao';
+$pacrudText[50] = 'sem traducao';
+$pacrudText[60] = 'sem traducao';
+$pacrudText[61] = 'sem traducao';
+$pacrudText[62] = 'sem traducao';
+$pacrudText[63] = 'sem traducao';
+$pacrudText[64] = 'sem traducao';
+$pacrudText[65] = 'sem traducao';
+$pacrudText[66] = 'sem traducao';
+$pacrudText[67] = 'sem traducao';
+$pacrudText[68] = 'sem traducao';
+$pacrudText[69] = 'sem traducao';
+$pacrudText[70] = 'sem traducao';
+
+$pacrudTextAbout[0] = 'About paCrud';
+$pacrudTextAbout[1] = 'Version';
+$pacrudTextAbout[2] = 'Project Site';
+$pacrudTextAbout[3] = 'What is paCrud';
+$pacrudTextAbout[4] = 'paCRUD - PHP Ajax CRUD Framework is a Framework PHP/Ajax using CRUD (Create, Retrieve, Update e Delete) features to a fast system information develop on PostgreSQL or MySQL databases.';
+$pacrudTextAbout[5] = 'sem traducao';
+$pacrudTextAbout[6] = 'sem traducao';
+$pacrudTextAbout[7] = 'sem traducao';
+$pacrudTextAbout[8] = 'sem traducao';
+$pacrudTextAbout[9] = 'sem traducao';
+$pacrudTextAbout[10] = 'sem traducao';
+$pacrudTextAbout[11] = 'sem traducao';
+
+$pacrudTextDesktop[0] = 'sem traducao';
+$pacrudTextDesktop[1] = 'sem traducao';
+$pacrudTextDesktop[2] = 'sem traducao';
+$pacrudTextDesktop[3] = 'sem traducao';
+$pacrudTextDesktop[4] = 'sem traducao';
+$pacrudTextDesktop[5] = 'sem traducao';
+$pacrudTextDesktop[6] = 'sem traducao';
+$pacrudTextDesktop[7] = 'sem traducao';
+$pacrudTextDesktop[8] = 'sem traducao';
+$pacrudTextDesktop[9] = 'sem traducao';
+$pacrudTextDesktop[10] = 'sem traducao';
+$pacrudTextDesktop[11] = 'sem traducao';
+$pacrudTextDesktop[12] = 'sem traducao';

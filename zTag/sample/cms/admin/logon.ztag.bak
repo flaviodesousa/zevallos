@@ -1,0 +1,22 @@
+<zheader:locationif use="!userLogged" condition="len()" value="index.ztag" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="zCMS - Logon" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>zCMS - Logon - (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Source" />)</h1>
+
+    <zhtml:h3 value="!userLoginError" />
+    <zsession:unset name="userLoginError" />
+    <form action="logonValidate.ztag" method="post">
+      <zform:boxtext caption="&Logon" name="DS_USERNAME" />
+      <br /><zform:boxpassword caption="&Password" name="DS_PASSWORD" />
+      <br /><input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
+
+

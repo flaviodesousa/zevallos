@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>zTag Template File Sample - zTag</title>
+</head>
+<body>
+<h1>Testing the test function</h1>
+
+<h2>ztagtemplatefile:test - value</h2>
+<ztagtemplatefile:test value="My Test" />
+ 
+<h2>ztagtemplatefile:test - value</h2>
+<zvar:set id="varTest" value="My Test Var" />
+
+<ztagtemplatefile:test var="$varTest" />
+ 
+<h2>ztagtemplatefile:test - inner</h2>
+<ztagtemplatefile:test>
+   My inner Test
+</ztagtemplatefile:test>
+
+<h1>Testing the zExecute function</h1>
+
+<h2>ztagtemplatefile:hi - value</h2>
+<ztagtemplatefile:hi value="My Test" />
+ 
+<h2>ztagtemplatefile:hi - value</h2>
+<zvar:set id="varTest" value="My Test Var" />
+
+<ztagtemplatefile:hi var="$varTest" />
+ 
+<h2>ztagtemplatefile:hi - inner</h2>
+<ztagtemplatefile:hi>
+   My inner Test
+</ztagtemplatefile:hi>
+
+<h1>Using the transform parameter</h1>
+<ztagtemplatefile:hi value="My Test" transform="upper()"/>
+<br >
+<ztagtemplatefile:test value="My Test"  transform="lower()"/>
+
+</body>
+</html>

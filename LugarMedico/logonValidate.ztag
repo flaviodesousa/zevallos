@@ -1,0 +1,49 @@
+<zrequest:get name="USERNAME" var="DS_LOGIN" transform="stripTags()" />
+<zrequest:get name="PASSWORD" var="DS_SENHA" transform="stripTags()" />
+
+<zdb:open id="myConn" driver="mysql" host="#myHost" database="#myDatabase" user="#myUser" password="#myPassword" />
+  <zdb:query use="myConn" id="myQuery">
+    SELECT U.CD_PESSOA
+    , U.DS_LOGIN
+    , U.DS_SENHA
+    , P.NM_PESSOA
+    , P.NM_PRIMEIRO
+    , CASE WHEN P.DS_AVATAR IS NULL THEN '/avatar/avatar.jpg' ELSE P.DS_AVATAR END DS_AVATAR
+    , CASE WHEN P.DS_URL_PERFIL IS NULL THEN CONCAT('/perfil.ztag?p=', U.CD_PESSOA) ELSE P.DS_URL_PERFIL END DS_URL_PERFIL
+    FROM TB_USUARIO U
+    LEFT JOIN TB_PESSOA P ON U.CD_PESSOA = P.CD_PESSOA 
+    WHERE U.DS_LOGIN = '$DS_LOGIN' AND U.DS_SENHA = '$DS_SENHA'
+  </zdb:query>
+
+  <zsession:unset name="userLogged" />
+  <zsession:unset name="userNameFull" />
+  <zsession:unset name="userName" />
+  <zsession:unset name="userAvatar" />
+  <zsession:unset name="userURLPerfil" />
+  <zsession:unset name="userid" />
+
+  <zsession:set name="userLoginError" value="Usuário ou senha inválidos!" />
+
+  <zdb:fetchuntil use="myQuery" var="myRow">
+    <zsession:set name="userLogged" value="$myRow[CD_PESSOA]" />
+    <zsession:set name="userNameFull" value="$myRow[NM_PESSOA]" />
+    <zsession:set name="userName" value="$myRow[NM_PRIMEIRO]" />
+    <zsession:set name="userAvatar" value="$myRow[DS_AVATAR]" />
+    <zsession:set name="userURLPerfil" value="$myRow[DS_URL_PERFIL]" />
+    <zsession:set name="userid" value="$myRow[CD_PESSOA]" />
+
+    <zsession:unset name="userLoginError" />
+  </zdb:fetchuntil>
+
+	<zvar:set id="now" value="0" transform="now2sql()" />
+	
+  <zdb:execute use="myConn">
+    UPDATE TB_PESSOA
+    SET DT_ULTIMA_ATIVIDADE = '$now'
+    , DS_CONSELHO = '10 _ $now'
+    WHERE CD_PESSOA = !userLogged
+  </zdb:execute>  
+<zdb:close use="myConn" />
+
+<zheader:locationif use="!userLogged" condition="len()" value="index.ztag" />
+<zheader:locationif use="!userLogged" notcondition="len()" value="logon.ztag" />

@@ -1,0 +1,20 @@
+RewriteEngine on
+# RewriteOptions MaxRedirects=10
+# RewriteLog file-path
+# RewriteLogLevel Level
+
+
+# ReadmeName /ztag/dir/readme.html
+# HeaderName /ztag/dir/header.shtml
+
+IndexOptions +FoldersFirst +IgnoreCase +DescriptionWidth=* +NameWidth=* +ScanHTMLTitles
+
+Options +FollowSymLinks
+
+DirectoryIndex index.ztag default.ztag index.php default.php
+
+RewriteCond %{QUERY_STRING} (.+)
+RewriteRule ^(.*)\.ztag$ /ztag/ztag.php?temp=$1.ztag [QSA,NC,L]
+
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.ztag$ /ztag/ztag.php?temp=$1.ztag [NC,L]

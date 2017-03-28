@@ -1,0 +1,2 @@
+<dt><a href="<ZTagField.PapagAlternativo>"<ZTagField.PapagTituloFlutuante>><ZTagField.PapagTitulo></a></dt>
+<ZTagSQL(50).IndiceGeralEdicaoItem."Pa.pagPai = <ZTagField.PapagCodigo> AND Pa.pagAtivo = 1 AND Pa.pagReferencia IN (4,5,8,9) AND Pa.pagInclusao <= GetDate()"."CASE WHEN Pa.pagDataReferencia is null THEN Pa.pagInclusao ELSE Pa.pagDataReferencia END DESC, Pa.pagCodigo DESC">

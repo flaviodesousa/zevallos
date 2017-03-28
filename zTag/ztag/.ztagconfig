@@ -1,0 +1,53 @@
+if (!defined("fbDatabase")) define("fbDatabase", "ztag.d2.net.br:D:/Javenessi/Alianca08/BancoDeDados/ALIANCA08_01.FDB", 1);
+
+if (!defined("fbUser")) define("fbUser", "SYSDBA", 1);
+if (!defined("fbPassword")) define("fbPassword", "masterkey", 1);
+
+if (!defined("ociUser")) define("ociUser", "unidental", 1);
+if (!defined("ociPassword")) define("ociPassword", "Un1dental2010", 1);
+
+if (!defined("ociHost")) define("ociHost", "(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=ztag.d2.net.br)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=xe)))", 1);
+
+putenv("ORACLE_HOME=C:\\xampp\\PHP");
+putenv("ORACLE_SID=xe");
+putenv("TNS_ADMIN=C:\\xampp\\PHP");
+
+    // MySQL - Connection
+    define("mysqlHost", "localhost");
+    define("mysqlDatabase", "zDB");
+
+    define("mysqlUser", "zDB");
+    define("mysqlPassword", "zDB4321$");
+
+    // MSSQL - Connection
+    define("mssqlHost", "sql.direito2.com.br");
+    define("mssqlDatabase", "guesaerrante_com_br");
+
+    define("mssqlUser", "zDB");
+    define("mssqlPassword", "zDB4321$");
+
+    // MSSQL - Connection - OM - Direito 2
+    define("mssqlOMHost", "sql.direito2.com.br");
+    define("mssqlOMDatabase", "direito2_com_br");
+
+    define("mssqlOMUser", "zDB");
+    define("mssqlOMPassword", "zDB4321$");
+
+    // MSSQL - Connection - Nativa
+    define("nativaHost", "sg.unidental.com.br");
+    define("nativaDatabase", "UNID");
+
+    define("nativaUser", "Nativa");
+    define("nativaPassword", "Nativa432$");
+
+    // OCI - Connection
+    define("ociUser", "unidental");
+    define("ociPassword", "Un1dental2010");
+    define("ociHost", "(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.0.84)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=xe)))");
+
+    // MySQL - WordPress - D2
+    define("mysqlHostWP", "www.direito2.com.br");
+    define("mysqlDatabaseWP", "cidadesat");
+
+    define("mysqlUserWP", "root");
+    define("mysqlPasswordWP", "SuperWeZ$");

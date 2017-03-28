@@ -1,0 +1,1152 @@
+/*	Theme Name: ClickOn
+	Theme URI: www.clickon.com.br
+	Description: ClickOn
+	Version: 2.0
+	Author: Ana Galuppo | Email: agaluppo@clickon.com.br
+	@data: 28/10/2010 
+*/
+/******* Import Styles *******/
+@import url("reset.css");
+@import url("structure.css");
+@import url("colors.css");
+@import url("internal.css");
+@import url("form.css");
+@import url("landingpage.css");
+
+#PdealG {
+	font-family:Arial, Tahoma;
+	padding:70px 15px 40px !important;
+	width:935px !important;	
+}
+#PdealG div.PdealContent {
+	border:1px solid #E4E4E4;
+	float:left;
+	margin:15px 8px;
+	padding:5px;
+	width:205px;
+}
+#PdealG div.PdealContent h2 {
+	color:#2F4871;
+	font-size:16px;
+	font-weight:normal;
+	height:95px;
+	_height:105px;
+	margin-bottom:8px;
+	padding:5px 0;
+	text-transform:none;
+}
+#PdealG div.PdealContent .dealImg {
+	background-position:0 0;
+	background-repeat:no-repeat;
+	display:block;
+	height:130px;
+	width:205px;
+}
+#PdealG div.PdealContent h3 {
+	background:url("img/bg_lastdeals.png") repeat-x scroll 0 0 #5171AB;
+	color:#FFFFFF;
+	display:block;
+	font-size:18px;
+	font-weight:normal;
+	height:24px;
+	margin:0;
+	padding:6px 8px 0 0;
+	text-align:right;
+}
+#PdealG div.PdealContent ul.PdealPrice {
+	border-bottom:1px dotted #2f4871;
+	display:block;  
+	padding:6px 0;  
+	*height:20px;
+	_height:20px;
+}
+#PdealG div.PdealContent ul.PdealPrice li {
+	color:#666;
+	font-size:12px; 
+}
+#PdealG div.PdealContent ul.PdealPrice li.de {
+	padding-top:7px;
+}
+#PdealG div.PdealContent ul.PdealPrice li strong {
+	font-size:19px;
+	color:#2f4871;	
+}
+#PdealG div.PdealContent .PdealImgDet {
+	color:#999999;
+	display:block;
+	font-size:13px;
+	letter-spacing:-1px;
+	padding:5px 0;
+	text-align:center;    
+}
+
+/*
+@Sao Paulo
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .SPdealImg1 { background-image:url("img/lastdeals/cinemarkThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg2 { background-image:url("img/lastdeals/fmjoanaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg3 { background-image:url("img/lastdeals/circoDosSonhosThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg4 { background-image:url("img/lastdeals/pizzabrosThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg5 { background-image:url("img/lastdeals/prestissimoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg6 { background-image:url("img/lastdeals/bankaoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg7 { background-image:url("img/lastdeals/sapporoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg8 { background-image:url("img/lastdeals/studiomThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg9 { background-image:url("img/lastdeals/serafinaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg10 { background-image:url("img/lastdeals/cidadejardimThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg11 { background-image:url("img/lastdeals/knajiThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg12 { background-image:url("img/lastdeals/1900Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg13 { background-image:url("img/lastdeals/chipsThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg14 { background-image:url("img/lastdeals/bolinhaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg15 { background-image:url("img/lastdeals/terracoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg16 { background-image:url("img/lastdeals/bowlinThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg17 { background-image:url("img/lastdeals/appleThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg18 { background-image:url("img/lastdeals/kartThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg19 { background-image:url("img/lastdeals/drfrancoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg20 { background-image:url("img/lastdeals/bmq_sportsThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg21 { background-image:url("img/lastdeals/buddha_barThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg22 { background-image:url("img/lastdeals/espaco_laser4Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg23 { background-image:url("img/lastdeals/zena_caffeThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg24 { background-image:url("img/lastdeals/dr_francoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg25 { background-image:url("img/lastdeals/felicity2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg26 { background-image:url("img/lastdeals/circodossonhos3Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg27 { background-image:url("img/lastdeals/farofapaulistaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg28 { background-image:url("img/lastdeals/perfilatualThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg29 { background-image:url("img/lastdeals/espacolaser5Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg30 { background-image:url("img/lastdeals/tubesmaresiasThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg31 { background-image:url("img/lastdeals/terracobeleza2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg32 { background-image:url("img/lastdeals/serafinaspThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg33 { background-image:url("img/lastdeals/deeplaserThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg34 { background-image:url("img/lastdeals/bankao2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg35 { background-image:url("img/lastdeals/diogo_portugalThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg36 { background-image:url("img/lastdeals/espaco_laser6Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg37 { background-image:url("img/lastdeals/sassa_sushiThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg38 { background-image:url("img/lastdeals/slim_form2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg39 { background-image:url("img/lastdeals/salus_odontologiaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg40 { background-image:url("img/lastdeals/hotel_santa_cristinaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg41 { background-image:url("img/lastdeals/jaqueline_costaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg42 { background-image:url("img/lastdeals/restaurante_barbaroThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg43 { background-image:url("img/lastdeals/lipo_centerThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg44 { background-image:url("img/lastdeals/cestas_michelli2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg45 { background-image:url("img/lastdeals/familia_mineiraThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg46 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg47 { background-image:url("img/lastdeals/keuneThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg48 { background-image:url("img/lastdeals/agua_marinhaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg49 { background-image:url("img/lastdeals/barulho_daguaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg50 { background-image:url("img/lastdeals/espaco_laser7Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg51 { background-image:url("img/lastdeals/salavipThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg52 { background-image:url("img/lastdeals/otheloThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg53 { background-image:url("img/lastdeals/kartThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg54 { background-image:url("img/lastdeals/bambiThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg55 { background-image:url("img/lastdeals/studio_rwThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg56 { background-image:url("img/lastdeals/formula1Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg57 { background-image:url("img/lastdeals/asia70Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg58 { background-image:url("img/lastdeals/rinconThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg59 { background-image:url("img/lastdeals/fernando_maranhao2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg60 { background-image:url("img/lastdeals/clinica_rpThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg61 { background-image:url("img/lastdeals/fast_hairThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg62 { background-image:url("img/lastdeals/guanumbisThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg63 { background-image:url("img/lastdeals/espaco_laser8Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg64 { background-image:url("img/lastdeals/cla_divorciadasThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg65 { background-image:url("img/lastdeals/blue_mountainThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg66 { background-image:url("img/lastdeals/pousada_camburiocaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg67 { background-image:url("img/lastdeals/tendai_sushiThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg68 { background-image:url("img/lastdeals/beleza_cabeloThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg69 { background-image:url("img/lastdeals/pousada_temporeiThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg70 { background-image:url("img/lastdeals/mara_ecThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg71 { background-image:url("img/lastdeals/illuminattoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg72 { background-image:url("img/lastdeals/atena_phThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg73 { background-image:url("img/lastdeals/daiki_sushiThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg74 { background-image:url("img/lastdeals/olivaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg75 { background-image:url("img/lastdeals/recanto_vphThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg76 { background-image:url("img/lastdeals/hair_clubThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg77 { background-image:url("img/lastdeals/espaco_laser9Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg78 { background-image:url("img/lastdeals/atibaia_campoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg79 { background-image:url("img/lastdeals/felicity_sp2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg80 { background-image:url("img/lastdeals/parrilla_alemaoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg81 { background-image:url("img/lastdeals/celia_beatriz3Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg82 { background-image:url("img/lastdeals/serafina5Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg83 { background-image:url("img/lastdeals/scissor_hands2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg84 { background-image:url("img/lastdeals/pousada_dajThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg85 { background-image:url("img/lastdeals/amor_pedacosThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg86 { background-image:url("img/lastdeals/deep_laser2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg87 { background-image:url("img/lastdeals/chale_ceumarThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg88 { background-image:url("img/lastdeals/casal_tpmThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg89 { background-image:url("img/lastdeals/pousada_colonialThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg90 { background-image:url("img/lastdeals/esp_laser15Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg91 { background-image:url("img/lastdeals/bolinha2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg92 { background-image:url("img/lastdeals/studio_rw2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg93 { background-image:url("img/lastdeals/prostickThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg94 { background-image:url("img/lastdeals/sheratonThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg95 { background-image:url("img/lastdeals/executive_hotelThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg96 { background-image:url("img/lastdeals/spa_lannaiThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg97 { background-image:url("img/lastdeals/clinica_satoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg98 { background-image:url("img/lastdeals/hotel_alpinoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg99 { background-image:url("img/lastdeals/yatai_thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg100 { background-image:url("img/lastdeals/supergaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg101 { background-image:url("img/lastdeals/portucaleThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg102 { background-image:url("img/lastdeals/sankinosThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg103 { background-image:url("img/lastdeals/ls_studioThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg104 { background-image:url("img/lastdeals/pousada_sitioponteThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg105 { background-image:url("img/lastdeals/pousada_pacuThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg106 { background-image:url("img/lastdeals/filhos_maejoana2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg107 { background-image:url("img/lastdeals/tangerThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg108 { background-image:url("img/lastdeals/fnacThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg109 { background-image:url("img/lastdeals/ecospa_urbanoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg110 { background-image:url("img/lastdeals/saopauloThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg111 { background-image:url("img/lastdeals/perfil_atual4Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg112 { background-image:url("img/lastdeals/tam_viagensSPThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg113 { background-image:url("img/lastdeals/ms_importThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg114 { background-image:url("img/lastdeals/bistro_casareale3Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg115 { background-image:url("img/lastdeals/happy_town1Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg116 { background-image:url("img/lastdeals/bambi3Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg117 { background-image:url("img/lastdeals/illuminato2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg118 { background-image:url("img/lastdeals/xp_bolsaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg119 { background-image:url("img/lastdeals/estacao_vinhoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg120 { background-image:url("img/lastdeals/studio_lariThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg121 { background-image:url("img/lastdeals/via_unoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg122 { background-image:url("img/lastdeals/dujuzeThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg123 { background-image:url("img/lastdeals/elegance4Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg124 { background-image:url("img/lastdeals/chips_burgerThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg125 { background-image:url("img/lastdeals/otica_venturaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg126 { background-image:url("img/lastdeals/red_velvetThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg127 { background-image:url("img/lastdeals/soggiornoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg128 { background-image:url("img/lastdeals/harukiThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg129 { background-image:url("img/lastdeals/camila_monteiroThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg130 { background-image:url("img/lastdeals/pousada_boramarThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg131 { background-image:url("img/lastdeals/pombagiraThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg132 { background-image:url("img/lastdeals/pda_morenaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg133 { background-image:url("img/lastdeals/estranhos_rumoresThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg134 { background-image:url("img/lastdeals/poko_panoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg135 { background-image:url("img/lastdeals/suezThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg136 { background-image:url("img/lastdeals/bar_aeroclube_rThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg137 { background-image:url("img/lastdeals/estrela_manhaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg138 { background-image:url("img/lastdeals/haruki3Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg139 { background-image:url("img/lastdeals/refugio_camburiThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg140 { background-image:url("img/lastdeals/insideThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg141 { background-image:url("img/lastdeals/as_encalhadasThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg142 { background-image:url("img/lastdeals/artilheiros_barThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg143 { background-image:url("img/lastdeals/bichomaniaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg144 { background-image:url("img/lastdeals/otheoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg145 { background-image:url("img/lastdeals/tam_spbogotaThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg146 { background-image:url("img/lastdeals/tam_bogotaspThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg147 { background-image:url("img/lastdeals/deep_laserThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg148 { background-image:url("img/lastdeals/lentrecote2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg149 { background-image:url("img/lastdeals/airjetThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg150 { background-image:url("img/lastdeals/portucho2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg151 { background-image:url("img/lastdeals/paint_tamboreThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg152 { background-image:url("img/lastdeals/impdThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg153 { background-image:url("img/lastdeals/deia2Thumb.jpg")}
+#PdealG div.PdealContent .SPdealImg154 { background-image:url("img/lastdeals/romerobritoThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg155 { background-image:url("img/lastdeals/sonoraThumb.jpg")}
+#PdealG div.PdealContent .SPdealImg156 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SPdealImg157 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SPdealImg158 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SPdealImg159 { background-image:url("img/lastdeals/.html")}
+/*
+@Rio de Janeiro
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .RJdealImg1 { background-image:url("img/lastdeals/pizzamasterThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg2 { background-image:url("img/lastdeals/dombriedoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg3 { background-image:url("img/lastdeals/sushimarThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg4 { background-image:url("img/lastdeals/biocariocaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg5 { background-image:url("img/lastdeals/cafealtoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg6 { background-image:url("img/lastdeals/zentaiThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg7 { background-image:url("img/lastdeals/mmppmThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg8 { background-image:url("img/lastdeals/ph_dermeThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg9 { background-image:url("img/lastdeals/espaco7Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg10 { background-image:url("img/lastdeals/saloon79Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg11 { background-image:url("img/lastdeals/ferradurinhaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg12 { background-image:url("img/lastdeals/jasmin_mangaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg13 { background-image:url("img/lastdeals/rumodosventosThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg14 { background-image:url("img/lastdeals/rmThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg15 { background-image:url("img/lastdeals/caipira_chicThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg16 { background-image:url("img/lastdeals/forma_posturaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg17 { background-image:url("img/lastdeals/nirvanaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg18 { background-image:url("img/lastdeals/buzios_Int_Apart_HotelThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg19 { background-image:url("img/lastdeals/familia_adamsThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg20 { background-image:url("img/lastdeals/rosa_cafeThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg21 { background-image:url("img/lastdeals/ccprThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg22 { background-image:url("img/lastdeals/masseraobeneditoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg23 { background-image:url("img/lastdeals/hotel_vila_alpinaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg24 { background-image:url("img/lastdeals/slim_laserThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg25 { background-image:url("img/lastdeals/belle_fashion2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg26 { background-image:url("img/lastdeals/deckdostucunsThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg27 { background-image:url("img/lastdeals/comediadoSaltoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg28 { background-image:url("img/lastdeals/stage_hairThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg29 { background-image:url("img/lastdeals/surtoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg30 { background-image:url("img/lastdeals/vovo_tinoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg31 { background-image:url("img/lastdeals/cavalo_marinhoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg32 { background-image:url("img/lastdeals/cestas_michelli2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg33 { background-image:url("img/lastdeals/cavedosolThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg34 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg35 { background-image:url("img/lastdeals/cavalo_marinhoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg36 { background-image:url("img/lastdeals/OyaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg37 { background-image:url("img/lastdeals/pousada_alcobara2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg38 { background-image:url("img/lastdeals/exculaxadosThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg39 { background-image:url("img/lastdeals/tomilho_cia3Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg40 { background-image:url("img/lastdeals/grao_espressoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg41 { background-image:url("img/lastdeals/fronteraThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg42 { background-image:url("img/lastdeals/cfeThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg43 { background-image:url("img/lastdeals/contenteThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg44 { background-image:url("img/lastdeals/neides_cabThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg45 { background-image:url("img/lastdeals/oya2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg46 { background-image:url("img/lastdeals/pf_renascerThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg47 { background-image:url("img/lastdeals/fios_coresThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg48 { background-image:url("img/lastdeals/caminho_passarosThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg49 { background-image:url("img/lastdeals/salao_eguia2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg50 { background-image:url("img/lastdeals/rayer_landThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg51 { background-image:url("img/lastdeals/ipiatti2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg52 { background-image:url("img/lastdeals/emerson_brazThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg53 { background-image:url("img/lastdeals/pousada_garoupaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg54 { background-image:url("img/lastdeals/buteskinaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg55 { background-image:url("img/lastdeals/pousada_passarosThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg56 { background-image:url("img/lastdeals/studio_hairThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg57 { background-image:url("img/lastdeals/harmonyaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg58 { background-image:url("img/lastdeals/pousada_miratlanticoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg59 { background-image:url("img/lastdeals/fazendinha_minasThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg60 { background-image:url("img/lastdeals/wasabi_sushi2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg61 { background-image:url("img/lastdeals/skin_flowerThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg62 { background-image:url("img/lastdeals/blu_xThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg63 { background-image:url("img/lastdeals/fisio_laranjeiraThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg64 { background-image:url("img/lastdeals/yosukiThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg65 { background-image:url("img/lastdeals/bellini2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg66 { background-image:url("img/lastdeals/walThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg67 { background-image:url("img/lastdeals/cavalo_marinho2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg68 { background-image:url("img/lastdeals/dombri_edoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg69 { background-image:url("img/lastdeals/saude_rioThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg70 { background-image:url("img/lastdeals/eqmThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg71 { background-image:url("img/lastdeals/forvmThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg72 { background-image:url("img/lastdeals/amor_chocolateThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg73 { background-image:url("img/lastdeals/plasbel5Thumb.html")}
+#PdealG div.PdealContent .RJdealImg74 { background-image:url("img/lastdeals/philadelfiaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg75 { background-image:url("img/lastdeals/paraiso_acuThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg76 { background-image:url("img/lastdeals/puketThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg77 { background-image:url("img/lastdeals/crack_galetosThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg78 { background-image:url("img/lastdeals/fronteraThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg79 { background-image:url("img/lastdeals/tam_rjspThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg80 { background-image:url("img/lastdeals/turinoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg81 { background-image:url("img/lastdeals/mm_phThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg82 { background-image:url("img/lastdeals/beco_carmoThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg83 { background-image:url("img/lastdeals/tosakaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg84 { background-image:url("img/lastdeals/delicianteThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg85 { background-image:url("img/lastdeals/neides2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg86 { background-image:url("img/lastdeals/everestTHumb.jpg")}
+#PdealG div.PdealContent .RJdealImg87 { background-image:url("img/lastdeals/ootto2Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg88 { background-image:url("img/lastdeals/tomilho_pizza3Thumb.jpg")}
+#PdealG div.PdealContent .RJdealImg89 { background-image:url("img/lastdeals/aversao_comediaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg90 { background-image:url("img/lastdeals/bardafofocaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg91 { background-image:url("img/lastdeals/cruzeiro_taxiThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg92 { background-image:url("img/lastdeals/maria_joanaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg93 { background-image:url("img/lastdeals/saltimboccaThumb.jpg")}
+#PdealG div.PdealContent .RJdealImg94 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .RJdealImg95 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .RJdealImg96 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .RJdealImg97 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .RJdealImg98 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .RJdealImg99 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .RJdealImg100 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .RJdealImg101 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .RJdealImg102 { background-image:url("img/lastdeals/.html")}
+
+/*
+@Belo Horizonte
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .BHdealImg1 { background-image:url("img/lastdeals/corfitnessThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg2 { background-image:url("img/lastdeals/revitalizeThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg3 { background-image:url("img/lastdeals/tmakThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg4 { background-image:url("img/lastdeals/villarizzaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg5 { background-image:url("img/lastdeals/silviatolentinoThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg6 { background-image:url("img/lastdeals/fujiyamaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg7 { background-image:url("img/lastdeals/tanimotoThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg8 { background-image:url("img/lastdeals/spazio_vera_mThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg9 { background-image:url("img/lastdeals/odonto_marcelaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg10 { background-image:url("img/lastdeals/face_centro_estetica2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg11 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg12 { background-image:url("img/lastdeals/savassiThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg13 { background-image:url("img/lastdeals/otho_marliere2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg14 { background-image:url("img/lastdeals/body_cleanThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg15 { background-image:url("img/lastdeals/buzios_iah_bhThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg16 { background-image:url("img/lastdeals/a_auraThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg17 { background-image:url("img/lastdeals/lth_odontologiaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg18 { background-image:url("img/lastdeals/utopicaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg19 { background-image:url("img/lastdeals/espaco_clinico2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg20 { background-image:url("img/lastdeals/horta_duarte2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg21 { background-image:url("img/lastdeals/spazio_esteticaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg22 { background-image:url("img/lastdeals/harmonica_clareamentoThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg23 { background-image:url("img/lastdeals/sinergia2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg24 { background-image:url("img/lastdeals/verdeagua2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg25 { background-image:url("img/lastdeals/cora_center2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg26 { background-image:url("img/lastdeals/aaura2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg27 { background-image:url("img/lastdeals/mariana_pelegrinoThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg28 { background-image:url("img/lastdeals/so_komo_aki2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg29 { background-image:url("img/lastdeals/spaziobhThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg30 { background-image:url("img/lastdeals/verde_agua3Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg31 { background-image:url("img/lastdeals/surrealThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg32 { background-image:url("img/lastdeals/corporaleThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg33 { background-image:url("img/lastdeals/pousada_sandiThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg34 { background-image:url("img/lastdeals/pousada_cafeThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg35 { background-image:url("img/lastdeals/cestas_michelli2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg36 { background-image:url("img/lastdeals/estetica_imagemThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg37 { background-image:url("img/lastdeals/boi_rajaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg38 { background-image:url("img/lastdeals/spa_eternaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg39 { background-image:url("img/lastdeals/pousada_folhasThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg40 { background-image:url("img/lastdeals/petiskeiraThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg41 { background-image:url("img/lastdeals/luciana_ferrazThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg42 { background-image:url("img/lastdeals/felinosThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg43 { background-image:url("img/lastdeals/studio_insightThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg44 { background-image:url("img/lastdeals/estetica_patriciabThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg45 { background-image:url("img/lastdeals/pizza_surThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg46 { background-image:url("img/lastdeals/spazio2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg47 { background-image:url("img/lastdeals/acacia_laserThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg48 { background-image:url("img/lastdeals/corporale3Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg49 { background-image:url("img/lastdeals/pousada_solThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg50 { background-image:url("img/lastdeals/emagrecentro_bhThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg51 { background-image:url("img/lastdeals/bem_estarThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg52 { background-image:url("img/lastdeals/pousada_neuzaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg53 { background-image:url("img/lastdeals/jsanThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg54 { background-image:url("img/lastdeals/cavalo_marinho2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg55 { background-image:url("img/lastdeals/patricia_carvalhoThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg56 { background-image:url("img/lastdeals/pousada_sjsThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg57 { background-image:url("img/lastdeals/cora_center3Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg58 { background-image:url("img/lastdeals/la_bellezaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg59 { background-image:url("img/lastdeals/naraThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg60 { background-image:url("img/lastdeals/alice_aleixoThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg61 { background-image:url("img/lastdeals/cbonThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg62 { background-image:url("img/lastdeals/latorreThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg63 { background-image:url("img/lastdeals/wave_hostelThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg64 { background-image:url("img/lastdeals/acaciaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg65 { background-image:url("img/lastdeals/rei_bolaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg66 { background-image:url("img/lastdeals/recanto_araguaiaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg67 { background-image:url("img/lastdeals/hospedaria_vilaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg68 { background-image:url("img/lastdeals/fisio_dermatoThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg69 { background-image:url("img/lastdeals/petiskaldosThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg70 { background-image:url("img/lastdeals/hotel_arosoThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg71 { background-image:url("img/lastdeals/manuela_esteticaThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg72 { background-image:url("img/lastdeals/studio_insight2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg73 { background-image:url("img/lastdeals/tabuleiroThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg74 { background-image:url("img/lastdeals/ezona1Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg75 { background-image:url("img/lastdeals/bendita_gula2Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg76 { background-image:url("img/lastdeals/oya3Thumb.jpg")}
+#PdealG div.PdealContent .BHdealImg77 { background-image:url("img/lastdeals/liberthasThumb.jpg")}
+#PdealG div.PdealContent .BHdealImg78 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BHdealImg79 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BHdealImg80 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BHdealImg81 { background-image:url("img/lastdeals/.html")}
+/*
+@Brasilia
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .DFdealImg1 { background-image:url("img/lastdeals/cabeloThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg2 { background-image:url("img/lastdeals/pelesaudavelThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg3 { background-image:url("img/lastdeals/mariposaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg4 { background-image:url("img/lastdeals/torteriaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg5 { background-image:url("img/lastdeals/depilThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg6 { background-image:url("img/lastdeals/confrariaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg7 { background-image:url("img/lastdeals/reativaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg8 { background-image:url("img/lastdeals/cinturafinaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg9 { background-image:url("img/lastdeals/keila_luizaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg10 { background-image:url("img/lastdeals/magia_cabelereirosThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg11 { background-image:url("img/lastdeals/evidencia_corporalThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg12 { background-image:url("img/lastdeals/pizza_cesarThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg13 { background-image:url("img/lastdeals/yogofreshThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg14 { background-image:url("img/lastdeals/keb_brasiliaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg15 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg16 { background-image:url("img/lastdeals/salao_tininhaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg17 { background-image:url("img/lastdeals/bona_fide2Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg18 { background-image:url("img/lastdeals/mauricio_nunesThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg19 { background-image:url("img/lastdeals/conversa_cafeThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg20 { background-image:url("img/lastdeals/nz_studioThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg21 { background-image:url("img/lastdeals/bienestarThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg22 { background-image:url("img/lastdeals/pizza_cesar2Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg23 { background-image:url("img/lastdeals/pandooThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg24 { background-image:url("img/lastdeals/evidencia_ecThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg25 { background-image:url("img/lastdeals/magia_cabelereiros2Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg26 { background-image:url("img/lastdeals/assexuadosThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg27 { background-image:url("img/lastdeals/mokay_sushiThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg28 { background-image:url("img/lastdeals/evaldo_hr2Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg29 { background-image:url("img/lastdeals/sthetic_medicThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg30 { background-image:url("img/lastdeals/ventunoThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg31 { background-image:url("img/lastdeals/spa_clinikThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg32 { background-image:url("img/lastdeals/zoom_hairThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg33 { background-image:url("img/lastdeals/fitcorpusThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg34 { background-image:url("img/lastdeals/master_corpusThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg35 { background-image:url("img/lastdeals/quatro_doze_bistroThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg36 { background-image:url("img/lastdeals/corpo_mente2Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg37 { background-image:url("img/lastdeals/iesuThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg38 { background-image:url("img/lastdeals/ce_supremaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg39 { background-image:url("img/lastdeals/alice_fhThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg40 { background-image:url("img/lastdeals/coeThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg41 { background-image:url("img/lastdeals/pizzaioloThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg42 { background-image:url("img/lastdeals/melThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg43 { background-image:url("img/lastdeals/sal_pimentaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg44 { background-image:url("img/lastdeals/estetica_suprema3Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg45 { background-image:url("img/lastdeals/sushi_womanThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg46 { background-image:url("img/lastdeals/corporeumThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg47 { background-image:url("img/lastdeals/pizza_cesar3Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg48 { background-image:url("img/lastdeals/oficina_tortasThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg49 { background-image:url("img/lastdeals/spa_clinik2Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg50 { background-image:url("img/lastdeals/le_grand2Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg51 { background-image:url("img/lastdeals/vila_colonialThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg52 { background-image:url("img/lastdeals/zoom_hair2Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg53 { background-image:url("img/lastdeals/sthetic_medic5Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg54 { background-image:url("img/lastdeals/anna_rodriguesThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg55 { background-image:url("img/lastdeals/rita_meiraThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg56 { background-image:url("img/lastdeals/fit_corpus3Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg57 { background-image:url("img/lastdeals/alice_fh2Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg58 { background-image:url("img/lastdeals/segredos_belezaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg59 { background-image:url("img/lastdeals/pizza_cesar03Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg60 { background-image:url("img/lastdeals/squazzoThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg61 { background-image:url("img/lastdeals/zoom_hsThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg62 { background-image:url("img/lastdeals/nutrifreshThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg63 { background-image:url("img/lastdeals/odeiomeuchefeThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg64 { background-image:url("img/lastdeals/rio_sucosThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg65 { background-image:url("img/lastdeals/primo_piatoThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg66 { background-image:url("img/lastdeals/estanplazaThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg67 { background-image:url("img/lastdeals/kikebabThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg68 { background-image:url("img/lastdeals/sudo_temak1Thumb.jpg")}
+#PdealG div.PdealContent .DFdealImg69 { background-image:url("img/lastdeals/unicleanThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg70 { background-image:url("img/lastdeals/music_crepesThumb.jpg")}
+#PdealG div.PdealContent .DFdealImg71 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .DFdealImg72 { background-image:url("img/lastdeals/.html")}
+/*
+@Campinas
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .CAdealImg01 {background-image:url("img/lastdeals/river_islandThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg02 {background-image:url("img/lastdeals/churrascaria_sgThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg03 {background-image:url("img/lastdeals/valdir_cabelosThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg04 {background-image:url("img/lastdeals/andreia_cristinaThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg05 {background-image:url("img/lastdeals/siz_churrascariaThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg06 {background-image:url("img/lastdeals/selva_verticalThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg07 {background-image:url("img/lastdeals/estetica_bonfimThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg08 {background-image:url("img/lastdeals/santa_gertrudis3Thumb.jpg")}
+#PdealG div.PdealContent .CAdealImg09 {background-image:url("img/lastdeals/holda2Thumb.jpg")}
+#PdealG div.PdealContent .CAdealImg10 {background-image:url("img/lastdeals/salao_jbThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg11 {background-image:url("img/lastdeals/briefingThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg12 {background-image:url("img/lastdeals/salao_bandeirantesThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg13 {background-image:url("img/lastdeals/escape_relaxThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg14 {background-image:url("img/lastdeals/popcornThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg15 {background-image:url("img/lastdeals/mundo_chocThumb.jpg")}
+#PdealG div.PdealContent .CAdealImg16 {background-image:url("img/lastdeals/holda4Thumb.jpg")}
+#PdealG div.PdealContent .CAdealImg17 {background-image:url("img/lastdeals/temak_makis3Thumb.jpg")}
+#PdealG div.PdealContent .CAdealImg18 {background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CAdealImg19 {background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CAdealImg20 {background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CAdealImg21 {background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CAdealImg22 {background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CAdealImg23 {background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CAdealImg24 {background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CAdealImg25 {background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CAdealImg26 {background-image:url("img/lastdeals/.html")}
+/*
+@Curitiba
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .CTBAdealImg1 {background-image:url("img/lastdeals/jvhairThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg2 {background-image:url("img/lastdeals/beautyskinThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg3 {background-image:url("img/lastdeals/senderoThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg4 {background-image:url("img/lastdeals/zapataThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg5 {background-image:url("img/lastdeals/dani_calabresaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg6 {background-image:url("img/lastdeals/vila_serenna3Thumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg7 {background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg8 {background-image:url("img/lastdeals/citra_barThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg9 {background-image:url("img/lastdeals/esthetiqueThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg10 {background-image:url("img/lastdeals/diamondThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg11 {background-image:url("img/lastdeals/tortellini_pizzariaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg12 {background-image:url("img/lastdeals/espaco_belezaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg13 {background-image:url("img/lastdeals/sd_republicaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg14 {background-image:url("img/lastdeals/dvicz_thumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg15 {background-image:url("img/lastdeals/salao_eliteThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg16 {background-image:url("img/lastdeals/falavignaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg17 {background-image:url("img/lastdeals/innoveThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg18 {background-image:url("img/lastdeals/erasooquefaltava2Thumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg19 {background-image:url("img/lastdeals/equilibreThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg20 {background-image:url("img/lastdeals/tendencia_ceThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg21 {background-image:url("img/lastdeals/esp_dermatologiaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg22 {background-image:url("img/lastdeals/dom_carminoThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg23 {background-image:url("img/lastdeals/vanessa_spiassaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg24 {background-image:url("img/lastdeals/nutri_belezaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg25 {background-image:url("img/lastdeals/tortelli_pizzas2Thumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg26 {background-image:url("img/lastdeals/temperadinhoThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg27 {background-image:url("img/lastdeals/chilflorThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg28 {background-image:url("img/lastdeals/regina_tThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg29 {background-image:url("img/lastdeals/cant_acaiThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg30 {background-image:url("img/lastdeals/hotel_ksThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg31 {background-image:url("img/lastdeals/diogo_portugal_ctbThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg32 {background-image:url("img/lastdeals/hotel_vonanaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg33 {background-image:url("img/lastdeals/tim_cbtaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg34 {background-image:url("img/lastdeals/paparellaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg35 {background-image:url("img/lastdeals/karen_ranalliThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg36 {background-image:url("img/lastdeals/amauriThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg37 {background-image:url("img/lastdeals/oticas_verginiaThumb.jpg")}
+#PdealG div.PdealContent .CTBAdealImg38 {background-image:url("img/lastdeals/bela_jeansThumb.jpg")}
+
+
+
+/*
+@ABCD-SP
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .ABCDdealImg1 { background-image:url("img/lastdeals/maistrainning2Thumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg2 { background-image:url("img/lastdeals/ia_restauranteThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg3 { background-image:url("img/lastdeals/amoraospedacosThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg4 { background-image:url("img/lastdeals/espetinho_aclimacaoThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg5 { background-image:url("img/lastdeals/studio_felinaThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg6 { background-image:url("img/lastdeals/spettacolo_pizzabarThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg7 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg8 { background-image:url("img/lastdeals/studio_felinaThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg9 { background-image:url("img/lastdeals/bella_opcaoThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg10 { background-image:url("img/lastdeals/maximosThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg11 { background-image:url("img/lastdeals/vitallisThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg12 { background-image:url("img/lastdeals/pousada_cafeThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg13 { background-image:url("img/lastdeals/akaza_sushiThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg14 { background-image:url("img/lastdeals/cestas_michelli2Thumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg15 { background-image:url("img/lastdeals/glam4Thumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg16 { background-image:url("img/lastdeals/salao_jovemThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg17 { background-image:url("img/lastdeals/ronaldo_esteticaThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg18 { background-image:url("img/lastdeals/barulho_daguaThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg19 { background-image:url("img/lastdeals/salavipThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg20 { background-image:url("img/lastdeals/lundiThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg21 { background-image:url("img/lastdeals/magrass3Thumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg22 { background-image:url("img/lastdeals/glamour2_Thumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg23{ background-image:url("img/lastdeals/dental_prime_abcdThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg24{ background-image:url("img/lastdeals/formula1_corridaThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg25{ background-image:url("img/lastdeals/pauba_beachThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg26{ background-image:url("img/lastdeals/bru_internacionalThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg27{ background-image:url("img/lastdeals/espaco_vida_abcThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg28{ background-image:url("img/lastdeals/celso_tressanoThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg29{ background-image:url("img/lastdeals/glam5Thumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg30{ background-image:url("img/lastdeals/espaco_vida_abc2Thumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg31{ background-image:url("img/lastdeals/sueli_fhThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg32{ background-image:url("img/lastdeals/pousada_paxauThumb.jpg")}
+#PdealG div.PdealContent .ABCDdealImg33{ background-image:url("img/lastdeals/babbo_giovanniThumb.jpg")}
+
+/*
+@Florianiapolis
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .SCFdealImg1 { background-image:url("img/lastdeals/nave_maeThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg2 { background-image:url("img/lastdeals/simsThumbThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg3 { background-image:url("img/lastdeals/cafebellasartesThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg4 { background-image:url("img/lastdeals/osanaiThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg5 { background-image:url("img/lastdeals/hai_kaiThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg6 { background-image:url("img/lastdeals/wernerThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg7 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg8 { background-image:url("img/lastdeals/haikaiThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg9 { background-image:url("img/lastdeals/london_taniaThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg10 { background-image:url("img/lastdeals/cafe_francoaisThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg11 { background-image:url("img/lastdeals/el_mexicanoThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg12 { background-image:url("img/lastdeals/nova_depilacaoThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg13 { background-image:url("img/lastdeals/ivana_hennThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg14 { background-image:url("img/lastdeals/forneria_spazzioThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg15 { background-image:url("img/lastdeals/london_tania2Thumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg16 { background-image:url("img/lastdeals/cone_pizzaThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg17 { background-image:url("img/lastdeals/donovanThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg18 { background-image:url("img/lastdeals/floripa_micaretaThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg19 { background-image:url("img/lastdeals/cafe_itaguacuThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg20 { background-image:url("img/lastdeals/simone_paimThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg21 { background-image:url("img/lastdeals/essencial_fl_Thumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg22 { background-image:url("img/lastdeals/estacao_261Thumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg23 { background-image:url("img/lastdeals/micakeThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg24 { background-image:url("img/lastdeals/maria_izabelThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg25 { background-image:url("img/lastdeals/splash_fieldThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg26 { background-image:url("img/lastdeals/natural_parkThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg27 { background-image:url("img/lastdeals/sorellaThumb.jpg")}
+#PdealG div.PdealContent .SCFdealImg28 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCFdealImg29 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCFdealImg30 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCFdealImg31 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCFdealImg32 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCFdealImg33 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCFdealImg34 { background-image:url("img/lastdeals/.html")}
+/*
+@Fortaleza
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .CEdealImg1 { background-image:url("img/lastdeals/coiThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg2 { background-image:url("img/lastdeals/humanaesteticaThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg3 { background-image:url("img/lastdeals/intersaudeThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg4 { background-image:url("img/lastdeals/rinnovareThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg5 { background-image:url("img/lastdeals/beleza_fashionThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg6 { background-image:url("img/lastdeals/clinica_luzir2.jpg")}
+#PdealG div.PdealContent .CEdealImg7 { background-image:url("img/lastdeals/corpo_mente_ceThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg8 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg9 { background-image:url("img/lastdeals/peon_pizzaThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg10 { background-image:url("img/lastdeals/yupiiThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg11 { background-image:url("img/lastdeals/espaco_vitaThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg12 { background-image:url("img/lastdeals/beleza_fashion3Thumb.jpg")}
+#PdealG div.PdealContent .CEdealImg13 { background-image:url("img/lastdeals/rinnovare2Thumb.jpg")}
+#PdealG div.PdealContent .CEdealImg14 { background-image:url("img/lastdeals/humana_estetica2Thumb.jpg")}
+#PdealG div.PdealContent .CEdealImg15 { background-image:url("img/lastdeals/adoria_esteticaThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg16 { background-image:url("img/lastdeals/beleza_fashion4Thumb.jpg")}
+#PdealG div.PdealContent .CEdealImg17 { background-image:url("img/lastdeals/corpo_mente2fThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg18 { background-image:url("img/lastdeals/ipanema_mixThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg19 { background-image:url("img/lastdeals/dracheThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg20 { background-image:url("img/lastdeals/corpo_mente3Thumb.jpg")}
+#PdealG div.PdealContent .CEdealImg21 { background-image:url("img/lastdeals/realizeThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg22 { background-image:url("img/lastdeals/beauThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg23 { background-image:url("img/lastdeals/beau2Thumb.jpg")}
+#PdealG div.PdealContent .CEdealImg24 { background-image:url("img/lastdeals/fisiosThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg25 { background-image:url("img/lastdeals/fagulhaThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg26 { background-image:url("img/lastdeals/yogostosoThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg27 { background-image:url("img/lastdeals/konibaaThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg28 { background-image:url("img/lastdeals/caranguejoThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg29 { background-image:url("img/lastdeals/arre_eguaThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg30 { background-image:url("img/lastdeals/camarao_chinaThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg31 { background-image:url("img/lastdeals/capelliThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg32 { background-image:url("img/lastdeals/nao_peloThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg33 { background-image:url("img/lastdeals/acqua_spaThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg34 { background-image:url("img/lastdeals/capelli2Thumb.jpg")}
+#PdealG div.PdealContent .CEdealImg35 { background-image:url("img/lastdeals/santelliThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg36 { background-image:url("img/lastdeals/brandsclubThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg37 { background-image:url("img/lastdeals/caranguejoThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg38 { background-image:url("img/lastdeals/mirabilioThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg39 { background-image:url("img/lastdeals/korpo_sanoThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg40 { background-image:url("img/lastdeals/raquel_tavoraThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg41 { background-image:url("img/lastdeals/raquel_tavora2Thumb.jpg")}
+#PdealG div.PdealContent .CEdealImg42 { background-image:url("img/lastdeals/budokai2Thumb.jpg")}
+#PdealG div.PdealContent .CEdealImg43 { background-image:url("img/lastdeals/tim2_ceThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg44 { background-image:url("img/lastdeals/dermo_esthetic2Thumb.jpg")}
+#PdealG div.PdealContent .CEdealImg45 { background-image:url("img/lastdeals/mundolivresaThumb.jpg")}
+#PdealG div.PdealContent .CEdealImg46 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg47 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg48 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg49 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg50 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg51 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg52 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg53 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg54 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg55 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg56 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg57 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg58 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg59 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg60 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg61 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CEdealImg62 { background-image:url("img/lastdeals/.html")}
+/*
+@Joinville
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .SCJdealImg1 { background-image:url("img/lastdeals/auauThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg2 { background-image:url("img/lastdeals/vivendadocamaraoThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg3 { background-image:url("img/lastdeals/patroni_pizzaThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg4 { background-image:url("img/lastdeals/harmonia_do_corpoThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg5 { background-image:url("img/lastdeals/mexilenoThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg6 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg7 { background-image:url("img/lastdeals/slice_pizzaThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg8 { background-image:url("img/lastdeals/algeliThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg9 { background-image:url("img/lastdeals/pizzaioloThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg10 { background-image:url("img/lastdeals/dona_tortaThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg11 { background-image:url("img/lastdeals/manadasThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg12 { background-image:url("img/lastdeals/fatirelaThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg13 { background-image:url("img/lastdeals/spadocarroThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg14 { background-image:url("img/lastdeals/blsThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg15 { background-image:url("img/lastdeals/estetic_ville2Thumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg16 { background-image:url("img/lastdeals/domini_pizzasThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg17 { background-image:url("img/lastdeals/carine_pilatesThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg18 { background-image:url("img/lastdeals/sabor_pastelThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg19 { background-image:url("img/lastdeals/dom_quixote2Thumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg20 { background-image:url("img/lastdeals/renata_cabeleireiroThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg21 { background-image:url("img/lastdeals/maxi_sheldonThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg22 { background-image:url("img/lastdeals/quinto_saborThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg23 { background-image:url("img/lastdeals/sl_marlyThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg24 { background-image:url("img/lastdeals/bier_hoffThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg25 { background-image:url("img/lastdeals/vivenda_camarao2Thumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg26 { background-image:url("img/lastdeals/spa_carro2Thumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg27 { background-image:url("img/lastdeals/capitao_spaceThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg28 { background-image:url("img/lastdeals/magrassSCJThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg29 { background-image:url("img/lastdeals/renova_esteticaThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg30 { background-image:url("img/lastdeals/dois_praThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg31 { background-image:url("img/lastdeals/harmonica_corpoThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg32 { background-image:url("img/lastdeals/musashiThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg33 { background-image:url("img/lastdeals/amor_sabor_scjThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg34 { background-image:url("img/lastdeals/didge_stThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg35 { background-image:url("img/lastdeals/kibsThumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg36 { background-image:url("img/lastdeals/quintal_toluca2Thumb.jpg")}
+#PdealG div.PdealContent .SCJdealImg37 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCJdealImg38 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCJdealImg39 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCJdealImg40 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCJdealImg41 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCJdealImg42 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCJdealImg43 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCJdealImg44 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCJdealImg45 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SCJdealImg46 { background-image:url("img/lastdeals/.html")}
+/*
+@Goiania
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .GOdealImg1 { background-image:url("img/lastdeals/farolThumb.jpg")}
+#PdealG div.PdealContent .GOdealImg2 { background-image:url("img/lastdeals/sabor_brasilThumb.jpg")}
+#PdealG div.PdealContent .GOdealImg3 { background-image:url("img/lastdeals/ofhi_esteticaThumb.jpg")}
+#PdealG div.PdealContent .GOdealImg4 { background-image:url("img/lastdeals/pizza_cesar_goThumb.jpg")}
+#PdealG div.PdealContent .GOdealImg5 { background-image:url("img/lastdeals/equilibrium_pilatesThumb.jpg")}
+#PdealG div.PdealContent .GOdealImg6 { background-image:url("img/lastdeals/jataoThumb.jpg")}
+#PdealG div.PdealContent .GOdealImg7 { background-image:url("img/lastdeals/star_belaThumb.jpg")}
+#PdealG div.PdealContent .GOdealImg8 { background-image:url("img/lastdeals/chop_daheirThumb.jpg")}
+#PdealG div.PdealContent .GOdealImg10 { background-image:url("img/lastdeals/ranchos_30Thumb.jpg")}
+#PdealG div.PdealContent .GOdealImg11 { background-image:url("img/lastdeals/fiodemelThumb.jpg")}
+#PdealG div.PdealContent .GOdealImg12 { background-image:url("img/lastdeals/farol3_goThumb.jpg")}
+#PdealG div.PdealContent .GOdealImg13 { background-image:url("img/lastdeals/bichos_coracaoThumb.jpg")}
+/*
+@Niteroi
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .NIdealImg01 { background-image:url("img/lastdeals/briefing2Thumb.jpg")}
+#PdealG div.PdealContent .NIdealImg02 { background-image:url("img/lastdeals/kikiloThumb.jpg")}
+#PdealG div.PdealContent .NIdealImg03 { background-image:url("img/lastdeals/cafe_gourmetThumb.jpg")}
+#PdealG div.PdealContent .NIdealImg04 { background-image:url("img/lastdeals/silvana_fernandesThumb.jpg")}
+#PdealG div.PdealContent .NIdealImg05 { background-image:url("img/lastdeals/designer_230Thumb.jpg")}
+#PdealG div.PdealContent .NIdealImg06 { background-image:url("img/lastdeals/village_rvThumb.jpg")}
+#PdealG div.PdealContent .NIdealImg07 { background-image:url("img/lastdeals/tiosamThumb.jpg")}
+#PdealG div.PdealContent .NIdealImg08 { background-image:url("img/lastdeals/morro_azulThumb.jpg")}
+#PdealG div.PdealContent .NIdealImg09 { background-image:url("img/lastdeals/mesner2Thumb.jpg")}
+#PdealG div.PdealContent .NIdealImg10 { background-image:url("img/lastdeals/esthetic_nailsThumb.jpg")}
+/*
+@Porto Alegre
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .POAdealImg1 { background-image:url("img/lastdeals/leviterThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg2 { background-image:url("img/lastdeals/clinica_ardaisThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg3 { background-image:url("img/lastdeals/sandubaThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg4 { background-image:url("img/lastdeals/studio_corporeThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg5 { background-image:url("img/lastdeals/trancosoThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg6 { background-image:url("img/lastdeals/strike410Thumb.jpg")}
+#PdealG div.PdealContent .POAdealImg7 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg8 { background-image:url("img/lastdeals/spazio_perfettoThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg9 { background-image:url("img/lastdeals/sakuraThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg10 { background-image:url("img/lastdeals/trattoriaThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg11 { background-image:url("img/lastdeals/bad_hairThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg12 { background-image:url("img/lastdeals/balanceThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg13 { background-image:url("img/lastdeals/emagrecentro7Thumb.jpg")}
+#PdealG div.PdealContent .POAdealImg14 { background-image:url("img/lastdeals/glamourThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg15 { background-image:url("img/lastdeals/leviter3Thumb.jpg")}
+#PdealG div.PdealContent .POAdealImg16 { background-image:url("img/lastdeals/barba_azulThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg17 { background-image:url("img/lastdeals/espacio_vitalleThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg18 { background-image:url("img/lastdeals/tango_studioThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg19 { background-image:url("img/lastdeals/china_in_boxThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg20 { background-image:url("img/lastdeals/dna_naturalThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg21 { background-image:url("img/lastdeals/wazabiThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg22 { background-image:url("img/lastdeals/valThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg23 { background-image:url("img/lastdeals/brasil_cacauThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg24 { background-image:url("img/lastdeals/contours2Thumb.jpg")}
+#PdealG div.PdealContent .POAdealImg25 { background-image:url("img/lastdeals/ceenThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg26 { background-image:url("img/lastdeals/oq_vestirThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg27 { background-image:url("img/lastdeals/duo_pet_bistrotThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg28 { background-image:url("img/lastdeals/usina_espetinhoThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg29 { background-image:url("img/lastdeals/spa_lumedin2Thumb.jpg")}
+#PdealG div.PdealContent .POAdealImg30 { background-image:url("img/lastdeals/chinainboxThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg31 { background-image:url("img/lastdeals/bungalowThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg32 { background-image:url("img/lastdeals/chairsThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg33 { background-image:url("img/lastdeals/serafina_poaThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg34 { background-image:url("img/lastdeals/alison_sallesThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg35 { background-image:url("img/lastdeals/rp_pilatesThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg36 { background-image:url("img/lastdeals/cor_cabeloThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg37 { background-image:url("img/lastdeals/mercatto_arteThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg38 { background-image:url("img/lastdeals/mm_maquinasThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg39 { background-image:url("img/lastdeals/trat_difiorentinoThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg40 { background-image:url("img/lastdeals/moyyaThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg41 { background-image:url("img/lastdeals/spa_peleThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg42 { background-image:url("img/lastdeals/segredo_bolicheThumb.jpg")}
+#PdealG div.PdealContent .POAdealImg43 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg44 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg45 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg46 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg47 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg48 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg49 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg50 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg51 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg52 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg53 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg54 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .POAdealImg55 { background-image:url("img/lastdeals/.html")}
+/*
+@Recife
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .PEdealImg1 { background-image:url("img/lastdeals/applebeesThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg2 { background-image:url("img/lastdeals/pizzadonaThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg3 { background-image:url("img/lastdeals/rodadebotecoThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg4 { background-image:url("img/lastdeals/toutvinThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg5 { background-image:url("img/lastdeals/de_vitalisThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg6 { background-image:url("img/lastdeals/refinoThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg7 { background-image:url("img/lastdeals/chez_georgesThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg8 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg9 { background-image:url("img/lastdeals/dra_jacquelineThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg10 { background-image:url("img/lastdeals/edson_sandesThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg11 { background-image:url("img/lastdeals/corporale2Thumb.jpg")}
+#PdealG div.PdealContent .PEdealImg12 { background-image:url("img/lastdeals/comedie_bistrotThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg13 { background-image:url("img/lastdeals/deep_loungeThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg14 { background-image:url("img/lastdeals/botequim_boxThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg15 { background-image:url("img/lastdeals/adriana_marquesThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg16 { background-image:url("img/lastdeals/modelleThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg17 { background-image:url("img/lastdeals/michelini_ferreiraThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg18 { background-image:url("img/lastdeals/deepThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg19 { background-image:url("img/lastdeals/kitaisushiThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg20 { background-image:url("img/lastdeals/alpinosThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg21 { background-image:url("img/lastdeals/in_bistrotThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg22 { background-image:url("img/lastdeals/dermaclynThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg23 { background-image:url("img/lastdeals/oficina_saborThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg24 { background-image:url("img/lastdeals/bella_vitaThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg25 { background-image:url("img/lastdeals/delta_expressoThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg26 { background-image:url("img/lastdeals/seu_cafofaThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg27 { background-image:url("img/lastdeals/la_belleThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg28 { background-image:url("img/lastdeals/la_pizzaThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg29 { background-image:url("img/lastdeals/studio_lbThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg30 { background-image:url("img/lastdeals/maison_bomfimThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg31 { background-image:url("img/lastdeals/mulher_comThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg32 { background-image:url("img/lastdeals/la_pasta_galleriaThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg33 { background-image:url("img/lastdeals/afonso_e_anisioThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg34 { background-image:url("img/lastdeals/avhsThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg35 { background-image:url("img/lastdeals/equilibriumThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg36 { background-image:url("img/lastdeals/style_tatooThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg37 { background-image:url("img/lastdeals/bomgoThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg38 { background-image:url("img/lastdeals/pastel_akemiThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg39 { background-image:url("img/lastdeals/pousada_itacareThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg40 { background-image:url("img/lastdeals/gat_paintThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg41 { background-image:url("img/lastdeals/plim_restThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg42 { background-image:url("img/lastdeals/globo_signsThumb.jpg")}
+#PdealG div.PdealContent .PEdealImg43 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .PEdealImg44 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .PEdealImg45 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .PEdealImg46 { background-image:url("img/lastdeals/.html")}
+/*
+@Salvador
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .BAdealImg1 { background-image:url("img/lastdeals/sushi_deliThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg2 { background-image:url("img/lastdeals/bellanapoliThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg3 { background-image:url("img/lastdeals/espaco_vidaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg4 { background-image:url("img/lastdeals/elisa_marquesiniThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg5 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg6 { background-image:url("img/lastdeals/villa_portenaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg7 { background-image:url("img/lastdeals/pedra_sereia2Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg8 { background-image:url("img/lastdeals/bohemia_bar2Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg9 { background-image:url("img/lastdeals/sandwich_hallThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg10 { background-image:url("img/lastdeals/toko_temakeriaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg11 { background-image:url("img/lastdeals/ana_bia2Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg12 { background-image:url("img/lastdeals/bella_napoliThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg13 { background-image:url("img/lastdeals/sushi_deliThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg14 { background-image:url("img/lastdeals/personal_qualityThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg15 { background-image:url("img/lastdeals/performanceThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg16 { background-image:url("img/lastdeals/skiloThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg17 { background-image:url("img/lastdeals/espaco_vida2Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg18 { background-image:url("img/lastdeals/mundo_jurassicoThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg19 { background-image:url("img/lastdeals/fayolaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg20 { background-image:url("img/lastdeals/care_fisioterapiaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg21 { background-image:url("img/lastdeals/tartaruga_azulThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg22 { background-image:url("img/lastdeals/mamabahiaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg23 { background-image:url("img/lastdeals/rua_quinzeThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg24 { background-image:url("img/lastdeals/spa_depylThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg25 { background-image:url("img/lastdeals/salao_rivieraThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg26 { background-image:url("img/lastdeals/clivaleThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg27 { background-image:url("img/lastdeals/feccatoThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg28 { background-image:url("img/lastdeals/manihi_sa_Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg29 { background-image:url("img/lastdeals/cortileThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg30 { background-image:url("img/lastdeals/frans_cafe_saThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg31 { background-image:url("img/lastdeals/clivale2Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg32 { background-image:url("img/lastdeals/forneria_chamuscaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg33 { background-image:url("img/lastdeals/derma_life4Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg34 { background-image:url("img/lastdeals/camarim_belezaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg35 { background-image:url("img/lastdeals/val_macedo3Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg36 { background-image:url("img/lastdeals/milque_doceriaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg37 { background-image:url("img/lastdeals/kiberon2Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg38 { background-image:url("img/lastdeals/passeio_escunaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg39 { background-image:url("img/lastdeals/manihi_spaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg40 { background-image:url("img/lastdeals/art_pilatesThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg41 { background-image:url("img/lastdeals/yakiThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg42 { background-image:url("img/lastdeals/val_macedoThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg43 { background-image:url("img/lastdeals/dna_mariquitaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg44 { background-image:url("img/lastdeals/ecoautoThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg45 { background-image:url("img/lastdeals/fisidermThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg46 { background-image:url("img/lastdeals/sabor_pedacosThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg47 { background-image:url("img/lastdeals/mariposa4Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg48 { background-image:url("img/lastdeals/le_sucre2Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg49 { background-image:url("img/lastdeals/jujubaThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg50 { background-image:url("img/lastdeals/conceito8Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg51 { background-image:url("img/lastdeals/sua_oficina1Thumb.jpg")}
+#PdealG div.PdealContent .BAdealImg52 { background-image:url("img/lastdeals/wall_streetThumb.jpg")}
+#PdealG div.PdealContent .BAdealImg53 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg54 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg55 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg56 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg57 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg58 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg59 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg60 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg61 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg62 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg63 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .BAdealImg64 { background-image:url("img/lastdeals/.html")}
+/*
+@Sao Luis
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .MAdealImg1 { background-image:url("img/lastdeals/spaayanaThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg2 { background-image:url("img/lastdeals/bobsThumbThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg3 { background-image:url("img/lastdeals/dora_saloonThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg4 { background-image:url("img/lastdeals/fascino_esteticaThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg5 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg6 { background-image:url("img/lastdeals/sushibarThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg7 { background-image:url("img/lastdeals/slz_gourmetThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg8 { background-image:url("img/lastdeals/elisangela_mesquita2Thumb.jpg")}
+#PdealG div.PdealContent .MAdealImg9 { background-image:url("img/lastdeals/zuky2Thumb.jpg")}
+#PdealG div.PdealContent .MAdealImg10 { background-image:url("img/lastdeals/blausThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg11 { background-image:url("img/lastdeals/gelateria_parmalatThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg12 { background-image:url("img/lastdeals/haddock_cafeThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg13 { background-image:url("img/lastdeals/temaki_storeThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg14 { background-image:url("img/lastdeals/chang_leeThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg15 { background-image:url("img/lastdeals/slz_gourmetThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg16 { background-image:url("img/lastdeals/podo_clinicThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg17 { background-image:url("img/lastdeals/kangoo_playThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg18 { background-image:url("img/lastdeals/sushi_bar2Thumb.jpg")}
+#PdealG div.PdealContent .MAdealImg19 { background-image:url("img/lastdeals/lenny1Thumb.jpg")}
+#PdealG div.PdealContent .MAdealImg20 { background-image:url("img/lastdeals/personal_groupThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg21 { background-image:url("img/lastdeals/super_pizzaThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg22 { background-image:url("img/lastdeals/fision1Thumb.jpg")}
+#PdealG div.PdealContent .MAdealImg23 { background-image:url("img/lastdeals/marupiara_hotelThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg24 { background-image:url("img/lastdeals/foto_sombraThumb.jpg")}
+#PdealG div.PdealContent .MAdealImg25 { background-image:url("img/lastdeals/latorre2Thumb.jpg")}
+
+
+/*
+@Vitoria
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .ESdealImg1 { background-image:url("img/lastdeals/picanhanapraiaThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg2 { background-image:url("img/lastdeals/fisioeformaThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg3 { background-image:url("img/lastdeals/privillegeThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg4 { background-image:url("img/lastdeals/estetica_duarteThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg5 { background-image:url("img/lastdeals/digipixThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg6 { background-image:url("img/lastdeals/maria_flor2Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg7 { background-image:url("img/lastdeals/privillege2Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg8 { background-image:url("img/lastdeals/naturalesThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg9 { background-image:url("img/lastdeals/estetica_duarte3.jpg")}
+#PdealG div.PdealContent .ESdealImg10 { background-image:url("img/lastdeals/picanha_praia2Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg11 { background-image:url("img/lastdeals/pizzaria_napolitanaThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg12 { background-image:url("img/lastdeals/spa_praiaThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg13 { background-image:url("img/lastdeals/oficina_fomeThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg14 { background-image:url("img/lastdeals/patricia_soeiro3.jpg")}
+#PdealG div.PdealContent .ESdealImg15 { background-image:url("img/lastdeals/carangueijaoThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg16 { background-image:url("img/lastdeals/roberta_fiorottiThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg17 { background-image:url("img/lastdeals/marina_souzaThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg18 { background-image:url("img/lastdeals/fuel_stationThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg19 { background-image:url("img/lastdeals/clinica_imageThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg20 { background-image:url("img/lastdeals/marina_souza2Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg21 { background-image:url("img/lastdeals/conde_sanduiche3Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg22 { background-image:url("img/lastdeals/esfiha_salimThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg23 { background-image:url("img/lastdeals/multiestetica2Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg24 { background-image:url("img/lastdeals/roberta_fiorotti3Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg25 { background-image:url("img/lastdeals/dilton_cabeleireiro3Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg26 { background-image:url("img/lastdeals/bobsThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg27 { background-image:url("img/lastdeals/atmosphereThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg28 { background-image:url("img/lastdeals/kabukiThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg29 { background-image:url("img/lastdeals/depil_conceptThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg30 { background-image:url("img/lastdeals/katia_altoe2Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg31 { background-image:url("img/lastdeals/kacique_hotelThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg32 { background-image:url("img/lastdeals/instituto_vmThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg33 { background-image:url("img/lastdeals/stetic_lorenThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg34 { background-image:url("img/lastdeals/pneutruck2Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg35 { background-image:url("img/lastdeals/kaffaThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg36 { background-image:url("img/lastdeals/ceateThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg37 { background-image:url("img/lastdeals/foradoarThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg38 { background-image:url("img/lastdeals/bocagelattaThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg39 { background-image:url("img/lastdeals/hotel_arosoThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg40 { background-image:url("img/lastdeals/scheylane2Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg41 { background-image:url("img/lastdeals/caeteThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg42 { background-image:url("img/lastdeals/spatifilusThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg43 { background-image:url("img/lastdeals/thiago_cbThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg44 { background-image:url("img/lastdeals/fisio_forma4Thumb.jpg")}
+#PdealG div.PdealContent .ESdealImg45 { background-image:url("img/lastdeals/yahooThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg46 { background-image:url("img/lastdeals/manguttiThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg47 { background-image:url("img/lastdeals/cia_mergulhoThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg48 { background-image:url("img/lastdeals/hotel_stabarbaraThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg49 { background-image:url("img/lastdeals/otica_favoritaThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg50 { background-image:url("img/lastdeals/tigre_asiaticoThumb.jpg")}
+#PdealG div.PdealContent .ESdealImg51 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .ESdealImg52 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .ESdealImg53 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .ESdealImg54 { background-image:url("img/lastdeals/.html")}
+
+/*
+@Alphaville
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .ALPdealImg01 { background-image:url("img/lastdeals/signoraThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg02 { background-image:url("img/lastdeals/skincareThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg03 { background-image:url("img/lastdeals/best_burgerThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg04 { background-image:url("img/lastdeals/naturebaThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg05 { background-image:url("img/lastdeals/pousada_condesThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg06 { background-image:url("img/lastdeals/flor_qdizThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg07 { background-image:url("img/lastdeals/paintball_tamboreThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg08 { background-image:url("img/lastdeals/revelawebThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg09 { background-image:url("img/lastdeals/burritosThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg10 { background-image:url("img/lastdeals/radison_maceioThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg11 { background-image:url("img/lastdeals/camarote4Thumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg12 { background-image:url("img/lastdeals/vo_joaninhaThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg13 { background-image:url("img/lastdeals/briefing_chileThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg14 { background-image:url("img/lastdeals/pousada_alcobara2Thumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg15 { background-image:url("img/lastdeals/pousada_bizucaThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg16 { background-image:url("img/lastdeals/simony_limaThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg17 { background-image:url("img/lastdeals/caminho_ouroThumb.jpg")}
+#PdealG div.PdealContent .ALPdealImg18 { background-image:url("img/lastdeals/camarote5Thumb.jpg")}
+
+/*
+@Sao Paulo Extra
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .SPEdealImg01 { background-image:url("img/lastdeals/chale_floresThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg02 { background-image:url("img/lastdeals/studio_loriThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg03 { background-image:url("img/lastdeals/hitamThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg04 { background-image:url("img/lastdeals/haruki_maisThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg05 { background-image:url("img/lastdeals/camila_monteiro2Thumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg06 { background-image:url("img/lastdeals/barbaro2Thumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg07 { background-image:url("img/lastdeals/kiichi2Thumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg08 { background-image:url("img/lastdeals/emporio_centralThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg09 { background-image:url("img/lastdeals/praedaThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg10 { background-image:url("img/lastdeals/portuchoThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg11 { background-image:url("img/lastdeals/bar_brahmarevThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg12 { background-image:url("img/lastdeals/elegance_spa04Thumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg13 { background-image:url("img/lastdeals/akamomijiThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg14 { background-image:url("img/lastdeals/hotel_alpino2Thumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg15 { background-image:url("img/lastdeals/terapia_mulheres2Thumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg16 { background-image:url("img/lastdeals/cidade_jardim2Thumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg17 { background-image:url("img/lastdeals/tres_porquinhosThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg18 { background-image:url("img/lastdeals/asograq1Thumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg19 { background-image:url("img/lastdeals/ganesha3Thumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg20 { background-image:url("img/lastdeals/cafe_moemaThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg21 { background-image:url("img/lastdeals/boniThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg22 { background-image:url("img/lastdeals/sushikaThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg23 { background-image:url("img/lastdeals/capelladofradeThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg24 { background-image:url("img/lastdeals/xvalleyThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg25 { background-image:url("img/lastdeals/serafina7Thumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg26 { background-image:url("img/lastdeals/brahma_stupThumb.jpg")}
+#PdealG div.PdealContent .SPEdealImg27 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .SPEdealImg28 { background-image:url("img/lastdeals/.html")}
+
+/*
+@Especial Carnaval
+@Ofertas Recentes
+*/
+#PdealG div.PdealContent .CNdealImg01 { background-image:url("img/lastdeals/camarote_car2Thumb.jpg")}
+#PdealG div.PdealContent .CNdealImg02 { background-image:url("img/lastdeals/bar_brahma3Thumb.jpg")}
+#PdealG div.PdealContent .CNdealImg03 { background-image:url("img/lastdeals/vaiThumb.jpg")}
+#PdealG div.PdealContent .CNdealImg04 { background-image:url("img/lastdeals/carn_mgThumb.jpg")}
+#PdealG div.PdealContent .CNdealImg05 { background-image:url("img/lastdeals/camarote_car2Thumb.jpg")}
+#PdealG div.PdealContent .CNdealImg06 { background-image:url("img/lastdeals/bloco_sertanejoThumb.jpg")}
+#PdealG div.PdealContent .CNdealImg07 { background-image:url("img/lastdeals/bar_aeroclubeThumb.jpg")}
+#PdealG div.PdealContent .CNdealImg08 { background-image:url("img/lastdeals/brahma_esquentaThumb.jpg")}
+#PdealG div.PdealContent .CNdealImg09 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CNdealImg10 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CNdealImg11 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CNdealImg12 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CNdealImg13 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CNdealImg14 { background-image:url("img/lastdeals/.html")}
+#PdealG div.PdealContent .CNdealImg15 { background-image:url("img/lastdeals/.html")}

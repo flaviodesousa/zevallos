@@ -1,0 +1,33 @@
+.pacrudGridTable {
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pacrudGridTh {
+	border: 1px solid #FFFFFF;
+	background-color: #a6d2ff;
+	font-weight: bold;
+	font: 14px Arial;
+}
+
+.pacrudGridTd {
+	border: 1px solid #FFFFFF;
+	font: 14px Arial;
+}
+
+.pacrudGridTrEven {
+	background-color: #FFFFFF;
+}
+
+.pacrudGridTrOdd {
+	background-color: #e3f3fd;
+}
+
+.pacrudGridTrSelected {
+	background-color: #FFCC99;
+}
+
+.pacrudGridNavigation {
+	text-align: center;
+}

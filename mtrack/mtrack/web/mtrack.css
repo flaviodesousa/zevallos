@@ -1,0 +1,1377 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+td, th {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  text-align: left;
+}
+
+body {
+  line-height: 1;
+}
+ol {
+  list-style: decimal;
+}
+ul {
+  list-style: disc;
+}
+li {
+  /*list-style-position: inside;*/
+  margin-left: 2.5em;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*/
+
+body {
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+body, th, td {
+  font: normal 10pt
+   /* Cambria, */
+    'Lucida Grande', 'Lucida Sans Unicode',
+      Verdana, Arial, 'Bitstream Vera Sans',
+      Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Trebuchet MS', verdana, sans-serif;
+  font-weight: bold;
+  margin: 0.75em 1em 0.75em 0;
+  letter-spacing: -0.018em;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 18pt;
+}
+
+h2 { font-size: 14pt; }
+h3 { font-size: 12pt; }
+
+hr {
+  border: none;
+  border-top: 1px solid #ccb;
+  margin: 2em 0;
+}
+
+address {
+  font-style: normal;
+}
+img {
+  border: none;
+}
+
+ol.wikilist li, ul.wikilist li {
+  width: 50em;
+}
+
+.underline { text-decoration: underline; }
+ol.loweralpha { list-style-type: lower-alpha; }
+ol.upperalpha { list-style-type: upper-alpha; }
+ol.lowerroman { list-style-type: lower-roman; }
+ol.upperroman { list-style-type: upper-roman; }
+ol.arabic { list-style-type: decimal; }
+
+:link, :visited {
+  text-decoration: none;
+  /* color: #b00; */
+  color: rgb(43, 84, 125);
+  border-bottom: 1px dotted #bbb;
+}
+
+:link:hover, :visited:hover {
+  background-color: #eee;
+  color: #555;
+}
+
+h1 :link, h1 :visited,
+h2 :link, h2 :visited,
+h3 :link, h3 :visited,
+h4 :link, h4 :visited,
+h5 :link, h5 :visited,
+h6 :link, h6 :visited {
+  color: inherit;
+}
+
+.anchor:link, .anchor:visited {
+  border: none;
+  color: #d7d7d7;
+  font-size: 0.8em;
+  vertical-align: text-top;
+}
+
+* > .anchor:link, * > .anchor:visited {
+  visibility: hidden;
+}
+
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+  visibility: visible;
+}
+
+.nav h2, .nav hr {
+  display: none;
+}
+
+.nav ul {
+  font-size: 9pt;
+  list-style: none;
+  margin: 0;
+  text-align: right;
+}
+.nav li {
+  border-right: 1px solid #d7d7d7;
+  display: inline;
+  padding: 0 0.75em;
+  white-space: nowrap;
+}
+.nav li.last {
+  border-right: none;
+}
+
+#wikinav {
+  float: right;
+  clear: both;
+}
+
+#wikinav ul {
+  text-align: left;
+}
+
+#wikinav li {
+  display: block;
+  padding: 0.25em 0px;
+  margin-left: 0.5em;
+  border: none;
+}
+
+#mainnav {
+  font-size: 9pt;
+  margin: 1em 0 0.33em;
+  padding: 0.2em 0;
+}
+
+#mainnav li {
+  padding: 0.25em 0px;
+  margin-left: 0.5em;
+  border: none;
+}
+#mainnav li a {
+  background: #eee;
+}
+
+#mainnav :link, #mainnav :visited {
+  color: #000;
+  padding: 0.2em 1em;
+  border: 1px solid lightGrey;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+
+#mainnav :link:hover, #mainnav :visited:hover {
+  background-color: #ccc;
+}
+
+#mainnav .active :link, #mainnav .active :visited {
+  border: 1px solid #777;
+  background: #333;
+  color: #eee;
+  font-weight: bold;
+}
+
+#content {
+  margin: 1em;
+}
+#content p {
+  width: 50em;
+  margin-top: 1em;
+}
+
+#content td p:first-child {
+  margin-top: 0;
+}
+
+input, textarea, select {
+  margin: 2px;
+}
+input, select {
+  vertical-align: middle;
+}
+.button, input[type=button], input[type=submit], input[type=reset] {
+  background: #eee;
+  color: #222;
+  border: 1px outset #ccc;
+  padding: 0.1em 0.5em;
+}
+.button:hover, input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+  background: #ccb;
+}
+.button[disabled], input[type=button][disabled], input[type=submit][disabled],
+input[type=reset][disabled] {
+ background: #f6f6f6;
+ border-style: solid;
+ color: #999;
+}
+input[type=text], input.textwidget, textarea { border: 1px solid #d7d7d7 }
+input[type=text], input.textwidget { padding: .25em .5em }
+input[type=text]:focus, input.textwidget:focus, textarea:focus {
+ border: 1px solid #886;
+}
+option { border-bottom: 1px dotted #d7d7d7 }
+fieldset { border: 1px solid #d7d7d7; padding: .5em; margin: 1em 0 }
+form p.hint, form span.hint { color: #666; font-size: 85%; font-style: italic; margin: .5em 0;
+  padding-left: 1em;
+}
+fieldset.iefix {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+* html fieldset.iefix { width: 98% }
+fieldset.iefix p { margin: 0 }
+legend { color: #999; padding: 0 .25em; font-size: 90%; font-weight: bold }
+label.disabled { color: #d7d7d7 }
+.buttons { margin: .5em .5em .5em 0 }
+.buttons form, .buttons form div { display: inline }
+.buttons input { margin: 1em .5em .1em 0 }
+.inlinebuttons input {
+ font-size: 70%;
+ border-width: 1px;
+ border-style: dotted;
+ margin: 0 .1em;
+ padding: 0.1em;
+ background: none;
+}
+
+div.wikipreview {
+  background-color: #eee;
+  margin-bottom: 2em;
+}
+
+div.error, textarea.error, input.error {
+  border: solid 1px red;
+}
+
+div#motd {
+  float: right;
+}
+
+table.history {
+  border-collapse: collapse;
+}
+
+table.history tr {
+  vertical-align: text-top;
+}
+table.history tr th {
+  text-align: left;
+}
+
+table.history tr td.diff {
+  border-bottom: solid 1px #bbb;
+  padding: 1em 4em;
+}
+
+table.codeann {
+  border-collapse: collapse;
+  border: solid 1px #bbb;
+}
+
+tt, pre, td.code {
+  font-family: 'Consolas', 'Bitstream Vera Sans Mono',
+    'Monaco', 'Courier New', 'Courier', monospace;
+}
+
+pre, td.code {
+  border: solid 1px #bbb;
+  padding: 0.2em;
+  margin: 0.4em;
+  background-color: #eee;
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+td.code {
+  overflow-x: auto;
+  word-wrap: break-word;
+  border-top: none;
+  border-bottom: none;
+  border-left: solid 1px #bbb;
+  border-right: solid 1px #bbb;
+  font-size: 9pt;
+}
+
+td.source-code {
+  overflow-x: auto;
+  white-space: pre;
+  font-family: 'Consolas', 'Bitstream Vera Sans Mono',
+    'Monaco', 'Courier New', 'Courier', monospace;
+  word-wrap: break-word;
+  line-height: 1.6em;
+  border: solid 1px #bbb;
+  background-color: #eee;
+}
+
+table.codeann {
+  width: 100%;
+}
+
+table.codeann tr th {
+  border-bottom: solid 1px #bbb;
+}
+table.codeann tr th.code {
+  text-align: left;
+}
+table.codeann tr td {
+  font-family: 'Consolas', 'Bitstream Vera Sans Mono',
+    'Monaco', 'Courier New', 'Courier', monospace;
+  font-size: 10pt
+}
+
+table.codeann tr th, table.codeann tr td {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+table.codeann tr th.line, table.codeann tr td.line,
+  table.codeann tr th.changeset, table.codeann tr td.changeset {
+  text-align: right;
+  line-height: 1.6em;
+}
+
+table.codeann tr td.line a:link {
+  text-decoration: none;
+  border: none;
+  padding: none;
+  margin: none;
+}
+
+table.codeann tr th.user, table.codeann tr td.user {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+/* by default, when showing an annotated file, hide annotations, but show
+ * the line numbers */
+table.codeann tr th.changeset, table.codeann tr td.changeset,
+table.codeann tr th.user, table.codeann tr td.user {
+  display: none;
+}
+
+pre {
+  font-size: 9pt;
+}
+
+#ticketinfo label {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#ticketinfo fieldset {
+  width: 57em;
+}
+
+#ticketinfo fieldset#readonly-tkt-properties {
+  float: left;
+  min-height: 6em;
+  margin-right: 1em;
+  width: 35em;
+}
+
+#ticketinfo fieldset#readonly-tkt-resources {
+  min-height: 6em;
+  width: 20em;
+}
+
+div#readonly-tkt-description {
+  clear: both;
+  border: solid 1px #ccc;
+  min-width: 57em;
+  background-color: #ffc;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+}
+
+div.ticketevent {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: solid 1px #bbb;
+  color: #999;
+}
+
+blockquote.citation {
+  border-left: solid 2px #b00;
+  padding-left: 0.5em;
+  margin-left: inherit;
+  font-style: italic;
+  color: #444;
+}
+
+a.pmark {
+  color: inherit;
+}
+
+table.wiki {
+  border-collapse: collapse;
+}
+
+table.wiki tr td {
+  border: solid 1px #bbb;
+  padding: 0.2em 0.5em;
+}
+
+table.report {
+  border-collapse: collapse;
+  width: 100%;
+  clear: both;
+}
+
+table.report tr th {
+  border: solid 1px #bbb;
+  padding: 0.2em 0.5em;
+  font-weight: bold;
+  text-align: left;
+}
+
+table.report tr td {
+  border: solid 1px #bbb;
+  padding: 0.2em 0.5em;
+}
+
+h2.reportgroup {
+}
+
+table.progress {
+  width: 20em;
+  height: 1em;
+  border: solid 1px green;
+  border-collapse: collapse;
+}
+
+table.progress tr td.closed {
+  background-color: #8b8;
+  padding: 0;
+}
+
+table.esthours {
+  border: solid 1px blue;
+}
+
+table.esthours tr td.closed {
+  background-color: #88b;
+}
+
+div.milestone {
+  margin-bottom: 3em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1.2em;
+}
+
+textarea.code {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+textarea.wiki {
+  width: 100%;
+  font-family: monospace;
+  font-size: 1em;
+}
+
+#banner-back {
+  min-height: 3em;
+  background-image: url(images/gradient-header.png);
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-color: rgb(229,229,229);
+  border-bottom: 1px solid #eee;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+#banner {
+  display: inline;
+  font-family: Calibri, Arial, Verdana, 'Bitstream Vera Sans',
+    Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 1.1em;
+  clear: both;
+}
+
+#header {
+  clear: both;
+}
+
+#mainsearch {
+  float: right;
+  margin: 0;
+}
+
+#mainsearch input.search {
+  margin-left: 1em;
+  width: 30em;
+}
+
+/* approximate Safari input type=search */
+input.roundsearch {
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-style: inset;
+  border-width: 1px;
+  border-color: #777;
+  color: black;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+input.watermark {
+  color: #999;
+}
+
+
+div.excerpt span.hl {
+  background-color: yellow;
+}
+
+table.searchresults tr td {
+  padding-bottom: 0.8em;
+}
+
+table.searchresults tr {
+  vertical-align: top;
+}
+
+div.flotgraph div {
+}
+
+h1.timelineday {
+  font-size: 1.2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: solid 1px #bbb;
+  color: #999;
+}
+
+div.timelineevent {
+  padding-bottom: 0.25em;
+  margin-top: 0.5em;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: solid 1px #eee;
+}
+
+div.timelineevent a.userlink.timelineface {
+  float: left;
+  margin: 0 1em 1em 0;
+/*  padding: 0 1em 1em 0; */
+  border-bottom-style: none;
+}
+
+div.timelineevent span.time {
+  color: #999;
+  font-size: 0.9em;
+}
+
+div.timelinetext {
+  padding-left: 64px;
+  width: 50em;
+  padding-bottom: 0.5em;
+}
+
+div.timelinereason {
+  color: rgb(84,84,84);
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+
+
+.newticket {
+  background: url(images/newticket.png) no-repeat;
+}
+.editticket {
+  background: url(images/editedticket.png) no-repeat;
+}
+.closedticket {
+  background: url(images/closedticket.png) no-repeat;
+}
+.editwiki {
+  background: url(images/wiki.png) no-repeat;
+}
+.editmilestone {
+  background: url(images/milestone.png) no-repeat;
+}
+.newchangeset {
+  background: url(images/changeset.png) no-repeat;
+}
+
+a.changesetlink {
+  background: rgb(170, 255, 170);
+  border-bottom: 1px solid rgb(0, 204, 51);
+  border-left: 1px solid rgb(204, 255, 204);
+  border-right: 1px solid rgb(0, 204, 51);
+  border-top: 1px solid rgb(204, 255, 204);
+  color: black;
+  white-space: normal;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 0.9em;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+
+  background-image: url(images/changeset.png);
+  background-repeat: no-repeat;
+  background-position-y: 2;
+  padding-left: 14px;
+}
+
+table.codeann tr td.changeset a.changesetlink {
+  background-image: none;
+  padding-left: 2px;
+  font-size: 0.8em;
+}
+
+a.ticketlink {
+  background: rgb(255, 255, 170);
+  border-bottom: 1px solid rgb(255, 238, 0);
+  border-left: 1px solid rgb(255, 255, 204);
+  border-right: 1px solid rgb(255, 238, 0);
+  border-top: 1px solid rgb(255, 255, 204);
+  color: black;
+  white-space: normal;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 0.9em;
+
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+a.wikilink {
+  background: rgb(170, 255, 170);
+  border-bottom: 1px solid rgb(0, 204, 51);
+  border-left: 1px solid rgb(204, 255, 204);
+  border-right: 1px solid rgb(0, 204, 51);
+  border-top: 1px solid rgb(204, 255, 204);
+  color: black;
+  white-space: normal;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 0.9em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+
+  background-image: url(images/wiki.png);
+  background-repeat: no-repeat;
+  background-position-y: 2;
+  background-position-x: 2;
+  padding-left: 16px;
+}
+/* Styles for tabular listings such as those used for displaying directory
+   contents and report results. */
+table.listing {
+ clear: both;
+ border-bottom: 1px solid #d7d7d7;
+ border-collapse: collapse;
+ border-spacing: 0;
+ margin-top: 1em;
+ width: 100%;
+}
+table.listing th { text-align: left; padding: 0 1em .1em 0; font-size: 12px }
+table.listing thead { background: #f7f7f0 }
+table.listing thead th {
+ border: 1px solid #d7d7d7;
+ border-bottom-color: #999;
+ font-size: 11px;
+ font-weight: bold;
+ padding: 2px .5em;
+ vertical-align: bottom;
+}
+table.listing thead th :link:hover, table.listing thead th :visited:hover {
+ background-color: transparent;
+}
+table.listing thead th a { border: none; padding-right: 12px }
+table.listing th.asc a, table.listing th.desc a { font-weight: bold }
+table.listing th.asc a, table.listing th.desc a {
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+}
+table.listing th.asc a { }
+table.listing th.desc a { }
+table.listing tbody td, table.listing tbody th {
+ border: 1px dotted #ddd;
+ padding: .33em .5em;
+ vertical-align: top;
+}
+table.listing tbody td a:hover, table.listing tbody th a:hover {
+ background-color: transparent;
+}
+table.listing tbody tr { border-top: 1px solid #ddd }
+table.listing tbody tr.even { background-color: #fcfcfc }
+table.listing tbody tr.odd { background-color: #f7f7f7 }
+table.listing tbody tr:hover { background: #eed !important }
+
+
+/* Styles for the directory entries table
+   (extends the styles for "table.listing") */
+#dirlist { margin-top: 0 }
+#dirlist td.rev, #dirlist td.age, #dirlist td.change, #dirlist td.size {
+ color: #888;
+ white-space: nowrap;
+}
+#dirlist td.size { text-align: right; }
+/* #dirlist td.name { width: 30% } */
+#dirlist td.name a, #dirlist td.name span {
+ background-position: 0% 50%;
+ background-repeat: no-repeat;
+ padding-left: 20px;
+}
+#dirlist td.name a.parent { background-image: url(images/parent.png) }
+#dirlist td.name a.dir { background-image: url(images/treeview/folder-closed.gif) }
+#dirlist td.name span.dir { background-image: url(images/treeview/folder-closed.gif) }
+#dirlist td.name a.file { background-image: url(images/file.png) }
+#dirlist td.name span.file { background-image: url(images/filedeny.png) }
+#dirlist td.name a, #dirlist td.rev a { border-bottom: none; display: block }
+#dirlist td.change {
+  white-space: normal;
+}
+
+table.code.diff {
+  border-collapse: collapse;
+  border: 1px solid #d3d3d0;
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+table.code.diff tr.removed {
+  background-color: rgb(255, 221, 221);
+}
+table.code.diff tr.added {
+  background-color: rgb(221, 255, 221);
+}
+
+table.code.diff tr td {
+  white-space: pre;
+  font-family: 'Consolas', 'Bitstream Vera Sans Mono',
+    'Monaco', 'Courier New', 'Courier', monospace;
+  color: black;
+  line-height: 1.5em;
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+table.code.diff tr td.line {
+  padding-left: 1.5em;
+  border-left: 1px solid #d3d3d0;
+}
+table.code.diff tr.first {
+  border-top: 1px solid #d3d3d0;
+}
+
+table.code.diff tr td.lineno {
+  text-align: right;
+  padding-right: 1em;
+  width: 1%;
+}
+
+table.code.diff tr.meta td.line {
+  border: none;
+}
+
+pre.code.diff {
+  border: 1px solid #d3d3d0;
+  color: #939399;
+}
+
+.code.diff code {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: black;
+  line-height: 1.5em;
+  display: inline-block;
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+/*
+.code.diff code.odd {
+  background-color: #f7f7f7;
+}
+.code.diff code.even {
+  background-color: #fcfcfc;
+}
+.code.diff code.removed {
+  background-color: rgb(255, 221, 221);
+}
+.code.diff code.added {
+  background-color: rgb(221, 255, 221);
+}
+*/
+
+ol.code {
+  text-align: left;
+  border: 1px solid #d3d3d0;
+  color: #939399;
+}
+
+ol.code li {
+  white-space: nowrap;
+  list-style-type: none;
+  margin: 0;
+  margin-left: 2em;
+  padding: 0 0 0 0em;
+  text-align: left;
+  border-left: 1px solid #d3d3d0;
+}
+
+ol.code li.even { background-color: #fcfcfc }
+ol.code li.odd { background-color: #f7f7f7 }
+ol.code li code {
+  white-space: pre;
+  padding-left: 1em;
+  line-height: 1.5em;
+  color: black;
+}
+ol.code {
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+div.changesets {
+  background-color: #ddd;
+}
+
+div.changeset, div.changesetodd {
+  margin: 0;
+  padding: 0;
+}
+
+div.changesetodd {
+  background-color: #eee;
+}
+
+div.changesets img.gravatar, div.revinfo img.gravatar
+{
+  float: left;
+  margin: 0 0.5em 0.5em 0;
+}
+
+div.changelog {
+  padding: 0.5em;
+  padding-left: 1em;
+}
+
+div.changeinfo {
+  border-bottom: solid 1px #bbb;
+  margin: 0;
+  margin-top: 1em;
+  padding: 0;
+  padding-bottom: 1.5em;
+  padding-left: 1em;
+}
+
+div.changesetday {
+  font-size: 1.2em;
+  background-color: #ccc;
+  border-bottom: solid 1px #bbb;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.3em;
+  padding-top: 0.3em;
+  padding-left: 1em;
+  color: #777;
+}
+
+span.branchname, span.milestone {
+  background: rgb(170, 255, 170);
+  border-bottom: 1px solid rgb(0, 204, 51);
+  border-left: 1px solid rgb(204, 255, 204);
+  border-right: 1px solid rgb(0, 204, 51);
+  border-top: 1px solid rgb(204, 255, 204);
+  color: black;
+  white-space: normal;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 0.9em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+a.keyword {
+  background: rgb(170, 255, 170);
+  border-bottom: 1px solid rgb(0, 204, 51);
+  border-left: 1px solid rgb(204, 255, 204);
+  border-right: 1px solid rgb(0, 204, 51);
+  border-top: 1px solid rgb(204, 255, 204);
+  color: black;
+  white-space: normal;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-right: 0.5em;
+  font-size: 0.9em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+span.milestone {
+  background-image: url(images/milestone.png);
+  background-repeat: no-repeat;
+  background-position-x: 2px;
+  padding-left: 16px;
+}
+
+span.tagname {
+  background: rgb(255, 255, 170);
+  border-bottom: 1px solid rgb(255, 238, 0);
+  border-left: 1px solid rgb(255, 255, 204);
+  border-right: 1px solid rgb(255, 238, 0);
+  border-top: 1px solid rgb(255, 255, 204);
+  color: black;
+  white-space: normal;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 0.9em;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+ol.code li code.removed {
+  background-color: rgb(255, 221, 221);
+  display: block;
+  padding-right: 0;
+}
+
+ol.code li code.added {
+  background-color: rgb(221, 255, 221);
+  display: block;
+  padding-right: 0;
+}
+
+div.difffiles {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+table.fields {
+  width: 45em;
+}
+
+input.summaryedit {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+select.asmSelect {
+  display: inline;
+}
+
+div.asmContainer {
+ border: 1px solid #d7d7d7;
+ padding: .5em;
+}
+
+/* disabled options in the asmSelect */
+select.asmSelect option.asmOptionDisabled {
+  color: #999;
+}
+
+ol.asmList, ul.asmList {
+  /* html list constructed around selected items */
+  margin: 0.25em 0 1em 1em;
+  position: relative;
+  display: block;
+  padding: 0.4em 0 0 0;
+}
+
+li.asmListItem {
+  margin-left: 0.5em;
+  line-height: 1.6em;
+  list-style: disc;
+}
+
+a.asmListItemRemove {
+  padding: 0.2em 0.2em 0.2em 0.5em;
+  border: none;
+}
+
+div.ticketchangeinfo img.gravatar {
+  float: right;
+  margin: 0 0em 1em 1em;
+}
+div.timelinereason img.gravatar {
+  float: left;
+  margin: 0 1em 1em 0em;
+}
+div.ticketevent, div.timelineevent, h1.timelineday {
+  clear: both;
+}
+
+div.userinfo img.gravatar {
+  float: right;
+}
+
+div.ui-state-highlight, div.ui-state-error {
+  padding: 0.4em;
+}
+.ui-widget {
+  font-size: 1em;
+}
+.ui-widget p {
+  margin-bottom: 1.2em;
+}
+
+span.ui-icon-info, span.ui-icon-alert {
+  margin-right: 0.6em;
+  float: left;
+}
+
+#changelog-container {
+  margin-left: 2em;
+}
+
+div.attachment-list {
+  clear: both;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+/* sortable report tables */
+
+table.report thead tr th {
+  cursor: pointer;
+/*  font-size: 0.7em;*/
+}
+
+table.report thead tr .header {
+  background-image: url(images/sort/bg.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding-right: 16px;
+}
+
+table.report thead tr .headerSortUp {
+  background-image: url(images/sort/asc.gif);
+}
+
+table.report thead tr .headerSortDown {
+  background-image: url(images/sort/desc.gif);
+}
+
+table.report tbody tr.statusclosed td {
+  background-color: #eee !important;
+  color: #777;
+}
+
+table.report tbody tr.statusclosed td.summary,
+    table.report tbody tr.statusclosed td.ticket {
+  text-decoration: line-through;
+}
+
+table.report tbody tr.color1 td {
+  background-color: rgb(255, 221, 204);
+  color: rgb(170, 34, 34);
+}
+table.report tbody tr.color2 td {
+  background-color: rgb(255, 255, 187);
+  color: rgb(136, 136, 0);
+}
+table.report tbody tr.color4 td {
+  background-color: rgb(221, 255, 255);
+  color: rgb(0, 153, 153);
+}
+
+table.report tbody tr.color5 td {
+  background-color: rgb(221, 231, 255);
+  color: rgb(68, 102, 153);
+}
+
+table.report tbody tr td a {
+  border-bottom-style: none;
+  color: inherit;
+}
+
+table.report tbody tr td {
+  white-space: nowrap;
+ /* font-size: 0.75em; */
+}
+
+table.report tbody tr td.summary {
+  white-space: normal;
+}
+
+.treeview, .treeview ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.treeview ul {
+  margin-top: 4px;
+}
+
+.treeview .hitarea {
+/*  background: url(images/treeview/treeview-gray.gif) -64px -25px no-repeat; */
+  height: 16px;
+  width: 16px;
+  margin-left: -16px;
+  float: left;
+  cursor: pointer;
+}
+
+/* fix for IE6 */
+* html .hitarea {
+  display: inline;
+  float: none;
+}
+.treeview li {
+  margin: 0;
+  padding: 3px 0pt 3px 20px;
+}
+
+.treeview li {
+  background-image: none;
+  /* url(images/treeview/treeview-gray-line.gif) 0 0 no-repeat; */
+}
+.treeview li.collapsable {
+  background: url(images/treeview/folder.gif) no-repeat;
+}
+.treeview li.expandable {
+  background: url(images/treeview/folder-closed.gif) no-repeat;
+}
+
+#wikilastchange {
+  float: right;
+  padding: 0.5em;
+  margin: 1em 0 1.5em 1.5em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: solid 1px #bbb;
+  background-color: #eee;
+  font-size: 0.8em;
+  width: 15em;
+}
+
+#wikilastchange a.userlink.wikilastchange {
+  float: left;
+  padding: 0 0.5em 0.5em 0;
+  border: none;
+}
+
+#footer {
+  clear: both;
+  background-image: url(images/gradient-footer.png);
+  background-position: center top;
+  background-repeat: repeat-x;
+  background-color: rgb(229,229,229);
+  border-top: 1px solid #eee;
+  width: 100%;
+  margin-top: 1em;
+}
+
+div.navfoot {
+  color: #999;
+  font-size: 0.8em;
+  padding-left: 1em;
+  padding-top: 1em;
+  height: 2.5em;
+}
+
+#openid_identifier {
+  font-size: 2em;
+}
+
+#openid-sign-in {
+  font-size: 2em;
+}
+
+#openidlink {
+  border: none;
+}
+
+@media print {
+  #header, #banner, #mainsearch, div.navfoot {
+    display: none;
+  }
+  #qform {
+    margin-bottom: 0em;
+  }
+  #qtable tr td, #qtable tr td input {
+    font-size: 0.5em;
+  }
+  #qtable tr td select {
+    font-size: 1em;
+  }
+  input {
+    border: none;
+  }
+  input[type=submit], button, #customqryaddfilter {
+    display: none;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  #wikinav, #wikilastchange {
+    display: none;
+  }
+}
+
+span.fulldate {
+  color: #999;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+div.ticketevent abbr.timeinterval {
+  color: #777;
+}
+
+tr.inactiveuser {
+  text-decoration: line-through;
+}
+
+.button, button, input[type=button], input[type=submit], input[type=file] {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  background: #e6e6e6
+    url(css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png);
+  border: 1px solid lightGrey;
+  color: #555;
+  cursor: pointer;
+}
+
+.button:hover, button:hover, input[type=button]:hover, input[type=submit]:hover, input[type=file]:hover {
+  background: #dadada
+    url(css/smoothness/images/ui-bg_glass_75_dadada_1x400.png);
+  border: 1px solid #999;
+  color: #212121;
+}
+
+.button[disabled], button[disabled], input[type=button][disabled], input[type=submit][disabled], input[type=file][disabled] {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #999;
+}
+
+textarea.shortwiki.markItUpEditor {
+  height: 5em;
+}
+
+#snippetmug {
+  float: right;
+}
+
+#recentsnippets {
+  font-size: smaller;
+  width: 10em;
+  vertical-align: top;
+}
+
+form.snippetform,
+div.snippetview {
+}
+
+div.snippetsummary {
+  margin-top: 1em;
+}
+
+#newsnippet {
+  margin-bottom: 1em;
+}
+
+div.permissioneditor th {
+  font-weight: bold;
+}
+
+div.permissioneditor tr.inheritedacl {
+  color: #999;
+}
+
+div.button-float {
+  width: 100%;
+  background-color: white;
+  padding: 0.5em;
+}
+
+div.button-float-floating {
+  border: solid 1px #ccc;
+  left: -1em;
+  padding-left: 2.3em;
+}
+
+/* vim:ts=2:sw=2:et:
+ */

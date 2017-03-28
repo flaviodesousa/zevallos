@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	  <zhtml:title value="Noticias | #sysName" />
+    <link rel="stylesheet" type="text/css" href="/css/geral.css" media="screen, projection"></link>
+    <link rel="stylesheet" type="text/css" href="/css/box.css" media="screen, projection"></link>
+    <link rel="stylesheet" type="text/css" href="/css/noticias.css" media="screen, projection"></link>
+    <link rel="stylesheet" type="text/css" href="/css/comentarios.css" media="screen, projection"></link>
+    <link rel="stylesheet" type="text/css" href="/css/menu.css" media="screen, projection"></link>
+    <link rel="stylesheet" type="text/css" href="/css/login.css" media="screen, projection"></link>
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+      $(".signin").click(function(e) {
+      e.preventDefault();
+      $("fieldset#signin_menu").toggle();
+      $(".signin").toggleClass("menu-open");
+      });
+
+      $("fieldset#signin_menu").mouseup(function() {
+      return false
+      });
+      $(document).mouseup(function(e) {
+      if($(e.target).parent("a.signin").length==0) {
+      $(".signin").removeClass("menu-open");
+      $("fieldset#signin_menu").hide();
+      }
+      });
+
+      });
+    </script>
+    <script src="/js/jquery.tipsy.js" type="text/javascript"></script>
+    <script type='text/javascript'>
+      $(function() {
+      $('#forgot_username_link').tipsy({gravity: 'w'});
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <div id="header">
+		<div class="root">
+			<div class="box-logo"><img src="/img/LogoLugarMedico1.png" alt="Lugar Médico" width="150px" height="73px" style="margin-top:5px"/></a></div>
+			<div class="box-login">
+				<div id="topnav" class="topnav"> Have an account? <a href="login" class="signin"><span>Sign in</span></a> </div>
+				<fieldset id="signin_menu">
+					<form method="post" id="signin" action="/logonValidate.ztag">
+						<label for="username">E-mail</label>
+						<input id="username" name="USERNAME" value="" title="e-mail do usu?rio" tabindex="4" type="text">
+						</p>
+						<p>
+						<label for="password">Senha</label>
+						<input id="password" name="PASSWORD" value="" title="Senha do usu?rio" tabindex="5" type="password">
+						</p>
+						<p class="remember">
+						<input id="signin_submit" value="Entrar" tabindex="6" type="submit">
+						<input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
+						<label for="remember">Lembrar de mim?</label>
+						</p>
+						<p class="forgot"> <a href="/logonForgotPassword.ztag" id="resend_password_link">Esqueceu a senha?</a> </p>
+						<p class="forgot"> <a href="/logonNew.ztag" id="new_user">Novo cadastro?</a> </p>
+					</form>
+				</fieldset>
+			</div>
+		</div>
+    </div>
+    <div id="menu">
+      <div class="root">
+        <ul>
+          <li><a href="quemSomos.ztag">Quem somos</a></li>
+          <li><a href="/public.ztag">Noticias </a></li>
+          <li><a href="/logonNew.ztag">Novo Cadastro</a></li>
+          <li><a href="/faleConosco.ztag">Fale Conosco</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="container">
+    <div class="root">
+    <div id="box">
+      <div class="header blue">Editorias</div>
+      <div class="body news-menu">
+        <ul>
+          <li>Política</li>
+          <li>Brasil</li>
+          <li>Brasília</li>
+          <li>Medicina</li>
+          <li>Artigos</li>
+          <li>Dicas</li>
+        </ul>
+      </div>
+    </div>
+    <div id="box">
+    <div class="header gray">Política</div>
+    <div class="body news-body">
+    <h3>10/03/2011 16h41 - Atualizado em 10/03/2011 17h00</h3>
+    <h1>STF abre inquérito para investigar deputada Jaqueline Roriz</h1>
+    <h2>Deputada aparece em vídeo recebendo dinheiro de pivô de mensalão.<br />Assessoria da parlamentar informou que ela não irá se manifestar.</h2>
+    <div class="news">
+    <div class="object">
+    d
+    </div>
+    Começou a tramitar nesta quinta (10) no Supremo Tribunal Federal pedido de inquérito com a finalidade de investigar a deputada federal Jaqueline Roriz (PMN-DF). O pedido foi formulado pelo procurador-geral da República, Roberto Gurgel.
+
+    [A primeira versão desta reportagem informava que o Supremo havia aberto inquérito para investigar a deputada. Segundo a assessoria do STF, embora já apareça como tal no site do tribunal (com o número 3113), o inquérito só poderá ser considerado oficialmente aberto depois que o relator designado, o ministro Joaquim Barbosa, examinar o caso.]
+
+    A deputada aparece ao lado do marido, Manoel Neto, em um vídeo no qual o casal recebe um pacote de dinheiro das mãos de Durval Barbosa, pivô do escândalo de corrupção que ficou conhecido como mensalão do DEM de Brasília.
+
+    A assessoria da família Roriz informou ao G1 que a deputada não vai se manifestar sobre o pedido de inquérito porque não sabe qual é a acusação que pesa contra ela.
+
+    Por ser deputada federal, Jaqueline Roriz tem foro privilegiado. Por isso, precisa de autorização do Supremo para ser investigada.
+
+    No pedido de inquérito, Gurgel já faz duas solicitações ao ministro Joaquim Barbosa. Segundo a assessoria da PGR, o procurador-geral da República pediu autorização para que a Polícia Federal realize a perícia no vídeo e tome o depoimento de Jaqueline. Barbosa ainda não se pronunciou sobre os pedidos de Gurgel.
+    </div>
+    <div class="comentario-body">
+    <div class="pai">
+    <div class="foto"><img src="img/avatar.png" width="90" height="90" /></div>
+    <div class="inf"></div>
+    <div class="text"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div id="box">
+    <div class="header blue">Política</div>
+    <div class="body events">
+    </div>
+    </div>
+    <div id="box">
+    <div class="header green">Política</div>
+    <div class="body news-list">
+    <dl>
+    <dt>Título da notícia</dt>
+    <dt>Lima deixou o cargo depois que a Câmara elegeu para governador o então deputado distrital Rogério Rosso (PMDB). Ele concluiu o mandato iniciado por Arruda e permaneceu até a eleição de outubro, cujo ganhador foi Agnelo Queiroz (PT), atual governador.</dt>
+    </dl>
+    </div>
+    </div>
+    </div>
+    </div>
+		<div id="footer">
+			<div class="root">Copyright &copy; 2011 Lugar Médico todos os direitos reservados</div>
+		</div>
+	</body>
+</html>

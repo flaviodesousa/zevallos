@@ -1,0 +1,87 @@
+body {margin:10px 10px 0px 10px;
+	padding:0px;
+  font-family: verdana, arial, helvetica;
+  font-size: 100%}
+
+legend {font-size: .65em}
+
+fieldset {padding: 0px 3px 3px 3px;
+  margin: 0px 1px 1px 1px;
+	border-color: #999999 #FFFFFF #FFFFFF #999999;
+	border-width: 2px 2px 2px 2px}
+
+label {font-size: .7em;
+  font-weight: bold;
+  color: #000080;
+  float: left}
+
+img {border: none}
+
+select {font-size: 1em;
+	font-weight: normal;
+	background-color: #EEEEEE;
+	border-color: #FFFFFF #999999 #999999 #FFFFFF;
+	margin-right: 5px;
+	border-width: 1px 1px 1px 1px}
+
+textarea {font-size: 1em;
+	font-weight: normal;
+	background-color: #EEEEEE;
+	border: 1px solid;
+	border-color: #FFFFFF #999999 #999999 #FFFFFF;
+	overflow:auto;
+	clip:auto;
+	margin-right: 4px;
+	padding-left: 2px;
+	padding-right: 2px}
+
+input {font-size: 1em;
+	font-weight: normal;
+	background-color: #EEEEEE;
+	border: 1px solid;
+	border-color: #FFFFFF #999999 #999999 #FFFFFF;
+	margin-right: 5px;
+	padding-left: 2px;
+	padding-right: 2px}
+
+input[required], input.FieldRequired, select[required], select.FieldRequired, textarea[required], textarea.FieldRequired {
+  background-position: top right;
+  background-repeat: no-repeat}
+
+input[required], input.FieldRequired, select[required], select.FieldRequired, textarea[required], textarea.FieldRequired {
+  background-image: url(/Library/required.gif)}
+
+input[readonly], input.Fieldreadonly, select[readonly], select.Fieldreadonly, textarea[readonly], textarea.Fieldreadonly {
+  background-color:#D0D0D0;
+  color: #575757}
+
+input[disable], input.Fielddisable, select[disable], select.Fielddisable, textarea[disable], textarea.Fielddisable {
+  background-color:#D0D0D0;
+  color: #575757}
+
+button {font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	font-weight: normal;
+	height: 22px;
+	background-color: #D0D0D0;
+	border: 1px solid;
+	border-color: #FFFFFF #999999 #999999 #FFFFFF;
+	margin-right: 5px}
+
+input[type="checkbox"], input.FieldsCheckBox {
+  background-color: #ffffff}
+
+input[type="radio"], input.FieldsRadio {
+  background-color: #ffffff}
+
+input.FieldsOver {
+  font-size: .75em;
+  font-family: verdana;
+  background-color: #F7F7F7;
+  border: 1px solid #000080;
+  margin-right: 10px;
+  padding-right: 10px}
+
+input[integer], input.FieldsInteger {direction: rtl}
+
+input[integer], input.FieldsMoney {direction: rtl}

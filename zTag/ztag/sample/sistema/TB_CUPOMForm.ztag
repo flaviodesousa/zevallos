@@ -1,0 +1,31 @@
+
+<DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Form TB_CUPOM</title>
+<link rel="stylesheet" type="text/css" href="generateForm.css"> 
+</head>
+<body>
+  <div id="stylized" class="myform">
+    <form action="TB_CUPOMFile" method="post">
+      <h1>TB_CUPOM form</h1>
+      <p>Form generated for table TB_CUPOM</p>
+      
+      <label>CD_CUPOM<span class="small">short description form cd_cupom</span> </label> <input type="text" name="CD_CUPOM" id="CD_CUPOM" />
+      <label>CD_CAMPANHA<span class="small">short description form cd_campanha</span> </label> <input type="text" name="CD_CAMPANHA" id="CD_CAMPANHA" />
+      <label>CD_PESSOA<span class="small">short description form cd_pessoa</span> </label> <input type="text" name="CD_PESSOA" id="CD_PESSOA" />
+      <label>CD_SESSAO<span class="small">short description form cd_sessao</span> </label> <input type="text" name="CD_SESSAO" id="CD_SESSAO" />
+      <label>FL_ACORDO<span class="small">short description form fl_acordo</span> </label> <input type="text" name="FL_ACORDO" id="FL_ACORDO" />
+      <label>CD_PAGAMENTO<span class="small">short description form cd_pagamento</span> </label> <input type="text" name="CD_PAGAMENTO" id="CD_PAGAMENTO" />
+      <label>DS_CUPOM<span class="small">short description form ds_cupom</span> </label> <input type="text" name="DS_CUPOM" id="DS_CUPOM" />
+      <label>NU_SEQUENCIA<span class="small">short description form nu_sequencia</span> </label> <input type="text" name="NU_SEQUENCIA" id="NU_SEQUENCIA" />
+      <label>DT_VALIDADE<span class="small">short description form dt_validade</span> </label> <input type="text" name="DT_VALIDADE" id="DT_VALIDADE" />
+      <label>QT_LIDO<span class="small">short description form qt_lido</span> </label> <input type="text" name="QT_LIDO" id="QT_LIDO" />
+      <label>VL_CUPOM<span class="small">short description form vl_cupom</span> </label> <input type="text" name="VL_CUPOM" id="VL_CUPOM" />
+      <label>NM_USUARIO<span class="small">short description form nm_usuario</span> </label> <input type="text" name="NM_USUARIO" id="NM_USUARIO" />
+  
+      <button type="submit">Submit button</button>
+    </form>
+  <div>  
+</body>

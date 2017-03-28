@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/imgareaselect-animated.css" />
+
+<title>Recortanto Imagens com PHP e ImgSelectArea</title>
+<script language="javascript" src="jquery.min.js"></script>
+<script language="javascript" src="jquery.imgareaselect.js"></script>
+<script language="javascript">
+//<![CDATA[
+	$(function(){
+	
+		$('#ladybug')
+			.imgAreaSelect(
+				{
+					onSelectChange: function selectChange(img, selection){
+	   
+										$('#x').val(selection.x1);
+										$('#y').val(selection.y1);
+										$('#h1').val(selection.height);
+										$('#w1').val(selection.width);
+									   
+										$x1 = $('#x1').text(selection.x1);
+										$y1 = $('#y1').text(selection.y1);
+										$x2 = $('#x2').text(selection.x2);
+										$y2 = $('#y2').text(selection.y2);
+										$w = $('#w').text(selection.width+' px');
+										$h = $('#h').text(selection.height+' px');
+										
+									},
+					handles: true,
+					x1: 127,
+					x2: 265,
+					y1: 78,
+					y2: 249,
+					persistent:true
+				}
+			); 
+		
+	});
+//]]
+</script>
+</head>
+
+<body>
+
+<div id="estrutura">
+	
+    <h1>Recortar imagem com jQuery e PHP</h1>
+    
+    <img src="ladybug.jpg" id="ladybug" alt="Joaninha" />
+    
+    <strong>Cordenadas da Sele&ccedil;&atilde;o:</strong><br />
+    X<sub>1</sub>: <span id="x1"> - </span><br />
+    X<sub>2</sub>: <span id="x2"> - </span><br />
+    Y<sub>1</sub>: <span id="y1"> - </span><br />
+    Y<sub>2</sub>: <span id="y2"> - </span><br />
+    
+    <br />
+    
+    <strong>Dimens&otilde;es</strong><br />
+    Largura (Width): <span id="w"> - </span><br />
+    Altura (Height): <span id="h"> - </span><br />
+    
+    <form action="resize.php" method="post">
+        <input type="hidden" name="x" id="x" />
+        <input type="hidden" name="y" id="y" />
+        <input type="hidden" name="h" id="h1" />
+        <input type="hidden" name="w" id="w1" />
+        <input type="hidden" name="img" value="ladybug.jpg" />
+        <input type="submit" value='Redimensionar' />
+    </form>
+    
+    <br />
+    
+    <a href="" id="link_post">Post explicando o funcionamento da ferramenta que uni o plugin ImgSelectArea e a classe ThumbNails do PHP para recortar</a>
+    
+</div>
+
+	<script type="text/javascript"> 
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script> 
+    <script type="text/javascript"> 
+		try {
+			var pageTracker = _gat._getTracker("UA-7953787-1");
+			pageTracker._trackPageview();
+		} catch(err) {}
+    </script>
+     
+</body>
+</html>

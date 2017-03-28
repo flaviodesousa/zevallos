@@ -1,0 +1,788 @@
+
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+      <h1>zmemcached</h1>
+       
+    
+    <h2>open</h2><hr />
+    <p>Open memcached server connection</p>
+    <p>Open memcached server connection
+
+<code>
+<zmemcached:open id="memCached" host="localhost" port="11211" timeout="1" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>close</h2><hr />
+    <p>Close memcached server connection</p>
+    <p>Close memcached server connection
+
+<code>
+<zmemcached:close use="memCached" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>addserver</h2><hr />
+    <p>Add a memcached server to connection pool</p>
+    <p>Add a memcached server to connection pool
+
+<code>
+<zmemcached:addserver use="memCached"host="localhost" port="11211" timeout="1" persistent="true|false|0|1" weight="10" retryinterval="10" status="true|false|0|1" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>getserverstatus</h2><hr />
+    <p>Get Server status</p>
+    <p>Get Server status
+
+<code>
+<zmemcached:getserverstatus use="memCached" host="localhost" port="11211" var="memcachedStatus" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>getversion</h2><hr />
+    <p>Get Server version</p>
+    <p>Get Server version
+
+<code>
+<zmemcached:getversion use="memCached" var="versionVar" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>getstats</h2><hr />
+    <p>Close memcached server connection</p>
+    <p>Close memcached server connection
+
+Stats array
+pid - Process id of this server process
+uptime - Number of seconds this server has been running
+time - Current UNIX time according to the server
+version - Version string of this server
+rusage_user - Accumulated user time for this process
+rusage_system - Accumulated system time for this process
+curr_items - Current number of items stored by the server
+total_items - Total number of items stored by this server ever since it started
+bytes - Current number of bytes used by this server to store items
+curr_connections - Number of open connections
+total_connections - Total number of connections opened since the server started running
+connection_structures - Number of connection structures allocated by the server
+cmd_get - Cumulative number of retrieval requests
+cmd_set - Cumulative number of storage requests
+get_hits - Number of keys that have been requested and found present
+get_misses - Number of items that have been requested and not found
+bytes_read - Total number of bytes read by this server from network
+bytes_written - Total number of bytes sent by this server to network
+limit_maxbytes - Number of bytes this server is allowed to use for storage.
+
+<code>
+<zmemcached:getstats use="memCached" var="statsVar" type="reset" slabid="" limit="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>getextendedstats</h2><hr />
+    <p>Get Server extended status</p>
+    <p>Get Server extended status
+
+<code>
+<zmemcached:getextendedstats host="localhost" port="11211" var="memcachedStatus" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>key</h2><hr />
+    <p>Return a hash of your key</p>
+    <p>Return a hash of your key
+
+<code>
+<zmemcached:key key="My key value" var="versionVar" type="md5|base64" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>set</h2><hr />
+    <p>Store data at the server</p>
+    <p>Store data at the server
+
+<code>
+<zmemcached:set use="memCached" key="unique Id for this" value="statsVar" compress="1" expire="0" />
+
+<zmemcached:set use="memCached" key="" compress="" expire="">
+Value to be Cached
+</zmemcached:set>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>get</h2><hr />
+    <p>Retrieve item from the server</p>
+    <p>Retrieve item from the server
+
+<code>
+<zmemcached:get use="memCached" key="unique Id for this" var="getVar" flags="" />
+
+<zmemcached:get use="memCached" var="getVar" flags="">
+keys{"Key one"
+, "Key two"
+, 'Another key'
+, 99}
+</zmemcached:get>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>add</h2><hr />
+    <p>Retrieve item from the server</p>
+    <p>Retrieve item from the server
+
+<code>
+<zmemcached:add use="memCached" key="unique Id for this" var="getVar" flags="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>replace</h2><hr />
+    <p>Replace value of the existing item</p>
+    <p>Replace value of the existing item
+
+<code>
+<zmemcached:replace use="memCached" key="unique Id for this" value="statsVar" compress="1" expire="0" />
+
+<zmemcached:replace use="memCached" key="" compress="1" expire="">
+Value to be replaced
+</zmemcached:replace>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>delete</h2><hr />
+    <p>Delete item from the server</p>
+    <p>Delete item from the server
+
+<code>
+<zmemcached:delete use="memCached" key="unique Id for this" timeout="10" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>increment</h2><hr />
+    <p>Increment item's value</p>
+    <p>Increment item's value
+
+<code>
+<zmemcached:increment use="memCached" key="unique Id for this" value="1" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>decrement</h2><hr />
+    <p>Decrement item's value</p>
+    <p>Decrement item's value
+
+<code>
+<zmemcached:decrement use="memCached" key="unique Id for this" value="1" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>debug</h2><hr />
+    <p>Debug</p>
+    <p>Debug
+
+<code>
+<zmemcached:debug use="memCached" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zmemcached</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>flush</h2><hr />
+    <p>Flush all existing items at the server</p>
+    <p>Flush all existing items at the server
+
+<code>
+<zmemcached:flush use="memCached" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    

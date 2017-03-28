@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	scrollbar-arrow-color: #003399;
+	scrollbar-base-color: #003366;
+	scrollbar-dark-shadow-color: #006699;
+	scrollbar-track-color: #003399;
+	scrollbar-face-color: #99CCFF;
+	scrollbar-shadow-color: #666666;
+	scrollbar-highlight-color: #666666;
+	scrollbar-3d-light-color: #666666;
+}

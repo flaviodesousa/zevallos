@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="Inscrito" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            font-size:.7em;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}
+    </style>
+  </head>
+  <body>
+    <h3>Inscrito</h3>
+
+    <zget:get name="ingCodigo" var="ingCodigo" transform="allTrim(' ')->stripTags()" />
+    <zvar:setif use="ingCodigo" condition="$ingCodigo" var="sqlSelect" then="WHERE ingCodigo = $ingCodigo" />
+
+    <zdb:open id="mysqlConn" driver="mysql" host="mysqlhost" database="mysqldatabase" user="mysqluser" password="mysqlpassword" />
+      <zdb:query use="mysqlConn" id="mysqlQuery">
+        SELECT ingNome
+        , ingEMail
+        , ingLogradouro
+        , ingNumero
+        , ingComplemento
+        , ingBairro
+        , ingCidade
+        , ingUF
+        , ingCEP
+        , ingTelefones
+        , ingRG
+        , ingCPF
+        , intTipoIngresso
+        , intCidadeEvento
+        , ingQuantidade
+        , ingValor
+        from cadIngressos
+        $sqlSelect
+        ORDER BY ingInclusao DESC
+      </zdb:query>
+
+      <table border="1" cellspacing="0">
+      <zdb:fetchuntil use="mysqlQuery" id="mysqlRow" var="mysqlRow">
+        <tr>
+          <zHTML:cell value="Código:" /><td><zdb:field use="mysqlRow" name="ingNome]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="E-Mail:" /><zHTML:cell value="$mysqlRow[ingEMail]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Logradouro:" /><zHTML:cell value="$mysqlRow[ingLogradouro]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Número:" /><zHTML:cell value="$mysqlRow[ingNumero]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Complemento:" /><zHTML:cell value="$mysqlRow[ingComplemento]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Bairro:" /><zHTML:cell value="$mysqlRow[ingBairro]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Cidade:" /><zHTML:cell value="$mysqlRow[ingCidade]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="UF:" /><zHTML:cell value="$mysqlRow[ingUF]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="CP:" /><zHTML:cell value="$mysqlRow[ingCEP]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Telefones:" /><zHTML:cell value="$mysqlRow[ingTelefones]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="RG:" /><zHTML:cell value="$mysqlRow[ingRG]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="CPF:" /><zHTML:cell value="$mysqlRow[ingCPF]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Tipo Ingresso:" /><zHTML:cell value="$mysqlRow[ingTipoIngresso]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Cidade Evento:" /><zHTML:cell value="$mysqlRow[ingCidadeEvento]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Quantidade:" /><zHTML:cell value="$mysqlRow[ingQuantidade]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Valor:" /><zHTML:cell value="$mysqlRow[ingValor]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Inclusão:" /><zHTML:cell value="$mysqlRow[ingInclusao]" /></td>
+        </tr>
+        <tr>
+          <zHTML:cell value="Ativo:" /><zHTML:cell value="$mysqlRow[ingAtivo]" /></td>
+        </tr>
+        </zdb:fetchuntil>
+      </table>
+    <zdb:close use="mysqlConn" />
+  </body>
+</html>

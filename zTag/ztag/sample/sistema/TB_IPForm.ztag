@@ -1,0 +1,26 @@
+
+<DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Form TB_IP</title>
+<link rel="stylesheet" type="text/css" href="generateForm.css"> 
+</head>
+<body>
+  <div id="stylized" class="myform">
+    <form action="TB_IPFile" method="post">
+      <h1>TB_IP form</h1>
+      <p>Form generated for table TB_IP</p>
+      
+      <label>CD_IP<span class="small">short description form cd_ip</span> </label> <input type="text" name="CD_IP" id="CD_IP" />
+      <label>NU_IP<span class="small">short description form nu_ip</span> </label> <input type="text" name="NU_IP" id="NU_IP" />
+      <label>DT_INCLUSAO<span class="small">short description form dt_inclusao</span> </label> <input type="text" name="DT_INCLUSAO" id="DT_INCLUSAO" />
+      <label>NU_IP1<span class="small">short description form nu_ip1</span> </label> <input type="text" name="NU_IP1" id="NU_IP1" />
+      <label>NU_IP2<span class="small">short description form nu_ip2</span> </label> <input type="text" name="NU_IP2" id="NU_IP2" />
+      <label>NU_IP3<span class="small">short description form nu_ip3</span> </label> <input type="text" name="NU_IP3" id="NU_IP3" />
+      <label>NU_IP4<span class="small">short description form nu_ip4</span> </label> <input type="text" name="NU_IP4" id="NU_IP4" />
+  
+      <button type="submit">Submit button</button>
+    </form>
+  <div>  
+</body>

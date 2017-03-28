@@ -1,0 +1,758 @@
+/************** CSS Style for structure elements (body, content, header...) ***************/
+/****************
+	 Global 
+****************/
+html, body, #wrapped {height:100%}
+body > #wrapped {
+	height:auto;
+	min-height:100%
+}
+.center {margin:0 auto}
+.left {float:left}
+.right {float:right}
+.clear {clear:both;}
+.clear_all {clear:both; display:block !important; float:none !important; height:1px; font-size:1px; visibility:hidden;}
+.hide {display:none}
+.show {display:block}
+.txtCenter {text-align:center}
+.width {width:970px}
+/* End Global */
+
+/**************
+	Header
+**************/
+#adv_tam {display:none;}
+#header {
+	border:none;
+	height:179px;
+	padding:0;
+	position:relative;
+	z-index:9000;
+}
+#innerHeader {position:relative}
+#innerHeader div.top {
+	height:92px;
+	left:-16px;
+	position:absolute;
+	top:16px;
+	width:986px
+}
+/*
+#innerHeader div.top {
+	height:100px;
+	left:-16px;
+	position:absolute;
+	top:12px;
+	width:986px
+}*/
+#innerHeader div.top p.logo { 
+	/*padding:0 0 0 45px;*/
+	margin:-7px 0 0 0;
+	_margin:0px;
+	padding:17px 0 0 45px;
+}
+#innerHeader div.top div.right { padding-right:18px}
+#innerHeader div.deal {
+	font-size:100% !important;
+	margin:0 !important;
+	padding:20px 28px 0 55px !important;
+	width:149px
+}
+/* CSS FOR WEBKIT (CHROME AND SAFARI) */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#innerHeader #newsletterForm p.msgnewsletterEmailField {
+		left:-280px;
+		top:-40px
+	}
+}
+#innerHeader div.nav {
+	margin-top:112px;
+	position:relative;
+	width:970px
+}
+#innerHeader div.nav li {
+	float:left;
+	height:35px
+}
+#innerHeader #navLogin, #innerHeader #navLogged {
+	float:none;
+	height:29px;
+	padding:6px 0 0 22px;
+	position:absolute;
+	right:-11px;
+	margin:0;
+	width:424px
+}
+#innerHeader #loginForm div.errorDialog {top:-42px}
+#innerHeader #navLogin input {
+	border:none;
+	height:19px;
+	margin:0;
+	padding:1px 0
+}
+#innerHeader #navLogged div.right {
+	padding-right:12px;
+	position:relative;
+	top:-6px;
+	width:179px
+}
+#innerHeader #navLogged div.right li {
+	border:medium none;
+	margin:0;
+	margin-left:13px;
+	width:94px;
+}
+#innerHeader div.bottom {
+	margin-top:1px;
+	position:relative;
+	width:970px
+}
+#innerHeader div.bottom ul { position:absolute}
+#innerHeader div.bottom li {
+	float:left;
+	height:30px
+}
+#innerHeader div.bottom li.dir li {
+	width:100%
+}
+#innerHeader div.bottom li.title {
+	height:21px;
+	padding:9px 10px 0
+}
+#innerHeader div.bottom div.right { padding-right:4px}
+/* End Header */
+.selos_compra {
+	background:url("img/selos_compra.jpg") center top no-repeat;
+	height:105px;
+	width:440px;
+}
+/*******************
+	Menu Dropdown
+********************/
+ul.dropdown, ul.dropdown li, ul.dropdown ul {
+	list-style:none;
+	margin:0;
+	padding:0
+}
+ul.dropdown {
+	position:relative;
+	z-index:99999;
+	float:left
+}
+ul.dropdown li {
+	float:left;
+	vertical-align:middle;
+	zoom:1
+}
+ul.dropdown li.hover, ul.dropdown li:hover {
+	position:relative;
+	z-index:9999999;
+	cursor:default
+}
+ul.dropdown ul {
+	visibility:hidden;
+	position:absolute;
+	top:100%;
+	left:0;
+	z-index:99999999;
+	width:190px
+}
+ul.dropdown ul li { float: none}
+ul.dropdown ul ul {
+	top: 1px;
+	left: 99%
+}
+ul.dropdown li:hover > ul { visibility: visible}
+/* End Menu */
+
+/****************
+	Template
+****************/
+div.samplePage {
+	height:48px;
+	padding-bottom:97px
+}
+/* End Template */
+
+/*******************
+	Content
+********************/
+#content {
+	/*background:url("img/bg-content-natal.jpg") repeat-x scroll 0 0 #4e6da6;*/
+	float:none;
+	margin:0;
+	overflow:hidden;
+	padding:29px 0 252px;
+	width:100%
+}
+body #content .w2 { position:relative}
+#content .w1, #content .w2 {
+	background:none;
+	padding:0 !important;	
+}
+#content div.homeArticle {
+	_position:relative;
+	width:730px;
+}
+#innerContent div.offerToday {
+	padding:10px 12px 12px 12px;
+	min-height:680px;
+	_height:680px;
+	*position:relative;
+	_position:inherit;
+	width:489px;
+	z-index:1
+}
+#innerContent div.offerToday div.discount {
+	position:relative;
+}
+#innerContent div.offerToday div.value {
+	bottom:5px;
+	height:62px;
+	left:5px;
+	padding-top:17px;
+	position:absolute;
+	width:79px;
+	z-index:9;
+}
+/*#innerContent div.offerToday div.value {
+	bottom:5px;
+	height:62px;
+	left:5px;
+	padding-top:27px;
+	position:absolute;
+	width:79px;
+	z-index:9999;
+}*/
+#innerContent div.offerToday div.bottom div {margin-top:13px; width:240px}
+
+#innerContent div.buyArea {
+	float:right;
+	height:680px;
+	min_height:680px;
+	padding:18px 0 8px;
+	width:204px;
+}
+#innerContent div.buyArea div.time div.footer span.minute { padding-right:13px}
+#innerContent div.buyArea div.time div.footer span.second { padding-right:0}
+#innerContent div.buyArea div.offerValidation {
+	*padding-top:22px;
+	_padding-top:35px;
+	postion:relative;
+	background:url("img/linha_buyarea.gif") repeat-x scroll left top transparent;
+	margin:10px 0 20px;
+	padding-top:15px;
+	text-align:center;
+}
+#usersbuy {
+	height:36px;
+	margin-left:9px;
+	margin-top:-30px;
+	_margin-left:-94px;
+	*margin-left:-94px;
+	_margin-top:-30px;
+	*margin-top:-30px;
+	width:189px;
+	position: absolute;
+}
+#innerContent div.buyArea div.offerValidation div.ratingBox {
+	float:none;
+	height:27px;
+	left:0;
+	margin-right:40px;
+	overflow:hidden;
+	padding:1px 0 0 1px;
+	top:0;
+	width:137px;
+	z-index: 999;
+}
+#innerContent div.buyArea div.offerValidation div.ratingBox div.rating {
+	float:left;
+	height:26px
+}
+#innerContent div.descript {
+	margin-top:12px;
+	padding-left:17px;
+	width:713px;
+	min-height:520px;
+}
+#innerContent div.descript div.post {
+	padding:24px 17px 44px 0;
+	width:491px;
+}
+div#cupom div#item p.companyAddress {margin:5px 0 0 12px}
+#innerContent div.descript div.address {
+	padding:24px 0 0 5px;
+	width:200px;
+	min-height:520px;
+}
+#innerContent div.footer {
+	display:none;
+	padding:14px 5px 0 0
+}
+#innerContent div.footer ul#partners_list {
+	height:60px;
+	width:965px;
+}
+.chamada{
+	float:left;
+	font-size:16px;
+	line-height:35px;
+}
+#innerContent div.footer ul#partners_list li {
+	float:left;
+	height:60px;
+}
+#innerContent div.footer ul#partners_list li span {display:none;}
+#content .content {
+	border-top:none;
+	margin:0;
+	padding:0
+}
+#innerContent div.innerPage {
+	overflow:hidden;
+	padding:80px 30px 40px 30px;
+	position:relative;
+	width:905px
+}
+#innerContent div.innerPage #flash {
+	margin:0 auto 30px;
+	width:576px;
+}
+div.cadSucess div#infoUser2 {
+	float:left;
+	padding:0 0 0 115px;
+	width:375px;
+}
+div.cadSucess div#infoUser2 dl {
+	display:block;
+	border-bottom:1px solid #d9d6d6;
+	margin: 12px 0;	
+}
+div.cadSucess div#infoUser2 dl dt {
+	color:#324a76;
+	float:left;
+	font-size:28px;
+	font-weight:bold;
+	margin:0 10px 0 0;	
+}
+div.cadSucess div#infoUser2 dl dd {
+	color:#737373;
+	font-size:12px;
+	float:left;
+}
+div.cadSucess div#infoUser2 dl dd p {
+	line-height:12px;
+	margin:0;
+	padding:0 0 5px 0;	
+}
+div.cadSucess div#infoUser2 dl dd.clear {
+	clear:both;
+	display:block;
+	float:none;
+	font-size:0;
+	height:1px;
+	overflow:hidden;
+	visibility:hidden;
+}
+div.cadfinalbrands {
+	float:right;
+	height:230px;
+	padding:25px 20px 0;
+	width:315px;
+}
+.logofinalbrands {
+	float:left;
+	height:31px;
+	margin-top:-1px;
+	padding:3px;
+	width:34px;
+}
+.confirafinal {
+	height:36px;
+	line-height:33px;
+	margin-top:47px;
+	padding:6px;
+}
+/*End*/
+/**************
+	Sidebar
+**************/
+#innerContent div.sidebar {
+	padding-right:5px;
+	position:relative;
+	width:224px;
+	height:auto;
+}
+#innerContent div.sidebar div.social {
+	height:99px;
+	left:-12px;
+	padding:13px 15px 0 14px;
+	position:relative;
+	top:0;
+	width:218px;
+	z-index:999;
+}
+#innerContent div.sidebar div.business {
+	margin-top:15px;
+	padding-bottom:8px;
+	width:223px
+}
+#innerContent div.sidebar div.business div.content {
+	padding:10px 0 5px 55px;
+	width:168px
+}
+/* End */
+/***************
+	Twitter
+****************/
+#innerContent div.sidebar div.twitterApi {display: block; width: 224px;}
+#innerContent div.sidebar div.twitterApi div {width:223px}
+#innerContent div.sidebar div.twitterApi div ul {padding:10px 9px 4px}
+/* End */
+/***************
+	Footer
+****************/
+#footer {
+	clear:both;
+	/*height:100%;*/
+	margin-top:-224px;
+	padding:46px 0;
+	position:relative;
+}
+#innerFooter div.cities {width:620px}
+#innerFooter div.cities ul {
+	float:left;
+	margin:0;
+	padding-left:5px;
+	margin-left:-17px;
+	width:620px;
+	border:0;
+}
+#innerFooter div.cities ul li {
+	float:left;
+	padding-left:10px;
+	width:139px
+}
+#innerFooter div.cities ul.noPadding { padding-left:0}
+#innerFooter div.about {
+	padding-top:0px;
+	width:330px
+}
+#innerFooter div.about ul { margin:0}
+#innerFooter div.about div.area div {
+	float:left;
+	height:100px
+}
+#innerFooter div.about div.area div.enterprise { padding-right:15px}
+#innerFooter div.about div.area div.seeMore { padding:0 15px}
+#innerFooter div.about div.area div.followUs { padding-left:12px}
+#innerFooter div.about div.area div.noBorder { border-right:0}
+#innerFooter div.about div.area div.followUs li { padding-bottom:8px}
+#innerFooter div.about div.area div.followUs li.noPadding { padding-bottom:0}
+#innerFooter div.about div.copyright {
+	margin-top:52px;
+	*margin-top:35px;
+	padding:9px 0 11px 113px;
+}
+#innerFooter div.about div.cards {
+	clear:both;
+	float:left;
+	height:23px;
+	margin-top:10px;
+	width:317px;
+}
+/* End */
+/***************
+	SideDeal 1
+****************/
+#sideDeal { 
+	background-color:#FFFFFF;
+	padding-bottom:8px;
+	width:223px;
+	z-index: -1;
+	display:table-caption;
+}
+#sideDealNac { 
+	background-color:#FFFFFF;
+	padding-bottom:8px;
+	width:223px;
+	z-index: -1;
+	display:table-caption;
+	-moz-border-radius:0 0 6px 6px;
+	border-radius:0 0 6px 6px;
+	margin-bottom:10px;
+}
+#sideDeal a, #sideDealNac a {
+	color:#333;
+	display:block;
+	text-decoration:none;	
+}
+#sideDeal a:hover, #sideDealNac a:hover {
+	text-decoration:underline;
+}
+a.sideDealThumbNac, a.sideDealThumbNac:hover, a.sideDealThumb, a.sideDealThumb:hover {
+	cursor:pointer;
+	display:block;
+	height:135px;
+	position:relative;
+	width:223px;
+	text-decoration:none !important;
+}
+.sideDealTitle {
+	display:block;
+	font-size:12px;
+	height:auto;
+	line-height:14px;
+	margin:5px 0 0 12px;
+	width:202px;
+}
+.sideDealDiscPerc, .sideDealDiscPercNac{
+	background:url("img/splash_side.png") no-repeat scroll center center transparent;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:16px;
+	height:26px;
+	letter-spacing:-1px;
+	margin:89px 0 0 11px;
+	padding:14px 9px 4px 9px;
+	position:absolute;
+	text-align:center;
+	text-decoration:none !important;
+	vertical-align:middle;
+	width:27px;
+	z-index:999;
+}
+.sideDealBT {
+	background:url("img/sidedeal01_bt.jpg") no-repeat scroll center center transparent;
+	color:#FFFFFF;
+	height:43px;
+	margin-bottom:2px;
+	margin-left:-1px;
+	margin-top:6px;
+	position:relative;
+	width:221px;
+	z-index:999;
+}
+.sideDealBT a {
+	color:#4E4E4E;
+	display:block;
+	font-size:19px;
+	font-weight:bold;
+	height:43px;
+	padding:0 0 0 10px;
+	width:211px;
+}
+.sideDealBT a span {
+	display:block;
+	height:30px;
+	padding-top:13px;
+	text-align:center;
+	width:101px;
+}
+.sideDealTit{
+	background:url("img/box_sidedeal_tit.gif") no-repeat scroll center center transparent;
+	height: 36px;
+}
+.sideDealTitNac{
+	background:url("img/box_sidenac_tit.png") no-repeat scroll center center transparent;
+	height: 40px;
+}
+/*.sideDealTit{
+	background:url("img/box_sidedeal_tit_natal.png") no-repeat scroll center center transparent;
+	height: 42px;
+}*/
+#sideDeal a.link {
+	height:170px;
+	left:0;
+	position:absolute;
+	top:0;
+	width:220px;
+	border:1px solid red;
+}
+/************************
+	SideDeals - Others
+*************************/
+#sideDeal2, #sideDeal3, #sideDeal4, #sideDeal5, #sideDeal6, #sideDeal7, #sideDeal8, #sideDeal9, #sideDeal10, #sideDeal11, #sideDeal12, #sideDeal13, #sideDeal14, #sideDeal15, #sideDealNac2, #sideDealNac3, #sideDealNac4, #sideDealNac5 {
+	background-color:#FFFFFF;
+	border-top:1px dashed #4C6DA9;
+	display:table;
+	margin-top:0;
+	padding-bottom:4px;
+	width:223px;
+	z-index:-1;
+}
+#sideDeal15, #sideDealNac5 {
+	-moz-border-radius:0 0 6px 6px;
+	-webkit-border-radius:0 0 6px 6px;
+	border-radius:0 0 6px 6px;
+}
+#sideDealNac5 {
+	margin-bottom:10px;	
+}
+.sideDealTitle2, .sideDealTitle3, .sideDealTitle4, .sideDealTitle5, .sideDealTitle6, .sideDealTitle7, .sideDealTitle8, .sideDealTitle9, .sideDealTitle10, .sideDealTitle11, .sideDealTitle12, .sideDealTitle13, .sideDealTitle14, .sideDealTitle15{
+	display:table;
+	font-size:12px;
+	height:auto;
+	line-height:15px;
+	margin-bottom:7px;
+	margin-left:12px;
+	margin-top:9px;
+	width:202px;
+}
+.sideDealTitle2 a, .sideDealTitle3 a, .sideDealTitle4 a, .sideDealTitle5 a, .sideDealTitle6 a, .sideDealTitle7 a, .sideDealTitle8 a, .sideDealTitle9 a, .sideDealTitle10 a, .sideDealTitle11 a, .sideDealTitle12 a, .sideDealTitle13 a, .sideDealTitle14 a, .sideDealTitle15 a {
+	height:auto;
+	width:202px;
+	color: #333333;
+}
+.sideDealTitle2 a:hover, .sideDealTitle3 a:hover, .sideDealTitle4 a:hover, .sideDealTitle5 a:hover, .sideDealTitle6 a:hover, .sideDealTitle7 a:hover, .sideDealTitle8 a:hover, .sideDealTitle9 a:hover, .sideDealTitle10 a:hover, .sideDealTitle11 a:hover, .sideDealTitle12 a:hover, .sideDealTitle13 a:hover, .sideDealTitle14 a:hover, .sideDealTitle15 a:hover {text-decoration:underline !important;}
+.sideDealThumb2 a, .sideDealThumb3 a, .sideDealThumb4 a, .sideDealThumb5 a, .sideDealThumb6 a, .sideDealThumb7 a, .sideDealThumb8 a, .sideDealThumb9 a, .sideDealThumb10 a, .sideDealThumb11 a, .sideDealThumb12 a, .sideDealThumb13 a, .sideDealThumb14 a, .sideDealThumb15 a, .sideDealThumbNac2 a, .sideDealThumbNac3 a, .sideDealThumbNac4 a, .sideDealThumbNac5 a  {
+	float:left;
+	height:63px;
+	margin-bottom:4px;
+	margin-left:0px;
+	width:100px;
+}
+.sideDealPrice2, .sideDealPrice3, .sideDealPrice4, .sideDealPrice5, .sideDealPrice6, .sideDealPrice7, .sideDealPrice8, .sideDealPrice9, .sideDealPrice10, .sideDealPrice11, .sideDealPrice12, .sideDealPrice13, .sideDealPrice14, .sideDealPrice15 {
+	background:url("img/bgPriceSideDeal2.jpg") no-repeat scroll center center transparent;
+	border:0 solid;
+	color:#4C4C4C;
+	float:left;
+	font-weight:lighter;
+	height:30px;
+	letter-spacing:-1px;
+	line-height:30px;
+	margin-bottom:3px;
+	margin-left:3px;
+	text-align:center;
+	width:96px;
+	font-size:18px;
+}
+.sideDealPrice2 a, .sideDealPrice3 a, .sideDealPrice4 a, .sideDealPrice5 a, .sideDealPrice6 a, .sideDealPrice7 a, .sideDealPrice8 a, .sideDealPrice9 a, .sideDealPrice10 a, .sideDealPrice11 a, .sideDealPrice12 a, .sideDealPrice13 a, .sideDealPrice14 a, .sideDealPrice15 a{
+	float:left;
+	height:30px;
+	margin-bottom:3px;
+	margin-left:0;
+	width:96px;
+	color: #4C4C4C;
+	text-decoration: none;
+}
+.sideDealBT2, .sideDealBT3, .sideDealBT4, .sideDealBT5, .sideDealBT6, .sideDealBT7, .sideDealBT8, .sideDealBT9, .sideDealBT10, .sideDealBT11, .sideDealBT12, .sideDealBT13, .sideDealBT14, .sideDealBT15 {
+	background:url("img/sidedeal_bt2.jpg") no-repeat scroll center center transparent;
+	border:0 solid;
+	color:#FFFFFF;
+	float:left;
+	font-weight:bold;
+	height:30px;
+	letter-spacing:0px;
+	line-height:29px;
+	margin-left:3px;
+	text-align:center;
+	width:96px;
+}
+.sideDealBT2 a, .sideDealBT3 a, .sideDealBT4 a, .sideDealBT5 a, .sideDealBT6 a, .sideDealBT7 a, .sideDealBT8 a, .sideDealBT9 a, .sideDealBT10 a, .sideDealBT11 a, .sideDealBT12 a, .sideDealBT13 a, .sideDealBT14 a, .sideDealBT15 a{
+	float:left;
+	height:30px;
+	width:96px;
+	color: #ffffff;
+	text-decoration: none;
+}
+ul.customTextTable {
+	border-bottom:1px solid #CCCCCC;
+	border-left:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	float:left;
+	padding:10px;
+	width:204px;
+}
+ul.customTextVerifyTable {
+	border-bottom:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	float:left;
+	padding:10px;
+	width:203px;
+}
+ul.customTextTable li.desc, ul.customTextVerifyTable li.desc {
+	color:#000;
+	font-size:14px;
+	margin:0 !important;
+	padding:5px 0 5px 0px;
+	text-align:center;
+}
+ul.customTextTable li.phoneFieldInfo, ul.customTextVerifyTable li.phoneFieldVerifyInfo{
+	color:#707070;
+	float:none !important;
+	font-size:13px;
+	font-weight:bold;
+	margin:0 !important;
+	padding:0 0 10px;
+}
+ul.customTextTable li.phoneFieldInfo p, ul.customTextVerifyTable li.phoneFieldVerifyInfo p {
+	float:left;
+	color:#535353;
+}
+ul.customTextTable li input, ul.customTextVerifyTable li input {
+	font-size:12px;
+	padding:5px;
+	width:80px;
+}
+ul.customTextTable li input:focus, ul.customTextVerifyTable li input:focus{
+	-moz-box-shadow:1px 1px 2px #226ACC;
+	border-color:#226ACC;
+}
+ul.customTextTable li.phoneField,  ul.customTextVerifyTable li.phoneFieldVerify{
+	float:left;
+	margin:0 !important;
+	padding:0;
+}
+ul.customTextTable li,  ul.customTextVerifyTable li{
+	color:#999999;
+	font-size:11px;
+	float:left !important;
+	margin:0 !important;
+	padding:0 5px 0 5px;
+}
+ul.customTextTable li span,  ul.customTextVerifyTable li span {
+	display:block;
+	padding:7px 0 0;
+	font-size:12px;
+	font-weight:bold;
+}
+ul.userDescTable li span{
+	display:block;
+	padding:5px 0 0;
+	font-size:12px;
+	font-weight:bold;
+	}
+/******* Basket Table ********/
+ul.userDescTable {padding:10px 10px 0 10px;}
+ul.userDescTable li {
+	color:#999999;
+	font-size:11px;
+	float:left;
+	margin:0 10px 7px 0 !important;
+}
+ul.userDescTable li input {
+	font-size:12px;
+	padding:3px;
+	width:80px;
+}
+ul.userDescTable li input:focus {
+	-moz-box-shadow:1px 1px 2px #226ACC;
+	border-color:#226ACC;
+}
+
+/* Hack IE 7 E 6 */
+*+html div.cadSucess div#infoUser2 dl dd {width:350px;}
+* html div.cadSucess div#infoUser2 dl dd {width:350px;}
+*+html div.cadSucess div#infoUser2 dl dt{margin:0 5px 0 0;}
+* html div.cadSucess div#infoUser2 dl dt{margin:0 5px 0 0;}
+* html div#innerContent div.buyArea {position:relative;}
+* html #innerHeader #navLogin, #innerHeader #navLogged {height:27px;}
+*+html ul.customTextTable {height:60px;}
+*+html ul.customTextVerifyTable {height:60px;}
+*+html ul.userDescTable {height:50px;}
+* html #innerContent div.buyArea .gift a{width:154px;}
+* html ul.customTextTable {height:60px; margin-top:-5px;}
+* html ul.customTextVerifyTable {height:60px; margin-top:-5px;}
+* html div.sideDealTit {height:40px;}

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="Read all zTags and generate it's HTMLs docs - zDoc" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    <h3>Read all zTags and generate it's HTMLs docs - zDoc - (<zhtml:a href="/ztag/sample/zCode.ztag?file=/#ztagFile" value="Source" />)</h3>
+    <hr />
+		<zvar:set id="ztagDirectory" value="ztag/" />
+		<zvar:set id="manualDirectory" value="ztag/manual/" />
+    <zvar:set id="manualFile" value="ztag.html" />
+
+    <zvar:set id="h1Var" value="1" />
+		
+    <zdoc:read dir="#SiteRootDir$ztagDirectory" var="docVar" />
+    
+    <!-- zctrl:printr use="docVar" /-->
+            
+    <zctrl:foreach use="docVar" key="keyzTag" value="valuezTag">
+      <zvar:update use="manualFile" value="$keyzTag.html" />
+      
+      <h1><zvar:show use="keyzTag" /> (<zhtml:a href="/ztag/sample/zCode.ztag?file=/ztag/$valuezTag[filename]" value="$valuezTag[filename]" />) - <zhtml:a href="/$manualDirectory$manualFile" value="$manualFile" /></h1>
+    
+      <zvar:update use="h1Var" value="1" />
+      
+	    <zctrl:foreach use="valuezTag[doc]" key="keyFunction" value="valueFunction" filename="/$manualDirectory$manualFile" filetype="txt" show="0">
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="$keyzTag" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, Sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    <zctrl:if value="$h1Var" operator="e" with="1">
+      <zhtml:h1 value="$keyzTag" />
+       <zvar:update use="h1Var" value="0"/>
+    </zctrl:if>
+    <zhtml:h2 value="$keyFunction" /><hr />
+    <p><zvar:show use="valueFunction[short]" /></p>
+    <p><zvar:show use="valueFunction[long]"/></p>
+
+    <zctrl:printr use="valueFunction" />
+    <zctrl:die />
+     
+    <dl>
+      <zvar:update use="flagParam" value="1" />
+      <zctrl:foreach use="valueFunction[params][param]" key="keyParam" value="valueParam">
+		    <zctrl:if value="$flagParam" operator="e" with="1">
+		      <zhtml:dt value="Params:" />
+		       <zvar:update use="flagParam" value="0"/>
+		    </zctrl:if>
+        <dd><zvar:show use="valueParam[paramall]" /> <zvar:show use="valueParam[type]" /> <zvar:show use="valueParam[description]" /></dd>
+      </zctrl:foreach>
+      
+      <zvar:update use="flagUses" value="1" />
+      <zctrl:foreach use="arrayParams[uses]" key="keyUses" value="valueUses">
+        <zctrl:if value="$flagUses" operator="e" with="1">
+          <zhtml:dt value="Uses:" />
+           <zvar:update use="flagUses" value="0"/>
+        </zctrl:if>
+        <dd><zvar:show use="valueUses[paramall]" /> <zvar:show use="valueUses[type]" /> <zvar:show use="valueUses[description]" /></d>
+      </zctrl:foreach>
+      
+      <zvar:update use="flagSee" value="1" />
+      <zctrl:foreach use="arrayParams[uses]" key="keySee" value="valueSee">
+        <zctrl:if value="$flagSee" operator="e" with="1">
+          <zhtml:dt value="See also:" />
+           <zvar:update use="flagSee" value="0"/>
+        </zctrl:if>
+        <dd><zvar:show use="valueSee[paramall]" /> <zvar:show use="valueSee[type]" /> <zvar:show use="valueSee[description]" /></d>
+      </zctrl:foreach>
+    </dl>
+  </body>
+</html>
+	    </zctrl:foreach>
+    </zctrl:foreach>
+    
+  </body>
+</html>
+
+    

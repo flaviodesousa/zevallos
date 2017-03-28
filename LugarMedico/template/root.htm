@@ -1,0 +1,23 @@
+<zdbal:open id="myConn" driver="mysql" host="localhost" database="zcms" user="zcmsuser" password="z4321" />
+  <zdbal:query use="myConn" id="myQuery">
+    SELECT
+      P.CD_PAGE
+    , P.CD_FATHER
+    , P.DS_TITLE
+    , P.DS_CONTENT
+    , DATE_FORMAT(P.DS_INSERT, '%m/%d/%Y %H:%i:%S') DS_INSERT
+    , P.FL_MENU
+    , P.FL_ACTIVE
+    -- , P.CD_USER
+    -- , U.NM_USER
+    FROM pages P
+    -- LEFT JOIN users U ON P.CD_USER = U.CD_USER
+</zdbal:query>
+
+<div class="root">
+  <ul>
+<zdbal:fetchuntil use="myQuery" var="myRow">
+    <li><zhtml:a href="pageView.ztag?CD_PAGE=$myRow[CD_PAGE]" value="$myRow[DS_TITLE]" nowrap="nowrap" /></li>
+</zdbal:fetchuntil>
+  </ul>
+</div>

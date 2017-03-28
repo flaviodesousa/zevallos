@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="css/corpo.css" />
+	<link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.gif" />
+	<script type="text/javascript" src="js/funcoes.js"></script>
+	<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$('a.fancybox').fancybox({
+			padding:0,
+			margin:0,
+			titleShow:false,
+			overlayOpacity:0.8,
+			overlayColor:'#FFFFFF',
+			scrolling: 'no',
+			autoScale:true
+
+		});
+		
+			$("a[rel=fancybox]").fancybox({
+				titlePosition 	: 'over',
+				overlayColor:'#FFFFFF',
+				overlayOpacity:0.8,
+				margin:0,
+				padding:0,
+				titleShow:true,
+				autoDimensions:true
+		});
+		
+$(".fancyform").fancybox({
+	'scrolling': 'no',
+	'titleShow': false,
+	'overlayColor':'#005391',
+	'margin':0,
+	'padding':0,
+	'overlayOpacity':0.8,
+	'onClosed': function() {
+	    $(".required").hide();
+	}
+});
+
+$("#objfrmForm").bind("submit", function() {
+ 
+ 	if ($("#objNomec").val().length < 1 || $("#objEmailc").val().length < 1 || $("#objMensagemc").val().length < 1)  {
+	    $(".required").show();
+	    $.fancybox.resize();
+	    return false;
+	}
+
+	$.fancybox.showActivity();
+
+	$.ajax({
+		type		: "POST",
+		contentType: 'application/x-www-form-urlencoded; charset=iso-8859-1;', 
+		cache	: false,
+		url		: "DESTINO",
+		data		: $(this).serializeArray(),
+		success: function(data) {
+			$.fancybox(data);
+		}
+	});
+
+	return false;
+});
+		
+});
+
+	</script>
+	
+	
+	<title>ZYC - Internas</title>
+</head>
+<body>
+	<div id="geral">
+		<div id="topo">
+			<h1 id="logo"><a href="/">ZYC</a></h1>
+			<div id="nav">
+				<ul>
+					<li class="l"><a href="#">Login</a></li>
+					<li class="m"><a href="#">Mapa</a></li>
+				</ul>
+				<form action="" method="get">
+					<fieldset>
+						<label>
+							<input type="text" name="" value="Econtre no site" onblur="if (this.value=='') this.value='Econtre no site'" onfocus="if (this.value=='Econtre no site') this.value=''"/>
+						</label>
+						<input type="submit" value="Buscar" />
+					</fieldset>
+				</form>
+			</div>
+			<ul id="menu">
+				<li><a href="#" class="sub">Quem Somos<span>saiba mais sobre nós</span></a>
+					<ul>
+						<li><a href="#">Projeto</a></li>
+						<li><a href="#">Desenvolvimento</a></li>
+						<li><a href="#">Atualização</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Produtos<span>o que vendemos</span></a></li>
+				<li><a href="#">Tecnologias<span>como desenvolvemos</span></a></li>
+				<li><a href="#">Fale Conosco<span>tire suas dúvidas aqui</span></a></li>
+			</ul>
+		</div>
+		
+		<div id="trackingline"><strong>Você está em:</strong> <a href="#">Home</a> » <a href="#">Quem Somos</a></div>		
+	</div>
+	<div id="content" class="i">
+	<div id="acqua">
+		<div id="areatexto">
+			<h1>Quem Somos</h1>
+			<p class="foguete">Encontre nesta área tudo o que precisa saber como a ZYC</p>
+			
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			<p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.</strong></p>
+			<p class="right"><a href="imagens/fotog.jpg" rel="fancybox" title="Sala de Criação da ZYC"><img src="imagens/fotop.jpg" alt="Sala de Criação" title="Sala de Criação" /></a></p>
+			<h2>Serviços »</h2>
+			<ul>
+				<li class="strong">Ut wisi enim ad minim veniam, quis nostrud exerci tation.</li>
+				<li class="strong">Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+				<li class="strong">Ut wisi enim ad minim veniam, quis nostrud exerci tation.</li>
+				<li class="strong">Nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	<div id="rodape">
+		<div>
+			<address>
+				ZYC - 2011 - Todos os direitos reservados<br />
+				<strong>Endereço:</strong> Rua X, Quadra X, Sala 2011 - Brasília/DF<br />
+				<strong>Telefone:</strong> (61) 3222-2222 <strong>EMail:</strong> contato@zyc.com.br<br />
+			</address>
+			<ul>
+				<li><a href="#">Quem Somos</a></li>
+				<li><a href="#">Produtos</a></li>
+				<li><a href="#">Tecnologias</a></li>
+				<li><a href="#">Fale Conosco</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

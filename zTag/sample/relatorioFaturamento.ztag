@@ -1,0 +1,167 @@
+<!-- zheader:locationif use="!userLogged" notcondition="len()" value="/logOn.php" /-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>Lista Beneficiários - Aliança 8 - #sysSign</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            font-size:0.8em;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}      
+    </style>
+  </head>
+  <body>
+    <h3>Lista Beneficiários - Aliança 8 (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Fonte" />)</h3>
+    <hr />
+
+    <zvar:set id="DT_INICIO_SQL" value="00/00/0000" />
+    <zvar:set id="DT_FIM_SQL" value="00/00/0000" />
+
+    <zget:get name="DT_INICIO" var="DT_INICIO" transform="allTrim(' ')->stripTags()" />
+    <zget:get name="DT_INICIO" var="DT_INICIO_SQL" transform="allTrim(' ')->stripTags()->date2sql('DD/MM/YYYY')" />
+
+    <zget:get name="DT_FIM" var="DT_FIM" transform="allTrim(' ')->stripTags()" />
+    <zget:get name="DT_FIM" var="DT_FIM_SQL" transform="allTrim(' ')->stripTags()->date2sql('DD/MM/YYYY')" />
+
+    <zget:get name="CODIGO_ASSOCIADO" var="CODIGO_ASSOCIADO" transform="allTrim(' ')->stripTags()" />
+    <zget:get name="CODIGO_ANTIGO" var="CODIGO_ANTIGO" transform="allTrim(' ')->stripTags()" />
+
+    <zget:get name="NOME_ASSOCIADO" var="NOME_ASSOCIADO" transform="toUpper()->allTrim(' ')->stripTags()" />
+
+    <zget:get name="NU_LINHAS" var="NU_LINHAS" transform="allTrim(' ')->stripTags()" />
+
+    <zget:get name="FL_ATIVO" var="FL_ATIVO" transform="allTrim(' ')->stripTags()" />
+
+    <zget:get name="FL_FORM" var="FL_FORM" transform="allTrim(' ')->stripTags()" />
+        
+    <form
+      id="frmForm"
+      name="frmForm"
+      method="get"
+      action="<zhtml:echo value="/#ztagFile" />"
+      >
+
+      <zform:inputhidden name="FL_FORM" value="1" />
+
+      <zform:boxtext caption="Código &Associado" name="CODIGO_ASSOCIADO" tagid="CODIGO_ASSOCIADO" value="$CODIGO_ASSOCIADO" />
+      <br /><zform:boxtext caption="Código &Antigo" name="CODIGO_ANTIGO" tagid="CODIGO_ANTIGO" value="$CODIGO_ANTIGO" />
+
+      <br /><zform:boxtext caption="&Nome" name="NOME_ASSOCIADO" tagid="NOME_ASSOCIADO" value="$NOME_ASSOCIADO" />
+
+      <br /><zform:boxtext caption="Data &inicial" name="DT_INICIO" tagid="DT_INICIO" value="$DT_INICIO" />
+      <br /><zform:boxtext caption="Data &final" name="DT_FIM" tagid="DT_FIM" value="$DT_FIM" />
+
+
+      <br /><zform:boxselect caption="&Somente Ativos" name="FL_ATIVO" tagid="FL_ATIVO" value="$FL_ATIVO" options="0,Não;1,Sim" />
+      
+      <br /><zform:boxselect caption="&Linhas" name="NU_LINHAS" tagid="NU_LINHAS" value="$NU_LINHAS" options="10,10;50,50;100,100;200,200;500,500;1000,1000;2000,2000;3000,3000;5000,5000;10000,10000" />
+      
+      <br /><zform:inputsubmit name="bmtEnviar" tagid="bmtEnviar" value="Enviar" />
+    </form>
+
+    <zvar:set id="sqlFORM" value="AND 1=0" />
+
+    <zvar:setif use="FL_FORM" condition="iif(0$FL_FORM == 1, 1, 0)" var="sqlFORM" then="AND 1=1" />
+    
+    <zvar:setif use="NU_LINHAS" condition="iif(0$NU_LINHAS > 0, 1, 0)" var="sqlLinhas" then="FIRST $NU_LINHAS" />
+
+    <zvar:setif use="CODIGO_ASSOCIADO" condition="iif('$CODIGO_ASSOCIADO' > '', 1, 0)" var="sqlCodigoAssociado" then="AND CODIGO_ASSOCIADO LIKE '%$CODIGO_ASSOCIADO%'" />
+    <zvar:setif use="CODIGO_ANTIGO" condition="iif('$CODIGO_ANTIGO' > '', 1, 0)" var="sqlCodigoAntigo" then="AND CODIGO_ANTIGO LIKE '%$CODIGO_ANTIGO%'" />
+    <zvar:setif use="NOME_ASSOCIADO" condition="iif('$NOME_ASSOCIADO' > '', 1, 0)" var="sqlNome" then="AND NOME_ASSOCIADO LIKE '%$NOME_ASSOCIADO%'" />
+
+    <zvar:setif use="DT_INICIO" condition="iif('$DT_INICIO' > '' && '$DT_FIM' > '', 1, 0)" var="sqlData" then="AND F.DATA_PAGAMENTO BETWEEN '$DT_INICIO_SQL' AND '$DT_FIM_SQL'" />
+
+    <zvar:setif use="FL_ATIVO" condition="iif(0$FL_ATIVO == 1, 1, 0)" var="sqlAtivo" then="AND DATA_EXCLUSAO IS NULL" />
+    
+    <zdb:open id="fbConn" driver="firebird" database="#fbDatabase" user="#fbUser", password="#fbPassword" />
+      <zdb:query use="fbConn" id="fbQuery">
+        SELECT $sqlLinhas
+				C.NUMERO_CONTRATO -- Contrato
+				, BT.NOME_ASSOCIADO BT_NOME_ASSOCIADO -- Responsavel financeiro
+				, F.CODIGO_IDENTIFICACAO_FAT -- Remessa Fatura
+				, F.VALOR_FATURA -- Valor Nominal
+				, B.VALOR_NOMINAL
+				, CASE WHEN F.DATA_VENCIMENTO BETWEEN '$DT_INICIO_SQL' AND '$DT_FIM_SQL' THEN (( F.VALOR_FATURA / 31) * (30 - EXTRACT(DAY FROM B.DATA_ADMISSAO))) ELSE NULL END VL_MES
+				, CASE WHEN F.DATA_VENCIMENTO BETWEEN '$DT_INICIO_SQL' AND '$DT_FIM_SQL' THEN (F.VALOR_FATURA - (( F.VALOR_FATURA / 31) * (30 - EXTRACT(DAY FROM B.DATA_ADMISSAO)))) ELSE NULL END VL_ANTECIP
+				, CAST(LPAD(EXTRACT(DAY FROM F.DATA_PAGAMENTO), 2, '0') || '/' || LPAD(EXTRACT(MONTH FROM F.DATA_PAGAMENTO), 2, '0')  || '/' || LPAD(EXTRACT(YEAR FROM F.DATA_PAGAMENTO), 4, '0') AS VARCHAR(10)) DATA_PAGAMENTO -- Data Recebimento
+        , CAST(LPAD(EXTRACT(DAY FROM F.DATA_VENCIMENTO), 2, '0') || '/' || LPAD(EXTRACT(MONTH FROM F.DATA_VENCIMENTO), 2, '0')  || '/' || LPAD(EXTRACT(YEAR FROM F.DATA_VENCIMENTO), 4, '0') AS VARCHAR(10)) DATA_VENCIMENTO -- Data Recebimento
+				, B.CODIGO_TITULAR
+				, B.CODIGO_ASSOCIADO
+				, B.NOME_ASSOCIADO B_NOME_ASSOCIADO
+				FROM PS1020 F -- Faturamento
+				LEFT JOIN PS1000 B -- Beneficiario
+				ON (B.CODIGO_ASSOCIADO = F.CODIGO_ASSOCIADO)
+				LEFT JOIN PS1000 BT -- Titular
+				ON (B.CODIGO_TITULAR = BT.CODIGO_ASSOCIADO)
+				LEFT JOIN PS1002 C
+				ON (B.CODIGO_ASSOCIADO = C.CODIGO_ASSOCIADO)
+				WHERE 1=1
+				$sqlData
+				$sqlFORM
+        $sqlCodigoAssociado
+        $sqlCodigoAntigo
+        $sqlNome
+        $sqlAtivo
+        ORDER BY F.DATA_VENCIMENTO DESC
+      </zdb:query>
+             
+      <table border="1" cellspacing="0">
+        <tr bgcolor="gray">
+          <zHTML:cellhead value="#" />
+					<zHTML:cellhead value="Contrato" />
+					<zHTML:cellhead value="Titular" />
+					<zHTML:cellhead value="Fatura" />
+					<zHTML:cellhead value="Valor Fatura" />
+					<zHTML:cellhead value="Valor Nominal" />
+					<zHTML:cellhead value="Vl Mes" />
+					<zHTML:cellhead value="Vl Antecip" />
+					<zHTML:cellhead value="Pagamento" />
+					<zHTML:cellhead value="Vencimento" />
+					<zHTML:cellhead value="Titular" />
+					<zHTML:cellhead value="Associado" />
+					<zHTML:cellhead value="Nome Associado" />
+        </tr>
+
+        <zvar:set id="rowCount" value="0" />
+
+        <zvar:set id="rowBGColor" value="0" />
+              
+        <zdb:fetchuntil use="fbQuery" id="fbRow" var="fbRow">
+          <zvar:inc use="rowCount" />
+          <zvar:inc use="rowBGColor" />
+          <zctrl:if value="$rowBGColor" operator="e" with="1">
+            <tr>
+          </zctrl:if> 
+          <zctrl:if value="$rowBGColor" operator="gte" with="2">
+            <tr bgcolor="lightgray">
+            <zvar:update use="rowBGColor" value="0"/>
+          </zctrl:if> 
+            <zHTML:cell value="$rowCount" align="right" />
+						<zHTML:cell value="$fbRow[NUMERO_CONTRATO]" align="right" />
+						<zHTML:cell value="$fbRow[BT_NOME_ASSOCIADO]" nowrap="nowrap" transform="sentence()" />
+						<zHTML:cell value="$fbRow[CODIGO_IDENTIFICACAO_FAT]" />
+						<zHTML:cell value="$fbRow[VALOR_FATURA]" align="right" transform="FormatNumber(2)" />
+						<zHTML:cell value="$fbRow[VALOR_NOMINAL]" align="right" transform="FormatNumber(2)" />
+						<zHTML:cell value="$fbRow[VL_MES]" align="right" transform="FormatNumber(2)" />
+						<zHTML:cell value="$fbRow[VL_ANTECIP]" align="right" transform="FormatNumber(2)" />
+						<zHTML:cell value="$fbRow[DATA_PAGAMENTO]" align="center" />
+						<zHTML:cell value="$fbRow[DATA_VENCIMENTO]" align="center" />
+						<zHTML:cell value="$fbRow[CODIGO_TITULAR]" align="right" />
+						<zHTML:cell value="$fbRow[CODIGO_ASSOCIADO]" align="right" />
+						<zHTML:cell value="$fbRow[B_NOME_ASSOCIADO]" nowrap="nowrap" transform="sentence()" />
+          </tr>
+        </zdb:fetchuntil>
+      </table>
+    <zdb:close use="fbConn" />
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="zCode" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+      
+    </style>
+    
+    <style type="text/css" media="screen, projection">
+			.panelHeader {
+			  border-bottom: 1px solid #bbb !important;
+			  text-align: left !important;
+			  color: #222 !important;
+			  background: rgb(238, 238, 224) !important;
+			  border-top: 2px dashed rgb(255, 255, 255) !important;
+			}
+			.panelHeader b {
+			  font-weight: normal !important;
+			}
+			
+			.panelHeader, .menuheading, .pageheader, .sectionbottom {
+			border-bottom-color: #3C78B5;
+			}
+			
+			.zcode {
+			  font-family: "Consolas", "Courier New", Courier, mono, serif;
+			  font-size: 12px;
+			  background-color: #E7E5DC;
+			  width: 99%;
+			  overflow: auto;
+			  margin: 0 0 18px 0 !important;
+			  padding-top: 1px; /* adds a little border on top when controls are hidden */
+			}
+			
+			.zcode .bar {
+			  padding-left: 45px;
+			}
+			
+			.zcode.printing .tools {
+			  display: none !important;
+			}
+			
+			.zcode .tools a {
+			background-color:inherit;
+			color:#A0A0A0;
+			font-size:9px;
+			margin-right:10px;
+			text-decoration:none;
+			}
+			
+			.zcode .tools a:hover {
+			  color: red;
+			  background-color: inherit;
+			  text-decoration: underline;
+        margin-right:10px;
+			}			
+			
+			.zcode a, .zcode a:hover {
+			background:none repeat scroll 0 0 transparent;
+			border:medium none;
+			margin:0;
+			padding:0;
+			}						
+			
+			.zcode.printing li {
+			  display: list-item !important;
+			}
+			
+			/* Styles for the tools */
+			.zcode .tools {
+			  padding: 3px 8px 3px 10px;
+			  font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
+			  color: silver;
+			  background-color: #f8f8f8;
+			  padding-bottom: 10px;
+			  border-left: 3px solid #6CE26C;
+			}
+			
+			.zcode ol {
+			background-color:#FFFFFF;
+			color:#5C5C5C;
+			list-style:decimal outside none;
+			margin:0 0 1px 45px !important;
+			padding:0;
+			}			
+			.zcode ol,
+			.zcode ol li,
+			.zcode ol li span {
+			  margin: 0;
+			  padding: 0;
+			  border: medium none;
+			}
+			
+			.zcode ol li, .zcode .columns div {
+			background-color:#F8F8F8;
+			border-left:3px solid #6CE26C;
+			color:#5C5C5C;
+			line-height:14px;
+			list-style-image:none;
+			list-style-position:outside !important;
+			list-style-type:decimal-leading-zero;
+			margin:0 !important;
+			padding:0 3px 0 10px !important;
+			}			
+			
+			.zcode a,
+			.zcode a:hover {
+			  background: none;
+			  border: none;
+			  padding: 0;
+			  margin: 0;
+			}
+			
+			.zcode ol li.alt {
+			  background-color: #FFF;
+			  color: inherit;
+			}
+			
+			.zcode ol li span {
+			  color: black;
+			  background-color: inherit;
+			}
+			
+			.zcode .comment, .zcode .comments { color: #008200; background-color: inherit; }
+			.zcode .string { color: blue; background-color: inherit; }
+			.zcode .keyword { color: #069; font-weight: bold; background-color: inherit; }
+			.zcode .preprocessor { color: gray; background-color: inherit; }
+			
+			pre {font-family:Monaco,"Courier New",monospace;}    
+    </style>
+    <script>
+    function zcodeViewSource(objThis) {
+    	var code = dp.sh.Utils.FixForBlogger(highlighter.originalCode).replace(/</g, '&lt;');
+    	var wnd = window.open('', '_blank', 'width=750, height=400, location=0, resizable=1, menubar=0, scrollbars=0');
+    	wnd.document.write('<textarea style="width:99%;height:99%">' + code + '</textarea>');
+    	wnd.document.close();
+    	}
+
+    function zcodePrintSource(objThis) {
+  		var iframe = document.createElement('IFRAME');
+  		var doc = null;
+  		
+  		// this hides the iframe
+  		iframe.style.cssText = 'position:absolute;width:0px;height:0px;left:-500px;top:-500px;';
+  		
+  		document.body.appendChild(iframe);
+  		doc = iframe.contentWindow.document;
+
+			dp.sh.Utils.CopyStyles(doc, window.document);
+			doc.write('<div class="' + highlighter.div.className.replace('collapsed', '') + ' printing">' + highlighter.div.innerHTML + '</div>');	
+    </script>
+    
+  </head>
+  <body>
+    <zget:get name="file" var="templateFile" />
+
+    <zfile:open id="templateFile" mode="r" filename="$templateFile"/>
+      <zfile:readall use="templateFile" var="templateValue" />
+    <zfile:close use="templateFile" />
+         
+    <zcode:show value="$templateValue" title="$templateFile" />
+    
+  </body>
+</html>

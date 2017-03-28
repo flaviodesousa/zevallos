@@ -1,0 +1,30 @@
+#parceiros p {margin:0 0 10px 0; line-height:20px; letter-spacing:normal;}
+#parceiros p, #parceiros ul {color:#666}
+#parceiros ul {margin:0 0 20px 0;}
+#parceiros ul li {margin-bottom:5px}
+
+#parceiros form ul li {float:left; margin:0 0 10px 0;}
+
+
+.afasta-dois {margin-right:100px;}
+
+.campos {float:left; margin-bottom:20px;}
+.tamanho-um {width:272px;}
+.tamanho-dois {width:311px;}
+.tamanho-tres {width:240px;}
+.afasta-um {margin-right:40px;}
+
+
+#parceiros form label {display:block; margin:0 0 5px 0; color: #820000; font-size: 18px;  font-weight: normal;}
+#parceiros form input, #parceiros form textarea {padding:7px;  font:12px Arial, Helvetica, sans-serif; border:1px solid #ccc; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;}
+#parceiros form textarea {width:622px;}
+#parceiros form button {display:block; text-indent:-9000px; width:75px; height:33px; background:url(../images/btnEnviar.png); cursor:pointer}
+/*#parceiros span {height:30px; padding:0 0 0 7px;}*/
+
+
+
+
+.campo-um, .combo-dois {width:272px !important;}
+.campo-dois {width:311px !important}
+.combo {border:1px solid #ccc}
+.campo-tres {width:240px !important;}

@@ -1,0 +1,27 @@
+.cont {float:left; clear:left; width:100%;}
+.box-ofertas {position:relative; float:left; width:207px; height:354px;  padding:0 11px 0 0; background:#990000; text-decoration:none; margin:0 4px 20px 0;}
+.afasta {margin-right:25px;}
+
+#servico-meio { height:334px; width:166px; padding:0 11px 0 0; background:#990000; text-decoration:none; float:left; margin-topo:20px; margin-right:8px;}
+#servico-lateral {height:334px; width:166px; background:#990000; text-decoration:none; float:left; margin:10px 0 0 0;}
+
+.preco {position:relative; float:left; width:140px; height:42px; padding:11px 0 0 10px; color:#FFF; font-size:11px; background:#680000; }
+
+.preco .preco-de, .preco .preco-por {display:block;}
+.preco .preco-por { font-size:14px; line-height:18px;}
+
+
+.seloDesconto {position:absolute; left:0; display:block; z-index:2; width:75px; height:75px; margin:4px 0 0 -6px; line-height:85px; background:url(../images/seloProduto.png) no-repeat; font-weight:normal; font-size:24px; color:#fff; text-align:center;}
+.imgEncerrada {position:absolute; right:0; display:block; z-index:2; width:112px; height:105px; margin:39px -1px 0 0; background:url(../images/img_encerrado.png) no-repeat;}
+
+.economia {padding: 14px 0 0 5px; color:#FFCC00; font-size:10px; text-align:center; float:left; width:47px; line-height:11px; margin:0 0 0 2px;}
+.vendidos {float:left; width:218px; height:25px; line-height:25px; color: #FFCC00; font-size:16px; background:#680000; text-align:center; }
+
+
+.descricao {float:left; width:200px; padding:10px 10px 10px 10px; background:url(../images/bgDescricao.png) no-repeat 0 top; color:#fff; font-size:12px;}
+.descricao h3 {overflow:hidden; height:99px; letter-spacing:normal; font-size:12px; line-height:16px; }
+.descricao h3 a {color:#fff; text-decoration:none;}
+.descricao h3 a:hover {text-decoration:underline;}
+/*---IMG DO SERVIÇOS---*/
+.img-oferta { float:left; width:206px; height:153px; background-color:#333; margin-left:6px;} 
+

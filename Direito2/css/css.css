@@ -1,0 +1,523 @@
+* {
+	outline: none;
+}
+.content {
+	 width: 958px !important;
+	 float: left;
+	 padding: 20px;
+	 overflow: hidden;
+}
+.content #areatexto {
+	 width: 600px;
+	 float: left;
+	 margin: 0px 30px 0px 0px;
+}
+
+#areatexto h1 {	
+	color: #666;
+	font-size: 2.16em;
+	font-weight: bold;
+	letter-spacing: -0.06em;
+	margin: 0;
+	padding: 0;
+}
+
+#areatexto #info {
+	float: left;
+	clear: left;
+	width:100%;
+	position: relative;
+	margin: 0px 0px 20px 0px;
+	color: #666;
+	border-bottom: 1px #f0f0f0 solid;
+	padding: 0px 0px 10px 0px;
+}
+#areatexto #info strong {
+	color: #999 !important;
+}
+#areatexto #info span {
+	font-size: 11px !important;
+	display: block;
+	color: #999 !important;
+}
+
+#areatexto #info span.org a {
+	color:#ff8f00;
+	font-style: italic;
+	font-size: 11px !important;
+}
+#areatexto #info span.org a:hover {
+	color: #999;
+}
+#areatexto #info .print {
+	/*width: 16px;*/
+	height: 16px;
+	display: block;
+	float: right;
+	background: url(http://img.ecr.me/icon_print.png) left top no-repeat;
+	text-indent: 20px;
+	overflow: hidden;
+	margin: 10px 20px 0px 10px;
+	font-size: 10px;
+	padding: 2px 0px 0px 0px;
+}
+#areatexto #info .rec {
+	/*width: 16px;*/
+	height: 16px;
+	display: block;
+	float: right;
+	background: url(http://img.ecr.me/icon_mail.png) left top no-repeat;
+	text-indent: 20px;
+	overflow: hidden;
+	font-size: 10px;
+	margin: 10px 0px 0px 10px;
+	padding: 2px 0px 0px 0px;
+}
+#areatexto #info .erro {
+	/*width: 16px;*/
+	height: 16px;
+	display: block;
+	float: right;
+	background: url(http://img.ecr.me/error.png) left top no-repeat;
+	text-indent: 20px;
+	overflow: hidden;
+	font-size: 10px;
+	margin: 10px 0px 0px 10px;
+	padding: 2px 0px 0px 0px;
+}
+#areatexto #info .edit {
+	/*width: 16px;*/
+	height: 16px;
+	display: block;
+	float: right;
+	background: url(http://img.ecr.me/cup_edit.png) left top no-repeat;
+	text-indent: 20px;
+	overflow: hidden;
+	font-size: 10px;
+	margin: 10px 0px 0px 0px;
+	padding: 2px 0px 0px 0px;
+}
+#areatexto #info a.rec:hover, #areatexto #info a.print:hover, #areatexto #info a.erro:hover, #areatexto #info a.edit:hover {
+	text-decoration: none;
+	color: #FF8F00;
+}
+#areatexto #info #face {
+	float: right;
+	margin: 5px 10px 0px 10px;
+}
+#areatexto #info #tw {
+	float: right;
+	margin: 5px 0px 0px 0px;
+}
+#areatexto #info #lk {
+	float: right;
+	margin: 7px 10px 0px 0px;
+}
+#areatexto #prevnext {
+	float: right;
+	clear: both;
+	margin: 10px 0px 0px 0px;
+}
+#areatexto #prevnext .ind {
+	background: url(http://img.ecr.me/ico_not.gif) no-repeat;
+	display: block;
+	height: 11px;
+	text-indent: 15px;
+	font-size: 11px;
+	float: left;
+	margin: 0px 10px 0px 10px;
+}
+#areatexto #prevnext .prev {
+	background: url(http://img.ecr.me/ico_back.gif) no-repeat;
+	display: block;
+	height: 11px;
+	text-indent: 15px;
+	font-size: 11px;
+	float: left;
+	margin: 0px 10px 0px 10px;
+}
+#areatexto #prevnext .next {
+	background: url(http://img.ecr.me/ico_next.gif) right no-repeat;
+	display: block;
+	height: 11px;
+	text-indent: 0;
+	font-size: 11px;
+	float: left;
+	padding: 0px 15px 0px 0px;
+}
+#areatexto #TextAdBox {
+	 float: left; margin: 0px 10px 10px 0px;
+	 font-size: 10px;
+	 color: #ccc !important;
+	 padding: 4px;
+	 border: 1px #f0f0f0 solid;
+	 border-radius: 5px;
+}
+#areatexto p {
+	line-height: 120%;
+	margin: 0px 0px 20px 0px;
+	font-size: 14px !important;
+	text-align: justify;
+}
+#areatexto taghw,  #areatexto taghw a{
+	font-size: 14px;
+	line-height: 120%;
+}
+#areatexto p strong {
+	/*font-size: 1.26em;*/
+}
+dl#otherposts {
+	background:#F9F9F9;
+	border: none !important;
+	border-radius:5px;
+	padding:4px 10px 10px 10px;
+	width: 580px;
+	float: left;
+	clear: both;
+	color: #666;
+	margin: 20px 0px 20px 0px;
+}
+dl#otherposts:hover {
+	background:#F9F9F9;
+}
+dl#otherposts dt {
+	font-weight: bold;
+	margin: 6px 0px 0px 0px;
+}
+dl#otherposts dd {
+	margin-left: 12px;
+}
+dl#otherposts dd strong {
+	display: inline;
+}
+dl#otherposts dd a, dl#otherposts dt a {
+	color: #666;
+	display: inline;
+}
+dl#otherposts dd a:hover, dl#otherposts dt a:hover {
+	color: #999;
+	text-decoration: none;
+}
+.content #colright {
+	 float: left;
+	 width: 328px;
+	 background: none;
+	 border-radius: 5px;
+}
+.content #colright .boxe {
+	margin: 0px 0px 20px 0px;
+	float: left; clear: left;
+	width: 328px;
+}
+.content #colright .ads {
+	text-align: center;
+	width: 100%;
+}
+.content #colright h6 {
+	background: #FFF;
+	border-top: 2px #ff8f00 solid;
+	border-bottom: 1px #f0f0f0 solid;
+	border-left: 1px #f0f0f0 solid;
+	border-right: 1px #f0f0f0 solid;
+	padding: 8px 0px 8px 8px;
+	font-size: 16px;
+	margin: 0px 0px 5px 0px;
+	-moz-box-shadow: 0px -9px 15px #F0F0F0 inset ;
+	-webkit-box-shadow: 0px -9px 15px #F0F0F0 inset ;
+	box-shadow: 0px -9px 15px #F0F0F0 inset ;
+}
+.content #colright .perfil h5 {
+	font-size: 18px;
+	margin: 0px 0px 5px 0px;
+	font-weight:normal;
+	color:#666;
+}
+.content #colright .perfil img {
+	width:114px;
+	height:126px;
+	float:left;
+	margin: 0px 5px 0px 0px;
+	padding:4px;
+	background:#FFF;
+	border: 1px #f0f0f0 solid;
+}
+.content #colright .perfil p {
+	font-size:11px;
+	line-height:160%;
+}
+.content #colright ul li {
+	list-style: none;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+
+.content #colright ul li a {
+	padding: 10px 5px 10px 5px;
+	/*margin: 5px 0px 5px 0px;*/
+	display: block;
+	font-weight: bold;
+	color: #3b5998;
+	border-bottom: 1px #CCC dotted;
+}
+
+.content #colright ul li a:hover {
+	background: #f8f8f8;
+	color: #ff8f00;
+	text-decoration: none;
+}
+
+.content #colright ul li strong {
+	display: block;
+	font-size: 11px;
+	color: #666;
+	margin: 0px 0px 2px 0px;
+}
+#omcomentarios {width: 560px; border:1px #f0f0f0 solid; border-radius: 5px; padding: 20px; float: left; clear: left;}
+#omcomentarios fieldset {border: none; text-align: right;}
+#omcomentarios legend {color:#3b5998;font-size: 14px;padding: 5px;margin: 10px 0px 10px 0px;}
+#omcomentarios label {float: left;clear: left;width: 100%;margin: 0px 0px 5px 0px;font-size: 12px;}
+#omcomentarios label input.text {width: 200px; height: 18px; padding: 4px; border-radius: 5px; background: #FFF; -moz-box-shadow: 0px -9px 15px #F0F0F0 inset; -webkit-box-shadow: 0px -9px 15px #F0F0F0 inset;	box-shadow: 0px -9px 15px #F0F0F0 inset; border: 1px #ccc solid;}
+#omcomentarios label input.text:focus {-moz-box-shadow: 0px 9px 15px #F0F0F0 inset; -webkit-box-shadow: 0px 9px 15px #F0F0F0 inset; box-shadow: 0px 9px 15px #F0F0F0 inset;}
+#omcomentarios label textarea {width: 535px; height: 70px; padding: 4px; border-radius: 5px; background: #FFF; -moz-box-shadow: 0px -30px 50px #F0F0F0 inset; -webkit-box-shadow: 0px -30px 50px #F0F0F0 inset; box-shadow: 0px -30px 50px #F0F0F0 inset; border: 1px #ccc solid;}
+#omcomentarios label textarea:focus {-moz-box-shadow: 0px 30px 50px #F0F0F0 inset; -webkit-box-shadow: 0px 30px 50px #F0F0F0 inset; box-shadow: 0px 30px 50px #F0F0F0 inset;}
+#omcomentarios span {margin: 0px 5px 2px 0px; font-size: 12px;}
+#omcomentarios span small {font-size: 10px;}
+#omcomentarios span small.ob {color:#ff8f00;}
+#omcomentarios span small strong {font-size: 11px;}
+#omcomentarios .msg span {display: block;	margin: 0px 0px 0px 0px;}
+#omcomentarios p {font-size: 11px; margin: 0px 0px 5px 0px; line-height: 130%;}
+#omcomentarios small {font-size: 9px; width: auto; height: auto; float: none; margin: 0px; border: none;}
+#omcomentarios a {font-size: 11px; color:#ff8f00;}
+#omcomentarios a:hover {text-decoration: underline;}
+
+#respond {margin-top: 10px;}
+
+#omcomentarios .commentlist {width: 100%; text-align: justify; margin:0px; padding:0px;}
+#omcomentarios .commentlist li {background: #fcfcfc; margin: 7px 0; padding: 5px; border: 1px solid #cdd1d1; list-style: none;}
+#omcomentarios .commentlist li  a {font-style: normal; font-weight: bold; color: #626262 !important}
+#omcomentarios .commentlist cite, .commentlist cite a {font-style: normal; font-weight: bold; color: #626262 !important}
+#omcomentarios .commentlist p {font-weight: normal; line-height: 1.6em; text-transform: none;}
+#omcomentarios .commentlist p {margin: 5px 5px 5px 0;}
+#omcomentarios .alt {padding: 10px;}
+
+#omcomentarios .nocomments {text-align: center;}
+
+#omcomentarios .commentmetadata {border-bottom: 1px dotted #cdd1d1; padding-bottom: 5px; display: block;}
+#omcomentarios .commentcount {font-weight: bold; color: #cdd1d1; float: right;}
+
+div.boxul {
+	float: left;
+	clear: left;
+	width: 100%;
+}
+
+ul.calendar { 
+	width: 190px;
+	list-style: none;
+	font-size: 15px;
+	margin: 0px 5px 20px 5px;
+	padding: 0px;
+	float: left;
+	border-top: 2px #FF8F00 solid;
+	border-radius: 3px;
+}
+ul.source { 
+	width: 290px;
+}
+ul.calendar li.empty {
+	width:17px;
+	float:left;
+	height:17px;
+	background:#eee;
+	margin:2px;
+	padding:3px;
+	font-family:georgia;
+	border-radius: 3px;
+	display: block;
+	color: #BBBBBB !important;
+}
+ul.ano li.empty {
+	width: 21px;
+	height: 21px;
+}
+
+ul.calendar li {
+	float: left;
+	width: 27px;
+	height: 27px;
+}
+ul.calendar li a {
+	width:17px;
+	float:left;
+	height:17px;
+	background:#eee;
+	margin:2px;
+	padding:3px;
+	font-family:georgia;
+	border-radius: 3px;
+	display: block;
+	text-align: center;
+}
+ul.calendar li a:hover {
+	text-decoration: underline;
+	background:#ff8f00;
+	color: #FFF;
+}
+ul.source li {
+	width: 100%;
+	height: auto;
+	clear: left;
+} 
+ul.source li a {
+	width: 100%;
+	clear: left;
+	height: auto;
+	background: none;
+	margin: 0px 0px 0px 0px;
+	padding: 5px 0px 5px 0px;
+	border-bottom: 1px #ccc dotted !important;
+	font-family: arial, helvetica, sans-serif;
+	text-align: left;
+	border-radius: 0px;
+} 
+ul.source li a:hover {
+	background: #FFF;
+	color:#ff8f00;
+	text-decoration: none;
+	border-bottom: 1px #ff8f00 dotted;
+}
+ul.calendar li.day a {
+	font-variant:small-caps;
+	font-size:13px;
+	background:#fff;
+	height:18px;
+	text-align:center;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+}
+ul.ano li{
+	width: 31px;
+	height: 31px;
+}
+ul.ano li a {
+	width: 21px !important;
+	height: 21px !important;
+	text-align: center;
+}
+ul.fonte li {
+	float: left;
+	width: 63px;
+	height: 27px;
+}
+ul.fonte li a {
+	width:53px;
+}
+ul.calendar li.title {
+	width: 100%;
+}
+ul.calendar li.title a {
+	font-variant: small-caps;
+	font-size: 18px !important;
+	background: white;
+	text-align: left;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	display: block;
+	width: 95% !important;
+	border-bottom: none;
+}
+
+ul.calendar li.titlex {
+	font-variant: small-caps;
+	font-size: 18px !important;
+	background: white;
+	text-align: left;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	display: block;
+	width: 95% !important;
+	border-bottom: none;
+}
+
+ul.calendar li.title a:hover, ul.calendar li.day a:hover {
+	background: #FFF;
+	color: #333;
+}
+
+ul#list-news {
+	float: left;
+	clear: left;
+	width: 100%;
+}
+ul#list-news li {
+	list-style: none;
+}
+ul#list-news li a {
+	display: block;
+	margin: 0px 0px 0px 0px;
+	padding: 12px 10px 12px 10px;
+	border-bottom: 1px #ccc dotted;
+	font-size: 14px;
+	font-weight: bold;
+}
+ul#list-news li a:hover {
+	text-decoration: none;
+	color: #ff8f00;
+	background: #f8f8f8;
+	border-bottom: 1px #ff8f00 dotted;
+}
+ul#list-news li a span {
+	display: block;
+	margin: 2px 0px 0px 0px;
+	font-size: 12px;
+	font-weight: normal;
+}
+ul#list-news li a span strong {
+	font-size: 10px;
+	margin: 0px 5px 0px 0px;
+	color: #999;
+}
+ul#list-news li a:hover span {
+	text-decoration: none;
+	color: #999;
+}
+ul.list-news {
+	float: left;
+	clear: left;
+	width: 100%;
+}
+ul.list-news li {
+	list-style: none;
+}
+ul.list-news li a {
+	display: block;
+	margin: 0px 0px 0px 0px;
+	padding: 12px 10px 12px 10px;
+	border-bottom: 1px #ccc dotted;
+	font-size: 14px;
+	font-weight: bold;
+}
+ul.list-news li a:hover {
+	text-decoration: none;
+	color: #ff8f00;
+	background: #f8f8f8;
+	border-bottom: 1px #ff8f00 dotted;
+}
+ul.list-news li a span {
+	display: block;
+	margin: 2px 0px 0px 0px;
+	font-size: 12px;
+	font-weight: normal;
+}
+ul.list-news li a span strong {
+	font-size: 10px;
+	margin: 0px 5px 0px 0px;
+	color: #999;
+}
+ul.list-news li a:hover span {
+	text-decoration: none;
+	color: #999;
+}
+
+

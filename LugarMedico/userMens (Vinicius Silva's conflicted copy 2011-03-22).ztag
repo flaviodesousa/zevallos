@@ -1,0 +1,116 @@
+ï»¿<zheader:locationif use="!userLogged" notcondition="len()" value="/index.ztag" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <zhtml:title value="Perfil !userNameFull | #sysName" />
+	  <link rel="stylesheet" type="text/css" href="/css/geral.css" media="screen, projection"></link>
+	  <link rel="stylesheet" type="text/css" href="/css/box.css" media="screen, projection"></link>
+	  <link rel="stylesheet" type="text/css" href="/css/menu.css" media="screen, projection"></link>
+	  <link rel="stylesheet" type="text/css" href="/css/logon.css" media="screen, projection"></link>
+	  <style type="text/css">
+		.float-left{float: left;}
+		.float-right{float: right;}
+		legend{
+			font-size:18px;
+			text-shadow:0 1px 0 #828282;
+			color:#000;
+		}
+		label {
+			float: left;
+			width: 100%;
+			font-size: 14px;
+			font-weight: 300;
+			color: #828282;
+		}
+		label u {
+			font-size: 16px;
+			font-weight:600;
+		}
+		label input{
+			background-color:#eeeeee;
+			color:#000;
+			font: Arial, Helvetica, sans-serif bold;
+			width: 250px;
+			height: 20px;
+			border: 1px solid #b9b9b9;
+			-webkit-border-radius:4px;
+			-moz-border-radius:4px;
+			border-radius:4px;
+			margin-top: 3px;
+			padding-left: 8px;
+			margin-bottom: 4px;
+		}
+		
+	  </style>
+	</head>
+	
+	<body>
+		<div id="header">
+			<div class="root">
+				<div class="box-logo"><a href="/"><img src="/img/LogoLugarMedico1.png" alt="Lugar Médico" width="150px" height="73px" style="margin-top:5px"/></a></div>
+				<div class="box-loggeduser"><zhtml:a href="/userProfile.ztag" value="!userName" /> - <a href="userSetup.ztag">Configurações</a> - <a href="logoff.ztag">Sair</a></div>
+			</div>
+		</div>
+		<div id="menu">
+			<div class="root">
+				<ul>
+					<li><a href="quemSomos.ztag">Quem somos</a></li>
+					<li><a href="/public.ztag">Noticias </a></li>
+					<li><a href="#">teste</a></li>
+					<li><a href="#">teste</a></li>
+					<li><a href="/logonNew.ztag">Novo Cadastro</a></li>
+					<li><a href="/faleConosco.ztag">Fale Conosco</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="container">
+			<div class="root">
+				<div id="box">
+					<zhtml:div value="!userNameFull" class="header blue" />
+					<div class="body perfil-box">
+						<zhtml:img src="!userAvatar" alt="!userNameFull" title="!userNameFull" width="50px" height="50px"/><div class="perfil-user-name"><a href="<zsession:show name="userURLPerfil" />"><zhtml:b value="!userNameFull" /></a><br /><zhtml:a href="/userProfile.ztag" title="Editar o perfil" value="Editar o perfil" /></div>
+						<div class="perfil-options">					
+							<dl>
+								<dt>Atualizaè¶¥s</dt>
+								<dd>Mensagens: 99</dd>
+								<dd>Eventos: 10</dd>
+								<dd>Colegas: 10</dd>
+								<dd>Comentâ³©os: 10</dd>
+	
+								<dt>Cî³£ulo</dt>
+								<dd>+ Criar um cî³£ulo</dd>
+	
+							</dl>					
+						</div>
+					</div>
+				</div>
+				<div id="box">
+					<div class="header gray">Novidades</div>
+					<div class="body perfil-newsfeed">
+						
+					
+					</div>
+				</div>
+				<div id="t">
+					<div id="box">
+						<zhtml:div value="Dicas do Lugar MÃ©dico" class="header blue" />
+						<div class="body perfil-events">
+							<ul><li>Dica</li></ul>					
+						</div>
+					</div>
+					<div id="box">
+						<zhtml:div value="Patrocinadores" class="header blue" />
+						<div class="body perfil-events">
+							<ul><li>Dica</li></ul>					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="root">Copyright &copy; 2011 Lugar Médico todos os direitos reservados</div>
+		</div>
+	</body>
+</html>
+										

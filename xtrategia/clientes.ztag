@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="css/corpo.css" />
+	<link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.gif" />
+	<script type="text/javascript" src="js/funcoes.js"></script>
+	<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$('a.fancybox').fancybox({
+			padding:0,
+			margin:0,
+			titleShow:false,
+			overlayOpacity:0.8,
+			overlayColor:'#FFFFFF',
+			scrolling: 'no',
+			autoScale:true
+
+		});
+		
+			$("a[rel=fancybox]").fancybox({
+				titlePosition 	: 'over',
+				overlayColor:'#FFFFFF',
+				overlayOpacity:0.8,
+				margin:0,
+				padding:0,
+				titleShow:true,
+				autoDimensions:true
+		});
+		
+$(".fancyform").fancybox({
+	'scrolling': 'no',
+	'titleShow': false,
+	'overlayColor':'#005391',
+	'margin':0,
+	'padding':0,
+	'overlayOpacity':0.8,
+	'onClosed': function() {
+	    $(".required").hide();
+	}
+});
+
+$("#objfrmForm").bind("submit", function() {
+ 
+ 	if ($("#objNomec").val().length < 1 || $("#objEmailc").val().length < 1 || $("#objMensagemc").val().length < 1)  {
+	    $(".required").show();
+	    $.fancybox.resize();
+	    return false;
+	}
+
+	$.fancybox.showActivity();
+
+	$.ajax({
+		type		: "POST",
+		contentType: 'application/x-www-form-urlencoded; charset=iso-8859-1;', 
+		cache	: false,
+		url		: "DESTINO",
+		data		: $(this).serializeArray(),
+		success: function(data) {
+			$.fancybox(data);
+		}
+	});
+
+	return false;
+});
+		
+});
+
+	</script>
+	
+	
+	<title>Clientes - XTratégia</title>
+</head>
+<body>
+	<div id="geral">
+		<div id="topo">
+			<h1 id="logo"><a href="/">XTratégia</a></h1>
+			<div id="nav">
+				<ul>
+					<li class="l"><a href="#">Login</a></li>
+					<li class="m"><a href="#">Mapa</a></li>
+				</ul>
+				<form action="" method="get">
+					<fieldset>
+						<label>
+							<input type="text" name="" value="Encontre no site" onblur="if (this.value=='') this.value='Encontre no site'" onfocus="if (this.value=='Encontre no site') this.value=''"/>
+						</label>
+						<input type="submit" value="Buscar" />
+					</fieldset>
+				</form>
+			</div>
+			<ul id="menu">
+				<li><a href="/quemSomos.ztag">Quem Somos<span>saiba mais sobre nós</span></a></li>
+				<li><a href="/parceiros.ztag">Parceiros<span>nossos parceiros</span></a></li>
+				<li><a href="/clientes.ztag">Clientes<span>nossos principais clientes</span></a></li>
+				<li><a href="/produtos.ztag">Produtos<span>o que vendemos</span></a></li>
+				<li><a href="/faleConosco.ztag">Fale Conosco<span>aguardamos o seu contato</span></a></li>
+			</ul>
+		</div>
+		
+		<div id="trackingline"><strong>Você está em:</strong> <a href="/">Home</a> » <a href="/clientes.ztag">Clientes</a></div>		
+	</div>
+	<div id="content" class="i">
+	<div id="acqua">
+		<div id="areatexto">
+			<h1>Clientes</h1>
+			<p class="foguete">Nossos principais clientes</p>
+
+			<p><ul>
+				<li>Banco do Brasil</li><li>Infraero</li><li>TRF</li><li>STJ</li><li>Ministério da Cultura</li><li>Marinha</li></ul></p>
+		</div>
+	</div>
+	</div>
+	<div id="rodape">
+		<div>
+			<address>
+				XTratégia - 2011 - Todos os direitos reservados<br />
+				<strong>Endereço:</strong> SHIS QI 11, Bloco O, Conjuntos 201 e 202 - Brasília - DF - 71625-205<br />
+				<strong>Telefone:</strong> (61) 3365-3808 <strong>EMail:</strong> <a href="mailto:contato@xtrategia.com.br">contato@xtrategia.com.br</a>"<br />
+			</address>
+			<ul>
+				<li><a href="/quemSomos.ztag">Quem Somos</a></li>
+				<li><a href="/parceiros.ztag">Parceiros</a></li>
+				<li><a href="/clientes.ztag">Clientes</a></li>
+				<li><a href="/produtos.ztag">Produtos</a></li>
+				<li><a href="/faleConosco.ztag">Fale Conosco</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

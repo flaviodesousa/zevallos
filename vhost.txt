@@ -1,0 +1,131 @@
+# ZYC - Lugar Medico
+<VirtualHost *:80>
+  ServerName lugarmedico1.zyc.com.br
+  DocumentRoot "/home/zevallos/Dropbox/ZYCWeb/LugarMedico"
+  ErrorLog "/home/zevallos/temp/log/lugarmedico180_error.log"
+  CustomLog "/home/zevallos/temp/log/lugarmedico180_custom.log" combined
+
+  <Directory "/home/zevallos/Dropbox/ZYCWeb/LugarMedico">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /db /home/zevallos/Dropbox/ZYCWeb/zTag/db
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/zTag/db">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /ztag /home/zevallos/Dropbox/ZYCWeb/zTag/ztag
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/zTag/ztag">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>
+
+# ZYC - Vantagens 360
+<VirtualHost *:80>
+  ServerName vantagens3601.zyc.com.br
+  DocumentRoot "/home/zevallos/Dropbox/ZYCWeb/vantagens360"
+  ErrorLog "/home/zevallos/temp/log/vantagens360180_error.log"
+  CustomLog "/home/zevallos/temp/log/vantagens360180_custom.log" combined
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/vantagens360">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /db /home/zevallos/Dropbox/ZYCWeb/zTag/db
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/zTag/db">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /ztag /home/zevallos/Dropbox/ZYCWeb/zTag/ztag
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/zTag/ztag">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>
+
+# ZYC - zTag
+<VirtualHost *:80>
+  ServerName ztag1.zyc.com.br
+  DocumentRoot "/home/zevallos/Dropbox/ZYCWeb/zTag"
+  ErrorLog "/home/zevallos/temp/log/zTag180_error.log"
+  CustomLog "/home/zevallos/temp/log/zTag180_custom.log" combined
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/zTag">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+  
+  Alias /db /home/zevallos/Dropbox/ZYCWeb/zTag/db
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/zTag/db">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /ztag /home/zevallos/Dropbox/ZYCWeb/zTag/ztag
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/zTag/ztag">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>
+
+# ZYC - Ideias
+<VirtualHost *:80>
+  ServerName ideas1.zyc.com.br
+  DocumentRoot "/home/zevallos/Dropbox/ZYCWeb/Ideas"
+  ErrorLog "/home/zevallos/temp/log/vantagens360180_error.log"
+  CustomLog "/home/zevallos/temp/log/vantagens360180_custom.log" combined
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/Ideas">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /db /home/zevallos/Dropbox/ZYCWeb/zTag/db
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/zTag/db">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /ztag /home/zevallos/Dropbox/ZYCWeb/zTag/ztag
+
+ <Directory "/home/zevallos/Dropbox/ZYCWeb/zTag/ztag">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>

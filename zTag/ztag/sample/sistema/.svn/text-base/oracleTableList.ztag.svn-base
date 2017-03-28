@@ -1,0 +1,88 @@
+<!-- zheader:locationif use="!userLogged" notcondition="len()" value="/logOn.php" /-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="Oracle Tables - #sysSign" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            font-size:.7em;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}      
+    </style>
+  </head>
+  <body>
+    <zget:get name="table_name" var="table_name" transform="allTrim(' ')->stripTags()" />
+
+    <zHTML:h3 value="Listing of table $table_name" />
+    (<zhtml:a href="/ztag/samples/zCode.ztag?file=#ztagFile" value="Fonte" />)
+    <hr />
+
+    <zdb:open id="ociConn" driver="oci" host="#ociHost" user="#ociUser", password="#ociPassword" />
+      <zvar:setif use="table_name" condition="$table_name" var="sqlSelect" then="WHERE UTC.TABLE_NAME = '$table_name'" />
+        
+      <zdb:query use="ociConn" id="ociHeadQuery">
+       SELECT TABLE_NAME
+       , COLUMN_NAME
+       , DATA_TYPE
+       , DATA_LENGTH
+       , NULLABLE
+       , COLUMN_ID
+       , DATA_DEFAULT
+       , DATA_PRECISION 
+       , (SELECT ACC.COLUMN_NAME 
+          FROM ALL_CONS_COLUMNS ACC 
+          WHERE ACC.COLUMN_NAME = UTC.COLUMN_NAME
+           AND ACC.CONSTRAINT_NAME IN (
+           SELECT AC.CONSTRAINT_NAME 
+           FROM ALL_CONSTRAINTS AC 
+           WHERE AC.CONSTRAINT_TYPE = 'P' AND AC.TABLE_NAME = UTC.TABLE_NAME)) AS PK
+       , (SELECT ACOM.COMMENTS FROM ALL_COL_COMMENTS ACOM WHERE ACOM.TABLE_NAME = UTC.TABLE_NAME AND ACOM.COLUMN_NAME = UTC.COLUMN_NAME) AS FIELDCOMMENT
+       FROM USER_TAB_COLUMNS UTC
+       $sqlSelect
+      </zdb:query>
+
+      <zdb:query use="ociConn" id="ociRowQuery">
+       SELECT TABLE_NAME
+       , COLUMN_NAME
+       , DATA_TYPE
+       , DATA_LENGTH
+       , NULLABLE
+       , COLUMN_ID
+       , DATA_DEFAULT
+       , DATA_PRECISION 
+       , (SELECT ACC.COLUMN_NAME 
+          FROM ALL_CONS_COLUMNS ACC 
+          WHERE ACC.COLUMN_NAME = UTC.COLUMN_NAME
+           AND ACC.CONSTRAINT_NAME IN (
+           SELECT AC.CONSTRAINT_NAME 
+           FROM ALL_CONSTRAINTS AC 
+           WHERE AC.CONSTRAINT_TYPE = 'P' AND AC.TABLE_NAME = UTC.TABLE_NAME)) AS PK
+       , (SELECT ACOM.COMMENTS FROM ALL_COL_COMMENTS ACOM WHERE ACOM.TABLE_NAME = UTC.TABLE_NAME AND ACOM.COLUMN_NAME = UTC.COLUMN_NAME) AS FIELDCOMMENT
+       FROM USER_TAB_COLUMNS UTC
+       $sqlSelect
+      </zdb:query>
+      
+
+      <textarea rows="20" cols="120">
+      &lt;table border="1" cellspacing="0"&gt;
+        &lt;tr&gt;<zdb:fetchuntil use="ociHeadQuery" id="ociHead">
+          &lt;zHTML:cellhead value="<zdb:field use="ociHead" name="COLUMN_NAME" /> /&gt;</zdb:fetchuntil>
+        &lt;/tr&gt;
+        &lt;tr&gt;<zdb:fetchuntil use="ociRowQuery" id="ociRow">
+          &lt;zHTML:cell value="<zdb:field use="ociRow" name="COLUMN_NAME" /> /&gt;</zdb:fetchuntil>
+        &lt;/tr&gt;
+      &lt;/table&gt;
+      </textarea>
+    <zdb:close use="ociConn" />
+  </body>
+</html>

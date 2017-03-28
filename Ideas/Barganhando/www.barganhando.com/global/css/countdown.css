@@ -1,0 +1,39 @@
+
+.hasCountdown {
+	
+}
+.countdown_rtl {
+	/*direction: rtl;*/
+}
+.countdown_holding span {
+	background-color: #ccc;
+}
+.countdown_row {
+	clear: both;
+	width: 100%;
+	margin:25px 0 0 72px;
+	text-align: center;
+	color:#fff;
+}
+
+
+.countdown_show3 .countdown_section {
+	width: 15%;
+	margin:25px 0 0 30px;
+	text-align:center;
+}
+.countdown_section {
+	display: block;
+	float: left;
+	font-size: 11px;
+	font-weight:bolder;
+	text-align: center;
+}
+.countdown_amount {
+	font-size: 16px;
+}
+.countdown_descr {
+	display: block;
+	width: 100%;
+	font-size: 16px;
+}

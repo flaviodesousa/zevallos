@@ -1,0 +1,157 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.mywebcareer.com/LinkedInLogin.aspx by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 01 Mar 2011 14:50:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>
+	MyWebCareer - Discover, Evaluate, and Monitor Your Professional Online Brand
+</title><meta http-equiv="content-language" content="en" /><meta name="author" content="Site Designed &amp; Created By Twig Interactive LLC : www.twiginteractive.com" /><meta name="copyright" content="© 2011 MyWebCareer. All Rights Reserved." /><meta name="description" content="What&#39;s your Career Score?" /><meta name="revisit-after" content="2 days" /><meta name="robots" content="all" /><meta name="robots" content="index,follow" /><meta name="msvalidate.01" content="218AB84F4D5522E70147B2CDA29778FB" /><meta http-equiv="content-style-type" content="text/css" /><meta http-equiv="content-script-type" content="text/javascript" /><link rel="icon" href="favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link rel="stylesheet" type="text/css" href="css/blue_58e5e.css?v=15" media="screen, projection, tv" />
+    <!-- Increment StyleSheet Version Number with each CSS change -->
+    <link rel="stylesheet" type="text/css" href="css/all_5bcfe.css?v=22" media="all" />
+    <!--[if lte IE 7.0]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen, projection, tv" /><![endif]-->
+    <!--[if IE 8.0]><style type="text/css"> form.fields fieldset {margin-top: -10px;} </style> <![endif]-->
+    <script type="text/javascript" src="scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-pngFix-1.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-twig_2.js"></script>
+    <script type="text/javascript" src="scripts/page_2.js"></script>
+    
+    <!-- Include the LinkedIn JavaScript API and define a onLoad callback function -->
+    <script type="text/javascript" src="../platform.linkedin.com/in.js">    
+        /*
+        api_key: uYIQIBX4EkLh6dzbAsyGRhmf8PKOXHmdKD2f0Dwq2Voi3oVEhO-eDrImk8pkOmWh
+        onLoad: onLinkedInLoad
+        authorize: true
+        */
+    </script>
+
+    <script type="text/javascript">
+        var profileDiv = document.getElementById("profiles");        
+
+        //Runs when the JavaScript framework is loaded
+        function onLinkedInLoad() {
+            //IN.Event.on(IN, "auth", onLinkedInAuth);
+            //profileDiv.innerHTML = "Loading LinkedIn JSAPI";
+            if (IN.User.isAuthorized()) {
+                //profileDiv.innerHTML = "User is authorized.  Create new session.";
+                //Grab necessary parameters to create new session.
+                onLinkedInAuth();
+            } else {
+                //profileDiv.innerHTML = "User is not authorized.  Send to LinkedIn Connect";
+                location.href = 'LinkedInConnect.aspx?c=NOTAUTHORIZED';
+            }
+        }
+
+        //Runs when the viewer has authenticated
+        function onLinkedInAuth() {
+            if (IN.User.isAuthorized()) {
+                IN.API.Profile("me")
+                .fields("firstName", "lastName", "id")
+                .result(displayProfiles)
+                .error(displayProfilesErrors);
+            }
+        }
+
+        //Runs when the Profile() API call returns successfully
+        function displayProfiles(profiles) {
+            member = profiles.values[0];
+            //profileDiv.innerHTML = "Creating new session.";
+            location.href = 'RestoreUserSession.aspx?l=' + member.id;
+        }
+
+        //Runs when there is an error returned.
+        function displayProfilesErrors(error) {
+            //profileDiv.innerHTML = "Unable to connect and grab necessary profile information.";
+            location.href = 'LinkedInConnect.aspx?c=ERROR';
+        }
+    </script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2459241-3']);
+        _gaq.push(['_trackPageview']);
+    </script> 
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://www.mywebcareer.com/LinkedInLogin.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1MjQ5ODA0NjkPZBYCZg9kFgICAw9kFgQCAQ9kFgICAQ8PFgIeB1Zpc2libGVoZGQCAw9kFgQCAQ8PFgIfAGhkZAIDDw8WAh8AaGRkZE4VC4yrjN11dQA1G4SEKGEQet6y" />
+
+	    <!-- Begin #Header -->
+		
+<div id="header">
+	<div class="inner-container clearfix">
+		<h1 id="logo"> <a class="home" href="Default.html" title="Home">MyWebCareer.com <span class="ir"></span></a></h1>
+        
+		<!-- #userbox -->
+		<div id="social-media" class="fltR"><span class="label">Follow Us:</span><a href="http://www.facebook.com/MyWebCareer" title="Find Us on Facebook" rel="new nofollow"><img src="Images/Icons/icn_social-media_facebook.png" alt="Social Media: Facebook" width="30" height="31" title="Find Us on Facebook" /></a><a href="http://www.linkedin.com/companies/mywebcareer-inc." title="Connect to Us on LinkedIn" rel="new nofollow"><img src="images/icons/icn_social-media_linkedin.png" alt="Social Media: LinkedIn" width="30" height="31" title="Connect to Us on LinkedIn" /></a><a href="http://twitter.com/MyWebCareer" title="Follow Us on Twitter" rel="new nofollow"><img src="images/icons/icn_social-media_twitter.png" alt="Social Media: Twitter" width="30" height="31" title="Follow Us on Twitter" /></a><a href="http://blog.mywebcareer.com/" title="Professional Branding Blog" rel="new nofollow"><img src="images/icons/icn_social-media_blog.png" alt="Social Media: Blog" width="31" height="31" title="MyWebCareer Blog" /></a></div>
+	</div>
+	<!-- .inner-container -->
+</div>
+<!-- #header --> 
+	    <!-- End #Header -->
+
+	    <!-- Begin #Main Navigation -->
+		
+
+<!-- #header -->
+<div id="nav">
+	<div class="inner-container clearfix" style="font-size:2.2em;color:white">
+        
+        
+	</div>
+	<!-- .inner-container -->
+</div>
+<!-- #nav --> 
+	    <!-- End #Main Navigation -->
+        <div id="container">
+        	<div class="inner-container">
+                
+    <!-- Displays a button to let the viewer authenticate -->
+    <!--<script type="IN/Login"></script>-->
+
+    <!-- Placeholder for the greeting -->
+    <div id="profiles"></div>
+    <div id="loading" style="text-align:center;">
+        <br /><br /><br />
+        <h1 style="font-size:large;">Retrieving your MyWebCareer Information</h1>
+        <br /><br />
+        <img src="Images/ajax-loader.gif" alt="Loading" />
+        <br /><br />
+        <h1 style="font-size:large;">Please wait ...</h1>
+        <br /><br /><br />
+    </div>
+    <span id="ctl00_MainContent_lblDebug"></span>
+
+	            <!-- Begin #footer -->
+		        
+		<div id="footer">
+			<div class="copyright fltL">
+				<p>Copyright &copy; 2011 MyWebCareer Inc. All Rights Reserved. <a href="TermsOfUse.html" title="Terms of Use">Terms of Use</a><a href="Privacy.html" title="Privacy">Privacy</a></p>
+			</div>
+			<ul class="footer-nav fltL">
+				<li><a href="Default.html">Home</a></li>
+				<li><a href="About-2.html">About</a></li>
+				<li><a href="FAQ-2.html">FAQ</a></li>
+                <li><a href="http://support.mywebcareer.com/">Support &amp; Feedback</a></li>
+                <li><a href="http://blog.mywebcareer.com/">Blog</a></li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+ 
+	            <!-- End #footer -->	
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <span style="display:none"><!-- do not remove this comment --></span>
+</body>
+
+<!-- Mirrored from www.mywebcareer.com/LinkedInLogin.aspx by HTTrack Website Copier/3.x [XR&CO'2010], Tue, 01 Mar 2011 14:50:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

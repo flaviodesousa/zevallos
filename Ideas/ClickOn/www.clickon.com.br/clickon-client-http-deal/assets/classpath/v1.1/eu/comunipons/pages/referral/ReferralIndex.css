@@ -1,0 +1,11 @@
+/*#main #content .w2 {
+	background: white url(../components/SocialNetworking.jpg) no-repeat 0 100%;
+	min-height: 370px;
+}*/
+#main #content .w3 {
+	background-image: url(../style/box_referral-slide.html)
+}
+
+#main #content .w3 {
+	min-height: 370px;
+}

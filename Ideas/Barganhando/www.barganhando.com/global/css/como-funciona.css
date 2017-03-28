@@ -1,0 +1,10 @@
+.lista-comoFunciona {margin:0; padding:0;}
+.lista-comoFunciona li {float:left; width:284px; height:414px; margin:0 22px 20px 0; padding:8px 8px 0 8px; background:url(../images/bgComoFunciona.png) top no-repeat; font-size:1.120em}
+.lista-comoFunciona li .caixa-um, .lista-comoFunciona li .caixa-dois, .lista-comoFunciona li .caixa-tres {width:100%; height:410px;}
+/*.lista-comoFunciona li .caixa-um { background:url(../images/bgCaixaUm.png) no-repeat bottom center}
+.lista-comoFunciona li .caixa-dois { background:url(../images/bgCaixaDois.png) no-repeat bottom center}
+.lista-comoFunciona li .caixa-tres { background:url(../images/bgCaixaTres.png) no-repeat bottom center}*/
+
+.lista-comoFunciona li:last-child {margin-right:0;}
+.lista-comoFunciona li span {display:block; color:#666; line-height:20px; letter-spacing:normal;}
+.lista-comoFunciona li .imgs {float:left; width:86px; margin-right:10px;}

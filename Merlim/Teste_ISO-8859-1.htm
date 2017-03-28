@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>OAB - Distrito Federal - Relação de Notícias</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="generator" content="PortalMaker 4.00.01" />
+	<meta name="author" content="WebAdvisor Agência Interativa - www.webadvisor.com.br" />
+	<meta name="robots" content="index, follow"/>
+	<meta name="keywords" content="OAB, Exame da Ordem, Advogado, Jurídico, Tribunais, Advocacia, STJ, Ordem dos Advogados do Brasil, Distrito Federal "/>
+	<meta name="title" content="OAB - Distrito Federal - Relação de Notícias" />
+	<meta name="description" content="Portal da OABDF" />
+	<meta name="copyright" content="Ordem dos Advogados do Brasil / Distrito Federal" />
+	<link href="/entidade/457/1678/css/novoOabDf.css" rel="stylesheet" type="text/css" media="all"/>
+	<link href="/entidade/457/1678/css/auxiliar.css" rel="stylesheet" type="text/css" media="all"/>
+	<link href="/entidade/457/1678/css/jquery-ui-1.8.custom.css" rel="stylesheet" type="text/css" media="all"/>
+	<link href="/200/css/modal.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src="/entidade/457/1678/js/mootools-1.2.4-core-yc-Mod.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/jquery-ui-1.8.custom.min.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/jquery.jcarousel.pack.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/hoverIntent.minified.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/jquery.tabs.pack.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/jquery.media.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/Assets.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/overlay.js"></script>
+ 	<script type="text/javascript" src="/200/js/jquery.modal.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/multibox.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/urlEncode.js"></script>
+	<script type="text/javascript" src="/entidade/457/1678/js/novoOabDf.js"></script>
+	<script type="text/javascript">
+		jQuery.noConflict();
+		jQuery(document).ready(function() {
+			jQuery("#modalEmail").dialog({
+				autoOpen: false,
+				height: 265,
+				width: 325,
+				modal: true,
+				buttons: {
+					"Enviar": function() {
+						var bValid = true;
+						if(jQuery("#formEmail #nomeorigem").val() == "" ||
+							jQuery("#formEmail #emailorigem").val() == "" ||
+							!isEmail(jQuery("#formEmail #emailorigem").val()) ||
+							jQuery("#formEmail #nomedest").val() == "" ||
+							jQuery("#formEmail #emaildest").val() == "" ||
+							!isEmail(jQuery("#formEmail #emaildest").val()))	
+								bValid = false;
+						if (bValid){
+							jQuery(".ui-dialog-buttonpane button, #formEmail input, #formEmail label, .ui-dialog-titlebar a").css("display", "none");
+							jQuery("#formEmail #erroEnvio, #formEmail #sucessoEnvio").remove();
+							jQuery("#formEmail").prepend("<p id='sucessoEnvio'>Enviando email. Aguarde...</p>");
+							jQuery.ajax({ url: "/formularios/457/EnviarNoticia/", 
+								data: "chave=" + jQuery("#formEmail #chave").val() + 
+									"&tipo=" + jQuery("#formEmail #tipo").val() + 
+									"&nomeOrigem=" + jQuery.URLEncode(jQuery("#formEmail #nomeorigem").val()) + 
+									"&emailOrigem=" + jQuery("#formEmail #emailorigem").val() +
+									"&nomeDestinatario=" + jQuery.URLEncode(jQuery("#formEmail #nomedest").val()) + 
+									"&emailDestinatario=" + jQuery("#formEmail #emaildest").val()
+								,
+								dataType: "text",
+								cache: false,
+								success: function(data){
+									jQuery("#formEmail #erroEnvio, #formEmail #sucessoEnvio").remove();
+									jQuery(".ui-dialog-buttonpane button, #formEmail input, #formEmail label, .ui-dialog-titlebar a").css("display", "block");
+									if(data == "sucesso"){
+										jQuery("#formEmail").prepend("<p id='sucessoEnvio' style='color: #00FF00'>Email enviado com sucesso.</p>");
+									}else{
+										jQuery("#formEmail").prepend("<p id='erroEnvio' style='color: #FF0000'>Erro durante o envio. Tente novamente.</p>");
+									}
+									jQuery("#formEmail #nomeorigem").val("");
+									jQuery("#formEmail #emailorigem").val("");
+									jQuery("#formEmail #nomedest").val("");
+									jQuery("#formEmail #emaildest").val("");
+								},
+								error: function(){
+									jQuery("#formEmail #erroEnvio, #formEmail #sucessoEnvio").remove();
+									jQuery(".ui-dialog-buttonpane button, #formEmail input, #formEmail label, .ui-dialog-titlebar a").css("display", "block");
+										jQuery("#formEmail").prepend("<p id='erroEnvio' style='color: #FF0000'>Erro durante o envio. Tente novamente.</p>");
+								}
+							});
+						}
+						else{		
+							jQuery("#formEmail #erroEnvio, #formEmail #sucessoEnvio").remove();
+							jQuery("#formEmail").prepend("<p id='erroEnvio' style='color: #FF0000'>Todos os campos devem ser preenchidos</p>");
+						}
+					},
+					"Fechar": function() {
+						jQuery("#modalEmail").dialog("close");
+					}
+				}
+			});
+			jQuery(".email").click(function(){
+				jQuery("#modalEmail").dialog("open");
+			});
+			abreBox();
+		});
+		function isEmail(email) {
+			var expr = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		
+			if (email.search(expr) == -1) {
+				return false;
+			}
+			return true;
+		}
+	</script>
+	<script type="text/javascript">
+		function abreBox(){
+			var box = new multiBox('foto', {
+			overlay: new overlay()
+			});
+			var box = new multiBox('audio', {
+			overlay: new overlay()
+			});
+			var box = new multiBox('video', {
+			overlay: new overlay()
+			});
+		}
+	</script>
+	<!--[if IE 6]>
+		<script type="text/javascript" src="/entidade/457/1678/js/DD_belatedPNG.js"></script>
+		<script>
+			DD_belatedPNG.fix("img, .png");
+		</script>
+		<link href="/entidade/457/1678/css/fixIE6.css" rel="stylesheet" type="text/css" media="all"/>
+	<![endif]-->
+	<!--[if IE 7]>
+		<link href="/entidade/457/1678/css/fixIE7.css" rel="stylesheet" type="text/css" media="all"/>
+	<![endif]-->
+</head>
+<body>
+	<div id="topo">
+		<div class="menuSuperior">
+			<div class="setaVermelha"><a href="http://www.conselhos.com.br/siscafwebj/carregaConselho.do?tipoAcesso=2&sigla=OABDF" title="Cadastro Nacional de Advogados" target="_blank">Cadastro Nacional de Advogados</a></div>
+			<div class="setaVermelha"><a href="http://imail.oab.org.br/loginDFadv.html" title="Webmail" target="_blank">Webmail</a></div>
+			<div class="setaVermelha"><a href="/pessoas/457/35/SobreAOuvidoria/?slT=4" title="Ouvidoria">Ouvidoria</a></div>
+			<div class="setaVermelha"><a href="/Formularios/457/Ouvidoria/?slT=4" title="Fale Conosco">Fale Conosco</a></div>
+		</div>
+		<div class="clear"></div>
+		<div class="logo"><a href="http://www.oabdf.org.br/"><img src="/entidade/457/1678/images/logoOAB.png" alt="OAB - Distrito Federal" /></a></div>
+		<div class="clear"></div>
+		<div id="menu">
+			<ul id="topnav">
+				<li class="mnPrincipal"><a href="http://www.oabdf.org.br" title="OABDF Home" class="png"><img src="/entidade/457/1678/images/btMenuHome.png" alt="Home"/></a></li>
+				<li class="mnPrincipal"><a href="/pessoas/457/12/Presidencia/" title="" class="png"><img src="/entidade/457/1678/images/btMenuConhecaOAB.png" alt="Conheça a OAB"/></a>
+					<div class="sub">
+						<ul>
+							<li><h2>Institucional</h2></li>
+							<li><a href="/pessoas/457/12/presidencia/" title="Presidência">Presidência</a></li>
+							<li><a href="/pessoas/457/13/Diretoria/" title="Diretoria">Diretoria</a></li>
+							<li><a href="/pessoas/457/14/ConselheirosFederais/" title="Conselheiros Federais">Conselheiros Federais</a></li>
+							<li><a href="/pessoas/457/15/ConselheirosSeccionais/" title="Conselheiros Seccionais">Conselheiros Seccionais</a></li>
+							<li><a href="/pessoas/457/33/CaixaDeAssistenciaDosAdvogados" title="Membros do CAADF">Membros do CAADF</a></li>
+							<li><a href="/textos/457/26683/Historia/" title="Histórico">Histórico</a></li>
+						</ul>
+						<ul>
+							<li><h2>Estrutura</h2></li>
+							<li><a href="/textos/457/26687/subsecoes/" title="Subseções">Subseções</a></li>
+							<li><a href="/textos/457/26689/SalaDeApoioDosAdvogados/" title="Sala de Apoio ao Advogado">Sala de Apoio ao Advogado</a></li>
+							<li><a href="/textos/457/26703/ClubeDosAdvogados/" title="Clube do Advogado">Clube do Advogado</a></li>
+							<li><a href="/textos/457/26688/Comissoes/" title="Comissões">Comissões</a></li>
+						</ul>
+						<ul>
+							<li><h2>Órgãos</h2></li>
+							<li><a href="/textos/457/26690/TedTribunalDeEticaHome/" title="TED">TED</a></li>
+							<li><a href="/textos/457/26760/OuvidoriaOabDf/" title="Ouvidoria">Ouvidoria</a></li>
+							<li><a href="/textos/457/26942/OabJovem/" title="OAB Jovem">OAB Jovem</a></li>
+							<li><a href="/textos/457/26799/Caadf/" title="CAADF">CAADF</a></li>
+							<li><a href="/textos/457/26729/PrerrogativasOnLine/" title="Prerrogativas">Prerrogativas</a></li>
+							<li><a href="/pessoas/457/38/Esadf/" title="ESA/DF">ESA/DF</a></li>
+							<li><a href="/pessoas/457/39/Faj/" title="FAJ">FAJ</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="mnPrincipal"><a href="/video/457/relacaoVideos/" title="" class="png"><img src="/entidade/457/1678/images/btMenuTvOAB.png" alt="Tv OAB/DF"/></a></li>
+				<li class="mnPrincipal"><a href="/noticias/457/relacaoNoticias/" title="" class="png"><img src="/entidade/457/1678/images/btMenuNoticias.png" alt="Notícias"/></a></li>
+				<li class="mnPrincipal"><a href="/textos/457/26722/ReinscricaoNaOabDf/?slT=2" title="" class="png"><img src="/entidade/457/1678/images/btMenuServicos.png" alt="Serviços"/></a>
+					<div class="sub">
+						<div class="esq">
+							<h3>Ao Advogado</h3>
+							<div class="item">
+						<ul>
+							<li><h2>Geral</h2></li>
+							<li><a href="http://www.conselhos.com.br/siscafwebj/carregaConselho.do?tipoAcesso=2&sigla=OABDF" title="Atualização de Cadastro" target="_blank">Atualização de Cadastro</a></li>
+							<li><a href="http://www.conselhos.com.br/siscafwebj/carregaConselho.do?tipoAcesso=2&sigla=OABDF" title="Impressão de Boleto" target="_blank">Impressão de Boleto</a></li>
+							<li><a href="/textos/457/26722/ReinscricaoNaOabDf/?slT=2" title="Reinscrição na OAB/DF">Reinscrição na OAB/DF</a></li>
+							<li><a href="/textos/457/26711/TabelaDeHonorario/?slT=2" title="Tabela de Honorário">Tabela de Honorário</a></li>
+							<li><a href="/GruposDocumentos/457/37/ValoresDaAnuidade2010/?slT=2" title="Valores da Anuidade 2010">Valores da Anuidade 2010</a></li>
+							<li><a href="/textos/457/26754/ValorDaUrh/?slT=2" title="Valor da URH">Valor da URH</a></li>
+							<li><a href="http://www.recortedigital.oabdf.org.br" title="Recorte Digital" target="_blank">Recorte Digital</a></li>
+							<li><a href="/textos/457/27277/SociedadeDosAdvogados/" title="Sociedade dos Advogados">Sociedade dos Advogados</a></li>
+							<li><a href="http://imail.oab.org.br/loginDFadv.html" title="WebMail" target="_blank">WebMail</a></li>
+						</ul>
+						<ul>
+							<li><h2>Carteira do Advogado</h2></li>
+							<li><a href="/textos/457/26717/ComissaoECamaraDeSelecaocancelamentoDeInscricao/?slT=2" title="Cancelamento de Inscrição">Cancelamento de Inscrição</a></li>
+							<li><a href="http://www.oab.org.br/ac_oab/default.htm" title="Certificado Digital" target="_blank">Certificado Digital</a></li>
+							<li><a href="/textos/457/26697/NovaCarteiraDoAdvogado/?slT=2" title="Solicitar Carteira">Solicitar Carteira</a></li>
+						</ul>
+						<ul>
+							<li><h2>Pesquisas</h2></li>
+							<li><a href="http://www.recortedigital.oabdf.org.br/" title="Acompanhamento Processual" target="_blank">Acompanhamento Processual</a></li>
+							<li><a href="http://www.oab.org.br/busca_legis.asp" title="Código de Ética e Disciplina" target="_blank">Código de Ética e Disciplina</a></li>
+							<li><a href="http://www.conselhos.com.br/siscafwebj/carregaConselho.do?tipoAcesso=4&sigla=OABDF&ini=0" title="Pesquisa de Advogados" target="_blank">Pesquisa de Advogados</a></li>
+							<li><a href="http://www.oab.org.br/buscalegislacao.asp" title="Pesquisa de Legislação" target="_blank">Pesquisa de Legislação</a></li>
+						</ul>
+							</div>
+							<div class="item">
+						<ul>
+							<li><h3>Formulários</h3></li>
+									<li class="titulo">Inscrição Originária</li>
+									<li>
+										<ul class="semBg">
+											<li><a href="/textos/457/26738/InscricaoOriginaria/?slT=2" title="Documentação">Documentação</a></li>
+											<li><a href="/sites/1500/1527/00001537.pdf" title="Instrução">Instrução</a></li>
+											<li><a href="/formularios/457/declaracao/" title="Declaração">Declaração</a></li>
+											<li><a href="/formularios/457/questionario/" title="Questionário">Questionário</a></li>
+											<li><a href="/Formularios/457/inscricaooriginaria/?slT=2" title="Formulário">Formulário</a></li>
+										</ul>
+									</li>
+									<li class="titulo">Inscrição Suplementar ou Transferência</li>
+									<li>
+										<ul class="semBg">
+											<li><a href="/textos/457/26720/ComissaoECamaraDeSelecaoinscricaoPrincipalPorTransferencia/?slT=2" title="Documentação">Documentação</a></li>
+											<li><a href="/sites/1500/1527/00001541.pdf" title="Instruções" target="_blank">Instruções</a></li>
+											<li><a href="/formularios/457/declaracao/" title="Declaração">Declaração</a></li>
+											<li><a href="/formularios/457/questionario/" title="Questionário">Questionário</a></li>
+											<li><a href="/Formularios/457/PeticaoTransferencia/" title="Formulário">Formulário</a></li>
+										</ul>
+									</li>
+									<li class="titulo">Inscrição de Estagiários</li>
+									<li>
+										<ul class="semBg">
+											<li><a href="/sites/1500/1527/00001533.pdf" title="Instruções">Instruções</a></li>
+											<li><a href="/formularios/457/declaracao/" title="Declaração">Declaração</a></li>
+											<li><a href="/formularios/457/questionario/" title="Questionário">Questionário</a></li>
+											<li><a href="/formularios/457/InscricaoEstagiario/" title="Formulário">Formulário</a></li>
+										</ul>
+									</li>
+									<li class="titulo">Pedido de Certidão</li>
+									<li>
+										<ul class="semBg">
+											<li><a href="/formularios/457/PedidoCertidao/" title="Formulário de Pedido">Formulário de Pedido</a></li>
+										</ul>
+									</li>
+						</ul>
+							</div>
+						</div>
+						<div class="dir">
+						<ul>
+							<li><h3>Ao Estagiário</h3></li>
+							<li><a href="/textos/457/26712/AssistenciaJudiciaria/?slT=2" title="Assistência Judiciária">Assistência Judiciária</a></li>
+							<li><a href="http://www.conselhos.com.br/siscafwebj/carregaConselho.do?tipoAcesso=2&sigla=OABDF" title="Atualização de Cadastro" target="_blank">Atualização de Cadastro</a></li>
+							<li><a href="http://www.conselhos.com.br/siscafwebj/carregaConselho.do?tipoAcesso=2&sigla=OABDF" title="Impressão de Boletos" target="_blank">Impressão de Boletos</a></li>
+							<li><a href="/textos/457/26735/InscricaoEstagiaria/?slT=2" title="Inscrição de Estagiários">Inscrição de Estagiários</a></li>
+							<li><a href="http://www.conselhos.com.br/siscafwebj/jsp/default.jsp" title="Pesquisa de Estagiários" target="_blank">Pesquisa de Estagiários</a></li>
+						</ul>
+						<ul>
+							<li><h3>Links Úteis</h3></li>
+							<li><a href="http://www.tjdft.jus.br/" title="TJDFT" target="_blank">TJDFT</a></li>
+							<li><a href="http://www.oab.org.br/" title="Conselho Federal" target="_blank">Conselho Federal</a></li>
+							<li><a href="http://www.mpdft.gov.br/portal/" title="Ministério Público" target="_blank">Ministério Público</a></li>
+							<li><a href="http://www.defensoria.df.gov.br/" title="Defensoria Pública" target="_blank">Defensoria Pública</a></li>
+							<li><a href="http://www.tc.df.gov.br/" title="TCDF" target="_blank">TCDF</a></li>
+							<li><a href="http://www.cl.df.gov.br/cldf" title="Câmara Legislativa" target="_blank">Câmara Legislativa</a></li>
+							<li><a href="http://www.gdf.df.gov.br/" title="GDF" target="_blank">GDF</a></li>
+							<li><a href="http://www.mcce.org.br/" title="MCCE" target="_blank">MCCE</a></li>
+						</ul>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li class="mnPrincipal"><a href="#" title="" class="png"><img src="/entidade/457/1678/images/btMenuExameOrdem.png" alt="Exame de Ordem"/></a>
+					<div class="sub">
+						<ul class="semBg">
+							<li><a href="http://oab.fgv.br/sec.aspx?key=112&cod=5130" title="Inscrições" target="_blank">Inscrições</a></li>
+							<li><a href="http://www.cespe.unb.br/concursos/OAB2010_1/OAB_DF" title="Exame em Andamento" target="_blank">Exame em Andamento</a></li>
+							<li><a href="/textos/457/27501/EstatisticasDoExameEmAndamento/" title="Estatísticas do Exame em Andamento">Estatísticas do Exame em Andamento</a></li>
+							<li><a href="/textos/457/26694/ExamesAnteriores/?slT=3" title="Exames Anteriores">Exames Anteriores</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="mnPrincipal"><a href="/Eventos/457/RelacaoEventos/" title="Curos e Eventos" class="png"><img src="/entidade/457/1678/images/btMenuCursoEventos.png" alt="Cursos e Eventos"/></a></li>
+				<li class="mnPrincipal"><a href="/GruposDocumentos/457/25/AnuarioJuridico/" title="Documentos" class="png"><img src="/entidade/457/1678/images/btMenuDocumentos.png" alt="Documentos"/></a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div id="conteudo" class="bgInterno">
+		<div class="pagInternas">
+			<div class="localizador">Onde estou: <a href="http://www.oabdf.org.br" title="Home">Home</a> &gt; <a href="/noticias/457/relacaoNoticias/" title="Not&iacute;cias">Not&iacute;cias</a> &gt; <span class="negrito">Relação de Notícias</span></div>
+			<div id="menuEsq">
+				<div class="titulo">Not&iacute;cias</div>
+				<dl>
+					<dt>Categoria</dt>
+					<dd><a href="/noticias/457/relacaoNoticias/" title="Todas as Notícias">Todas</a></dd>
+					<dd><a href="/noticias/457/relacaoNoticias/?slCD_ASSUNTO=1720" title="Artigos">Artigos</a></dd>
+					<dd><a href="/noticias/457/relacaoNoticias/?slCD_ASSUNTO=1719" title="Eventos">Eventos</a></dd>
+					<dd><a href="/noticias/457/relacaoNoticias/?slCD_ASSUNTO=1713" title="Geral">Geral</a></dd>
+					<dd><a href="/noticias/457/relacaoNoticias/?slCD_ASSUNTO=1716" title="OAB/DF Faz">OAB/DF Faz</a></dd>
+					<dd><a href="/noticias/457/relacaoNoticias/?slCD_ASSUNTO=1715" title="Política">Política</a></dd>
+					<dd><a href="/noticias/457/relacaoNoticias/?slCD_ASSUNTO=1717" title="Prerrogativas">Prerrogativas</a></dd>
+					<dd><a href="/noticias/457/relacaoNoticias/?slCD_ASSUNTO=1718" title="Prestação de Contas">Prestação de Contas</a></dd>
+				</dl>
+			</div>
+                  <div class="conteudoDir">
+                  	<h1 class="titPag">Notícias</h1>
+                  	<div class="listaSite">
+				<div class="pesquisa">
+                                    <form method="get" action="/noticias/457/RelacaoNoticias/">
+                                          <input name="ttBuscar" type="text" value="" class="texto" />
+                                          <input name="Busca" type="submit" value="buscar" class="submit" maxlength="20" />
+                                          <div class="clear"></div>
+                                    </form>
+                              </div>
+					<div class="item">
+						<div class="data">24/08/2010 - 13:49</div>
+						<div class="descricao">
+							<a href="/noticias/457/122816/OabdfRealizaAmanhaSegundoDiaDeEncontroComCandidatos/">OAB/DF REALIZA AMANHÃ SEGUNDO DIA DE ENCONTRO COM CANDIDATOS</a>
+							<span></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="data">24/08/2010 - 13:43</div>
+						<div class="descricao">
+							<a href="/noticias/457/122815/RorizAssinaTermoDeCompromisso/">RORIZ ASSINA TERMO DE COMPROMISSO</a>
+							<span></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="data">24/08/2010 - 13:40</div>
+						<div class="descricao">
+							<a href="/noticias/457/122814/RorizQuerModernizacaoComoSolucaoParaOTransportePublico/">RORIZ QUER MODERNIZAÇÃO COMO SOLUÇÃO PARA O TRANSPORTE PÚBLICO</a>
+							<span></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="data">24/08/2010 - 13:20</div>
+						<div class="descricao">
+							<a href="/noticias/457/122813/RorizDizQueDrogaEUmProblemaDeSaude/">RORIZ DIZ QUE DROGA É UM PROBLEMA DE SAÚDE</a>
+							<span></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="data">24/08/2010 - 13:15</div>
+						<div class="descricao">
+							<a href="/noticias/457/122812/RorizDizQueFaltaDeAlvaraEDesorganizacaoDoEstado/">RORIZ DIZ QUE FALTA DE ALVARÁ É DESORGANIZAÇÃO DO ESTADO</a>
+							<span></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="data">24/08/2010 - 12:48</div>
+						<div class="descricao">
+							<a href="/noticias/457/122809/RorizQuerParceriaDaOabdfParaMelhorarCarreiraJuridica/">RORIZ QUER PARCERIA DA OAB/DF PARA MELHORAR CARREIRA JURÍDICA</a>
+							<span></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="data">24/08/2010 - 12:42</div>
+						<div class="descricao">
+							<a href="/noticias/457/122808/RorizDizQueCriouNoveCidadesParaPreservarBrasilia/">RORIZ DIZ QUE CRIOU NOVE CIDADES PARA PRESERVAR BRASÍLIA</a>
+							<span></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="data">24/08/2010 - 12:15</div>
+						<div class="descricao">
+							<a href="/noticias/457/122806/RorizDaraPrioridadeParaSaude/">RORIZ DARÁ PRIORIDADE PARA SAÚDE</a>
+							<span></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="data">24/08/2010 - 12:03</div>
+						<div class="descricao">
+							<a href="/noticias/457/122803/JoaquimRorizParabenizaOabdf/">JOAQUIM RORIZ PARABENIZA OAB/DF</a>
+							<span></span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="data">24/08/2010 - 11:50</div>
+						<div class="descricao">
+							<a href="/noticias/457/122801/ComecaOEncontroComOCandidatoJoaquimRoriz/">COMEÇA O ENCONTRO COM O CANDIDATO JOAQUIM RORIZ</a>
+							<span></span>
+						</div>
+					</div>
+			<div class="paginacao">
+				<p>
+					<a title="Página 1" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=1&amp;slCD_ASSUNTO=" class="current">1</a>
+					<a title="Página 2" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=2&amp;slCD_ASSUNTO=">2</a>
+					<a title="Página 3" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=3&amp;slCD_ASSUNTO=">3</a>
+					<a title="Página 4" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=4&amp;slCD_ASSUNTO=">4</a>
+					<a title="Página 5" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=5&amp;slCD_ASSUNTO=">5</a>
+					<a title="Página 6" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=6&amp;slCD_ASSUNTO=">6</a>
+					<a title="Página 7" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=7&amp;slCD_ASSUNTO=">7</a>
+					<a title="Página 8" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=8&amp;slCD_ASSUNTO=">8</a>
+					<a title="Página 9" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=9&amp;slCD_ASSUNTO=">9</a>
+					<a title="Página 10" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=10&amp;slCD_ASSUNTO=">10</a>
+					<a title="Bloco Seguinte" href="/noticias/457/relacaoNoticias/Default.asp?rdCampoPesquisado=&amp;btBuscar=Buscar&amp;ttBuscar=&amp;ttOrderBy=&amp;ttPagina=11&amp;slCD_ASSUNTO=">&gt;&gt;</a>
+				</p>
+			</div>
+
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div id="rodape">
+		<div class="interno">
+			<div class="miniMenu">
+				<ul>
+					<li><a href="/pessoas/457/12/Presidencia/" title="Conheça a OAB"><img src="/entidade/457/1678/images/btMenuRodapeConhecaOAB.jpg" alt="Conheça a OAB" /></a></li>
+					<li><a href="/video/457/relacaoVideos/" title="TV OAB/DF"><img src="/entidade/457/1678/images/btMenuRodapeTvOAB.jpg" alt="TV OAB/DF" /></a></li>
+					<li><a href="/noticias/457/relacaoNoticias/" title="Notícias"><img src="/entidade/457/1678/images/btMenuRodapeNoticias.jpg" alt="Notícias" /></a></li>
+					<li><a href="/textos/457/26722/ReinscricaoNaOabDf/?slT=2" title="Serviços"><img src="/entidade/457/1678/images/btMenuRodapeServicos.jpg" alt="Serviços" /></a></li>
+					<li><a href="/textos/457/26694/ExamesAnteriores/?slT=3" title="Exame de Ordem"><img src="/entidade/457/1678/images/btMenuRodapeExameOrdem.jpg" alt="Exame de Ordem" /></a></li>
+					<li><a href="/Eventos/457/RelacaoEventos/" title="Cursos e eventos"><img src="/entidade/457/1678/images/btMenuRodapeCursosEventos.jpg" alt="Cursos e eventos" /></a></li>
+					<li><a href="/GruposDocumentos/457/25/AnuarioJuridico/" title="Documentos"><img src="/entidade/457/1678/images/btMenuRodapeDocumentos.jpg" alt="Documentos" /></a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="titRodape">Século XXI</div>
+			<div class="carouselRodape">
+				<div class="carousel margem">
+					<ul class="carouselUm">
+						<li><a href="/textos/457/27197/50Anos/?slT=5"><img src="/sites/1600/1678/00000402.jpg" width="221px" height="122px" alt="Selo 50 anos" /></a></li>
+					</ul>
+				</div>
+				<div class="carousel margem">
+					<ul class="carouselDois">
+						<li><a href="/textos/457/26819/ParceirosWebadvisorProgramaDeInclusaoDigitalDaOab/?slT=5"><img src="/entidade/457/1678/images/imgBannerProjetoInclusao.jpg" width="221px" height="122px" alt="WebAdvisor - Inclusão Digital" /></a></li>
+					</ul>
+				</div>
+				<div class="carousel margem">
+					<ul class="carouselTres">
+						<li><a href="/textos/457/26821/ParceirosRecorteDigital/?slT=5"><img src="/entidade/457/1678/images/imgBannerRecorteDigital.jpg" width="221px" height="122px" alt="Recorte Digital" /></a></li>
+					</ul>
+				</div>
+				<div class="carousel">
+					<ul class="carouselQuatro">
+						<li><a href="/textos/457/26825/PontoPacifico/?slT=5"><img src="/sites/1600/1678/00000296.jpg" width="221px" height="122px" alt="Ponto Pacífico" /></a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="encontra">
+				<div class="titRodape">Encontre</div>
+				<div class="item01"><a href="/textos/457/26731/Contato/" title="Contatos da OAB/DF">Contatos da OAB/DF</a> &gt; <span>Telefones e emails.</span></div>
+				<div class="item02"><a href="/textos/457/26689/SalaDeApoioDosAdvogados/" title="Sala dos Advogados">Sala dos Advogados</a> &gt; <span>Encontre Fóruns e Tribunais no DF.</span></div>
+				<div class="clear"></div>
+			</div>
+			<div class="siga">
+				<div class="titRodape">Siga-nos</div>
+				<div class="sociais">
+					<div class="item"><img src="/entidade/457/1678/images/iconeSociaisTwitter.jpg" alt="Twitter" /><span><a href="http://twitter.com/oabdf_oficial" target="_blank" title="Twitter">Twitter</a></span></div>
+					<div class="item"><img src="/entidade/457/1678/images/iconeSociaisOrkut.jpg" alt="Orkut" /><span><a href="http://www.orkut.com.br/Main#Community?cmm=477525" target="_blank" title="Orkut">Orkut</a></span></div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="endereco">
+				<div>Endereço OAB/DF &gt; <span>SEPN 516 Bloco B  - Asa Norte - CEP 70.770-522 - Brasília/DF</span></div>
+				<div class="margem">Telefone &gt; <span>(61) 3036-7000</span></div>
+				<div class="clear"></div>
+			</div>
+			<div class="quemFaz">
+				<div class="texto">Criação e Produção</div>
+				<div class="imagem"><a href="http://www.leadbrasilia.com.br" target="_blank"><img src="/entidade/457/1678/images/logo_lead.png" alt="Lead Produções Artisticas" /></a><span>Lead e </span><a href="http://www.webadvisor.com.br" target="_blank"><img src="/entidade/457/1678/images/logoWeb.png" alt="Webadvisor" /></a><span>Webadvisor</span></div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-6112535-46");
+		pageTracker._trackPageview();
+	</script>
+	<div id="modalEmail" title="Enviar por e-mail">
+		<form id="formEmail" name="formEmail" action="" method="post">
+			<label for="nomeorigem">Nome</label>
+			<input type="text" name="nomeorigem" id="nomeorigem" />
+			<label for="emailorigem">Email</label>
+			<input type="text" name="emailorigem" id="emailorigem" />
+			<label for="nomedest">Nome do destinatário</label>
+			<input type="text" name="nomedest" id="nomedest" />
+			<label for="emaildest">Email do destinatário</label>
+			<input type="text" name="emaildest" id="emaildest" />
+		</form>
+	</div>
+</body>
+</html>

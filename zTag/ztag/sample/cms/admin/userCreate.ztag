@@ -1,0 +1,30 @@
+<!-- zheader:locationif use="!userLogged" notcondition="len()" value="/logOn.php" /-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="Create Table - Users" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Create Table - Users (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Source" />)</h1>
+    <zhtml:a href="." value="back" /> - <zhtml:a href="userDrop.ztag" value="Drop" />
+
+    <zdbal:open id="myConn" driver="mysql" host="localhost" database="zcms" user="zcmsuser" password="z4321" />
+    	<zdbal:execute use="myConn">
+      CREATE TABLE IF NOT EXISTS users (
+        CD_USER int(11) NOT NULL AUTO_INCREMENT COMMENT 'User Id',
+        NM_USER varchar(30) NOT NULL COMMENT 'User Name',
+        DS_USERNAME varchar(20) NOT NULL COMMENT 'User',
+        DS_PASSWORD varchar(20) NOT NULL COMMENT 'Passwords',
+        DT_INSERT timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Insert date',
+        DT_LASTLOGIN timestamp NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Last login date',
+        PRIMARY KEY (CD_USER),
+        KEY DS_USERNAME (DS_USERNAME)
+      ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='Users' AUTO_INCREMENT=5 ;
+      </zdbal:execute>
+    <zdbal:close use="myConn" />
+  </body>
+</html>
+
+

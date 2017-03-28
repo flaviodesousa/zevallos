@@ -1,0 +1,14 @@
+Lista de notícias
+http://agencia.tse.gov.br/sadAdmAgencia/noticiaSearch.do?acao=searchSimple&tipoOrigemMateriaId=1
+
+<a href="(?P<url>[^"]+)"[^>]+>(?P<hour>\d+)h(?P<minute>\d+) - (?P<title>.+?)</a>
+<a href="(?P<url>noticiaSearch\.do\?acao=get&id=(?P<pageid>\d+)[^"]+)" class="[^"]+">(?P<hour>\d+)h(?P<minute>\d+) - (?P<title>.+?)</a>
+
+Corpo
+http://agencia.tse.gov.br/sadAdmAgencia/noticiaSearch.do?acao=get&id=1367510&toAction=NOTI_AGENCIA_PAGE_PRINT&print=true
+
+<p>(?P<day>\d+) de (?P<monthtext>[^ ]+) de (?P<year>\d+) - (?P<hour>\d+)h(?P<minute>\d+)</p><h1[^>]+>(?P<title>.*?)</h1><p>(?P<body>.*?)<br /><br /><a href="\?acao=get
+
+Legado
+http://agencia.tse.gov.br/sadAdmAgencia/noticiaSearchInSession.do?acao=searchSimple&listState.index=0
+http://agencia.tse.gov.br/sadAdmAgencia/noticiaSearchInSession.do?acao=searchSimple&listState.index=24

@@ -1,0 +1,523 @@
+<?php
+// ob_start('ob_tidyhandler');
+// http://www.php.net/manual/en/function.ob-tidyhandler.php
+ob_start();
+
+$startMemoryPeak = memory_get_peak_usage();
+$startMemory = memory_get_usage();
+$startMemoryReal = memory_get_usage(1);
+
+$startDate = date('H:i:s.u');
+
+$startTime = microtime();
+
+// header('ETag: "'.$time.'"');
+
+// http://api.ipinfodb.com/v3/ip-city/?key=719e093472e68a38eaa725a5703f3126428a970cef75034b8828680510b31141&ip=187.104.208.222
+// http://api.ipinfodb.com/v3/ip-country/?key=719e093472e68a38eaa725a5703f3126428a970cef75034b8828680510b31141&ip=187.104.208.222
+
+/* Ver o allow_url_fopen - http://www.php.net/manual/en/wrappers.phar.php
+ * phar://
+ */
+
+require_once('config.inc.php');
+require_once('d2lib.inc.php');
+require_once('d2GetIP.inc.php');
+
+// include(dirname($_SERVER['DOCUMENT_ROOT']) . DIRECTORY_SEPARATOR . 'file.php')
+
+/* Estudar o uso de conexões persistentes pelo menos para o Cache
+ * http://www.php.net/manual/en/features.persistent-connections.php
+ * http://www.php.net/manual/en/function.register-shutdown-function.php
+ */
+
+$siteTitle 			 = 'Direito 2 | Notícias de Direito';
+$siteURL         = Domain;
+$siteDescription = 'O Direito 2 é o maior acervo de notícias de Direito do Brasil com mais de 700 mil notícias desde 1998, atualizado a cada 15 minutos.';
+$siteLanguage    = 'pt-br';
+$siteCreator     = 'Direito 2';
+$siteEncoding    = 'iso-8859-1';
+$siteContentType = 'text/xml';
+$siteCharSet     = 'iso-8859-1';
+$breadcrumbs     = '';
+$tipoFonte       = 0;
+
+if (gJS || gFeed) {
+	myConnect();
+
+	$limit = " LIMIT 50";
+
+	if (gPath) {
+		$source = " AND UPPER(REPLACE(sg_fonte, ' ', '')) = '".gPath."'";
+		if (!gFeed) $limit = " LIMIT 14";
+	}
+
+	$sql = "SELECT SQL_CACHE nm_noticia
+	        , ds_noticia
+					, SUBSTRING(nh.ds_url, 1,  LENGTH(nh.ds_url) - 4) ds_url
+					, DATE_FORMAT(dt_referencia, '%Y-%m-%d %H:%i:%s') dt_referenciah
+					, CASE WHEN HOUR(dt_referencia) = 0 AND MINUTE(dt_referencia) = 0 AND SECOND(dt_referencia) = 0 THEN DATE_FORMAT(dt_referencia, '%d/%m/%Y') ELSE DATE_FORMAT(dt_referencia, '%d/%m/%Y %H:%i:%s') END dt_referenciap
+					, nm_fonte
+					, sg_fonte
+					, UPPER(REPLACE(sg_fonte, ' ', '')) sg_fonte_cu
+					, LOWER(REPLACE(sg_fonte, ' ', '')) sg_fonte_cl
+					FROM tb_noticia n
+					LEFT JOIN tb_noticia_hash nh ON n.cd_noticia_hash = nh.cd_noticia_hash
+					LEFT JOIN tb_fonte f ON n.cd_fonte = f.cd_fonte
+					WHERE n.fl_ativo = 1 AND dt_referencia <= NOW() $source
+					ORDER BY dt_referencia DESC, nm_noticia
+					$limit";
+
+	$justicaNews = myQuery($sql);
+
+	if (gFeed) $siteCategory = '<category><![CDATA['.gPath.']]></category>';
+
+	switch (gFeed) {
+		case 1: // RSS
+			require_once('d2FeedRSS.inc.php');
+			break;
+
+		case 2: // RSS 2
+			require_once('d2FeedRSS2.inc.php');
+			break;
+
+		case 3: // Atom
+			$siteCategoryAtom = '<category scheme="'.Domain.'" term="'.gPath.'" />';
+			require_once('d2FeedAtom.inc.php');
+			break;
+
+		case 4: // RDF
+			$siteCategoryRDF  = '<dc:subject><![CDATA['.gPath.']]></dc:subject>';
+			require_once('d2FeedRDF.php');
+			break;
+
+		default:
+			require_once('d2NoticiasMeio.inc.php');
+	}
+
+	mysql_free_result($justicaNews);
+
+	myDisconnet();
+
+} else {
+	myConnect();
+
+	switch (gCommand) {
+		case 8023:
+			myQuery('UPDATE tb_noticia_hash SET hs_noticia = MD5(ds_url)');
+			myQuery('UPDATE tb_noticia SET tb_noticia.cd_noticia_hash = (SELECT cd_noticia_hash FROM tb_noticia_hash where tb_noticia.cd_noticia = tb_noticia_hash.cd_noticia ORDER BY tb_noticia_hash.cd_noticia_hash DESC LIMIT 1)');
+
+	}
+
+	$doCache = 0;
+
+	if ($_REQUEST['server']) {$doCache = 0; require_once('serverTest.php');}
+
+	switch (parOption) {
+		case 400: // listYear
+			$titleH1 		 = 'Erro '.gError;
+			$title 			 = $titleH1.' | Direito 2';
+			$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a>';
+			break;
+
+		case 1: // listYear
+			$doCache = 1;
+			$titleH1 		 = 'Arquivo de Notícias';
+			$title 			 = $titleH1.' | Direito 2';
+			$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a>';
+			break;
+
+		case 2: // listMonth
+			$doCache = 1;
+			$titleH1 		 = 'Notícias de '.gYear;
+			$title 			 = $titleH1.' | Direito 2';
+			$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a> » <a href="/noticias" title="Arquivo de notícias">Arquivo</a>';
+			break;
+
+			case 3: // listDay
+			$doCache = 1;
+			$titleH1 		 = 'Notícias de '.gMonth.' de '.gYear;
+			$title 			 = $titleH1.' | Direito 2';
+			$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a> » <a href="/noticias" title="Arquivo de notícias">Arquivo</a> » <a href="/noticias/'.gYear.'" title="Arquivo de notícia de '.gYear.'">'.gYear.'</a>';
+			break;
+
+		case 4: // listSource
+			$doCache = 1;
+			$titleH1 		 = 'Notícias de '.gDay.' de '.gMonth.' de '.gYear;
+			$title 			 = $titleH1.' | Direito 2';
+			$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a> » <a href="/noticias" title="Arquivo de notícias">Arquivo</a> » <a href="/noticias/'.gYear.'" title="Arquivo de notícia de '.gYear.'">'.gYear.'</a> » <a href="/noticias/'.gYear.'/'.gMonth.'">'.gMonth.'</a>';
+			break;
+
+		case 5: // listNews
+			$doCache = 1;
+			$titleH1 		 = gSource.' - '.gDay.' de '.gMonth.' de '.gYear;
+			$title 			 = $titleH1.' | Direito 2';
+			$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a> » <a href="/noticias" title="Arquivo de notícias">Arquivo</a> » <a href="/noticias/'.gYear.'" title="Arquivo de notícia de '.gYear.'">'.gYear.'</a> » <a href="/noticias/'.gYear.'/'.gMonth.'">'.gMonth.'</a> » <a href="/noticias/'.gYear.'/'.gMonth.'/'.gDay.'">'.gDay.'</a>';
+			break;
+
+		case 6: // showNews
+			if (!fullSearch) $doCache = 1;
+
+			$sql = 'SELECT n.cd_noticia
+							, nm_noticia
+							, n.ds_noticia
+							, SUBSTRING(nh.ds_url, 1,  LENGTH(nh.ds_url) - 4) ds_url
+							, (SELECT ds_url FROM tb_noticia_hash WHERE n.cd_noticia = cd_noticia AND cd_noticia_hash <> n.cd_noticia_hash LIMIT 1) ds_url_old
+							, f.ds_url ds_url_fonte
+							, nm_fonte
+							, sg_fonte
+							, nu_port
+							, nm_mes
+							, sg_mes3
+							, DATE_FORMAT(dt_referencia, \'%d/%m/%Y\') dt_referencia
+							, CASE WHEN HOUR(dt_referencia) = 0 AND MINUTE(dt_referencia) = 0 THEN DATE_FORMAT(dt_referencia, \'%d/%m/%Y\') ELSE DATE_FORMAT(dt_referencia, \'%d/%m/%Y %H:%i\') END dt_referenciaf
+							, dt_referencia_day
+							, dt_referencia_month
+							, dt_referencia_year
+							, tp_fonte
+							, n.cd_fonte
+							FROM tb_noticia n
+							LEFT JOIN tb_mes ON cd_mes = dt_referencia_month
+							LEFT JOIN tb_fonte f ON n.cd_fonte = f.cd_fonte
+							LEFT JOIN tb_noticia_hash nh ON n.cd_noticia_hash = nh.cd_noticia_hash
+							WHERE n.fl_ativo = 1
+							AND nh.hs_noticia = MD5(\''.gFilename.'\')';
+
+			// die("<pre>$sql");
+
+			$showNews = myQuery($sql);
+
+			if ($snRow = mysql_fetch_object($showNews)) {
+				$titleH1 		 = $snRow->nm_noticia;
+				$title 			 = $titleH1.' | Direito 2';
+				$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a> » <a href="/noticias" title="Arquivo de notícias">Arquivo</a> » <a href="/noticias/'.gYear.'" title="Arquivo de notícia de '.gYear.'">'.gYear.'</a> » <a href="/noticias/'.gYear.'/'.gMonth.'">'.gMonth.'</a> » <a href="/noticias/'.gYear.'/'.gMonth.'/'.gDay.'">'.gDay.'</a> » <a href="/'.gSource.'/'.gYear.'/'.gMonth.'/'.gDay.'">'.gSource.'</a>';
+				$tipoFonte   = $snRow->tp_fonte;
+				$fonteURL    = $snRow->ds_url_fonte;
+
+				if (substr($fonteURL, -1) == '/') $fonteURL = substr($fonteURL, 1, -1);
+
+				if ($snRow->nu_port) $fonteURL .= ":$snRow->nu_port";
+
+			}
+
+			mysql_free_result($showNews);
+			break;
+
+		case 7: // busca
+			$titleH1 		 = 'Busca - '.fullSearch;
+			$title 			 = $titleH1.' | Direito 2';
+			$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a>';
+			break;
+
+		case 8: // fontes
+			$sql = 'SELECT SQL_CACHE nm_noticia
+							, SUBSTRING(nh.ds_url, 1,  LENGTH(nh.ds_url) - 4) ds_url
+							, DATE_FORMAT(dt_referencia, \'%Y-%m-%d %H:%i:%s\') dt_referenciah
+							, DATE_FORMAT(dt_referencia, \'%d/%m/%Y %H:%i:%s\') dt_referenciap
+							, nm_fonte
+							, sg_fonte
+							, nm_mes
+							FROM tb_noticia n
+							LEFT JOIN tb_mes ON cd_mes = dt_referencia_month
+							LEFT JOIN tb_fonte f ON n.cd_fonte = f.cd_fonte
+							LEFT JOIN tb_noticia_hash nh ON n.cd_noticia_hash = nh.cd_noticia_hash
+							WHERE n.fl_ativo = 1 AND LOWER(REPLACE(sg_fonte, \' \', \'\')) = \''.gPath.'\'
+							ORDER BY dt_referencia_year DESC, dt_referencia_month DESC, dt_referencia_day DESC, nm_noticia
+							LIMIT 50';
+
+			// die("<pre>$sql");
+
+			$listaFonte = myQuery($sql);
+
+			if ($lfRow = mysql_fetch_object($listaFonte)) {
+				$doCache = 1;
+
+				$titleH1 		 = "$lfRow->sg_fonte - $lfRow->nm_fonte";
+				$title 			 = $titleH1.' | Direito 2';
+				$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a>';
+
+			} else {
+				$lfError = 1;
+
+				$titleH1 		 = 'Erro 404 - Página não encontrada';
+				$title 			 = $titleH1.' | Direito 2';
+				$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a>';
+			}
+
+			break;
+
+		case 9: // listClima
+			$titleH1 		 = 'Clima';
+			$title 			 = $titleH1.' | Direito 2';
+			$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a>';
+			break;
+
+		case 10: // listCotacoes
+			$titleH1 		 = 'Cotações';
+			$title 			 = $titleH1.' | Direito 2';
+			$breadcrumbs = ' » <a href="/" title="Página inicial">Início</a>';
+			break;
+
+		default:
+			$title = $siteTitle;
+			$homeJS = 1;
+
+	}
+
+	require_once('d2HTMLBegin.inc.php');
+	require_once('d2Head.inc.php');
+	require_once('d2BodyBegin.inc.php');
+	require_once('d2Universal.inc.php');
+
+	echo '<div id="body">
+					<div id="site">';
+
+		require_once('d2Barra.inc.php');
+		require_once('d2Topo.inc.php');
+		require_once('d2Menu.inc.php');
+
+		switch (parOption) {
+			case 400: // error
+				echo '<div id="bloco" class="corpo content">
+								<div id="areatexto">
+									<h1>'.$titleH1.'</h1>
+									<br />Endereço: http://'.$_SERVER[SERVER_NAME].$_SERVER[REQUEST_URI].'
+									<br />Porta: '.$_SERVER[SERVER_PORT].'
+									<br />Método: '.$_SERVER[REQUEST_METHOD].'
+									<br />Endereço do servidor: '.$_SERVER[SERVER_ADDR].'
+								</div>';
+
+					require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			case 1: // listYear
+				echo '<div id="bloco" class="corpo content">';
+					echo '<div id="areatexto">
+								<a title="Você está na lista de anos das notícias publicadas" accesskey="1" href="#conteudo" name="conteudo"></a>';
+
+						require_once('d2ListYear.inc.php');
+
+					echo '</div>';
+
+					require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			case 2: // listMonth
+				echo '<div id="bloco" class="corpo content">';
+					echo '<div id="areatexto">
+								<a title="Você está na lista dos meses das notícias publicadas" accesskey="1" href="#conteudo" name="conteudo"></a>';
+
+						require_once('d2ListMonth.inc.php');
+
+					echo '</div>';
+
+					require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			case 3: // listDay
+				echo '<div id="bloco" class="corpo content">';
+					echo '<div id="areatexto">
+								<a title="Você está na lista dos dias das notícias publicadas" accesskey="1" href="#conteudo" name="conteudo"></a>';
+
+						require_once('d2ListDay.inc.php');
+
+					echo '</div>';
+
+					require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			case 4: // listSource
+				echo '<div id="bloco" class="corpo content">';
+					echo '<div id="areatexto">
+								<a title="Você está na lista das com as notícias publicadas" accesskey="1" href="#conteudo" name="conteudo"></a>';
+
+						require_once('d2ListSource.inc.php');
+
+					echo '</div>';
+
+					require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			case 5: // listNews
+				echo '<div id="bloco" class="corpo content">';
+					echo '<div id="areatexto">
+								<a title="Você está na lista das notícias" accesskey="1" href="#conteudo" name="conteudo"></a>';
+
+						require_once('d2ListNews.inc.php');
+
+					echo '</div>';
+
+					require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			case 6: // showNews
+				echo '<div id="bloco" class="corpo content">';
+					echo '<div id="areatexto">';
+
+					if($snRow) {
+						echo '<a title="Você está na notícia" accesskey="1" href="#conteudo" name="conteudo"></a>';
+
+						require_once('d2ShowNews.inc.php');
+
+					} else {
+						echo '<h1>Página não encontrada</h1>
+									<p><br />A página abaixo não foi encontrada no site. Pode ser que voce tenha escrito o endereço errado ou ela tenha sido excluida:
+									<br />
+									<br />'.$_SERVER[REQUEST_URI].'</p>';
+
+					}
+
+					echo '</div>';
+
+					require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			case 7: // fullSearch
+				echo '<div id="bloco" class="corpo content">';
+					echo '<div id="areatexto">
+								<a title="Você está no resultado da busca por notícias" accesskey="1" href="#conteudo" name="conteudo"></a>';
+
+						require_once('d2Search.inc.php');
+
+					echo '</div>';
+
+					require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			case 8: // listFontes
+				echo '<div id="bloco" class="corpo content">';
+
+				if ($lfError) {
+					echo '<div id="areatexto">
+									<h1>'.$titleH1.'</h1>
+									<br />Endereço: http://'.$_SERVER[SERVER_NAME].$_SERVER[REQUEST_URI].'
+									<br />Porta: '.$_SERVER[SERVER_PORT].'
+									<br />Método: '.$_SERVER[REQUEST_METHOD].'
+									<br />Endereço do servidor: '.$_SERVER[SERVER_ADDR].'
+								</div>';
+
+				} else {
+					echo '<div id="areatexto">
+								<a title="Você está na lista das fontes das notícias publicadas" accesskey="1" href="#conteudo" name="conteudo"></a>';
+
+						require_once('d2ListaFonte.inc.php');
+
+					echo '</div>';
+
+				}
+
+				require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			case 9: // listClima
+				echo '<div id="bloco" class="corpo content">';
+					echo '<div id="areatexto">
+								<a title="Você está na lista do clima" accesskey="1" href="#conteudo" name="conteudo"></a>';
+
+						require_once('d2ListClima.inc.php');
+
+					echo '</div>';
+
+					require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			case 10: // listCotacoes
+				echo '<div id="bloco" class="corpo content">';
+					echo '<div id="areatexto">
+								<a title="Você está na lista das cotações" accesskey="1" href="#conteudo" name="conteudo"></a>';
+
+						require_once('d2ListCotacoes.inc.php');
+
+					echo '</div>';
+
+					require_once('d2ColRight.inc.php');
+				echo '</div>';
+				break;
+
+			default:
+				echo '<div id="bloco" class="corpo">
+								<a title="Você está no início do conteúdo da página principal. Aqui voce terá vários blocos de notícias em destaque" accesskey="1" href="#conteudo" name="conteudo"></a>';
+						require_once('d2HomeEsquerda.inc.php');
+						require_once('d2HomeMeio.inc.php');
+						require_once('d2HomeDireita.inc.php');
+						require_once('d2HomeExtra.inc.php');
+				echo '</div>';
+
+		}
+
+		myDisconnet();
+
+		require_once('d2Footer.inc.php');
+
+	echo '	</div>
+				</div>';
+
+	$stopTime = microtime();
+
+	$stopDate = date('H:i:s.u');
+
+	$stopMemory = memory_get_usage();
+	$stopMemoryReal = memory_get_usage(1);
+	if ($_REQUEST['stats']) {
+		echo '<div style="color:#FFAB2E;">';
+		echo '<br />Execution time: ', number_format($stopTime - $startTime, 3), 'ms (s', number_format($startTime, 3), ',', $startDate, '/t', number_format($stopTime, 3), ',', $stopDate, ')';
+		echo '<br />Memory usage: ', number_format($stopMemory - $startMemory, 0);
+		echo '<br />Memory real usage: ', number_format($stopMemoryReal - $startMemoryReal, 0);
+		echo '<br />Memory peak: ', number_format($startMemoryPeak, 0);
+		echo '<br />Memory peak: ', number_format(memory_get_peak_usage(), 0);
+		echo '</div>';
+	}
+
+	require_once('d2BodyEnd.inc.php');
+	require_once('d2HTMLEnd.inc.php');
+
+	if (gCache === 2323) rrmdir(DocumentRoot.'/cache/');
+
+	$pageContent = ob_get_contents();
+	ob_end_clean();
+
+	$lenBefore = strlen($pageContent);
+
+  // $pageContent = str_replace("\r\n", "", $pageContent);
+
+	$lenAfter = strlen($pageContent);
+
+	if(!ob_start('ob_gzhandler')) ob_start();
+
+	if ($lenAfter && $doCache) {
+		$fullPath = DocumentRoot.'/cache/'.gPath;
+
+		if (!file_exists($fullPath)) mkdir($fullPath, 0777, 1);
+
+	  $file = fopen($fullPath.'/'.gFile, "w");
+
+		fputs($file, $pageContent);
+
+		fclose($file);
+	}
+
+	echo $pageContent;
+
+	// echo "<br />lenBefore=", number_format($lenBefore, 0);
+	// echo "<br />lenAfter=", number_format($lenAfter, 0);
+
+	/* Ítens que estão faltando
+	 *
+	 * Cache no HTML
+	 *
+	 * Cache usando SQL e/ou MemCache
+	 *
+	 * Compactador de HTML e TidyHTML
+	 *
+	 */
+}

@@ -1,0 +1,106 @@
+<?php
+/**
+ * @autor Emerson Casas Salvador - salvaemerson@gmail.com
+ */
+
+$pacrudText[0] = 'Instalação';
+$pacrudText[1] = 'Configurações gerais';
+$pacrudText[2] = 'Banco de dados';
+$pacrudText[3] = 'Gerar Arquivos de configuração';
+$pacrudText[4] = 'Permissão negada, digite o seguinte comando para habilitar a escrita na pasta "%s"';
+$pacrudText[5] = 'Em Seguida pressione F5 para atualizar';
+$pacrudText[6] = 'Criando usuário';
+$pacrudText[7] = 'Erro ao criar usuário';
+$pacrudText[8] = 'Criando banco de dados';
+$pacrudText[9] = 'Erro ao criar banco de dados';
+$pacrudText[10] = 'Criando tabelas do paCRUD no banco de dados';
+$pacrudText[11] = 'Erro ao criar tabelas no banco de dados';
+$pacrudText[12] = 'Os arquivos foram gravados na pasta "example", copie-os para a pasta da sua aplicação';
+$pacrudText[13] = 'Está pronto!';
+$pacrudText[14] = 'Clique aqui';
+$pacrudText[15] = 'para acessar sua aplicação';
+$pacrudText[16] = 'Autenticação';
+$pacrudText[17] = 'Usuário';
+$pacrudText[18] = 'Senha';
+$pacrudText[19] = 'Acessar';
+$pacrudText[20] = 'sair';
+$pacrudText[21] = 'Usuário ou senha incorreta';
+$pacrudText[22] = 'Gravando arquivo';
+$pacrudText[23] = 'Problema de conectividade com o servidor de banco de dados';
+$pacrudText[24] = 'Carregando';
+$pacrudText[25] = 'não remover estas linhas';
+$pacrudText[26] = 'instalação abortada';
+$pacrudText[27] = 'sgdb não suportado';
+$pacrudText[28] = 'desconhecido para pacrudError';
+$pacrudText[29] = 'Problema de conectividade com o banco de dados para o usuário';
+$pacrudText[30] = 'Propriedade xmlFile não especificada para objeto pacrudSearch';
+$pacrudText[31] = 'Seu browser não suporta Ajax XMLHttpRequest';
+$pacrudText[32] = 'Erro ao obter os dados de ';
+$pacrudText[33] = 'Formato desconhecido "';
+$pacrudText[34] = 'Formato XML inválido para "';
+$pacrudText[35] = 'Registros encontrados';
+$pacrudText[36] = 'Mostrando de';
+$pacrudText[37] = 'Página';
+$pacrudText[38] = 'de';
+$pacrudText[39] = 'até';
+$pacrudText[40] = 'Pesquisar';
+$pacrudText[41] = 'Todos';
+$pacrudText[42] = 'Cadastrar';
+$pacrudText[43] = 'contém';
+$pacrudText[44] = 'não contém';
+$pacrudText[45] = 'começa com';
+$pacrudText[46] = 'termina com';
+$pacrudText[47] = 'não começa com';
+$pacrudText[48] = 'não termina com';
+$pacrudText[49] = 'igual a';
+$pacrudText[50] = 'diferente de';
+$pacrudText[51] = 'menor que';
+$pacrudText[52] = 'maior que';
+$pacrudText[53] = 'menor ou igual a';
+$pacrudText[54] = 'maior ou igual a';
+$pacrudText[55] = 'Início';
+/*
+$pacrudText[56] = '';
+$pacrudText[57] = '';
+$pacrudText[58] = '';
+$pacrudText[59] = '';
+$pacrudText[60] = '';
+$pacrudText[61] = '';
+$pacrudText[62] = '';
+$pacrudText[63] = '';
+$pacrudText[64] = '';
+$pacrudText[65] = '';
+$pacrudText[66] = '';
+$pacrudText[67] = '';
+$pacrudText[68] = '';
+$pacrudText[69] = '';
+$pacrudText[70] = '';
+*/
+
+$pacrudTextAbout[0] = 'Sobre o paCRUD';
+$pacrudTextAbout[1] = 'Versão';
+$pacrudTextAbout[2] = 'Site do projeto';
+$pacrudTextAbout[3] = 'O que é paCRUD?';
+$pacrudTextAbout[4] = '<b>paCRUD - PHP Ajax CRUD Framework</b> é um Framework PHP/Ajax com funcionalidades CRUD (Create, Retrieve, Update e Delete) para desenvolvimento rápido de sistemas de informação com bancos de dados PostgreSQL ou MySQL.';
+$pacrudTextAbout[5] = 'A missão do projeto paCRUD, é potencializar a eficiência do desenvolvedor de sistemas de informação, separando completamente as regras de negócio da programação das funcionalidades comuns aos SIs, através de um Framework Ajax leve e fácil de usar.';
+$pacrudTextAbout[6] = 'Tecnologias envolvidas no projeto paCRUD';
+$pacrudTextAbout[7] = 'A direita você pode observar a "salada tecnológica paCRUD".';
+$pacrudTextAbout[8] = 'Na parte superior, estão os logos das tecnologias que o paCRUD depende ou suporta. Observe que no topo está o W3C, o paCRUD respeita os padrões WEB para garantir	que sua aplicação irá rodar em qualquer browser que também esteja dentro das normas.';
+$pacrudTextAbout[9] = 'Embaixo do logo paCRUD, estão as tecnologias que utilizamos no desenvolvimento do framework.';
+$pacrudTextAbout[10] = 'Missão paCRUD';
+$pacrudTextAbout[11] = 'A missão do projeto paCRUD, é potencializar a eficiência do desenvolvedor de sistemas de informação, separando completamente as regras de negócio da programação das funcionalidades comuns aos SIs, através de um Framework Ajax leve e fácil de usar';
+$pacrudTextAbout[12] = 'O projeto paCRUD está alinhado a missão da CONSOLI que é "promover a troca de conhecimento acerca do software livre entre os integrantes, principalmente o conhecimento tácito (conhecimento da pessoa). Um espaço onde este conhecimento possa ser movimentado e transferido entre os membros".';
+
+$pacrudTextDesktop[0] = 'Bem vindo ao paCRUD Framework!';
+$pacrudTextDesktop[1] = 'Esta é a área de trabalho da sua aplicação.';
+$pacrudTextDesktop[2] = 'A equipe paCRUD preparou para você, algumas ferramentas que permitirão personalizar a aparência do seu ambiente de trabalho. Veja a seguir algumas dicas de como configurar o paCRUD Framework.';
+$pacrudTextDesktop[3] = 'Arquivo de Configuração';
+$pacrudTextDesktop[4] = 'O arquivo de configuração do paCRUD é o "pacrud.php", que foi gerado pelo assistente de instalação e movido para a pasta raiz da sua aplicação. Neste arquivo estão contidas as configurações do framework, como nome da sua aplicação, idioma etc.';
+$pacrudTextDesktop[5] = 'Existe um arquivo na raiz do paCRUD denominado "config_default.php", que contém praticamente os mesmos parâmetros do seu pacrud.php. Atenção <b>não altere este arquivo</b>, ele poderá ser sobrescrito quando você atualizar o paCRUD. Mantenha todas as suas configurações no seu pacrud.php. Caso você precise alterar algum parâmetro que existe no config_default.php mas não existe no seu pacrud.php, copie o parâmetro para o seu arquivo pacrud.php fazendo a alteração nele.';
+$pacrudTextDesktop[6] = 'Menu';
+$pacrudTextDesktop[7] = 'Um menu de exemplo é disponibilizado juntamente com o paCRUD, e você pode criar seu menu personalizado. Existem duas formas de fazê-lo, menu dinâmico ou estático.';
+$pacrudTextDesktop[8] = 'Para criar um menu estático apenas crie um arquivo menu.xml na raiz da sua aplicação seguindo o mesmo formato do menu de exemplo que pode pode ser acessado em %s. Recomendamos salvar este arquivo e fazer alterações de acordo com suas necessidades.';
+$pacrudTextDesktop[9] = 'Você também pode criar um menu dinâmico com suas regras de negócio específicas. A forma de fazêlo é muito semelhante ao menu estático, a diferença é que ao invés de criar um arquivo menu.xml, você deverá criar um arquivo menu_xml.php na raiz da sua aplicação. Este script php deverá ser capaz de montar o xml com o mesmo formato.';
+$pacrudTextDesktop[10] = 'Uma configuração que pode ser útil é o opened="1" no seu arquivo xml, ele serve para definir se o menu será desenhado aberto (mostrando o submenu) ou fechado (nesse caso o submenu será aberto quando o usuário clicar no menu).';
+$pacrudTextDesktop[11] = 'Área de trabalho';
+$pacrudTextDesktop[12] = 'Esta página que você está visualizando é a Área de trabalho da sua aplicação, ela pode facilmente personalizada. Basta criar um arquivo desktop.php na raiz da sua aplicação com o conteúdo que você desejar.';

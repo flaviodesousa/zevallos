@@ -1,0 +1,33 @@
+<FilesMatch "\.(ttf|otf|eot|woff|css)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
+
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+AddType application/vnd.ms-fontobject eot
+AddType font/truetype ttf
+AddType font/opentype otf
+AddType application/x-font-woff woff
+
+RewriteEngine on
+# RewriteOptions MaxRedirects=10
+# RewriteLog file-path
+# RewriteLogLevel Level
+
+
+# ReadmeName /ztag/dir/readme.html
+# HeaderName /ztag/dir/header.shtml
+
+IndexOptions +FoldersFirst +IgnoreCase +DescriptionWidth=* +NameWidth=* +ScanHTMLTitles
+
+Options +FollowSymLinks
+
+DirectoryIndex index.ztag default.ztag index.php default.php
+
+RewriteCond %{QUERY_STRING} (.+)
+RewriteRule ^(.*)\.ztag$ /ztag/ztag.php?temp=$1.ztag [QSA,NC,L]
+
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.ztag$ /ztag/ztag.php?temp=$1.ztag [NC,L]

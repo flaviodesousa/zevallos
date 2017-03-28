@@ -1,0 +1,154 @@
+#!/usr/bin/perl
+# vim:ts=2:sw=2:et:
+# For licensing and copyright terms, see the file named LICENSE
+use strict;
+use IO::File;
+
+# We are invoked by sshd as the repo serving user in place of the actual
+# command they requested.
+# Our purpose is to interpose and ensure that the underlying tool looks
+# only at the appropriate location
+
+# Our parameters are:
+# $1: path to the mtrack config.ini file
+# $2: the mtrack username
+# However, at least on OS/X, we get invoked as "-c '$1 $2'", so we need
+# to check for that.
+
+my ($inifile, $username, $mtrack) = @ARGV;
+
+if ($inifile eq '-c') {
+  require 'shellwords.pl';
+  @ARGV = &shellwords($username);
+  shift @ARGV;
+  ($inifile, $username, $mtrack) = @ARGV;
+}
+$ENV{MTRACK_CONFIG_FILE} = $inifile;
+
+# The command requested by the remote user is stored in this envvar.
+my $cmd = $ENV{SSH_ORIGINAL_COMMAND};
+
+sub validate_reponame {
+  my ($name) = @_;
+
+  if ($name =~ m/^[a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+$/) {
+    if ($name !~ m/\.\./) {
+      my $base = get_cfg('repos', 'basedir');
+      if (! -d "$base/$name") {
+        print STDERR "Non-existant repo $name\n";
+        exit(1);
+      }
+
+      # Sanity check that we at least have checkout access
+      my $php = get_tool('php');
+      if (system($php, "$mtrack/bin/acl-check.php", $username, '--repo',
+          $name, 'checkout')) {
+        print STDERR "$username does not have checkout permission on $name\n";
+        exit(1);
+      }
+
+      return "$base/$name";
+    }
+  }
+  print STDERR "Invalid repo name $name\n";
+  exit(1);
+}
+
+my %CFG;
+
+sub read_config_file {
+  my $f = IO::File->new($inifile);
+  if (!$f) {
+    print STDERR "Unable to open ini file $inifile: $!\n";
+    exit(1);
+  }
+  my $sect = undef;
+  while (<$f>) {
+    my $line = $_;
+    $line =~ s/;.*$//;
+    $line =~ s/\s+$//;
+    if ($line =~ m/^\[(.*)\]$/) {
+      $sect = $1;
+      next;
+    }
+    if ($line =~ m/^(\S+)\s*=\s*"(.*)"$/) {
+      $CFG{$sect}{$1} = $2;
+      next;
+    }
+    if ($line =~ m/^(\S+)\s*=\s*(.*)$/) {
+      $CFG{$sect}{$1} = $2;
+      next;
+    }
+  }
+}
+
+sub get_cfg {
+  my ($sect, $name) = @_;
+  my $val;
+
+  if (not exists $CFG{$sect}) {
+    return undef;
+  }
+  if (not exists $CFG{$sect}{$name}) {
+    return undef;
+  }
+  $val = $CFG{$sect}{$name};
+
+  while ($val =~ m/\@\{(\S+):(\S+)\}/) {
+    my ($s, $k) = ($1, $2);
+
+    my $r = '';
+    if (exists $CFG{$s} and exists $CFG{$s}{$k}) {
+      $r = $CFG{$s}{$k};
+    }
+    $val =~ s/\@\{$s:$k\}/$r/g;
+  }
+  return $val;
+}
+
+read_config_file();
+
+sub get_tool {
+  my ($name) = @_;
+  my $tool = get_cfg('tools', $name);
+  if (-x $tool) {
+    return $tool;
+  }
+  print STDERR "tool $name is not configured\n";
+  exit(1);
+}
+
+$ENV{LOGNAME} = $username;
+if (0) {
+  open LOG, ">>/var/tmp/mtrack.ssh.session.log";
+  print LOG "$username $cmd\n";
+  close LOG;
+}
+
+if ($cmd =~ m/^hg -R (\S+) serve --stdio$/) {
+  my $name = validate_reponame($1);
+
+  my $hg = get_tool('hg');
+
+  exec($hg, '-R', $name, 'serve', '--stdio');
+}
+
+if ($cmd =~ m/^git-(\S+)\s+'(\S+)'$/) {
+  my ($verb, $name) = ($1, $2);
+  $name = validate_reponame($name);
+  my $git = get_tool('git');
+
+  exec($git, 'shell', '-c', "git-$verb '$name'");
+}
+
+if ($cmd eq 'svnserve -t') {
+  my $base = get_cfg('repos', 'basedir');
+  if (! -d $base) {
+    print STDERR "basedir $base does not exist\n";
+    exit(1);
+  }
+  my $svnserve = get_tool('svnserve');
+  exec($svnserve, '-r', $base, '-t', "--tunnel-user=$username");
+}
+
+print STDERR "Unsupported command:\n$cmd\n";

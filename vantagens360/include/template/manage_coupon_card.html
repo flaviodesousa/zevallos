@@ -1,0 +1,49 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="coupons">
+	<div class="dashboard" id="dashboard">
+		<ul>${mcurrent_coupon('card')}</ul>
+	</div>
+	<div id="content" class="clear mainwide">
+        <div class="clear box">
+            <div class="box-top"></div>
+            <div class="box-content">
+                <div class="head">
+					<h2>Ticket</h2>
+					<ul class="filter">
+						<li><form method="get">Oferta ID：<input type="text" name="tid" value="${htmlspecialchars($tid)}" class="h-input" />&nbsp;Parceiro ID: <input type="text" name="pid" value="${htmlspecialchars($pid)}" class="h-input" />&nbsp;Codigo:<input type="text" name="code" value="${htmlspecialchars($code)}" class="h-input" />&nbsp;Status:<select name="state">${Utility::Option($usage, $state, 'Todos')}</select>&nbsp;<input type="submit" value="Filtrar" class="formbutton"  style="padding:1px 6px;"/>&nbsp;<input type="submit" name="download" value="Download" class="formbutton"  style="padding:1px 6px;"/><form></li>
+					</ul>
+				</div>
+                <div class="sect">
+					<table id="orders-list" cellspacing="0" cellpadding="0" border="0" class="coupons-table">
+					<tr><th width="120">ID</th><th width="40">Valor</th><th width="120">ID</th><th width="80">Valido</th><th width="100">Status</th><th width="380">Parceiro</th><th width="40">Operação</th></tr>
+					<!--{loop $cards $index $one}-->
+					<tr ${$index%2?'':'class="alt"'} id="team-list-id-{$one['id']}">
+						<td>{$one['id']}</td>
+						<td nowrap>${moneyit($one['credit'])}</td>
+						<td nowrap>{$one['code']}</td>
+						<td nowrap>${date('d-m-Y',$one['begin_time'])}<br/>${date('d-m-Y',$one['end_time'])}</td>
+						<td nowrap>${$one['consume']=='Y' ? 'Usado':'sem uso'}<!--{if $one['consume']=='Y'}-->&nbsp;({$one['team_id']})<!--{/if}--></td>
+						<td>{$one['partner_id']}<!--{if $one['partner_id']}-->&nbsp;({$partners[$one['partner_id']]['title']})<!--{/if}--></td>
+						<td class="op" nowrap><a href="/ajax/manage.php?action=cardremove&id={$one['id']}" class="ajaxlink" ask="Certeza?">Deletar</a></td>
+					</tr>
+					<!--{/loop}-->
+					<tr><td colspan="7">{$pagestring}</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="box-bottom"></div>
+        </div>
+	</div>
+
+<div id="sidebar">
+</div>
+
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->
+

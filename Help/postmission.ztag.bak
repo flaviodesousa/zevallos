@@ -1,0 +1,15 @@
+<style>
+#formx label {font-family: Verdana, Arial; font-size:20px;color:#666666; font-weight:bold;}
+#formx .caixa1 input {font-family: Verdana, Arial; font-size:20px;color:#666666; font-weight:bold;}
+</style>
+
+
+<form action="postmissionsave.ztag" id="formx" >
+  <zform:boxtext class="caixa1" caption="Mission &Title" name="mission_title" />
+
+  <br /><zform:boxtextarea caption="Mission &Description" name="mission_desc"  value=""/>
+
+  <br /><zform:boxtextarea caption="Mission &Private" name="mission_priv" value="" />
+
+  <br /><input type="submit" name="Enviar" />
+</form>

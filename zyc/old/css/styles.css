@@ -1,0 +1,44 @@
+
+.pageContent { font-family:tahoma, arial; font-size:8pt; color:#505050; }
+.pageContent a { font-family:tahoma, arial; font-size:8pt; color:#505050; }
+
+input, select, textarea { font-family:Tahoma,Arial; font-size:8pt; }
+
+p { text-align:justify; margin:0px 0px 9px 0px; }
+
+/* top */
+
+td.menu-bg { background-color:#4DB7DE; }
+
+td.menuitem { color:#ffffff; font-family:tahoma,arial; font-size:10px; font-weight:bold; white-space:nowrap; text-transform:uppercase; }
+td.menuitemactive { text-decoration:underline; color:#ffffff; font-family:tahoma,arial; font-size:10px; font-weight:bold; white-space:nowrap; text-transform:uppercase; }
+td.menuitem a { color:#ffffff; text-decoration:none; }
+td.menuitemactive a { color:#ffffff; text-decoration:underline; }
+td.menudivider1 { background:url(../images/mark.gif) center center no-repeat; }
+td.menumark2 { padding-right:17px; }
+td.menudivider3 { background:url(../images/mark.gif) center center no-repeat; }
+
+div.mycompany { font-size:24px; color:#7f7f7f; font-family:franklingothicmediumc, arial; white-space:nowrap; }
+span.my-color { color:#4DB7DE; font-weight:bold; }
+div.slogan { font-size:10px; color:#a5a5a5; font-family:humanist531cbt, tahoma; margin-top:-5px; }
+
+table.secondmenuitem { border-bottom:1px solid #ffffff; background:#dcdcdc url(../images/2ndmenu_bg.gif) top left no-repeat; }
+td.secondmenuitem { padding-left:11px; width:100%; color:#909090; font-family:tahoma,arial; font-size:8pt; text-transform:lowercase; }
+td.secondmenuitemactive { text-decoration:underline; padding-left:11px; width:100%; color:#909090; font-family:tahoma,arial; font-size:8pt; text-transform:lowercase; }
+td.secondmenuitem a { color:#909090; text-decoration:none; }
+td.secondmenuitemactive a { color:#909090; text-decoration:underline; }
+td.secondmenumark { padding:0px 7px; }
+
+td.pageheader { font-size:18px; color:#9e9e9e; font-family:franklingothicmediumc, arial; font-weight:bold; }
+
+td.thatext { font-family:tahoma, arial; font-size:8pt; color:#505050; vertical-align:top; }
+td.thatext a { color:#505050; }
+
+td.bottommenuitem { color:#4DB7DE; font-family:tahoma,arial; font-size:8pt; white-space:nowrap; text-transform:lowercase; }
+td.bottommenuitemactive { text-decoration:underline; color:#4DB7DE; font-family:tahoma,arial; font-size:8pt; white-space:nowrap; text-transform:lowercase; }
+td.bottommenuitem a { color:#4DB7DE; text-decoration:none; }
+td.bottommenuitemactive a { color:#4DB7DE; text-decoration:underline; }
+td.bottommenudivider { background:url(../images/bottommenu_divider.gif) center center no-repeat; }
+
+td.copy { font-family:tahoma,arial; font-size:10px; color:#878787; }
+td.copy a { color:#878787; }

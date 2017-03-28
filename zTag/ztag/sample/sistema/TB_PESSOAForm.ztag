@@ -1,0 +1,26 @@
+
+<DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Form TB_PESSOA</title>
+<link rel="stylesheet" type="text/css" href="generateForm.css"> 
+</head>
+<body>
+  <div id="stylized" class="myform">
+    <form action="TB_PESSOAFile" method="post">
+      <h1>TB_PESSOA form</h1>
+      <p>Form generated for table TB_PESSOA</p>
+      
+      <label>CD_PESSOA<span class="small">short description form cd_pessoa</span></label> <input type="text" name="CD_PESSOA" id="CD_PESSOA" />
+      <label>NM_PESSOA<span class="small">short description form nm_pessoa</span></label> <input type="text" name="NM_PESSOA" id="NM_PESSOA" />
+      <label>DS_EMAIL<span class="small">short description form ds_email</span></label> <input type="text" name="DS_EMAIL" id="DS_EMAIL" />
+      <label>NU_CPF<span class="small">short description form nu_cpf</span></label> <input type="text" name="NU_CPF" id="NU_CPF" />
+      <label>DS_SENHA<span class="small">short description form ds_senha</span></label> <input type="text" name="DS_SENHA" id="DS_SENHA" />
+      <label>FL_ATIVO<span class="small">short description form fl_ativo</span></label> <input type="text" name="FL_ATIVO" id="FL_ATIVO" />
+      <label>CD_SESSAO_INCLUSAO<span class="small">short description form cd_sessao_inclusao</span></label> <input type="text" name="CD_SESSAO_INCLUSAO" id="CD_SESSAO_INCLUSAO" />
+  
+      <button type="submit">Submit button</button>
+    </form>
+  <div>  
+</body>

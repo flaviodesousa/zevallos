@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zDB - ZTags</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}      
+    </style>
+  </head>
+  <body>
+    <h3>zDB - Gestão dos DBMS</h3>
+    <hr />
+    <br />
+    <h4>PostgreSQL:</h4>
+    <hr />
+    <zdb:open id="pgsqlConn" driver="pgsql" host="#pgsqlHost" database="#pgsqlDatabase" user="#pgsqlUser", password="#pgsqlPassword" />
+      <zdb:query use="pgsqlConn" id="pgsqlQueryFetch">
+        SELECT "CD_CODIGO"
+        , "NM_NOME"
+        , "DS_INCLUSAO"
+        FROM ZDBTESTE
+        ORDER BY "NM_NOME"
+      </zdb:query> 
+
+      <zdb:fetch use="pgsqlQueryFetch" id="pgsqlFetch" /> 
+
+      <b>Fetch:</b>
+      <br />BOF: <zdb:bof use="pgsqlFetch" />
+
+      <table border="1">
+        <tr><th>Id</th><th>Nome</th><th>Inclusão</th></tr>
+        <tr>
+          <td><zdb:field use="pgsqlFetch" name="CD_CODIGO" /></td>
+          <td><zdb:field use="pgsqlFetch" name="NM_NOME" /></td>
+          <td><zdb:field use="pgsqlFetch" name="DS_INCLUSAO" /></td>
+        </tr>
+      </table>
+
+      <br />EOF: <zdb:eof use="pgsqlFetch" />
+
+      <br /><br />
+      <b>FetchUntil:</b>
+      <zdb:query use="pgsqlConn" id="pgsqlQueryFetchUntil">
+        SELECT "CD_CODIGO"
+        , "NM_NOME"
+        , to_char("DS_INCLUSAO" , 'MM/DD/YYYY HH24:MI:SS') AS DT_INCLUSAO
+        FROM zdbteste
+        ORDER BY "NM_NOME"
+      </zdb:query> 
+      <table border="1">
+        <tr><zhtml:cellhead value="Id" /><zhtml:cellhead value="Nome" /><zhtml:cellhead value="Inclusão" /></tr>
+        <zdb:fetchuntil condition="eof" use="pgsqlQueryFetchUntil" id="pgsqlFetchUntil"> 
+          <zdb:fieldvar use="pgsqlFetchUntil" name="CD_CODIGO" var="CD_CODIGO" /> 
+          <tr>
+            <zhtml:cell value="$CD_CODIGO" align="right" />
+            <td><zdb:field use="pgsqlFetchUntil" name="NM_NOME" transform="sentence()" /></td>
+            <td><zdb:field use="pgsqlFetchUntil" name="DT_INCLUSAO" transform="datetimebr()"/></td>
+          </tr>
+        </zdb:fetchuntil>
+      </table>
+      
+      <!-- zdb:param use="query002" param="P_CD_PESSOA_USUARIO" var="" type="PARAM_INT" /--> 
+      <!-- zdb:param use="query002" param="P_NM_USUARIO" var="" type="PARAM_STR" length="12" /--> 
+      
+      <!-- zarray:show name="queryrow" node="CD_PESSOA_USUARIO" /-->
+    
+    <zdb:close use="pgsqlConn" />
+  </body>
+</html>

@@ -1,0 +1,51 @@
+.pacrudHeader {
+	border-bottom:1px solid #000000;
+	text-align:center;
+	background-color:#C1CDCD;
+}
+
+.pacrudHeaderLeft {
+	float:left;
+	margin-left:10px;
+	width:100px;
+	text-align:left;
+	margin-top:3px;
+}
+
+.pacrudHeaderCenter {
+	font-size:14pt;
+	font-weight: bold;
+}
+
+.pacrudHeaderRight {
+	float:right;
+	margin-right:10px;
+	width:100px;
+	text-align:right;
+	margin-top:3px;
+}
+
+.pacrudBody {
+	margin-top:20px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:20px;
+	text-align:left;
+}
+
+.pacrudMenuArea {
+	width:190px;
+	float:left;
+	margin-bottom:20px;
+}
+
+.pacrudDesktop {
+	text-align:justify;
+	margin-left:210px;
+}
+
+.pacrudFooter {
+	clear:both;
+	text-align:center;
+	border-top:1px solid #000000;
+}

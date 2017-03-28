@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../../sitemap.xsl" type="text/xsl" media="all"?>
+<site>
+<page file="index.html" text="MyWebCareer - Discover, Evaluate, and Monitor Your Professional Online Brand" title="MyWebCareer - Discover, Evaluate, and Monitor Your Professional Online Brand">
+<page file="default.html" text="MyWebCareer.com " title="MyWebCareer - Discover, Evaluate, and Monitor Your Professional Online Brand"/>
+<page file="accountsettings.html" text="MySettings" title="MyWebCareer - Discover, Evaluate, and Monitor Your Professional Online Brand"/>
+<page file="logout.html" text="log out" title="MyWebCareer - Discover, Evaluate, and Monitor Your Professional Online Brand"/>
+<page file="mywebcareer-inc.html" text="" title="MyWebCareer Inc. | LinkedIn"/>
+<page file="mywebcareer_002.html" text="" title="MyWebCareer.com (MyWebCareer) on Twitter"/>
+</page>
+</site>

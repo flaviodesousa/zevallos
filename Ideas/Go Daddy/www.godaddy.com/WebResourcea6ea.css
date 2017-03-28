@@ -1,0 +1,24 @@
+﻿/* default layout */
+.ajax__tab_default .ajax__tab_header {white-space:nowrap;}
+.ajax__tab_default .ajax__tab_outer {display:-moz-inline-box;display:inline-block}
+.ajax__tab_default .ajax__tab_inner {display:-moz-inline-box;display:inline-block}
+.ajax__tab_default .ajax__tab_tab {margin-right:4px;overflow:hidden;text-align:center;cursor:pointer;display:-moz-inline-box;display:inline-block}
+
+/* xp theme */
+.ajax__tab_xp .ajax__tab_header {font-family:verdana,tahoma,helvetica;font-size:11px;background:url(http://www.godaddy.com/WebResource.axd?d=n9ScZTnr1pRBPlVLMy9TmlouH-eQr-LIJSCX7bL0YFaVL8z6uk0DXBbBQGbRpTu-miK2h2s7gV419HV7mQczjV8a2CEAHFrYsdLjjeXuKkGiRl4zGUVYIJ87d_vcN2ruiwHa9QmQ43bLRKnGzyHruAZgN-U1&amp;t=633505882101468979) repeat-x bottom;}
+.ajax__tab_xp .ajax__tab_outer {padding-right:4px;background:url(http://www.godaddy.com/WebResource.axd?d=QdOQfRbGl36E60HlzDBQ_koLREGpzC55s_XRSg2QG_7Olg0Z_heFskmRDBNpx9kYq3XI0wXr0847TSwTUSToeE1ioHo0M6pWU1l2LTZHiOAaDR_VOZil9LU3DNzkCHHHGFtmVqcL8NtR46XY82ffMZCQ5fE1&amp;t=633505882101468979) no-repeat right;height:21px;}
+.ajax__tab_xp .ajax__tab_inner {padding-left:3px;background:url(http://www.godaddy.com/WebResource.axd?d=onsLHJCRzDRqCglGPUEuGtPffjZL3GJz4eiHAs-9ma14XMX96yasX9gN04zIceEKkotLCqTaLV2DMG-aiUy9yRTrizaPYd9HxsOQdvWwy0HgHdS0g828MIoJC4oFwPqw_ZCPmaatdfsQ0ShKccPpn1fOnxM1&amp;t=633505882101468979) no-repeat;}
+.ajax__tab_xp .ajax__tab_tab {height:13px;padding:4px;margin:0;background:url(http://www.godaddy.com/WebResource.axd?d=n5y3pGuZsmehN2HJGcjfZi4uCveDK8kRmBMHKLYyvvOqafGN3Hl8jIzF3iiRR1xoMrZGasZ7pyF370f8mmTDuqW2yud1jflwewfqK34r73VAtSEQ2AmdTxVuecBr-onfVqtEsDW9rDOgUBJR8f0bstr4xf81&amp;t=633505882101468979) repeat-x;}
+.ajax__tab_xp .ajax__tab_hover .ajax__tab_outer {background:url(http://www.godaddy.com/WebResource.axd?d=cBKISSmok-i0_o8YMHKpMaf-hrg5Znt63knyhD4awsbT2lJyk6TKuQyecRAPYeOor65-td-aTnPQY8Lt0WXKqcSQPom1nCVcXRT7Sq7P19PX7byKPSfPp38xo7rU7nkRa_ESiL0wRpX7nd9Ob6UUfCrdHKg1&amp;t=633505882101468979) no-repeat right;}
+.ajax__tab_xp .ajax__tab_hover .ajax__tab_inner {background:url(http://www.godaddy.com/WebResource.axd?d=Tjjp8mu02_luffsL220ZKWb4qDusTDFsdWJNo_acm3sEt-Z6R9ywQnIl6TqFd0bLM3r4NH0tz3USkbEDNT21PijHysGMQ2xiJ27SdX366iA-h0du7n77YqPvTiCoxlp1YobOnPohN_jvOGR8UEvpFR4YN0A1&amp;t=633505882101468979) no-repeat;}
+.ajax__tab_xp .ajax__tab_hover .ajax__tab_tab {background:url(http://www.godaddy.com/WebResource.axd?d=6HTSmXBp28xURRBZOD-QnYAkFK99HXlxvdxVFVwef0_SDsF_fsiBoOmLhgoW44ucITQ4pLfSMI93_KMl2y9Xjo4HQBcuItCGmIEhz5bcvOcuU6Ptl9XbOKtL6eZ_2SJmgjv4dwDZyQeiENg59FPcKAAB7q81&amp;t=633505882101468979) repeat-x;}
+.ajax__tab_xp .ajax__tab_active .ajax__tab_outer {background:url(http://www.godaddy.com/WebResource.axd?d=LviA77c7lk2qUH1jsBgy7TrgweGx9vbbEbIWFgQXc-BqdvB0KJHaGYQHKQyN6zNihJPO9T17VVwcDHCCdgliidXa8TTzhaZprrDXzQxAq48srpMA771WxCtHyTyZE0GydaSmbO8fKm_1RbvOOZn81gBx2Z5ako4a2zsDUuvh8NQiOxun0&amp;t=633505882101468979) no-repeat right;}
+.ajax__tab_xp .ajax__tab_active .ajax__tab_inner {background:url(http://www.godaddy.com/WebResource.axd?d=CYaKPc27B1bxdJACP_QoJHAX5qd6KiEzwJkErENlFEG71bCBTdijG74-cecvhGAr5NxuPgq4oWpxsBIiZZKK2-l2MpJVVstuuWZcVWtamgubaPIHJdvQvGEeriPuMi4IyoLjC_9q-ahklAQjLv-i8ENkl1M1&amp;t=633505882101468979) no-repeat;}
+.ajax__tab_xp .ajax__tab_active .ajax__tab_tab {background:url(http://www.godaddy.com/WebResource.axd?d=HMCy5_M8zyTKajt3qpPTXvj9K9TxBKgwDUU98VbNv5Ri3jHNJFVIYEUCj7_qrFrjOc2DFd_f0t5heLq0m2vcZNzYCmErHs3AkPnyUjKgDug9iBjW3003ZtgbdUGrSs7WGV2LJIzFEfL82exmH3oCqqEaHjA1&amp;t=633505882101468979) repeat-x;}
+.ajax__tab_xp .ajax__tab_body {font-family:verdana,tahoma,helvetica;font-size:10pt;border:1px solid #999999;border-top:0;padding:8px;background-color:#ffffff;}
+
+/* scrolling */
+.ajax__scroll_horiz {overflow-x:scroll;}
+.ajax__scroll_vert {overflow-y:scroll;}
+.ajax__scroll_both {overflow:scroll}
+.ajax__scroll_auto {overflow:auto}

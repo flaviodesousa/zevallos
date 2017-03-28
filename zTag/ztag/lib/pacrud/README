@@ -1,0 +1,20 @@
+Bem vindo ao paCRUD Framework
+
+Este documento contem informações de como iniciar a usar e testar o sistema.
+
+PHP Ajax CRUD é um Framework PHP/Ajax com funcionalidades CRUD (Create,
+Retrieve, Update e Delete) para desenvolvimento rápido de sistemas de informação
+com bancos de dados PostgreSQL ou MySQL
+
+Para testar o sistema:
+
+1) Instale o servidor de banco de dados postgresql ou mysql;
+2) Instale o servidor web com suporte a PHP;
+3) Acesse o instalador em http://localhost/pacrud/install.php;
+4) Siga as instruções na tela.
+
+OBS: a pasta da sua aplicação não necessita estar no mesmo local de instalação
+do paCRUD. Ex: o pacrud foi instalado em /var/www/pacrud e sua aplicação está em 
+/home/usuario/public_html
+
+Maiores informações no site do projeto: http://www.pacrud.com.br ou no wiki http://wiki.pacrud.com.br

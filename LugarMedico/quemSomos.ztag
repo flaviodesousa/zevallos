@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	  <zhtml:title value="Quem somos | #sysName" />
+	  <link rel="stylesheet" type="text/css" href="/css/geral.css" media="screen, projection"></link>
+	  <link rel="stylesheet" type="text/css" href="/css/box.css" media="screen, projection"></link>
+	  <link rel="stylesheet" type="text/css" href="/css/menu.css" media="screen, projection"></link>
+	  <link rel="stylesheet" type="text/css" href="/css/logon.css" media="screen, projection"></link>
+	</head>
+	
+	<body>
+		<div id="header">
+			<div class="root">
+				<div class="box-logo"><a href="/"><img src="/img/LogoLugarMedico1.png" alt="Lugar Médico" width="150px" height="73px" style="margin-top:5px"/></a></div>
+			</div>
+		</div>
+		<div id="menu">
+			<div class="root">
+				<ul>
+					<li><a href="/quemSomos.ztag">Quem somos</a></li>
+					<li><a href="/public.ztag">Noticias</a></li>
+					<li><a href="/logonNew.ztag">Novo Cadastro</a></li>
+					<li><a href="/faleConosco.ztag">Fale Conosco</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="container">
+			<div class="root">
+				<div id="box">
+					<div class="header blue">O Lugar Médico</div>
+					<div class="body boxmenu-left">
+						<ul>
+							<li><a href="/quemSomos.ztag?#a0">Quem somos?</a></li>
+							<li><a href="/quemSomos.ztag?#a1">O que é o Lugar Médico?</a></li>
+							<li><a href="/quemSomos.ztag?#a2">Para que serve?</a></li>
+							<li><a href="/quemSomos.ztag?#a3">A quem interessa?</a></li>
+							<li><a href="/quemSomos.ztag?#a4">Como e porgue foi criado?</a></li>
+							<li><a href="/quemSomos.ztag?#a5">Quais as finalidades básicas?</a></li>
+							<li><a href="/quemSomos.ztag?#a6">Quais as utilidades práticas?</a></li>
+							<li><a href="/quemSomos.ztag?#a7">Como participar?</a></li>
+							<li><a href="/quemSomos.ztag?#a8">Como se registrar?</a></li>
+							<li><a href="/quemSomos.ztag?#a9">Como funciona?</a></li>
+							<li><a href="/quemSomos.ztag?#a10">Quais os principais objetivos?</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="box">
+					<div class="header gray">Quem Somos</div>
+					<div class="body logon">
+					 	<a name="a0"></a>
+						<zhtml:h1 value="Quem somos?" />
+						<p>Um grupo de médicos e analistas de sistemas que se uniram para criar a primeira comunidade médica da Internet brasileira</p>
+						
+						<a name="a1"></a>
+						<zhtml:h2 value="O que é o Lugar Médico?" />
+						<p>É um lugar na Internet democrático, seguro e exclusivo para os médicos</p>
+						
+						<a name="a2"></a>
+						<zhtml:h2 value="Para que serve?" />
+						<p>No <b>Lugar Médico</b> voce terá todas as facilidades comuns de uma comunidade, mais a possibilidade de:</p>
+						<ul>
+						<li>Publicar qualquer tipo de trabalho (Ex. tese, artigo, monografia etc);</li>
+						<li>Encontrar colegas da área de trabalho, faculdade e de profissão;</li>
+						<li>Criar e participar de salas de encontros ou fóruns virtuais;</li>
+						<li>Propor notícias, dicas etc</li>
+						<li>Criar seu circulo de amigos</li>
+						<li>Desenvolver trabalhos e pesquisas em grupo</li>
+						<li>E muito mais</li></ul>
+						
+						<a name="a3"></a>
+						<zhtml:h2 value="A quem interessa?" />
+						<p>O <b>Lugar Médico</b> foi criado para uso execlusivo dos médidos.</p>
+
+						<a name="a4"></a>
+						<zhtml:h2 value="Como e por que foi criado?" />
+						<p>O <b>Lugar Médico</b> foi criado para aproximar os médicos, que devido as responsabilidades inerentes da profissão, nem sempre tem tempo para trocar idéias com seus colegas.</p>
+
+						<a name="a5"></a>
+						<zhtml:h2 value="Quais as finalidades básicas?" />
+						<p><ul>
+						<li>Interação com colegas</li>
+						<li>Publicação de texto (Ex. Artigo, trabalho, pesquisa, tese etc)</li>
+						<li>Possibilidade de participar como ouvinte ou atuante em trabalhos e pesquisas</li>
+						<li>Troca de experiências em salas abertas ou fechadas</li></ul></p>
+
+						<a name="a6"></a>
+						<zhtml:h2 value="Quais as utilidades práticas?" />
+						<p><ul>
+						<li>Publicação de algum texto (Ex. Artigo, trabalho, pesquisa, tese etc) para apreciação dos colegas</li>
+						<li>Criação de salas virtuais para discussão sobre diversos temas</li>
+						<li>Propor notícias ou dicas sobre diversos assuntos</li></ul></p>
+						
+						<a name="a7"></a>
+						<zhtml:h2 value="Como participar?" />
+						<p>Para participar do <b>Lugar Médico</b> voce precisa ser médico e ter o seu CRM atualizado. Voce fará o seu registro, informará diversas informações que serão validadas para garantir a sua identidade, bem como dos seus colegas.</p>
+
+						<a name="a8"></a>
+						<zhtml:h2 value="Como se registrar?" />
+						<p>O <b>Lugar Médico</b> ainda está na versão ALFA (desenvolvimento e testes) e aberta somente para convidados. Voce poderá preencher o formulário de <zhtml:a href="/logonAsk.ztag" value="convite"/> e aguardar o convite.</p>
+
+						<a name="a9"></a>
+						<zhtml:h2 value="Como funciona?" />
+						<p>O <b>Lugar Médico</b> é um sistema totalmente online e com suporte para todas as versões de Browsers mais atuais, como o FireFox, Google Crome, Internet Explorer, Safari entre outros</p>
+
+						<a name="a10"></a>
+						<zhtml:h2 value="Quais os principais objetivos?" />					
+						<p><ul>
+						<li>Integrar os profissionais da área médica</li>
+						<li>Entregar um ambiente seguro e democrático para que os médicos possam gerir</li>
+						<li>Ouvir sempre os médicos para melhorar e incluir novas ferramentas</li></ul></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="root">Copyright &copy; 2011 Lugar Médico todos os direitos reservados</div>
+		</div>
+	</body>
+</html>
+										

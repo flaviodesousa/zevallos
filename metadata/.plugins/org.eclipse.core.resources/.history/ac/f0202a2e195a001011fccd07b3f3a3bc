@@ -1,0 +1,26 @@
+<zdb:open id="myConn" driver="mysql" host="#myHost" database="#myDatabase" user="#myUser" password="#myPassword" />
+	<zlmprofile:friendlist use="myConn" me="!userLogged" var="friendList" />
+	
+	<table border="1">
+		<zhtml:cellhead value="Id" />
+		<zhtml:cellhead value="Nome" />
+	
+		<zctrl:foreach use="friendList" value="value">
+			<tr>
+				<zhtml:cell value="$value[id]" />
+				<td><zhtml:a href="/userProfile.ztag?t=$value[id]" value="$value[nome]" /></td>
+			</tr>
+		</zctrl:foreach>
+	</table>
+	
+	<zlmprofile:profile use="myConn" me="!userLogged" var="profile" />
+	
+	<table border="1">
+		<zhtml:cell value="<b>id</b>:" /><zhtml:cell value="$value[id]" />
+		<zhtml:cell value="<b>Nome</b>:" /><zhtml:cell value="$value[nome]" />
+		<zhtml:cell value="<b>Primeiro</b>:" /><zhtml:cell value="$value[primeiro]" />
+		<zhtml:cell value="<b>Ultimo</b>:" /><zhtml:cell value="$value[ultimo]" />
+		<zhtml:cell value="<b>E-Mail</b>:" /><zhtml:cell value="$value[email]" />
+	</table>
+	
+<zdb:close use="myConn" />

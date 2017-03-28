@@ -1,0 +1,12 @@
+<zrequest:get name="error" var="error" transform="stripTags()" />
+		<zhtml:title value="Erro 404 | Direito 2" />
+					<zhtml:div class="header gray" value="Erro $error" />
+					<div class="body message-list">
+					Arquivo não encontrado!
+					<zhtml:b value="$error" />
+					<br />url: <zserver:show use="SERVER_NAME" /><zserver:show use="REQUEST_URI" />
+					<br />Port: <zserver:show use="SERVER_PORT" />
+					<br />Method: <zserver:show use="REQUEST_METHOD" />
+					<br />Server Address: <zserver:show use="SERVER_ADDR" />
+					<br />
+					

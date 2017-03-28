@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*<![CDATA[*/
+
+/* $Id: print.css,v 1.0 2010/05/10 14:00:00 twig Exp $ */
+/*
+	Use this for base styles for media=print
+*/
+
+/* =Print Style
+-------------------------------------------------------------- */
+
+body {
+	background: none !important;
+}
+#tpl_anchor {
+	background: none !important;
+}
+
+
+
+
+.noPrint {
+	display: none !important;
+}
+.printMe {
+	display: block !important;
+	visibility: visible !important;
+}
+
+
+/*]]>*/

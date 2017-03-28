@@ -1,0 +1,48 @@
+.pacrudMenu {
+	display:block;
+	cursor:pointer;
+	background-color: #3292cf;
+	font-weight:bold;
+	color: #FFFFFF;
+	behavior: red;
+	padding:1px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	text-align:center;
+	font: 14px Arial;
+}
+
+.pacrudMenuL1 {
+	cursor:pointer;
+	background-color: #a6d2ff;
+	text-indent:5px;
+	font: 14px Arial;
+}
+
+.pacrudMenuL2 {
+	cursor: pointer;
+	background-color: #baddff;
+	text-indent:10px;
+	font: 14px Arial;
+}
+
+.pacrudMenuL3 {
+	cursor: pointer;
+	background-color: #cfe7ff;
+	text-indent:15px;
+	font: 14px Arial;
+}
+
+.pacrudMenuL4 {
+	cursor: pointer;
+	background-color: #e3f1ff;
+	text-indent:20px;
+	font: 14px Arial;
+}
+
+.pacrudMenuL5 {
+	cursor: pointer;
+	background-color: #f7fbff;
+	text-indent:25px;
+	font: 14px Arial;
+}

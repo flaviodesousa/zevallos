@@ -1,0 +1,621 @@
+/***************************
+	Newsletter Landing Page
+****************************/
+#newsLetter {
+	background:url("img/bg_news_nab2.jpg") no-repeat 0 0;
+	height:600px;
+	width:915px
+}
+#newsLetter h1 {
+	background:url("img/logo_nab.png") no-repeat scroll center center transparent;
+	display:block;
+	height:150px;
+	text-indent:-9999px
+}
+#newsLetter div.nab_frases {
+	margin:45px 0 41px;
+	text-align:center	
+}
+#newsLetter div.nab_frases h2 {
+	color:#233964;
+	font-size:32px;
+	font-weight:lighter;
+	margin-bottom:10px;
+	text-transform:capitalize
+}
+#newsLetter div.nab_frases h3 {
+	color:#49659C;
+	font-size:25px;
+	font-weight:lighter;
+}
+#newsLetter #bt_voltar_nab {
+	background:url("img/mozaico_nab.jpg") no-repeat scroll 0 0 transparent;
+	float:left !important;
+	margin-top:32px;
+	padding:144px 0 0;
+	width:795px
+}
+#newsLetter #bt_voltar_nab span { padding:12px 12px 0 0}
+#newsLetter #bt_voltar_nab #parceiro a.bt_brands_nab {
+	background:url("img/imgbrandsnews.jpg") no-repeat scroll 0 0 transparent;
+	height:39px;
+	text-indent:-9999px;
+	width:64px
+}
+#newsLetter #bt_voltar_nab a.goHome {
+	color:#509BE2;
+	font-weight:bold;
+	padding-top:12px
+}
+#newsLetter fieldset {
+	float:none;
+	margin:0;
+	padding:0 67px 0 53px;
+	width:795px
+}
+#newsLetter #form_login_bc input#emailField {
+	background-color:transparent;
+	border:none;
+	color:#5C7DBE;
+	font-size:25px;
+	height:31px;
+	margin:1px 10px 0 1px;
+	padding:15px 0 15px 70px;
+	width:337px
+}
+#newsLetter #form_login_bc select#citySelect {
+	border:1px solid #8DBAE6;
+	color:#5C7DBE;
+	font-size:23px;
+	height:63px;
+	line-height: 63px;
+	margin-right:10px;
+	padding:13px 10px 13px 11px;
+    _padding:20px 10px 13px 11px;
+    *padding:20px 10px 13px 11px;
+	width:194px;
+}
+
+#newsLetter #form_login_bc input.form_botao_bc {
+	background-color:transparent;
+	border:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:25px;
+	height:62px;
+	width:173px
+}
+/* End Newsletter */
+/**********************
+	Newsletter Success
+***********************/
+#newssucess {
+	float:left;
+	margin-left:50px;
+	_margin-left:30px;
+	width:800px;
+}
+#newssucess dl.news_message, #newssucess dl.news_brands {
+	float:left;
+	height:227px;
+	margin:0;
+	padding:0;
+	width:400px;
+}
+#newssucess dl.news_message {background:url('img/bg_newsmessage.png') left top no-repeat;}
+#newssucess dl.news_brands {background:url('img/bg_newsbrands.jpg') right top no-repeat;}
+#newssucess dl.news_message dt, #newssucess dl.news_brands dt{
+	color:#565656;
+	font-size:18px;
+	letter-spacing:-0.6px;
+	height:50px;
+	padding:20px 20px 10px 20px;
+}
+#newssucess dl.news_message dt strong {color:#385595;}
+#newssucess dl.news_brands dt span{display:none;}
+#newssucess dl.news_message dd {
+	font-size:18px;
+	line-height:23px;
+	padding:25px 20px 0 20px;	
+}
+#newssucess dl.news_brands dd {
+	color:#bababa;
+	font-size:13px;
+	padding:10px 30px 10px 20px;	
+}
+#newssucess dl.news_brands dd p.line {padding:0 30px 0 0;}
+#newssucess dl.news_brands dd p {
+	line-height:12px;
+	margin:0 0 10px 0;
+	padding:0;	
+}
+#newssucess .bgbtnewssucess {
+	background:url("img/bgbtnewssucess.jpg") no-repeat scroll center center transparent;
+	line-height:46px;
+	margin-top:20px;
+	text-align:center;
+	height:57px;
+	width:795px;
+}
+.bgbtnewssucess a {
+	color: #ffffff;
+	font-size: 15px;
+}
+div.cadNews div.bgImg {
+	background:url("img/bg_fotos.png") no-repeat center center;
+	height:291px;
+	margin-bottom:40px;
+	overflow:hidden;
+	padding-left:27px;
+	width:824px
+}
+div.cadNews p.chamada a {font-size:25px !important}
+div.cadNews div.bgImg h2 {
+	background-color:#DDE8EA;
+	line-height:21px;
+	padding:15px 14px 21px;
+	width:763px
+}
+div.cadNews div.bgImg p {
+	background-color:#DDE8EA;
+	margin-left:0;
+	margin-top:135px;
+	padding:10px 0;
+	text-align:center !important;
+	width:791px
+}
+div.cadNews #midia {
+	padding-left:28px;
+	width:824px
+}
+div.cadNews #midia h3 { margin-bottom:15px}
+div.cadNews #midia div.midia_post {
+	float:left;
+	padding:65px 8px 0;
+	width:253px
+}
+div.cadNews #midia div.imgPost-1 {
+	background:url("img/bluebus.jpg") no-repeat center top;
+}
+div.cadNews #midia div.imgPost-2 {
+	background:url("img/adnews.jpg") no-repeat center top;
+	border-left:1px solid #DADADA;
+	border-right:1px solid #DADADA
+}
+div.cadNews #midia div.imgPost-3 {
+	background:url("img/ultimosegundo.jpg") no-repeat center top;
+}
+div.cadNews #midia div p {
+	font-size:13px;
+	font-style:italic;
+	text-align:center
+}
+/* Imgs Mosaico Newsletter */
+#newsLetter div.nab_frasesBEA, #newsLetter div.nab_frasesACT, #newsLetter div.nab_frasesENT, #newsLetter div.nab_frasesFAB, #newsLetter div.nab_frasesTRA, #newsLetter div.nab_frasesFOO, #newsLetter div.nab_frasesBAC{
+	margin:13px 81px 41px;
+	text-align:center;
+	width:760px;
+}
+#newsLetter div.nab_frasesBEA h2, #newsLetter div.nab_frasesACT h2, #newsLetter div.nab_frasesENT h2, #newsLetter div.nab_frasesFAB h2, #newsLetter div.nab_frasesTRA h2, #newsLetter div.nab_frasesFOO h2, #newsLetter div.nab_frasesBAC h2 {
+	color:#233964;
+	font-size:32px;
+	font-weight:lighter;
+	margin-bottom:10px;
+	text-transform:capitalize
+}
+#newsLetter div.nab_frasesBEA h3, #newsLetter div.nab_frasesACT h3, #newsLetter div.nab_frasesENT h3, #newsLetter div.nab_frasesFAB h3, #newsLetter div.nab_frasesTRA h3, #newsLetter div.nab_frasesFOO h3, #newsLetter div.nab_frasesBAC h3 {
+	color:#49659C;
+	font-size:25px;
+	font-weight:lighter;
+}
+#newsLetter #bt_voltar_nabBEA, #newsLetter #bt_voltar_nabACT, #newsLetter #bt_voltar_nabENT, #newsLetter #bt_voltar_nabFAB, #newsLetter #bt_voltar_nabTRA, #newsLetter #bt_voltar_nabFOO, #newsLetter #bt_voltar_nabBAC {
+	margin-top:32px;
+	float:left !important;
+	padding:144px 0 0;
+	width:795px
+}
+#newsLetter #bt_voltar_nabBEA {
+	background:url("img/mozaico_nabBEA.jpg") no-repeat scroll 0 0 transparent;
+}
+#newsLetter #bt_voltar_nabACT {
+	background:url("img/mozaico_nabACT.jpg") no-repeat scroll 0 0 transparent;
+}
+#newsLetter #bt_voltar_nabENT {
+	background:url("img/mozaico_nabENT.jpg") no-repeat scroll 0 0 transparent;
+}
+#newsLetter #bt_voltar_nabFAB {
+	background:url("img/mozaico_nabFAB.jpg") no-repeat scroll 0 0 transparent;
+}
+#newsLetter #bt_voltar_nabTRA {
+	background:url("img/mozaico_nabTRA.jpg") no-repeat scroll 0 0 transparent;
+}
+#newsLetter #bt_voltar_nabFOO {
+	background:url("img/mozaico_nabFOO.jpg") no-repeat scroll 0 0 transparent;
+}
+#newsLetter #bt_voltar_nabBAC {	
+	background:url("img/mozaico_nabBAC.jpg") no-repeat scroll 0 0 transparent;
+}
+#newsLetter #bt_voltar_nabBEA span, #newsLetter #bt_voltar_nabACT span, #newsLetter #bt_voltar_nabENT span, #newsLetter #bt_voltar_nabFAB span, #newsLetter #bt_voltar_nabTRA span, #newsLetter #bt_voltar_nabFOO span, #newsLetter #bt_voltar_nabBAC span{
+	padding:12px 12px 0 0
+}
+#newsLetter #bt_voltar_nabBEA #parceiro a.bt_brands_nab, #newsLetter #bt_voltar_nabACT #parceiro a.bt_brands_nab, #newsLetter #bt_voltar_nabENT #parceiro a.bt_brands_nab, #newsLetter #bt_voltar_nabFAB #parceiro a.bt_brands_nab, #newsLetter #bt_voltar_nabTRA #parceiro a.bt_brands_nab, #newsLetter #bt_voltar_nabFOO #parceiro a.bt_brands_nab, #newsLetter #bt_voltar_nabBAC #parceiro a.bt_brands_nab{
+	background:url("img/imgbrandsnews.jpg") no-repeat scroll 0 0 transparent;
+	height:39px;
+	text-indent:-9999px;
+	width:64px
+}
+#newsLetter #bt_voltar_nabBEA a.goHome, #newsLetter #bt_voltar_nabACT a.goHome, #newsLetter #bt_voltar_nabENT a.goHome, #newsLetter #bt_voltar_nabFAB a.goHome, #newsLetter #bt_voltar_nabTRA a.goHome, #newsLetter #bt_voltar_nabFOO a.goHome, #newsLetter #bt_voltar_nabBAC a.goHome {
+	color:#509BE2;
+	font-weight:bold;
+	padding-top:12px
+}
+/* Opt Out */
+#optOut_titte  {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+/* End */
+/*********************
+	 Landing Page
+**********************/
+#bodyLandingpage {background:#5874a2; !important}
+#bodyLandingpage #content {
+	background:#5874a2 url("img/bg_landingpage.jpg") center top no-repeat; !important;
+	float:none;
+	margin:0;
+	overflow:hidden;
+	padding:29px 0 30px 0 !important;
+	width:100%;
+	_background:#5874a2 url("img/bg_landingpage.jpg") center top no-repeat; !important
+}
+#landingpage {
+	height:600px;
+	width:945px;
+}
+#landingpage #lpg_conect {
+	padding:60px 0 10px 10px;
+	position:relative;
+}
+#landingpage h1 {
+	background:url("img/logo_landingpage.png") center top no-repeat;
+	display:block;
+	height:120px;
+	margin:20px 0 0 0;
+}
+#landingpage h1 span {display:none;}
+#landingpage .nab_frases, #landingpage .nab_frasesBEA, #landingpage .nab_frasesACT, #landingpage .nab_frasesENT, #landingpage div.nab_frasesFAB, #landingpage div.nab_frasesTRA, #landingpage div.nab_frasesFOO, #landingpage div.nab_frasesBAC, #landingpage .nab_frasesnull, #landingpage .nab_frasesCNL, #landingpage .nab_frasesSFW, #landingpage .nab_frasesCHI, #landingpage .nab_frasesDAT, #landingpage .nab_frasesEDU, #landingpage .nab_frasesHOM {
+	color:#2b2b2b;
+	font-size:20px;
+	font-weight:normal;
+	text-transform:none !important;
+	text-align:center;
+}
+#landingpage .nab_frases h2, #landingpage .nab_frasesBEA h2, #landingpage .nab_frasesACT h2, #landingpage .nab_frasesENT h2, #landingpage .nab_frasesFAB h2, #landingpage div.nab_frasesTRA h2, #landingpage div.nab_frasesFOO h2, #landingpage div.nab_frasesBAC h2, #landingpage .nab_frasesnull h2, #landingpage .nab_frasesCNL h2, #landingpage .nab_frasesSFW h2, #landingpage .nab_frasesCHI h2, #landingpage .nab_frasesDAT h2, #landingpage .nab_frasesEDU h2, #landingpage .nab_frasesHOM h2 {
+	color:#2b2b2b;
+	font-size:20px;
+	font-weight:normal;
+	text-transform:none !important;
+	text-transform:none !important;
+}
+#landingpage #signup {
+	float:left;
+	margin:0 0 0 15px;
+	width:400px;
+	_width:390px;
+	_margin:0 0 0 5px;	
+}
+#landingpage #offer {
+	float:right;
+	width:515px;	
+}
+#landingpage form fieldset {
+	border:0 none;
+	float:none;
+	margin:0 !important;
+	padding:0;
+	width:935px !important;
+}
+#landingpage #form_login_bc input.form_botao_bc {
+	background:url('img/bg_btn_landing.png') no-repeat;
+	border:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:25px;
+	height:50px;
+	margin:15px 0;
+	text-indent:-9999px;
+	width:375px;
+	_position:absolute;
+	_top:120px;
+	_text-indent:-9999px;
+}
+#landingpage .ldp_options {
+	_position:absolute;
+	_top:200px;
+	_left:0;	
+}
+#landingpage #bt_voltar_nab span { padding:12px 12px 0 0}
+#landingpage .cards_options  span {display:none;}
+/*
+	Opt Out
+*/
+#optOut_titte  {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+/* Imgs Mosaico */
+#landingpage #bt_voltar_nabHOM {
+	background:url("img/mozaico_nabHOM_ldp.png") no-repeat scroll 95px 15px transparent;
+	*background:url("img/mozaico_nabHOM_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabHOM_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabEDU {
+	background:url("img/mozaico_nabEDU_ldp.png") no-repeat scroll 95px 15px transparent;
+	*background:url("img/mozaico_nabEDU_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabEDU_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabDAT {
+	background:url("img/mozaico_nabDAT_ldp.png") no-repeat scroll 95px 15px transparent;
+	*background:url("img/mozaico_nabDAT_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabDAT_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabCHI {
+	background:url("img/mozaico_nabCHI_ldp.png") no-repeat scroll 95px 15px transparent;
+	*background:url("img/mozaico_nabCHI_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabCHI_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabSFW {
+	background:url("img/mozaico_nabSFW_ldp.png") no-repeat scroll 95px 15px transparent;
+	*background:url("img/mozaico_nabSFW_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabSFW_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nab, #landingpage #bt_voltar_nabnull {
+	background:url("img/mozaico_nab_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabACT {
+	background:url("img/mozaico_nabACT_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabBAS {
+	background:url("img/mozaico_nabBAS_ldp.png") no-repeat scroll 95px 8px transparent;
+	*background:url("img/mozaico_nabBAS_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabBAS_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabCAR {
+	background:url("img/mozaico_nabCAR_ldp.png") no-repeat scroll 95px 8px transparent;
+	*background:url("img/mozaico_nabCAR_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabCAR_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabELE{
+	background:url("img/mozaico_nabELE_ldp.png") no-repeat scroll 95px 8px transparent;
+	*background:url("img/mozaico_nabELE_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabELE_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabMUS{
+	background:url("img/mozaico_nabMUS_ldp.png") no-repeat scroll 95px 8px transparent;
+	*background:url("img/mozaico_nabMUS_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabMUS_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabPET{
+	background:url("img/mozaico_nabPET_ldp.png") no-repeat scroll 95px 8px transparent;
+	*background:url("img/mozaico_nabPET_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabPET_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabPHO{
+	background:url("img/mozaico_nabPHO_ldp.png") no-repeat scroll 95px 8px transparent;
+	*background:url("img/mozaico_nabPHO_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabPHO_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabSHO{
+	background:url("img/mozaico_nabSHO_ldp.png") no-repeat scroll 95px 8px transparent;
+	*background:url("img/mozaico_nabSHO_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabSHO_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabSPO{
+	background:url("img/mozaico_nabSPO_ldp.png") no-repeat scroll 95px 8px transparent;
+	*background:url("img/mozaico_nabSPO_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabSPO_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabTAT{
+	background:url("img/mozaico_nabTAT_ldp.png") no-repeat scroll 95px 8px transparent;
+	*background:url("img/mozaico_nabTAT_ldp.png") no-repeat scroll 95px 15px transparent;
+	_background:url("img/mozaico_nabTAT_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabCNL{
+	background:url("img/mozaico_nabCNL_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	*margin-top:40px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+/* Old */
+#landingpage #bt_voltar_nabBEA {
+	background:url("img/mozaico_nabBEA_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabENT {
+	background:url("img/mozaico_nabENT_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabFAB {
+	background:url("img/mozaico_nabFAB_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabTRA {
+	background:url("img/mozaico_nabTRA_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabFOO {
+	background:url("img/mozaico_nabFOO_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+#landingpage #bt_voltar_nabBAC {	
+	background:url("img/mozaico_nabBAC_ldp.png") no-repeat scroll 95px 15px transparent;
+	margin-top:32px;
+	_margin-top:40px;
+	height:100px;
+	width:920px;
+}
+/**********/
+#landingpage a.goHome {
+	color:#5874a2;
+	font-weight:bold;
+	font-size:12px;
+	padding:12px 25px 0 0;
+}
+#landingpage .cards_options {
+	background:url('img/landing_cards.png') left top no-repeat;
+	height:36px;
+	width:174px;
+}
+#landingpage .splash {
+	background:url('img/landing_splash.png') left top no-repeat;
+	_background:url('img/landing_splash2.png') left top no-repeat;
+	height:115px;
+	position:absolute;
+	width:115px;
+	right:-20px;
+	top:20px;	
+}
+#landingpage #parceiro {
+	background:url('img/landing_splash_sidebar.png') right top no-repeat;
+	_background:url('img/landing_splash_sidebar2.png') right top no-repeat;
+	margin-top:35px;
+	_margin-top:0;
+	height:100px;
+}
+#landingpage #parceiro .discount {
+	color:#2c4d67;
+	font-size:27px;
+	font-weight:bold;
+	line-height:20px;
+	padding:30px 5px 5px 10px;
+	_padding:1px 5px 5px 10px;
+	letter-spacing:-1px;	
+	text-align:center;
+	width:65px;
+}
+#landingpage #parceiro .discount span {
+	font-size:12px;	
+	display:block;
+}
+#landingpage #form_login_bc {position:relative;}
+#landingpage p.validation-msg.msgemailField{
+	clear:both;
+	color:#ee0000;
+	font-size:12px;
+	margin:0 !important;
+	padding:0 !important;
+	position:absolute;
+	width:100%;
+	top:62px;
+	left:0;
+}
+#landingpage p.validation-msg.msgcitySelect{
+	clear:both;
+	color:#ee0000;
+	font-size:12px;
+	margin:0 !important;
+	padding:0 !important;
+	position:absolute;
+	width:100%;
+	top:117px;
+	left:0;
+}
+/* End Imgs Mosaico */
+/**** End Landing Page  ****/

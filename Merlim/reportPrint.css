@@ -1,0 +1,16 @@
+body {
+  background-color: transparent;
+  font-size: 9px;
+  color:#000000;}
+
+hr {height: 1px;
+    margin: 0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    }
+
+a:after, a:link:after  {
+  color: #000000;
+  background-color:transparent;
+  content: " * Link " attr(href) "* "; }
+
+#header {page-break-before:always;}

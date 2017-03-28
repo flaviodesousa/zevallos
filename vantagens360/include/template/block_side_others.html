@@ -1,0 +1,17 @@
+<!--{if $others}-->
+<div class="sbox side-business">
+	<div class="sbox-top"></div>
+	<div class="sbox-content">
+		<div class="tip">
+		<h2>Oferta do Dia</h2>
+		<!--{loop $others $one}-->
+			<b>${++$index}.&nbsp;{$one['title']}</b>
+			<p><a href="/team.php?id={$one['id']}"><img src="${team_image($one['image'])}" width="195" height="148" border="0" /></a></p>
+			<p><a href="/team.php?id={$one['id']}">&raquo;&nbsp;Clique para ver</a></p>
+		<!--{/loop}-->
+		</div>
+	</div>
+	<div class="sbox-bottom"></div>
+</div>
+<!--{/if}-->
+

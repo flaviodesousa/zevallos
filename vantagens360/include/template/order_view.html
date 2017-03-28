@@ -1,0 +1,129 @@
+<!--{include header}-->
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="order-detail">
+	<div class="dashboard" id="dashboard">
+		<ul>${current_account(null)}</ul>
+	</div>
+    <div id="content">
+		<div class="box clear">
+            <div class="box-top"></div>
+            <div class="box-content">
+                <div class="head">
+                    <h2>Detalhes da Compra</h2>
+                </div>
+                <div class="sect">
+
+<table cellspacing="0" cellpadding="0" border="0" class="data-table">
+    <tr>
+        <th>Número da compra: </th>
+        <td class="orderid"><strong>{$order['id']}</strong></td>
+        <th>Data da compra:</th>
+        <td><span>${date('d.m.Y:i',$order['create_time'])}</span></td>
+    </tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0" class="info-table">
+    <tr>
+        <th class="left" width="auto">Oferta</th>
+        <th width="35">Preço</th>
+        <th width="10"></th>
+        <th width="45">Quantidade</th>
+        <th width="10"></th>
+        <th width="45">Valor Total</th>
+        <th width="150">Status</th>
+    </tr>
+    <tr>
+        <td class="left"><a class="deal-title" href="/team.php?id={$order['team_id']}" target="_blank">{$team['title']}</a></td>
+        <td><span class="money">{$currency}</span>${moneyit($team['team_price'])}</td>
+        <td>x</td>
+        <td>{$order['quantity']}</td>
+        <td>=</td>
+        <td class="total"><span class="money">{$currency}</span>${moneyit($team['team_price']*$order['quantity'])}</td>
+        <td class="status"><!--{if !$express}-->sair<!--{else}-->-<!--{/if}--></td>
+    </tr>
+
+<!--{if $express}-->
+    <tr>
+        <td class="left">Entrega expressa</td>
+        <td>${moneyit($team['fare'])}</td>
+        <td>x</td>
+        <td>1</td>
+        <td>=</td>
+        <td class="total"><span class="money">{$currency}</span>${moneyit($team['fare'])}</td>
+        <td class="status">-</td>
+    </tr>
+    <tr>
+        <td class="left"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="total"><span class="money">{$currency}</span>${moneyit($order['origin'])}</td>
+        <td class="status">Sair</td>
+    </tr>
+<!--{/if}-->
+
+</table>
+
+<!--{if $team['delivery']=='coupon'}-->
+<table cellspacing="0" cellpadding="0" border="0" class="data-table">
+    <tr>
+        <th>{$INI['system']['couponname']}：</th>
+        <td class="other-coupon"><!--{if empty($coupons)}-->{$INI['system']['couponname']}. O sistema irá enviá-lo quando a oferta for ativada.<!--{/if}--><!--{loop $coupons $one}-->
+          <p>{$one['id']} - {$one['secret']}</p><!--{/loop}--></td>
+    </tr>
+    <tr>
+        <th>Como usar: </th>
+        <td>Mostre seu  {$INI['system']['couponname']} no lugar indicado de nosso parceiro, e troque pela Oferta adquirida.</td>
+    </tr>
+</table>
+<!--{elseif $team['delivery']=='express'}-->
+<table cellspacing="0" cellpadding="0" border="0" class="data-table">
+    <tr>
+        <th>Entrega: </th>
+        <td class="other-coupon"></td>
+    </tr>
+    <tr>
+        <th>Comprador: </th>
+        <td>{$order['realname']}</td>
+    </tr>
+    <tr>
+        <th>Endereço de compra: </th>
+        <td>{$order['address']}</td>
+    </tr>
+    <tr>
+        <th>Celular:  </th>
+        <td>{$order['mobile']}</td>
+    </tr>
+</table>
+<!--{elseif $team['delivery']=='pickup'}-->
+<table cellspacing="0" cellpadding="0" border="0" class="data-table">
+    <tr>
+        <th>Auto retirar: </th>
+        <td class="other-coupon"></td>
+    </tr>
+    <tr>
+        <th>endereço de retirada: </th>
+        <td>{$team['address']}</td>
+    </tr>
+    <tr>
+        <th>celular: </th>
+        <td>{$team['mobile']}</td>
+    </tr>
+</table>
+<!--{/if}-->
+                </div>
+            </div>
+            <div class="box-bottom"></div>
+        </div>
+    </div>
+    <div id="sidebar">
+    </div>
+</div>
+
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include footer}-->

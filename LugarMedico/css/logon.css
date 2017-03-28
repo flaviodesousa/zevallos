@@ -1,0 +1,43 @@
+#box .logon{
+  width: 700px;
+  min-height: 200px;
+  overflow: hidden;
+}
+#box .logon h3{
+    min-width: 30%;
+    float: right;
+    color: #ff0000;
+}
+#box .logon .img{
+    float: left;
+    width: 480px;
+    min-height: 200px;
+}
+#box .logon form{
+    min-width: 30%;
+    float: right;
+}
+#box .logon form u{
+    font-weight: 200;
+    font-size: 18px;
+}
+#box .logon input{
+    width: 200px;
+}
+#box .logon input[type="checkbox"]{
+    width: 20px;
+}
+#box .logon input[type="submit"]{
+    width: 80px;
+    height: 25px;
+    background:url(/img/header_blue_box.png);
+    border:  0px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 200;
+    float: right;
+    margin: 4px 0px;
+   border-top-radius: 5px 5px 0 0;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+}

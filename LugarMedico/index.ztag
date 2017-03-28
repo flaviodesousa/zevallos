@@ -1,0 +1,2 @@
+<zheader:locationif use="!userLogged" notcondition="len()" value="/front.ztag" />
+<zheader:locationif use="!userLogged" condition="len()" value="/home.ztag" />

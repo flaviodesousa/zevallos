@@ -1,0 +1,6 @@
+<html>
+<head>
+  <title>ztag<!--#echo var="SERVER_NAME" -->:<!--#echo var="REQUEST_URI" --></title>
+</head>
+<body>
+  <h1>Index of <!--#echo var="REQUEST_URI" --></h1>

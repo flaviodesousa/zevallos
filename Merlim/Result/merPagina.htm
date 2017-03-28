@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 XHTML Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+<title>Form Template</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-language" content="portuguese" />
+<meta name="DATE" content="7/12/2004 12:33AM" />
+<meta name="AUTHOR" content="Ruben Zevallos Jr." />
+<meta name="ROBOTS" content="noindex,nofollow" />
+<meta name="RATING" content="General" />
+
+<link rel="stylesheet" type="text/css" href="/formAjax.css" />
+
+<script type="text/javascript" language="Javascript1.2">
+<!-- //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// if (window!= top)
+//   top.location.href=location.href
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</script>
+</head>
+<body onload="preprocessAjaxForm(document.frmForm);">
+
+<form action="javascript:processAjaxForm(document.frmForm);"
+  method="post"
+  name="frmForm"
+  id="objfrmForm"
+  onsubmit="return validateAjaxForm(event);"
+  onkeypress="FieldChanged(event)"
+  autocomplete="off">
+
+  <h3>Página<img src="/library/LoaderSnake.gif" align="right"width="16px" height="16px" id="objLoader" /></h3>
+
+  <fieldset title="Configuration Fields" style="display:none">
+    <input type="hidden" id="objButton" name="objButton" value="99" />
+    <input type="hidden" id="objButtonName" name="objButtonName" value="bmtReload" />
+
+    <input type="hidden" id="objFieldChanged" name="blnFieldChanged" />
+
+    <input type="Parameter" id="ajax" name="ajax" value="1" />
+    <input type="Parameter" id="t" name="t" value="" />
+    <input type="Parameter" id="a" name="a" value="" />
+
+    <input type="Parameter" id="FormDebug" name="FormDebug" value="" />
+
+    <input type="Parameter" id="objfrmFormAction" name="frmFormAction" value="/FormAjax.php" />
+
+    <input type="Layout" id="objFormLayout" name="FormLayout" value="Formulario.htm" />
+
+
+    <input type="hidden" id="f" name="f" value="/Result/merPagina" />
+
+    <input datatype="int" datalength="4" type="hidden" id="pagCodigo" name="pagCodigo" value="" />
+
+    <input type="Layout" id="objFormLayout" name="FormLayout" value="Formulario.htm" />
+
+    <input type="formfield" id="objTable" name="Table" value="merPagina" />
+    <input type="formfield" id="objTablePK" name="TablePK" value="pagCodigo" />
+
+    <input type="navigation" id="objNavigationWhere" name="NavigationWhere" value="pagCodigo" />
+    <input type="navigation" id="objNavigationOrderBy" name="NavigationOrderBy" value="pagCodigo" />
+
+    <input type="buttons" id="objButtons" name="Buttons" value="bmtFirst,bmtMoveLast,bmtSave,bmtEdit,bmtCancel,bmtInclude,bmtList,bmtExclude,bmtClear,bmtReload,bmtMoveNext,bmtLast" />
+
+    <input type="List" id="objList" name="List" value="pagResumo" />
+    <input type="Find" id="objFind" name="Find" value="pagResumo" />
+  </fieldset>
+  <fieldset>
+    <label accesskey="F" for="pagFonte_AC"><u>F</u>onte:<br />
+    <input
+      id="pagFonte_AC"
+      type="text"
+      value=""
+      name="pagFonte_AC"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagFonte'); return false;"
+      size="12"
+      maxlength="10"
+      onfocus="StatusTitle(event);fieldOnFocus(event);startAutoComplete(this);"
+      onblur="fieldOnBlur(event);stopAutoComplete(event);"
+      title="Digite o Fonte"
+      onchange="FieldChanged()"
+      onkeydown="lastKeyPressed(event)"
+      fkpk="sifCodigo"
+      fkselect="sifNome"
+      fkfrom="merSiteFonte"
+      fkwhere="sifNome"
+      fkorderby="sifNome, sifCodigo" />
+    </label>
+    <input datatype="int" datalength="4" type="hidden" id="pagFonte" name="pagFonte" readonly="true" />
+    <dl class="autoComplete" id="pagFonte_ACList" onclick="clickAutoComplete(event);" onmouseover="mouseouverAutoComplete(event);" onmouseout="mouseoutAutoComplete(event);"></dl>
+    <br clear="all" />
+    <label accesskey="I" for="pagId"><u>I</u>d:<br />
+    <input
+      datatype="varchar"
+      datalength="100"
+      id="pagId"
+      type="text"
+      value=""
+      name="pagId"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagId'); return false;"
+      size="40"
+      maxlength="100"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Id"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="U" for="pagURL"><u>U</u>RL:<br />
+    <input
+      datatype="varchar"
+      datalength="500"
+      id="pagURL"
+      type="text"
+      value=""
+      name="pagURL"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagURL'); return false;"
+      size="40"
+      maxlength="500"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o URL"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="T" for="pagTitulo"><u>T</u>itulo:<br />
+    <input
+      datatype="varchar"
+      datalength="250"
+      id="pagTitulo"
+      type="text"
+      value=""
+      name="pagTitulo"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagTitulo'); return false;"
+      size="40"
+      maxlength="250"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Titulo"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="D" for="pagDataHora"><u>D</u>ataHora:<br />
+    <input
+      datatype="datetime"
+      datalength="8"
+      id="pagDataHora"
+      type="text"
+      value=""
+      name="pagDataHora"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagDataHora'); return false;"
+      size="12"
+      maxlength="12"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o DataHora"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="T" for="pagText"><u>T</u>ext:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="pagText"
+      type="text"
+      value=""
+      name="pagText"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagText'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Text"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="R" for="pagResumo"><u>R</u>esumo:<br />
+    <span class="FormFieldCounter">(<span id="objpagResumo" TABINDEX="-1">1000</span>)</span>
+    <textarea
+      datatype="text"
+      datalength="16"
+      id="pagResumo"
+      name="pagResumo"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagResumo'); return false;"
+      onKeyUp="FieldDelimiter(); FieldCounter();"
+      cols="40"
+      size="1000"
+      minsize="1000"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Resumo"
+      onchange="FieldChanged()" /></textarea>
+    </label>
+    <br clear="all" />
+    <label accesskey="A" for="pagAutor"><u>A</u>utor:<br />
+    <input
+      datatype="varchar"
+      datalength="250"
+      id="pagAutor"
+      type="text"
+      value=""
+      name="pagAutor"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagAutor'); return false;"
+      size="40"
+      maxlength="250"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Autor"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="F" for="pagFonteTexto"><u>F</u>onteTexto:<br />
+    <input
+      datatype="varchar"
+      datalength="250"
+      id="pagFonteTexto"
+      type="text"
+      value=""
+      name="pagFonteTexto"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagFonteTexto'); return false;"
+      size="40"
+      maxlength="250"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o FonteTexto"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="H" for="pagHTML"><u>H</u>TML:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="pagHTML"
+      type="text"
+      value=""
+      name="pagHTML"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagHTML'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o HTML"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="I" for="pagInclusao"><u>I</u>nclusão:<br />
+    <input
+      datatype="datetime"
+      datalength="8"
+      id="pagInclusao"
+      type="text"
+      value=""
+      name="pagInclusao"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merPagina&t=pagInclusao'); return false;"
+      size="12"
+      maxlength="12"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Inclusão"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>  </fieldset>
+
+  <div id="formMessage" class="formMessageShow"></div>
+  <div id="objButtonBar" class="buttonBar">
+    <button
+      type="submit"
+      id="bmtFirst"
+      name="bmtFirst"
+      onclick="objButtonName.value=this.name;objButton.value=10;"
+      title="Primeiro Registro"
+      >|&lt;</button
+    ><button
+      type="submit"
+      id="bmtMoveLast"
+      name="bmtMoveLast"
+      onclick="objButtonName.value=this.name;objButton.value=11;"
+      title="Registro Anterior"
+      >&lt;</button
+    ><button
+      id="bmtEdit"
+      name="bmtEdit"
+      onclick="objButtonName.value=this.name;objButton.value=2;"
+      >Editar</button
+    ><button
+      type="submit"
+      id="bmtInclude"
+      name="bmtInclude"
+      onclick="objButtonName.value=this.name;objButton.value=4;"
+      >Incluir</button
+    ><button
+      type="submit"
+      id="bmtSave"
+      name="bmtSave"
+      onclick="objButtonName.value=this.name;objButton.value=3;"
+      >Salvar</button
+    ><button
+      type="submit"
+      id="bmtCancel"
+      name="bmtCancel"
+      onclick="objButtonName.value=this.name;objButton.value=98;"
+      >Cancelar</button
+    ><button
+      type="reset"
+      id="bmtClear"
+      name="bmtClear"
+      onclick="objButtonName.value=this.name;objButton.value=0;"
+      >Limpar</button
+    ><button
+      type="submit"
+      id="bmtExclude"
+      name="bmtExclude"
+      onclick="objButtonName.value=this.name;objButton.value=9;"
+      > <u>E</u>xcluir </button
+    ><button
+      type="submit"
+      id="bmtSearch"
+      name="bmtSearch"
+      onclick="objButtonName.value=this.name;objButton.value=6;"
+      >Buscar</button
+    ><button
+      type="submit"
+      id="bmtList"
+      name="bmtList"
+      onclick="objButtonName.value=this.name;objButton.value=5;"
+      >Listar</button
+    ><button
+      type="submit"
+      id="bmtReload"
+      name="bmtReload"
+      onclick="objButtonName.value=this.name;objButton.value=99;"
+      title="Reler o registro corrente"
+      >Reler</button
+    ><button
+      type="submit"
+      id="bmtMoveNext"
+      name="bmtMoveNext"
+      onclick="objButtonName.value=this.name;objButton.value=12;"
+      title="Próximo Registro"
+      >&gt;</button
+    ><button
+      type="submit"
+      id="bmtLast"
+      name="bmtLast"
+      onclick="objButtonName.value=this.name;objButton.value=13;"
+      title="Último Registro"
+      >&gt;|</button
+    >
+  </div>
+</form>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldManager.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldValidation.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldCounter.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormSelectKeyboardLocate.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormSelectBubbleSort.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/FillSelect.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/LibraryAjax.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/SelectAjax.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/formAjax.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- //----------------------------------------------------------------------
+
+
+//FillSelect(document.all.objUnidadeFiltro);
+
+//OptionSelect(document.all.objUF);
+
+//----------------------------------------------------------------------- -->
+</SCRIPT>
+
+<script type="text/javascript" language="Javascript1.2">
+<!-- //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var sobjForm = document.getElementById('objfrmForm');
+
+ParseFields();
+
+// ButtonsDisabled(true);
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+</script>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldLocalEvents.js"></script>
+</body>
+</html>
+

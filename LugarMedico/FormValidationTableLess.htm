@@ -1,0 +1,822 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 XHTML Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" lang="pt-br"><head>
+
+
+
+<title>Exemplo do FieldValidation v1.2a ALFA</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="content-language" content="portuguese">
+<meta name="FormValidator v1.2a ALFA" content="Javascript Framework for helping form validationa and more">
+<meta name="DATE" content="7/12/2004 12:33AM">
+<meta name="TITLE" content="zevallos.com.br">
+<meta name="DESCRIPTION" content="Javascript Framework for helping form validationa and more">
+<meta name="KEYWORDS" content="JScript,JavaScript,Form,HTML">
+<meta name="AUTHOR" content="Ruben Zevallos Jr.">
+<meta name="ROBOTS" content="index,follow">
+<meta name="RATING" content="General">
+
+<link rel="stylesheet" href="FormValidationTableLess_arquivos/FormValidationTableLess.css" type="text/css">
+
+<style type="text/css">
+#portlet-news {font-size: 70%}
+
+.visualPadding {padding-right: 2em;
+	padding-left: 0em;
+	padding-Button: 1em;
+	padding-top: 2em
+}
+
+.portlet {padding-right: 0px;
+  padding-left: 0px;
+  margin-Button: 1em;
+  padding-Button: 0px;
+  border-top-style: none;
+  padding-top: 0px;
+  border-right-style: none;
+  border-left-style: none;
+  border-Button-style: none}
+
+.portletBody {
+  border-right: #8cacbb 1px solid;
+  border-top: #8cacbb 1px solid;
+  background: none transparent scroll repeat 0% 0%;
+  border-left: #8cacbb 1px solid;
+  border-Button: #8cacbb 1px solid;
+  border-collapse: collapse}
+
+.portletContent {padding-right: 1em;
+  padding-left: 1em;
+  padding-Button: 1em;
+  padding-top: 1em}
+
+.portlet .even {background-color: #f7f9fa}
+
+.portlet .odd {background-color: transparent}
+
+.portlet h5 {border-right: #8cacbb 1px solid;
+  padding-right: 1em;
+  border-top: #8cacbb 1px solid;
+  display: inline;
+  padding-left: 1em;
+  font-weight: bold;
+  font-size: 1em;
+  background: #dee7ec;
+  padding-Button: 0em;
+  border-left: #8cacbb 1px solid;
+  padding-top: 0em;
+  border-Button: #8cacbb 1px;
+  white-space: nowrap;
+  height: 1em}
+</style>
+
+<script type="text/javascript" language="Javascript1.2" src="FormValidationTableLess_arquivos/fckeditor.js"></script>
+<script type="text/javascript" language="Javascript1.2">
+window.onload = function()
+{
+	// Automatically calculates the editor base path based on the _samples directory.
+	// This is usefull only for these samples. A real application should use something like this:
+	// oFCKeditor.BasePath = '/Library/FCKEditor/' ;	// '/fckeditor/' is the default value.
+
+	var oFCKeditor = new FCKeditor('objlidDescricao', '100%', '300px') ;
+	oFCKeditor.CheckBrowser = true;
+  oFCKeditor.Config["AutoDetectLanguage"] = true;
+  // oFCKeditor.Config["DefaultLanguage"] = "pt-br";
+	oFCKeditor.BasePath	= '/Library/FCKEditor/';
+	oFCKeditor.Config['SkinPath'] = '/Library/FCKEditor/editor/skins/silver/';
+	// oFCKeditor.ToolbarSet = 'FormValidation';
+	oFCKeditor.ReplaceTextarea() ;
+
+}
+</script>
+<style rel="stylesheet" id="" type="text/css" charset="utf-8">SPAN.skype_pnh_container SPAN.skype_pnh_mark{  display:none !important;}@media screen{SPAN.skype_pnh_print_container{  display:none !important;}SPAN.skype_pnh_container, SPAN.skype_pnh_container *{background-attachment: scroll !important;background-color: transparent !important;background-image: none !important;background-position: 0px 0px ! important;background-repeat: no-repeat !important;border: 0px none !important;border-color: #000000 !important;border-style: none !important;border-width: 0 !important;border-left: 0 none #000000 !important;border-top: 0 none #000000 !important;border-right: 0 none #000000 !important;border-bottom: 0 none #000000 !important;border-left-color: #000000 !important;border-left-style: none !important;border-left-width: 0 !important;border-top-color: #000000 !important;border-top-style: none !important;border-top-width: 0 !important;border-right-color: #000000 !important;border-right-style: none !important;border-right-width: 0 !important;border-bottom-color: #000000 !important;border-bottom-style: none !important;border-bottom-width: 0 !important;border-collapse: separate !important;bottom: auto !important;clear: none !important;clip: auto !important;cursor: pointer !important;direction: ltr !important;display: inline !important;float: none !important;font-style: normal !important;left: auto !important;letter-spacing: 0 !important;list-style-image: none !important;list-style-position: outside !important;list-style-type: disc !important;overflow: hidden !important;overflow-x: hidden !important;overflow-y: hidden !important;padding: 0px 0px 0px 0px !important;padding-left: 0px !important;padding-top: 0px !important;padding-right: 0px !important;padding-bottom: 0px !important;page-break-after: auto !important;page-break-before: auto !important;page-break-inside: auto !important;position: static !important;right: auto !important;table-layout: auto !important;text-align: left !important;text-decoration: none !important;text-indent: 0px !important;text-transform: none !important;top: auto !important;voice-family: inherit !important;white-space: nowrap !important;word-spacing: normal !important;z-index: 0 !important;  color: #49535A !important;  font-family: Tahoma, Arial, Helvetica, sans-serif !important;  font-size: 11px !important;  font-weight: bold !important;  height: 14px !important;  line-height: 14px !important;  margin-left: 0px !important;  margin-top: 0px !important;  margin-right: 0px !important;  margin-bottom: 0px !important;  vertical-align: baseline !important;  width: auto !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_active_fax SPAN.skype_pnh_right_span, SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_inactive_fax SPAN.skype_pnh_right_span{  background-position: -92px 0px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_inactive_free SPAN.skype_pnh_dropart_flag_span{  background-position: 0px 1px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_inactive_free SPAN.skype_pnh_textarea_span{  background-position: -90px 0px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_inactive_free SPAN.skype_pnh_text_span{  visibility: hidden !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_active_free SPAN.skype_pnh_dropart_flag_span{  background-position: 0px 1px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_active_free SPAN.skype_pnh_textarea_span{  background-position: -160px 0px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_active_free SPAN.skype_pnh_text_span{  background-position: -160px 0px !important;  color: #FFFFFF !important;}SPAN.skype_pnh_container SPAN.skype_pnh_left_span{  background-position: 0px 0px !important;  width: 6px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_dropart_span{  background-position: -11px 0px !important;  width: 27px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_dropart_wo_arrow_span{  background-position: -130px 0px !important;  width: 18px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_dropart_flag_span{  background-position: 1px 1px !important;  width: 18px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_textarea_span{  background-position: -125px 0px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_text_span{  padding-left: 5px !important;  background-position: -125px 0px !important;}SPAN.skype_pnh_container SPAN.skype_pnh_right_span{  background-position: -62px 0px !important;  width: 15px !important;}}@media print{SPAN.skype_pnh_print_container{}SPAN.skype_pnh_container{    display:none !important;}}@media screen{SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_inactive_common *{  background-image:url('chrome://skype_ff_extension/skin/numbers_common_inactive_icon_set.gif') !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_active_common *{  background-image:url('chrome://skype_ff_extension/skin/numbers_common_active_icon_set.gif') !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_inactive_fax *{  background-image:url('chrome://skype_ff_extension/skin/numbers_common_inactive_icon_set.gif') !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_active_fax *{  background-image:url('chrome://skype_ff_extension/skin/numbers_common_active_icon_set.gif') !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_inactive_free SPAN.skype_pnh_text_span{  background-image: none !important;  color: transparent !important;  visibility: visible !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_inactive_free *{  background-image:url('chrome://skype_ff_extension/skin/numbers_free_icon_set.gif') !important;}SPAN.skype_pnh_container SPAN.skype_pnh_highlighting_active_free *{  background-image:url('chrome://skype_ff_extension/skin/numbers_free_icon_set.gif') !important;}SPAN.skype_pnh_container SPAN.skype_pnh_dropart_flag_span{  background-image: url('chrome://skype_ff_extension/skin/flags.gif') !important;}}</style><style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+.firebugCanvas {
+    position:fixed;
+    top: 0;
+    left: 0;
+    display:none;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    min-width: 0;
+    max-width: none;
+    min-height: 0;
+    max-height: none;
+    -moz-transform: rotate(0deg);
+    -moz-transform-origin: 50% 50%;
+}
+
+.firebugCanvas:before, .firebugCanvas:after {
+    content: "";
+}
+
+.firebugHighlight {
+    z-index: 2147483646;
+    position: fixed;
+    background-color: #3875d7;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0 none;
+    min-width: 0;
+    max-width: none;
+    min-height: 0;
+    max-height: none;
+}
+
+.firebugHighlight:before, .firebugHighlight:after {
+    content: "";
+}
+
+.firebugLayoutBoxParent {
+    z-index: 2147483646;
+    position: fixed;
+    background-color: transparent;
+    border-top: 0 none;
+    border-right: 1px dashed #E00 !important;
+    border-bottom: 1px dashed #E00 !important;
+    border-left: 0 none;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    min-width: 0;
+    max-width: none;
+    min-height: 0;
+    max-height: none;
+    -moz-transform: rotate(0deg);
+    -moz-transform-origin: 50% 50%;
+}
+
+.firebugRuler {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0 none;
+    opacity: 1;
+    min-width: 0;
+    max-width: none;
+    min-height: 0;
+    max-height: none;
+    -moz-transform: rotate(0deg);
+    -moz-transform-origin: 50% 50%;
+}
+
+.firebugRuler:before, .firebugRuler:after {
+    content: "";
+}
+
+.firebugRulerH {
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%13%88%00%00%00%0E%08%02%00%00%00L%25a%0A%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%04%F8IDATx%DA%EC%DD%D1n%E2%3A%00E%D1%80%F8%FF%EF%E2%AF2%95%D0D4%0E%C1%14%B0%8Fa-%E9%3E%CC%9C%87n%B9%81%A6W0%1C%A6i%9A%E7y%0As8%1CT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AATE9%FE%FCw%3E%9F%AF%2B%2F%BA%97%FDT%1D~K(%5C%9D%D5%EA%1B%5C%86%B5%A9%BDU%B5y%80%ED%AB*%03%FAV9%AB%E1%CEj%E7%82%EF%FB%18%BC%AEJ8%AB%FA'%D2%BEU9%D7U%ECc0%E1%A2r%5DynwVi%CFW%7F%BB%17%7Dy%EACU%CD%0E%F0%FA%3BX%FEbV%FEM%9B%2B%AD%BE%AA%E5%95v%AB%AA%E3E5%DCu%15rV9%07%B5%7F%B5w%FCm%BA%BE%AA%FBY%3D%14%F0%EE%C7%60%0EU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5JU%88%D3%F5%1F%AE%DF%3B%1B%F2%3E%DAUCNa%F92%D02%AC%7Dm%F9%3A%D4%F2%8B6%AE*%BF%5C%C2Ym~9g5%D0Y%95%17%7C%C8c%B0%7C%18%26%9CU%CD%13i%F7%AA%90%B3Z%7D%95%B4%C7%60%E6E%B5%BC%05%B4%FBY%95U%9E%DB%FD%1C%FC%E0%9F%83%7F%BE%17%7DkjMU%E3%03%AC%7CWj%DF%83%9An%BCG%AE%F1%95%96yQ%0Dq%5Dy%00%3Et%B5'%FC6%5DS%95pV%95%01%81%FF'%07%00%00%00%00%00%00%00%00%00%F8x%C7%F0%BE%9COp%5D%C9%7C%AD%E7%E6%EBV%FB%1E%E0(%07%E5%AC%C6%3A%ABi%9C%8F%C6%0E9%AB%C0'%D2%8E%9F%F99%D0E%B5%99%14%F5%0D%CD%7F%24%C6%DEH%B8%E9rV%DFs%DB%D0%F7%00k%FE%1D%84%84%83J%B8%E3%BA%FB%EF%20%84%1C%D7%AD%B0%8E%D7U%C8Y%05%1E%D4t%EF%AD%95Q%BF8w%BF%E9%0A%BF%EB%03%00%00%00%00%00%00%00%00%00%B8vJ%8E%BB%F5%B1u%8Cx%80%E1o%5E%CA9%AB%CB%CB%8E%03%DF%1D%B7T%25%9C%D5(%EFJM8%AB%CC'%D2%B2*%A4s%E7c6%FB%3E%FA%A2%1E%80~%0E%3E%DA%10x%5D%95Uig%15u%15%ED%7C%14%B6%87%A1%3B%FCo8%A8%D8o%D3%ADO%01%EDx%83%1A~%1B%9FpP%A3%DC%C6'%9C%95gK%00%00%00%00%00%00%00%00%00%20%D9%C9%11%D0%C0%40%AF%3F%EE%EE%92%94%D6%16X%B5%BCMH%15%2F%BF%D4%A7%C87%F1%8E%F2%81%AE%AAvzr%DA2%ABV%17%7C%E63%83%E7I%DC%C6%0Bs%1B%EF6%1E%00%00%00%00%00%00%00%00%00%80cr%9CW%FF%7F%C6%01%0E%F1%CE%A5%84%B3%CA%BC%E0%CB%AA%84%CE%F9%BF)%EC%13%08WU%AE%AB%B1%AE%2BO%EC%8E%CBYe%FE%8CN%ABr%5Dy%60~%CFA%0D%F4%AE%D4%BE%C75%CA%EDVB%EA(%B7%F1%09g%E5%D9%12%00%00%00%00%00%00%00%00%00H%F6%EB%13S%E7y%5E%5E%FB%98%F0%22%D1%B2'%A7%F0%92%B1%BC%24z3%AC%7Dm%60%D5%92%B4%7CEUO%5E%F0%AA*%3BU%B9%AE%3E%A0j%94%07%A0%C7%A0%AB%FD%B5%3F%A0%F7%03T%3Dy%D7%F7%D6%D4%C0%AAU%D2%E6%DFt%3F%A8%CC%AA%F2%86%B9%D7%F5%1F%18%E6%01%F8%CC%D5%9E%F0%F3z%88%AA%90%EF%20%00%00%00%00%00%00%00%00%00%C0%A6%D3%EA%CFi%AFb%2C%7BB%0A%2B%C3%1A%D7%06V%D5%07%A8r%5D%3D%D9%A6%CAu%F5%25%CF%A2%99%97zNX%60%95%AB%5DUZ%D5%FBR%03%AB%1C%D4k%9F%3F%BB%5C%FF%81a%AE%AB'%7F%F3%EA%FE%F3z%94%AA%D8%DF%5B%01%00%00%00%00%00%00%00%00%00%8E%FB%F3%F2%B1%1B%8DWU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*UiU%C7%BBe%E7%F3%B9%CB%AAJ%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5*%AAj%FD%C6%D4%5Eo%90%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5%86%AF%1B%9F%98%DA%EBm%BBV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%AD%D6%E4%F58%01%00%00%00%00%00%00%00%00%00%00%00%00%00%40%85%7F%02%0C%008%C2%D0H%16j%8FX%00%00%00%00IEND%AEB%60%82") repeat-x;
+    border-top: 1px solid #BBBBBB;
+    border-right: 1px dashed #BBBBBB;
+    border-bottom: 1px solid #000000;
+}
+
+.firebugRulerV {
+    top: 0;
+    left: -15px;
+    width: 14px;
+    height: 100%;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0E%00%00%13%88%08%02%00%00%00%0E%F5%CB%10%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%06~IDATx%DA%EC%DD%D1v%A20%14%40Qt%F1%FF%FF%E4%97%D9%07%3BT%19%92%DC%40(%90%EEy%9A5%CB%B6%E8%F6%9Ac%A4%CC0%84%FF%DC%9E%CF%E7%E3%F1%88%DE4%F8%5D%C7%9F%2F%BA%DD%5E%7FI%7D%F18%DDn%BA%C5%FB%DF%97%BFk%F2%10%FF%FD%B4%F2M%A7%FB%FD%FD%B3%22%07p%8F%3F%AE%E3%F4S%8A%8F%40%EEq%9D%BE8D%F0%0EY%A1Uq%B7%EA%1F%81%88V%E8X%3F%B4%CEy%B7h%D1%A2E%EBohU%FC%D9%AF2fO%8BBeD%BE%F7X%0C%97%A4%D6b7%2Ck%A5%12%E3%9B%60v%B7r%C7%1AI%8C%BD%2B%23r%00c0%B2v%9B%AD%CA%26%0C%1Ek%05A%FD%93%D0%2B%A1u%8B%16-%95q%5Ce%DCSO%8E%E4M%23%8B%F7%C2%FE%40%BB%BD%8C%FC%8A%B5V%EBu%40%F9%3B%A72%FA%AE%8C%D4%01%CC%B5%DA%13%9CB%AB%E2I%18%24%B0n%A9%0CZ*Ce%9C%A22%8E%D8NJ%1E%EB%FF%8F%AE%CAP%19*%C3%BAEKe%AC%D1%AAX%8C*%DEH%8F%C5W%A1e%AD%D4%B7%5C%5B%19%C5%DB%0D%EF%9F%19%1D%7B%5E%86%BD%0C%95%A12%AC%5B*%83%96%CAP%19%F62T%86%CAP%19*%83%96%CA%B8Xe%BC%FE)T%19%A1%17xg%7F%DA%CBP%19*%C3%BA%A52T%86%CAP%19%F62T%86%CA%B0n%A9%0CZ%1DV%C6%3D%F3%FCH%DE%B4%B8~%7F%5CZc%F1%D6%1F%AF%84%F9%0F6%E6%EBVt9%0E~%BEr%AF%23%B0%97%A12T%86%CAP%19%B4T%86%CA%B8Re%D8%CBP%19*%C3%BA%A52huX%19%AE%CA%E5%BC%0C%7B%19*CeX%B7h%A9%0C%95%E1%BC%0C%7B%19*CeX%B7T%06%AD%CB%5E%95%2B%BF.%8F%C5%97%D5%E4%7B%EE%82%D6%FB%CF-%9C%FD%B9%CF%3By%7B%19%F62T%86%CA%B0n%D1R%19*%A3%D3%CA%B0%97%A12T%86uKe%D0%EA%B02*%3F1%99%5DB%2B%A4%B5%F8%3A%7C%BA%2B%8Co%7D%5C%EDe%A8%0C%95a%DDR%19%B4T%C66%82fA%B2%ED%DA%9FC%FC%17GZ%06%C9%E1%B3%E5%2C%1A%9FoiB%EB%96%CA%A0%D5qe4%7B%7D%FD%85%F7%5B%ED_%E0s%07%F0k%951%ECr%0D%B5C%D7-g%D1%A8%0C%EB%96%CA%A0%A52T%C6)*%C3%5E%86%CAP%19%D6-%95A%EB*%95q%F8%BB%E3%F9%AB%F6%E21%ACZ%B7%22%B7%9B%3F%02%85%CB%A2%5B%B7%BA%5E%B7%9C%97%E1%BC%0C%EB%16-%95%A12z%AC%0C%BFc%A22T%86uKe%D0%EA%B02V%DD%AD%8A%2B%8CWhe%5E%AF%CF%F5%3B%26%CE%CBh%5C%19%CE%CB%B0%F3%A4%095%A1%CAP%19*Ce%A8%0C%3BO*Ce%A8%0C%95%A12%3A%AD%8C%0A%82%7B%F0v%1F%2FD%A9%5B%9F%EE%EA%26%AF%03%CA%DF9%7B%19*Ce%A8%0C%95%A12T%86%CA%B8Ze%D8%CBP%19*Ce%A8%0C%95%D1ae%EC%F7%89I%E1%B4%D7M%D7P%8BjU%5C%BB%3E%F2%20%D8%CBP%19*Ce%A8%0C%95%A12T%C6%D5*%C3%5E%86%CAP%19*Ce%B4O%07%7B%F0W%7Bw%1C%7C%1A%8C%B3%3B%D1%EE%AA%5C%D6-%EBV%83%80%5E%D0%CA%10%5CU%2BD%E07YU%86%CAP%19*%E3%9A%95%91%D9%A0%C8%AD%5B%EDv%9E%82%FFKOee%E4%8FUe%A8%0C%95%A12T%C6%1F%A9%8C%C8%3D%5B%A5%15%FD%14%22r%E7B%9F%17l%F8%BF%ED%EAf%2B%7F%CF%ECe%D8%CBP%19*Ce%A8%0C%95%E1%93~%7B%19%F62T%86%CAP%19*Ce%A8%0C%E7%13%DA%CBP%19*Ce%A8%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4%AE%A4%F5%25%C0%00%DE%BF%5C'%0F%DA%B8q%00%00%00%00IEND%AEB%60%82") repeat-y;
+    border-left: 1px solid #BBBBBB;
+    border-right: 1px solid #000000;
+    border-bottom: 1px dashed #BBBBBB;
+}
+
+.overflowRulerX > .firebugRulerV {
+    left: 0;
+}
+
+.overflowRulerY > .firebugRulerH {
+    top: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBox {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    opacity: 1;
+    outline: 0;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    min-height: 0;
+    max-height: none;
+    -moz-transform: rotate(0deg);
+    -moz-transform-origin: 50% 50%;
+}
+
+.firebugLayoutBox:before, .firebugLayoutBox:after {
+    content: "";
+}
+
+.firebugLayoutBoxOffset {
+    z-index: 2147483646;
+    position: fixed;
+    opacity: 0.8;
+}
+
+.firebugLayoutBoxMargin {
+    background-color: #EDFF64;
+}
+
+.firebugLayoutBoxBorder {
+    background-color: #666666;
+}
+
+.firebugLayoutBoxPadding {
+    background-color: SlateBlue;
+}
+
+.firebugLayoutBoxContent {
+    background-color: SkyBlue;
+}
+
+.firebugLayoutLine {
+    z-index: 2147483646;
+    background-color: #000000;
+    opacity: 0.4;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0 none;
+    min-width: 0;
+    max-width: none;
+    min-height: 0;
+    max-height: none;
+    -moz-transform: rotate(0deg);
+    -moz-transform-origin: 50% 50%;
+}
+
+.firebugLayoutLine:before, .firebugLayoutLine:after {
+    content: "";
+}
+
+.firebugLayoutLineLeft, .firebugLayoutLineRight {
+    position: fixed;
+    width: 1px;
+    height: 100%;
+}
+
+.firebugLayoutLineTop, .firebugLayoutLineBottom {
+    position: fixed;
+    width: 100%;
+    height: 1px;
+}
+
+.firebugLayoutLineTop {
+    margin-top: -1px;
+    border-top: 1px solid #999999;
+}
+
+.firebugLayoutLineRight {
+    border-right: 1px solid #999999;
+}
+
+.firebugLayoutLineBottom {
+    border-bottom: 1px solid #999999;
+}
+
+.firebugLayoutLineLeft {
+    margin-left: -1px;
+    border-left: 1px solid #999999;
+}
+
+.fbProxyElement {
+    position: absolute;
+    background-color: transparent;
+    z-index: 2147483646;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0 none;
+}
+</style></head><body>
+<div>
+  <form action="FormValidationTableLess.asp" method="post" name="frmForm" id="objfrmForm" onsubmit="return SubmitForm();" onkeypress="FieldChanged(event)">
+    <!--  Sombra style="filter:progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=135, Strength=2)" -->
+    <div id="maintable" style="width: 450px; float: left; margin: 0pt auto;">
+      <div id="maintableI">
+        <input id="objButton" name="bmtButton" type="hidden">
+        <input id="objFieldChanged" name="blnFieldChanged" type="hidden">
+        <input id="objlidCodigo" name="lidCodigo" value="" type="hidden">
+        <div class="WindowHeader Main">Exemplo do FieldValidation v1.2a ALFA</div>
+        <div class="WindowHeader Alert Top">ATENÇÃO: É obrigatório o preenchimento para os campos que contém <img src="FormValidationTableLess_arquivos/required.gif" alt="Campo Obrigatorio"></div>
+        <div class="WindowHeader Button Top">
+          <button type="submit" accesskey="S" name="bmtCadastra" onclick="objButton.value=3;" style="width: 70px;"> <span class="u">S</span>alvar </button><button type="submit" accesskey="C" name="bmtCancela" onclick="objButton.value=0;" style="width: 70px;"><span class="u">C</span>ancelar</button><button type="reset" accesskey="L" name="bmtReset" style="width: 70px;"><span class="u">L</span>impar</button>
+        </div>
+        <div class="WindowDesign">
+          <fieldset title="Exemplo de uso de preenchimento e validação usando XML">
+            <legend class="FormField">Exemplo do sistema de eventos com base em XML</legend>
+              <label accesskey="X" for="objpleLiderXSelect">Lider <span class="u">X</span><br>
+              <select id="objpleLiderXSelect" name="pleLiderXSelect" onblur="SelectKeyDownClear()" onclick="SelectKeyDownClear()" onkeydown="SelectKeyDown(event);" onchange="FieldChanged(event);FieldSelect(event);" title="Selecione o Lider" onfocus="StatusTitle(event)" optionvaluedefault="6"></select></label><input id="objpleLiderX" name="pleLiderX" value="" type="hidden">
+              <br clear="all">
+              <label accesskey="Y" for="objpleLiderY">Lider <span class="u">Y</span><br>
+              <input id="objpleLiderY" name="pleLiderY" size="5" maxlength="12" class="Fields" onfocus="StatusTitle(event)" title="Digite o Código do Lider" onchange="FieldChanged()" onblur="SelectRecordEvent();" selectrecord="121" type="text">
+              <button name="bmtpleLiderY" onclick="javascript:windowopen('FormValidationTableLessSelect.asp?o=120&amp;Field=objpleLiderY', 'objpleLiderY', 'status=yes,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes,left=200,top=200,height=200,width=400');" style=""> ... </button><button name="bmtpleLiderY" onclick="javascript:SelectRecord('121', document.objfrmForm.objpleLiderY);" style=""> X </button> (<span id="objpleLiderYNome"></span>)</label>
+          </fieldset>
+        </div>
+        <div class="WindowDesign">
+          <fieldset title="Veja os exemplos de uso do SELECT">
+            <legend>Exemplo de uso do SELECT</legend>
+              <label accesskey="P" for="objlidParlamentarSelect"><span class="u">P</span>arlamentar<br>
+              <select id="objlidParlamentarSelect" name="lidParlamentarSelect" onblur="SelectKeyDownClear()" onclick="SelectKeyDownClear()" onkeydown="SelectKeyDown(event);" onchange="FieldChanged(event);FieldSelect(event);" title="Selecione o Parlamentar" onfocus="StatusTitle(event)" optionvaluedefault="">
+                <option selected="selected" value="1">Anderson de Carvalho Lago Filho</option>
+              </select></label><input id="objlidParlamentar" name="lidParlamentar" value="" type="hidden">
+              <label accesskey="E" for="objlidEntidadeSelect"><span class="u">E</span>ntidade<br>
+              <select id="objlidEntidadeSelect" name="lidEntidadeSelect" onblur="SelectKeyDownClear()" onclick="SelectKeyDownClear()" onkeydown="SelectKeyDown(event);" onchange="FieldChanged(event);FieldSelect(event);" title="Selecione o Entidade" onfocus="StatusTitle(event)" optionvaluedefault="5">
+                <option selected="selected" value="3">Elenilce Rabelo dos Anjos</option>
+                <option value="2">Isabel Luciana Nogueira</option>
+                <option value="4">Isabela Silva</option>
+                <option value="5">Maria de Lima Brito</option>
+                <option value="1">Mariana de Lima Brito </option>
+              </select></label><input id="objlidEntidade" name="lidEntidade" value="" type="hidden">
+          </fieldset>
+        </div>
+        <div class="WindowDesign">
+          <fieldset>
+            <legend class="FormField">Exemplo de uso do INPUT</legend>
+              <label accesskey="N" for="objlidNome"><span class="u">N</span>ome<br>
+              <input id="objlidNome" value="Este campo esta com UpperCase e espaços a direita    " name="lidNome" size="60" maxlength="50" class="FieldRequired" required="O Nome é obrigatório!" title="Digite Nome" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" uppercase="true" righttrim="true" autofocus="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="E" for="objlidEndereco"><span class="u">E</span>ndereço<br>
+              <input id="objlidEndereco" value="    Rua dos amores, com muito espaços a esquerda" name="lidEndereco" size="50" maxlength="50" title="Digite Endereco" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" lefttrim="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="C" for="objlidComplemento"><span class="u">C</span>omplemento<br>
+              <input id="objlidComplemento" name="lidComplemento" size="50" maxlength="50" title="Digite Complemento" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" type="text"></label>
+              <br clear="all">
+              <label accesskey="B" for="objlidBairro"><span class="u">B</span>airro<br>
+              <input id="objlidBairro" name="lidBairro" size="30" maxlength="50" title="Digite Bairro" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" type="text"></label>
+              <br clear="all">
+              <label accesskey="C" for="objlidCidade"><span class="u">C</span>idade<br>
+              <input id="objlidCidade" value="    Este campo está com LowerCase e com espaços na esquerda e direita   " name="lidCidade" size="30" maxlength="50" class="FieldRequired" required="O Cidade é obrigatório!" title="Digite Cidade" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" lowercase="true" alltrim="true" type="text"></label>
+              <label accesskey="U" for="objlidUnidadeFederacaoSelect"><span class="u">U</span>nidade Federação<br>
+              <select id="objlidUnidadeFederacaoSelect" name="lidUnidadeFederacaoSelect" onblur="SelectKeyDownClear()" onclick="SelectKeyDownClear()" onkeydown="SelectKeyDown(event);" onchange="FieldChanged(event);FieldSelect(event);" title="Selecione o UnidadeFederacao" onfocus="StatusTitle(event)" optionvaluedefault="">
+                <option selected="selected" value="12">Acre</option>
+                <option value="2">Alagoas</option>
+                <option value="4">Ceará</option>
+                <option value="3">Distrito Federal</option>
+                <option value="15">Goiás</option>
+                <option value="1">Maranhão</option>
+                <option value="10">Mato Grosso</option>
+                <option value="11">Mato Grosso do Sul</option>
+                <option value="16">Minas Gerais</option>
+                <option value="2">Pará</option>
+                <option value="7">Paraná</option>
+                <option value="9">Rio Grande do Sul</option>
+                <option value="5">Rio de Janeiro</option>
+                <option value="2">Rio Grande do Norte</option>
+                <option value="13">Rondonia</option>
+                <option value="14">Rorâima</option>
+                <option value="6">São Paulo</option>
+               <option value="8">Santa Catarina</option>
+              </select></label><input id="objlidUnidadeFederacao" name="lidUnidadeFederacao" value="" type="hidden">
+          </fieldset>
+        </div>
+        <div class="WindowDesign">
+          <fieldset>
+            <legend class="FormField">Exemplo de uso do INPUT - Especiais</legend>
+              <label accesskey="C" for="objlidCEPRegEx"><span class="u">C</span>EP RegEx<br>
+              <input id="objlidCEPRegEx" value="70235" name="lidCEPRegEx" size="9" maxlength="10" title="Digite CEPRegEx" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" errormessage="CEPRegEx Inválido!" regexsearch="/((^\d{5}$)|(^\d{8}$))|(^\d{5}-\d{3}$)/" type="text"></label>
+              <label accesskey="C" for="objlidCEP"><span class="u">C</span>EP<br>
+              <input id="objlidCEP" value="70235-110" name="lidCEP" size="9" maxlength="10" title="Digite CEP" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" cep="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="I" for="objlidIPAddress"><span class="u">I</span>P Address<br>
+              <input id="objlidIPAddress" value="192.168.220.1" name="lidIPAddress" size="15" maxlength="30" title="Digite o IP Address" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" ipaddress="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="T" for="objlidTelefonePhone"><span class="u">T</span>elefone<br>
+              <input id="objlidTelefonePhone" value="8117-2508" name="lidTelefonePhone" size="12" maxlength="20" title="Digite O TelefonePhone" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" phone="true" type="text"></label>
+              <label accesskey="T" for="objlidTelefonePhoneArea"><span class="u">T</span>elefone<br>
+              <input id="objlidTelefonePhoneArea" value="(98) 227-7138" name="lidTelefonePhoneArea" size="12" maxlength="20" title="Digite O TelefonePhoneArea" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" phonearea="true" type="text"></label>
+              <label accesskey="T" for="objlidTelefone"><span class="u">T</span>elefone<br>
+              <input id="objlidTelefone" value="(98) 8117-2508" name="lidTelefone" size="12" maxlength="20" title="Digite O Telefone" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" errormessage="Telefone Inválido!" regexsearch="/^(\d{2,3}|\(\d{2,3}\))?[ ]?\d{3,4}[-]?\d{3,4}$/" type="text"></label>
+              <br clear="all">
+              <label accesskey="H" for="objlidHora"><span class="u">H</span>ora 24h<br>
+              <input id="objlidHora" value="13:25" name="lidHora" size="10" maxlength="10" title="Digite a Hora" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" time24="true" type="text"></label>
+              <label accesskey="H" for="objlidHoraAMPM"><span class="u">H</span>ora 12h<br>
+              <input id="objlidHoraAMPM" value="01:01 AM" name="lidHoraAMPM" size="10" maxlength="10" title="Digite a HoraAMPM" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" timeampm="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="N" for="objlidNascimento"><span class="u">N</span>ascimento<br>
+              <input id="objlidNascimento" name="lidNascimento" size="12" maxlength="12" title="Digite Nascimento" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" datebr="true" type="text"></label>
+              <label accesskey="S" for="objlidSexoSelect"><span class="u">S</span>exo<br>
+              <select id="objlidSexoSelect" name="lidSexoSelect" onblur="SelectKeyDownClear()" onclick="SelectKeyDownClear()" onkeydown="SelectKeyDown(event);" onchange="FieldChanged(event);FieldSelect(event);" title="Selecione o Sexo" onfocus="StatusTitle(event)" optionvaluedefault="">
+                <option selected="selected" value="2">Feminino</option>
+                <option value="1">Masculino</option>
+              </select></label><input id="objlidSexo" name="lidSexo" value="" type="hidden">
+              <br clear="all">
+              <label accesskey="R" for="objlidRG"><span class="u">R</span>G<br>
+              <input id="objlidRG" name="lidRG" size="10" maxlength="20" title="Digite RG" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" type="text"></label>
+              <br clear="all">
+              <label accesskey="C" for="objlidCPF"><span class="u">C</span>PF<br>
+              <input id="objlidCPF" name="lidCPF" size="14" maxlength="20" title="Digite CPF" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" cpf="true" normalizenumber="true" leadingzeroes="11" type="text"></label>
+              <label accesskey="N" for="objlidCNPJ">C<span class="u">N</span>PJ<br>
+              <input id="objlidCNPJ" value="5.961.458/0001-20" name="lidCNPJ" size="16" maxlength="20" title="Digite CNPJ" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" cnpj="O CNPJ precisa ser um CNPJ válido!" required="Você precisa digitar o CNPJ!" normalizenumber="true" leadingzeroes="14" type="text"></label>
+              <label accesskey="C" for="objlidCPFCNPJ"><span class="u">C</span>PF ou CNPJ<br>
+              <input id="objlidCPFCNPJ" name="lidCPFCNPJ" size="16" maxlength="20" class="FieldRequired" title="Digite CPFCNPJ" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" cpfcnpj="true" normalizenumber="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="E" for="objlidEMail"><span class="u">E</span>-Mail<br>
+              <input id="objlidEMail" name="lidEMail" size="60" maxlength="100" class="FieldRequired" required="O E-Mail é obrigatório!" title="Digite EMail" onfocus="StatusTitle(event)" onchange="FieldChanged(event)" email="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="E" for="objlidEMailLivre"><span class="u">E</span>-Mail Livre<br>
+              <input id="objlidEMailLivre" name="lidEMailLivre" size="60" maxlength="100" class="FieldRequired" required="O E-Mail é obrigatório!" title="Digite EMailLivre" onchange="FieldChanged(event)" errormessage="O E-mail regexsearch Errado!" regexsearch="/^[\w!#$%'*+/=?^`{|}~-]+(\.[\w!#$%'*+/=?^`{|}~-]+)*@(([\w-]+\.)+[A-Za-z]{2,6}|\[\d{1,3}(\.\d{1,3}){3}\])$/" type="text"></label>
+                <!-- regexsearch="/^[\w!#$%&'*+/=?^`{|}~-]+(\.[\w!#$%&'*+/=?^`{|}~-]+)*@(([\w-]+\.)+[A-Za-z]{2,6}|\[\d{1,3}(\.\d{1,3}){3}\])$/" / -->
+              <br clear="all">
+              <label accesskey="Z" for="objlidNormalizeAccents">Normali<span class="u">z</span>e Accents<br>
+              <input id="objlidNormalizeAccents" value="Ae=áäâàãéëêèíïîìóöôòõúüûùçñýÿÁÄÂÀÃÉËÊÈÍÏÎÌÓÖÔÒÕÚÜÛÙÇÑÝ" name="lidNormalizeAccents" size="20" maxlength="60" title="Digite NormalizeAccents" onchange="FieldChanged(event)" normalizeaccents="true" type="text"></label>
+              <label accesskey="z" for="objlidNormalizeString">Normali<span class="u">z</span>e String<br>
+              <input id="objlidNormalizeString" value="T=(normalizado) * 10" name="lidNormalizeString" size="20" maxlength="20" title="Digite NormalizeString" onchange="FieldChanged(event)" normalizestring="true" type="text"></label>
+              <label accesskey="z" for="objlidnormalizenumber">Normali<span class="u">z</span>e Number<br>
+              <input id="objlidnormalizenumber" value="-1005235.20000Ax" name="lidnormalizenumber" size="20" maxlength="20" title="Digite normalizenumber" onchange="FieldChanged(event)" normalizenumber="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="p" for="objlidNormalizeAlpha">Normalize Al<span class="u">p</span>ha<br>
+              <input id="objlidNormalizeAlpha" value="Ruben Zevallos Jr. 12328 e Você!" name="lidNormalizeAlpha" size="60" maxlength="60" title="Digite NormalizeAlpha" onchange="FieldChanged(event)" normalizealpha="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="M" for="objlidNormalizeMoneyBR"><span class="u">M</span>oney BR<br>
+               <input id="objlidNormalizeMoneyBR" value="+10.000,000" name="lidNormalizeMoneyBR" size="14" maxlength="20" title="Digite NormalizeMoneyBR" onchange="FieldChanged(event)" normalizemoneybr="true" type="text"></label>
+              <label accesskey="M" for="objlidNormalizeMoneyUS"><span class="u">M</span>oney US<br>
+              <input id="objlidNormalizeMoneyUS" value="-10,000.00" name="lidNormalizeMoneyUS" size="14" maxlength="20" title="Digite NormalizeMoneyUS" onchange="FieldChanged(event)" normalizemoneyus="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="U" for="objlidURL2"><span class="u">U</span>RL<br>
+              <input id="objlidURL2" value="http://www.zevallos.com.br/Teste de Codificação.htm" name="lidURL2" size="60" maxlength="100" class="FieldRequired" required="A URL é obrigatória!" title="Digite a URL" onchange="FieldChanged(event)" urlencode="true" type="text"></label>
+              <br clear="all">
+              <label accesskey="S" for="objlidSenha"><span class="u">S</span>enha<br>
+              <input id="objlidSenha" name="lidSenha" size="20" maxlength="20" class="FieldRequired" required="A senha é obrigatória!" title="Digite a senha" onchange="FieldChanged(event)" type="password"></label>
+              <label accesskey="C" for="objlidSenhaComparar">Senha a <span class="u">C</span>omparar<br>
+              <input id="objlidSenhaComparar" name="lidSenhaComparar" size="20" maxlength="20" class="FieldRequired" required="A senha é obrigatória!" title="Digite a comparação da senha!" onchange="FieldChanged(event)" errormessage="A comparação da senha precisa ser igual a digitada na senha!" equalto="document.getElementById('objlidSenha').value" type="password"></label>
+              <br clear="all">
+              <label accesskey="U" for="objlidEvalUse"><span class="u">U</span>so do EVal<br>
+              <input id="objlidEvalUse" name="lidEvalUse" size="15" maxlength="20" title="Digite o valor menor que 10" onchange="FieldChanged(event)" errormessage="Precisa ser menor que 10" eval="document.getElementById('objlidEvalUse').value = 10" type="text"></label>
+              <br clear="all">
+              <label accesskey="M" for="objlidMenor"><span class="u">M</span>enor que<br>
+              <input id="objlidMenor" value="30" name="lidMenor" size="15" maxlength="20" class="FieldRequired" required="A Menor é obrigatória!" title="Digite a Menor" onchange="FieldChanged(event)" errormessage="Precisa ser menor que o campo do meio" lessthen="document.getElementById('objlidMeio').value" type="text"></label>
+              <label accesskey="M" for="objlidMeio"><span class="u">M</span>eio<br>
+              <input id="objlidMeio" value="20" name="lidMeio" size="15" maxlength="20" class="FieldRequired" required="A Meio é obrigatória!" title="Digite a Meio" onchange="FieldChanged(event)" type="text"></label>
+              <label accesskey="M" for="objlidMaior"><span class="u">M</span>aior que<br>
+              <input id="objlidMaior" value="10" name="lidMaior" size="15" maxlength="20" class="FieldRequired" required="A Maior é obrigatória!" title="Digite a comparação da Maior!" onchange="FieldChanged(event)" errormessage="Precisa ser maior que o campo do meio" greaterthen="document.getElementById('objlidMeio').value" type="text"></label>
+              <br clear="all">
+              <label accesskey="M" for="objlidIgualMenor"><span class="u">M</span>enor Igual que<br>
+              <input id="objlidIgualMenor" value="30" name="lidMenor" size="18" maxlength="20" class="FieldRequired" required="A Menor é obrigatória!" title="Digite a Menor" onchange="FieldChanged(event)" errormessage="Precisa ser menor ou igual que o campo do meio" lessequalthen="document.getElementById('objlidIgualMeio').value" type="text"></label>
+              <label accesskey="M" for="objlidIgualMeio"><span class="u">M</span>eio<br>
+              <input id="objlidIgualMeio" value="20" name="lidMeio" size="18" maxlength="20" class="FieldRequired" required="A Meio é obrigatória!" title="Digite a Meio" onchange="FieldChanged(event)" type="text"></label>
+              <label accesskey="M" for="objlidIgualMaior"><span class="u">M</span>aior Igual que<br>
+              <input id="objlidIgualMaior" value="10" name="lidMaior" size="18" maxlength="20" class="FieldRequired" required="A Maior é obrigatória!" title="Digite a comparação da Maior!" onchange="FieldChanged(event)" errormessage="Precisa ser maior ou igual que o campo do meio" greaterequalthen="document.getElementById('objlidIgualMeio').value" type="text"></label>
+          </fieldset>
+        </div>
+        <div class="WindowDesign">
+          <fieldset>
+            <legend class="FormField">Exemplo de uso do TEXTAREA</legend>
+              <label accesskey="D" for="objlidDescricao"><span class="u">D</span>escrição<span class="FormFieldCounter">(<span id="objlidDescricaoCounter">500</span>)</span><br>
+              <input id="objlidDescricao___Config" value="AutoDetectLanguage=true&amp;SkinPath=/Library/FCKEditor/editor/skins/silver/" style="display: none;" type="hidden"><iframe style="position: absolute; z-index: 10000;" src="javascript:void(0)" width="0" frameborder="0" height="0" scrolling="no"></iframe><iframe style="position: absolute; z-index: 10000;" src="javascript:void(0)" width="0" frameborder="0" height="0" scrolling="no"></iframe><iframe style="position: absolute; z-index: 10000;" src="javascript:void(0)" width="0" frameborder="0" height="0" scrolling="no"></iframe><iframe style="position: absolute; z-index: 10000;" src="javascript:void(0)" width="0" frameborder="0" height="0" scrolling="no"></iframe><iframe style="position: absolute; z-index: 10000;" src="javascript:void(0)" width="0" frameborder="0" height="0" scrolling="no"></iframe><iframe style="position: absolute; z-index: 10000;" src="javascript:void(0)" width="0" frameborder="0" height="0" scrolling="no"></iframe><iframe style="position: absolute; z-index: 10000;" src="javascript:void(0)" width="0" frameborder="0" height="0" scrolling="no"></iframe><iframe id="objlidDescricao___Frame" src="FormValidationTableLess_arquivos/fckeditor.htm" width="100%" frameborder="0" height="300px" scrolling="no"></iframe><textarea style="display: none;" name="lidDescricao" id="objlidDescricao" rows="20" cols="55" title="Entre com a Descricao" onchange="FieldChanged(event)" onkeyup="FieldDelimiter(event); FieldCounter(event);" size="500" minsize="10" increment="0"></textarea></label>
+              <br clear="all">
+              <label accesskey="F" for="objlidFotografia"><span class="u">F</span>otografia<br>
+              <input id="objlidFotografia" name="lidFotografia" size="60" maxlength="100" class="FieldRequired" required="A Fotografia é obrigatória!" title="Digite Fotografia" onchange="FieldChanged(event)" type="text"></label>
+          </fieldset>
+        </div>
+        <div class="WindowDesign">
+          <fieldset>
+            <legend class="FormField">Definições do Registro&nbsp;</legend>
+              <label accesskey="I" for="objlidInclusao"><span class="u">I</span>nclusão<br>
+              <input id="objlidInclusao" value="20/06/2004" name="lidInclusao" size="12" maxlength="12" class="FieldRequired FieldReadOnly" required="O Inclusão é obrigatório!" title="Digite Inclusão" onchange="FieldChanged(event)" readonly="readonly" type="text"></label>
+              <label accesskey="A" for="objlidAlteracao"><span class="u">A</span>lteração<br>
+              <input id="objlidAlteracao" name="lidAlteracao" size="12" maxlength="12" class="FieldReadOnly" title="Digite Alteração" onchange="FieldChanged(event)" readonly="readonly" type="text"></label>
+              <label accesskey="A" for="objlidAtivo"><span class="u">A</span>tivo<br>
+              <input id="objlidAtivo" value="1" name="lidAtivo" class="CheckBox FieldRequired" required="O Ativo é obrigatório!" onclick="this.value = ((this.checked) ? '1' : '0');FieldChanged(event);" checked="checked" title="Selecione Ativo" type="checkbox"></label>
+          </fieldset>
+        </div>
+        <div class="WindowHeader Button Button">
+          <button type="submit" accesskey="S" name="bmtCadastra" onclick="objButton.value=3;" style="width: 70px;"> <span class="u">S</span>alvar </button><button type="submit" accesskey="C" name="bmtCancela" onclick="objButton.value=0;" style="width: 70px;"><span class="u">C</span>ancelar</button><button type="reset" accesskey="L" name="bmtReset" style="width: 70px;"><span class="u">L</span>impar</button>
+        </div>
+      </div>
+      <p class="clear">
+    </p></div>
+  </form>
+  <br clear="all">
+  <div class="visualpadding">
+    <div class="portlet" id="portlet-news">
+      <h5>FormValidation</h5>
+      <div class="portletBody">
+        <div class="portletContent even">O FormValidation, é uma forma 
+avançada de validação de formulários, onde não é necessário 
+configurações complexas para validar cada tipo de campo.
+        <br><br>O sistema é baseado com a inclusão dos eventos na marcação &lt;FORM
+        <br>onSubmit="SubmitForm()"
+        <br>onKeyPress="FieldChanged(event)"
+        <br><br>Depois, a inclusão das inclusões abaixo:
+        <br>&lt;script language="javascript" src="/library/FormFieldManager.js"&gt;&lt;/script&gt;
+        <br>&lt;script language="javascript" src="/library/FormFieldValidation.js"&gt;&lt;/script&gt;
+        <br>&lt;script language="javascript" src="/library/FormFieldCounter.js"&gt;&lt;/script&gt;
+        <br>&lt;script language="javascript" src="/library/FormSelectKeyboardLocate.js"&gt;&lt;/script&gt;
+
+        <br>Cada tipo de marcação, tem novos atributos, que são utilizados para ativar as validações e outras opções.
+        </div>
+        <div class="portletContent odd">
+        <b>Browsers Testados:</b>
+        <br><b>IE</b> - 5.5SP2 e IE 6.0
+        <br><b>Mozilla FireFox</b> - 0.9.x
+        <br><b>Mozilla</b> - 0.9
+        <br><b>Opera</b> - 0.9
+        </div>
+
+        <div class="portletContent even">
+        <b>Atributos para o INPUT:</b>
+        <br><b>required</b> - Seleção obrigatória incluindo o ícone <img src="FormValidationTableLess_arquivos/required.gif" alt="Campo Obrigatório">
+        <br><b>CEP</b> - Validação e ajustes do CEP, dentro do padrão 99999 ou 99999-999
+        <br><b>CPF</b> - Validação e ajustes do CPF
+        <br><b>CNPJ</b> - Validação e ajustes do CNPJ
+        <br><b>CPFCNPJ</b> - Valida o CPF ou CNPJ e faz ajustes
+        <br><b>DateBR</b> - Validação e ajustes das datas padrão Brasil (DD/MM/AA ou DD/MM/AAAA), já com ajuste do ano 2000
+        <br><b>DateUS</b> - Validação e ajustes das datas padrão Americano (MM/DD/AA ou MM/DD/AAAA), já com ajuste do ano 2000
+        <br><b>EMail</b> - Validação e ajustes de e-mail dentro do padrão (e-mail, e-mail@dominio, e-mail@dominio.ext e e-mail@dominio.ext.aa)
+        <br><b>URLEncode</b> - Codifica os caracteres de uma URL, como espaços, caracteres acentuados e outros
+        <br><b>RightTrim</b> - Retira os espaços a direita
+        <br><b>LeftTrim</b> - Retira os espaços a esquerda
+        <br><b>AllTrim</b> - Retira os espaços a direita e esquerda
+        <br><b>LeadingZeroes</b> - Complementa com zeros a esquerda, de acordo com a quantidade definida
+        <br><b>NormalizeString</b> - Retorna somente caracteres A-Z, a-z e 0-9
+        <br><b>NormalizeNumber</b> - Retorna somente 0-9 ou - se tiver = true ou 1
+        <br><b>NormalizeAccents</b> - Retorna a string sem acentos
+        <br><b>NormalizeMoneyBR</b> - Retorna somente 0-9, - e a , (vírgula) da casa decimal
+        <br><b>NormalizeMoneyUS</b> - Retorna somente 0-9, - e a . (ponto) da casa decimal
+        <br><b>NormalizeAlpha</b> - Retorna somente caracteres A-Z, a-z e espaço
+        <br><b>Phone</b> - Valida Telefone com ou sem código de área
+        <br><b>PhoneArea</b> - Valida Telefone com código de área
+        <br><b>Time24</b> - Valida a hora padrão 24h
+        <br><b>TimeAMPM</b> - Valida a hora padrão 12h AM/PM
+        <br><b>IPAddress</b> - Valida o fomato de IP
+        <br><b>ErrorMessage</b> - Mensagem de erro para os avaliadores que não tem espaço para tal
+        <br><b>EVal</b> - Executa a avaliação do resultado de acordo com o eval do JavaScript.
+        <br><b>EqualTo</b> - Compara o a igualdade do conteúdo o campo corrente, com o objeto definido no parametro.
+        <br><b>NotEqualTo</b> - Compara o a diferença do conteúdo o campo corrente, com o objeto definido no parametro.
+        <br><b>LessThen</b> - Compara se o conteúdo do campo corrente é menor que o objeto definido no parametro.
+        <br><b>LessEqualThen</b> - Compara se o conteúdo do campo corrente é menor ou igual que o objeto definido no parametro.
+        <br><b>GreaterThen</b> - Compara se o conteúdo do campo corrente é maior que o objeto definido no parametro.
+        <br><b>GreaterEqualThen</b> - Compara se o conteúdo do campo corrente é maior ou igual que o objeto definido no parametro.
+        <br><br><b>RegExSearch</b> - Faz busca com base no Regular Expression Search do JavaScript
+        <br>/expressão/flags
+        <br>g (global search for all ocurrences of pattern)
+        <br>i (ignore case)
+        <br>m (multiline search)
+
+        <br><br><span class="u">Ajustes:</span>
+
+        <br><b>UpperCase</b> - Todos os caracteres serão ajustadas para maiúsculo.
+        <br><b>LowerCase</b> - Todos os caracteres serão ajustadas para minúsculo.
+        <br><br><b>Obs:</b> Os <b>DateBR</b> e <b>DateUS</b> fazem 
+ajustes automáticos nas datas. Se você digitar somente o dia ou dia e 
+mês, ele ja faz a inclusão do mês e ano corrente, quando for o caso.
+        <br><br>As datas também já estão ajustadas ao ano 2000, com 
+referência no ano atual a 60 anos. Se você digitar 01/01/60. O ano será 
+ajustado para 1966.
+        </div>
+
+        <div class="portletContent odd">
+        <b>Atributos para o SELECT:</b>
+        <br>Seleção ao teclar a inicial o conteúdo desejado, não somente a primeira letra
+        <br><b>required</b> - Seleção obrigatória incluindo o ícone <img src="FormValidationTableLess_arquivos/required.gif" alt="Campo Obrigatório">
+        </div>
+        <div class="portletContent even">
+        <b>Atributos para o TEXTAREA:</b>
+
+        <br>Limitador de tamanho
+        <br>Contador de quantidade de caracteres
+        <br><b>required</b> - Seleção obrigatória incluindo o ícone <img src="FormValidationTableLess_arquivos/required.gif" alt="Campo Obrigatório">
+        </div>
+        <div class="portletContent odd">
+        <b>Estes são os parâmetos que serão executados após a carga do formulároio:</b>
+        <br><b>AUTOFOCUS</b> - Ativa o evento objeto.Focus() em que ele 
+tiver. Se forem colocados mais de uma, ele ficará focado somente no 
+último. A falta deste parâmetro, foca no primeiro campo do formulário.
+        </div>
+
+        <div class="portletContent even">
+        <br><b><a href="http://ruben.zevallos.com.br/Library/Wish%20List.txt" target="_blank">Wish List</a></b> - Lista desejos para novas facilidades
+        <br><b><a href="http://ruben.zevallos.com.br/Library/Library%20Update.txt" target="_blank">Library Update</a></b> - Lista de atualizações e novidades.
+        <br><b><a href="http://ruben.zevallos.com.br/Library/Problemas%20Conhecidos.txt" target="_blank">Problemas Conhecidos</a></b> - Lista de problemas já conhecidos.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div id="footertable">
+    <div class="left">
+      <a href="http://www.w3.org/Style/CSS/Buttons/" target="_blank"><img alt="CSS" src="FormValidationTableLess_arquivos/mwcts.png"></a>
+      <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://www.zevallos.com.br/library/examples/formvalidationtableless.htm" target="_blank"><img src="FormValidationTableLess_arquivos/vcss.gif" alt="Valid CSS!"></a>
+    </div>
+    <div class="right"><a href="http://www.w3.org/TR/REC-CSS2/" target="_blank"><img src="FormValidationTableLess_arquivos/W3CSS.gif" alt="W3 CSS"></a><br><img src="FormValidationTableLess_arquivos/TableLess.gif" alt="TableLess"></div>
+    Desenvolvido por Ruben <a href="http://www.zevallos.com.br/" target="_blank">Zevallos</a><sup>®</sup> Jr.
+    <br>Sugestões ou problemas encaminhar para o <a href="mailto:info@zevallos.com.br"><img src="FormValidationTableLess_arquivos/mailto.gif" alt="Mail To"> &lt;info@zevallos.com.br&gt;</a>
+    <br>© 1995 - 2004 Ruben Zevallos<sup>®</sup> Jr. todos os direitos reservados.
+    </div>
+</div>
+
+<script type="text/javascript" language="Javascript1.2" src="FormValidationTableLess_arquivos/FormFieldManager.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="FormValidationTableLess_arquivos/FormFieldValidation.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="FormValidationTableLess_arquivos/FormFieldCounter.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="FormValidationTableLess_arquivos/FormSelectKeyboardLocate.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="FormValidationTableLess_arquivos/FormSelectBubbleSort.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="FormValidationTableLess_arquivos/FormSelectRecord.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="FormValidationTableLess_arquivos/FillSelect.js"></script>
+
+<script type="text/javascript" language="Javascript1.2">
+<!--
+function pick(strField, strValue) {
+  if (window.opener && !window.opener.closed)
+    arrValue = strValue.split(';');
+
+    eval("window.opener.document.frmForm." + strField).value = arrValue[0];
+
+    if(eval("window.opener.document.all." + strField + "Nome") != undefined)
+      eval("window.opener.document.all." + strField + "Nome").innerHTML = arrValue[1];
+}
+
+function windowopen(strAction, strWindowName, strParameters) {
+  window.open(strAction , strWindowName, strParameters);
+}
+
+
+// function pick(strField,strValue) {
+//   if (window.opener && !window.opener.closed)
+//     eval("window.opener.document.frmEditForm." + strField).value = eval("window.opener.document.frmEditForm." + strField).value + strValue;
+// }
+
+// -->
+</script>
+
+
+<script type="text/javascript" language="Javascript1.2">
+<!-- //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var agt = navigator.userAgent.toLowerCase();
+
+ie = agt.indexOf('msie')!= -1 && document.all;
+
+function GetXMLSelect(objField) {
+  var testcookie = 'jscookietest=valid';
+  document.cookie = testcookie;
+
+  if (document.cookie.indexOf(testcookie) == -1)
+    alert("Os Cookies não estão habilitados neste browser");
+
+  if (ie) {
+    var control = (agt.indexOf('msie 5') != -1) ? 'microsoft.xmlhttp' : 'msxml2.xmlhttp';
+
+    try {var objXMLHTTP = new ActiveXObject(control);
+    } catch(e) {
+      alert("Você precisa habilitar o suporte ao Active Scripting e ActiveX Controls.");
+    }
+  } else {
+    var objXMLHTTP = new XMLHttpRequest();
+
+    if(!objXMLHTTP)
+      alert("XMLHttpRequest não é suportado por este Browser.");
+  }
+
+  try {
+    // Needed for Mozilla if local file tries to access an http URL
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+  } catch (e) {
+    // ignore
+  }
+
+  try {
+   objXMLHTTP.open("GET", "Lider.xml", false);
+   objXMLHTTP.send(null);
+
+  }
+  catch (e) {
+   alert(e.description);
+  }
+
+  if (objXMLHTTP.responseText) {
+    try {
+      var objXMLSer = new XMLSerializer();
+      xmlString = objXMLSer.serializeToString(objXMLHTTP.responseText);
+
+    } catch (e) {
+      xmlString = objXMLHTTP.responseText;
+    }
+  }
+
+  strReturn = "";
+
+  if (document.implementation.createDocument) {
+    var parser = new DOMParser();
+
+    objXMLDoc = parser.parseFromString(xmlString, "text/xml");
+
+  } else if (window.ActiveXObject){
+    objXMLDoc = new ActiveXObject("Msxml2.DOMDocument")
+    objXMLDoc.async="false";
+    objXMLDoc.loadXML(xmlString);
+  }
+
+  // alert(objXMLHTTP.readyState);
+  // alert(objXMLHTTP.status);
+
+  objRoot = objXMLDoc.getElementsByTagName("record");
+
+  if (ie) {
+    if (objXMLDoc.parseError.errorCode != 0)
+      alert("XML Error at " + "PublicadorMenu.asp?o=10" +
+            "\nReason: " + objXMLDoc.parseError.reason +
+            "\nFilePos: " + objXMLDoc.parseError.filepos +
+            "\nLine: " + objXMLDoc.parseError.line +
+            "\nLinePos: " + objXMLDoc.parseError.linepos +
+            "\nsrcText: " + objXMLDoc.parseError.srcText +
+            "\nURL: " + objXMLDoc.parseError.url);
+  } else {
+    if (objXMLDoc.childNodes.length == 0)
+      alert("Parsing Error!");
+  }
+
+  InsertHTML(objField, "");
+
+  if(objRoot.length == 0) {
+  	var objOption = document.createElement("OPTION");
+
+  	objOption.value = "";
+  	objOption.text = "Sem definição";
+
+    objField.add(objOption);
+
+  } else {
+    for (i = 0; i < objRoot.length; i++) {
+  		var objOption = document.createElement("OPTION");
+
+  		objOption.value = objRoot[i].getAttribute("codigo");
+  		objOption.text = objRoot[i].getAttribute("nome");
+
+ 			objOption.selected = objField.getAttribute('optionvaluedefault') == objOption.value;
+
+      objField.add(objOption);
+
+    }
+  }
+}
+
+//===========================================================================
+function InsertHTML(objTarget, strContent) {
+  if (ie) {
+    objTarget.innerHTML = strContent;
+
+  } else {
+    // alert(document.getElementById("objTreeView"));
+
+    //.insertAdjacentHTML('beforeEnd', strContent);
+
+  	var objRange = objTarget.ownerDocument.createRange();
+  	objRange.selectNodeContents(objTarget);
+  	objRange.deleteContents();
+  	var df = objRange.createContextualFragment(strContent);
+  	objTarget.appendChild(df);
+  }
+}
+
+// -->
+</script>
+
+
+<script type="text/javascript" language="Javascript1.2">
+<!-- //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+sstrXMLSelect = "";
+
+GetXMLSelect(document.getElementById('objpleLiderXSelect'));
+
+OptionSelect(document.getElementById('objlidEntidadeSelect'));
+OptionSelect(document.getElementById('objlidParlamentarSelect'));
+OptionSelect(document.getElementById('objlidSexoSelect'));
+OptionSelect(document.getElementById('objlidUnidadeFederacaoSelect'));
+
+OptionSelect(document.getElementById('objpleLiderXSelect'));
+
+
+//FillSelect(document.getElementById('objpleLiderXSelect'));
+
+//OptionSelect(document.getElementById('objUF'));
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</script>
+
+<script type="text/javascript" language="Javascript1.2">
+<!-- //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var sobjForm = document.getElementById('objfrmForm');
+
+ParseFields();
+
+// ButtonsDisabled(true);
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</script>
+
+<script type="text/javascript" language="Javascript1.2" src="FormValidationTableLess_arquivos/FormFieldLocalEvents.js"></script>
+
+<p class="clear">
+</p></body></html>

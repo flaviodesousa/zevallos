@@ -1,0 +1,23 @@
+.col-ico, .col-form, .col-banner {float:left;}
+
+.col-ico {width:130px; height:175px; background:url(../images/icoBarganhando.png) no-repeat}
+
+.lbl {float:left !important; font-weight:bolder; margin:5px 0 20px 10px !important; text-transform:none !important;}
+
+.campos {float:left;}
+.afasta-um {margin-right:20px;}
+.afasta-dois {margin-right:30px}
+.tamanho-um {width:213px; }
+.tamanho-dois {width:200px; height:50px;}
+.col-form {width:433px; margin:0 0 0 14px; padding:0 0 0 20px; border-left:1px solid #DDD}
+.col-form label {display:block; margin:0 0 5px 0; text-transform:uppercase;}
+.col-form  input {padding:5px; font:13px Arial, Helvetica, sans-serif; border:1px solid #ccc; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;}
+.col-form button {display:block; text-indent:-9000px; width:101px; height:33px; background:url(../images/btnCadastrarP.png) no-repeat;}
+.col-form .alterarsenha {display:block; text-indent:-9000px; width:143px; height:33px; background:url(../images/btnAlterarSenha.png) no-repeat;}
+.campo-um {width:423px !important}
+.campo-dois {width:190px !important;}
+.col-banner {width:266px; margin:0 0 0 90px;}
+
+.lista-sexo {margin:-10px 0 0 0; padding:0;}
+.lista-sexo li {float:left; margin:0 !important; padding:0}
+.lista-sexo li span {display:block; float:left; margin:15px 10px 0 0;}

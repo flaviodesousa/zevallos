@@ -1,0 +1,128 @@
+# ZYC - Lugar Medico
+<VirtualHost *:80>
+  ServerName lugarmedico1.zyc.com.br
+  DocumentRoot "C:/My Dropbox/ZYCWeb/LugarMedico"
+  ErrorLog "C:/Web/unidental.com.br/log/lugarmedico180_error.log"
+  CustomLog "C:/Web/unidental.com.br/log/lugarmedico180_custom.log" combined
+
+ <Directory "C:/My Dropbox/ZYCWeb/LugarMedico">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+  Alias /db C:/My Dropbox/ZYCWeb/zTag/db
+
+ <Directory "C:/My Dropbox/ZYCWeb/zTag/db">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /ztag C:/My Dropbox/ZYCWeb/zTag/ztag
+
+ <Directory "C:/My Dropbox/ZYCWeb/zTag/ztag">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>
+
+# ZYC - Vantagens 360
+<VirtualHost *:80>
+  ServerName vantagens3601.zyc.com.br
+  DocumentRoot "C:/My Dropbox/ZYCWeb/vantagens360"
+  ErrorLog "C:/Web/unidental.com.br/log/vantagens360180_error.log"
+  CustomLog "C:/Web/unidental.com.br/log/vantagens360180_custom.log" combined
+
+ <Directory "C:/My Dropbox/ZYCWeb/vantagens360">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+  Alias /db C:/My Dropbox/ZYCWeb/zTag/db
+
+ <Directory "C:/My Dropbox/ZYCWeb/zTag/db">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /ztag C:/My Dropbox/ZYCWeb/zTag/ztag
+
+ <Directory "C:/My Dropbox/ZYCWeb/zTag/ztag">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>
+
+# ZYC - zTag
+<VirtualHost *:80>
+  ServerName ztag1.zyc.com.br
+  DocumentRoot "C:/My Dropbox/ZYCWeb/zTag"
+  ErrorLog "C:/Web/unidental.com.br/log/zTag180_error.log"
+  CustomLog "C:/Web/unidental.com.br/log/zTag180_custom.log" combined
+
+ <Directory "C:/My Dropbox/ZYCWeb/zTag">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+  Alias /db C:/My Dropbox/ZYCWeb/zTag/db
+
+ <Directory "C:/My Dropbox/ZYCWeb/zTag/db">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /ztag C:/My Dropbox/ZYCWeb/zTag/ztag
+
+ <Directory "C:/My Dropbox/ZYCWeb/zTag/ztag">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>
+
+# ZYC - Ideias
+<VirtualHost *:80>
+  ServerName Ideas1.zyc.com.br
+  DocumentRoot "C:/My Dropbox/ZYCWeb/Ideas"
+  ErrorLog "C:/Web/unidental.com.br/log/vantagens360180_error.log"
+  CustomLog "C:/Web/unidental.com.br/log/vantagens360180_custom.log" combined
+
+ <Directory "C:/My Dropbox/ZYCWeb/Ideas">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /db C:/My Dropbox/ZYCWeb/zTag/db
+
+ <Directory "C:/My Dropbox/ZYCWeb/zTag/db">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  Alias /ztag C:/My Dropbox/ZYCWeb/zTag/ztag
+
+ <Directory "C:/My Dropbox/ZYCWeb/zTag/ztag">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>

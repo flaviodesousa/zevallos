@@ -1,0 +1,533 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 XHTML Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+<title>Form Template</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-language" content="portuguese" />
+<meta name="DATE" content="7/12/2004 12:33AM" />
+<meta name="AUTHOR" content="Ruben Zevallos Jr." />
+<meta name="ROBOTS" content="noindex,nofollow" />
+<meta name="RATING" content="General" />
+
+<link rel="stylesheet" type="text/css" href="/formAjax.css" />
+
+<script type="text/javascript" language="Javascript1.2">
+<!-- //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// if (window!= top)
+//   top.location.href=location.href
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</script>
+</head>
+<body onload="preprocessAjaxForm(document.frmForm);">
+
+<form action="javascript:processAjaxForm(document.frmForm);"
+  method="post"
+  name="frmForm"
+  id="objfrmForm"
+  onsubmit="return validateAjaxForm(event);"
+  onkeypress="FieldChanged(event)"
+  autocomplete="off">
+
+  <h3>Pagina da Fonte<img src="/library/LoaderSnake.gif" align="right"width="16px" height="16px" id="objLoader" /></h3>
+
+  <fieldset title="Configuration Fields" style="display:none">
+    <input type="hidden" id="objButton" name="objButton" value="99" />
+    <input type="hidden" id="objButtonName" name="objButtonName" value="bmtReload" />
+
+    <input type="hidden" id="objFieldChanged" name="blnFieldChanged" />
+
+    <input type="Parameter" id="ajax" name="ajax" value="1" />
+    <input type="Parameter" id="t" name="t" value="" />
+    <input type="Parameter" id="a" name="a" value="" />
+
+    <input type="Parameter" id="FormDebug" name="FormDebug" value="" />
+
+    <input type="Parameter" id="objfrmFormAction" name="frmFormAction" value="/FormAjax.php" />
+
+    <input type="Layout" id="objFormLayout" name="FormLayout" value="Formulario.htm" />
+
+
+    <input type="hidden" id="f" name="f" value="/Result/merSiteFontePagina" />
+
+    <input datatype="int" datalength="4" type="hidden" id="sfpCodigo" name="sfpCodigo" value="" />
+
+    <input type="Layout" id="objFormLayout" name="FormLayout" value="Formulario.htm" />
+
+    <input type="formfield" id="objTable" name="Table" value="merSiteFontePagina" />
+    <input type="formfield" id="objTablePK" name="TablePK" value="sfpCodigo" />
+
+    <input type="navigation" id="objNavigationWhere" name="NavigationWhere" value="sfpCodigo" />
+    <input type="navigation" id="objNavigationOrderBy" name="NavigationOrderBy" value="sfpCodigo" />
+
+    <input type="buttons" id="objButtons" name="Buttons" value="bmtFirst,bmtMoveLast,bmtSave,bmtEdit,bmtCancel,bmtInclude,bmtList,bmtExclude,bmtClear,bmtReload,bmtMoveNext,bmtLast" />
+
+    <input type="List" id="objList" name="List" value="" />
+    <input type="Find" id="objFind" name="Find" value="" />
+  </fieldset>
+  <fieldset>
+    <label accesskey="F" for="sfpFonte_AC"><u>F</u>onte:<br />
+    <input
+      id="sfpFonte_AC"
+      type="text"
+      value=""
+      name="sfpFonte_AC"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpFonte'); return false;"
+      size="12"
+      maxlength="10"
+      onfocus="StatusTitle(event);fieldOnFocus(event);startAutoComplete(this);"
+      onblur="fieldOnBlur(event);stopAutoComplete(event);"
+      title="Digite o Fonte"
+      onchange="FieldChanged()"
+      onkeydown="lastKeyPressed(event)"
+      fkpk="sifCodigo"
+      fkselect="sifNome"
+      fkfrom="merSiteFonte"
+      fkwhere="sifNome"
+      fkorderby="sifNome, sifCodigo" />
+    </label>
+    <input datatype="int" datalength="4" type="hidden" id="sfpFonte" name="sfpFonte" readonly="true" />
+    <dl class="autoComplete" id="sfpFonte_ACList" onclick="clickAutoComplete(event);" onmouseover="mouseouverAutoComplete(event);" onmouseout="mouseoutAutoComplete(event);"></dl>
+    <br clear="all" />
+    <label accesskey="T" for="sfpTidyHTML"><u>T</u>idyHTML:<br />
+    <input
+      datatype="tinyint"
+      datalength="1"
+      id="sfpTidyHTML"
+      type="text"
+      value=""
+      name="sfpTidyHTML"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpTidyHTML'); return false;"
+      size="1"
+      maxlength="3"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o TidyHTML"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="c" for="sfpcURL"><u>c</u>URL:<br />
+    <input
+      datatype="tinyint"
+      datalength="1"
+      id="sfpcURL"
+      type="text"
+      value=""
+      name="sfpcURL"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpcURL'); return false;"
+      size="1"
+      maxlength="3"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o cURL"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="U" for="sfpURL"><u>U</u>RL:<br />
+    <input
+      datatype="varchar"
+      datalength="250"
+      id="sfpURL"
+      type="text"
+      value=""
+      name="sfpURL"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpURL'); return false;"
+      size="40"
+      maxlength="250"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o URL"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="T" for="sfpTituloRegEx"><u>T</u>ituloRegEx:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="sfpTituloRegEx"
+      type="text"
+      value=""
+      name="sfpTituloRegEx"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpTituloRegEx'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o TituloRegEx"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="T" for="sfpTituloNormalizeString"><u>T</u>ituloNormalizeString:<br />
+    <input
+      datatype="tinyint"
+      datalength="1"
+      id="sfpTituloNormalizeString"
+      type="text"
+      value=""
+      name="sfpTituloNormalizeString"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpTituloNormalizeString'); return false;"
+      size="1"
+      maxlength="3"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o TituloNormalizeString"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="T" for="sfpTituloSentence"><u>T</u>ituloSentence:<br />
+    <input
+      datatype="tinyint"
+      datalength="1"
+      id="sfpTituloSentence"
+      type="text"
+      value=""
+      name="sfpTituloSentence"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpTituloSentence'); return false;"
+      size="1"
+      maxlength="3"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o TituloSentence"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="D" for="sfpDataRegEx"><u>D</u>ataRegEx:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="sfpDataRegEx"
+      type="text"
+      value=""
+      name="sfpDataRegEx"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpDataRegEx'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o DataRegEx"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="D" for="sfpDataMesFromText"><u>D</u>ataMesFromText:<br />
+    <input
+      datatype="tinyint"
+      datalength="1"
+      id="sfpDataMesFromText"
+      type="text"
+      value=""
+      name="sfpDataMesFromText"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpDataMesFromText'); return false;"
+      size="1"
+      maxlength="3"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o DataMesFromText"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="D" for="sfpDataAnoReplace"><u>D</u>ataAnoReplace:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="sfpDataAnoReplace"
+      type="text"
+      value=""
+      name="sfpDataAnoReplace"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpDataAnoReplace'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o DataAnoReplace"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="H" for="sfpHoraRegEx"><u>H</u>oraRegEx:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="sfpHoraRegEx"
+      type="text"
+      value=""
+      name="sfpHoraRegEx"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpHoraRegEx'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o HoraRegEx"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="T" for="sfpTextoRegEx"><u>T</u>extoRegEx:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="sfpTextoRegEx"
+      type="text"
+      value=""
+      name="sfpTextoRegEx"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpTextoRegEx'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o TextoRegEx"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="T" for="sfpTextoPre"><u>T</u>extoPre:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="sfpTextoPre"
+      type="text"
+      value=""
+      name="sfpTextoPre"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpTextoPre'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o TextoPre"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="T" for="sfpTextoPos"><u>T</u>extoPos:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="sfpTextoPos"
+      type="text"
+      value=""
+      name="sfpTextoPos"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpTextoPos'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o TextoPos"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="R" for="sfpResumoRegEx"><u>R</u>esumoRegEx:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="sfpResumoRegEx"
+      type="text"
+      value=""
+      name="sfpResumoRegEx"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpResumoRegEx'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o ResumoRegEx"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="A" for="sfpAutorRegEx"><u>A</u>utorRegEx:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="sfpAutorRegEx"
+      type="text"
+      value=""
+      name="sfpAutorRegEx"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpAutorRegEx'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o AutorRegEx"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="F" for="sfpFonteRegEx"><u>F</u>onteRegEx:<br />
+    <input
+      datatype="text"
+      datalength="16"
+      id="sfpFonteRegEx"
+      type="text"
+      value=""
+      name="sfpFonteRegEx"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpFonteRegEx'); return false;"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o FonteRegEx"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <br clear="all" />
+    <label accesskey="I" for="sfpInclusao"><u>I</u>nclusão:<br />
+    <input
+      datatype="datetime"
+      datalength="8"
+      id="sfpInclusao"
+      type="text"
+      value=""
+      name="sfpInclusao"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpInclusao'); return false;"
+      size="12"
+      maxlength="12"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Inclusão"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <label accesskey="A" for="sfpAlteracao"><u>A</u>lteração:<br />
+    <input
+      datatype="datetime"
+      datalength="8"
+      id="sfpAlteracao"
+      type="text"
+      value=""
+      name="sfpAlteracao"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpAlteracao'); return false;"
+      size="12"
+      maxlength="12"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Alteração"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+    <label accesskey="A" for="sfpAtivo">
+    <input
+      datatype="tinyint"
+      datalength="1"
+      id="sfpAtivo"
+      type="checkbox"
+      value=""
+      name="sfpAtivo"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=merSiteFontePagina&t=sfpAtivo'); return false;"
+      onClick="this.value = ((this.checked) ? '1' : '0');FieldChanged(event);"
+      size="1"
+      maxlength="3"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Ativo"
+      onchange="FieldChanged()" /><u>A</u>tivo
+    </label>  </fieldset>
+
+  <div id="formMessage" class="formMessageShow"></div>
+  <div id="objButtonBar" class="buttonBar">
+    <button
+      type="submit"
+      id="bmtFirst"
+      name="bmtFirst"
+      onclick="objButtonName.value=this.name;objButton.value=10;"
+      title="Primeiro Registro"
+      >|&lt;</button
+    ><button
+      type="submit"
+      id="bmtMoveLast"
+      name="bmtMoveLast"
+      onclick="objButtonName.value=this.name;objButton.value=11;"
+      title="Registro Anterior"
+      >&lt;</button
+    ><button
+      id="bmtEdit"
+      name="bmtEdit"
+      onclick="objButtonName.value=this.name;objButton.value=2;"
+      >Editar</button
+    ><button
+      type="submit"
+      id="bmtInclude"
+      name="bmtInclude"
+      onclick="objButtonName.value=this.name;objButton.value=4;"
+      >Incluir</button
+    ><button
+      type="submit"
+      id="bmtSave"
+      name="bmtSave"
+      onclick="objButtonName.value=this.name;objButton.value=3;"
+      >Salvar</button
+    ><button
+      type="submit"
+      id="bmtCancel"
+      name="bmtCancel"
+      onclick="objButtonName.value=this.name;objButton.value=98;"
+      >Cancelar</button
+    ><button
+      type="reset"
+      id="bmtClear"
+      name="bmtClear"
+      onclick="objButtonName.value=this.name;objButton.value=0;"
+      >Limpar</button
+    ><button
+      type="submit"
+      id="bmtExclude"
+      name="bmtExclude"
+      onclick="objButtonName.value=this.name;objButton.value=9;"
+      > <u>E</u>xcluir </button
+    ><button
+      type="submit"
+      id="bmtSearch"
+      name="bmtSearch"
+      onclick="objButtonName.value=this.name;objButton.value=6;"
+      >Buscar</button
+    ><button
+      type="submit"
+      id="bmtList"
+      name="bmtList"
+      onclick="objButtonName.value=this.name;objButton.value=5;"
+      >Listar</button
+    ><button
+      type="submit"
+      id="bmtReload"
+      name="bmtReload"
+      onclick="objButtonName.value=this.name;objButton.value=99;"
+      title="Reler o registro corrente"
+      >Reler</button
+    ><button
+      type="submit"
+      id="bmtMoveNext"
+      name="bmtMoveNext"
+      onclick="objButtonName.value=this.name;objButton.value=12;"
+      title="Próximo Registro"
+      >&gt;</button
+    ><button
+      type="submit"
+      id="bmtLast"
+      name="bmtLast"
+      onclick="objButtonName.value=this.name;objButton.value=13;"
+      title="Último Registro"
+      >&gt;|</button
+    >
+  </div>
+</form>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldManager.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldValidation.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldCounter.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormSelectKeyboardLocate.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormSelectBubbleSort.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/FillSelect.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/LibraryAjax.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/SelectAjax.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/formAjax.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- //----------------------------------------------------------------------
+
+
+//FillSelect(document.all.objUnidadeFiltro);
+
+//OptionSelect(document.all.objUF);
+
+//----------------------------------------------------------------------- -->
+</SCRIPT>
+
+<script type="text/javascript" language="Javascript1.2">
+<!-- //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var sobjForm = document.getElementById('objfrmForm');
+
+ParseFields();
+
+// ButtonsDisabled(true);
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+</script>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldLocalEvents.js"></script>
+</body>
+</html>
+

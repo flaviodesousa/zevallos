@@ -1,0 +1,18 @@
+<form action="antonio.ztag">
+  <input type="text" name="nome_usuario" />
+  <br /><input type="submit" name="Enviar" />
+</form>
+<hr />
+<form action="antonio.php">
+  <input type="text" name="nome_usuario" />
+  <br /><input type="submit" name="Enviar" />
+</form>
+
+0o<pre>
+1o         <a href="http://mudaromundo.com.br" title="Vamos mudar o mundo"><i><strong>Antonio</strong></i></a>
+2o
+3o
+4o
+</pre>
+
+<hr />

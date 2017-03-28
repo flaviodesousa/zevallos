@@ -1,0 +1,2177 @@
+
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+      <h1>zdb</h1>
+       
+    
+    <h2>open</h2><hr />
+    <p>Open a database connection to defined driver and parameters</p>
+    <p>Open a database connection to defined driver and parameters
+
+<code>
+<zdb:open id="mysqlConn" driver="mysql" host="#mysqlHost" database="#mysqlDatabase" user="#mysqlUser" password="#mysqlPassword" />
+
+<zdb:open id="sqliteConn" driver="sqlite" filename="/ZTag/SQLite.db" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>close</h2><hr />
+    <p>Close the Database connection openned with Id</p>
+    <p>Close the Database connection openned with Id.
+
+<code>
+<zdb:close use="mysqlConn" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>query</h2><hr />
+    <p>Set a SQL query to use with another zDB Tag</p>
+    <p>Set a SQL query to use with another zDB Tag.
+
+<code>
+<zdb:query use="mysqlConn">...</zdb:query>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>bof</h2><hr />
+    <p>Return TRUE if the current record is at the first</p>
+    <p>Return TRUE if the current record is at the first
+
+<code>
+<zdb:bof use="mysqlConn" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>eof</h2><hr />
+    <p>Return TRUE if the current record is at the first</p>
+    <p>Return TRUE if the current record is at the first
+
+<code>
+<zdb:eof use="mysqlConn" />
+</code>
+
+use="mysqlConn" - The Id Handle from a Open zDB tag
+     </p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>field</h2><hr />
+    <p>Return TRUE if the current record is at the first</p>
+    <p>Return TRUE if the current record is at the first
+
+<code>
+<zdb:field use="mysqlConn" name="NM_NOME" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>fieldvar</h2><hr />
+    <p>FieldVar</p>
+    <p>FieldVar
+
+<code>
+<zdb:fieldvar use="mysqlConn" name="NM_NOME" var="$NM_NOME" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>prepare</h2><hr />
+    <p>Prepare</p>
+    <p>Prepare
+
+<code>
+<zdb:prepare conn="oracleConn" use="oracleQuery" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>param</h2><hr />
+    <p>Prepare</p>
+    <p>Prepare
+
+<code>
+<zdb:param use="query002" param="P_CD_PESSOA_USUARIO" var="" type="PARAM_INT" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>create</h2><hr />
+    <p>Create</p>
+    <p>Create
+
+<code>
+<zdb:create use="query002" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>show</h2><hr />
+    <p>Show</p>
+    <p>Show
+
+<code>
+<zdb:show use="query002" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>Fetch</h2><hr />
+    <p>Fetch</p>
+    <p>Fetch
+
+<code>
+<zdb:fetch use="ociQuery" var="ociRow" resulttype="ASSOC" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>FetchUntil</h2><hr />
+    <p>FetchUntil</p>
+    <p>FetchUntil
+
+<code>
+<zdb:fetchuntil condition="eof" use="mysqlQuery" id="mysqlFetch" var="$mysqlRow" filename="/Alianca8/File.txt" filetype="txt" show="0">
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>Execute</h2><hr />
+    <p>FetchUntil</p>
+    <p>FetchUntil
+
+<code>
+<zdb:execute use="mssqlConn">
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>Model</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:model use="mssqlConn">
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>BeginTransaction</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:begintransaction conn="ociUnidental" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>Commit</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:commit conn="ociUnidental" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>RollBack</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:rollback conn="ociUnidental" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>ErrorCode</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:errorcode conn="ociUnidental" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>ErrorInfo</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:errorinfo conn="ociUnidental" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>FetchColumn</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:fetchcolumn conn="ociUnidental" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>FetchAll</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:fetchall conn="ociUnidental" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>RowCount</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:rowcount conn="ociUnidental" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>ColumnCount</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:columncount conn="ociUnidental" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>BindValue</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:bindvalue conn="ociUnidental" param="" value="" type="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>BindParam</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:bindparam conn="ociUnidental" column="" variable="" type="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>GetTable</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:gettable conn="ociUnidental" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>GetTables</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:gettables conn="ociUnidental" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>GetColumn</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:getcolumn conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>GetColumns</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:getcolumns conn="ociUnidental" table="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>HasTable</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:hastable conn="ociUnidental" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>CreateTable</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:createtable conn="ociUnidental" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>RenameTable</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:renametable conn="ociUnidental" name="" to="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>DropTable</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:droptable conn="ociUnidental" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>SetPrimaryKey</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:setprimarykey conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>CreateIndex</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:createindex conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>DropIndex</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:dropindex conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>AddColumn</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:addcolumn conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>RenameColumn</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:renamecolumn conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>ChangeColumn</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:changecolumn conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>DropColumn</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:dropcolumn conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>CreateView</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:createview conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>DropView</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:dropview conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>CreateStoredProcedure</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:createstoredprocedure conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>DropStoredProcedure</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:dropstoredprocedure conn="ociUnidental" table="" name="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>Select</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:select conn="ociUnidental" id=">
+<zdb:column name="" />
+<zdb:from name="" />
+<zdb:leftjoin table="" alias="" />
+<zdb:innerjoin table="" alias="" />
+<zdb:whereand value="" />
+<zdb:whereor value="" />
+<zdb:groupby value="" />
+<zdb:orderby value="" />
+</zdb:select>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>Insert</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:insert conn="ociUnidental" table="" columns="" values="" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>Update</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:update conn="ociUnidental" table="" set="" where="" />
+UPDATE TB_USUARIO_SISTEMA
+SET CD_SESSAO_LOGIN_ERRO = ".$_SESSION["sessionId"]."
+WHERE NM_USUARIO = '$txtUsuario'";
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zdb</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>Delete</h2><hr />
+    <p>Model</p>
+    <p>Model
+
+<code>
+<zdb:delete conn="ociUnidental" table="" where="" />
+DELETE FROM [TableName]
+WHERE [Condition];
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    

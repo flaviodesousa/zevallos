@@ -1,0 +1,117 @@
+/* ::::: http://www.mywebcareer.com/css/blue_5.css?v=15 ::::: */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { border: 0pt none; margin: 0pt; padding: 0pt; vertical-align: baseline; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; }
+body { background: none repeat scroll 0% 0% rgb(221, 221, 221); font: 75%/1.5 "myriad pro",helvetica,arial,sans-serif; color: rgb(51, 51, 51); }
+table { border-collapse: separate; border-spacing: 0pt; }
+caption, th, td { text-align: left; font-weight: normal; }
+li { list-style-type: none; }
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }
+a { border-bottom: 1px solid rgb(204, 204, 204); text-decoration: none; color: rgb(51, 51, 51); }
+a.alt, .altbox .content a { border-color: rgb(208, 228, 245); color: rgb(15, 82, 144); }
+a:hover, a:active, a:focus, a.alt:hover, a.alt:active, a.alt:focus, .altbox .content a:hover, .altbox .content a:active, .altbox .content a:focus { border-color: rgb(208, 228, 245); color: rgb(10, 128, 207); }
+a img { border: medium none; }
+.clearfix:after { content: "."; display: block; height: 0pt; clear: both; visibility: hidden; }
+.ir { position: absolute; top: 0pt; left: 0pt; display: block; width: 100%; height: 100%; }
+.inner-container { width: 960px; margin: 0pt auto; }
+#header { border-bottom: 1px solid rgb(42, 159, 236); background: url('header.png') repeat-x scroll 0% 0% rgb(15, 80, 141); min-height: 100px; }
+#header .inner-container { padding: 20px 0pt 16px; }
+#header #logo { position: relative; float: left; width: 191px; height: 28px; margin-top: 17px; }
+#header #logo a.home { border: 0pt none; display: block; width: 100%; height: 100%; overflow: hidden; text-shadow: 1px 1px 0pt rgb(0, 63, 108); font-size: 180%; font-weight: bold; font-style: italic; color: rgb(255, 255, 255); }
+#header #logo a.home .ir { background: url('logo.png') repeat scroll 0% 0% transparent; }
+#header #userbox { background: url('userbox.png') no-repeat scroll 0% 0% transparent; position: relative; float: right; width: 225px; min-height: 65px; line-height: 1.3; }
+#header #userbox .inner { padding: 17px 50px 0pt 55px; }
+#header #userbox a#logout { border: 0pt none; position: absolute; right: 14px; top: 21px; display: block; width: 23px; height: 24px; overflow: hidden; line-height: 1; font-size: 90%; }
+#header #userbox a#logout .ir { background: url('logout.png') repeat scroll 0% 0% transparent; }
+#header #userbox a#logout:hover .ir, #header #userbox a#logout:focus .ir, #header #userbox a#logout:active .ir { background-position: -23px 0pt; }
+#header #userbox strong { font-size: 120%; font-weight: normal; color: rgb(255, 255, 255); }
+#header #userbox a { border-color: rgb(66, 125, 169); color: rgb(208, 225, 237); }
+#header #userbox a:hover, #header #userbox a:active, #header #userbox a:focus { border-color: rgb(155, 196, 227); color: rgb(255, 255, 255); }
+#header #userbox ul {  }
+#header #userbox ul li { display: inline; }
+#header #userbox ul a { float: left; margin-right: 7px; }
+#nav { border-top: 1px solid rgb(0, 68, 131); border-bottom: 1px solid rgb(153, 153, 153); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+#nav .inner-container { position: relative; z-index: 2; padding: 26px 0pt 25px; }
+#container { background: url('container.gif') repeat-x scroll 0% 0% transparent; }
+#container .inner-container { position: relative; z-index: 1; left: 10px; width: 980px; padding: 20px 0pt; }
+#footer { clear: both; padding: 1px 0pt 10px; text-align: center; }
+#footer p { margin: 0pt 0pt 10px; color: rgb(153, 153, 153); }
+#footer a { color: rgb(119, 119, 119); }
+#footer a:hover, #footer a:active, #footer a:focus { border: medium none; }
+.button { border: 1px solid rgb(0, 72, 122); -moz-border-radius: 5px 5px 5px 5px; background: url('button.gif') repeat-x scroll 0% 0% rgb(5, 103, 173); padding: 5px 9px; text-shadow: 1px 1px 0pt rgb(0, 72, 122); color: rgb(255, 255, 255); cursor: pointer; }
+.button:hover, .button:focus, .button:active { border-color: rgb(39, 39, 39); background: url('altbutton.gif') repeat-x scroll 0% 0% rgb(42, 42, 42); text-shadow: 1px 1px 0pt rgb(0, 0, 0); color: rgb(255, 255, 255); }
+.altbox .button { border: 1px solid rgb(39, 39, 39); background: url('altbutton.gif') repeat-x scroll 0% 0% rgb(42, 42, 42); text-shadow: 1px 1px 0pt rgb(0, 0, 0); }
+.altbox .button:hover, .altbox .button:focus, .altbox .button:active { border-color: rgb(0, 72, 122); background: url('button.gif') repeat-x scroll 0% 0% rgb(5, 103, 173); text-shadow: 1px 1px 0pt rgb(0, 72, 122); color: rgb(255, 255, 255); }
+.altbutton { border: 1px solid rgb(39, 39, 39); background: url('altbutton.gif') repeat-x scroll 0% 0% rgb(42, 42, 42); text-shadow: 1px 1px 0pt rgb(0, 0, 0); }
+.altbutton:hover, .altbutton:focus, .altbutton:active { border-color: rgb(0, 72, 122); background: url('button.gif') repeat-x scroll 0% 0% rgb(5, 103, 173); text-shadow: 1px 1px 0pt rgb(0, 72, 122); color: rgb(255, 255, 255); }
+.altbox .altbutton { border: 1px solid rgb(0, 72, 122); background: url('button.gif') repeat-x scroll 0% 0% rgb(5, 103, 173); text-shadow: 1px 1px 0pt rgb(0, 72, 122); }
+.altbox .altbutton:hover, .altbox .altbutton:focus, .altbox .altbutton:active { border-color: rgb(39, 39, 39); background: url('altbutton.gif') repeat-x scroll 0% 0% rgb(42, 42, 42); text-shadow: 1px 1px 0pt rgb(0, 0, 0); color: rgb(255, 255, 255); }
+form { padding: 18px; }
+input.txt, textarea { -moz-border-radius: 5px 5px 5px 5px; border: 1px solid rgb(153, 153, 153); background: url('txt.gif') repeat-x scroll 0% 0% transparent; padding: 5px 2px; }
+.box { float: left; width: 960px; margin: 0pt 20px 20px 0pt; }
+.box-100 { width: 960px; }
+.altbox {  }
+.boxin { -moz-box-shadow: 0pt 0pt 10px rgb(170, 170, 170); border: 1px solid rgb(153, 153, 153); -moz-border-radius: 6px 6px 6px 6px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.box .header { background: url('headerbox.png') repeat-x scroll 0% 0% rgb(61, 61, 61); border-top: 1px solid rgb(68, 68, 68); -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; position: relative; margin: -1px -1px 0pt; padding: 7px 0pt 9px 20px; }
+.altbox .header { border-top-color: rgb(10, 129, 208); background: url('altheaderbox.png') repeat-x scroll 0% 0% rgb(15, 81, 142); }
+.box .header h3 { position: relative; top: 2px; display: inline; font-size: 150%; color: rgb(255, 255, 255); text-shadow: 0pt 1px 0pt rgb(21, 21, 21); }
+.altbox .header h3 { text-shadow: 0pt 1px 0pt rgb(0, 61, 104); }
+.box .content { margin-bottom: 5px; }
+.box .content table { width: 100%; }
+.box .content table th, .box .content table td { padding: 10px 10px 8px; }
+.altbox .content table tbody { color: rgb(0, 48, 93); }
+/* ::::: http://www.mywebcareer.com/css/all_5.css?v=22 ::::: */
+
+body, select, textarea, input, button { font-family: Arial,Helvetica,sans-serif; }
+body { font-size: 62.5%; line-height: 1.5em; background-color: rgb(217, 212, 200); }
+a { color: rgb(14, 87, 150); border: 0pt none; text-decoration: underline; }
+a:hover { text-decoration: none; }
+p { margin: 0.8em 0pt 0.4em; line-height: 1.5em; }
+form { margin: 0pt; padding: 0pt; }
+label, button, input, select { cursor: pointer; }
+input[type="text"], input[type="password"] { cursor: text; }
+#header { background: url('bg_header_x.gif') repeat-x scroll left top transparent; height: 94px; overflow: hidden; min-height: 0pt; border: 0pt none; }
+#header .inner-container { padding: 0pt; }
+#header #logo { margin: 0pt; height: 94px; }
+#header #logo a.home { font-size: 1em; }
+#header #logo a.home .ir { background: url('logo-mywebcareer.png') no-repeat scroll left top transparent; }
+#header #userbox { margin-top: 24px; min-height: 58px; text-align: left; -moz-border-radius-bottomleft: 4px; -moz-border-radius-bottomright: 4px; }
+#header #userbox a { color: rgb(65, 174, 255); }
+#header #userbox .inner { padding-top: 12px; }
+#header #social-media { margin: 45px 24px 0pt 0pt; }
+#header #social-media .label { font-size: 1.1em; color: rgb(65, 174, 255); line-height: 31px; vertical-align: top; display: inline-block; margin-right: 10px; }
+#header #social-media a { margin: 0pt 6px; }
+#container { background: url('bg_container_x.gif') repeat-x scroll left top transparent; }
+#nav { background: url('bg_nav_x.gif') repeat scroll left top transparent; border: 0pt none; height: 42px; overflow: hidden; font: 69%/160% 'Lucida Grande',Verdana,Helvetica,Arial,sans-serif; }
+#nav .inner-container { padding: 0pt; }
+#nav ul { position: relative; left: 0px; top: 15px; }
+#nav ul li { display: inline; }
+#nav ul a { -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; background: none repeat scroll 0% 0% rgb(119, 119, 119); border: 0pt none; float: left; margin: 0pt 0pt 0pt 5px; padding: 8px 13px; color: rgb(255, 255, 255); }
+#nav ul a { background-color: rgb(72, 156, 212); text-decoration: none; }
+#nav ul a.active, #nav ul a:hover, #nav ul a:focus, #nav ul a:active { background: url('altheadertab.png') repeat-x scroll 0% 0% rgb(255, 255, 255); color: rgb(15, 81, 142); }
+.box { margin-bottom: 16px; }
+.box .header { padding: 12px 0pt 14px 10px; }
+.box .header h3 { font-size: 1.8em; text-shadow: 0pt -1px 3px rgba(48, 48, 48, 0.5); }
+.boxin { border: 1px solid rgb(204, 204, 204); min-height: 200px; }
+.box .content { padding-top: 5px; }
+.profilebox .boxin { min-height: 385px; }
+.profilebox .content { font-size: 1.4em; padding: 10px 16px 12px 24px; }
+.content .privacy-info { float: right; width: 30%; border: 1px solid gray; padding-top: 10px; }
+.content .privacy-info h2 { font-size: 1.2em; padding: 0px 5px 10px 40px; border-bottom: 1px solid rgb(204, 204, 204); margin: 5px 10px 10px; line-height: 1.4em; color: rgb(102, 102, 102); background: url('icn_privacy-padlock.png') no-repeat scroll left top transparent; }
+.content .privacy-info h2 em { font-size: 1.3em; font-style: normal; display: block; color: rgb(51, 51, 51); }
+.content .privacy-info p { color: rgb(102, 102, 102); font-size: 1em; margin-left: 10px; margin-right: 10px; }
+.inner-container, #container .inner-container { width: 960px; left: 0pt; }
+#container .inner-container { padding: 10px 0pt 1px; }
+#footer { text-align: left; }
+#footer .copyright {  }
+#footer .copyright p { font-family: Helvetica,Arial,sans-serif; font-size: 1em; color: rgb(110, 107, 99); text-transform: uppercase; }
+#footer .copyright a { color: rgb(110, 107, 99); margin: 0pt 5px; text-decoration: underline; }
+#footer .copyright a:hover { text-decoration: none; }
+#footer ul.footer-nav li { list-style: none outside none; float: left; }
+#footer ul.footer-nav li a { display: block; color: rgb(110, 107, 99); text-transform: uppercase; margin: 0pt 5px; }
+.clearer { clear: both; float: none; line-height: 0pt; font-size: 0pt; height: 0pt; overflow: hidden; }
+.fltL { float: left; margin: 0pt; text-align: left; }
+.fltR { float: right; margin: 0pt; text-align: right; }
+.invisible { visibility: hidden; height: 0px; }
+.wizardStep { padding: 5px 0px 20px; color: Black; }
+td { vertical-align: top; }

@@ -1,0 +1,80 @@
+Final
+<ztemplate:open id="tempFile" file="templateFile.htm" cache="memcached" />
+  <ztamplate:begin use="tempFile" />
+  <!zinclude:load file="templateFile.ztag" cache="memcached" /> 
+
+  <ztamplate:end use="tempFile" />
+</ztemplate:close use="tempFile">
+
+<!ztemplate:open id="tempFile" file="templateFile.htm" cache="memcached" />
+  <!ztamplate:begin use="tempFile" />
+
+  <!ztamplate:end use="tempFile" />
+</!ztemplate:close use="tempFile">
+
+<@zpos:compress>
+
+Ivan
+<ztemplate:open id="ivan" file="blockTemplate.htm" />
+<ztamplate:useblock use="ivan" name="body">
+  <ztemplate:reuse id="ivanTable" file="blockTable.htm"/>
+
+	<div id="tables">
+    <zinclude:load file="blockTable.ztag" />
+    
+    <ztemplate:show use="ivanTable" name="head" />
+        		  
+	  <zctrl:foreach use="myColumns" key="key" value="value">
+      <ztemplate:show use="ivanTable" name="head">
+	     <ztemplate:getblock use="bodyRow" name="key" value="$value[key]" />
+	      <ztemplate:getblock use="bodyRow" name="type" value="$value[type]" />
+      </ztemplate:show>			   
+	  </zctrl:foreach>
+  </div>
+      
+</ztamplate:useblock>
+
+
+
+
+Flávio
+<ztemplate:open id="block" file="blockTemplate.htm" />
+<ztamplate:useblock use="block" name="body">
+  
+</ztamplate:useblock>
+
+Ruben
+<ztemplate:open id="mainTemplate" file="testTemplate.htm" cache="true" />
+<ztemplate:open id="mainTemplate2" file="testTemplate.htm" />
+
+<ztemplate:begin use="mainTemplate2" />
+
+<ztemplate:getblock id="bodyRow" use="mainTemplate" name="tablerow"/>
+
+<div id="tables">
+	<zctrl:foreach use="myColumns" key="key" value="value">
+	  <ztemplate:getblock use="bodyRow" name="key" value="$value[key]" />
+	  <ztemplate:getblock use="bodyRow" name="type" value="$value[type]" />
+	</zctrl:foreach>
+	
+	<zctrl:foreach use="myColumns" key="key" value="value" useblock="bodyRow" />
+	
+	<zctrl:foreach use="myColumns" key="key" value="value">
+	  <tr class="y">
+	    <zHTML:cell value="$key" />
+	    <zHTML:cell value="$value[type]" />
+	    <zHTML:cell value="$value[fixed]" />
+	    <zHTML:cell value="$value[lenght]" align="right"/>
+	    <zHTML:cell value="$value[precision]" align="right" />
+	    <zHTML:cell value="$value[scale]" align="right" />
+	    <zHTML:cell value="$value[unsigned]" />
+	    <zHTML:cell value="$value[notnull]" align="right" />
+	    <zHTML:cell value="$value[autoincrement]" align="right" />
+	    <zHTML:cell value="$value[default]" />
+	  </tr>
+	</zctrl:foreach>
+</div>
+
+<ztemplate:end use="mainTemplate2" />
+
+<ztemplate:close use="mainTemplate" />

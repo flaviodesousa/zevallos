@@ -1,0 +1,62 @@
+<zrequest:get name="database" var="database" transform="stripTags()" />
+<zrequest:get name="table" var="table" transform="stripTags()->upper()" />
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="mySQL Generated Form of Columns of $table table" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            font-size:.7em;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}      
+    </style>
+  </head>
+  <body>
+    <h3>mySQL Generated Form of Columns of <zvar:show use="table" transform="upper()"/> table of <zvar:show use="database" transform="upper()"/> database - (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Fonte" />)</h3>
+    <hr />
+
+    Get back to <zHTML:a href="mysqlTables.ztag?database=$database" title="Get back to table" value="$database"/>.<zHTML:a href="mysqlTable.ztag?database=$database&table=$table" title="Get back to table" value="$table"/>
+    <br />    
+    <zdbal:open id="myConn" driver="mysql" host="localhost" database="$database" user="zcmsuser" password="z4321" />
+      <zdbal:listtablecolumns use="myConn" table="$table" var="myColumns"/>
+
+    <zvar:set id="generatedFolder" value="/ztag/sample/sistema/" />
+    <zvar:set id="generatedtFile" value="$table Form.ztag" transform="replace(' ', '')" />
+  
+<br />Generated file <zhtml:a href="$generatedFolder$generatedtFile" value="$generatedtFile" />
+<br />  
+<zform:textarea name="textarea" rows="30" cols="120" filename="$generatedFolder$generatedtFile" filetype="txt">
+<DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<zhtml:title value="Form $table" />
+<link rel="stylesheet" type="text/css" href="generateForm.css"> 
+</head>
+<body>
+  <div id="stylized" class="myform">
+    <form action="$tableFile" method="post">
+      <h1><zvar:show use="table" transform="upper()"/> form</h1>
+      <p>Form generated for table <zvar:show use="table" transform="upper()"/></p>
+      <zctrl:foreach use="myColumns" key="key" value="value">
+      <label><zvar:show use="key" transform="upper()"/><span class="small">short description form <zvar:show use="key" transform="lower()"/></span> </label> <input type="text" name="<zvar:show use="key" transform="upper()"/>" id="<zvar:show use="key" transform="upper()"/>" /></zctrl:foreach>
+  
+      <button type="submit">Submit button</button>
+    </form>
+  <div>  
+</body>
+</zform:textarea> 
+    <zdbal:close use="myConn" />
+  </body>
+</html>

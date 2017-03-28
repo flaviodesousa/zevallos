@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/1/ztag/sample/zTagTests
+END
+zTagSQL.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1/ztag/sample/zTagTests/zTagSQL.ztag
+END
+zTagHTML.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1/ztag/sample/zTagTests/zTagHTML.ztag
+END
+zDBMySQL.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1/ztag/sample/zTagTests/zDBMySQL.ztag
+END
+ZTagsProposta.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1/ztag/sample/zTagTests/ZTagsProposta.ztag
+END
+ZTagForm.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1/ztag/sample/zTagTests/ZTagForm.ztag
+END
+ZTagLegadoComplexas.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1/ztag/sample/zTagTests/ZTagLegadoComplexas.ztag
+END
+zDBSQLite.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/1/ztag/sample/zTagTests/zDBSQLite.ztag
+END
+ZTagLegadoSimples.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1/ztag/sample/zTagTests/ZTagLegadoSimples.ztag
+END
+zDBPGSQL.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1/ztag/sample/zTagTests/zDBPGSQL.ztag
+END
+zDBOCI.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/1/ztag/sample/zTagTests/zDBOCI.ztag
+END
+ZTagVariaveis.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1/ztag/sample/zTagTests/ZTagVariaveis.ztag
+END
+zTransform.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1/ztag/sample/zTagTests/zTransform.ztag
+END
+ZTagBancoDados.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1/ztag/sample/zTagTests/ZTagBancoDados.ztag
+END
+zDBMSSQL.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1/ztag/sample/zTagTests/zDBMSSQL.ztag
+END
+zDBMySQLWordpress.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1/ztag/sample/zTagTests/zDBMySQLWordpress.ztag
+END

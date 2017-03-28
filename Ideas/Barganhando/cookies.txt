@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.barganhando.com	TRUE	/	FALSE	1999999999	PHPSESSID	8d57521932f108ccc5d8dd8dbed25382
+.barganhando.com	TRUE	/	FALSE	1999999999	BRGND_PreHome	barganhando
+

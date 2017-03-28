@@ -1,0 +1,64 @@
+<!-- zheader:locationif use="!userLogged" notcondition="len()" value="/logOn.php" /-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="View - Page" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>zCMS - A zTag Content Management System - (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Source" />)</h1>
+    <zhtml:a href="." value="back" />
+
+    <zrequest:get name="CD_PAGE" var="CD_PAGE" transform="stripTags()" />
+
+    <zdbal:open id="myConn" driver="mysql" host="localhost" database="zcms" user="zcmsuser" password="z4321" />
+      <zdbal:query use="myConn" id="myQuery">
+        SELECT
+          CD_PAGE
+        , CD_FATHER
+        , DS_TITLE
+        , DS_CONTENT
+        , DATE_FORMAT(DS_INSERT, '%m/%d/%Y %H:%i:%S') DS_INSERT
+        , DS_KEYWORDS
+        FROM pages
+        WHERE CD_PAGE = $CD_PAGE
+        ORDER BY DS_INSERT DESC
+      </zdbal:query>
+      <table border="0" cellspacing="0">
+        <form action="pageUpdatePost.ztag" method="post">
+          <zdbal:fetchuntil use="myQuery" var="myRow">
+          <tr>
+            <td>Id</td>
+            <td><zform:inputtext name="CD_PAGE" value="$myRow[CD_PAGE]" readonly="true" /></td>
+          </tr>
+          <tr>
+            <td>Father</td>
+            <td><zform:inputtext name="CD_FATHER" value="$myRow[CD_FATHER]" /></td>
+          </tr>
+          <tr>
+            <td>Title</td>
+            <td><zform:inputtext name="DS_TITLE" value="$myRow[DS_TITLE]" /></td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td><zform:textarea name="DS_CONTENT" value="$myRow[DS_CONTENT]" /></td>
+          </tr>
+          <tr>
+            <td>Insert</td>
+            <td><zform:inputtext name="DS_INSERT" value="$myRow[DS_INSERT]" readonly="true" /></td>
+          </tr>
+          <tr>
+            <td>Keywords</td>
+            <td><zform:inputtext name="DS_KEYWORDS" value="$myRow[DS_KEYWORDS]" /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" value="Enviar" /></td>
+          </tr>
+          </zdbal:fetchuntil>
+        </form>
+    <!-- zdbal:close /-->
+  </body>
+</html>
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="mySQL Databases" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            font-size:.7em;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}
+    </style>
+  </head>
+  <body>
+    <h3>mySQL Databases - (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Fonte" />)</h3>
+    <hr />
+    <zdbal:open id="myConn" driver="mysql" host="localhost" database="zcms" user="zcmsuser" password="z4321" />
+	    <zdbal:listdatabases use="myConn" var="myDatabases"/>
+	
+	    <table border="1" cellspacing="0">
+	      <tr>
+	        <zHTML:cellhead value="#" />
+	        <zHTML:cellhead value="Database" />
+	      </tr>
+	
+			<zctrl:foreach use="myDatabases" key="key" value="value">
+	      <tr>
+	        <zHTML:cell value="$key" />
+	        <td><zhtml:a href="mysqlTables.ztag?database=$value" value="$value" />
+	      </tr>
+			</zctrl:foreach>
+	    </table>
+    <zdbal:close use="myConn" />
+  </body>
+</html>

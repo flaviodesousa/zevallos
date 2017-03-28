@@ -1,0 +1,27 @@
+<!--{include header}-->
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="content">
+    <div id="order-pay-return" class="box">
+        <div class="box-top"></div>
+        <div class="box-content">
+			<div class="head error"><h2>desculpe, aconteceu alguma coisa durante o pagamento. </h2></div>
+            <div class="sect">
+			<!--{if $order_id}-->
+				<p class="error-tip">voltar <a href="/order/check.php?id={$order_id}">para
+				    a oferta</a> e tentar de novo</p>
+			    <!--{else}-->
+                <p class="error-tip">volta r<a href="/order/list/unpay.php">para
+                    a oferta</a> e tentar de novo.</p>
+			    <!--{/if}-->
+            </div>
+		</div>
+        <div class="box-bottom"></div>
+    </div>
+</div>
+<div id="sidebar">
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include footer}-->

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+	<script type="text/javascript" src="http://js.ecr.me/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="http://js.ecr.me/funcoes.js"></script>
+	<link rel="stylesheet" href="http://css.ecr.me/myriadpro.css" type="text/css" />
+	<link rel="stylesheet" href="css/css.css" />
+	
+	<title>Lugar Médico</title>
+</head>
+<body>
+	<div id="topo">
+		<h1 id="logotipo"><a href="/" title="Rede Social Lugar Médico">LUGAR MÉDICO</a></h1>
+		<div id="tr">
+			<form action="" rel="nofollow">
+				<fieldset>
+					<label for="txtusuario" id="lbltxtusuario"><input type="text" name="txtusuario" id="txtusuario" value="usuário" onblur="if (this.value=='') this.value='usuário'" onfocus="if (this.value=='usuário') this.value=''" /></label>
+					<label for="txtpassword" id="lbltxtpassword"><input type="password" name="txtpassword" id="txtpassword" value="password" onblur="if (this.value=='') this.value='password'" onfocus="if (this.value=='password') this.value=''" /></label>
+					<input type="submit" value="Logar" id="oklog" />
+				</fieldset>
+				<fieldset class="options">
+					<label for="chlembrar" id="lblchlembrar"><input type="checkbox" name="chlembrar" id="chlembrar" />Lembrar-me</label>
+					<span><a href="#">Esqueceu sua senha?</a></span>
+				</fieldset>
+			</form>
+			<ul>
+				<li><a href="#" rel="nofollow">Quem Somos</a></li>
+				<li><a href="#" rel="nofollow">Participe</a></li>
+				<li><a href="#" rel="nofollow">Inscreva-se</a></li>
+			</ul>
+			<a href="#" title="Exclusivo para Médicos" rel="nofollow" id="selo"><img src="img/selo.gif" alt="Selo - Exclusivo para Médicos"/></a>
+		</div>
+	</div>
+	<div id="middle">
+		
+		<div id="sliders">
+			<div class="bg1"></div>
+			<div class="bg2"></div>
+			<div class="bg3"></div>
+			<div class="bg4"></div>
+			<div class="bg5"></div>
+		</div>
+
+	
+		<div id="corpo">
+			<ul class="slidetabs">
+				<li><a rel="nofollow" href="javascript:null(0);">A primeira Rede Mundial de interação da Classe Médica na Internet!</a></li>
+				<li><a rel="nofollow" href="javascript:null(0);">Publique trabalhos - teses, artigos, pesquisas, estudos...</a></li>
+				<li><a rel="nofollow" href="javascript:null(0);">Troque experiências e informações em Salas e Congressos virtuais</a></li>
+				<li><a rel="nofollow" href="javascript:null(0);">Interaja com outros médicos: discuta, opine, critique, ajude!</a></li>
+				<li><a rel="nofollow" href="javascript:null(0);">Aproveite este lugar só dos médicos - privado e seguro</a></li>
+			</ul>
+		</div>
+		
+
+	
+	</div>
+	<div id="rodape">
+		<div>
+			<address><span class="strong">LugarMedico © 2011 · Português (Brasil)</span></address>
+			<ul>
+				<li><a href="#">Sobre</a></li>
+				<li><a href="#">· Anúncios</a></li>
+				<li><a href="#">· Desenvolvedores</a></li>
+				<li><a href="#">· Carreiras</a></li>
+				<li><a href="#">· Privacidade</a></li>
+				<li><a href="#">· Termos </a></li>
+				<li><a href="#">· Ajuda</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+<script type="text/javascript">
+$(function() {
+$(".slidetabs").tabs("#sliders > div", {
+	effect: 'fade',
+	fadeOutSpeed: "slow",
+	fadeInSpeed: "slow",
+	rotate: true
+}).slideshow();
+$(".slidetabs").data("slideshow").play();
+});
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,40 @@
+<zrequest:get name="error" var="error" transform="stripTags()" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<zhtml:title value="Erro 404| #sysName" />
+		<link rel="stylesheet" type="text/css" href="/css/geral.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/box.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/menu.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/pags.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/logon.css" media="screen, projection"></link>
+		<link type="text/css" href="/CometChat/cometchatcss.php" rel="stylesheet" charset="utf-8">
+		<script type="text/javascript" src="/CometChat/cometchatjs.php" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="root">
+				<div class="box-logo"><a href="/"><img src="/img/logo.png" alt="Lugar Médico" /></a></div>
+			</div>
+		</div>
+		<div id="menu">
+		</div>
+		<div id="container">
+			<div class="root">
+				<div id="box">
+					<zhtml:div class="header gray" value="Erro $error" />
+					<div class="body message-list">
+					Arquivo não encontrado!
+					<zhtml:b value="$error" />
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="root">Copyright &copy; 2011 Lugar Médico todos os direitos reservados</div>
+		</div>
+	</body>
+</html>

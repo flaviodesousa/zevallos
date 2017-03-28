@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lugar Médico</title>
+<link rel="stylesheet" type="text/css" href="/css/geral.css">
+<link rel="stylesheet" type="text/css" href="/css/menu.css">
+<link rel="stylesheet" type="text/css" href="/css/box.css">
+<link href="/css/front.css" media="screen, projection" rel="stylesheet" type="text/css">
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".signin").click(function(e) {
+				e.preventDefault();
+                $("fieldset#signin_menu").toggle();
+				$(".signin").toggleClass("menu-open");
+            });
+
+			$("fieldset#signin_menu").mouseup(function() {
+				return false
+			});
+			$(document).mouseup(function(e) {
+				if($(e.target).parent("a.signin").length==0) {
+					$(".signin").removeClass("menu-open");
+					$("fieldset#signin_menu").hide();
+				}
+			});
+
+        });
+</script>
+<script src="/js/jquery.tipsy.js" type="text/javascript"></script>
+<script type='text/javascript'>
+    $(function() {
+	  $('#forgot_username_link').tipsy({gravity: 'w'});
+    });
+</script>
+
+<link href="css/home.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+        <div id="header">
+            <div class="root">
+                <div class="box-logo">
+                    <img src="/img/logo.png" width="" height="" alt=""></img>
+                </div>
+                <div class="box-login">
+
+                </div>
+            </div>
+        </div>
+        <div id="menu">
+		    <div class="root">
+                <ul>
+                    <li><a href="#">teste</a></li>
+                    <li><a href="#">teste</a></li>
+                    <li><a href="#">teste</a></li>
+                    <li><a href="#">teste</a></li>
+                    <li><a href="#">teste</a></li>
+                    <li><a href="#">teste</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="container">
+        	<div class="root">
+        <div id="body">
+        	<div id="boX">
+            <div class="body perfil-box"></div>
+            </div>
+        </div>
+          </div>
+        </div>
+        <div id="footer">
+            <div class="root">
+            	Copyright © 2011 Lugar Médico All Rights Reserved. Terms of UsePrivacy
+            </div>
+        </div>
+</body>
+</html>

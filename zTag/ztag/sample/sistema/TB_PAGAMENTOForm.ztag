@@ -1,0 +1,26 @@
+
+<DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Form TB_PAGAMENTO</title>
+<link rel="stylesheet" type="text/css" href="generateForm.css"> 
+</head>
+<body>
+  <div id="stylized" class="myform">
+    <form action="TB_PAGAMENTOFile" method="post">
+      <h1>TB_PAGAMENTO form</h1>
+      <p>Form generated for table TB_PAGAMENTO</p>
+      
+      <label>CD_PAGAMENTO<span class="small">short description form cd_pagamento</span> </label> <input type="text" name="CD_PAGAMENTO" id="CD_PAGAMENTO" />
+      <label>CD_TIPO_PAGAMENTO<span class="small">short description form cd_tipo_pagamento</span> </label> <input type="text" name="CD_TIPO_PAGAMENTO" id="CD_TIPO_PAGAMENTO" />
+      <label>VL_TOTAL<span class="small">short description form vl_total</span> </label> <input type="text" name="VL_TOTAL" id="VL_TOTAL" />
+      <label>CD_SESSAO<span class="small">short description form cd_sessao</span> </label> <input type="text" name="CD_SESSAO" id="CD_SESSAO" />
+      <label>CD_PESSOA<span class="small">short description form cd_pessoa</span> </label> <input type="text" name="CD_PESSOA" id="CD_PESSOA" />
+      <label>CD_CAMPANHA<span class="small">short description form cd_campanha</span> </label> <input type="text" name="CD_CAMPANHA" id="CD_CAMPANHA" />
+      <label>QT_CUPOMS<span class="small">short description form qt_cupoms</span> </label> <input type="text" name="QT_CUPOMS" id="QT_CUPOMS" />
+  
+      <button type="submit">Submit button</button>
+    </form>
+  <div>  
+</body>

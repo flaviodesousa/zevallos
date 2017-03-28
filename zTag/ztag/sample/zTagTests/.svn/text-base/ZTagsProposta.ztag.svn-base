@@ -1,0 +1,261 @@
+    <!-- 
+    <@:taglib uri="http://sg.d2.net.br:2023/ztag/zdb" prefix="zdb" />
+    <@:taglib folder="/ztag/zdb" prefix="zvar" />
+    
+    Variables $varName
+    
+    <!-- zvar:set name="$varName" value="{}" /--> <-- Template
+    <!-- zvar:set name="#varName" value="{}" /--> <-- Constante
+    <!-- zvar:set name="@varName" value="{}" /--> <-- Global
+
+    <!-- ztag:if test=""-->
+    <!-- /ztag:if --> 
+
+
+    <zpage:create>
+      <zpage:html>
+        <zpage:head title="Pick A Number" />
+        <zpage:body>
+          <zform:create id="form">
+            <zform:textField label="Pick a Number:" text="#{requestScope.num}" />
+            <staticText value=" <br />You picked: #{requestScope.num}<br />" />
+            <zform:button text="OK" />
+          </zform:create>
+        </zpage:body>
+      </zpage:html>
+    </zpage:create>
+    
+    <ui:define name="title">Create a Contact</ui:define>
+    
+    <ui:define name="content">
+      <ui:include src="createContactForm.xhtml"/>
+    </ui:define>
+    
+    
+    <zrepeat:create >
+    </zrepeat:create>
+    
+    <c:forEach items="#{items}" var="item">
+    </c:forEach>
+
+<h3>Variáveis do sistema</h3>
+<hr />
+<dl>
+<dt>ZServer:</dt>
+<dd>Show:SERVER_ADDR=<zserver:show name="SERVER_ADDR" /></dd>
+
+<dt>ZGet:</dt>
+<dd>Show:t=<zget:show name="t" /></dd>
+
+<dt>ZPost:</dt>
+<dd>Show:t=<zpost:show name="t" /></dd>
+
+<dt>ZRequest:</dt>
+<dd>Show:t=<zrequest:show name="t" /></dd>
+
+<dt>ZSession:</dt>
+<dd>Set:teste=<zsession:set name="teste" value="teste" /></dd>
+<dd>Show:teste=<zsession:show name="teste" value="teste" /></dd>
+
+<dt>ZEnv:</dt>
+<dd>Show:HOSTNAME=<zenv:show name="HOSTNAME" /></dd>
+<dd>Show:COMPUTERNAME=<zenv:show name="COMPUTERNAME" /></dd>
+
+<dt>ZCookie:</dt>
+<dd>Show:HOSTNAME=<zcookie:show name="t" />
+</dl>
+
+<ztemplate:create id="template01_T">
+  <li><zfield:get use="queryrow" name="PA.pagCodigo" /></li>
+</ztemplate:create> 
+
+
+<!-- Define variáveis -->
+
+<!-- Variáveis simples -->
+<zvar:set id="var01" value="0" />
+
+<zvar:set id="var02" value="Para gravar" />
+
+<!-- Matrizes
+$arrMatrix[1] 
+-->
+<zarray:get name="queryrow" node="CD_PESSOA_USUARIO" />
+
+<zarray:set name="queryrow" node="CD_PESSOA_USUARIO" value="Valor" />
+
+<!-- Gestão de arquivos -->
+<zfile:open id="fileopen01" filename="/ztag/arquivo de teste.htm" mode="r+" />
+  <zfile:readall use="fileopen01" var="var01" />  
+<zfile:close use="fileopen01"  /> 
+
+<zfile:file id="fileid01" filename="/ztag/arquivo de teste.htm" />
+
+<zfile:open id="fileopen02" fileid="fileid01" mode="w+" />
+
+  <zfile:readline use="fileopen02" var="var01" />  
+  <zfile:readall use="fileopen02"  var="var01" />  
+
+  <zfile:write use="fileopen02"  var="var02" />  
+
+<zfile:close use="fileopen02" /> 
+
+<!-- Gestão de templates -->
+<ztemplate:load id="template01A" fileid="fileid01" />
+
+<ztemplate:load id="template01B" filename="/ztag/template.htm"" />
+
+<ztemplate:create id="template01">
+	<ztemplate:create id="template01_1">
+	  <li><ztag:field name="PA.pagCodigo" /></li>
+	</ztemplate:create> 
+  <li><ztag:field name="PA.pagCodigo" /></li>
+</ztemplate:create> 
+
+<ztemplate:create id="template02">
+  <![CDATA[
+  <dd><ztag:field name="PA.pagCodigo" /></dd>
+  ]]>
+</ztemplate:create>
+
+<ztemplate:get use="template02" /> 
+
+<!-- Gestão de banco de dados -->
+<zdb:open id="oracleConn01" />
+
+<zdb:open id="oracleConn02" server="oci:unidental=sg.unidental.com.br", user="unidental", password="senha" />
+
+<zdb:query id="query002"> 
+  $sql = "SELECT *
+  FROM TB_USUARIO_SISTEMA
+  WHERE CD_PESSOA_USUARIO = :P_CD_PESSOA_USUARIO
+  OR NM_USUARIO = :P_NM_USUARIO";
+</zdb:query>
+
+<zdb:param use="query002" param="P_CD_PESSOA_USUARIO" var="" type="PARAM_INT" /> 
+<zdb:param use="query002" param="P_NM_USUARIO" var="" type="PARAM_STR" length="12" /> 
+
+<zdb:execute conn="oracleConn01" use="query002" /> 
+
+<zdb:fetch use="query002" var="queryrow" /> 
+
+<zarray:get name="queryrow" node="CD_PESSOA_USUARIO" />
+
+<zdb:eof use="query002" />
+<zdb:bof use="query002" />
+
+<!-- Execução de template com conteúdo de uma matriz -->
+<ztemplate:create id="t_query002">
+  <![CDATA[
+  <li><zfield:value name="CD_PESSOA_USUARIO" /></li>
+  <li><zfield:value name="NM_USUARIO" /></li>
+  ]]>
+</ztemplate:create> 
+
+<ztemplate:execute use="template01" matrix="queryrow" /> 
+
+<!-- Gestão de banco de dados -->
+<ztag:sqlshow 
+id="Query01A"
+name="asd" />
+
+<ztag:sqlshow id="Query01B" name="asd">
+
+</ztag:sqlshow>
+
+<ztag:sql 
+  id="Query01C" 
+  name="asd" 
+  query="  SELECT TOP 10 pagNome, pagCodigo
+  FROM pubPaginas
+  WHERE pagPai = {ztag:queryString name='t' /}
+  ORDER BY pagNome" />
+
+<ztag:sql id="Query01Z" name="asd">
+  <![CDATA[
+  <template id="Template01">
+    <ztag:sql id="Query01_1" times="10" show="true">
+      <template id="Template01_1">
+        <li><ztag:Field name="PA.pagCodigo" /> - <ztag:Field name="PA.pagNome" /></li>
+      </template>
+      <where>PA.pagPai = <ztag:queryString name="t" /></where>
+      <orderby>PA.pagNome</orderby>
+    </ztag:sql>
+  </template>
+  <where>PA.pagPai = <ztag:queryString name="t" /></where>
+  <orderby>PA.pagNome</orderby>
+  ]]>
+</ztag:sql>
+
+<ul>
+  <ztag:sqlshow id="Query01D" />
+  <ztag:sqlshow id="Query01E" />
+  <ztag:sqlshow id="Query01F" />
+</ul>
+
+<ul>
+  <ztag:sqlshow id="Query01G" times="8" />
+</ul>
+
+<ul>
+  <ztag:sqlshow id="Query01H" times="all" />
+</ul>
+
+<ztag:sql id="Query01I">
+  <template id="Template01" />
+</ztag:sql>
+
+<ztag:Template id="NovoTemplate01">
+  <li><ztag:Field name="PA.pagCodigo" /> - <ztag:Field name="PA.pagNome" /></li>
+</ztag:Template>
+
+<ztag:sql id="Query01J">
+  <template id="Template01" />
+  <where>PA.pagPai = <ztag:queryString name="t" /></where>
+  <orderby>PA.pagNome</orderby>
+</ztag:sql>
+
+<ztag:query id="Q10">
+  SELECT TOP 10 pagNome, pagCodigo
+  FROM pubPaginas
+  WHERE pagPai = <ztag:queryString name="t" />
+  ORDER BY pagNome
+</ztag:query>
+
+<ztag:movenext source="Q10"/> <-- Próximo registro da Query Q10
+<ztag:movenext source="Q10"/> <-- Registro anterior da Query Q10
+
+<ztag:Get name="Q10:pagNome" /> <-- Proposta original, onde o Get recupera o valor da variável pagNome da Query Q10.
+
+<ztag:Var Q10:["pagNome"] /> <-- Aqui estou tentando trata-la como variável normal, onde o Q10 se torna uma matriz do resultado da Query Q10.
+
+<ztag:query id="Query01K">
+  SELECT TOP 10 * FROM pubPaginas ORDER BY pagInclusao DESC, pagCodigo DESC
+</ztag:query>
+
+
+<ztag:query id="Query01L">
+  <query>
+    SELECT TOP 10 * FROM pubPaginas ORDER BY pagInclusao DESC, pagCodigo DESC
+  <query>
+</ztag:query>
+
+<ztag:query id="Query01M">
+  <times>10</times>
+  <select>*</select>
+  <from>pubPaginas</from>
+  <orderby>pagInclusao DESC, pagCodigo DESC</orderby>
+</ztag:query>
+
+<ztag:colunm name="SQL01.PApagCodigo" crop="3" />
+
+<ztag:colunm name="SQL01.PApagCodigo" formmatnumberbr="true" />
+
+<ztag:colunm name="SQL01.PApagCodigo" formmatnumberbr="2" /> <-- Com 2 zeros após a vírgula
+
+<ztag:colunm name="SQL01.PApagCodigo" formmatnumberbr="0" /> <-- Trunca os Zeros caso tenha
+
+<ztag:colunm name="SQL01.PApagCodigo" formatdatebr="true" />
+
+<ztag:colunm name="SQL01.PApagCodigo" />
+

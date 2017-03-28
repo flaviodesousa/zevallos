@@ -1,0 +1,198 @@
+@charset "utf-8";
+/*<![CDATA[*/
+
+/* $Id: all_ie6.css,v 1.0 2010/05/10 14:00:00 twig Exp $ */
+/*
+	Use this for specific pages
+*/
+
+/* <!-- Homepage */
+
+body.home #tpl_anchor {
+	background: transparent url(../images/template/bgs/bg_tpl-anchor_x.gif) left top repeat-x scroll;
+}
+body.home #tpl_header {
+	background: transparent url(../images/template/bgs/bg_tpl-header_x.gif) left top repeat-x scroll;
+	height: 141px;
+	margin-bottom: 0;
+	overflow: hidden;
+}
+body.home #tpl_header .logo {
+	width: 192px;
+	height: 139px;
+}
+body.home #tpl_header .txt {
+	width: 810px;
+	padding-top: 16px;
+}
+body.home h2.txt-online-presence {
+	font-family: "Helvetica-Light", "Helvetica Light", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: #fff;
+	font-size: 2.4em;
+	text-align: center;
+	background: transparent url(../images/txt/what-does-your-online-presence.png) center center no-repeat scroll;
+	line-height: 49px;
+	height: 49px;
+	width: 768px;
+	overflow: hidden;
+	margin: 0 0 0 17px;	
+	text-indent: -10000px;
+}
+body.home .stats {
+	padding: 6px 0 0 30px;
+}
+body.home .stats dl .one {
+	color: #60bafc;
+}
+body.home .stats dl .two {
+	color: #91d0fe;
+}
+body.home .stats dl .three {
+	color: #c2e3fc;
+}
+body.home .stats dl dt {
+	float: left;
+	width: 64px;
+	margin-top: -2px;
+}
+body.home .stats dl dt span {
+	font-weight: bold;
+	font-size: 2.8em;
+	text-shadow: -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+body.home .stats dl dd {
+	float: left;
+	width: 175px;
+	margin-right: 22px;
+	font-size: 1.1em;
+}
+body.home .stats dl dd.last {
+	margin-right: 0;
+	width: 190px;
+}
+body.home #tpl_content {
+	padding-top: 30px;
+}
+body.home #tpl_content .bullets {
+	height: 341px;
+}
+body.home #tpl_content .bullets .users-logo {
+	margin-left: 51px;
+}
+body.home #tpl_content .bullets .info {
+	margin-left: 48px;
+}
+body.home #tpl_content .bullets .info h3 {
+	font-family: "Helvetica-Light", "Helvetica Light", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: #fff;
+	font-size: 2.9em;
+	text-align: center;
+	background: transparent url(../images/txt/discover-evaluate-monitor-web-brand.png) center center no-repeat scroll;
+	line-height: normal;
+	height: 83px;
+	width: 425px;
+	overflow: hidden;
+	margin: 0 0 0 17px;	
+	text-indent: -10000px;
+}
+body.home #tpl_content .bullets .info ul {
+	margin: 10px 0 0 10px;
+}
+body.home #tpl_content .bullets .info ul li {
+	color: #91c7ea;
+	font-size: 1.4em;
+	list-style: outside none;
+	background: transparent url(../images/template/bgs/bg_li_info.png) left center no-repeat scroll;
+	margin-bottom: 1em;
+	padding-left: 48px;
+}
+body.home #tpl_content .bullets .info ul li em {
+	display: block;
+	font-style: normal;
+	font-size: 1.143em;
+	color: #fff;
+}
+body.home #tpl_content .sign-up {
+	height: 100px;
+}
+body.home #tpl_content .sign-up .txt {
+	width: 525px;
+}
+body.home #tpl_content .sign-up .txt h4 {
+	font-family: "Helvetica-Light", "Helvetica Light", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: #fff;
+	font-size: 3em;
+	text-align: center;
+	background: transparent url(../images/txt/sign-up-for-free-today.png) center top no-repeat scroll;
+	line-height: normal;
+	height: 43px;
+	width: 498px;
+	overflow: hidden;
+	margin: 10px 0 0 0;	
+	text-indent: -10000px;
+}
+body.home #tpl_content .sign-up .txt h3 {
+	font-family: "Helvetica-Light", "Helvetica Light", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: #fff;
+	font-size: 3em;
+	line-height: normal;
+	margin: 15px 0 0 9px;	
+	/* text-indent: -10000px; */
+}
+body.home #tpl_content .sign-up .txt p {
+	font-size: 1.4em;
+	color: #fff;
+	margin: 0 0 0 10px;
+}
+body.home #tpl_content .sign-up .txt p a {
+	color: #bdf680;
+	margin: 0 6px;
+	text-decoration: underline;
+}
+body.home #tpl_content .sign-up .txt p a:hover {
+	text-decoration: none;
+}
+body.home #tpl_content .sign-up .buttons {
+	margin-top: 24px;
+}
+body.home #tpl_footer {
+	margin-top: 5px;
+	padding-bottom: 16px;
+	clear: both;
+}
+body.home #tpl_footer p {
+	color: #666;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+body.home #tpl_footer p a {
+	color: #666;
+	margin: 0 3px;
+	text-decoration: underline;
+}
+body.home #tpl_footer p a:hover {
+	text-decoration: none;
+}
+body.home #tpl_footer p a.first {
+	margin-left: 8px;
+}
+body.home #tpl_footer p a.last {
+	margin-right: 8px;
+}
+body.home #tpl_footer .follow-us p {
+	color: #146aa8;
+	margin-left: 12px;
+}
+body.home #tpl_footer .copyright p {
+	margin-right: 24px;
+}
+
+
+/* Homepage --> */
+
+
+/*]]>*/

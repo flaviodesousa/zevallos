@@ -1,0 +1,39 @@
+<!--{include header}-->
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="signuped">
+    <div id="content">
+        <div class="box">
+            <div class="box-top"></div>
+            <div class="box-content">
+                <div class="head success"><h2>Não perca tempo, aproveite sua primeira oferta!</h2></div>
+                <div class="sect">
+                    <h3 class="notice-title">O próximo passo é verificar o cadastro no seu email e confirmar</h3>
+                    <div class="notice-content">
+                        <p>Nós te enviamos um email para <strong>{$email}</strong>, veja e confirme.</p>
+					<!--{if $wwwlink}-->
+                        <p class="signup-gotoverify"><a href="{$wwwlink}" target="_blank"><img src="/static/img/signup-email-link.gif"></a></p>
+					<!--{/if}-->
+						</div>
+
+                    <div class="help-tip">
+                        <h3 class="help-title">Não chegou?</h3>
+                        <ul class="help-list">
+                            <li>Veja se não foi parar em sua caixa de SPAM.</li>
+							<li><a href="/account/verify.php?email=${urlEncode($email)}">Clique aqui</a> para reenviar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="box-bottom"></div>
+        </div>
+    </div>
+    <div id="sidebar">
+    </div>
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include footer}-->
+

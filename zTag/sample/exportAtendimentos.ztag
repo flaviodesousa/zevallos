@@ -1,0 +1,58 @@
+<!-- zheader:locationif use="!userLogged" notcondition="len()" value="/logOn.php" /-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="Atendimentos - #sysSign" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}
+    </style>
+  </head>
+  <body>
+    <zvar:set id="exportDirectory" value="/ztag/sample/" />
+    <zvar:set id="exportFile" value="Atendimentos.txt" />
+
+    <h3>Atendimentos -&gt; Aliança 8 (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Fonte" />) - <zhtml:a href="$exportDirectory$exportFile" value="$exportFile" /></h3>
+    <hr />
+    <zdb:open id="ociConn" driver="oci" host="#ociHost" user="#ociUser", password="#ociPassword" />
+      <zdb:query use="ociConn" id="ociQuery">
+				SELECT G.NU_GUIA
+				, GC.NU_CONTA_MEDICA
+				, G.CD_USUARIO
+				, to_char(G.DT_SOLICITACAO, 'DD/MM/YYYY')
+				, '' CD_ESPECIALIDADE
+				, '' CD_GLOSA
+				, G.NU_SENHA
+				FROM V_GUIA G
+				LEFT JOIN V_GUIA_CM GC ON G.NU_GUIA = GC.NU_GUIA
+				ORDER BY G.NU_GUIA
+      </zdb:query>
+<textarea rows="10" cols="80">NU_GUIA;NU_CONTA_MEDICA;CD_USUARIO;DT_SOLICITACAO;CD_ESPECIALIDADE;CD_GLOSA;NU_SENHA</textarea>
+<zdb:fetchuntil use="ociQuery" id="ociRow" var="ociRow" filename="$exportDirectory$exportFile" filetype="txt" show="false"><zdb:field use="ociRow" name="NU_GUIA" />;<zdb:field use="ociRow" name="NU_CONTA_MEDICA" />;<zdb:field use="ociRow" name="CD_USUARIO" />;<zdb:field use="ociRow" name="DT_SOLICITACAO" />;<zdb:field use="ociRow" name="CD_ESPECIALIDADE" />;<zdb:field use="ociRow" name="CD_GLOSA" />;<zdb:field use="ociRow" name="NU_SENHA" />
+</zdb:fetchuntil>
+<pre>
+Layout
+
+<b>Aretech             Aliança                Tipo</b>
+-------------       --------------------   -----------------
+NU_GUIA           - Numero atendimento   - Char(7) Not Null,                                                           
+NU_CONTA_MEDICA   - Codigo da Fatura     - Integer Not Null,                                                           
+CD_USUARIO        - Codigo beneficiario  - Char(15),                                                                   
+DT_SOLICITACAO    - Data procedimento    - Date,                                                                       
+CD_ESPECIALIDADE  - Codigo especialidade - Smallint,                                                                   
+CD_GLOSA          - Codigo glosa         - Smallint, (caso o atendimento tenha sido glosado)                           
+NU_SENHA          - Cod Senha            - Char(10), (número da senha de autorização - relacionado a tabela Senhas.txt)
+    <zdb:close use="ociConn" />
+  </body>
+</html>

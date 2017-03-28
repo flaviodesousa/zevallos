@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<title>Legado - Simples - ZTags</title>
+		<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+		<style type="text/css" media="screen, projection">
+		body {
+			margin: 0px 0px 0px 10px;
+			padding: 0px 0px 0px 0px;
+			font-family: Arial, Verdana, Helvetica, sans-serif;
+			color: #444444;;
+			line-height: 125%;
+		}
+		
+		h3 {
+			margin: 10px 0px 0px 0px;
+		}
+		
+		hr {
+			margin: 0px 0px 10px 0px;
+		}
+		
+		dl {
+			font-size: 90%;
+			line-height: 125%;
+			margin: 0px;
+		}
+		
+		dt {
+			color: navy;
+			font-size: 90%;
+			padding-left: 0px;
+			margin: 3px 0px 0px 0px;
+			font-weight: bold;
+		}
+		
+		dd {
+			margin: 0px 0px 0px 10px;
+		}
+		</style>
+	</head>
+	<body>
+		<h3>ZTags antigas do OM 3 - Simples</h3>
+		<hr />
+		<table border="0">
+      <tr>
+        <th colspan="5">Template</th>
+      </tr>
+			<tr>
+				<th>Tag Name</th>
+				<th>New Syntax</th>
+				<th>Result</th>
+				<th>Deprecated</th>
+				<th>Result</th>
+			</tr>
+      <tr>
+        <td><b>TemplateName</b>
+        <td>&lt;ztag:TemplateName /&gt;</td>
+        <td><ztag:TemplateName /></td>
+        <td>&lt;ztagTemplateName /&gt;</td>
+        <td><ztagTemplateName /></td>
+      </tr>
+      <tr>
+        <td><b>HTMLFileName</b>
+        <td>&lt;ztag:HTMLFileName /&gt;</td>
+        <td><ztag:HTMLFileName /></td>
+        <td>&lt;ztagHTMLFileName /&gt;</td>
+        <td><ztagHTMLFileName /></td>
+      </tr>
+      <tr>
+        <td><b>HTMLFileName</b>
+        <td>&lt;ztag:HTMLFileName /&gt;</td>
+        <td><ztag:HTMLFileName /></td>
+        <td>&lt;ztagHTMLFileName /&gt;</td>
+        <td><ztagHTMLFileName /></td>
+      </tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Acesso</th>
+      </tr>
+      <tr>
+        <th>Tag Name</th>
+        <th>New Syntax</th>
+        <th>Result</th>
+        <th>Deprecated</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td><b>RealURL</b>
+        <td>&lt;ztag:RealURL /&gt;</td>
+        <td><ztag:RealURL /></td>
+        <td>&lt;ztagRealURL /&gt;</td>
+        <td><ztagRealURL /></td>
+      </tr>
+      <tr>
+        <td><b>UserDomain</b>
+        <td>&lt;ztag:UserDomain /&gt;</td>
+        <td><ztag:UserDomain /></td>
+        <td>&lt;ztagUserDomain /&gt;</td>
+        <td><ztagUserDomain /></td>
+      </tr>
+      <tr>
+        <td><b>UserScriptName</b>
+        <td>&lt;ztag:UserScriptName /&gt;</td>
+        <td><ztag:UserScriptName /></td>
+        <td>&lt;ztagUserScriptName /&gt;</td>
+        <td><ztagUserScriptName /></td>
+      </tr>
+      <tr>
+        <td><b>UserRemoteAddress</b>
+        <td>&lt;ztag:UserRemoteAddress /&gt;</td>
+        <td><ztag:UserRemoteAddress /></td>
+        <td>&lt;ztagUserRemoteAddress /&gt;</td>
+        <td><ztagUserRemoteAddress /></td>
+      </tr>
+      <tr>
+        <td><b>UserDomainReferer</b>
+        <td>&lt;ztag:UserDomainReferer /&gt;</td>
+        <td><ztag:UserDomainReferer /></td>
+        <td>&lt;ztagUserDomainReferer /&gt;</td>
+        <td><ztagUserDomainReferer /></td>
+      </tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Parametros</th>
+      </tr>
+      <tr>
+        <th>Tag Name</th>
+        <th>New Syntax</th>
+        <th>Result</th>
+        <th>Deprecated</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td><b>ParameterOption</b>
+        <td>&lt;ztag:ParameterOption /&gt;</td>
+        <td><ztag:ParameterOption /></td>
+        <td>&lt;ztagParameterOption /&gt;</td>
+        <td><ztagParameterOption /></td>
+      </tr>
+      <tr>
+        <td><b>ParameterTarget</b>
+        <td>&lt;ztag:ParameterTarget /&gt;</td>
+        <td><ztag:ParameterTarget /></td>
+        <td>&lt;ztagParameterTarget /&gt;</td>
+        <td><ztagParameterTarget /></td>
+      </tr>
+      <tr>
+        <td><b>ParameterAction</b>
+        <td>&lt;ztag:ParameterAction /&gt;</td>
+        <td><ztag:ParameterAction /></td>
+        <td>&lt;ztagParameterAction /&gt;</td>
+        <td><ztagParameterAction /></td>
+      </tr>
+      <tr>
+        <td><b>ParameterTemplate</b>
+        <td>&lt;ztag:ParameterTemplate /&gt;</td>
+        <td><ztag:ParameterTemplate /></td>
+        <td>&lt;ztagParameterTemplate /&gt;</td>
+        <td><ztagParameterTemplate /></td>
+      </tr>
+      <tr>
+        <td><b>ParameterFind</b>
+        <td>&lt;ztag:ParameterFind /&gt;</td>
+        <td><ztag:ParameterFind /></td>
+        <td>&lt;ztagParameterFind /&gt;</td>
+        <td><ztagParameterFind /></td>
+      </tr>
+      <tr>
+        <td><b>Parameter</b>
+        <td>&lt;ztag:Parameter name="debug" /&gt;</td>
+        <td><ztag:Parameter name="debug" /></td>
+        <td>&lt;ztagParameter."debug"&gt;</td>
+        <td><ztagParameter."debug" /></td>
+      </tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">OM - Onyx Manager</th>
+      </tr>
+      <tr>
+        <th>Tag Name</th>
+        <th>New Syntax</th>
+        <th>Result</th>
+        <th>Deprecated</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td><b>WebPublisher</b>
+        <td>&lt;ztag:WebPublisher /&gt;</td>
+        <td><ztag:WebPublisher /></td>
+        <td>&lt;ztagWebPublisher /&gt;</td>
+        <td><ztagWebPublisher /></td>
+      </tr>
+      <tr>
+        <td><b>WebCompressor</b>
+        <td>&lt;ztag:WebCompressor /&gt;</td>
+        <td><ztag:WebCompressor /></td>
+        <td>&lt;ztagWebCompressor /&gt;</td>
+        <td><ztagWebCompressor /></td>
+      </tr>
+      <tr>
+        <td><b>WebXHTML</b>
+        <td>&lt;ztag:WebXHTML /&gt;</td>
+        <td><ztag:WebXHTML /></td>
+        <td>&lt;ztagWebXHTML /&gt;</td>
+        <td><ztagWebXHTML /></td>
+      </tr>
+      <tr>
+        <td><b>LastReferenceID</b>
+        <td>&lt;ztag:LastReferenceID /&gt;</td>
+        <td><ztag:LastReferenceID /></td>
+        <td>&lt;ztagLastReferenceID /&gt;</td>
+        <td><ztagLastReferenceID /></td>
+      </tr>
+      <tr>
+        <td><b>LastArquivo</b>
+        <td>&lt;ztag:LastArquivo /&gt;</td>
+        <td><ztag:LastArquivo /></td>
+        <td>&lt;ztagLastArquivo /&gt;</td>
+        <td><ztagLastArquivo /></td>
+      </tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Cookie</th>
+      </tr>
+      <tr>
+        <th>Tag Name</th>
+        <th>New Syntax</th>
+        <th>Result</th>
+        <th>Deprecated</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td><b>UserCookieSet</b>
+        <td>&lt;ztag:UserCookieSet /&gt;</td>
+        <td><ztag:UserCookieSet /></td>
+        <td>&lt;ztagUserCookieSet /&gt;</td>
+        <td><ztagUserCookieSet /></td>
+      </tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Data de Hoje</th>
+      </tr>
+      <tr>
+        <th>Tag Name</th>
+        <th>New Syntax</th>
+        <th>Result</th>
+        <th>Deprecated</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td><b>TodayDate</b>
+        <td>&lt;ztag:TodayDate /&gt;</td>
+        <td><ztag:TodayDate /></td>
+        <td>&lt;ztagTodayDate /&gt;</td>
+        <td><ztagTodayDate /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateBR</b>
+        <td>&lt;ztag:TodayDateBR /&gt;</td>
+        <td><ztag:TodayDateBR /></td>
+        <td>&lt;ztagTodayDateBR /&gt;</td>
+        <td><ztagTodayDateBR /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateDay</b>
+        <td>&lt;ztag:TodayDateDay /&gt;</td>
+        <td><ztag:TodayDateDay /></td>
+        <td>&lt;ztagTodayDateDay /&gt;</td>
+        <td><ztagTodayDateDay /></td>
+      </tr>
+      <tr>
+        <td><b>TodaydDatedayOrdinalSuffix</b>
+        <td>&lt;ztag:TodayDateDayOrdinalSuffix /&gt;</td>
+        <td><ztag:TodayDateDayOrdinalSuffix /></td>
+        <td>&lt;ztagTodayDateDayOrdinalSuffix /&gt;</td>
+        <td><ztagTodayDateDayOrdinalSuffix /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateDayFull</b>
+        <td>&lt;ztag:TodayDateDayFull /&gt;</td>
+        <td><ztag:TodayDateDayFull /></td>
+        <td>&lt;ztagTodayDateDayFull /&gt;</td>
+        <td><ztagTodayDateDayFull /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMonth</b>
+        <td>&lt;ztag:TodayDateMonth /&gt;</td>
+        <td><ztag:TodayDateMonth /></td>
+        <td>&lt;ztagTodayDateMonth /&gt;</td>
+        <td><ztagTodayDateMonth /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMonthFull</b>
+        <td>&lt;ztag:TodayDateMonthFull /&gt;</td>
+        <td><ztag:TodayDateMonthFull /></td>
+        <td>&lt;ztagTodayDateMonthFull /&gt;</td>
+        <td><ztagTodayDateMonthFull /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMonthNameBR</b>
+        <td>&lt;ztag:TodayDateMonthNameBR /&gt;</td>
+        <td><ztag:TodayDateMonthNameBR /></td>
+        <td>&lt;ztagTodayDateMonthNameBR /&gt;</td>
+        <td><ztagTodayDateMonthNameBR /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMonthNameBR1</b>
+        <td>&lt;ztag:TodayDateMonthNameBR1 /&gt;</td>
+        <td><ztag:TodayDateMonthNameBR1 /></td>
+        <td>&lt;ztagTodayDateMonthNameBR1 /&gt;</td>
+        <td><ztagTodayDateMonthNameBR1 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMonthNameBR2</b>
+        <td>&lt;ztag:TodayDateMonthNameBR2 /&gt;</td>
+        <td><ztag:TodayDateMonthNameBR2 /></td>
+        <td>&lt;ztagTodayDateMonthNameBR2 /&gt;</td>
+        <td><ztagTodayDateMonthNameBR2 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMonthNameBR3</b>
+        <td>&lt;ztag:TodayDateMonthNameBR3 /&gt;</td>
+        <td><ztag:TodayDateMonthNameBR3 /></td>
+        <td>&lt;ztagTodayDateMonthNameBR3 /&gt;</td>
+        <td><ztagTodayDateMonthNameBR3 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMonthName</b>
+        <td>&lt;ztag:TodayDateMonthName /&gt;</td>
+        <td><ztag:TodayDateMonthName /></td>
+        <td>&lt;ztagTodayDateMonthName /&gt;</td>
+        <td><ztagTodayDateMonthName /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMonthName1</b>
+        <td>&lt;ztag:TodayDateMonthName1 /&gt;</td>
+        <td><ztag:TodayDateMonthName1 /></td>
+        <td>&lt;ztagTodayDateMonthName1 /&gt;</td>
+        <td><ztagTodayDateMonthName1 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMonthName2</b>
+        <td>&lt;ztag:TodayDateMonthName2 /&gt;</td>
+        <td><ztag:TodayDateMonthName2 /></td>
+        <td>&lt;ztagTodayDateMonthName2 /&gt;</td>
+        <td><ztagTodayDateMonthName2 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMonthName3</b>
+        <td>&lt;ztag:TodayDateMonthName3 /&gt;</td>
+        <td><ztag:TodayDateMonthName3 /></td>
+        <td>&lt;ztagTodayDateMonthName3 /&gt;</td>
+        <td><ztagTodayDateMonthName3 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateYear</b>
+        <td>&lt;ztag:TodayDateYear /&gt;</td>
+        <td><ztag:TodayDateYear /></td>
+        <td>&lt;ztagTodayDateYear /&gt;</td>
+        <td><ztagTodayDateYear /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateYearFull</b>
+        <td>&lt;ztag:TodayDateYearFull /&gt;</td>
+        <td><ztag:TodayDateYearFull /></td>
+        <td>&lt;ztagTodayDateYearFull /&gt;</td>
+        <td><ztagTodayDateYearFull /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateHour</b>
+        <td>&lt;ztag:TodayDateHour /&gt;</td>
+        <td><ztag:TodayDateHour /></td>
+        <td>&lt;ztagTodayDateHour /&gt;</td>
+        <td><ztagTodayDateHour /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateHourFull</b>
+        <td>&lt;ztag:TodayDateHourFull /&gt;</td>
+        <td><ztag:TodayDateHourFull /></td>
+        <td>&lt;ztagTodayDateHourFull /&gt;</td>
+        <td><ztagTodayDateHourFull /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMinute</b>
+        <td>&lt;ztag:TodayDateMinute /&gt;</td>
+        <td><ztag:TodayDateMinute /></td>
+        <td>&lt;ztagTodayDateMinute /&gt;</td>
+        <td><ztagTodayDateMinute /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateMinuteFull</b>
+        <td>&lt;ztag:TodayDateMinuteFull /&gt;</td>
+        <td><ztag:TodayDateMinuteFull /></td>
+        <td>&lt;ztagTodayDateMinuteFull /&gt;</td>
+        <td><ztagTodayDateMinuteFull /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateSecond</b>
+        <td>&lt;ztag:TodayDateSecond /&gt;</td>
+        <td><ztag:TodayDateSecond /></td>
+        <td>&lt;ztagTodayDateSecond /&gt;</td>
+        <td><ztagTodayDateSecond /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateSecondFull</b>
+        <td>&lt;ztag:TodayDateSecondFull /&gt;</td>
+        <td><ztag:TodayDateSecondFull /></td>
+        <td>&lt;ztagTodayDateSecondFull /&gt;</td>
+        <td><ztagTodayDateSecondFull /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekday</b>
+        <td>&lt;ztag:TodayDateWeekday /&gt;</td>
+        <td><ztag:TodayDateWeekday /></td>
+        <td>&lt;ztagTodayDateWeekday /&gt;</td>
+        <td><ztagTodayDateWeekday /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekdayFull</b>
+        <td>&lt;ztag:TodayDateWeekdayFull /&gt;</td>
+        <td><ztag:TodayDateWeekdayFull /></td>
+        <td>&lt;ztagTodayDateWeekdayFull /&gt;</td>
+        <td><ztagTodayDateWeekdayFull /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekdayNameBR</b>
+        <td>&lt;ztag:TodayDateWeekdayNameBR /&gt;</td>
+        <td><ztag:TodayDateWeekdayNameBR /></td>
+        <td>&lt;ztagTodayDateWeekdayNameBR /&gt;</td>
+        <td><ztagTodayDateWeekdayNameBR /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekdayNameBR1</b>
+        <td>&lt;ztag:TodayDateWeekdayNameBR1 /&gt;</td>
+        <td><ztag:TodayDateWeekdayNameBR1 /></td>
+        <td>&lt;ztagTodayDateWeekdayNameBR1 /&gt;</td>
+        <td><ztagTodayDateWeekdayNameBR1 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekdayNameBR2</b>
+        <td>&lt;ztag:TodayDateWeekdayNameBR2 /&gt;</td>
+        <td><ztag:TodayDateWeekdayNameBR2 /></td>
+        <td>&lt;ztagTodayDateWeekdayNameBR2 /&gt;</td>
+        <td><ztagTodayDateWeekdayNameBR2 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekdayNameBR3</b>
+        <td>&lt;ztag:TodayDateWeekdayNameBR3 /&gt;</td>
+        <td><ztag:TodayDateWeekdayNameBR3 /></td>
+        <td>&lt;ztagTodayDateWeekdayNameBR3 /&gt;</td>
+        <td><ztagTodayDateWeekdayNameBR3 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekdayName</b>
+        <td>&lt;ztag:TodayDateWeekdayName /&gt;</td>
+        <td><ztag:TodayDateWeekdayName /></td>
+        <td>&lt;ztagTodayDateWeekdayName /&gt;</td>
+        <td><ztagTodayDateWeekdayName /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekdayName1</b>
+        <td>&lt;ztag:TodayDateWeekdayName1 /&gt;</td>
+        <td><ztag:TodayDateWeekdayName1 /></td>
+        <td>&lt;ztagTodayDateWeekdayName1 /&gt;</td>
+        <td><ztagTodayDateWeekdayName1 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekdayName2</b>
+        <td>&lt;ztag:TodayDateWeekdayName2 /&gt;</td>
+        <td><ztag:TodayDateWeekdayName2 /></td>
+        <td>&lt;ztagTodayDateWeekdayName2 /&gt;</td>
+        <td><ztagTodayDateWeekdayName2 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekdayName3</b>
+        <td>&lt;ztag:TodayDateWeekdayName3 /&gt;</td>
+        <td><ztag:TodayDateWeekdayName3 /></td>
+        <td>&lt;ztagTodayDateWeekdayName3 /&gt;</td>
+        <td><ztagTodayDateWeekdayName3 /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekofYear</b>
+        <td>&lt;ztag:TodayDateWeekofYear /&gt;</td>
+        <td><ztag:TodayDateWeekofYear /></td>
+        <td>&lt;ztagTodayDateWeekofYear /&gt;</td>
+        <td><ztagTodayDateWeekofYear /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateWeekofYearFull</b>
+        <td>&lt;ztag:TodayDateWeekofYearFull /&gt;</td>
+        <td><ztag:TodayDateWeekofYearFull /></td>
+        <td>&lt;ztagTodayDateWeekofYearFull /&gt;</td>
+        <td><ztagTodayDateWeekofYearFull /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateQuarter</b>
+        <td>&lt;ztag:TodayDateQuarter /&gt;</td>
+        <td><ztag:TodayDateQuarter /></td>
+        <td>&lt;ztagTodayDateQuarter /&gt;</td>
+        <td><ztagTodayDateQuarter /></td>
+      </tr>
+      <tr>
+        <td><b>TodayDateQuarterFull</b>
+        <td>&lt;ztag:TodayDateQuarterFull /&gt;</td>
+        <td><ztag:TodayDateQuarterFull /></td>
+        <td>&lt;ztagTodayDateQuarterFull /&gt;</td>
+        <td><ztagTodayDateQuarterFull /></td> 
+			</tr>
+		</table>
+	</body>
+</html>

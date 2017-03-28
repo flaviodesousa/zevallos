@@ -1,0 +1,7 @@
+#listas {margin:0; padding:0; letter-spacing:normal}
+#listas span {display:block; margin:0 0 10px 0;}
+#listas dt { background:#990000 url(../images/borda_perg_faq.jpg) 100% no-repeat; font-size:16px; line-height:20px; color:#fff; cursor:pointer;}
+#listas dt .numeral {float:left; width:30px; height:45px; margin-right:10px; padding-left:5px; line-height:50px; background:#820000 url(../images/bg_num_faq.jpg) repeat-x; font-size:20px; color:#fff;}
+#listas dt .pergunta { width:700px; height:40px; line-height:40px; margin:0 0 6px 0; padding:3px; background:#990000 url(../images/bg_perg_faq.jpg) repeat-x;}
+
+#listas dd {width:650px; margin:0; padding:0 0 5px 30px; font-size:14px; line-height:20px; color:#666}

@@ -1,0 +1,98 @@
+<!--{include header}-->
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="content">
+    <div id="deal-buy" class="box">
+        <div class="box-top"></div>
+        <div class="box-content">
+            <div class="head"><h2>Suas compras</h2></div>
+            <div class="sect">
+                <table class="order-table">
+                    <tr>
+                        <th class="deal-buy-desc">Oferta</th>
+                        <th class="deal-buy-quantity">Quantidade</th>
+                        <th class="deal-buy-multi"></th>
+                        <th class="deal-buy-price">Preço</th>
+                        <th class="deal-buy-equal"></th>
+                        <th class="deal-buy-total">Valor Total</th>
+                    </tr>
+                    <tr>
+                        <td class="deal-buy-desc">{$team['title']}</td>
+                        <td class="deal-buy-quantity">{$order['quantity']}</td>
+                        <td class="deal-buy-multi">x</td>
+                        <td class="deal-buy-price" id="deal-buy-price"><span class="money">{$currency}<span>{$team['team_price']}</td>
+                        <td class="deal-buy-equal">=</td>
+                        <td class="deal-buy-total" id="deal-buy-total"><span class="money">{$currency}</span>{$team['team_price']*$order['quantity']}</td>
+                    </tr>
+					<!--{if $team['delivery']=='express'}-->
+					<tr>
+						<td class="deal-buy-desc">Entrega Expressa</td>
+						<td class="deal-buy-quantity"></td>
+						<td class="deal-buy-multi"></td>
+						<td class="deal-buy-price"><span class="money">{$currency}</span><span id="deal-express-price">{$team['fare']}</span></td>
+						<td class="deal-buy-equal">=</td>
+						<td class="deal-buy-total"><span class="money">{$currency}</span><span id="deal-express-total">{$team['fare']}</span></td>
+					</tr>
+					<!--{/if}-->
+					<tr class="order-total">
+                        <td class="deal-buy-desc"><strong>Você deve pagar: </strong></td>
+                        <td class="deal-buy-quantity"></td>
+                        <td class="deal-buy-multi"></td>
+                        <td class="deal-buy-price"></td>
+                        <td class="deal-buy-equal">=</td>
+                        <td class="deal-buy-total"><span class="money">{$currency}</span>{$order['origin']}</td>
+                    </tr>
+                </table>
+				<div class="paytype">
+                <form action="/order/pay.php" method="post" class="validator">
+				<div class="order-check-form ">
+					<div class="order-pay-credit">
+						<h3>Balanço da conta</h3>
+						<p>Balanço da conta: <strong><span class="money">{$currency}</span>${moneyit($login_user['money'])}</strong> <!--{if $login_user['money']<$order['origin']}-->Você não tem saldo suficiente, faça outro pagamento de <strong><span class="money">{$currency}</span>${moneyit($order['origin']-$login_user['money'])}</strong>. Escolha seu pagamento: <!--{else}-->Seu saldo é suficiente para efetuar esse pagamento, por favor confirme ou escolha
+						  outra forma de pagamento.<!--{/if}--></p>
+						<div class="other_pay">{$INI['other']['pay']}</div>
+					</div>  
+				<!--{if $login_user['money']<$order['origin']}-->
+					<ul class="typelist">
+					<!--{if $INI['paypal']['mid']}-->
+						<li><input id="check-paypal" type="radio" name="paytype" value="paypal" {$ordercheck['paypal']} /><label for="check-paypal" class="paypal">PayPal pagamento para usuários internacionais</label></li>
+					<!--{/if}-->					
+					<!--{if $INI['alipay']['mid']}-->
+						<li><input id="check-alipay" type="radio" name="paytype" value="alipay" {$ordercheck['alipay']} /><label for="check-alipay" class="alipay">Apipay payment for taobao users</label></li>
+					<!--{/if}-->
+					<!--{if $INI['chinabank']['mid']}-->
+						<li><input id="check-chinabank" type="radio" name="paytype" value="chinabank" {$ordercheck['chinabank']} /><label for="check-chinabank" class="chinabank">Support many banks..</label></li>
+					<!--{/if}-->
+					<!--{if $INI['pagseguro']['mid']}-->
+						<li><input id="check-pagseguro" type="radio" name="paytype" value="pagseguro" {$ordercheck['pagseguro']} /><label for="check-pagseguro" class="pagseguro">Pagseguro Pagamento para brasileiros</label></li>
+					<!--{/if}-->
+					</ul>
+				<!--{else}-->
+					<input type="hidden" name="paytype" value="credit" />
+				<!--{/if}-->
+					<div class="clear"></div>
+					<p class="check-act">
+					<input type="hidden" name="order_id" value="{$order['id']}" />
+					<input type="hidden" name="team_id" value="{$order['team_id']}" />
+					<input type="hidden" name="cardcode" value="" />
+					<input type="hidden" name="quantity" value="{$order['quantity']}" />
+					<input type="hidden" name="address" value="{$order['address']}" />
+					<input type="hidden" name="express" value="{$order['express']}" />
+					<input type="hidden" name="remark" value="{$order['remark']}" />
+					<input type="submit" value="Confirme e efetue o pagamento" class="formbutton" /> <a href="/team/buy.php?id={$order['team_id']}" style="margin-left:1em;">Voltar para Mudar a Compra</a>
+					</p>
+				</div>
+				</form>
+				</div>
+			</div>
+		</div>
+		<div class="box-bottom"></div>
+	</div>
+</div>
+<div id="side">
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include footer}-->

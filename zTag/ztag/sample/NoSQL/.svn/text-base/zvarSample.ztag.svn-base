@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="Samples - zVar" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    <h3>Samples - zVar - (<zhtml:a href="/ztag/sample/zCode.ztag?file=/#ztagFile" value="Source" />)</h3>
+    <hr />
+    Samples about zVar and other some other.
+    <br />
+    <hr />
+    <zhtml:b value="Simle" zVar sample" />
+    <zvar:set id="simpleVar" value="simple Var Set">
+    <br /><zhtml:b value="$simpleVar" />
+    <br />
+    <br /><zhtml:b value="Simle zVar sample" />
+    <zvar:set id="multlineVar">
+      First line
+      <br />Second line
+      <br />Well... this is the third line!
+    </znosql:set>
+
+    <br /><zhtml:b value="$multlineVar" />
+
+  </body>
+</html>
+

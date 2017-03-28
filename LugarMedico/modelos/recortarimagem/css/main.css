@@ -1,0 +1,14 @@
+@charset "iso-8859-1";
+/* CSS Document */
+#estrutura{
+	margin:10px auto;
+	width:600px;
+}
+#ladybug{
+	float:left;
+	margin-right:10px;
+}
+#link_post{
+	clear:both;
+	display:block;
+}

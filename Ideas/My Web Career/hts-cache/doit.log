@@ -1,0 +1,8 @@
+-qwC2%Pns0u1k%s%uN0%I0p7DaK0H0%kf2A25000%f#f -F "Mozilla/2.0 (compatible; MS FrontPage Express 2.0)" -%l "en, en, *" http://www.mywebcareer.com/ -O1 "C:\\My Web Sites\\My Web Career" +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+File generated automatically on Tue, 01 Mar 2011 11:48:38, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

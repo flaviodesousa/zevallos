@@ -1,0 +1,39 @@
+Lista de notícias
+http://ext02.tst.jus.br/pls/no01/no_noticiasNOVO.Inicio?p_cod_area_noticia=ASCS
+
+(?P<hour>\d+):(?P<minute>\d+)h - <a href="(?P<url>[^"]+)">(?P<title>.+?)(<img|</a>)
+(?P<hour>\d+):(?P<minute>\d+)h - <a href="(?P<url>.+?p_cod_noticia=(?P<pageid>\d+)[^"]+)">(?P<title>.+?)(<img|</a>)
+
+Corpo
+http://ext02.tst.jus.br/pls/no01/NO_NOTICIASNOVO.Exibe_Noticia?p_cod_noticia=11665&p_cod_area_noticia=ASCS
+
+(?P<day>\d+)/(?P<month>\d+)/(?P<year>\d+).+?<div class="[^"]+"><strong>(?P<title>.+?)</strong></div>.+?<p>(?P<body>.+?)<br />\((?P<author>.+?)\)<br />.*?</p>
+
+Legado
+http://ext02.tst.jus.br/pls/no01/NO_NOTICIASNOVO.Inicio?p_cod_area_noticia=ASCS&p_dia=01082009
+http://ext02.tst.jus.br/pls/no01/NO_NOTICIASNOVO.Inicio?p_cod_area_noticia=ASCS&p_dia=01032009
+
+<-- Conjunto de RegEx limpar
+Lista das notícias
+
+Selecionar a notícia
+Abrir a página
+
+<-- Conjunto de RegEx limpar
+Extrair o conteúdo
+
+<-- Conjunto de RegEx nos resultados para limpar
+
+
+Parametros:
+
+Fonte:
+  Nome do site
+  Sigla
+  Id do site
+
+  URL da lista de notícias
+
+  RegEx pega a lista
+
+  RegEx extrai o conteúdo

@@ -1,0 +1,40 @@
+body {
+	background-color:#FFFFFF;
+	margin:0;
+	padding:0;
+	border:none;
+	font: 12px/1.5 Arial;
+	text-align:center;
+}
+
+td {
+	font-size: 15px;
+	font-family: Arial;
+}
+
+img {
+	border-width:0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.loading {
+	margin-right: 0px;
+	position:absolute;
+	background-color:yellow;
+	top:0;
+	display:none;
+}
+
+.pacrudFilter {
+	padding: 8px;
+	margin:auto;
+}
+
+.pacrudLogo {
+	margin: auto;
+	text-align:center;
+	width:100px;
+}

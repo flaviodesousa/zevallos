@@ -1,0 +1,7 @@
+http://www.mywebcareer.com/Free/Score.aspx	index
+http://www.mywebcareer.com/Default.aspx	default
+http://www.mywebcareer.com/Main/AccountSettings.aspx	accountsettings
+http://www.mywebcareer.com/Logout.aspx	logout
+http://www.facebook.com/MyWebCareer?_fb_noscript=1	mywebcareer_001
+http://www.linkedin.com/companies/mywebcareer-inc.	mywebcareer-inc
+http://twitter.com/MyWebCareer	mywebcareer_002

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>zCTRL - Testes - zTag</title>
+</head>
+<body>
+
+<zhtml:h3>IF Then Else test</zhtml:h3>
+
+<zvar:set id="ifVar" value="10" />
+
+<zctrl:if value="$ifVar" operator="e" with="10">
+  <zhtml:b value="Then - IF ifVar e 10 Then &lt;-- No Else" />
+</zctrl:if>
+
+<zctrl:if value="$ifVar" operator="e" with="10">
+  <zhtml:b value="Then - IF ifVar e 10 Then" />
+    
+  <zctrl:elseif value="$ifVar" operator="e" with="25" />
+    <zhtml:b value="ElseIf - IF ifVar e 25 Then" />
+
+  <zctrl:elseif value="$ifVar" operator="e" with="20" />
+    <zhtml:b value="ElseIf - IF ifVar e 20 Then" />
+
+  <zctrl:else />
+    <zhtml:b value="Else - IF ifVar ne 10 or 20 Then" />
+    
+</zctrl:if>
+
+<zhtml:h3 value="Switch Case and Default test" />
+<zvar:set id="switchVar" value="10" />
+
+<zctrl:switch value="$switchVar">
+  <zctrl:case value="10"/>
+    <zhtml:b value="Case e 10" />
+
+  <zctrl:case value="20"/>
+    <zhtml:b value="Case e 20" />
+    
+  <zctrl:default />
+    <zhtml:b value="Default" />
+    
+</zctrl:switch>
+
+<zhtml:h3 value="While test" />
+<zvar:set id="whileVar" value="10" />
+
+<zctrl:while value="$whileVar" operator="gt" with="0">
+  <zvar:dec use="whileVar" />
+  <br /><zhtml:show use="whileVar" />
+</zctrl:while>
+
+</body>
+</html>

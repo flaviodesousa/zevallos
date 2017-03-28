@@ -1,0 +1,7 @@
+#sugira p {margin:0 0 10px 0 !important;}
+
+#sugira label {display:block !important; margin:0 0 5px 0; font-size:22px; color:#820000}
+#sugira input{padding:8px 5px 8px 5px; font:14px Arial, Helvetica, sans-serif; color:#666; border:1px solid #ccc; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;}
+#sugira .campo-um {width:300px !important}
+#sugira .campo-dois {width:634px;}
+#sugira button {display:block; text-indent:-9000px; width:75px; height:33px; background:url(../images/btnEnviar.png) no-repeat; cursor:pointer;}

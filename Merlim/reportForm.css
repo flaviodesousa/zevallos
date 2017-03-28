@@ -1,0 +1,218 @@
+body {
+  /*margin: auto;*/
+  padding-top: 10px;
+  height: auto;
+  font-family: verdana, arial, helvetica;
+  font-size: 12px;
+  cursor: auto;
+}
+
+.reportLupa {
+background:url("/Images/reportLupa.gif") no-repeat scroll 0 0 transparent;
+border:0 none;
+cursor:pointer;
+float:right;
+height:19px;
+margin:0 5px 0 -20px;
+width:20px;
+}
+
+#msgEspera h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0px 10px 0px;
+  padding: 0px;
+  color: red;
+}
+
+#frmForm H3 IMG {
+  position:absolute;
+  top:0px;
+  left:0px;
+  display:none;
+}
+
+#frmForm legend {
+  font-size: 10px;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+#frmForm fieldset {
+  margin-bottom:10px;
+}
+
+#frmForm label {
+  font-size: 100%;
+  font-weight: bold;
+  color: #000080;
+  float: left;
+  margin: 0px 5px 5px 0px;
+}
+
+#frmForm img {border: none}
+
+#frmForm select {
+  font-size: 100%;
+  font-weight: normal;
+  background-color: #EEEEEE;
+  border-color: #FFFFFF #999999 #999999 #FFFFFF;
+  margin-right: 5px;
+  border-width: 1px 1px 1px 1px
+}
+
+#frmForm textarea {
+  border: 1px solid #ccc;
+  border-top: 1px solid #b0b0b0;
+  color: #333;
+  float: left;
+  padding: 3px;
+  margin: 0 4px 4px 0;
+  font-size: 12px;
+  line-height: 1.3em;
+  font: normal 12px/1.3em Helvetica,Arial,sans-serif;
+
+  overflow:auto;
+  clip:auto;
+
+  margin-right: 4px;
+  padding-left: 2px;
+  padding-right: 2px
+}
+
+#frmForm input {
+  border: 1px solid #ccc;
+  border-top: 1px solid #b0b0b0;
+  color: #333;
+  float: left;
+  font-size: 12px;
+  line-height: 1.3em;
+  font: normal 12px/1.3em Helvetica,Arial,sans-serif;
+}
+
+#frmForm .FieldFocus {
+  border:1px solid #EFDC0E;
+}
+
+#frmForm input[error], input.FieldError {
+  border:1px solid #FF0000;
+}
+
+#frmForm input:hover {
+  border:1px solid #F6872B;
+}
+
+#frmForm input[required], input.FieldRequired, select[required], select.FieldRequired, textarea[required], textarea.FieldRequired {
+  background-position: top right;
+  background-repeat: no-repeat
+}
+
+#frmForm input[required], input.FieldRequired, select[required], select.FieldRequired, textarea[required], textarea.FieldRequired {
+  background-image: url(/Library/required.gif)
+}
+
+#frmForm input[readonly], input.Fieldreadonly, select[readonly], select.Fieldreadonly, textarea[readonly], textarea.Fieldreadonly {
+  background-color:#E0E0E0;
+  color: #575757
+}
+
+#frmForm input[disable], input.Fielddisable, select[disable], select.Fielddisable, textarea[disable], textarea.Fielddisable {
+  background-color:#E0E0E0;
+  color: #575757
+}
+
+#frmForm button {
+  font-family: Arial; font-size: 11px;
+  font-weight: normal;
+  background-color: #E0E0E0;
+  border: 1px solid;
+  border-color: #FFFFFF #999999 #999999 #FFFFFF;
+  padding:2px;
+}
+
+#frmForm button:hover {
+  background-color: #C0C0C0;
+}
+
+#frmForm input[type="checkbox"], input.FieldsCheckBox {
+  border:none;
+  margin:2px 2px 2px 0;
+  padding:0;
+  width:auto;
+}
+
+#frmForm input[type="radio"], input.FieldsRadio {
+  border:none;
+  margin:2px 2px 2px 0;
+  padding:0;
+  width:auto;
+}
+
+#frmForm input.FieldsOver {
+  font-size: 100%;
+  font-family: verdana;
+  background-color: #F7F7F7;
+  border: 1px solid #000080;
+  margin-right: 10px;
+  padding-right: 10px
+}
+
+#frmForm input[integer], input.FieldsInteger {direction: rtl}
+
+#frmForm input[integer], input.FieldsMoney {direction: rtl}
+
+#frmForm ul {width: 200px; display:block; font-size:90%; border:1px solid #CCCCCC; background-color: #E0E0E0;}
+#frmForm li {margin:0px 0px 3px 0px; cursor: pointer;}
+
+#frmForm .buttonBar {
+  position: relative;
+  margin:auto;
+  text-align: center;
+}
+
+.titleBar {
+  position: relative;
+  margin:auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom:10px;
+}
+
+.titleBarSearch {
+  position: relative;
+  margin:auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom:10px;
+  background-color: navy;
+  color: white;
+  font-weight: bold;
+}
+
+.autoComplete {
+  position: absolute;
+  clear:both;
+  border:1px solid #CCCCCC;
+  overflow:auto;
+  width:200px;
+  height:120px;
+  top:100px;
+  left:100px;
+  font-size:90%;
+  margin: -2px 0px 0px 0px;
+  background-color: #ECECEC;
+  cursor: pointer;
+  display:none;
+  }
+
+.autoComplete dd {margin:0px 0px 3px 0px;}
+.autoComplete dd:hover {background-color: gray}
+
+#frmForm dd.on {background-color: gray}
+
+formMessageNoShow {display:none;}
+
+.formMessageShow {
+
+}

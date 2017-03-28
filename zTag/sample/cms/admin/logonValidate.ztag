@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="zCMS - Logon" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>zCMS - Logon - Validate- (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Source" />)</h1>
+
+    <zrequest:get name="DS_USERNAME" var="DS_USERNAME" transform="stripTags()" />
+    <zrequest:get name="DS_PASSWORD" var="DS_PASSWORD" transform="stripTags()" />
+
+    <zdbal:open id="myConn" driver="mysql" host="localhost" database="zcms" user="zcmsuser" password="z4321" />
+      <zdbal:query use="myConn" id="myQuery">
+        SELECT CD_USER
+        , NM_USER
+        , DS_USERNAME
+        , DS_PASSWORD
+        FROM users
+        WHERE DS_USERNAME = '$DS_USERNAME' AND DS_PASSWORD = '$DS_PASSWORD'
+      </zdbal:query>
+
+      <zsession:unset name="userLogged" />
+      <zsession:unset name="userName" />
+      <zsession:unset name="userLogin" />
+
+      <zsession:set name="userLoginError" value="Wrong Username or password" />
+
+      <zdbal:fetchuntil use="myQuery" var="myRow">
+        <zsession:set name="userLogged" value="$myRow[CD_USER]" />
+        <zsession:set name="userName" value="$myRow[NM_USER]" />
+        <zsession:set name="userLogin" value="$myRow[DS_USERNAME]" />
+
+        <zsession:unset name="userLoginError" />
+      </zdbal:fetchuntil>
+    <zdbal:close use="myConn" />
+
+    <zheader:locationif use="!userLogged" condition="len()" value="index.ztag" />
+    <zheader:locationif use="!userLogged" notcondition="len()" value="logon.ztag" />
+
+  </body>
+</html>
+
+

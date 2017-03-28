@@ -1,0 +1,25 @@
+
+<DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Form TB_VENDA</title>
+<link rel="stylesheet" type="text/css" href="generateForm.css"> 
+</head>
+<body>
+  <div id="stylized" class="myform">
+    <form action="TB_VENDAFile" method="post">
+      <h1>TB_VENDA form</h1>
+      <p>Form generated for table TB_VENDA</p>
+      
+      <label>CD_VENDA<span class="small">short description form cd_venda</span></label> <input type="text" name="CD_VENDA" id="CD_VENDA" />
+      <label>DT_VENDA<span class="small">short description form dt_venda</span></label> <input type="text" name="DT_VENDA" id="DT_VENDA" />
+      <label>VL_VENDA<span class="small">short description form vl_venda</span></label> <input type="text" name="VL_VENDA" id="VL_VENDA" />
+      <label>CD_VENDEDOR<span class="small">short description form cd_vendedor</span></label> <input type="text" name="CD_VENDEDOR" id="CD_VENDEDOR" />
+      <label>STATUS_VENDA<span class="small">short description form status_venda</span></label> <input type="text" name="STATUS_VENDA" id="STATUS_VENDA" />
+      <label>CD_CLIENTE<span class="small">short description form cd_cliente</span></label> <input type="text" name="CD_CLIENTE" id="CD_CLIENTE" />
+  
+      <button type="submit">Submit button</button>
+    </form>
+  <div>  
+</body>

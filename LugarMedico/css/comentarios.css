@@ -1,0 +1,52 @@
+#box .comentario-body{
+
+}
+#box .comentario-body .pai{
+    background-color: #f7f6f3;
+    width: 100%;
+    min-height: 130px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #111;
+}
+#box .comentario-body .pai .foto{
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#box .comentario-body .pai .inf{
+    float: left;
+    width: 590px;
+    height: 89px;
+    border-bottom: 1px solid gray;
+    margin-top: 10px;
+}
+#box .comentario-body .pai .text{}
+#box .comentario-body .filho{
+    background-color: #fafaf3;
+    width: 660px;
+    min-height: 130px;
+    margin-top: 15px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #111;
+}
+#box .comentario-body .filho .foto{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#box .comentario-body .filho .inf{
+    float: left;
+    width: 550px;
+    height: 89px;
+    border-bottom: 1px solid gray;
+    margin-top: 10px;
+}
+#box .comentario-body .from{
+
+}

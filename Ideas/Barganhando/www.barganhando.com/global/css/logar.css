@@ -1,0 +1,55 @@
+.bgSepara {width:950px; height:18px; margin:35px 0 0 0; background:url(../images/bgLog.png) no-repeat top}
+
+
+.cols {float:left;}
+.cols h3 {color:#810000; letter-spacing:-1px;}
+.cols p { font-size: 14px; line-height:18px;}
+.cols label {float:left; margin:0 0 5px 0; text-transform:uppercase}
+.cols input {padding:0 5px 0 5px; height:30px; border:1px solid #ccc; font:12px Arial, Helvetica, sans-serif; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px}
+.cols button {display:block; text-indent:-9000px; cursor:pointer;}
+
+.afasta-campos {margin-right:20px !important;}
+.alinha-campos, .alinha-campos-dois, .alinha-campos-tres, .alinha-campos-quatro {float:left;}
+.alinha-campos { width:460px}
+.alinha-campos-dois {width:250px;}
+.alinha-campos-tres {width:200px;}
+.alinha-campos-quatro {width:240px;}
+
+.cols .lbl {width:60px; margin:10px 0 0 0;}
+
+.tam-um {width:452px; border-right:1px solid #ddd}
+.tam-dois {width:470px; margin-left:30px}
+.tam-tres {width:200px;}
+
+
+.tam-um form { padding-right:31px; }
+
+.acesso h3 {margin:0 0 15px 0; font-size:30px;}
+.acesso p {float:left; margin:0 0 10px 0;}
+.acesso li {float:left; line-height:18px; font-size:14px;}
+
+.ative, .lembrar {margin-top:10px;}
+.ative h3, .lembrar h3 {margin:0 0 5px 0; font-size:20px;}
+.ative li, .lembrar li {float:left; line-height:18px;}
+.ative input,{width:320px;}
+.ative button, .lembrar button {width:75px; height:33px; margin:23px 0 0 20px; background:url(../images/btnEnviar.png) no-repeat;}
+
+.ative {width:470px;}
+.ative form {border-right:1px solid #ddd}
+.lembrar {width:458px;  margin-top:34px;}
+
+
+.campo-um {width:340px}
+.campo-dois {width:240px;}
+.campo-tres {width:460px !important; }
+.campo-quatro {width:200px !important;}
+
+.jqTransformRadio {margin:-5px 0 0 0px;}
+
+/*.jqTransformInputInner {float:left !important;}
+*/
+#acessarL {width:82px; height:33px; margin:24px 0 0 20px; background:url(../images/btnAcessar.png) no-repeat;}
+#emailC{width:311px;}
+#nomeD {width:432px;}
+.btn {width:101px; height:33px; background:url(../images/btnCadastrar.png) no-repeat;}
+#cadastraC {margin:24px 0 0 20px;}

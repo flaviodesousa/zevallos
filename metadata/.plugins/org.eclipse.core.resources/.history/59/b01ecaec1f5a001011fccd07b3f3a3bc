@@ -1,0 +1,79 @@
+<zdb:open id="myConn" driver="mysql" host="#myHost" database="#myDatabase" user="#myUser" password="#myPassword" />
+	<zlmprofile:friendlist use="myConn" user="!userLogged" var="friendList" />
+	
+	<table border="1">
+		<zhtml:cellhead value="Id" />
+		<zhtml:cellhead value="Nome" />
+	
+		<zctrl:foreach use="friendList" value="value">
+			<tr>
+				<zhtml:cell value="$value[id]" />
+				<td><zhtml:a href="/userProfile.ztag?t=$value[id]" value="$value[nome]" /></td>
+			</tr>
+		</zctrl:foreach>
+	</table>
+	
+	<hr />
+	<zlmprofile:profile use="myConn" user="!userLogged" var="profile" />
+	
+	<table border="1">
+		<tr>
+			<zhtml:cell value="<b>id</b>:" /><zhtml:cell value="$profile[id]" />
+		</tr>
+		<tr>	
+		  <zhtml:cell value="<b>Nome</b>:" /><zhtml:cell value="$profile[nome]" />
+		</tr>
+		<tr>	
+		  <zhtml:cell value="<b>Primeiro</b>:" /><zhtml:cell value="$profile[primeiro]" />
+		</tr>
+		<tr>	
+		  <zhtml:cell value="<b>Ultimo</b>:" /><zhtml:cell value="$profile[ultimo]" />
+		</tr>
+		<tr>	
+		  <zhtml:cell value="<b>E-Mail</b>:" /><zhtml:cell value="$profile[email]" />
+		</tr>
+		<tr>	
+		  <zhtml:cell value="<b>Inclusão</b>:" /><zhtml:cell value="$profile[inclusao]" />
+		</tr>
+	</table>
+	
+	<hr />
+	<zlmprofile:cirles use="myConn" user="!userLogged" var="cirles" />
+	
+	<table border="1">
+		<zhtml:cellhead value="Id" />
+		<zhtml:cellhead value="Nome" />
+	
+		<zvar:set id="cicle" value="" />
+		
+		<zctrl:foreach use="cirles" value="value">
+			<tr>
+				<zhtml:cell value="$value[id]" />
+				<td><zhtml:a href="/circleView.ztag?t=$value[id]" value="$value[nome]" /></td>
+			</tr>
+			<zvar:update use="cicle" value="$value[id]" />
+			circle=<zvar:show use="$value[id]" />
+			<zvar:set name="cicle" value="$value[id]" />
+		</zctrl:foreach>
+	</table>
+
+	<hr />
+	circle=<zvar:show use="circle" />
+	
+	<zctrl:die />
+	
+	<zlmprofile:circlelist use="myConn" circle="$cicle" var="cirleList" />
+	
+	<table border="1">
+		<zhtml:cellhead value="Id" />
+		<zhtml:cellhead value="Nome" />
+	
+		<zctrl:foreach use="cirleList" value="value">
+			<tr>
+				<zhtml:cell value="$value[id]" />
+				<td><zhtml:a href="/profileView.ztag?t=$value[id]" value="$value[nome]" /></td>
+			</tr>
+		</zctrl:foreach>
+	</table>
+	
+<zdb:close use="myConn" />

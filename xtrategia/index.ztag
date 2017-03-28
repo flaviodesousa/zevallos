@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="css/corpo.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.gif" />
+	<script type="text/javascript" src="js/funcoes.js"></script>
+	<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+	<title>XTratégia</title>
+</head>
+<body>
+	<div id="geral">
+		<div id="topo">
+			<h1 id="logo"><a href="/">XTratégia</a></h1>
+			<div id="nav">
+				<ul>
+					<li class="l"><a href="#">Login</a></li>
+					<li class="m"><a href="#">Mapa</a></li>
+				</ul>
+				<form action="" method="get">
+					<fieldset>
+						<label>
+							<input type="text" name="" value="Encontre no site" onblur="if (this.value=='') this.value='Econtre no site'" onfocus="if (this.value=='Encontre no site') this.value=''"/>
+						</label>
+						<input type="submit" value="Buscar" />
+					</fieldset>
+				</form>
+			</div>
+			<ul id="menu">
+				<li><a href="/quemSomos.ztag">Quem Somos<span>saiba mais sobre nós</span></a></li>
+				<li><a href="/parceiros.ztag">Parceiros<span>nossos parceiros</span></a></li>
+				<li><a href="/clientes.ztag">Clientes<span>nossos principais clientes</span></a></li>
+				<li><a href="/produtos.ztag">Produtos<span>o que vendemos</span></a></li>
+				<li><a href="/faleConosco.ztag">Fale Conosco<span>aguardamos o seu contato</span></a></li>
+			</ul>
+		</div>
+		
+		<h2 class="description">Integrando produtos e serviços</h2>		
+	</div>
+	<div id="content">
+		<div id="cols">
+			<div id="left">
+				<h2><a href="/quemSomos.ztag">Integração</a></h2>
+				<p>A integração de produtos de diferentes parceiros requer grande experiência e bom relacionamento entre todos os participantes. A Xtratégia, como um maestro, fará com que todos se integrem de forma harmônica e, principalmente, dentro dos prazos e orçamento definidos.</p>
+			</div>
+			<div id="center">
+				<h2><a href="/parceiros.ztag">Parcerias</a></h2>
+				<p>Encontrar o parceiro certo para atender a necessidade do cliente é a arte que necessita de muita... Xtratégia.</p>
+			</div>
+			<div id="right">
+				<h2><a href="/clientes.ztag">Resultados</a></h2>
+				<p>O controle ativo dos atores dos processos comandados pela Xtratégia resultam nos resultados desejados e esperados pelos nossos clientes.</p>
+			</div>
+		</div>
+	</div>
+	<div id="rodape">
+		<div>
+			<address>
+				XTratégia - 2011 - Todos os direitos reservados<br />
+				<strong>Endereço:</strong> SHIS QI 11, Bloco O, Conjuntos 201 e 202 - Brasília - DF - 71625-205<br />
+				<strong>Telefone:</strong> (61) 3365-3808 <strong>EMail:</strong> <a href="mailto:contato@xtrategia.com.br">contato@xtrategia.com.br</a>"<br />
+			</address>
+			<ul>
+				<li><a href="/quemSomos.ztag">Quem Somos</a></li>
+				<li><a href="/parceiros.ztag">Parceiros</a></li>
+				<li><a href="/clientes.ztag">Clientes</a></li>
+				<li><a href="/produtos.ztag">Produtos</a></li>
+				<li><a href="/faleConosco.ztag">Fale Conosco</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

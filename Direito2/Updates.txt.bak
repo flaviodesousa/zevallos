@@ -1,0 +1,63 @@
+TRUNCATE TABLE tb_comentario;
+TRUNCATE TABLE tb_noticia_fullsearch;
+TRUNCATE TABLE tb_noticia_hash;
+TRUNCATE TABLE tb_noticia_mssql;
+TRUNCATE TABLE tb_noticia_update;
+TRUNCATE TABLE tb_noticia_visualizacoes;
+TRUNCATE TABLE tb_sessao;
+TRUNCATE TABLE tb_noticia;
+TRUNCATE TABLE tb_fonte;
+
+UPDATE pubPaginas SET pagMySQL = NULL
+
+ALTER TABLE tb_fonte
+ADD  nu_port SMALLINT NOT NULL AFTER  ds_url
+, ADD  ds_url_noticias VARCHAR(100) NOT NULL AFTER nu_port
+
+ALTER TABLE tb_noticia_hash
+ADD  tp_noticia_hash TINYINT NOT NULL AFTER  ds_url
+
+UPDATE  tb_mes SET  nm_mes =  'Janeiro' WHERE cd_mes = 1;
+
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'STF',   tp_fonte = 1, ds_url = 'http://www.stf.jus.br' WHERE sg_fonte = 'STF' OR sg_fonte = 'STF';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'STJ',   tp_fonte = 1, ds_url = 'http://www.stj.gov.br' WHERE sg_fonte = 'STJ' OR sg_fonte = 'STJ';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TSE',   tp_fonte = 1, ds_url = 'http://www.tse.gov.br' WHERE sg_fonte = 'TSE' OR sg_fonte = 'TSE';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TST',   tp_fonte = 1, ds_url = 'http://www.tst.gov.br' WHERE sg_fonte = 'TST' OR sg_fonte = 'TST';
+
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ AC', tp_fonte = 2, ds_url = 'http://www.tjac.jus.br' WHERE sg_fonte = 'TJAC' OR sg_fonte = 'TJ AC';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ AL', tp_fonte = 2, ds_url = 'http://www.tjal.jus.br' WHERE sg_fonte = 'TJAL' OR sg_fonte = 'TJ AL';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ AM', tp_fonte = 2, ds_url = 'http://www.tjam.jus.br' WHERE sg_fonte = 'TJAM' OR sg_fonte = 'TJ AM';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ AP', tp_fonte = 2, ds_url = 'http://www.tjap.jus.br' WHERE sg_fonte = 'TJAP' OR sg_fonte = 'TJ AP';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ BA', tp_fonte = 2, ds_url = 'http://www5.tjba.jus.br' WHERE sg_fonte = 'TJBA' OR sg_fonte = 'TJ BA';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ CE', tp_fonte = 2, ds_url = 'http://www.tjce.jus.br' WHERE sg_fonte = 'TJCE' OR sg_fonte = 'TJ CE';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ DF', tp_fonte = 2, ds_url = 'http://www.tjdft.jus.br' WHERE sg_fonte = 'TJDF' OR sg_fonte = 'TJ DF';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ ES', tp_fonte = 2, ds_url = 'http://www.tj.es.gov.br' WHERE sg_fonte = 'TJES' OR sg_fonte = 'TJ ES';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ GO', tp_fonte = 2, ds_url = 'http://www.tjgo.jus.br' WHERE sg_fonte = 'TJGO' OR sg_fonte = 'TJ GO';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ MA', tp_fonte = 2, ds_url = 'http://www.tjma.jus.br' WHERE sg_fonte = 'TJMA' OR sg_fonte = 'TJ MA';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ MG', tp_fonte = 2, ds_url = 'http://www.tjmg.jus.br' WHERE sg_fonte = 'TJMG' OR sg_fonte = 'TJ MG';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ MS', tp_fonte = 2, ds_url = 'http://www.tjms.jus.br' WHERE sg_fonte = 'TJMS' OR sg_fonte = 'TJ MS';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ MT', tp_fonte = 2, ds_url = 'http://www.tjmt.jus.br' WHERE sg_fonte = 'TJMT' OR sg_fonte = 'TJ MT';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ PA', tp_fonte = 2, ds_url = 'http://www.tjpa.jus.br' WHERE sg_fonte = 'TJPA' OR sg_fonte = 'TJ PA';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ PB', tp_fonte = 2, ds_url = 'http://www.tjpb.jus.br' WHERE sg_fonte = 'TJPB' OR sg_fonte = 'TJ PB';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ PE', tp_fonte = 2, ds_url = 'http://www.tjpe.jus.br' WHERE sg_fonte = 'TJPE' OR sg_fonte = 'TJ PE';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ PI', tp_fonte = 2, ds_url = 'http://www.tjpi.jus.br' WHERE sg_fonte = 'TJPI' OR sg_fonte = 'TJ PI';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ PR', tp_fonte = 2, ds_url = 'http://portal.tjpr.jus.br' WHERE sg_fonte = 'TJPR' OR sg_fonte = 'TJ PR';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ RN', tp_fonte = 2, ds_url = 'http://www.tjrn.jus.br', nu_port = 8080 WHERE sg_fonte = 'TJ RN';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ RO', tp_fonte = 2, ds_url = 'http://www.tj.ro.gov.br' WHERE sg_fonte = 'TJRO' OR sg_fonte = 'TJ RO';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ RS', tp_fonte = 2, ds_url = 'http://www1.tjrs.jus.br' WHERE sg_fonte = 'TJRS' OR sg_fonte = 'TJ RS';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ SC', tp_fonte = 2, ds_url = 'http://www.tj.sc.gov.br' WHERE sg_fonte = 'TJSC' OR sg_fonte = 'TJ SC';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ SE', tp_fonte = 2, ds_url = 'http://www.tjse.jus.br' WHERE sg_fonte = 'TJSE' OR sg_fonte = 'TJ SE';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ SP', tp_fonte = 2, ds_url = 'http://www.tj.sp.gov.br' WHERE sg_fonte = 'TJSP' OR sg_fonte = 'TJ SP';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ TJ', tp_fonte = 2, ds_url = 'http://portaltj.tjrj.jus.br' WHERE sg_fonte = 'TJRJ' OR sg_fonte = 'TJ RJ';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'TJ TO', tp_fonte = 2, ds_url = 'http://www.tj.to.gov.br' WHERE sg_fonte = 'TJTO' OR sg_fonte = 'TJ TO';
+
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'ABr',   tp_fonte = 3, ds_url = 'http://agenciabrasil.ebc.com.br' WHERE sg_fonte = 'ABr' OR sg_fonte = 'ABr';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'AGU',   tp_fonte = 3, ds_url = 'http://www.agu.gov.br' WHERE sg_fonte = 'AGU' OR sg_fonte = 'AGU';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'CGU',   tp_fonte = 3, ds_url = 'http://www.cgu.gov.br' WHERE sg_fonte = 'CGU' OR sg_fonte = 'CGU';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'CNJ',   tp_fonte = 3, ds_url = 'http://www.cnj.jus.br' WHERE sg_fonte = 'CNJ' OR sg_fonte = 'CNJ';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'CJF',   tp_fonte = 3, ds_url = 'http://www.jf.jus.br' WHERE sg_fonte = 'CJF' OR sg_fonte = 'CJF';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'OAB',   tp_fonte = 3, ds_url = 'http://www.oab.org.br' WHERE sg_fonte = 'OAB' OR sg_fonte = 'OAB';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'ASen',  tp_fonte = 3, ds_url = 'http://www.senado.gov.br' WHERE sg_fonte = 'ASen' OR sg_fonte = 'ASen';
+UPDATE tb_fonte SET ds_id = sg_fonte, sg_fonte = 'ACam',  tp_fonte = 3, ds_url = 'http://www2.camara.gov.br' WHERE sg_fonte = 'ACam' OR sg_fonte = 'ACam';
+
+http://www.tce.mt.gov.br/

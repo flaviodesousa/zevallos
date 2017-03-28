@@ -1,0 +1,30 @@
+#menu {
+background: transparent url(/img/bg_nav_x.gif) left top repeat scroll;
+border: 0 none;
+height: 42px;
+overflow: hidden;
+        z-index: -1;
+}
+#menu .inner-container {
+padding: 0;
+}
+
+#menu ul {position: relative; left: 0px; bottom: -5px;}
+#menu ul li {display: inline;}
+#menu ul a {
+border-radius: 5px 5px 0 0;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px;
+-webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+background: #777; border: 0; float: left; margin: 0 0 0 5px; padding: 4px 13px 8px 13px; color: #fff;
+font-size: 14px;
+}
+
+#menu ul a {background-color: #489cd4;text-decoration:none;}
+#menu ul a.active,
+#menu ul a:hover,
+#menu ul a:focus,
+#menu ul a:active {background: #fff url("/img/altheadertab.png") repeat-x; color: #0f518e;}
+
+#menu ul a.current {background: #fff url("/img/altheadertab.png") repeat-x; color: #0f518e;}

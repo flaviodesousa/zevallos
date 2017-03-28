@@ -1,0 +1,36 @@
+.pacrudMenu {
+	display:block;
+	cursor:pointer;
+	background-color: #BEE09D;
+	text-indent:5px;
+}
+
+.pacrudMenuL1 {
+	cursor:pointer;
+	background-color: #E5EDDD;
+	text-indent:5px;
+}
+
+.pacrudMenuL2 {
+	cursor: pointer;
+	background-color: #E5EDDD;
+	text-indent:10px;
+}
+
+.pacrudMenuL3 {
+	cursor: pointer;
+	background-color: #E5EDDD;
+	text-indent:15px;
+}
+
+.pacrudMenuL4 {
+	cursor: pointer;
+	background-color: #E5EDDD;
+	text-indent:20px;
+}
+
+.pacrudMenuL5 {
+	cursor: pointer;
+	background-color: #E5EDDD;
+	text-indent:25px;
+}

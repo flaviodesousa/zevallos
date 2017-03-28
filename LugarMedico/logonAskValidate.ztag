@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	  <zhtml:title value="Pedido de convite | #sysName" />
+	  <link rel="stylesheet" type="text/css" href="/css/geral.css" media="screen, projection"></link>
+	  <link rel="stylesheet" type="text/css" href="/css/box.css" media="screen, projection"></link>
+	  <link rel="stylesheet" type="text/css" href="/css/menu.css" media="screen, projection"></link>
+	  <link rel="stylesheet" type="text/css" href="/css/logon.css" media="screen, projection"></link>
+	</head>
+	
+	<body>
+		<div id="header">
+			<div class="root">
+				<div class="box-logo"><a href="/"><img src="/img/LogoLugarMedico1.png" alt="Lugar Médico" width="150px" height="73px" style="margin-top:5px"/></a></div>
+			</div>
+		</div>
+		<div id="menu">
+			<div class="root">
+				<ul>
+					<li><a href="quemSomos.ztag">Quem somos</a></li>
+					<li><a href="/public.ztag">Noticias </a></li>
+					<li><a href="/logonNew.ztag">Novo Cadastro</a></li>
+					<li><a href="/faleConosco.ztag">Fale Conosco</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="container">
+			<div class="root">
+				<div id="box">
+					<div class="header blue">Saiba mais</div>
+					<div class="body boxmenu-left">
+						<ul>
+							<li><a href="/quemSomos.ztag?#a0">Quem somos?</a></li>
+							<li><a href="/quemSomos.ztag?#a1">O que é o Lugar Médico?</a></li>
+							<li><a href="/quemSomos.ztag?#a2">Para que serve?</a></li>
+							<li><a href="/quemSomos.ztag?#a3">A quem interessa?</a></li>
+							<li><a href="/quemSomos.ztag?#a4">Como e porgue foi criado?</a></li>
+							<li><a href="/quemSomos.ztag?#a5">Quais as finalidades básicas?</a></li>
+							<li><a href="/quemSomos.ztag?#a6">Quais as utilidades práticas?</a></li>
+							<li><a href="/quemSomos.ztag?#a7">Como participar?</a></li>
+							<li><a href="/quemSomos.ztag?#a8">Como se registrar?</a></li>
+							<li><a href="/quemSomos.ztag?#a9">Como funciona?</a></li>
+							<li><a href="/quemSomos.ztag?#a10">Quais os principais objetivos?</a></li>
+						</ul>
+					</div>
+				</div>
+	
+				<div id="box">
+					<div class="header gray">Novo cadastro</div>
+					<div class="body logon">
+						<zrequest:get name="EMAIL" var="DS_EMAIL" transform="stripTags()" />
+						<zrequest:get name="FIRST_NAME" var="NM_PRIMEIRO" transform="stripTags()" />
+						<zrequest:get name="LAST_NAME" var="NM_ULTIMO" transform="stripTags()" />
+						<zrequest:get name="CRM" var="DS_CONSELHO" transform="stripTags()" />
+						
+						<zdb:open id="myConn" driver="mysql" host="#myHost" database="#myDatabase" user="#myUser" password="#myPassword" />
+						  <zdb:query use="myConn" id="myQuery">
+						    SELECT CD_CONVITE
+						    FROM TB_CONVITE 
+						    WHERE DS_EMAIL = '$DS_EMAIL'
+						  </zdb:query>
+						
+							<zsession:unset name="userNewError" />
+						
+						  <zdb:fetchuntil use="myQuery" var="myRow">
+							  <zsession:set name="userNewError" value="Convite existente!" />
+						  </zdb:fetchuntil>
+						
+							<zheader:locationif use="!userNewError" condition="len()" value="/logonAsk.ztag" />
+						
+							<zdb:execute use="myConn">
+							INSERT TB_CONVITE
+							(NM_PESSOA, NM_PRIMEIRO, NM_ULTIMO, DS_EMAIL, DS_CONSELHO)
+							VALUES ('$NM_PRIMEIRO $NM_ULTIMO', '$NM_PRIMEIRO', '$NM_ULTIMO', '$DS_EMAIL', '$DS_CONSELHO')
+							</zdb:execute>
+													
+							<h3>Aguarde o convite no seu e-mail</h3>
+						
+						<zdb:close use="myConn" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="root">Copyright &copy; 2011 Lugar Médico todos os direitos reservados</div>
+		</div>
+	</body>
+</html>
+						

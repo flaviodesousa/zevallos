@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<zheader:locationif use="!userLogged" notcondition="len()" value="/index.ztag" />
+<zdb:open id="myConn" driver="mysql" host="#myHost" database="#myDatabase" user="#myUser" password="#myPassword" />
+<zlmprofile:circles use="myConn" user="!userLogged" var="circles" />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<zhtml:title value="Perfil !userNameFull | #sysName" />
+
+		<link rel="stylesheet" type="text/css" href="/css/geral.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/box.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/menu.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/logon.css" media="screen, projection"></link>
+		<link type="text/css" href="/CometChat/cometchatcss.php" rel="stylesheet" charset="utf-8">
+		<script type="text/javascript" src="/CometChat/cometchatjs.php" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="root">
+				<div class="box-logo"><a href="/"><img src="/img/LogoLugarMedico1.png" alt="Lugar Médico" width="150px" height="73px" style="margin-top:5px"/></a></div>
+				<div class="box-loggeduser"><zhtml:a href="/userProfile.ztag" value="!userName" /> - <a href="userSetup.ztag">Configurações</a> - <a href="logoff.ztag">Sair</a></div>
+			</div>
+		</div>
+		<div id="menu">
+			<div class="root">
+				<ul>
+					<li><a href="/communityHome.ztag" title="O que está acontecendo agora">Acontecendo</a></li>
+					<li><a href="/followmeList.ztag" title="Gerencia o siga-me">Siga-me</a></li>
+					<li><a href="/messageList.ztag" title="Gerencia a sua caixa postal">Correio</a></li>
+					<li><a href="/friendList.ztag" title="Administra a lista de colegas">Colegas</a></li>
+					<li><a href="/commentList.ztag" title="Visualiza e modera os comentários recebidos">Comentários</a></li>
+					<li><a href="/roomList.ztag" title="Gerencia suas salas e as que voce participa">Salas</a></li>
+					<li><a href="/textList.ztag" title="Gerencia suas salas e as que voce participa">Textos</a></li>
+					<li><a href="/eventList.ztag" title="Visualiza os eventos">Agenda</a></li>
+					<li><a href="/eventList.ztag" title="Visualiza os eventos">Eventos</a></li>
+					<li><a href="/classifiedList.ztag" title="Visualiza os Classificados">Classificados</a></li>
+					<li><a href="/help.ztag">Ajuda</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="container">
+			<div class="root">
+				<div id="box">
+					<zhtml:div value="Laboratório Teuto" class="header blue" />
+					<div class="body perfil-box">
+						<zhtml:img src="/avatar/company/teutoavatar.png" alt="!userNameFull" title="!userNameFull" width="60px" class="img" />
+						<div class="perfil-user-name">Laboratório Teuto</div>
+					</div>
+				</div>
+				<div id="box">
+					<zhtml:div value="ANDROFLOXIN" class="header blue" />
+					<div class="body perfil-events">
+						<h3>ANDROFLOXIN</h3> 
+						<br />Farma
+						<br />Forma Farmacêutica  e Apresentação:
+						<br />400MG 14 COM REV CT BL AL PLAS INC
+						
+						<br />Referência Comercial:
+						<br />FLOXACIN®
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="root">Copyright &copy; 2011 Lugar Médico todos os direitos reservados</div>
+		</div>
+	</body>
+</html>
+<zdb:close use="myConn" />

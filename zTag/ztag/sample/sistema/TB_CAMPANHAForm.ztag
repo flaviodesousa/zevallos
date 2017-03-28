@@ -1,0 +1,33 @@
+
+<DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Form TB_CAMPANHA</title>
+<link rel="stylesheet" type="text/css" href="generateForm.css"> 
+</head>
+<body>
+  <div id="stylized" class="myform">
+    <form action="TB_CAMPANHAFile" method="post">
+      <h1>TB_CAMPANHA form</h1>
+      <p>Form generated for table TB_CAMPANHA</p>
+      
+      <label>CD_CAMPANHA<span class="small">short description form cd_campanha</span></label> <input type="text" name="CD_CAMPANHA" id="CD_CAMPANHA" />
+      <label>NM_CAMPANHA<span class="small">short description form nm_campanha</span></label> <input type="text" name="NM_CAMPANHA" id="NM_CAMPANHA" />
+      <label>DS_RESUMO<span class="small">short description form ds_resumo</span></label> <input type="text" name="DS_RESUMO" id="DS_RESUMO" />
+      <label>VL_REAL<span class="small">short description form vl_real</span></label> <input type="text" name="VL_REAL" id="VL_REAL" />
+      <label>VL_VENDA<span class="small">short description form vl_venda</span></label> <input type="text" name="VL_VENDA" id="VL_VENDA" />
+      <label>QT_MINIMO<span class="small">short description form qt_minimo</span></label> <input type="text" name="QT_MINIMO" id="QT_MINIMO" />
+      <label>QT_MAXIMO<span class="small">short description form qt_maximo</span></label> <input type="text" name="QT_MAXIMO" id="QT_MAXIMO" />
+      <label>QT_CUPOM_MAXIMO<span class="small">short description form qt_cupom_maximo</span></label> <input type="text" name="QT_CUPOM_MAXIMO" id="QT_CUPOM_MAXIMO" />
+      <label>DT_INICIO<span class="small">short description form dt_inicio</span></label> <input type="text" name="DT_INICIO" id="DT_INICIO" />
+      <label>DT_FIM<span class="small">short description form dt_fim</span></label> <input type="text" name="DT_FIM" id="DT_FIM" />
+      <label>NU_COMPRAS<span class="small">short description form nu_compras</span></label> <input type="text" name="NU_COMPRAS" id="NU_COMPRAS" />
+      <label>FL_ATIVO<span class="small">short description form fl_ativo</span></label> <input type="text" name="FL_ATIVO" id="FL_ATIVO" />
+      <label>FL_MOSTRA<span class="small">short description form fl_mostra</span></label> <input type="text" name="FL_MOSTRA" id="FL_MOSTRA" />
+      <label>CD_SESSAO_INCLUSAO<span class="small">short description form cd_sessao_inclusao</span></label> <input type="text" name="CD_SESSAO_INCLUSAO" id="CD_SESSAO_INCLUSAO" />
+  
+      <button type="submit">Submit button</button>
+    </form>
+  <div>  
+</body>

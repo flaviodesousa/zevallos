@@ -1,0 +1,336 @@
+/*| ZERANDO CSS |-------------------------------*/
+* {margin:0; padding:0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, button {margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit;	font-size: 100%;	font-family: inherit;	vertical-align: baseline;}
+html, body {height:100%;}
+:focus {outline: 0;}
+body {line-height: 1; color: #000;	background: #fff;}
+ol, ul {list-style: none;}
+table {border-collapse: separate; border-spacing: 0;}
+caption, th, td {text-align: left; font-weight: normal;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+strong {font-weight: bold;}
+a {vertical-align: baseline;}
+
+
+/*| CLASSES |---------------------------------------*/
+.clear {clear:both}
+.alignleft {float: left; margin-right: 20px;}
+.alignright {float:right; margin-left: 20px;}
+.afasta {display:block; margin:40px 0 0 0;}
+
+/*| GLOBAIS |---------------------------------------*/
+body {background:#ccc; font-family:Arial, Helvetica, sans-serif; font-size:12px}
+
+/*| TOPO |---------------------------------------*/
+#topo {width:100%; height:164px; background:url(../images/bgTopo.png) repeat-x 0 0}
+#sombrasTopo {float:left; width:100%; height:128px; padding:0; background:url(../images/bgContTopo.png) repeat-y 50% 0;}
+
+#contTopo {width:975px; height:128px; margin:0 auto; padding-left:15px; background:#fff}
+
+#contTopo h1, #cidades, #cadastroBrowser, #recebaOfertas, #menu, #login, #colUm, #colDois, #itemOfertas, #imgOferta {float:left;}
+
+#contTopo h1 {width:311px; height:39px; padding:28px 0 0 0}
+#contTopo h1 a {display:block; text-indent:-9000px; width:311px; height:67px; background:url(../images/logo.png) no-repeat 0 0;}
+
+/*---CIDADES---*/
+#cidades {width:205px; height:128px; margin-left:35px;}
+#cidades .escolhas {float:left; margin:26px 0 0 0; height:65px; border-left:1px solid #d9d9d9}
+#cidades span {display:block; padding-left:9px; /*letter-spacing:-1px; line-height:22px;*/}
+#cidades .asMelhores {font-size:16px; color:#999}
+
+#cidades form {margin:5px 0 0 10px;}
+#cidades form select {width:130px; text-transform:uppercase; border:0;}
+#cidades .combo {padding:5px;}
+
+
+/*#cidades .lkn-escolhas {display:block; text-indent:-9000px; float:left; width:15px; height:14px; margin-top:8px; background:url(images/iconSetaOferta.png) no-repeat;}
+#cidades .escolhas ul {float:left; overflow:hidden; width:139px; height:20px; margin:5px 0 0 9px;}
+#cidades .escolhas ul li {margin:0 0 5px 0; font-size:20px; }
+#cidades .escolhas ul li a {font-weight:bolder; color:#990000; text-decoration:none;}*/
+.brasilia {background:url(../images/brasilia.png) no-repeat right bottom;}
+
+/*---CADASTRO E INTERAÇÃO BROWSER---*/
+#cadastroBrowser {width:405px; margin:8px 0 0 18px; letter-spacing:-1px;}
+
+#recebaOfertas {margin:8px 0 0 0;}
+#recebaOfertas ul li {float:left; margin:0 0 7px 0;}
+#recebaOfertas label {display:block; margin:8px 12px 0 0; font-size:16px; color:#990000}
+#recebaOfertas select, #recebaOfertas input {font:12px Arial, Helvetica, sans-serif; color:#333; }
+#recebaOfertas span {display:block;}
+#recebaOfertas .combo, #recebaOfertas .campo { height:30px; border:1px solid #ccc;}
+#recebaOfertas .combo {float:left; width:210px; }
+#recebaOfertas select {width:197px; margin:5px 0 0 5px; border:0; text-transform:uppercase}
+#recebaOfertas .cid-selecionada {color:#000 !important}
+#recebaOfertas .campo {width:250px; margin-right:14px; background:url(../images/icoAssineOferta.png) no-repeat 2% 50%;}
+#recebaOfertas input {width:200px; height:18px; margin:5px 0 0 41px;}
+#recebaOfertas button {display:block; text-indent:-9000px; float:left;  width:123px; height:33px; margin:0; background:url(../images/btnCadastre.png) no-repeat; cursor:pointer; border:0; }
+
+.browser {width:386px; text-align:right; margin:0; padding:0;}
+.browser li {margin:0 0 5px 0; height:12px; font-size:10px; text-transform:uppercase; letter-spacing:normal;}
+.browser li a {color:#333; text-decoration:none;}
+.browser li a:hover {text-decoration:underline;}
+.browser li.home { background:url(../images/icoBrowser.png) no-repeat 28% 0;}
+.browser li.fav {background:url(../images/icoBrowser.png) no-repeat 36% 100%;}
+
+#menu-login {width:975px; margin:0 auto; padding-left:15px;}
+
+/*---MENU---*/
+#menu {width:747px}
+#menu li {float:left; text-transform:uppercase;}
+#menu li a {display:block; width:auto; height:36px; padding:0 17px 0 17px; line-height:36px; color:#fff; text-align:center; text-decoration:none;}
+#menu li a:hover {background:#680000; }
+#menu li a.ativo {background:#680000; }
+
+/*---LOGIN---*/
+#log {position:relative; float:left; width:202px;}
+#login {position:absolute; z-index:10; left:0; top:0; width:202px; height:45px; padding-left:8px; background:url(../images/bgLogin.png) no-repeat 0 0;}
+#login li {float:left; height:16px; margin-top:12px; font-size:11px; text-transform:uppercase}
+#login li a:hover {color:#A6A6A6;}
+#login li a {color:#fff; text-decoration:none;}
+#login li.login {padding:3px 0 0 24px; margin-right:20px; background:url(../images/icoLogin.png) no-repeat 0 0}
+#login li.conta {padding:2px 0 0 25px; background:url(../images/icoLogin.png) no-repeat 0 106%}
+
+#loginonline { position:absolute; z-index:10; width:202px; height:45px; padding-left:8px; background:url(../images/bgLoginonline.png) no-repeat 0 0; color:#FFF; }
+#loginonline ul{ text-decoration:none; color:#FFF; text-align:right;}
+#loginonline li{margin:7px 0 0 0; color:#FFF; text-decoration:none; text-transform:uppercase;}
+.linhalogin { border-left:#666 solid 1px; float:right; }
+
+.nome { margin:8px 0 0 2px; font-weight:bold; font-size:l2px; color: #FFF; text-decoration:none;}
+.minhaconta { float:right; color:#CCC; font-size:11px; text-decoration:none; text-transform:lowercase !important; margin-top:2px; width:72px;}
+.minhaconta a { text-decoration:none; color:#999;}
+.minhaconta a:hover { text-decoration:none; color:#FFF;}
+.sair { float:right; color:#CCC; font-size:11px; text-decoration:none; text-transform:lowercase !important; padding-right:2px; margin-top:2px; width:30px; height:11px; border-left:#666 solid 1px; padding:0 0px 0 10px;}
+.sair a { text-decoration:none; color:#999;}
+.sair a:hover { text-decoration:none; color:#FFF;}
+
+
+/*---QUANDO LOGAR---*/
+#logar {float:left; width:100%; background:#fff;}
+#innerLogar {width:972px; padding:15px 0 0 18px; height:172px; background:#000 url(../images/bgLogar.png) no-repeat 0 0}
+#innerLogar h2 {font-size:22px; color:#fff;}
+#innerLogar form, #innerLogar form ul li, #innerLogar #infoCadastrar {float:left;}
+#innerLogar form label {display:block; margin:0 0 4px 0; color:#fff; text-transform:uppercase}
+#innerLogar form input {width:225px; /*margin-top:3px;*/ font:1.3em Arial, Helvetica, sans-serif; color:#333}
+#innerLogar form button {display:block; text-indent:-9000px; width:123px; height:37px; margin:14px 0 0 10px; background:url(../images/btnLogar.png) no-repeat 0 0;font-size:20px; color:#fff; letter-spacing:-1px; cursor:pointer;}
+
+#innerLogar form .ipt {width:260px; height:19px; background:#fff; margin:0 0 5px 0; padding:7px 4px 7px 4px}
+#innerLogar form .nome { background:#fff url(../images/icoEmailLogar.png) no-repeat 3% 50%;}
+#innerLogar form .nome input { margin-left:32px;}
+
+#innerLogar form ul {margin:16px 0 0 0; padding:0;}
+#innerLogar form ul li span {display:block;}
+#innerLogar form ul li.campos {margin-right:29px}
+#innerLogar .txts {margin:0 0 8px 0; font-size:10px; text-transform:uppercase; color:#fff;}
+#innerLogar .txts a {color:#ccc}
+
+#infoCadastrar {width:207px; margin:0 0 0 34px; color:#fff}
+#infoCadastrar h3 {margin:0 0 5px 0; font-size:15px;}
+#infoCadastrar p {margin:0 0 10px 0; font-size:11px; line-height:15px; }
+#infoCadastrar .lkn-cadastrar {display:block; text-indent:-9000px; width:168px; height:33px; margin:0 auto; background:url(../images/lknCadastrar.png) no-repeat;}
+
+.lkn-fechar {display:block; text-indent:-9000px; float:right; width:28px; height:21px; margin:0 7px 0 0; background:url(../images/lknFechar.png) no-repeat;}
+
+/*| WRAP |---------------------------------------*/
+#wrap {position:relative; float:left; width:100%; background:#ccc url(../images/bg_wrap.jpg) no-repeat top;}
+#inner {width:990px; margin:0 auto; }
+#conteudo {width:954px;padding:26px 17px 10px 19px; float:left; background:#fff}
+
+#colUm {width:716px; letter-spacing:-1px;}
+
+/*---OFERTA DO DIA---*/
+#ofertaDia h2 {margin:0; padding:0; font-size:25px; color:#990000}
+#ofertaDia h3 {font-size:25px; color:#333;}
+
+#itemOfertas {width:235px; margin:22px 0 0 0;}
+
+/*preços*/
+#precoOferta {position:relative; width:100%}
+
+.detalhes-precos {display:block; position:absolute; left:0; width:82px; height:128px; margin:0 0 0 -101px; background:url(../images/bgDetalhePreco.png) no-repeat 0 0;}
+.precos {width:250px; height:118px; margin-left:-19px; background:url(../images/bgPrecos.png) no-repeat;}
+.precos ul {float:left; margin:19px 0 0 135px;}
+.precos ul li {position:relative; margin:0; color:#fff}
+.bgRiscoDesconto {position:absolute; display:block; z-index:10; width:100px; height:31px; background:url(../images/bgRiscaDesconto.png) no-repeat 0 0; }
+.precos ul li.preco-normal {margin:0 0 27px 0; font-weight:normal; font-size:27px;}
+.precos ul li.preco-desconto {font-size:normal; font-size:32px;}
+
+/*link comprar*/
+.comprar {display:block; text-indent:-9000px; width:233px; height:63px; margin:4px 0 0 0; background:url(../images/lknComprar.png) no-repeat; text-decoration:none; text-align:center;}
+
+/*link encerrado*/
+.encerrar {display:block; text-indent:-9000px; width:233px; height:63px; margin:4px 0 0 0; background:url(../images/lknEncerrado.png) no-repeat; text-decoration:none; text-align:center;}
+
+/*tempo da oferta*/
+#tempoOferta {float:left; width:234px; height:74px; margin:4px 0 0 0; background:#333 url(../images/bgTempoOferta.png) no-repeat 0 0;}
+#tempoOferta ul {float:left; margin:25px 0 0 72px;}
+#tempoOferta ul li {float:left; margin:0 22px 0 0; font-size:10px; color:#fff; text-align:center; text-transform:uppercase;}
+#tempoOferta ul li:last-child {margin-right:0;}
+#tempoOferta ul li span {display:block; font-size:29px; width:31px;}
+#tempoOferta ul li.horas {margin-right:18px;}
+#tempoOferta ul li.min {margin-right:18px;}
+
+
+/*quantidade vendidas*/
+#quantidadeOferta {width:234px; height:133px; margin:4px 0 0 0; background:#990000 url(../images/bgQuantOferta.png) no-repeat; letter-spacing:-1px; text-align:center;}
+#quantidadeOferta h3 {padding:8px 0 5px 0; font-size:15px; color:#D48080; }
+#quantidadeOferta .preco, #quantidadeOferta .vendidos {display:block; color:#fff;}
+#quantidadeOferta .preco {font-size:22px; }
+#quantidadeOferta .vendidos {margin:9px 0 0 0; font-size:18px;}
+
+#quantidade-vendida {float:left; margin:10px 0 8px 20px;}
+#quantidade-vendida span {display:block; float:left; color:#fff;}
+#quantidade-vendida .inicial, #quantidade-vendida .total {font-weight:bolder; font-size:14px;}
+#quantidade-vendida .scroll {float:left; width:153px; height:16px; margin:0 5px 0 10px; background:url(../images/bgScroll.png) no-repeat 0 0;}
+#quantidade-vendida .pc {width:26px; height:26px; margin-top:-5px; background:url(../images/imgPc.png) no-repeat 0 0}
+
+.oferta-ativa {color:#fff; font-size:11px; font-weight:bolder; letter-spacing:normal;}
+
+/*imagem oferta*/
+#imgOferta {position:relative; width:480px; margin:22px 0 0 -4px;}
+.seloDesconto {display:block; position:absolute; z-index:2; width:125px; height:125px; margin:-16px 0 0 370px; line-height:145px; background:url(../images/seloDesconto.png) no-repeat; font-weight:normal; font-size:45px; color:#fff; text-align:center;}
+.socialOferta {position:absolute; z-index:2; width:456px; height:35px; margin:350px 0 0 0; padding:15px 12px 0 12px; background:url(../images/bgCompartilhe.png) 0 0;}
+.socialOferta li {float:left; margin:0; padding:0; font-size:17px; color:#fff}
+.socialOferta li.compartilhe {margin-right:83px;}
+.socialOferta li.social {width:16px; height:16px; margin:0 11px 0 0; background:url(../images/iconSocial.png) no-repeat;}
+.socialOferta li.twitter { width:65px; /*background-position:0 0;*/}
+.socialOferta li.orkut { width:20px; height:20px; float:left; background:url(../images/icoOrkut.png); background-position:0 0;}
+.socialOferta li.email {background-position:0 -34px;} 
+.socialOferta li.facebook {background-position:0 -51px;}
+.socialOferta li a {display:block; text-indent:-9000px; width:16px; height:16px; color:#fff;}
+
+/*empresa da oferta*/
+#empresaOferta {float:left; width:714px; margin:25px 0 0 0;}
+#empresaOferta .marca-empresa, #empresaOferta .desc-oferta, #empresaOferta .regras-oferta {float:left;}
+#empresaOferta .desc-oferta, #empresaOferta .regras-oferta {font-size:11px; letter-spacing:normal; color:#333;}
+#empresaOferta .desc-oferta h3, #empresaOferta .regras-oferta h3 {margin:0 0 5px 0; font-weight:normal; font-size:1.3em;  letter-spacing:-1px; color:#990000; }
+#empresaOferta .desc-oferta p, #empresaOferta .regras-oferta p /*#empresaOferta .regras-oferta ul li*/ {font-size:1.1em; line-height:16px;}
+#empresaOferta .marca-empresa {width:230px; padding:1px 0 0 0; text-align:center;}
+.infos-empresa {float:left; width:468px}
+#empresaOferta .desc-oferta {/*width:214px;*/ width:468px; margin:0 16px 10px 0; padding:0 0 10px 0; /*padding-right:20px;*/ border-bottom:1px solid #ccc}
+#empresaOferta .regras-oferta {width:468px;}
+#empresaOferta .regras-oferta ul li {list-style:inside; margin:0 0 3px 0;}
+
+#descricoesEmpresa {position:relative; float:left; width:100%; margin:20px 0 0 0;}
+#descricoesEmpresa .col-um, #descricoesEmpresa .desc {float:left;}
+#descricoesEmpresa .col-um {position:relative; width:235px; letter-spacing:normal;}
+#descricoesEmpresa .col-um h3 {margin:0 0 5px 0; font-size:20px; color:#990000}
+#descricoesEmpresa .col-um a {color:#000}
+#descricoesEmpresa .col-um ul {position:absolute; z-index:5; margin:16px 0 0 0; left:0; top:50px;}
+#descricoesEmpresa .col-um ul li {margin:0 0 5px 0; text-transform:uppercase;  font-weight:bolder; }
+#descricoesEmpresa .col-um ul li a {display:block; width:245px; height:25px; padding:0 0 0 5px; line-height:25px; text-decoration:none; color:#666;}
+
+#descricoesEmpresa .col-um ul li a:hover {background:#ECECEC; border-top:1px solid #ccc; border-bottom:1px solid #ccc; border-left:1px solid #ccc; color:#990000}
+#descricoesEmpresa .col-um ul li a.ativo {background:#ECECEC; border-top:1px solid #ccc; border-bottom:1px solid #ccc; border-left:1px solid #ccc; color:#990000}
+
+#descricoesEmpresa .desc {width:428px; margin:35px 0 0 15px; /* margin-left:12px;*/ padding:15px 14px 15px 14px; background:#ECECEC; border:1px solid #ccc;}
+#descricoesEmpresa .desc h4 {margin:0 0 13px 0; font-size:20px; color:#333}
+#descricoesEmpresa .desc p {margin:0 0 5px 0; line-height:16px; letter-spacing:normal; font-size:11px;}
+#descricoesEmpresa .desc ul {float:left;}
+#descricoesEmpresa .desc ul li {float:left; margin:0 5px 5px 0;}
+#descricoesEmpresa .desc ul li:last-child {margin-right:0;}
+
+/*SIDEBAR*/
+#colDois {width:225px; margin:30px 0 0 13px;}
+
+/*banners*/
+.banners {margin:0; padding:0;}
+.banners li {margin:0 0 10px 0;}
+
+/*seja parceiro*/
+#sejaParceiro {width:100%; height:140px; margin:0 0 40px 0; background:url(../images/bgParceiros.png) no-repeat bottom;}
+#sejaParceiro h2 {display:block; width:215px; height:50px; margin-bottom:20px; padding:8px 0 0 10px; background:url(../images/bgTituloParceiros.png) no-repeat; font-size:17px; color:#fff;}
+#sejaParceiro a {margin:0 0 0 95px; font-weight:normal; font-size:24px; text-decoration:none; color:#ED3237 }
+
+/*recomende um amigo*/
+#recomendar {position:relative; width:100%; height:123px; padding:17px 0 0 0; background:url(../images/bgRecomendeAmigo.png) no-repeat 0 0; text-align:center; }
+#recomendar p {font-size:11px; color:#fff;}
+#recomendar form {margin:16px 0 0 0;}
+#recomendar .info {display:block; font-size:25px;  letter-spacing:-1px; color:#fff;}
+#recomendar .destaque-preco {color:#FFCC00 !important;}
+#recomendar .lkn-ajuda {position:absolute; z-index:1; right:0; display:block; text-indent:-9000px; width:18px; height:14px; margin:-19px 3px 0 0; background:url(../images/icoAjuda.png) no-repeat 0 0; }
+
+#recomendar input {width:159px; height:25px; padding:0 3px 0 3px; line-height:25px; font:1.10em Arial, Helvetica, sans-serif; color:#333}
+#recomendar button {display:block; text-indent:-9000px; float:right; width:39px; height:39px; margin:-5px 3px 0 0; background:url(../images/btnRecomendar.png) no-repeat 0 0; cursor:pointer}
+
+/*facebook*/
+#facebook {margin:32px 0 0 0;}
+#facebook h2 {display:block; text-indent:-9000px; float:left; width:124px; height:19px; margin:0 6px 15px 0; background:url(../images/logoBarganhandoP.png) no-repeat 0 0;}
+#facebook h3 {font-weight:bolder; font-size:17px; letter-spacing:-1px; color:#5473AD}
+#facebook .pts .fan_box .connect_top {display:none;}
+.connect_widget .connect_text_wrapper .connect_widget_facebook_favicon {display:none;}
+
+/*twitter*/
+#twitter {margin:30px 0 0 0;}
+#twitter h2 {display:block; text-indent:-9000px; width:151px; height:44px; background:url(../images/tituloTwitter.png) no-repeat 0 0}
+#twitter .twtr-hd, #twitter .twtr-ft {display:none;}
+#twitter .twtr-widget .twtr-tweet {border-bottom:1px solid #ccc}
+#twitter .twtr-widget .twtr-tweet a {color:#990000}
+/*#twitter .twtr-img:before {padding-top:-5px; content:url(../images/icoListTwitter.png)}*/
+#twitter .twtr-avatar {width:22px !important; height:24px !important; margin:0 -30px 0 0 !important; background:url(../images/icoListTwitter.png) no-repeat top}
+#twitter .twtr-img {display:none;}
+#twitter .twtr-img a {display:none;}
+#twitter #twtr-widget-1 {margin:0 0 6px 0;}
+#twitter .lkn-siga {display:block; height:47px; padding:24px 0 0 0; letter-spacing:-1px; background:url(../images/icoSiga.png) no-repeat right; font-size:22px; color:#EC3237; text-decoration:none}
+/*| INTERNAS |---------------------------------------*/
+.paginas  {margin:22px 0 0 0;}
+.paginas h2 {margin:0 0 20px 0; line-height:18px; font-size:25px; color:#903; text-transform:uppercase}
+.paginas h3 {margin:0 0 20px 0; font-size:18px; color:#333}
+.paginas p {letter-spacing:normal; margin:0 0 10px 0; line-height:18px; color:#666}
+.paginas p a {color:#C00}
+.paginas ol {margin:20px 0 20px 20px;}
+.paginas ol li {list-style:decimal; margin:0 0 5px 0; font-size:12px; letter-spacing:normal; color:#666}
+
+.ajeita-caixas {margin:33px 0 0 0;}
+
+
+/*---barra com os titulos---*/
+#dadosdousuario {height:55px; background: url(../images/bgDadosdaconta.jpg); /*height:990px;*/  text-decoration:none; padding-right:18px;}
+#menucomlinha { border-left: #999 solid 1px; padding:0 10px 0 10px;}
+#dadosdousuario ul{ float:right; margin-top:20px; text-decoration:none;}
+#dadosdousuario li { color: #666; font:12px arial; float:left; text-decoration:none; display:block; padding-right:10px;}
+#dadosdousuario li a { color: #666; font:12px arial; float:left;  text-decoration:none;}
+#dadosdousuario li a:hover { color: #333; font:12px arial; float:left;  text-decoration:none;}
+#dadosdousuario li a:ativo{ color: #000; font:12px arial; float:left; text-decoration:none;}
+#dadosdousuario h2 { color:#000; font-size:28px; line-height:52px; margin-left:14px; width:450px; float:left; text-decoration:none;}
+
+/*| PAGINAÇÃO |---------------------------------------*/
+.paginacao {float:left; width:100%;}
+.paginacao li {float:left;}
+.paginacao li.anterior {margin-right:500px}
+.paginacao li.proximo {text-align:right}
+.paginacao li a {display:block; width:80px; height:12px; padding:7px; background:#ccc; letter-spacing:normal; text-transform:uppercase; text-decoration:none; text-align:center; color:#333; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px;}
+.paginacao li a:hover {background:#999}
+
+/*| RODAPÉ |---------------------------------------*/
+#rodape {float:left; width:100%; height:204px; margin:0 0 20px 0; background:#990000; }
+#rodape ul {float:left;}
+#rodape ul li {margin:0 0 5px 0;}
+#rodape ul li a {color:#fff; text-decoration:none;}
+#rodape ul li a:hover {text-decoration:underline;}
+
+#rodape .lkn-rodape {margin:23px 0 0 0; color:#fff;}
+#rodape .lkn-rodape h3 {margin-bottom:10px; }
+#rodape .lkn-rodape li.item {list-style:url(../images/icoListaRodape.gif); margin-left:20px;}
+
+#rodape .barganhando h3, #rodape .sugestoes h3 {background:url(../images/icoLknRodape.png) no-repeat; font-size:18px; }
+
+#rodape .barganhando { margin-right:48px; margin-left:28px; padding-left:19px; border-left:1px solid #B84D4D;}
+#rodape .barganhando h3 {padding:7px 0 7px 40px; background-position: 0 0;}
+#rodape .sugestoes h3 {padding:7px 0 7px 35px; background-position:0 100%;}
+
+#rodape .forma-pagamento {margin:29px 0 0 69px;}
+#rodape .forma-pagamento ul {width:149px; height:39px; padding:14px 0 0 34px; background:#fff url(../images/bgListaPagt.png) no-repeat;}
+#rodape .forma-pagamento ul li {float:left; margin-bottom:11px;}
+#rodape .forma-pagamento ul li a {display:block; text-indent:-9000px; height:28px; color:#000}
+#rodape .forma-pagamento ul li.rede-pagt {background:url(../images/icoPagt.png) no-repeat;}
+#rodape .forma-pagamento ul li.mastercard {width:46px;  margin-right:24px;  background-position:0 0;}
+#rodape .forma-pagamento ul li.visa {width:45px; background-position:0 -40px}
+#rodape .forma-pagamento ul li.pagseguro {width:117px; background-position:0 100%;}
+
+#rodape .logoRodape, .logoAgencia {display:block; text-indent:-9000px; float:left;}
+
+
+#rodape .logoRodape {width:270px; height:57px; margin:55px 0 0 35px; background:url(../images/logoRodape.png) no-repeat 0 0}
+#rodape .copyright {width:100%; height:27px; margin:49px 0 0 0; padding:16px 0 0 0; background:#640000; font-size:12px; color:#fff; text-align:center}
+.logoAgencia {width:25px; height:27px; margin-top:-8px; background:url(../images/logo_agencia.gif) no-repeat 0 0;} 

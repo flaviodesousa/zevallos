@@ -1,0 +1,584 @@
+/************** CSS Style for internal structure ***************/
+#checkout_box_right .validation-msg {
+	padding:0;
+	font-size:12px;
+	font-weight:bold;
+}
+/*******************
+ Referral Friends
+*******************/
+#rolagem_emails {
+	height:280px;
+	overflow:auto;
+	width:750px;
+	position:absolute;
+	top:230px;
+	left:30px;
+}
+#emails_importados {
+	height:35px;
+	margin:5px 0;
+}
+.import_mail {
+	width: 582px;
+	position:absolute;
+	top:530px;	
+	*top:540px;
+	_top:540px;
+}
+#import_check {
+	float:left;
+	height:32px;
+	padding-top:7px;
+}
+#import_nome_client {
+	float:left;
+	margin-top:10px;
+	width:300px;
+}
+#import_img_client {
+	float:left;
+	margin:8px 10px 0 0;
+}
+#import_email_client {
+	float:left;
+	margin-top:10px;
+}
+#div_linha_checkbox {
+	background:#e5e5e5;
+	border-bottom:1px solid #CCCCCC;
+}
+#invite ul.shareChannels {
+	float:none;
+	fon-size:100%;
+	padding:0
+}
+#invite ul.shareChannels li.shareChannel {
+	background:none;
+	margin:0;
+	padding:0
+}
+#invite #msgalert, #invate_web_mail3 #msgalert{
+	display:block;
+	margin:0 !important;
+	padding:0 !important;
+	position:none !important;
+	width:900px;
+	z-index:999;
+}
+#invite .msgalert{
+	margin-left:0 !important;
+	width:auto;
+}
+#invite {height:690px;}
+#invite div.title_invite {margin-bottom:10px;}
+#invite div.indEmail {
+	display:block;
+	margin:0 0 20px 0;
+	padding:20px 0 10px 0;
+}
+#invite div.webMail, #invite div.eMail {padding:20px 0; width:900px;}
+#invite .linkPessoal {
+	float:left;
+	padding:10px 0 20px 0;
+	width:350px;
+}
+#invite div.social {
+	display:block;
+}
+#invite div.social .rightSocial {
+	float:left;
+	margin:4px 0 0 0;
+}
+#inviteFriendsUploadForm h2 { margin:30px 0 20px}
+#Outlook{
+	width:20px;
+	margin:143px 120px 30px 45px;
+	margin:143px 110px 30px 30px\9
+}
+#OutlookExpress{
+	width:20px;
+	margin:143px 160px 30px 0
+}
+#Mail{
+	width:20px;
+	margin:143px 100px 30px 0
+}
+#Thunderbird{ width:20px}
+#invate_web_mail3{
+	width:1000px;
+	padding-bottom:80px;
+	height:420px;
+}
+#invate_web_mail2{
+	width:1000px;
+	padding-bottom:80px;
+	height:567px;
+	z-index:-1;
+}
+#login_mail {
+	display:block;
+	padding:160px 0 0 30px;
+}
+#login_clientmail {
+	display:block;
+	padding:10px 0;
+	}
+#login_mail input {
+	width:300px;
+	border:1px solid silver;
+	font-size:14px;
+	margin:0;
+	padding:5px;
+}
+#login_clientmail input {
+	width:250px;
+	border:1px solid silver;
+	font-size:14px;
+	margin:0;
+	padding:5px;
+}
+#msgalert{
+	display:block;
+	margin-top:258px;
+	padding:41px;
+	position:absolute;
+	width:876px;
+	z-index:999;
+}
+.msgalert{
+	margin-left:72px;
+	width:650px;
+}
+#invate_web_mail{
+	width:1000px;
+	padding-bottom:80px;
+	height:520px;
+}
+#invate_email_mail{
+	width:1000px;
+	padding-bottom:80px;
+	height:520px;
+}
+.submit_mail_importados{ 
+	height:47px;
+	margin-left:240px;
+	padding:10px; 
+	width:163px
+} 
+#invite2 {height:674px}
+#invite2 div.header { margin:40px 0 241px}
+#invate_web_mail #inviteFriendsForm {
+	margin-top:150px;
+	*margin-top:230px
+}
+#invate_upload_web_mail {
+	height:540px;
+	width:1000px;
+	padding-bottom:80px;
+}
+#invate_upload_web_mail #inviteFriendsUploadForm {
+	position:relative;
+	top:92px;
+	top:85px\9;
+	*top:88px
+}
+#inviteFriendsUploadForm #Outlook {
+	margin-right:127px;
+	margin-right:95px\9;
+	*margin-right:127px
+}
+#inviteFriendsUploadForm #OutlookExpress {
+	margin-right:150px;
+	margin-right:153px\9;
+}
+#inviteFriendsUploadForm #Mail {
+	margin-right:110px;
+	margin-right:85px\9;
+}
+/****************
+	 Payment 
+*****************/
+#cardseg #segVisa p, #cardseg #segAmex p {margin-bottom:15px}
+#cardseg #segAmex {
+	clear:both;
+	float:left;
+	margin-top:15px
+}
+#localizedZone {
+	left:0;
+	position:absolute;
+	text-align:center;
+	top:111px;
+	width:967px;
+	z-index:999999;
+}
+#localizedZone ul {
+	border:medium none;
+	float:left;
+	margin:0;
+	width:100%
+}
+/**** Cart ****/
+div.t-data-grid {
+	float:none;
+	height:auto;
+	margin:13px auto 30px
+}
+table.t-data-grid {
+	height:auto;
+	margin:0
+}
+table.t-data-grid .header {
+	height:32px;
+	margin:0;
+	padding:0
+}
+table.t-data-grid .header th {
+	display:table-cell;
+	*display:block;
+	float:none;
+	height:auto;
+	margin:0;
+	padding:0;
+}
+table.t-data-grid tbody td {border:1px solid #E5E3E4 !important}
+table.t-data-grid td.tdRight {
+	padding-left:15px !important;
+	text-align:left
+}
+table.t-data-grid tbody .price {
+	float:none;
+	height:auto;
+	line-height:0;
+	margin:0
+}
+table.t-data-grid tbody .reservationQuantity {
+	float:none
+}
+table.t-data-grid tbody .sum { float:none}
+.ebitImg {
+	height:60px;
+	width:468px;
+}
+.externalContent element.style {
+	margin:0 0 20px;
+}
+/* End */
+
+/************************
+	O que estão falando
+*************************/
+div.press div.boxImp {
+	display:-moz-inline-stack;
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	margin-bottom:10px;
+	padding:10px;
+	width:281px
+}
+/* End */
+/******************
+	SideDialog
+*******************/
+.sideDialog {
+	clear:none;
+	float:none;
+	margin:0;
+	padding:0
+}
+.sideDialog .w2 { position:relative}
+.sideDialog .w3 {
+	clear:both;
+	left:0;
+	overflow:hidden;
+	position:absolute;
+	top:110px;
+	*top:-38px;
+	width:967px;
+	z-index:9999
+}
+.sideDialog .w3 ul {
+	margin:0 auto;
+	overflow:hidden;
+	min-height:60px;
+	height:auto !important;
+	height:60px;
+	overflow:hidden;
+	padding:5px 5px 10px
+}
+.sideDialog .w3 li {
+	float:left;
+	padding:10px 0;
+	width:190px
+}
+/*** End ***/
+#contactform{
+	border-right:1px solid #ddd;
+	float: left;
+	width:350px;
+}
+#faqbottom	{
+	background: url("img/partners_faq.jpg") right bottom no-repeat;
+	float: left;
+	padding: 0 0 0 20px;
+	width: 530px;
+}
+#faqbottom h3 {
+	color:#333;
+	font-size:30px;
+	letter-spacing:-1px;
+	margin: 0 0 10px 0;
+}
+#faqbottom h5 {
+	color:#333;
+	font-size:15px;
+	letter-spacing:-0.5px;
+	line-height:18px;
+	margin: 0 0 30px 0;
+}
+#faqbottom h5 a{
+	background:#fff5c4;
+	color:#333 !important;
+	font-size:15px !important;
+	letter-spacing:-0.5px;
+	padding:5px;
+	text-decoration:underline;
+}
+#faqbottom a:hover {
+	background:#ffff99;
+	text-decoration:underline;
+}
+#faqbottom dl {
+	width:290px;	
+}
+#faqbottom dl dt {
+	color:#5b5b5b;
+	font-size:13px;
+	font-weight:bold;	
+	margin-bottom:20px;	
+	text-decoration:underline;
+}
+#faqbottom dl dd {
+	font-size:11px;
+	margin:-10px 0 20px 0;	
+}
+#faqbottom dl dt a, #faqbottom dl dt a:hover {
+	background:none !important;
+	color:#5b5b5b !important;
+	font-size:13px !important;
+	font-weight:bold;	
+	text-decoration:underline;
+}
+#faqbottom p.others {
+	background:#fff5c4;
+	color:#000;
+	font-size:16px !important;
+	font-weight:bold;
+	letter-spacing:-0.5px;
+	margin:25px 0 0 0;
+	padding:5px;
+	text-align: left !important;
+	width: 280px;
+}
+#faqbottom p.others a,#faqbottom p.others a:hover {
+	background:none !important;
+	color:#000; !important;
+	font-size:16px !important;
+	letter-spacing:-0.5px;
+	padding:5px;
+	text-decoration:underline;
+}
+/***************
+	Coupons
+****************/
+.innerPage ul.coupon_list {
+	display:block;
+	list-style:none;
+	margin:0;
+	padding:10px 0;
+}
+.innerPage ul.coupon_list li {float:left; display:table-cell;}
+.innerPage ul.coupon_list li.coupon_img {
+	min-height:63px;
+	padding:0 20px 0 15px;
+	width:100px;
+}
+.innerPage ul.coupon_list li.coupon_img img {
+	height:63px;
+	overflow:hidden;
+	width:100px; 
+}
+.innerPage ul.coupon_list li.coupon_info {
+	padding: 0 20px 0 0;
+	text-align:left;
+	width:350px;
+}
+.innerPage ul.coupon_list li.coupon_date {
+	padding:0 20px 0 0;
+	width:160px;
+}
+.innerPage ul.coupon_list li.coupon_details {
+	width:185px;
+}
+.innerPage ul.coupon_list li.clear {float:none;}
+.innerPage dl.coupon_header {
+	padding:10px;
+	height:15px;
+}
+.innerPage ul.coupon_filter {
+	margin:0 0 10px 0;
+	padding:0 0 20px 0;	
+}
+.innerPage ul.coupon_filter li.clear {height:0px; float:none;}
+.innerPage .pastCoupons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.innerPage div.coupons {
+	float:left;
+	margin-top:10px;
+	padding:15px 0 0;
+	width:100%
+}
+.innerPage p.infobox { float:none}
+div.coupons div#impressao {
+	position:absolute;
+	right:20px;
+	top:70px;
+}
+/***************
+	MyAccount
+****************/
+.myaccount_box {
+	float:left;
+	height:227px;
+	margin:0 25px 25px 0;
+	width:285px;
+}
+.myaccount_box_right {
+	float:left;
+	height:227px;
+	margin:0 0 25px 0;
+	width:285px;
+}
+.myaccount_box .sidebar, .myaccount_box_right .sidebar {
+	margin:0 0 0 15px;
+	text-align:center;
+	width:253px !important;
+}
+.myaccount_box .sidebar .left, .myaccount_box_right .sidebar .left {
+	float:left;
+	margin: 0 0 0 20px;	
+}
+.myaccount_box .sidebar .right, .myaccount_box_right .sidebar .right {
+	float:right;
+	margin: 0 20px 0 0;	
+}
+.myaccount_box .sidebar_faq {
+	padding:0 15px;
+	text-align:center;
+	width:240px !important;	
+}
+.myaccount_box .sidebar_faq ul {
+	margin:0 0 10px;
+}
+.myaccount_box .sidebar_faq ul li {
+	text-align:left;
+	margin: 0 0 7px 0;	
+}
+.myaccount_box_right .mg {
+	margin: 0 0 0 15px;	
+}
+.myaccount_box_right p.credit_value {
+	height:30px;
+	margin:5px 0 0 15px;
+	padding:15px 0 0 30px;
+	width:220px;
+}
+/*********************
+	Coupon Credit
+*********************/
+#cd_header {
+	position:relative;
+}
+ul.extract_header {
+	padding:10px;
+	height:15px;	
+}
+div#tabela {
+	margin:0;
+	padding:0;
+}
+div#tabela div.line ul li {
+	border:none!important;
+	float:left;
+	text-align:center;
+	width:150px;
+}
+div#tabela div.line ul li.detail {
+	width:270px;
+	}
+div#tabela div.line ul.present li {
+	padding:5px 0;
+}
+ul#extract_total li.detail {
+	float:left;
+	width:400px;
+	text-align:left;
+}
+ul#extract_total li.value {
+	float:left;
+	text-align:center;
+	width:215px;	
+}
+/***************
+	Partners
+***************/
+#partners_content {
+	display:block;
+	margin:-15px 0 0;
+	padding:25px 0 0;
+}
+#partners_content ul {
+	float:left;
+	list-style:none;
+	padding:60px 70px 0 0;
+}
+#partners_content ul li {
+	padding:15px 5px 15px 30px;
+}
+#partners_content .video {
+	float:left;
+	height:328px;
+	margin:25px 0 0 75px;
+	width:520px;
+}
+/******Video******/
+#videoplayer {
+	margin:0 auto 15px auto;	
+	text-align:center;
+}
+
+/**** Hack IE 7  ****/
+*+html .innerPage ul.coupon_list li {
+	float:left;
+}
+*+html .innerPage ul.coupon_filter {
+	padding:0;	
+}
+*+html .innerPage ul.coupon_list li.coupon_date {
+	padding:0 10px 0 0;
+}
+*+html #cd_header {
+	height:50px;
+}
+/**** Hack IE 6  ****/
+* html .innerPage ul.coupon_list li {
+	float:left;
+}
+* html .innerPage ul.coupon_list li.coupon_info {
+	padding: 0 0px 0 0;
+}

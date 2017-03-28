@@ -1,0 +1,25 @@
+
+<DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Form USERS</title>
+<link rel="stylesheet" type="text/css" href="generateForm.css"> 
+</head>
+<body>
+  <div id="stylized" class="myform">
+    <form action="USERSFile" method="post">
+      <h1>USERS form</h1>
+      <p>Form generated for table USERS</p>
+      
+      <label>CD_USER<span class="small">short description form cd_user</span></label> <input type="text" name="CD_USER" id="CD_USER" />
+      <label>NM_USER<span class="small">short description form nm_user</span></label> <input type="text" name="NM_USER" id="NM_USER" />
+      <label>DS_USERNAME<span class="small">short description form ds_username</span></label> <input type="text" name="DS_USERNAME" id="DS_USERNAME" />
+      <label>DS_PASSWORD<span class="small">short description form ds_password</span></label> <input type="text" name="DS_PASSWORD" id="DS_PASSWORD" />
+      <label>DT_INSERT<span class="small">short description form dt_insert</span></label> <input type="text" name="DT_INSERT" id="DT_INSERT" />
+      <label>DT_LASTLOGIN<span class="small">short description form dt_lastlogin</span></label> <input type="text" name="DT_LASTLOGIN" id="DT_LASTLOGIN" />
+  
+      <button type="submit">Submit button</button>
+    </form>
+  <div>  
+</body>

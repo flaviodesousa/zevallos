@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="mySQL Columns of $table table" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            font-size:.7em;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}      
+    </style>
+  </head>
+  <body>
+    <h3>mySQL columns of <zvar:show use="table" transform="upper()"/> table of <zvar:show use="database" transform="upper()"/> database - (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Fonte" />)</h3>
+    <hr />
+
+    <!-- (?P<function>block\w+)=["'](?P<data>[^'"]*)["'] -->
+    <div id="lista" blockset="body">
+      <table border="1" cellspacing="0" blockset="bodylista">
+        <tr blockset="bodyhead">
+          <th>Column</th>
+          <th>Type</th>
+          <th>Fixed</th>
+        </tr>
+    
+      <zctrl:foreach use="myColumns" key="key" value="value">
+        <tr blockset="tablerow">
+          <td blockfield="key">pagCodigo</td>
+          <td blockfield="type">int</td>
+        </tr>
+      </zctrl:foreach>
+      </table>
+    </div>
+
+    <div id="lista" blockset="body">
+      <table border="1" cellspacing="0" blockset="bodylista">
+        <tr blockset="bodyhead">
+          <th>Column</th>
+          <th>Type</th>
+          <th>Fixed</th>
+          <th>Lenght</th>
+          <th>Precision</th>
+          <th>Scale</th>
+          <th>Unsigned</th>
+          <th>Not Null</th>
+          <th>Auto Increment</th>
+          <th>Default</th>
+        </tr>
+    
+      <zctrl:foreach use="myColumns" key="key" value="value">
+        <tr blockset="tablerow">
+          <td blockfield="key">pagCodigo</td>
+          <td blockfield="type">int</td>
+        </tr>
+      </zctrl:foreach>
+      </table>
+    </div>
+    
+    
+  </body>
+</html>
+    

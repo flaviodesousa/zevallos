@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Read the Assunto - zMerlim</title>
+</head>
+<body>
+<h3>Read the Assunto - zMerlim - (<zhtml:a href="/ztag/sample/zCode.ztag?file=/#ztagFile" value="Source" />)</h3>
+
+<zmemcached:open id="memCached" host="localhost" port="11211" timeout="1" />
+
+<zhtml:b value="Busca assunto" />
+
+<zvar:set id="urlHome" value="http://www.telelistas.net/templates/busca_assunto.aspx" />
+
+<zmemcached:key key="$urlHome" var="keyAssunto0" type="md5" />
+
+<zmemcached:get use="memCached" key="$keyAssunto0" var="urlAssunto0" />
+
+<zctrl:if value="$urlAssunto0" transform="len()" operator="e" with="0">
+  &lt;-- Not Cached 0
+  
+  <zmerlim:read url="$urlHome" var="urlAssunto0" />
+  
+  <zmerlim:tidy use="urlAssunto0" />
+  
+  <zmemcached:set use="memCached" key="$keyAssunto0" value="$urlAssunto0" />
+</zctrl:if>
+<br />
+
+<zvar:regex pattern='<strong>Selecione um Assunto:</strong>.*?<table cellpadding="0" cellspacing="0" border="0"><tr>(?P<block>.*?)</tr></table>' use="urlAssunto0" var="arrayAssunto0Block" />
+
+<zvar:regex pattern='href="(?P<url>/\d+/\d+_\w+/(?P<id>\d+)/[\w-]+.htm)"\s+title="(?P<title>[^"]+)"' value="$arrayAssunto0Block[0][block]" var="arrayAssunto0" />
+
+<zctrl:foreach use="arrayAssunto0" key="key0" value="value0">
+  <zhtml:b value="$key0" /> - <zhtml:a href="http://www.telelistas.net$value0[url]" value="$value0[id] - $value0[title]" />
+
+  <zmemcached:key key="http://www.telelistas.net$value0[url]" var="keyAssunto1" type="md5" />
+
+  <zmemcached:get use="memCached" key="$keyAssunto1" var="urlAssunto1" />
+    
+  <zctrl:if value="$urlAssunto1" transform="len()" operator="e" with="0">
+    &lt;-- Not Cached 1
+    
+    <zmerlim:read url="http://www.telelistas.net$value0[url]" var="urlAssunto1" />
+    <zmerlim:tidy use="urlAssunto1" />
+  
+    <zmemcached:set use="memCached" key="$keyAssunto1" value="$urlAssunto1" />
+  </zctrl:if>
+  <br />
+  
+  <zvar:regex pattern='<strong>Selecione uma Categoria:</strong></td></tr><tr><td align="left" valign="top"><table cellpadding="0" cellspacing="0" border="0"><tr>(?P<block>.*?)</tr></table>' use="urlAssunto1" var="arrayAssunto1Block" />
+  
+  <zvar:regex pattern='href="(?P<url>/\d+/\d+_\w+/\d+/(?P<id>\d+)/[\w-]+.htm)"\s+title="(?P<title>[^"]+)"' value="$arrayAssunto1Block[0][block]" var="arrayAssunto1" />
+  
+  <zctrl:foreach use="arrayAssunto1" key="key1" value="value1">
+    -&nbsp; <zhtml:b value="$key1" /> - <zhtml:a href="http://www.telelistas.net$value1[url]" value="$value1[id] - $value1[title]" />
+    
+    <zmemcached:key key="http://www.telelistas.net$value1[url]" var="keyAssunto2" type="md5" />
+
+    <zmemcached:get use="memCached" key="$keyAssunto2" var="urlAssunto2" />
+    
+    <zctrl:if value="$urlAssunto2" transform="len()" operator="e" with="0">
+      &lt;-- Not Cached 2
+      
+      <zmerlim:read url="http://www.telelistas.net$value1[url]" var="urlAssunto2" />
+      <zmerlim:tidy use="urlAssunto2" />
+  
+      <zmemcached:set use="memCached" key="$keyAssunto2" value="$urlAssunto2" />
+    </zctrl:if>
+    <br />
+  
+    <zvar:regex pattern='<strong>Selecione uma Atividade:</strong></td></tr><tr><td align="left" valign="top"><table cellpadding="0" cellspacing="0" border="0"><tr>(?P<block>.*?)</tr></table>' use="urlAssunto2" var="arrayAssunto2Block" />
+    
+    <zvar:regex pattern='href="(?P<url>/\d+/\d+_\w+/\d+/\d+/(?P<id>\d+)/[\w-]+.htm)"\s+title="(?P<title>[^"]+)"' value="$arrayAssunto2Block[0][block]" var="arrayAssunto2" />
+    
+    <zctrl:foreach use="arrayAssunto2" key="key2" value="value2">
+      --&nbsp; <zhtml:b value="$key2" /> - <zhtml:a href="http://www.telelistas.net$value2[url]" value="$value2[id] - $value2[title]" />
+
+      <zmemcached:key key="http://www.telelistas.net$value2[url]" var="keyAssunto3" type="md5" />
+                  
+      <zmemcached:get use="memCached" key="$keyAssunto3" var="urlAssunto3" />
+            
+      <zctrl:if value="$urlAssunto3" transform="len()" operator="e" with="0">
+        &lt;-- Not Cached 3
+        
+        <zmerlim:read url="http://www.telelistas.net$value2[url]" var="urlAssunto3" />
+        <zmerlim:tidy use="urlAssunto3" />
+              
+        <zmemcached:set use="memCached" key="$keyAssunto3" value="$urlAssunto3" />
+      </zctrl:if>
+      <br />
+
+      <zvar:regex pattern='<tr><td align="center" valign="top"><div id="ctl00_Content_Regs">(?P<block>.*?)</div></td></tr><tr>.*?google_ad_format = "300x250_as"' use="urlAssunto3" var="arrayAssunto3Block" />
+
+      <zvar:regex pattern='class="text_resultado_ib"><a href="(?P<url>.*?/vct/.*?/(?P<id>\d+)\.htm)">(?P<nome>[^<]+)</a>' value="$arrayAssunto3Block[0][block]" var="arrayAssunto3" />
+      
+      <zctrl:foreach use="arrayAssunto3" key="key3" value="value3">
+        ---&nbsp; <zhtml:b value="$key3" /> - <zhtml:a href="$value3[url]" value="$value3[id] - $value3[nome]" />
+
+        <zmemcached:key key="$value3[url]" var="keyEmpresa" type="md5" />
+        
+        &lt-- <zhtml:b value="$keyEmpresa" />
+                    
+        <zmemcached:get use="memCached" key="$keyEmpresa" var="urlEmpresa" />
+        
+        <zctrl:if value="$urlEmpresa" transform="len()" operator="e" with="0">
+          &lt;-- Not Cached 4
+          
+          <zmerlim:read url="$value3[url]" var="urlEmpresa" errorno="errornoVar" error="errorVar" />
+          <zmerlim:tidy use="urlEmpresa" />
+                
+          <zmemcached:set use="memCached" key="$keyEmpresa" value="$urlEmpresa" />
+        </zctrl:if>
+        <br />
+
+        <zvar:regex pattern='<h1 class="nome_anun">(?P<nome>[^<]+)</h1>' value="$urlEmpresa" var="arrayNome" />
+        <br /><zhtml:pre value="<b>Nome</b>=$arrayNome[0][nome]" />
+
+        <zvar:regex pattern='<div id="logomarca">(?P<logo>.*?)</div>' value="$urlEmpresa" var="arrayLogo" />
+        <br /><zhtml:pre value="<b>Logo</b>=$arrayLogo[0][logo]" transform="Escape()" />
+
+        <zvar:regex pattern='<span class="linha_atv">(?P<atividades>.*?)</div>' value="$urlEmpresa" var="arrayAtividades" />
+        <br /><zhtml:pre value="<b>Atividades</b>=$arrayAtividades[0][atividades]" transform="Escape()" />
+
+        <zvar:regex pattern='title="Nome da atividade">(?P<atividade>[^<]+)</a>' value="$arrayAtividades[0][atividades]" var="arrayAtividade" />
+        <br /><zhtml:pre value="<b>Atividades</b>=$arrayAtividade[0][atividade],$arrayAtividade[1][atividade],$arrayAtividade[2][atividade],$arrayAtividade[3][atividade],$arrayAtividade[4][atividade]"/>
+
+        <zvar:regex pattern='<span class="content_informacao">(?P<resumo>.*?)</span>' value="$urlEmpresa" var="arrayResumo" />
+        <br /><zhtml:pre value="<b>Resumo</b>=$arrayResumo[0][resumo]" />
+
+        <zvar:regex pattern='Contato</h2><p class="infoplus_text1"><span class="content_contato">(?P<logradouro>\w+) (?P<endereco>[^,]+), (?P<numero>(\d+|s/n))( (?P<complemento>.*?))?<br />(?P<cidade>[^-]+)- (?P<uf>\w+)</span>' value="$urlEmpresa" var="arrayEndereco" />
+        <br /><zhtml:pre value="<b>Logradouro</b>=$arrayEndereco[0][logradouro]" />
+        <br /><zhtml:pre value="<b>Endereço</b>=$arrayEndereco[0][endereco]" />
+        <br /><zhtml:pre value="<b>Número</b>=$arrayEndereco[0][numero]" />
+        <br /><zhtml:pre value="<b>Complemento</b>=$arrayEndereco[0][complemento]" />
+        <br /><zhtml:pre value="<b>Cidade</b>=$arrayEndereco[0][cidade]" />
+        <br /><zhtml:pre value="<b>UF</b>=$arrayEndereco[0][uf]" />
+
+        <br /><zctrl:printr message="<b>arrayEndereco</b> ($value3[url])=" use="arrayEndereco" />
+
+        <zvar:regex pattern='<span class="content_contato">Site: <a href="(?P<site>[^"]+)" target="_blank">' value="$urlEmpresa" var="arraySite" />
+        <br /><zhtml:pre value="<b>Site</b>=$arraySite[0][site]" />
+
+        <zvar:regex pattern='funcionamento</h2><span class="content_informacao">(?P<funcionamento>.*?)</span>' value="$urlEmpresa" var="arrayFuncionamento" />
+        <br /><zhtml:pre value="<b>Funcionamento</b>=$arrayFuncionamento[0][funcionamento]" />
+      </zctrl:foreach>
+      <br />
+
+      <zvar:regex pattern='<a href="(?P<proxima>[^"]+)"><img.*?por_rodape_prox' value="$urlAssunto3" var="arrayProxima" />
+      <br /><zhtml:pre value="<b>Próxima</b>=$arrayProxima[0][proxima]" />
+      
+      <br /><zhtml:pre value="$urlAssunto3" transform="Escape()" />
+      
+      <br /><zctrl:die message="End here!" />
+    </zctrl:foreach>
+    <br />
+  </zctrl:foreach>
+  <br />
+  
+</zctrl:foreach>
+
+<!-- zhtml:pre value="$arrayAssuntoBlock[0][block]" transform="Escape()" /-->
+
+<zmemcached:close use="memCached" />
+
+</body>
+</html>

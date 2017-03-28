@@ -1,0 +1,28 @@
+$arquivo = "12874.jpg";
+$mimeType = "image/jpeg";
+$bd_txt_imagem_cam = "teste.jpg";
+
+header("Pragma: public");
+// header("Content-type: application/force-download");
+// header("Content-Type: application/save");
+// header("Content-Disposition: attachment; filename = ".basename($filename));
+
+header("Content-type: ".$mimeType);
+header("Content-length: ".filesize($arquivo));
+header("Content-Disposition: attachment; filename=teste.jpg");
+header("Content-Transfer-Encoding: binary");
+header("Content-Description: PHP Generated Data");
+readfile($arquivo);
+
+
+$file = $_GET['file'];
+header("Content-Type: application/save");
+header("Content-Length:".filesize($file));
+header('Content-Disposition: attachment; filename="' . $file . '"');
+header("Content-Transfer-Encoding: binary");
+header('Expires: 0');
+header('Pragma: no-cache');
+
+$fp = fopen("$file", "r");
+fpassthru($fp);
+fclose($fp);

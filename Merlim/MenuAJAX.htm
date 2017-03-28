@@ -1,0 +1,277 @@
+<html>
+  <head>
+    <title>Treeview AJAX</title>
+    <style>
+      body {
+        margin-left: 10px;
+        height: auto;
+        font-family: verdana, arial, helvetica;
+        font-size: 12px;
+        cursor:auto;
+        background-color: #FFFFFF;
+      }
+
+      .Treeview {
+        font-family: verdana, arial, helvetica;
+        font-size: 10px;
+        line-height: 1;
+        list-style:none;
+        width: 400px;
+      }
+
+      .Treeview, .Treeview ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .Treeview img {
+        margin: 0px 4px 0px 0px;
+        padding: 0px;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .Treeview li {
+        font-size: 10px;
+        line-height: 15px;
+        background-image:url(/Library/TreeView2/Line.gif);
+        background-position: left;
+        width: 100%;
+        list-style: none;
+        float: left;
+        margin: 0px;
+        padding: 0px 0px 0px 18px;
+        text-indent: -18px;
+        line-height: 16px;
+      }
+
+      .Treeview li.nobackgrond {
+        background-image: none !important;
+      }
+
+      li.on ul {display: block;}
+      li.off ul {display: none;}
+
+
+    </style>
+  </head>
+  <body>
+    <ul id="objTreeview" class="Treeview">
+      <li id="TV_100" class="off"><img src="/Library/TreeView2/Plus.gif" onclick="TreeviewToggle(event);" />Site</li>
+      <li><img src="/Library/TreeView2/Middle.gif" /><a href="/processMerlim.php?o=10" target="body">Form</a></li>
+      <li id="TV_2000" class="off"><img src="/Library/TreeView2/Plus.gif" onclick="TreeviewToggle(event);" />Form Generator</a></li>
+      <li id="TV_1000" class="off"><img src="/Library/TreeView2/Plus.gif" onclick="TreeviewToggle(event);" />Gera Inserts</a></li>
+      <li class="nobackgrond"><img src="/Library/TreeView2/MiddleEnd.gif" /><a href="/logOn.php?o=20" target="_top">Logoff</a></li>
+    </ul>
+    <script type="text/javascript" language="Javascript1.2" src="LibraryAjax.js"></script>
+
+    <script type="text/javascript" language="Javascript1.2">
+
+    startXMLHTTP();
+
+    var arrTVContent = new Array();
+
+    var sstrTreeviewURL = "/menuAjax.php";
+
+    var strIMGOn = "/Library/TreeView2/Minus.gif";
+    var strIMGOff = "/Library/TreeView2/Plus.gif";
+
+    Array.prototype.indexOf = IndexOf;
+
+    //=======================================================================
+    // Procura e retorna o índice dentro de uma array
+    //-----------------------------------------------------------------------
+    function IndexOf(item){
+      for (i=0; i < this.length; i++){
+        if (this[i] == item){
+        return i;}
+      }
+      return -1;
+    }
+
+    //=======================================================================
+    // Trata a troca do on e off
+    //-----------------------------------------------------------------------
+    function TreeviewToggle(event) {
+      document.body.style.cursor = "progress";
+
+    	if (window.event) {
+        event = window.event;
+
+    	  objCurrent = window.event.srcElement;
+
+        objParent = objCurrent.parentElement;
+
+    	} else {
+    	  objCurrent = event.target;
+
+        objParent = objCurrent.parentNode;
+
+    	}
+
+      event.cancelBubble = true;
+
+      var arrClasses = objParent.className.split(" ");
+
+      var intOn = arrClasses.indexOf("on");
+      var intOff = arrClasses.indexOf("off");
+
+      if (intOn == -1 && intOff == -1) {
+        arrClasses[arrClasses.length] = "off";
+
+      } else if (intOn != -1) {
+        arrClasses[intOn] = "off";
+        objCurrent.src = strIMGOff;
+
+        document.body.style.cursor = "auto";
+
+      } else {
+        arrClasses[intOff] = "on";
+        objCurrent.src = strIMGOn;
+
+        carregaLIs(objParent);
+      }
+
+      objParent.className = arrClasses.join(" ");
+
+    }
+
+    //=======================================================================
+    // Executa a chamda AJAX para recuperar os LIs internos
+    //-----------------------------------------------------------------------
+    function carregaLIs(objParent) {
+      var objULs = objParent.getElementsByTagName("ul");
+
+      objNodes = objParent.childNodes;
+
+      blnUL = false;
+
+      for (i=0; i < objNodes.length; i++) {
+        if (objNodes[i].tagName == "UL") {
+          blnUL = true;
+          break;
+        }
+      }
+
+      if (!blnUL) {
+        // 1|4|4 - Other Things|/Teste.php?o=4
+        // 0||5 - Dados do Integrado|/Teste.php?o=4
+        // 0||6 - Tabelas do Integrado|/Teste.php?o=4|alfa
+
+        // <li class="off nobackgrond"><img src="/Library/TreeView2/Plus.gif" onclick="TreeviewToggle(event);" />4 - Other Things</li>
+        // <li class="onhover"><img src="/Library/TreeView2/Middle.gif" />3.1.1 - Dados do Integrado</li>
+        // <li id="TV_4" class="onhover nobackgrond"><img src="/Library/TreeView2/MiddleEnd.gif" />3.2.1 - Tabelas do Integrado<br />Tabelas do Integrado</li>
+
+        strTarget = objParent.id;
+
+        if (strTarget.length > 0) {
+          arrTarget = strTarget.split("_");
+
+          arrTVContent[arrTarget[1]] = objParent.innerHTML;
+
+          objParent.innerHTML += '<br /><img src="/library/Loader.gif" width="12" height="12" /> <b>Carregando...</b>';
+
+          // strSelect = ReadHTTP(sstrTreeviewURL + "?t=" + arrTarget[1]);
+
+          // sobjXMLHTTP.open("GET", strURL + strOMURL, false);
+
+          sblnXMLHTTP = false;
+
+          // Abre uma conexão sincrona
+          sobjXMLHTTP.onreadystatechange = function() {
+            if (sobjXMLHTTP.readyState == 4 && !sblnXMLHTTP) {
+              sblnXMLHTTP = true;
+
+              montaLIs(sobjXMLHTTP);
+            }
+          };
+
+          var datOMNow = new Date ();
+
+          var strOMURL = "&x=" + datOMNow.getTime();
+
+          sobjXMLHTTP.open("GET", sstrTreeviewURL + "?t=" + arrTarget[1] + strOMURL, true);
+          sobjXMLHTTP.send(null);
+
+        }
+      } else {
+        document.body.style.cursor = "auto";
+      }
+    }
+
+    //=======================================================================
+    // Evento que recebe os dados do XMLHTTP e monta os LIs na tela
+    //-----------------------------------------------------------------------
+    function montaLIs(objXMLHTTP) {
+      if (objXMLHTTP.responseText) {
+        strSelect = objXMLHTTP.responseText;
+
+        if (strSelect.length > 0) {
+          var strLIs = "";
+
+          // 1|110|Tabelas|URL|Title|Target
+          arrLines = strSelect.split("\r\n");
+
+          for (i=0; i < arrLines.length; i++) {
+          	if (arrLines[i].length > 0) {
+	            arrFields = arrLines[i].split("|");
+
+	            if (strLIs.length > 0 && arrFields[0] != "+") strLIs = strLIs + '</li>';
+
+	            strCaption = arrFields[2];
+
+	            strTitle = '';
+
+	            if (arrFields[3]) {
+	              strTitle = ' title="' + arrFields[3] + '"';
+	            }
+
+	            strATarget = ' target="Body"';
+
+	            if (arrFields[5]) {
+	              strATarget = ' target="' + arrFields[4] + '"';
+	            }
+
+	            if (arrFields[4]) {
+	              strCaption = '<a href="' + arrFields[4] + '"' + strTitle + strATarget + '>' + latin12String(strCaption) + '</a>';
+	            }
+
+	            switch (arrFields[0]) {
+	              case "1":
+	                strLIs += '<li id="TV_' + arrFields[1] + '" class="off"><img src="/Library/TreeView2/Plus.gif" onclick="TreeviewToggle(event);" />' + strCaption;
+	                break;
+
+	              case "0":
+	                strIMG = "Middle";
+
+	                strClass = "";
+
+	                if (i == (arrLines.length - 1)) {
+	                  strIMG = "MiddleEnd";
+	                  strClass = " nobackgrond";
+
+	                }
+
+	                strLIs += '<li class="onhover' + strClass + '"><img src="/Library/TreeView2/' + strIMG + '.gif" />' + strCaption;
+
+	                break;
+
+	              default:
+	                strLIs += strCaption;
+
+	            }
+            }
+          }
+
+          if (strLIs.length > 0) {
+            // var arrTVTimer = new Array();
+            objParent.innerHTML = arrTVContent[arrTarget[1]] + "<ul>" + strLIs + "</li></ul>";
+          }
+        }
+      }
+
+      document.body.style.cursor = "auto";
+    }
+    </script>
+  </body>
+</html>

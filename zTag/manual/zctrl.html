@@ -1,0 +1,435 @@
+
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zctrl</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+      <h1>zctrl</h1>
+       
+    
+    <h2>foreach</h2><hr />
+    <p>Iterate over arrays executing it's content many time as it's content</p>
+    <p>Iterate over arrays executing it's content many time as it's content.
+
+<code>
+<zctrl:foreach use="getAll" value="value">
+<zhtml:b value="$key" />: <zvar:show use="$value" /><br />
+</zctrl:foreach>
+
+<zctrl:foreach use="getAll" key="key" value="value">
+<zhtml:b value="$key" />: <zvar:show use="$value" /><br />
+</zctrl:foreach>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zctrl</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>if</h2><hr />
+    <p>Define a conditional execution of code fragments</p>
+    <p>Define a conditional execution of code fragments.
+
+<code>
+<zctrl:if value="$urlAssunto0" operator="e|ne|gt|gte|lt|lte" with="0" var="ifVar" >
+</zctrl:if>
+
+<zctrl:if value="$urlAssunto0" function="empty()|true()|false()|len()">
+</zctrl:if>
+
+<zctrl:if value="$urlAssunto0" transform="substr(1, 3)" operator="=|<>|>|>=|<|=" with="test">
+</zctrl:if>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zctrl</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>die</h2><hr />
+    <p>Output a message and terminate the current script</p>
+    <p>Output a message and terminate the current script.
+
+<code>
+<zctrl:die message="The script die here!" />
+
+<zctrl:die>
+The script die here!
+</zctrl:die>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zctrl</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>exit</h2><hr />
+    <p>Output a message and terminate the current script</p>
+    <p>Output a message and terminate the current script.
+
+<code>
+<zctrl:exit message="The script exited here!" />
+
+<zctrl:exit>
+The script exit here!
+</zctrl:exit>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zctrl</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>echo</h2><hr />
+    <p>Output a string</p>
+    <p>Output a string
+
+<code>
+<zctrl:echo message="This an echo message" />
+
+<zctrl:echo>
+This an echo message
+</zctrl:echo>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zctrl</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>print</h2><hr />
+    <p>Output a string</p>
+    <p>Output a string
+
+<code>
+<zctrl:print message="This a print message" />
+
+<zctrl:print>
+This a print message
+</zctrl:print>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zctrl</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>dump</h2><hr />
+    <p>Dumps information about a variable</p>
+    <p>Dumps information about a variable
+
+<code>
+<zctrl:dump message="<b>arrayDump</b>=" use="arrayDump" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zctrl</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>printr</h2><hr />
+    <p>Prints human-readable information about a variable</p>
+    <p>Prints human-readable information about a variable
+
+<code>
+<zctrl:printr message="<b>arrayDump</b>=" use="arrayDump" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zctrl</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>while</h2><hr />
+    <p>Iterate over arrays executing it's content many time as it's content</p>
+    <p>Iterate over arrays executing it's content many time as it's content.
+
+<code>
+<zctrl:while value="$urlAssunto0" operator="e|ne|gt|gte|lt|lte" with="0" var="ifVar" >
+</zctrl:while>
+
+<zctrl:while value="$urlAssunto0" function="empty()|true()|false()|len()">
+</zctrl:while>
+
+<zctrl:while value="$urlAssunto0" transform="substr(1, 3)" operator="=|<>|>|>=|<|=" with="test">
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    

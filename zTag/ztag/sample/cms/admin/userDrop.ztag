@@ -1,0 +1,21 @@
+<!-- zheader:locationif use="!userLogged" notcondition="len()" value="/logOn.php" /-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="Drop Table - Users" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Drop Table - Users (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Source" />)</h1>
+    <zhtml:a href="." value="back" /> - <zhtml:a href="userCreate.ztag" value="Create" />
+
+    <zdbal:open id="myConn" driver="mysql" host="localhost" database="zcms" user="zcmsuser" password="z4321" />
+    	<zdbal:execute use="myConn">
+        DROP TABLE IF EXISTS users
+      </zdbal:execute>
+    <zdbal:close use="myConn" />
+  </body>
+</html>
+
+

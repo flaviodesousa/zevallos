@@ -1,0 +1,14 @@
+#content h1 {
+	margin-bottom: 15px;
+}
+
+	body #content .w3 {
+		padding: 15px 20px 10px;
+	}
+
+	#content .content {
+		border-top: 1px solid silver;
+		width: auto;
+		margin: 0 10px 10px;
+		padding: 10px;
+	}

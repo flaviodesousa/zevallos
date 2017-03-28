@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="237" key="DIALOG_WIDTH"/>
+		<item value="140" key="DIALOG_Y_ORIGIN"/>
+		<item value="357" key="DIALOG_HEIGHT"/>
+		<item value="526" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="Novo" key="selection"/>
+		<list key="findhistory">
+			<item value="novo"/>
+			<item value="message-list-title"/>
+			<item value="b&gt;"/>
+			<item value="&lt;a href=&quot;/commentView.ztag?t=123&quot;&gt;&lt;a href=&quot;/commentView.ztag?t=123&quot;&gt;O mau que o cigarro faz.&lt;/a&gt;&lt;/a&gt;"/>
+			<item value="O mau que o cigarro faz."/>
+			<item value=" Vinicius Silva Pinto Leônidas"/>
+		</list>
+		<list key="replacehistory">
+			<item value="&lt;a href=&quot;/commentView.ztag?t=123&quot;&gt;O mau que o cigarro faz.&lt;/a&gt;"/>
+			<item value="&lt;a href=&quot;/userProfile.ztag?t=123&quot;&gt;Vinicius Silva Pinto Leônidas&lt;/a&gt;"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="269" key="DIALOG_Y_ORIGIN"/>
+		<item value="445" key="DIALOG_X_ORIGIN"/>
+	</section>
+</section>

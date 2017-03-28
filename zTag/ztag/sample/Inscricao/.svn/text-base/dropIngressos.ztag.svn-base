@@ -1,0 +1,5 @@
+<zdb:open id="mysqlConn" driver="mysql" host="mysqlhost" database="mysqldatabase" user="mysqluser" password="mysqlpassword" />
+	<zdb:execute use="mysqlConn">
+    DROP cadIngressos
+	</zdb:execute>
+<zdb:close use="mysqlConn" />

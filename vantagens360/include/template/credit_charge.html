@@ -1,0 +1,55 @@
+<!--{include header}-->
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="account-charge">
+    <div id="content">
+        <div class="box">
+            <div class="box-top"></div>
+            <div class="box-content">
+                <div class="head"><h2>Adicionar créditos</h2></div>
+                <div class="sect">
+                    <div class="charge">
+                        <form id="account-charge-form" action="/order/charge.php" method="post" class="validator">
+                            <p>Digite o valor: </p>
+                            <p class="number">
+                                <input type="text" maxlength="6" class="f-text" name="money" require="true" datatype="number" value="{$money}" /> Reais (minimo R$5,00)
+                            </p>
+                            <p id="account-charge-tip" class="tip" style="visibility:hidden;"></p>
+                            <div class="choose">
+                                <p class="choose-pay-type">Escolha a forma de pagamento: </p>
+                                <ul class="typelist">
+									<!--{if $INI['pagseguro']['mid']}-->
+										<li><input id="check-pagseguro" type="radio" name="paytype" value="pagseguro" {$ordercheck['pagseguro']} /><label for="check-pagseguro" class="pagseguro">PagSeguro.</label></li>
+									<!--{if $INI['paypal']['mid']}-->
+										<li><input id="check-paypal" type="radio" name="paytype" value="paypal" {$ordercheck['paypal']} /><label for="check-paypal" class="paypal">paypal.</label></li>
+									<!--{/if}-->
+									<!--{if $INI['alipay']['mid']}-->
+										<li><input id="check-alipay" type="radio" name="paytype" value="alipay" {$ordercheck['alipay']} /><label for="check-alipay" class="alipay">alipay.</label></li>
+									<!--{/if}-->
+									<!--{if $INI['tenpay']['mid']}-->
+										<li><input id="check-tenpay" type="radio" name="paytype" value="tenpay" {$ordercheck['tenpay']} /><label for="check-tenpay" class="tenpay">tenpay.</label></li>
+									<!--{/if}-->
+									<!--{if $INI['chinabank']['mid']}-->
+										<li><input id="check-chinabank" type="radio" name="paytype" value="chinabank" {$ordercheck['chinabank']} /><label for="check-chinabank" class="chinabank"> China BANK.</label></li>
+									<!--{/if}-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <p class="commit">
+                                <input type="submit" value="Confirmar" class="formbutton" />
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="box-bottom"></div>
+        </div>
+    </div>
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include footer}-->
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<zhtml:title value="Form TB_SESSAO" />
+<link rel="stylesheet" type="text/css" href="generateForm.css">
+</head>
+<body>
+  <div id="stylized" class="myform">
+    <form action="tb_sessaoInsert.ztag" method="post">
+      <h1>TB_SESSAO form</h1>
+      <p>Form generated for table TB_SESSAO</p>
+
+      <label>CD_SESSAO<span class="small">short description form cd_sessao</span> </label> <input type="text" name="CD_SESSAO" id="CD_SESSAO" />
+      <label>CD_IP<span class="small">short description form cd_ip</span> </label> <input type="text" name="CD_IP" id="CD_IP" />
+      <label>DT_INICIO<span class="small">short description form dt_inicio</span> </label> <input type="text" name="DT_INICIO" id="DT_INICIO" />
+      <label>DT_FIM<span class="small">short description form dt_fim</span> </label> <input type="text" name="DT_FIM" id="DT_FIM" />
+      <label>DS_POST<span class="small">short description form ds_post</span> </label> <input type="text" name="DS_POST" id="DS_POST" />
+      <label>DS_GET<span class="small">short description form ds_get</span> </label> <input type="text" name="DS_GET" id="DS_GET" />
+      <label>CD_BROWSER<span class="small">short description form cd_browser</span> </label> <input type="text" name="CD_BROWSER" id="CD_BROWSER" />
+
+      <button type="submit">Submit button</button>
+    </form>
+  <div>
+</body>

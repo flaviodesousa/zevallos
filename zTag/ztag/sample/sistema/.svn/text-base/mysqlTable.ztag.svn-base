@@ -1,0 +1,67 @@
+<zrequest:get name="database" var="database" transform="stripTags()" />
+<zrequest:get name="table" var="table" transform="stripTags()" />
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="mySQL Columns of $table table" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            font-size:.7em;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}      
+    </style>
+  </head>
+  <body>
+    <h3>mySQL columns of <zvar:show use="table" transform="upper()"/> table of <zvar:show use="database" transform="upper()"/> database - (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Fonte" />)</h3>
+    <hr />
+    Get back to <zHTML:a href="mysqlTables.ztag?database=$database" title="Get back to table" value="$database"/>
+    <br />
+    <zdbal:open id="myConn" driver="mysql" host="localhost" database="$database" user="zcmsuser" password="z4321" />
+      <zdbal:listtablecolumns use="myConn" table="$table" var="myColumns"/>
+  
+      <table border="1" cellspacing="0">
+        <tr>
+          <zHTML:cellhead value="Column" />
+					<zHTML:cellhead value="Type" />
+					<zHTML:cellhead value="Fixed" />
+					<zHTML:cellhead value="Lenght" />
+					<zHTML:cellhead value="Precision" />
+					<zHTML:cellhead value="Scale" />
+					<zHTML:cellhead value="Unsigned" />
+					<zHTML:cellhead value="Not Null" />
+					<zHTML:cellhead value="Auto Increment" />
+					<zHTML:cellhead value="Default" />
+        </tr>
+  
+      <zctrl:foreach use="myColumns" key="key" value="value">
+        <tr>
+          <zHTML:cell value="$key" />
+					<zHTML:cell value="$value[type]" />
+					<zHTML:cell value="$value[fixed]" />
+					<zHTML:cell value="$value[lenght]" align="right"/>
+					<zHTML:cell value="$value[precision]" align="right" />
+					<zHTML:cell value="$value[scale]" align="right" />
+					<zHTML:cell value="$value[unsigned]" />
+					<zHTML:cell value="$value[notnull]" align="right" />
+					<zHTML:cell value="$value[autoincrement]" align="right" />
+					<zHTML:cell value="$value[default]" />
+        </tr>
+      </zctrl:foreach>
+      </table>
+
+      Generate <zHTML:a href="mysqlTableList.ztag?database=$database&table=$table" title="Generate list of table $table" value="list"/>      
+      - <zHTML:a href="mysqlTableForm.ztag?database=$database&table=$table" title="Generate form of table $table" value="form"/>      
+    <zdbal:close use="myConn" />
+  </body>
+</html>

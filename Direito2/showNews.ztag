@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<zctrl:start var="runTime" />
+
+<zrequest:get name="fs" var="gFullSearch" transform="stripTags()" />
+
+<zrequest:get name="y" var="gYear" transform="stripTags()" />
+<zrequest:get name="m" var="gMonth" transform="stripTags()" />
+<zrequest:get name="d" var="gDay" transform="stripTags()" />
+<zrequest:get name="s" var="gSource" transform="stripTags()" />
+<zrequest:get name="p" var="gHashNews" transform="stripTags()" />
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta name="robots" content="index,follow,noodp" />
+		<meta name="classification" content="juridico" />
+		<meta name="distribution" content="global" />
+		<meta name="rating" content="general" />
+		<meta name="revisit-after" content="1 days" />
+		<zhtml:meta property="og:title" content="Notícias de $gMonth de $gYear | Direito 2" /> 
+		<zhtml:meta property="og:image" content="http://img.ecr.me/d2/D2LogoBigIcon.jpg" />
+		<zhtml:meta property="og:type" content="article" /> 
+    <zhtml:meta property="og:latitude" content="-15.800316"/>
+    <zhtml:meta property="og:longitude" content="-47.862217"/>
+    <zhtml:meta property="og:locality" content="Brasilia"/>
+    <zhtml:meta property="og:region" content="DF"/>
+    <zhtml:meta property="og:country-name" content="Brazil"/>
+		<zhtml:title value="Notícias de $gMonth de $gYear | Direito 2" />
+		<link rel="stylesheet" href="http://css.ecr.me/d2/layout-v2.css" type="text/css" />
+		<link rel="stylesheet" href="http://css.ecr.me/d2/css.css" type="text/css" />
+	</head>
+
+	<body>
+		<div id="universal">
+			<div id="acesso"> <h5>Teclado</h5><ul><li class="primeiro"><a title="alt + 1 salta para Conteúdo" href="#conteudo">Conteúdo » alt+1</a></li><li><a title="alt + 2 salta para Menu Principal" href="#menu">Menu Principal » alt+2</a></li><li><a title="alt + 3 salta para a Busca" href="#busca">Busca » alt+3</a></li></ul></div>
+			<div id="mp">Direito2.com.br » (<zhtml:a href="/zCode.ztag?file=#ztagFile" value="Source" />) » <zhtml:a href="/" value="Página inicial" /> » <zhtml:a href="/noticias" value="Arquivo" /> » <zhtml:a href="/noticias/$gYear" value="$gYear" /> » <zhtml:a href="/noticias/$gYear/$gMonth" value="$gMonth" /> » <zhtml:a href="/noticias/$gYear/$gMonth/$gDay" value="$gDay" /> » <zhtml:a href="/$gSource/$gYear/$gMonth/$gDay" value="$gSource" /></div>
+			<div id="links">
+			<a href="http://translate.google.com/translate?u=http://www.direito2.com.br/$ZTagRealURL&langpair=pt%7Cen&hl=en&ie=UTF-8&oe=UTF-8&prev=%2Flanguage_tools" rel="nofollow" title="Link para traduz o conte&uacute;do site para o Ingl&ecirc;s">To English</a>
+			- <a accesskey="=" href="/faleConosco" title="Link para Fale Conosco" rel="nofollow">Fale Conosco</a>
+			- <a accesskey=";" href="/mapaSite" title="Link para Mapa do Site">Mapa do Site</a>
+			- <a accesskey="/" href="/ajuda.ztag" title="Link para Ajuda do Site">Ajuda</a>
+			- <a href="http://colorfilter.wickline.org/?a=1;r=;l=9;j=1;u=http://www.direito2.com.br/<ztag:realurl />;t=t" rel="nofollow" title="Color Blindness">Color Blindness</a>
+			</div>
+		</div>
+
+		<div id="body">
+			<div id="site">
+				<div id="bloco" class="barra">
+					<div id="logo"><a href="/"><img src="http://img.ecr.me/d2/logoDireito2.png" /></a></div>
+					<div id="subBloco"><b class="first">terça-feira</b><br><b>26</b> de abril de 2011</div>
+					<div style="background:url(http://img.ecr.me/d2/tempo_icons/chuva-fraca.png) 3px top no-repeat;" class="tempo" id="subBloco"><b>Distrito Federal</b><br><b class="tempo-qnt">Min: 16º, Max: 28º</b><br><style>.small-clima-texto {line-height:20px; width:200px;}.small-clima-texto:hover {line-height:12px;display:block; position:absolute; background:#fff;; border:#999 1px solid;z-index:5642; padding:5px;}</style><small class="small-clima-texto">Claro a Parcialmente Nublado. a Umidade Relativa do Ar Estará Variando Entre 85 e 30 por Cento.</small></div>
+					<div id="subBloco">
+							<div id="GoogleSearch"><a name="busca" href="#busca" accesskey="3" title="Vo&ccedil;&ecirc; est&aacute; busca"></a><form action="/searchProcess.ztag" method="get"><zform:inputtext name="fs" tagid="fs" value="$fullSearch" maxlength="2048" size="30" accesskey="g" name="q" id="q" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: rgb(255, 255, 255) url(http://www.google.com/cse/intl/pt/images/google_custom_search_watermark.gif) no-repeat scroll left center; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;"/> <input type="submit" value="Pesquisar" name="btnG" class="buttonStyle" /><br/><input type="radio" checked="" value="www.direito2.com.br" name="as_sitesearch"/> Direito 2 <input type="radio" value="" name="as_sitesearch"/> Pesquisa na Web</form></div>
+					</div>
+				</div>
+				<div id="bloco" class="topo">
+					<div id="banner"><!-- D2 Cabeçalho 728 x 90 --><script type="text/javascript">google_ad_client = "ca-pub-3230208523731980";google_ad_slot = "3390234906";google_ad_width = 728; google_ad_height = 90;</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>
+				<div id="usuario">
+					E-mail: <input type="text" name="username" class="inputStyle" /><br />
+					Senha: <input type="password" name="password" class="inputStyle" />
+					<input type="submit" value="Entrar" name="btnG" class="buttonStyle" /><br />
+					<span>Esqueceu sua</span> <a href="/askPassword.ztag"><span>senha</span></a> <span>ou</span> <a href="/askLogin.ztag"><span>Email?</span></a>
+				</div>
+			</div>
+			<div id="bloco" class="menu">
+				<ul>
+					<li><a href="/" class="ativo">Home</a></li>
+					<li><a href="/noticias">Arquivo</a></li>
+					<li><a href="#">Livros</a></li>
+					<li><a href="/servicos.ztag">Serviços</a></li>
+					<li><a href="/informacoes.ztag">Informações</a></li>
+					<li><a href="/apresentacao.ztag">Apresentação</a></li>
+					<li><a href="/contato.ztag">Contato</a></li>
+				</ul>
+			</div>
+			<div id="bloco" class="menu-cont">
+				<div id="menu-cont-interno"></div>
+			</div>
+			<div id="bloco" class="corpo content">
+				<div id="areatexto">
+				
+<zdb:open id="D2Conn" driver="mysql" host="#D2Host" database="#D2Database" user="#D2User" password="#D2Password" />
+
+	<zdb:query use="D2Conn" id="showNews">
+		SELECT n.cd_noticia cd_noticia 
+		, nm_noticia 
+		, n.ds_noticia
+		, SUBSTRING(nh.ds_url, 1,  LENGTH(nh.ds_url) - 4) ds_url
+		, nm_fonte
+		, sg_fonte
+		, f.ds_url f_ds_url
+		, nm_mes
+		, sg_mes3
+		, DATE_FORMAT(dt_referencia, '%d/%m/%Y') dt_referencia
+		, CASE WHEN HOUR(dt_referencia) = 0 AND MINUTE(dt_referencia) = 0 THEN DATE_FORMAT(dt_referencia, '%d/%m/%Y') ELSE DATE_FORMAT(dt_referencia, '%d/%m/%Y %H:%i') END dt_referenciaf
+		, dt_referencia_day
+		, dt_referencia_year
+		FROM tb_noticia n
+		LEFT JOIN tb_mes ON cd_mes = dt_referencia_month
+		LEFT JOIN tb_fonte f ON n.cd_fonte = f.cd_fonte
+		LEFT JOIN tb_noticia_hash nh ON n.cd_noticia_hash = nh.cd_noticia_hash
+		WHERE n.fl_ativo = 1 AND hs_noticia = MD5('$gHashNews')
+	</zdb:query>
+	
+	<zserver:get use="SERVER_NAME" var="urlSite" />
+	
+	<!-- http://www.direito2.com.br/stf/2011/abr/19/  -->
+	<zdb:fetchuntil use="showNews" var="snRow">
+		<zhtml:h1 value="$snRow[nm_noticia]" />
+		<div id="info">
+			<zhtml:span class="date" value="<strong>Data de Publicação:</strong> $snRow[dt_referenciaf]" />
+			<zhtml:span class="org" value="<strong>Fonte:</strong> $snRow[sg_fonte] » <a href='$snRow[f_ds_url]' target='_blank''>link para a página principal</a>" />
+			<div id="face"><script src="http://connect.facebook.net/pt_BR/all.js#xfbml=1"></script><fb:like layout="button_count" show_faces="true" width="70"></fb:like></div>
+			<div id="tw"><script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script><a href="http://twitter.com/share" class="twitter-share-button" style="display:none;" data-count="none" title="Enviar para o seu Twitter">Twittar</a></div>
+			<a href="#" class="print">Imprimir esta Página</a>
+			<a href="#" class="rec">Recomendar esta Página</a>	
+			<div id="prevnext">
+				<a href="#" title="" rel="nofollow" class="ind">Índice</a> <a href="#" title="" class="prev">Texto Anterior</a> <a href="#" title="" class="next">Próximo Texto</a>
+			</div>
+		</div>
+        		
+	 	<div id="HOTWordsTxt"><span id="TextAdBox"><div class="title">Links Patrocinados</div><!-- D2 - Bloco texto 300x250 --><script type="text/javascript">google_ad_client = "ca-pub-3230208523731980";google_ad_slot = "7348451553";google_ad_width = 300;google_ad_height = 250;</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></span><zhtml:p value="$snRow[ds_noticia]" /></div>
+
+		<dl id="otherposts">
+			<dt>Próximo texto:</dt>
+				<dd><strong>Política</strong> <a href="#">PM inicia 'operação padrão' para reivindicar melhorias ao governo</a></dd>
+			<dt>Texto Anterior:</dt>
+				<dd><strong>Polícia</strong> <a href="#">Traficante preso com 4 kg de maconha em São José de Ribamar</a></dd>
+			<dt><a href="#" title="Índice da edição">Índice da edição - Maio</a></dt>
+		</dl>
+
+		<zdb:query use="D2Conn" update="listComments">
+			SELECT SQL_CACHE cd_comentario 
+			, nm_usuario
+			, ds_cidade
+			, ds_estado
+			, ds_atividade
+			, ds_url
+			, ds_comentario
+			, LOWER(nm_mes) nm_mes
+			, DAY(c.dt_inclusao) dt_inclusao_day
+			, YEAR(c.dt_inclusao) dt_inclusao_year
+			, DATE_FORMAT(c.dt_inclusao, '%d/%m/%Y') dt_inclusao
+			FROM tb_comentario c
+			LEFT JOIN tb_mes ON cd_mes = MONTH(c.dt_inclusao)
+			LEFT JOIN tb_usuario u ON c.cd_usuario = u.cd_usuario 
+			WHERE c.fl_ativo = 1 AND c.cd_noticia = $snRow[cd_noticia]
+			ORDER BY cd_comentario DESC
+		</zdb:query>
+		
+		<ol class="commentlist">
+			<zdb:fetchuntil use="listComments" var="lcRow">
+				<li id="comentario-<zvar:show use="$lcRow[cd_comentario]" />" class="alt">
+					<zhtml:div class="commentcount" value="$nm_count" />
+					<img width="32px" height="32px" style="margin-right:5px; float:left;" src="http://www.gravatar.com/avatar.php?gravatar_id=710e1f84402fa110a0df770cd8fefa00&amp;default=http%3A%2F%2Fwww%2Edireito2%2Ecom%2Ebr%2FGravatar%2Ebmp"> 
+					<cite><zhtml:a rel="external nofollow" href="$lcRow[ds_url]">Teste</a></cite>, Teste
+					<br /> 
+					<small class="commentmetadata"><zhtml:a title="$lcRow[dt_inclusao]" rel="nofollow" href="#comentario-$lcRow[cd_comentario]" value="$lcRow[dt_inclusao_day] de $lcRow[nm_mes] de $lcRow[dt_inclusao_year]" /></small>
+					<div id="HOTWordsTxt"><zhtml:p value="$lcRow[ds_comentario]" /></div>
+				</li>
+			</zdb:fetchuntil>
+		</ol>	 	
+	</zdb:fetchuntil>
+
+<div id="omcomentarios">
+	<h6>0 pessoas comentaram a notícia "Comerciante libanês condenado por tráfico pede liberdade ao STF"</h6>
+	<form action="">
+		<fieldset>
+			<label for=""><span>Nome <small class="ob">(obrigatório)</small>:</span><input type="text" name="" id="" class="text" /></label>
+			<label for=""><span>Email <small class="ob">(não será publicado) (obrigatório)</small>:</span><input type="text" name="" id="" class="text" /></label>
+			<label for=""><span>URL Endereço do site:</span><input type="text" name="" id="" class="text" /></label>
+			<label for=""><span>Sua atividade:</span><input type="text" name="" id="" class="text" /></label>
+			<label for=""><span>Sua cidade:</span><input type="text" name="" id="" class="text" /></label>
+			<label for=""><span>Proteção contra SPAM: Qual a soma para <strong>10 + 1 </strong><small class="ob">(obrigatório)</small>:</span><input type="text" name="" id="" class="text" /></label>
+			<label for="" class="msg">
+				<span>Mensagem</span>
+				<textarea name="" id=""></textarea>
+			</label>
+			<label for=""><input name="comNotificar" id="comNotificar" value="1" tabindex="8" type="checkbox"><span>&nbsp;Notifique-me dos próximos comentários por e-mail...</span></label>
+			<p>Utilize se necessário &lt;b&gt;&lt;em&gt;&lt;i&gt;&lt;u&gt;&lt;strong&gt; em seu comentário.</p>
+			<p>Ao comentar, você está automaticamente concordando com os <a href="#">critérios de uso</a> dos comentários deste site.</p>
+			<p>Você deseja ver o seu avatar no seu próximo comentário? Você precisa do <a href="http://www.gravatar.com" target="_blank">Gravatar</a></p>
+			<p>* Os textos publicados neste espaço são de responsabilidade única de seus autores e podem não expressar necessariamente a opinião do Direito 2.</p>
+		</fieldset>
+	</form>					
+				</div>
+				
+				<div id="colright">
+					<div class="boxe">
+					  <zdb:query use="D2Conn" id="listNews">
+							SELECT SQL_CACHE nm_noticia 
+							, SUBSTRING(nh.ds_url, 1,  LENGTH(nh.ds_url) - 4) ds_url
+							, nm_fonte
+							, sg_fonte
+							, nm_mes
+							, sg_mes3
+							, DATE_FORMAT(dt_referencia, '%Y-%m-%d %H:%i:%s') dt_referenciah
+							, DATE_FORMAT(dt_referencia, '%d/%m/%Y %H:%i:%s') dt_referenciap
+							, dt_referencia_day dt_day
+							, dt_referencia_month dt_month
+							, dt_referencia_year dt_year
+							FROM tb_noticia n
+							LEFT JOIN tb_mes ON cd_mes = dt_referencia_month
+							LEFT JOIN tb_fonte f ON n.cd_fonte = f.cd_fonte
+							LEFT JOIN tb_noticia_hash nh ON n.cd_noticia_hash = nh.cd_noticia_hash
+							WHERE n.fl_ativo = 1 AND dt_referencia <= NOW()
+							ORDER BY dt_referencia DESC
+							LIMIT 6
+							</zdb:query>
+				
+						<h6>Últimas notícias</h6>
+		
+						<ul>
+							<zdb:fetchuntil use="listNews" var="lnRow">
+								<zvar:update use="humandDate" value="$lnRow[dt_referenciah]" transform="dateHumanized()" />
+								<li><zhtml:a href="$lnRow[ds_url]" title="Notícia publicada em $lnRow[dt_day] de $lnRow[sg_mes3] de $lnRow[dt_year]" value="<strong>A $humandDate</strong>$lnRow[nm_noticia]" /></li>
+							</zdb:fetchuntil>
+						</ul>
+					</div>
+<zdb:close use="D2Conn" />
+					<div class="boxe">
+						<h6>Ads</h6>
+						<div class="ads"><script type="text/javascript"><!--
+						google_ad_client = "ca-pub-3230208523731980";
+						google_ad_slot = "7348451553";
+						google_ad_width = 300;
+						google_ad_height = 250;
+						</script>
+						<script type="text/javascript"
+						src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+						</script></div>
+					</div>
+				</div>
+			</div>
+			<div id="bloco" class="rodape">
+				<address>
+			    <strong style="color:#FFAB2E;">© 2007 - 2011 Direito2.com.br® - Todo o conteúdo pode ser copiado desde que devidamente identificada a origem.</strong>
+			    <strong style="color:#FFCB7E;">direito2.com.br - Seu portal de notícias de direito - </strong>
+			    <strong><a href="/termosUso.ztag" rel="nofollow">Termos de Uso</a>&nbsp;-&nbsp;<a href="/privacidade.ztag" rel="nofollow">Privacidade</a>&nbsp;-&nbsp;<a href="/alerta.ztag" rel="nofollow">Alerta</a>&nbsp;-&nbsp;<a href="/informarBug.ztag">Informar Bug</a>&nbsp;-&nbsp;<a accesskey="0" href="/acessibilidade.ztag" rel="nofollow">Acessibilidade</a></strong>
+				</address>
+				<ul>
+			    <li class="rmenu"><a href="#">Apresentação</a>
+			    	<ul>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+						</ul>
+			    </li>
+			    <li class="rmenu"><a href="#">Livros</a>
+			    	<ul>
+			        <li><a href="#">Item Item Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+						</ul>
+			    </li>
+			    <li class="rmenu"><a href="#">Arquivo</a>
+			    	<ul>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item Item Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+						</ul>
+			    </li>
+			    <li class="rmenu"><a href="#">Apresentação</a>
+			    	<ul>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+						</ul>
+			    </li>
+			    <li class="rmenu"><a href="#">Livros</a>
+			    	<ul>
+			        <li><a href="#">Item Item Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        </ul>
+			    </li>
+			    <li class="rmenu"><a href="#">Arquivo</a>
+			    	<ul>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item Item Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        </ul>
+			    </li>
+			    <li class="rmenu"><a href="#">Apresentação</a>
+			    	<ul>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        </ul>
+			    </li>
+			    <li class="rmenu"><a href="#">Livros</a>
+			    	<ul>
+			        <li><a href="#">Item Item Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			      </ul>
+			    </li>
+			    <li class="rmenu"><a href="#">Arquivo</a>
+			    	<ul>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item Item Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			        <li><a href="#">Item</a></li>
+			      </ul>
+			    </li>
+				</ul>
+			</div>
+			</div>
+		</div>
+		<br />Execution time: <zctrl:stop use="runTime" />
+	</body>
+</html>

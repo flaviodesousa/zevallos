@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: auto;
+        width: 600px;
+        height: auto;
+        font-family: verdana, arial, helvetica;
+        font-size: 12px;
+        cursor:auto;
+      }
+      .treeview {
+        font: Verdana;
+        line-height: 20px;
+        cursor: pointer;
+        font-style: normal;
+      }
+      .treeview li{
+        /* The padding is for the tree view nodes */
+        padding: 0 0 0 18px;
+        float: left;
+        width: 100%;
+        list-style: none;
+      }
+      .treeview, .treeview ul{
+        margin: 0;
+        padding: 0;
+      }
+
+      li.Expanded {background: url(minus.gif) no-repeat left top;}
+      li.Expanded ul{display: block;}
+      li.Collapsed {background: url(plus.gif) no-repeat left top;}
+      li.Collapsed ul{display: none;}
+
+      .Highlighted{color: red;}
+      .AlternateHighlight{color: blue;}
+
+    </style>
+  </head>
+  <body>
+    <h3 align="center">Teste do TreeView</h3>
+
+    <!-- Level 1 nodes -->
+    <ul class="treeview" id="treeview">
+      <li>XXXX</li>
+      <li class="Collapsed">First level 1 node
+        <!-- level 2 nodes -->
+        <ul>
+          <li>First level 2 node</li>
+          <li class="Collapsed Highlighted">Second level 2 node
+            <!-- level 3 nodes -->
+            <ul>
+              <li class="Collapsed AlternateHighlight">First level 3 node
+                <ul>
+                  <li>First level 4 node</li>
+                  <li>Second level 4 node</li>
+                </ul>
+              </li>
+              <li>Second level 3 node</li>
+            </ul>
+          </li>
+          <li>Third level 2 node</li>
+        </ul>
+      </li>
+      <li>Second level 1 node</li>
+    </ul>
+    <script type="text/javascript" language="Javascript1.2">
+    Array.prototype.indexOf = IndexOf;
+    //Toggles between two classes for an element
+    function ToggleClass(element, firstClass, secondClass, event){
+    event.cancelBubble = true;
+
+    var classes = element.className.split(" ");
+    var firstClassIndex = classes.indexOf(firstClass);
+    var secondClassIndex = classes.indexOf(secondClass);
+
+    if (firstClassIndex == -1 && secondClassIndex == -1){
+      classes[classes.length] = firstClass;}
+      else if (firstClassIndex!= -1){
+      classes[firstClassIndex] = secondClass;
+    }else{
+      classes[secondClassIndex] = firstClass;}
+      element.className = classes.join(" ");
+    }
+
+    //Finds the index of an item in an array
+    function IndexOf(item){
+      for (var i=0; i < this.length; i++){
+        if (this[i] == item){
+        return i;}
+      }
+      return -1;
+    }
+
+    //The toggle event handler for each expandable/collapsable node
+    //- Note that this also exists to prevent any IE memory leaks
+    //(due to circular references caused by this)
+    function ToggleNodeStateHandler(event){
+      ToggleClass(this, "Collapsed", "Expanded", (event == null)? window.event : event);
+    }
+
+    //Prevents the onclick event from bubbling up to parent elements
+    function PreventBubbleHandler(event){
+    if (!event) event = window.event;
+      event.cancelBubble = true;
+    }
+
+    //Adds the relevant onclick handlers for the nodes in the tree view
+    function Setuptreeview(elementId){
+      var tree = document.getElementById(elementId);
+      var treeElements = tree.getElementsByTagName("li");
+
+      for (var i=0; i < treeElements.length; i++){
+        if (treeElements[i].getElementsByTagName("ul").length > 0){
+          treeElements[i].onclick = ToggleNodeStateHandler;
+        }else{
+          treeElements[i].onclick = PreventBubbleHandler;
+        }
+      }
+    }
+
+
+    </script>
+    <script type="text/javascript">Setuptreeview("treeview");</script>
+
+  </body>
+</html>

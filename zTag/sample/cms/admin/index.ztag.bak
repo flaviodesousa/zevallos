@@ -1,0 +1,67 @@
+<zheader:locationif use="!userLogged" notcondition="len()" value="logoff
+.ztag" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="zCMS - Index" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>zCMS - A zTag Content Management System - (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Source" />)</h1>
+
+    <zdbal:open id="myConn" driver="mysql" host="localhost" database="zcms" user="zcmsuser" password="z4321" />
+      <zdbal:query use="myConn" id="myQuery">
+        SELECT
+          CD_PAGE
+        , CD_FATHER
+        , DS_TITLE
+        , DS_CONTENT
+        , DATE_FORMAT(DS_INSERT, '%m/%d/%Y %H:%i:%S') DS_INSERT
+        , DS_KEYWORDS
+        FROM pages
+        ORDER BY DS_INSERT DESC
+      </zdbal:query>
+
+      <zhtml:a href="PageInsert.ztag" value="Insert" /> - <zhtml:a href="logoff.ztag" value="Logoff" />
+
+      <table border="1" cellspacing="0">
+        <tr bgcolor="gray">
+          <th>#</th>
+          <th>Id</th>
+          <th>Father</th>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Insert</th>
+          <th>Keywords</th>
+        </tr>
+
+        <zvar:set id="rowCount" value="0" />
+
+        <zvar:set id="rowBGColor" value="0" />
+
+        <zdbal:fetchuntil use="myQuery" var="myRow">
+          <zvar:inc use="rowCount" />
+          <zvar:inc use="rowBGColor" />
+
+          <zctrl:if value="$rowBGColor" operator="e" with="1">
+            <tr>
+          </zctrl:if>
+          <zctrl:if value="$rowBGColor" operator="gte" with="2">
+            <tr bgcolor="lightgray">
+            <zvar:update use="rowBGColor" value="0"/>
+          </zctrl:if>
+          <zhtml:cell value="$rowCount" align="right" transform="FormatNumber(0)" />
+          <zhtml:cell value="$myRow[CD_PAGE]" align="right" transform="FormatNumber(0)" />
+          <zhtml:cell value="$myRow[CD_FATHER]" align="right" transform="FormatNumber(0)" />
+          <td><zhtml:a href="pageView.ztag?CD_PAGE=$myRow[CD_PAGE]" value="$myRow[DS_TITLE]" nowrap="nowrap" />(<zhtml:a href="pageInsert.ztag?CD_PAGE=$myRow[CD_PAGE]" value="I" />, <zhtml:a href="pageEdit.ztag?CD_PAGE=$myRow[CD_PAGE]" value="E" />, <zhtml:a href="pageDelete.ztag?CD_PAGE=$myRow[CD_PAGE]" value="D" />)</td>
+          <zhtml:cell value="$myRow[DS_CONTENT]" transform="Elipsis(20)" nowrap="nowrap" />
+          <zhtml:cell value="$myRow[DS_INSERT]" nowrap="nowrap" />
+          <zhtml:cell value="$myRow[DS_KEYWORDS]" transform="Elipsis(20)" nowrap="nowrap" />
+        </zdbal:fetchuntil>
+      </table>
+    <zdbal:close use="myConn" />
+  </body>
+</html>
+
+

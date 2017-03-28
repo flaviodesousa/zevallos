@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 XHTML Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+<title>Form Template</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-language" content="portuguese" />
+<meta name="DATE" content="7/12/2004 12:33AM" />
+<meta name="AUTHOR" content="Ruben Zevallos Jr." />
+<meta name="ROBOTS" content="noindex,nofollow" />
+<meta name="RATING" content="General" />
+
+<link rel="stylesheet" type="text/css" href="/formAjax.css" />
+
+<script type="text/javascript" language="Javascript1.2">
+<!-- //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// if (window!= top)
+//   top.location.href=location.href
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</script>
+</head>
+<body onload="preprocessAjaxForm(document.frmForm);">
+
+<form action="javascript:processAjaxForm(document.frmForm);"
+  method="post"
+  name="frmForm"
+  id="objfrmForm"
+  onsubmit="return validateAjaxForm(event);"
+  onkeypress="FieldChanged(event)"
+  autocomplete="off">
+
+  <h3>Cadastro do Municipio<img src="/library/LoaderSnake.gif" align="right"width="16px" height="16px" id="objLoader" /></h3>
+
+  <fieldset title="Configuration Fields" style="display:none">
+    <input type="hidden" id="objButton" name="objButton" value="99" />
+    <input type="hidden" id="objButtonName" name="objButtonName" value="bmtReload" />
+
+    <input type="hidden" id="objFieldChanged" name="blnFieldChanged" />
+
+    <input type="Parameter" id="ajax" name="ajax" value="1" />
+    <input type="Parameter" id="t" name="t" value="" />
+    <input type="Parameter" id="a" name="a" value="" />
+
+    <input type="Parameter" id="FormDebug" name="FormDebug" value="" />
+
+    <input type="Parameter" id="objfrmFormAction" name="frmFormAction" value="/FormAjax.php" />
+
+    <input type="Layout" id="objFormLayout" name="FormLayout" value="Formulario.htm" />
+
+
+    <input type="hidden" id="f" name="f" value="/Result/munCadastroMunicipio" />
+
+    <input datatype="int" datalength="4" type="hidden" id="camCodigo" name="camCodigo" value="" />
+
+    <input type="Layout" id="objFormLayout" name="FormLayout" value="Formulario.htm" />
+
+    <input type="formfield" id="objTable" name="Table" value="munCadastroMunicipio" />
+    <input type="formfield" id="objTablePK" name="TablePK" value="camCodigo" />
+
+    <input type="navigation" id="objNavigationWhere" name="NavigationWhere" value="camCodigo" />
+    <input type="navigation" id="objNavigationOrderBy" name="NavigationOrderBy" value="camCodigo" />
+
+    <input type="buttons" id="objButtons" name="Buttons" value="bmtFirst,bmtMoveLast,bmtSave,bmtEdit,bmtCancel,bmtInclude,bmtList,bmtExclude,bmtClear,bmtReload,bmtMoveNext,bmtLast" />
+
+    <input type="List" id="objList" name="List" value="" />
+    <input type="Find" id="objFind" name="Find" value="" />
+  </fieldset>
+  <fieldset title="Dados básicos">
+    <legend>Dados básicos</legend>
+    <label accesskey="N" for="camNome"><u>N</u>ome:<br />
+    <input
+      datatype="varchar"
+      datalength="250"
+      id="camNome"
+      type="text"
+      value=""
+      name="camNome"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camNome'); return false;"
+      size="40"
+      maxlength="250"
+      required="O Nome é obrigatório!"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Nome"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="H" for="camHistoria"><u>H</u>istoria:<br />
+    <span class="FormFieldCounter">(<span id="objcamHistoria" TABINDEX="-1">1000</span>)</span>
+    <textarea
+      datatype="varchar"
+      datalength="-1"
+      id="camHistoria"
+      name="camHistoria"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camHistoria'); return false;"
+      onKeyUp="FieldDelimiter(); FieldCounter();"
+      rows="8"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Historia"
+      onchange="FieldChanged()" /></textarea>
+    </label>
+    <br clear="all" />
+    <label accesskey="A" for="camAspectos"><u>A</u>spectos:<br />
+    <span class="FormFieldCounter">(<span id="objcamAspectos" TABINDEX="-1">1000</span>)</span>
+    <textarea
+      datatype="varchar"
+      datalength="-1"
+      id="camAspectos"
+      name="camAspectos"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camAspectos'); return false;"
+      onKeyUp="FieldDelimiter(); FieldCounter();"
+      rows="8"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Aspectos"
+      onchange="FieldChanged()" /></textarea>
+    </label>
+    <br clear="all" />
+    <label accesskey="A" for="camAreaKM2"><u>A</u>rea KM2:<br />
+    <input
+      datatype="int"
+      datalength="4"
+      id="camAreaKM2"
+      type="text"
+      value=""
+      name="camAreaKM2"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camAreaKM2'); return false;"
+      size="12"
+      maxlength="10"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Area KM2"
+      onchange="FieldChanged()" />
+    </label>
+  </fieldset>
+  <fieldset title="Limites">
+    <legend>Limites</legend>
+    <label accesskey="N" for="camLimiteNorte"><u>N</u>orte:<br />
+    <input
+      datatype="varchar"
+      datalength="250"
+      id="camLimiteNorte"
+      type="text"
+      value=""
+      name="camLimiteNorte"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camLimiteNorte'); return false;"
+      size="20"
+      maxlength="250"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Norte"
+      onchange="FieldChanged()" />
+    </label>
+    <label accesskey="S" for="camLimiteSul"><u>S</u>ul:<br />
+    <input
+      datatype="varchar"
+      datalength="250"
+      id="camLimiteSul"
+      type="text"
+      value=""
+      name="camLimiteSul"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camLimiteSul'); return false;"
+      size="20"
+      maxlength="250"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Sul"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="L" for="camLimiteLeste"><u>L</u>este:<br />
+    <input
+      datatype="varchar"
+      datalength="250"
+      id="camLimiteLeste"
+      type="text"
+      value=""
+      name="camLimiteLeste"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camLimiteLeste'); return false;"
+      size="20"
+      maxlength="250"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Leste"
+      onchange="FieldChanged()" />
+    </label>
+    <label accesskey="O" for="camLimiteOeste"><u>O</u>este:<br />
+    <input
+      datatype="varchar"
+      datalength="250"
+      id="camLimiteOeste"
+      type="text"
+      value=""
+      name="camLimiteOeste"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camLimiteOeste'); return false;"
+      size="20"
+      maxlength="250"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Oeste"
+      onchange="FieldChanged()" />
+    </label>
+  </fieldset>
+  <fieldset title="Dados específicos">
+    <legend>Dados específicos</legend>
+    <label accesskey="P" for="camPopulacao"><u>P</u>opulação:<br />
+    <input
+      datatype="int"
+      datalength="4"
+      id="camPopulacao"
+      type="text"
+      value=""
+      name="camPopulacao"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camPopulacao'); return false;"
+      size="12"
+      maxlength="10"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o População"
+      onchange="FieldChanged()" />
+    </label>
+    <label accesskey="D" for="camDistanciaCapitalKM"><u>D</u>istancia da Capital KM:<br />
+    <input
+      datatype="int"
+      datalength="4"
+      id="camDistanciaCapitalKM"
+      type="text"
+      value=""
+      name="camDistanciaCapitalKM"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camDistanciaCapitalKM'); return false;"
+      size="12"
+      maxlength="10"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Distancia da Capital KM"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="M" for="camMicroRegiao"><u>M</u>icro Região:<br />
+    <input
+      datatype="varchar"
+      datalength="100"
+      id="camMicroRegiao"
+      type="text"
+      value=""
+      name="camMicroRegiao"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camMicroRegiao'); return false;"
+      size="40"
+      maxlength="100"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Micro Região"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="L" for="camLeiCriacao"><u>L</u>ei de Criação:<br />
+    <input
+      datatype="varchar"
+      datalength="250"
+      id="camLeiCriacao"
+      type="text"
+      value=""
+      name="camLeiCriacao"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camLeiCriacao'); return false;"
+      size="40"
+      maxlength="250"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Lei de Criação"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="I" for="camInformacoesUteis"><u>I</u>nformacoes Úteis:<br />
+    <span class="FormFieldCounter">(<span id="objcamInformacoesUteis" TABINDEX="-1">1000</span>)</span>
+    <textarea
+      datatype="varchar"
+      datalength="-1"
+      id="camInformacoesUteis"
+      name="camInformacoesUteis"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camInformacoesUteis'); return false;"
+      onKeyUp="FieldDelimiter(); FieldCounter();"
+      rows="4"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Informacoes Úteis"
+      onchange="FieldChanged()" /></textarea>
+    </label>
+  </fieldset>
+  <fieldset title="Prefeitura">
+    <legend>Prefeitura</legend>
+    <label accesskey="E" for="camPrefeituraEndereco"><u>E</u>ndereço:<br />
+    <span class="FormFieldCounter">(<span id="objcamPrefeituraEndereco" TABINDEX="-1">1000</span>)</span>
+    <textarea
+      datatype="varchar"
+      datalength="-1"
+      id="camPrefeituraEndereco"
+      name="camPrefeituraEndereco"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camPrefeituraEndereco'); return false;"
+      onKeyUp="FieldDelimiter(); FieldCounter();"
+      rows="4"
+      required="O Endereço é obrigatório!"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Endereço"
+      onchange="FieldChanged()" /></textarea>
+    </label>
+    <br clear="all" />
+    <label accesskey="T" for="camPrefeituraTelefone"><u>T</u>elefones:<br />
+    <span class="FormFieldCounter">(<span id="objcamPrefeituraTelefone" TABINDEX="-1">1000</span>)</span>
+    <textarea
+      datatype="varchar"
+      datalength="-1"
+      id="camPrefeituraTelefone"
+      name="camPrefeituraTelefone"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camPrefeituraTelefone'); return false;"
+      onKeyUp="FieldDelimiter(); FieldCounter();"
+      rows="2"
+      required="O Telefones é obrigatório!"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Telefones"
+      onchange="FieldChanged()" /></textarea>
+    </label>
+    <br clear="all" />
+    <label accesskey="E" for="camPrefeituraEmail"><u>E</u>-mail:<br />
+    <input
+      datatype="varchar"
+      datalength="100"
+      id="camPrefeituraEmail"
+      type="text"
+      value=""
+      name="camPrefeituraEmail"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camPrefeituraEmail'); return false;"
+      size="40"
+      maxlength="100"
+      required="O E-mail é obrigatório!"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o E-mail"
+      onchange="FieldChanged()" />
+    </label>
+    <br clear="all" />
+    <label accesskey="P" for="camPrefeitoPerfil"><u>P</u>erfil do Prefeito:<br />
+    <span class="FormFieldCounter">(<span id="objcamPrefeitoPerfil" TABINDEX="-1">1000</span>)</span>
+    <textarea
+      datatype="varchar"
+      datalength="-1"
+      id="camPrefeitoPerfil"
+      name="camPrefeitoPerfil"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camPrefeitoPerfil'); return false;"
+      onKeyUp="FieldDelimiter(); FieldCounter();"
+      rows="4"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Perfil do Prefeito"
+      onchange="FieldChanged()" /></textarea>
+    </label>
+    <br clear="all" />
+    <label accesskey="T" for="camPrefeitoTelefone"><u>T</u>elefones:<br />
+    <input
+      datatype="varchar"
+      datalength="-1"
+      id="camPrefeitoTelefone"
+      type="text"
+      value=""
+      name="camPrefeitoTelefone"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camPrefeitoTelefone'); return false;"
+      size="40"
+      maxlength="250"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Telefones"
+      onchange="FieldChanged()" />
+    </label>
+  </fieldset>
+  <fieldset title="Outras informações">
+    <legend>Outras informações</legend>
+    <label accesskey="S" for="camServicoCidadao"><u>S</u>ervico ao Cidadão:<br />
+    <input
+      datatype="varchar"
+      datalength="-1"
+      id="camServicoCidadao"
+      type="text"
+      value=""
+      name="camServicoCidadao"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camServicoCidadao'); return false;"
+      size="80"
+      maxlength="1000"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Servico ao Cidadão"
+      onchange="FieldChanged()" />
+    </label>
+  </fieldset>
+  <fieldset title="Inclusão">
+    <legend>Inclusão</legend>
+    <label accesskey="I" for="camInclusao"><u>I</u>nclusão:<br />
+    <input
+      datatype="datetime"
+      datalength="8"
+      id="camInclusao"
+      type="text"
+      value=""
+      name="camInclusao"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camInclusao'); return false;"
+      size="12"
+      maxlength="12"
+      readonly="true"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Inclusão"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>
+  </fieldset>
+  <fieldset title="Dados básicos">
+    <legend>Dados básicos</legend>
+    <label accesskey="A" for="camAlteracao"><u>A</u>lteração:<br />
+    <input
+      datatype="datetime"
+      datalength="8"
+      id="camAlteracao"
+      type="text"
+      value=""
+      name="camAlteracao"
+      onhelp="window.showHelp('FormTemplate.php?o=2&f=munCadastroMunicipio&t=camAlteracao'); return false;"
+      size="12"
+      maxlength="12"
+      readonly="true"
+      onfocus="StatusTitle(event);fieldOnFocus(event);"
+      onblur="fieldOnBlur(event);"
+      title="Digite o Alteração"
+      onchange="FieldChanged()"
+      datebr="true" />
+    </label>  </fieldset>
+
+  <div id="formMessage" class="formMessageShow"></div>
+  <div id="objButtonBar" class="buttonBar">
+    <button
+      type="submit"
+      id="bmtFirst"
+      name="bmtFirst"
+      onclick="objButtonName.value=this.name;objButton.value=10;"
+      title="Primeiro Registro"
+      >|&lt;</button
+    ><button
+      type="submit"
+      id="bmtMoveLast"
+      name="bmtMoveLast"
+      onclick="objButtonName.value=this.name;objButton.value=11;"
+      title="Registro Anterior"
+      >&lt;</button
+    ><button
+      id="bmtEdit"
+      name="bmtEdit"
+      onclick="objButtonName.value=this.name;objButton.value=2;"
+      >Editar</button
+    ><button
+      type="submit"
+      id="bmtInclude"
+      name="bmtInclude"
+      onclick="objButtonName.value=this.name;objButton.value=4;"
+      >Incluir</button
+    ><button
+      type="submit"
+      id="bmtSave"
+      name="bmtSave"
+      onclick="objButtonName.value=this.name;objButton.value=3;"
+      >Salvar</button
+    ><button
+      type="submit"
+      id="bmtCancel"
+      name="bmtCancel"
+      onclick="objButtonName.value=this.name;objButton.value=98;"
+      >Cancelar</button
+    ><button
+      type="reset"
+      id="bmtClear"
+      name="bmtClear"
+      onclick="objButtonName.value=this.name;objButton.value=0;"
+      >Limpar</button
+    ><button
+      type="submit"
+      id="bmtExclude"
+      name="bmtExclude"
+      onclick="objButtonName.value=this.name;objButton.value=9;"
+      > <u>E</u>xcluir </button
+    ><button
+      type="submit"
+      id="bmtSearch"
+      name="bmtSearch"
+      onclick="objButtonName.value=this.name;objButton.value=6;"
+      >Buscar</button
+    ><button
+      type="submit"
+      id="bmtList"
+      name="bmtList"
+      onclick="objButtonName.value=this.name;objButton.value=5;"
+      >Listar</button
+    ><button
+      type="submit"
+      id="bmtReload"
+      name="bmtReload"
+      onclick="objButtonName.value=this.name;objButton.value=99;"
+      title="Reler o registro corrente"
+      >Reler</button
+    ><button
+      type="submit"
+      id="bmtMoveNext"
+      name="bmtMoveNext"
+      onclick="objButtonName.value=this.name;objButton.value=12;"
+      title="Próximo Registro"
+      >&gt;</button
+    ><button
+      type="submit"
+      id="bmtLast"
+      name="bmtLast"
+      onclick="objButtonName.value=this.name;objButton.value=13;"
+      title="Último Registro"
+      >&gt;|</button
+    >
+  </div>
+</form>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldManager.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldValidation.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldCounter.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormSelectKeyboardLocate.js"></script>
+<script type="text/javascript" language="Javascript1.2" src="/library/FormSelectBubbleSort.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/FillSelect.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/LibraryAjax.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/SelectAjax.js"></script>
+
+<script type="text/javascript" language="Javascript1.2" src="/formAjax.js"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- //----------------------------------------------------------------------
+
+
+//FillSelect(document.all.objUnidadeFiltro);
+
+//OptionSelect(document.all.objUF);
+
+//----------------------------------------------------------------------- -->
+</SCRIPT>
+
+<script type="text/javascript" language="Javascript1.2">
+<!-- //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+var sobjForm = document.getElementById('objfrmForm');
+
+ParseFields();
+
+// ButtonsDisabled(true);
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+</script>
+
+<script type="text/javascript" language="Javascript1.2" src="/library/FormFieldLocalEvents.js"></script>
+</body>
+</html>
+

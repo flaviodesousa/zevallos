@@ -1,0 +1,275 @@
+<?php
+/**
+ * dbMySQL
+ *
+ * Driver MySQL - Oracle MySQL
+ *
+ * @package db
+ * @subpackage MySQL
+ * @version 1.0
+ * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+ * @license http://www.gnu.org/licenses/gpl.html - GNU Public License
+ * @copyright 2010 by Ruben Zevallos(r) Jr.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * This software consists of voluntary contributions made by many individuals
+ * and is licensed under the GNU GPL. For more information, see
+ * <http://http://code.google.com/p/ztag/>
+ */
+
+define("MySQLVersion", 1.0, 1);
+
+/**
+ * Retorna a versão do driver
+ *
+ * <code>
+ * echo dbVersion_MySQL
+ * </code>
+ *
+ * @return float versão do driver
+ *
+ * @since Versão 1.0
+ */
+function dbVersion_MySQL() {
+  return MySQLVersion;
+}
+
+/**
+ * Abra a conexão com o banco de dados MySQL
+ *
+ * <code>
+ * $mysqlHandle = dbOpen_MySQL("MySQL", "database", "user", "password");
+ * </code>
+ *
+ * @param string $dbHost string de conexão com o banco de dados
+ * @param string $dbDatabase[optional] string database utilizado
+ * @param string $dbUser[optional] nome do usuário
+ * @param string $dbPassword[optional] senha do usuário
+ *
+ * @return array com o handleId e o nome do driver
+ *
+ * @since Versão 1.0
+ */
+function dbOpen_MySQL(&$dbHandle) {
+  $debugBackTrace = debug_backtrace();
+
+  $debugFile     = basename($debugBackTrace[1]["file"]);
+  $debugFunction = $debugBackTrace[1]["function"];
+
+  $dbDriver   = $dbHandle[dbHandleDriver];
+
+  if(!function_exists("mysql_connect")) {
+    echo "<span style=\"text-align: left;\"><pre><b>$dbDriver - $debugFile - $debugFunction() - Connect</b>:"
+        ."<br />extension=<b>php_mysql_libmysql.dll</b> is not loaded";
+
+    echo "<hr />".debugBackTrace();
+
+    echo "</pre></span>";
+    die();
+  }
+
+  $dbHost     = $dbHandle[dbHandleHost];
+  $dbDatabase = $dbHandle[dbHandleDatabase];
+  $dbUser     = $dbHandle[dbHandleUser];
+  $dbPassword = $dbHandle[dbHandlePassword];
+  $dbCharset  = $dbHandle[dbHandleCharset];
+
+  // @TODO Incluir tratamento para ver se o driver está carregado
+  if (!$mysqlConn = @mysql_connect($dbHost, $dbUser, $dbPassword)) {
+    echo "<span style=\"text-align: left;\"><pre><b>$dbDriver - $debugFile - $debugFunction() - Connect</b>:"
+        ."<br /><b>Connection</b>: ".$dbHost
+        ."<br /><b>Database</b>: ".$dbDatabase
+        ."<br /><b>Message</b>: The MySQL connection failed";
+
+    echo "<hr />".debugBackTrace();
+
+    echo "</pre></span>";
+    die();
+  }
+
+  if (!@mysql_select_db($dbDatabase, $mysqlConn)) {
+    echo "<span style=\"text-align: left;\"><pre><b>$dbDriver - $debugFile - $debugFunction() - SelectDB</b>:"
+        ."<br /><b>Connection</b>: ".$dbHost
+        ."<br /><b>Database</b>: ".$dbDatabase
+        ."<br /><b>Message</b>: [".mysql_error($mysqlConn)."]";
+
+    echo "<hr />".debugBackTrace();
+
+    echo "</pre></span>";
+    die();
+  }
+
+	if (strlen($dbCharset)) mysql_set_charset($dbCharset, $mysqlConn);
+
+  return $mysqlConn;
+}
+
+/**
+ * Fecha uma conexão previamente aberta com o banco de dados MySQL
+ *
+ * <code>
+ * dbClose_MySQL($mysqlHandle);
+ * </code>
+ *
+ * @param string $dbHandle handleId da conexão
+ *
+ * @see dbOpen_MySQL()
+ *
+ * @since Versão 1.0
+ */
+function dbClose_MySQL(&$dbHandle) {
+  // @TODO Incluir tratamento para ver se o driver está carregado
+  if ($dbHandle[dbHandleId]) {
+    mysql_close($dbHandle[dbHandleId]);
+  }
+}
+
+/**
+ * Recupera uma linha de registro da conexão em questão do MySQL
+ *
+ * <code>
+ * dbQuery_MySQL($mysqlSQL);
+ * </code>
+ *
+ * @param handle $dbQuery handleId da query MySQL
+ *
+ * @see dbOpen_MySQL()
+ *
+ * @since 1.0
+ */
+function dbQuery_MySQL(&$dbHandle, $dbSQL) {
+  $debugBackTrace = debug_backtrace();
+
+  $debugFile     = basename($debugBackTrace[1]["file"]);
+  $debugFunction = $debugBackTrace[1]["function"];
+
+  $dbHandleId = $dbHandle[dbHandleId];
+
+  $dbDriver   = $dbHandle[dbHandleDriver];
+
+  $dbHost     = $dbHandle[dbHandleHost];
+  $dbDatabase = $dbHandle[dbHandleDatabase];
+
+  if (!$mysqlQuery = @mysql_query($dbSQL, $dbHandleId)) {
+    preg_match_all("%at\s+line\s+(?P<line>\d+)%i", $e, $Matches, PREG_OFFSET_CAPTURE);
+
+    $errorLine  = $Matches["line"][0][0];
+  	  	
+    echo "<span style=\"text-align: left;\"><pre><b>$dbDriver - $debugFile - $debugFunction()</b>:"
+        ."<br /><b>Connection</b>: ".$dbHost
+        ."<br /><b>Database</b>: ".$dbDatabase
+        ."<br /><b>Message</b>: [".mysql_error()."]<hr />";
+
+    preg_match_all("%^(?P<sql>.*?)(?P<r>\r)?(?P<n>\n)%sm", $dbSQL, $Matches, PREG_OFFSET_CAPTURE);
+
+    if (preg_last_error()) debugError("<b>preg_last_error</b>:".preg_last_error());
+
+    $i = 2;
+
+    $errorColumn -= 8;
+
+    foreach ($Matches[0] as $key => $value) {
+      $i++;
+
+      $sql = $Matches["sql"][$key][0];
+
+      echo "<br />";
+
+      if ($i != $errorLine) {
+        echo htmlentities($sql);
+      } else {
+        echo htmlentities($sqlLine. "&lt-- <b>Erro ($errorError - $errorMessage)</b> </font>");
+      }
+    }
+        
+    echo "<hr />".debugBackTrace();
+
+    echo "</pre></span>";
+    die();
+  }
+
+  return $mysqlQuery;
+}
+
+/**
+ * Recupera uma linha de registro da conexão em questão do MySQL
+ *
+ * <code>
+ * dbFetch_MySQL($mysqlQuery);
+ * </code>
+ *
+ * @param handle $dbQuery handleId da query MySQL
+ *
+ * @see dbOpen_MySQL()
+ *
+ * @since 1.0
+ */
+function dbFetch_MySQL(&$dbHandle, $dbResultType=dbFetchBOTH) {
+  $dbHandleQuery = $dbHandle[dbHandleQuery];
+
+  $dbResultType .= "MYSQL_";
+
+  if (defined($dbResultType)) {
+    $dbResultType = constant($dbResultType);
+  } else {
+    $dbResultType = MYSQL_ASSOC;
+  }
+
+  $mysqlFetch = mysql_fetch_array($dbHandleQuery, $dbResultType);
+
+  return $mysqlFetch;
+}
+
+/**
+ * Recupera uma linha de registro da conexão em questão do MySQL
+ *
+ * <code>
+ * dbExecute_MySQL($mysqlSQL);
+ * </code>
+ *
+ * @param handle $dbExecute handleId da Execute MySQL
+ *
+ * @see dbOpen_MySQL()
+ *
+ * @since 1.0
+ */
+function dbExecute_MySQL(&$dbHandle, $dbSQL) {
+  $debugBackTrace = debug_backtrace();
+
+  $debugFile     = basename($debugBackTrace[1]["file"]);
+  $debugFunction = $debugBackTrace[1]["function"];
+
+  $dbDriver   = $dbHandle[dbHandleDriver];
+
+  $dbHandleId = $dbHandle[dbHandleId];
+
+  $dbHost     = $dbHandle[dbHandleHost];
+  $dbDatabase = $dbHandle[dbHandleDatabase];
+
+  if (!$mysqlExecute = @mysql_query($dbSQL, $dbHandleId)) {
+    echo "<span style=\"text-align: left;\"><pre><b>$dbDriver - $debugFile - $debugFunction()</b>:"
+        ."<br /><b>Host</b>: ".$dbHost
+        ."<br /><b>Database</b>: ".$dbDatabase
+        ."<br /><b>Message</b>: [".mysql_error($dbHandleId)."]";
+
+    echo "<hr />".debugBackTrace();
+
+    echo "</pre></span>";
+    die();
+  }
+
+  return $mysqlExecute;
+}
+
+?>

@@ -1,0 +1,50 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="coupons">
+	<div class="dashboard" id="dashboard">
+		<ul>${mcurrent_team($selector)}</ul>
+	</div>
+    <div id="content" class="coupons-box clear mainwide">
+		<div class="box clear">
+            <div class="box-top"></div>
+            <div class="box-content">
+                <div class="head">
+				<!--{if $selector=='failure'}-->
+                    <h2>Ofertas que falharam</h2>
+				<!--{elseif $selector=='success'}-->
+                    <h2>Ofertas validas</h2>
+				<!--{else}-->
+                    <h2>Oferta atual</h2>
+				<!--{/if}-->
+				</div>
+                <div class="sect">
+					<table id="orders-list" cellspacing="0" cellpadding="0" border="0" class="coupons-table">
+					<tr><th width="40">ID</th><th width="400">Item</th><th width="80" nowrap>Categoria</th><th width="100">Data</th><th width="50">Completa</th><th width="60" nowrap>Preço</th><th width="140">Operação</th></tr>
+					<!--{loop $teams $index $one}-->
+					<!--${$oldstate = $one['state']}-->
+					<!--${$one['state'] = team_state($one)}-->
+					<tr ${$index%2?'':'class="alt"'} id="team-list-id-{$one['id']}">
+						<td>{$one['id']}</a></td>
+						<td><a class="deal-title" href="/team.php?id={$one['id']}" target="_blank">{$one['title']}</a></td>
+						<td nowrap>{$cities[$one['city_id']]['name']}<br/>{$groups[$one['group_id']]['name']}</td>
+						<td nowrap>${date('d-m-Y',$one['begin_time'])}<br/>${date('d-m-Y',$one['end_time'])}</td>
+						<td nowrap>{$one['now_number']}/{$one['min_number']}</td>
+						<td nowrap><span class="money">{$currency}</span>${moneyit($one['team_price'])}<br/><span class="money">{$currency}</span>${moneyit($one['market_price'])}</td>
+						<td class="op" nowrap><a href="/ajax/manage.php?action=teamdetail&id={$one['id']}" class="ajaxlink">Detalhes</a>｜<a href="/manage/team/edit.php?id={$one['id']}">Editar</a>｜<a href="/ajax/manage.php?action=teamremove&id={$one['id']}" class="ajaxlink" ask="Certeza?" >Deletar</a><!--{if $one['close_time']&&in_array($one['state'],array('success','soldout'))}-->｜<a href="/manage/team/down.php?id={$one['id']}" target="_blank">Download</a><!--{/if}--></td>
+					</tr>
+					<!--{/loop}-->
+					<tr><td colspan="7">{$pagestring}</tr>
+                    </table>
+				</div>
+            </div>
+            <div class="box-bottom"></div>
+        </div>
+    </div>
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->
+

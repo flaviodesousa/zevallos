@@ -1,0 +1,237 @@
+Whish list para o Processador de Tags
+======================================================================
+zDebug ou zShow - Para mostrar informação de debug durante a execução
+----------------------------------------------------------------------
+[RZJ - 2010/10/13] 
+- criar uma tag para mostrar no formato humano as informações de uma 
+  ou mais zTags já processadas.
+  
+- <zdebug:lasttag <-- Acessa a zTag imediatamente anterior a esta onde:
+  + Utilizando param="#constant", teremos acesso ao conteúdo do 
+    parâmetro em questão, podendo transforma-lo de acordo com a 
+    necessidade.
+    
+======================================================================
+zDB - Facilitar o trabalho com as tabelas e colunas
+----------------------------------------------------------------------
+[RZJ - 2010/10/13] 
+- Criar a gestão de modelos, onde será possivel definir:
+  + Estrutura das tabelas
+  + Caption dos campos (para quando for necessário)
+  + Criação de tabelas
+  + Criação de índices
+  + Facilitador de Select, Insert e Update
+  + Listar databases
+  + Criar constraints
+  + Criar Identity
+  + Facilitador para alterar tabelas
+  + Criar, listar e editar Databases
+  + Criar, listar e editar Tabelas
+
+======================================================================
+zSave - Salva o conteúdo de uma varíavel ou matriz em um arquivo
+----------------------------------------------------------------------
+[RZJ - 2010/10/13]
+- Definir o nome do arquivo que será salvo
+- Variável que contém o conteúdo
+- Criar parâmetro savetovar="", onde definirá a variável onde será 
+  gravado o resultado processado.
+- 
+
+======================================================================
+zHTTP - Tratamento de dados usando o cURL para conexão HTTP
+----------------------------------------------------------------------
+[RZJ - 2010/10/04] - Criar uma tag para preparar, enviar e receber informações usando o protocolo HTTP
+ 
+======================================================================
+zSocket - Tratamento de dados usando o Socket
+----------------------------------------------------------------------
+[RZJ - 2010/10/04] - Criar uma tag para conectar em outros servidores usando Socket
+
+======================================================================
+zLayout - Manipulação de matrizes usando layouts pré-definidos
+----------------------------------------------------------------------
+[RZJ - 2010/10/04] - Usar a idéia das funções de relatórios para matrizes.
+
+======================================================================
+zXML - Processamento de informação no formato XML
+----------------------------------------------------------------------
+[RZJ - 2010/10/04] - Ler usando HTTP, processar e transformar dados usando XML
+
+======================================================================
+zSave - Salvar o conteúdo de alguma variável em algum arquivo
+----------------------------------------------------------------------
+[RZJ - 2010/10/04] - Emular o que as zTags SQLSave fazem, mas focando para a transformação de matrizes ou resultados de processamento.
+
+======================================================================
+zCache - Controlar o cache de uma página publicada
+----------------------------------------------------------------------
+[RZJ - 2010/10/04] 
+- Criar a tag para controlar o cache de uma página, usando um Hash, validade etc.
+
+- Ler o template
+- Sempre gerar o Hash MD5 (avaliar o custo de processamento)
+- Se encontrar a zTag de carga do cache, carrega-lo, se encontrar
+- Compilar as zTags
+- Se ele encontrar a zTag de cache, verificar o nível do cache:
+  + Compilação
+    Compilação, ele gravará as matrizes serializadas ao lado do template.
+    Incluir na 1a linha o Hash, para que seja lido sem precisar carregar todo o conteúdo
+    Definir também na 2a linha, data e hora da validade em timestamp
+    
+  + Resultado
+    Será o cache da página gerada, que poderá depender de alguns critérios como:
+    * URL amigável
+    * Pasta e arquivo que será gerado (validar e criar as pastas quando for necessário)
+    * Gravar o arquivo
+    * Definir critérios para update, incluindo pais, avós etc
+
+======================================================================
+Cache das zTAgs Controlar o cache das zTags processadas
+----------------------------------------------------------------------
+[RZJ - 2010/10/14]
+- Estudar como criar um sistema de cache para tags que tenham processamento fixo e tags, como:
+  + zTagSQL
+  + Templates
+  + e outras zTags que tem filhos, como o zTagField.
+  
+  O cache terá a grande vantagem de não precisar recompilar. O programador, poderá
+  definir se a zTag terá o cache de compilação por:
+  + Parâmetro na zTag (negando)
+  + Prazo de validação e refresh
+  + Parâmetro no $_REQUEST
+  + zTag que definirá no começo.  
+
+======================================================================
+zINI - Configurar para usar conteúdo em arquivo .INI
+----------------------------------------------------------------------
+[RZJ - 2010/10/04] - Usar arquivos .INI para gerenciamento de conteúdo dentro dos parâmetros, incluido a sua geração.
+
+======================================================================
+zVar - Melhorar a zTag 
+----------------------------------------------------------------------
+[RZJ - 2010/10/04] - Incluir variável persistente que será gravada em algum arquivo .INI.
+
+
+======================================================================
+Carga automática do template para processamento
+----------------------------------------------------------------------
+
+[RZJ - 2010/09/27] - Processamento automático do template 
+Usar o rewrite para encontrar e executar o template correto dentro de uma determinada pasta, como:
+- / <-- Pasta raiz
+Verificar se existe o /index.ztag ou para o OM, /index.om, se ele encontrar, executar o om.php?temp=/index
+
+- /Pasta01 <-- Pasta raiz
+Verificar se existe a /Pasta01, se existir, procurar pelo /Pasta01/index.ztag ou para o OM, /Pasta01/index.om, 
+se ele encontrar, executar o om.php?temp=/Pasta01/index
+
+Caso não encontre, usar o template padrão para outras páginas que será o /default.ztag
+
+- Cada pasta poderá ter o seu template e/ou, usar algum template padrão que será definido como tal, onde:
+
+  + /Pasta01/Default.ztag <-- Será o template default para todos os filhos
+  
+  Todas as vezes que encontrar o Default.ztag, ele será usado como padrão na falta de Templates.
+  
+
+----------------------------------------------------------------------
+zHelp
+
+- Função de Help para cada tag, onde teremos o help da tag e/ou de cada uma das funções.
+
+- O Help deverá ser rotativo e simples de uso, imagino inclui-lo em um arquivo .INI, com 
+todos os detalhes que serão carregados de acordo com o pedido do usuário
+
+- Gerador de HELP utilizando como exemplo conjuntos de Tags em algum template, então 
+teremos uma ZHelp, que vai ler o template e gerar o Help contendo os ítens e exemplos de uso.
+
+- Estudar para ver como usar o PHP Doc para fazer a documentação das ZTags no código.
+
+----------------------------------------------------------------------
+Validação
+
+- Validar os parâmetros vários de uma Tag... <-- [RZJ - 2010/09/27]  
+
+----------------------------------------------------------------------
+Gestão dos erros
+
+- Gerar o erro e parar a execução da Tag quando for o caso.
+
+- Criar opção para gravar o Log de erro em algum arquivo
+
+
+----------------------------------------------------------------------
+ZSystem - Tag para retornar informações do sistema
+
+Será uma Tag que vai retornar informações do sistema PHP, talvez substituir as ZTags já criadas.
+
+Penso que poderemos também incluir as seguinte funções:
+- Dados de algum Id
+- Verificar se existe alguma tag
+
+----------------------------------------------------------------------
+zsystem ou zparam
+
+Definição de parâmetros para possibilitar a:
+- Carga de parâmetros gerais de arquivos de parâmetros
+- Definir parâmetros usando tags
+- Gravar ou atualizar o arquivo de parâmetros
+- Retornar e/ou usar algum meio de avaliar se já foram carregados determinados parâmetros e 
+  dar a opção de carregar o arquivo em vez executar as tags de parametrização.
+
+----------------------------------------------------------------------
+zmessage
+
+Meio para:
+- Definir e atualizar as mensagens padrão do sistema
+- Gravar ou atualizar o arquivo de mensagens do sistema
+- Definir meio para carregar e usar as mensagens do sistema de erro e alerta.
+
+ 
+----------------------------------------------------------------------
+zform
+
+[RZJ - 2010/09/27] Função para inclusão de todas as tags, fora as que estão na lista de parâmetros.
+
+[RZJ - 2010/09/27] Meio para definir template que será impresso no formBegin e formEnd.
+
+[RZJ - 2010/09/27] Meio para definir template que será impresso antes e depois do <body>
+ 
+
+----------------------------------------------------------------------
+Funções e transformações dos dados
+
+Muitas vezes vamos precisar de tranformar os dados no momento da apresentação ou entrega no campo value.
+
+Então a idéia será de criar várias funções similares ao do PHP para que possamos tratar os dados.
+
+Poderemos usar nos campos ${@variavelLocal->substr(1, 2) + }
+
+----------------------------------------------------------------------
+Controle do fluxo
+
+Nas liguagens normais temos os controladores de Fluxo como:
+if
+switch
+while
+for
+foreach
+ 
+Cada um possibilita o controle de diversas possibilidades durante a execução, onde podemos configurar a 
+execução de acordo com a necessidade.
+
+<zif:if condition="${$variavelLocal == '10'}">
+ .
+ .
+ .
+</zif:if>
+
+<zfor:for var="@variavelFor" to="" step="">
+</zfor:for>
+
+<zfor:foreach var="@variavelArray" key="$varKey" value="$varValue">
+</zfor:foreach>
+
+
+

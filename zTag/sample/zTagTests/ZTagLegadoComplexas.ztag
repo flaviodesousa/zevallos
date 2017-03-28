@@ -1,0 +1,549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<title>Legado - Complexas - ZTags</title>
+		<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+		<style type="text/css" media="screen, projection">
+		body {
+			margin: 0px 0px 0px 10px;
+			padding: 0px 0px 0px 0px;
+			font-family: Arial, Verdana, Helvetica, sans-serif;
+			color: #444444;;
+			line-height: 125%;
+		}
+		
+		h3 {
+			margin: 10px 0px 0px 0px;
+		}
+		
+		hr {
+			margin: 0px 0px 10px 0px;
+		}
+		
+		dl {
+			font-size: 90%;
+			line-height: 125%;
+			margin: 0px;
+		}
+		
+		dt {
+			color: navy;
+			font-size: 90%;
+			padding-left: 0px;
+			margin: 3px 0px 0px 0px;
+			font-weight: bold;
+		}
+		
+		dd {
+			margin: 0px 0px 0px 10px;
+		}
+		</style>
+	</head>
+	<body>
+		<h3>ZTags antigas do OM 3 - Complexas</h3>
+		<hr />
+		<table border="0">
+      <tr>
+        <th colspan="5">Corpo</th>
+      </tr>
+			<tr>
+				<td><b>BodyRightPicture</b>
+				<td>&lt;ztag:BodyRightPicture /&gt;</td>
+				<td><ztag:BodyRightPicture /></td>
+				<td>&lt;ztagBodyRightPicture /&gt;</td>
+				<td><ztagBodyRightPicture /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Box</th>
+      </tr>
+			<tr>
+				<td><b>Box</b>
+				<td>&lt;ztag:Box /&gt;</td>
+				<td><ztag:Box /></td>
+				<td>&lt;ztagBox /&gt;</td>
+				<td><ztagBox /></td>
+			</tr>
+			<tr>
+				<td><b>Box2</b>
+				<td>&lt;ztag:Box2 /&gt;</td>
+				<td><ztag:Box2 /></td>
+				<td>&lt;ztagBox2 /&gt;</td>
+				<td><ztagBox2 /></td>
+			</tr>
+			<tr>
+				<td><b>BoxCalendario</b>
+				<td>&lt;ztag:BoxCalendario /&gt;</td>
+				<td><ztag:BoxCalendario /></td>
+				<td>&lt;ztagBoxCalendario /&gt;</td>
+				<td><ztagBoxCalendario /></td>
+			</tr>
+			<tr>
+				<td><b>BoxFather</b>
+				<td>&lt;ztag:BoxFather /&gt;</td>
+				<td><ztag:BoxFather /></td>
+				<td>&lt;ztagBoxFather /&gt;</td>
+				<td><ztagBoxFather /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Configuração</th>
+      </tr>
+			<tr>
+				<td><b>Conf</b>
+				<td>&lt;ztag:Conf /&gt;</td>
+				<td><ztag:Conf /></td>
+				<td>&lt;ztagConf /&gt;</td>
+				<td><ztagConf /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Sessão</th>
+      </tr>
+			<tr>
+				<td><b>CurrentDate</b>
+				<td>&lt;ztag:CurrentDate /&gt;</td>
+				<td><ztag:CurrentDate /></td>
+				<td>&lt;ztagCurrentDate /&gt;</td>
+				<td><ztagCurrentDate /></td>
+			</tr>
+			<tr>
+				<td><b>CurrentUser</b>
+				<td>&lt;ztag:CurrentUser /&gt;</td>
+				<td><ztag:CurrentUser /></td>
+				<td>&lt;ztagCurrentUser /&gt;</td>
+				<td><ztagCurrentUser /></td>
+			</tr>
+			<tr>
+				<td><b>CurrentUserPages</b>
+				<td>&lt;ztag:CurrentUserPages /&gt;</td>
+				<td><ztag:CurrentUserPages /></td>
+				<td>&lt;ztagCurrentUserPages /&gt;</td>
+				<td><ztagCurrentUserPages /></td>
+			</tr>
+			<tr>
+				<td><b>CurrentUserStart</b>
+				<td>&lt;ztag:CurrentUserStart /&gt;</td>
+				<td><ztag:CurrentUserStart /></td>
+				<td>&lt;ztagCurrentUserStart /&gt;</td>
+				<td><ztagCurrentUserStart /></td>
+			</tr>
+			<tr>
+				<td><b>CurrentUserStartTime</b>
+				<td>&lt;ztag:CurrentUserStartTime /&gt;</td>
+				<td><ztag:CurrentUserStartTime /></td>
+				<td>&lt;ztagCurrentUserStartTime /&gt;</td>
+				<td><ztagCurrentUserStartTime /></td>
+			</tr>
+			<tr>
+				<td><b>DateTime</b>
+				<td>&lt;ztag:DateTime /&gt;</td>
+				<td><ztag:DateTime /></td>
+				<td>&lt;ztagDateTime /&gt;</td>
+				<td><ztagDateTime /></td>
+			</tr>
+			<tr>
+				<td><b>DefaultDomain</b>
+				<td>&lt;ztag:DefaultDomain /&gt;</td>
+				<td><ztag:DefaultDomain /></td>
+				<td>&lt;ztagDefaultDomain /&gt;</td>
+				<td><ztagDefaultDomain /></td>
+			</tr>
+			<tr>
+				<td><b>DefaultPaginaASP</b>
+				<td>&lt;ztag:DefaultPaginaASP /&gt;</td>
+				<td><ztag:DefaultPaginaASP /></td>
+				<td>&lt;ztagDefaultPaginaASP /&gt;</td>
+				<td><ztagDefaultPaginaASP /></td>
+			</tr>
+			<tr>
+				<td><b>DefaultPaginaHTM</b>
+				<td>&lt;ztag:DefaultPaginaHTM /&gt;</td>
+				<td><ztag:DefaultPaginaHTM /></td>
+				<td>&lt;ztagDefaultPaginaHTM /&gt;</td>
+				<td><ztagDefaultPaginaHTM /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Form</th>
+      </tr>
+			<tr>
+				<td><b>Form</b>
+				<td>&lt;ztag:Form name="temp" /&gt;</td>
+				<td><ztag:Form name="temp" /></td>
+				<td>&lt;ztagForm.temp /&gt;</td>
+				<td><ztagForm.temp /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Busca</th>
+      </tr>
+			<tr>
+				<td><b>FreeTextSearch</b>
+				<td>&lt;ztag:FreeTextSearch /&gt;</td>
+				<td><ztag:FreeTextSearch /></td>
+				<td>&lt;ztagFreeTextSearch /&gt;</td>
+				<td><ztagFreeTextSearch /></td>
+			</tr>
+			<tr>
+				<td><b>IFrame</b>
+				<td>&lt;ztag:IFrame /&gt;</td>
+				<td><ztag:IFrame /></td>
+				<td>&lt;ztagIFrame /&gt;</td>
+				<td><ztagIFrame /></td>
+			</tr>
+			<tr>
+				<td><b>LastImage</b>
+				<td>&lt;ztag:LastImage /&gt;</td>
+				<td><ztag:LastImage /></td>
+				<td>&lt;ztagLastImage /&gt;</td>
+				<td><ztagLastImage /></td>
+			</tr>
+			<tr>
+				<td><b>LastNews</b>
+				<td>&lt;ztag:LastNews /&gt;</td>
+				<td><ztag:LastNews /></td>
+				<td>&lt;ztagLastNews /&gt;</td>
+				<td><ztagLastNews /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Arquivo</th>
+      </tr>
+			<tr>
+				<td><b>LoadFile</b>
+				<td>&lt;ztag:LoadFile /&gt;</td>
+				<td><ztag:LoadFile /></td>
+				<td>&lt;ztagLoadFile /&gt;</td>
+				<td><ztagLoadFile /></td>
+			</tr>
+			<tr>
+				<td><b>LoadFileJS</b>
+				<td>&lt;ztag:LoadFileJS /&gt;</td>
+				<td><ztag:LoadFileJS /></td>
+				<td>&lt;ztagLoadFileJS /&gt;</td>
+				<td><ztagLoadFileJS /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Menu</th>
+      </tr>
+			<tr>
+				<td><b>MenuFooterPrint</b>
+				<td>&lt;ztag:MenuFooterPrint /&gt;</td>
+				<td><ztag:MenuFooterPrint /></td>
+				<td>&lt;ztagMenuFooterPrint /&gt;</td>
+				<td><ztagMenuFooterPrint /></td>
+			</tr>
+			<tr>
+				<td><b>MenuFooterRecomendation</b>
+				<td>&lt;ztag:MenuFooterRecomendation /&gt;</td>
+				<td><ztag:MenuFooterRecomendation /></td>
+				<td>&lt;ztagMenuFooterRecomendation /&gt;</td>
+				<td><ztagMenuFooterRecomendation /></td>
+			</tr>
+			<tr>
+				<td><b>MenuFooterScript</b>
+				<td>&lt;ztag:MenuFooterScript /&gt;</td>
+				<td><ztag:MenuFooterScript /></td>
+				<td>&lt;ztagMenuFooterScript /&gt;</td>
+				<td><ztagMenuFooterScript /></td>
+			</tr>
+			<tr>
+				<td><b>MenuLeft</b>
+				<td>&lt;ztag:MenuLeft /&gt;</td>
+				<td><ztag:MenuLeft /></td>
+				<td>&lt;ztagMenuLeft /&gt;</td>
+				<td><ztagMenuLeft /></td>
+			</tr>
+			<tr>
+				<td><b>MenuLeftJS</b>
+				<td>&lt;ztag:MenuLeftJS /&gt;</td>
+				<td><ztag:MenuLeftJS /></td>
+				<td>&lt;ztagMenuLeftJS /&gt;</td>
+				<td><ztagMenuLeftJS /></td>
+			</tr>
+			<tr>
+				<td><b>MenuRight</b>
+				<td>&lt;ztag:MenuRight /&gt;</td>
+				<td><ztag:MenuRight /></td>
+				<td>&lt;ztagMenuRight /&gt;</td>
+				<td><ztagMenuRight /></td>
+			</tr>
+			<tr>
+				<td><b>MenuRightJS</b>
+				<td>&lt;ztag:MenuRightJS /&gt;</td>
+				<td><ztag:MenuRightJS /></td>
+				<td>&lt;ztagMenuRightJS /&gt;</td>
+				<td><ztagMenuRightJS /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Página</th>
+      </tr>
+			<tr>
+				<td><b>PageBodySubTitle</b>
+				<td>&lt;ztag:PageBodySubTitle /&gt;</td>
+				<td><ztag:PageBodySubTitle /></td>
+				<td>&lt;ztagPageBodySubTitle /&gt;</td>
+				<td><ztagPageBodySubTitle /></td>
+			</tr>
+			<tr>
+				<td><b>PageBodyTitle</b>
+				<td>&lt;ztag:PageBodyTitle /&gt;</td>
+				<td><ztag:PageBodyTitle /></td>
+				<td>&lt;ztagPageBodyTitle /&gt;</td>
+				<td><ztagPageBodyTitle /></td>
+			</tr>
+			<tr>
+				<td><b>PageTemplateTitle</b>
+				<td>&lt;ztag:PageTemplateTitle /&gt;</td>
+				<td><ztag:PageTemplateTitle /></td>
+				<td>&lt;ztagPageTemplateTitle /&gt;</td>
+				<td><ztagPageTemplateTitle /></td>
+			</tr>
+			<tr>
+				<td><b>PageTitle</b>
+				<td>&lt;ztag:PageTitle /&gt;</td>
+				<td><ztag:PageTitle /></td>
+				<td>&lt;ztagPageTitle /&gt;</td>
+				<td><ztagPageTitle /></td>
+			</tr>
+			<tr>
+				<td><b>PrintingDateTime</b>
+				<td>&lt;ztag:PrintingDateTime /&gt;</td>
+				<td><ztag:PrintingDateTime /></td>
+				<td>&lt;ztagPrintingDateTime /&gt;</td>
+				<td><ztagPrintingDateTime /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">XML</th>
+      </tr>
+			<tr>
+				<td><b>ProcessXML</b>
+				<td>&lt;ztag:ProcessXML /&gt;</td>
+				<td><ztag:ProcessXML /></td>
+				<td>&lt;ztagProcessXML /&gt;</td>
+				<td><ztagProcessXML /></td>
+			</tr>
+			<tr>
+				<td><b>ProcessXMLJS</b>
+				<td>&lt;ztag:ProcessXMLJS /&gt;</td>
+				<td><ztag:ProcessXMLJS /></td>
+				<td>&lt;ztagProcessXMLJS /&gt;</td>
+				<td><ztagProcessXMLJS /></td>
+			</tr>
+      <tr>
+        <td><b>XML</b>
+        <td>&lt;ztag:XML /&gt;</td>
+        <td><ztag:XML /></td>
+        <td>&lt;ztagXML /&gt;</td>
+        <td><ztagXML /></td>
+      </tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Ler HTTP</th>
+      </tr>
+			<tr>
+				<td><b>ReadHTTP</b>
+				<td>&lt;ztag:ReadHTTP url="http://sg.d2.net.br:2023/ZTag/ZTagLegadoComplexas.txt"/&gt;</td>
+				<td><ztag:ReadHTTP url="http://sg.d2.net.br:2023/ZTag/ZTagLegadoComplexas.txt" /></td>
+				<td>&lt;ztagReadHTTP."http://sg.d2.net.br:2023/ZTag/ZTagLegadoComplexas.txt" /&gt;</td>
+				<td><ztagReadHTTP."http://sg.d2.net.br:2023/ZTag/ZTagLegadoComplexas.txt" /></td>
+			</tr>
+			<tr>
+				<td><b>ReadHTTPJS</b>
+				<td>&lt;ztag:ReadHTTPJS url="http://sg.d2.net.br:2023/ZTag/ZTagLegadoComplexas.txt" file="/ZTag/ZTagLegadoComplexas.js" /&gt;</td>
+				<td><ztag:ReadHTTPJS url="http://sg.d2.net.br:2023/ZTag/ZTagLegadoComplexas.txt" file="/ZTag/ZTagLegadoComplexas.js" /></td>
+				<td>&lt;ztagReadHTTPJS."http://sg.d2.net.br:2023/ZTag/ZTagLegadoComplexas.txt"."ZTag/ZTagLegadoComplexas.js"/&gt;</td>
+				<td><ztagReadHTTPJS."http://sg.d2.net.br:2023/ZTag/ZTagLegadoComplexas.txt"."ZTag/ZTagLegadoComplexas.js"/></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Referencia</th>
+      </tr>
+			<tr>
+				<td><b>Reference</b>
+				<td>&lt;ztag:Reference /&gt;</td>
+				<td><ztag:Reference /></td>
+				<td>&lt;ztagReference /&gt;</td>
+				<td><ztagReference /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Acesso</th>
+      </tr>
+			<tr>
+				<td><b>SaveFile</b>
+				<td>&lt;ztag:SaveFile /&gt;</td>
+				<td><ztag:SaveFile /></td>
+				<td>&lt;ztagSaveFile /&gt;</td>
+				<td><ztagSaveFile /></td>
+			</tr>
+			<tr>
+				<td><b>ScriptName</b>
+				<td>&lt;ztag:ScriptName /&gt;</td>
+				<td><ztag:ScriptName /></td>
+				<td>&lt;ztagScriptName /&gt;</td>
+				<td><ztagScriptName /></td>
+			</tr>
+			<tr>
+				<td><b>SendHTTP</b>
+				<td>&lt;ztag:SendHTTP /&gt;</td>
+				<td><ztag:SendHTTP /></td>
+				<td>&lt;ztagSendHTTP /&gt;</td>
+				<td><ztagSendHTTP /></td>
+			</tr>
+			<tr>
+				<td><b>SendMail</b>
+				<td>&lt;ztag:SendMail /&gt;</td>
+				<td><ztag:SendMail /></td>
+				<td>&lt;ztagSendMail /&gt;</td>
+				<td><ztagSendMail /></td>
+			</tr>
+			<tr>
+				<td><b>SiteActive</b>
+				<td>&lt;ztag:SiteActive /&gt;</td>
+				<td><ztag:SiteActive /></td>
+				<td>&lt;ztagSiteActive /&gt;</td>
+				<td><ztagSiteActive /></td>
+			</tr>
+			<tr>
+				<td><b>SiteLast</b>
+				<td>&lt;ztag:SiteLast /&gt;</td>
+				<td><ztag:SiteLast /></td>
+				<td>&lt;ztagSiteLast /&gt;</td>
+				<td><ztagSiteLast /></td>
+			</tr>
+			<tr>
+				<td><b>SiteLastTime</b>
+				<td>&lt;ztag:SiteLastTime /&gt;</td>
+				<td><ztag:SiteLastTime /></td>
+				<td>&lt;ztagSiteLastTime /&gt;</td>
+				<td><ztagSiteLastTime /></td>
+			</tr>
+			<tr>
+				<td><b>SiteLogged</b>
+				<td>&lt;ztag:SiteLogged /&gt;</td>
+				<td><ztag:SiteLogged /></td>
+				<td>&lt;ztagSiteLogged /&gt;</td>
+				<td><ztagSiteLogged /></td>
+			</tr>
+			<tr>
+				<td><b>SiteOnline</b>
+				<td>&lt;ztag:SiteOnline /&gt;</td>
+				<td><ztag:SiteOnline /></td>
+				<td>&lt;ztagSiteOnline /&gt;</td>
+				<td><ztagSiteOnline /></td>
+			</tr>
+			<tr>
+				<td><b>SiteOnlineTime</b>
+				<td>&lt;ztag:SiteOnlineTime /&gt;</td>
+				<td><ztag:SiteOnlineTime /></td>
+				<td>&lt;ztagSiteOnlineTime /&gt;</td>
+				<td><ztagSiteOnlineTime /></td>
+			</tr>
+			<tr>
+				<td><b>SitePages</b>
+				<td>&lt;ztag:SitePages /&gt;</td>
+				<td><ztag:SitePages /></td>
+				<td>&lt;ztagSitePages /&gt;</td>
+				<td><ztagSitePages /></td>
+			</tr>
+			<tr>
+				<td><b>SiteUsers</b>
+				<td>&lt;ztag:SiteUsers /&gt;</td>
+				<td><ztag:SiteUsers /></td>
+				<td>&lt;ztagSiteUsers /&gt;</td>
+				<td><ztagSiteUsers /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">SQL</th>
+      </tr>
+			<tr>
+				<td><b>SQL</b>
+				<td>&lt;ztag:SQL /&gt;</td>
+				<td><ztag:SQL /></td>
+				<td>&lt;ztagSQL /&gt;</td>
+				<td><ztagSQL /></td>
+			</tr>
+			<tr>
+				<td><b>SQLSave</b>
+				<td>&lt;ztag:SQLSave /&gt;</td>
+				<td><ztag:SQLSave /></td>
+				<td>&lt;ztagSQLSave /&gt;</td>
+				<td><ztagSQLSave /></td>
+			</tr>
+			<tr>
+				<td><b>SQLSaveJS</b>
+				<td>&lt;ztag:SQLSaveJS /&gt;</td>
+				<td><ztag:SQLSaveJS /></td>
+				<td>&lt;ztagSQLSaveJS /&gt;</td>
+				<td><ztagSQLSaveJS /></td>
+			</tr>
+    </table>
+    
+    <br /><hr /><table border="0">
+      <tr>
+        <th colspan="5">Informação</th>
+      </tr>
+			<tr>
+				<td><b>TrackingLine</b>
+				<td>&lt;ztag:TrackingLine /&gt;</td>
+				<td><ztag:TrackingLine /></td>
+				<td>&lt;ztagTrackingLine /&gt;</td>
+				<td><ztagTrackingLine /></td>
+			</tr>
+			<tr>
+				<td><b>WebPublisherVersion</b>
+				<td>&lt;ztag:WebPublisherVersion /&gt;</td>
+				<td><ztag:WebPublisherVersion /></td>
+				<td>&lt;ztagWebPublisherVersion /&gt;</td>
+				<td><ztagWebPublisherVersion /></td>
+			</tr>
+			<tr>
+				<td><b>WebWebPublisherVersionDate</b>
+				<td>&lt;ztag:WebWebPublisherVersionDate /&gt;</td>
+				<td><ztag:WebWebPublisherVersionDate /></td>
+				<td>&lt;ztagWebWebPublisherVersionDate /&gt;</td>
+				<td><ztagWebWebPublisherVersionDate /></td>
+			</tr>
+		</table>
+		
+		<hr />ZEval
+    <br />ZGet
+    <br />ZGetSession
+    <br />ZPack
+    <br />ZSet
+    <br />ZSetSession
+	</body>
+</html>

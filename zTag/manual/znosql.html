@@ -1,0 +1,1009 @@
+
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+      <h1>znosql</h1>
+       
+    
+    <h2>open</h2><hr />
+    <p>Open connection to a NoSQL Server</p>
+    <p>Open connection to a NoSQL Server
+
+<code>
+<znosql:open id="mongoDB" driver="Mongo" host="username:password</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>close</h2><hr />
+    <p>Close a Opened NoSQL Handle connection</p>
+    <p>Close a Opened NoSQL Handle connection
+
+<code>
+<znosql:close use="mongoDB">
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>insert</h2><hr />
+    <p>Do an Insert in currente Collection</p>
+    <p>Do an Insert in currente Collection
+
+</code>
+<znosql:insert use="mongoDB">
+pagCodigo="1"
+, pagNome="Page \"title\""
+, pagResumo='Page \'resume\''
+, pagDescricao:"Page body"
+, pagPalavrasChave:{"example","NoSQL"}
+, pagInclusao='2010/10/10'
+, pagAtivo=1
+</znosql:insert>
+
+<znosql:insert use="mongoDB" value="$varInsert" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>getone</h2><hr />
+    <p>Execute a NoSQL commands</p>
+    <p>Execute a NoSQL commands
+
+<code>
+<znosql:get use="mongoDB">
+Commands
+</znosql:execute>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>getall</h2><hr />
+    <p>Execute a NoSQL commands</p>
+    <p>Execute a NoSQL commands
+
+<code>
+<znosql:get use="mongoDB">
+Commands
+</znosql:execute>
+</code>
+
+$query - the evaluation or "where" expression
+$orderby - sort order desired
+$hint - hint to query optimizer
+$explain - if true, return explain plan results instead of query results
+$snapshot - if true, "snapshot mode"
+     </p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>update</h2><hr />
+    <p>Do an Update in currente Collection</p>
+    <p>Do an Update in currente Collection
+
+<code>
+<znosql:update use="mongoDB">
+criteria{pagCodigo="1"}
+, set{pagNome="Page \"title\" Updated"
+, pagResumo='Page \'resume\''
+, pagDescricao:"Page body"
+, pagPalavrasChave:{"example","NoSQL"}
+, pagInclusao='2010/10/10'
+, pagAtivo=1
+}
+</znosql:update>
+
+<znosql:update use="mongoDB" criteria="$varCriteria" value="$varInsert" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>delete</h2><hr />
+    <p>Delete a criteria at current collection</p>
+    <p>Delete a criteria at current collection
+
+<code>
+<znosql:delete use="mongoDB">
+pagCodigo="1"
+</znosql:delete>
+
+<znosql:delete use="mongoDB" criteria="$varCriteria" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>execute</h2><hr />
+    <p>Execute a NoSQL commands</p>
+    <p>Execute a NoSQL commands
+
+<code>
+<znosql:execute use="mongoDB">
+Commands
+</znosql:execute>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>setdatabase</h2><hr />
+    <p>Set a database for current Opened NoSQL connection</p>
+    <p>Set a database for current Opened NoSQL connection
+
+<code>
+<znosql:setdatabase use="mongoDB" name="Direito2" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>listdatabases</h2><hr />
+    <p>List all databases</p>
+    <p>List all databases
+
+<code>
+<znosql:listdatabases use="mongoDB" id="mongoDBlist" var="databasesList" total="databasesTotalSize">
+<br /><znosql:field use="mongoDBlist" name="name" /> - <znosql:field use="mongoDBlist" name="sizeOnDisk" /> - <znosql:field use="mongoDBlist" name="empty" />
+</znosql:listdatabases>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>getstats</h2><hr />
+    <p>Return the server Stats</p>
+    <p>Return the server Stats
+
+<code>
+<znosql:getstats use="mongoDB" var="mongoStats" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>repairdatabase</h2><hr />
+    <p>Repair the current Database</p>
+    <p>Repair the current Database
+
+<code>
+<znosql:repairdatabase use="mongoDB" preserveclonedfiles="true" backuporiginalfiles="true" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>dropdatabase</h2><hr />
+    <p>Drop current database</p>
+    <p>Drop current database
+
+<code>
+<znosql:dropdatabase use="mongoDB" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>setcollection</h2><hr />
+    <p>Set a collection for current database</p>
+    <p>Set a collection for current database
+
+<code>
+<znosql:setcollection use="mongoDB" name="pubPaginas" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>listcollections</h2><hr />
+    <p>List all databases</p>
+    <p>List all databases
+
+<code>
+<znosql:listcollections use="mongoDB" id="mongoDBlist" var="databasesList" total="databasesTotalSize">
+<br /><znosql:field use="mongoDBlist" name="name" /> - <znosql:field use="mongoDBlist" name="sizeOnDisk" /> - <znosql:field use="mongoDBlist" name="empty" />
+</znosql:listcollections>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>dropcollection</h2><hr />
+    <p>Drop a collection for current database</p>
+    <p>Drop a collection for current database
+
+<code>
+<znosql:dropcollection use="mongoDB" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>createcollection</h2><hr />
+    <p>Create a collection for current database</p>
+    <p>Create a collection for current database
+
+</code>
+<znosql:createcollection use="mongoDB" name="pubPaginas" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>renamecollection</h2><hr />
+    <p>Create a collection for current database</p>
+    <p>Create a collection for current database
+
+<code>
+<znosql:createcollection use="mongoDB" from="pubPaginas" to="pubPaginasOld"/>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>listindexes</h2><hr />
+    <p>List all indexes for a Collection</p>
+    <p>List all indexes for a Collection
+
+<code>
+<znosql:listindexes use="mongoDB" collection="pubPaginas" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>ensureindex</h2><hr />
+    <p>Ensure a index of current collection</p>
+    <p>Ensure a index of current collection
+
+<code>
+<znosql:ensureindex use="mongoDB" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>deleteindex</h2><hr />
+    <p>Delete a index for a Collection</p>
+    <p>Delete a index for a Collection
+
+<code>
+<znosql:deleteindex use="mongoDB" collection="pubPaginas" index="pagNome"/>
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    
+<html lang="en:us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>znosql</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}   
+    </style>
+  </head>
+  <body>
+    
+    <h2>field</h2><hr />
+    <p>Return the content of name field of current record</p>
+    <p>Return the content of name field of current record
+
+</code>
+<zdb:field use="mongoDBlist" name="name" />
+</code>
+
+</p>
+     
+    <dl>
+      
+      
+      
+      
+      
+      
+      
+      
+    </dl>
+  </body>
+</html>
+	    

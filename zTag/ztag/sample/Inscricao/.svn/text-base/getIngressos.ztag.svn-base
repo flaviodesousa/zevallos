@@ -1,0 +1,24 @@
+<zrequest:get name="ingNome" var="ingNome" transform="stripTags()" />
+<zrequest:get name="ingEMail" var="ingEMail" transform="stripTags()" />
+<zrequest:get name="txtendereco" var="ingLogradouro" transform="stripTags()" />
+<zrequest:get name="ingLogradouro" var="ingNumero" transform="stripTags()" />
+<zrequest:get name="ingComplemento" var="ingComplemento" transform="stripTags()" />
+<zrequest:get name="ingBairro" var="ingBairro" transform="stripTags()" />
+<zrequest:get name="ingCidade" var="ingCidade" transform="stripTags()" />
+<zrequest:get name="ingUF" var="ingUF" transform="stripTags()" />
+<zrequest:get name="ingCEP" var="ingCEP" transform="stripTags()" />
+<zrequest:get name="ingTelefones" var="ingTelefones" transform="stripTags()" />
+<zrequest:get name="ingRG" var="ingRG" transform="stripTags()" />
+<zrequest:get name="ingCPF" var="ingCPF" transform="stripTags()" />
+<zrequest:get name="intTipoIngresso" var="intTipoIngresso" transform="stripTags()" />
+<zrequest:get name="intCidadeEvento" var="intCidadeEvento" transform="stripTags()" />
+<zrequest:get name="ingQuantidade" var="ingQuantidade" transform="stripTags()" />
+<zrequest:get name="ingValor" var="ingValor" transform="stripTags()" />
+
+<zdb:open id="mysqlConn" driver="mysql" host="mysqlhost" database="mysqldatabase" user="mysqluser" password="mysqlpassword" />
+	<zdb:execute use="mysqlConn">
+	INSERT cadIngressos
+	(ingNome, ingEMail, ingLogradouro, ingNumero, ingComplemento, ingBairro, ingCidade, ingUF, ingCEP, ingTelefones, ingRG, ingCPF, intTipoIngresso, intCidadeEvento, ingQuantidade, ingValor)
+	VALUES ('$ingNome', '$ingEMail', '$ingLogradouro', '$ingNumero', '$ingComplemento', '$ingBairro', '$ingCidade', '$ingUF', '$ingCEP', '$ingTelefones', '$ingRG', '$ingCPF', '$intTipoIngresso', '$intCidadeEvento', '$ingQuantidade', '$ingValor')
+	</zdb:execute>
+<zdb:close use="mysqlConn" />

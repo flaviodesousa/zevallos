@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Lugar Médico</title>
+  <link rel="stylesheet" type="text/css" href="/css/geral.css" media="screen, projection"></link>
+  <link rel="stylesheet" type="text/css" href="/css/box.css" media="screen, projection"></link>
+  <link rel="stylesheet" type="text/css" href="/css/noticias.css" media="screen, projection"></link>
+  <link rel="stylesheet" type="text/css" href="/css/menu.css" media="screen, projection"></link>
+  <link rel="stylesheet" type="text/css" href="/css/login.css" media="screen, projection"></link>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".signin").click(function(e) {
+				e.preventDefault();
+                $("fieldset#signin_menu").toggle();
+				$(".signin").toggleClass("menu-open");
+            });
+
+			$("fieldset#signin_menu").mouseup(function() {
+				return false
+			});
+			$(document).mouseup(function(e) {
+				if($(e.target).parent("a.signin").length==0) {
+					$(".signin").removeClass("menu-open");
+					$("fieldset#signin_menu").hide();
+				}
+			});
+
+        });
+</script>
+<script src="/js/jquery.tipsy.js" type="text/javascript"></script>
+<script type='text/javascript'>
+    $(function() {
+	  $('#forgot_username_link').tipsy({gravity: 'w'});
+    });
+</script>
+
+</head>
+
+<body>
+        <div id="header">
+            <div class="root">
+                <div class="box-logo">
+                    <img src="/img/logo.png" width="" height="" alt=""></img>
+                </div>
+                <div class="box-login">
+
+                  <div id="topnav" class="topnav"> Have an account? <a href="login" class="signin"><span>Sign in</span></a> </div>
+                  <fieldset id="signin_menu">
+                    <form method="post" id="signin" action="https://twitter.com/sessions">
+                      <label for="username">Username or email</label>
+                      <input id="username" name="username" value="" title="username" tabindex="4" type="text">
+                      </p>
+                      <p>
+                        <label for="password">Password</label>
+                        <input id="password" name="password" value="" title="password" tabindex="5" type="password">
+                      </p>
+                      <p class="remember">
+                        <input id="signin_submit" value="Sign in" tabindex="6" type="submit">
+                        <input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
+                        <label for="remember">Remember me</label>
+                      </p>
+                      <p class="forgot"> <a href="#" id="resend_password_link">Forgot your password?</a> </p>
+                      <p class="forgot-username"> <A id=forgot_username_link
+                        title="If you remember your password, try logging in with your email"
+                        href="#">Forgot your username?</A> </p>
+                    </form>
+                  </fieldset>
+                </div>
+            </div>
+        </div>
+        <div id="menu">
+  		    <div class="root">
+              <ul>
+								<li><a href="quemSomos.ztag">Quem somos</a></li>
+								<li><a href="/public.ztag">Noticias </a></li>
+								<li><a href="/logonNew.ztag">Novo Cadastro</a></li>
+								<li><a href="/faleConosco.ztag">Fale Conosco</a></li>
+              </ul>
+          </div>
+        </div>
+        <div id="container">
+          <div class="root">
+            <div id="box">
+              <div class="header blue">Editorias</div>
+              <div class="body news-menu">
+                <ul>
+                  <li>Política</li>
+                  <li>Brasil</li>
+                  <li>Brasília</li>
+                  <li>Medicina</li>
+                  <li>Artigos</li>
+                  <li>Dicas</li>
+                </ul>
+              </div>
+            </div>
+            <div id="box">
+              <div class="header gray">Política</div>
+              <div class="body news-body">10/03/2011 16h41 - Atualizado em 10/03/2011 17h00
+                <h1>STF abre inquérito para investigar deputada Jaqueline Roriz</h1>
+                <h2>Deputada aparece em vídeo recebendo dinheiro de pivô de mensalão.<br />Assessoria da parlamentar informou que ela não irá se manifestar.</h2>
+                <span class="author-box"><span class="author-name">Robson Bonin</span> Do G1, em Brasília</span>
+                <p>A pedido do procurador-geral da República, Roberto Gurgel, o Supremo Tribunal Federal (STF) abriu inquérito nesta quinta-feira (10) para investigar a deputada federal Jaqueline Roriz (PMN-DF).</p>
+                <p>A deputada aparece ao lado do marido, Manoel Neto, em um vídeo no qual o casal recebe um pacote de dinheiro das mãos de Durval Barbosa, pivô do escândalo de corrupção que ficou conhecido como mensalão do DEM de Brasília.</p>
+                <p>A assessoria da família Roriz informou ao G1 que a deputada não vai se manifestar sobre a abertura do inquérito porque não sabe qual é a acusação que pesa contra ela.</p>
+                <p>O inquérito foi entregue ao ministro Joaquim Barbosa no STF e já tem dois pedidos de Gurgel. Segundo a assessoria da PGR, o procurador-geral da República solicitou a Barbosa autorização para que a Polícia Federal realize a perícia na fita e tome o depoimento de Jaqueline. Barbosa ainda não se pronunciou sobre os pedidos de Gurgel.</p>
+                <p>O chamado "mensalão do DEM" envolveu pagamento de propina a deputados da base aliada, empresários e integrantes do governo do Distrito Federal. O suposto esquema de corrupção foi desvendado pela Polícia Federal, em novembro de 2009, a partir da operação Caixa de Pandora.</p>
+                <p>saiba mais
+                  <ul>
+                    <li>* PSOL protocola pedido para Câmara investigar deputada Jaqueline Roriz</li>
+                    <li>* Caso Jaqueline Roriz será primeira tarefa do Conselho de Ética, diz Maia</li>
+                  </ul></p>
+                <p>A investigação levou à prisão e à cassação, no ano passado, do então governador José Roberto Arruda (atualmente sem partido; na época no DEM). O vice de Arruda, Paulo Octávio (sem partido, ex-DEM), assumiu o governo depois que o então governador pediu afastamento, mas renunciou para defender-se das acusações. Ambos sempre negaram envolvimento com o suposto esquema.</p>
+                <p>No ano passado, por conta da crise política, o Distrito Federal esteve ameaçado, durante meses, de intervenção federal. Após a renúncia de Paulo Octávio, em fevereiro de 2010, o então presidente da Câmara Distrital, Wilson Lima (PR), assumiu o governo.</p>
+                <p>Lima deixou o cargo depois que a Câmara elegeu para governador o então deputado distrital Rogério Rosso (PMDB). Ele concluiu o mandato iniciado por Arruda e permaneceu até a eleição de outubro, cujo ganhador foi Agnelo Queiroz (PT), atual governador.</p>
+              </div>
+            </div>
+            <div id="box">
+              <div class="header gray">Política</div>
+              <div class="body news-list">
+                <dl>
+                  <dt>Título da notícia</dt>
+                  <dt>Lima deixou o cargo depois que a Câmara elegeu para governador o então deputado distrital Rogério Rosso (PMDB). Ele concluiu o mandato iniciado por Arruda e permaneceu até a eleição de outubro, cujo ganhador foi Agnelo Queiroz (PT), atual governador.</dt>
+                  <dt>Título da notícia</dt>
+                  <dt>Lima deixou o cargo depois que a Câmara elegeu para governador o então deputado distrital Rogério Rosso (PMDB). Ele concluiu o mandato iniciado por Arruda e permaneceu até a eleição de outubro, cujo ganhador foi Agnelo Queiroz (PT), atual governador.</dt>
+                  <dt>Título da notícia</dt>
+                  <dt>Lima deixou o cargo depois que a Câmara elegeu para governador o então deputado distrital Rogério Rosso (PMDB). Ele concluiu o mandato iniciado por Arruda e permaneceu até a eleição de outubro, cujo ganhador foi Agnelo Queiroz (PT), atual governador.</dt>
+                  <dt>Título da notícia</dt>
+                  <dt>Lima deixou o cargo depois que a Câmara elegeu para governador o então deputado distrital Rogério Rosso (PMDB). Ele concluiu o mandato iniciado por Arruda e permaneceu até a eleição de outubro, cujo ganhador foi Agnelo Queiroz (PT), atual governador.</dt>
+                  <dt>Título da notícia</dt>
+                  <dt>Lima deixou o cargo depois que a Câmara elegeu para governador o então deputado distrital Rogério Rosso (PMDB). Ele concluiu o mandato iniciado por Arruda e permaneceu até a eleição de outubro, cujo ganhador foi Agnelo Queiroz (PT), atual governador.</dt>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="footer">
+            <div class="root">
+            	Copyright © 2011 Lugar Médico All Rights Reserved. Terms of UsePrivacy
+            </div>
+        </div>
+</body>
+</html>

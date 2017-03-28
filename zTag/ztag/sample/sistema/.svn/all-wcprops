@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/1/ztag/sample/sistema
+END
+oracleTable.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/1/ztag/sample/sistema/oracleTable.ztag
+END
+mysqlDatabases.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/25/ztag/sample/sistema/mysqlDatabases.ztag
+END
+mysqlTable.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/25/ztag/sample/sistema/mysqlTable.ztag
+END
+oracleTables.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1/ztag/sample/sistema/oracleTables.ztag
+END
+mysqlTables.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/28/ztag/sample/sistema/mysqlTables.ztag
+END
+generateForm.css
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/25/ztag/sample/sistema/generateForm.css
+END
+mysqlTableForm.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/25/ztag/sample/sistema/mysqlTableForm.ztag
+END
+sistemaLog.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1/ztag/sample/sistema/sistemaLog.ztag
+END
+oracleTableList.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1/ztag/sample/sistema/oracleTableList.ztag
+END
+mysqlTableList.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/25/ztag/sample/sistema/mysqlTableList.ztag
+END
+sistemaSessoes.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1/ztag/sample/sistema/sistemaSessoes.ztag
+END

@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="45" version="2.0">
+<workbenchAdvisor/>
+<window height="748" maximized="true" width="1024" x="167" y="3">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="121" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="124" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="85" y="22"/>
+<coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="39" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="183" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1300887727437" focus="true" label="Workspace - PHP">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+<part id="30"/>
+<part id="31"/>
+<part id="32"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="home.ztag" partName="home.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/home.ztag" title="home.ztag" tooltip="LugarMedico/home.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/home.ztag"/>
+<editorState selectionHorizontalPixel="63" selectionLength="6259" selectionOffset="0" selectionTopPixel="238"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="messageList.ztag" partName="messageList.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/messageList.ztag" title="messageList.ztag" tooltip="LugarMedico/messageList.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/messageList.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1474" selectionTopPixel="180"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="messageView.ztag" partName="messageView.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/messageView.ztag" title="messageView.ztag" tooltip="LugarMedico/messageView.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/messageView.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1475" selectionTopPixel="425"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="roomList.ztag" partName="roomList.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/roomList.ztag" title="roomList.ztag" tooltip="LugarMedico/roomList.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/roomList.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1467" selectionTopPixel="306"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="roomView.ztag" partName="roomView.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/roomView.ztag" title="roomView.ztag" tooltip="LugarMedico/roomView.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/roomView.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1470" selectionTopPixel="159"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="eventList.ztag" partName="eventList.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/eventList.ztag" title="eventList.ztag" tooltip="LugarMedico/eventList.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/eventList.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1567" selectionTopPixel="273"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="commentList.ztag" partName="commentList.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/commentList.ztag" title="commentList.ztag" tooltip="LugarMedico/commentList.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/commentList.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1475" selectionTopPixel="255"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="commentView.ztag" partName="commentView.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/commentView.ztag" title="commentView.ztag" tooltip="LugarMedico/commentView.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/commentView.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1481" selectionTopPixel="119"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="friendList.ztag" partName="friendList.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/friendList.ztag" title="friendList.ztag" tooltip="LugarMedico/friendList.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/friendList.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1471" selectionTopPixel="255"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="userProfile.ztag" partName="userProfile.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/userProfile.ztag" title="userProfile.ztag" tooltip="LugarMedico/userProfile.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/userProfile.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2165" selectionTopPixel="765"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="messageNew.ztag" partName="messageNew.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/messageNew.ztag" title="messageNew.ztag" tooltip="LugarMedico/messageNew.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/messageNew.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1475" selectionTopPixel="320"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="eventNew.ztag" partName="eventNew.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/eventNew.ztag" title="eventNew.ztag" tooltip="LugarMedico/eventNew.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/eventNew.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1571" selectionTopPixel="323"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="messageNewValidate.ztag" partName="messageNewValidate.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/messageNewValidate.ztag" title="messageNewValidate.ztag" tooltip="LugarMedico/messageNewValidate.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/messageNewValidate.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1475" selectionTopPixel="187"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="logonNewValidate.ztag" partName="logonNewValidate.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/logonNewValidate.ztag" title="logonNewValidate.ztag" tooltip="LugarMedico/logonNewValidate.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/logonNewValidate.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="198" selectionOffset="3932" selectionTopPixel="1190"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="front.ztag" partName="front.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/front.ztag" title="front.ztag" tooltip="LugarMedico/front.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/front.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1581" selectionTopPixel="689"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="eventCalendar.ztag" partName="eventCalendar.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/eventCalendar.ztag" title="eventCalendar.ztag" tooltip="LugarMedico/eventCalendar.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/eventCalendar.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1570" selectionTopPixel="170"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="faleConosco.ztag" partName="faleConosco.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/faleConosco.ztag" title="faleConosco.ztag" tooltip="LugarMedico/faleConosco.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/faleConosco.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="683"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="login.ztag" partName="login.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/login.ztag" title="login.ztag" tooltip="LugarMedico/login.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/login.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1036" selectionTopPixel="524"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="logoff.ztag" partName="logoff.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/logoff.ztag" title="logoff.ztag" tooltip="LugarMedico/logoff.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/logoff.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="userMens.ztag" partName="userMens.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/userMens.ztag" title="userMens.ztag" tooltip="LugarMedico/userMens.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/userMens.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1978" selectionTopPixel="952"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="userSetup.ztag" partName="userSetup.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/userSetup.ztag" title="userSetup.ztag" tooltip="LugarMedico/userSetup.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/userSetup.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1473" selectionTopPixel="170"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="textList.ztag" partName="textList.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/textList.ztag" title="textList.ztag" tooltip="LugarMedico/textList.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/textList.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3979" selectionTopPixel="969"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="textNew.ztag" partName="textNew.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/textNew.ztag" title="textNew.ztag" tooltip="LugarMedico/textNew.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/textNew.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="231" selectionOffset="4093" selectionTopPixel="901"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="circleList.ztag" partName="circleList.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/circleList.ztag" title="circleList.ztag" tooltip="LugarMedico/circleList.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/circleList.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1567" selectionTopPixel="153"/>
+</editor>
+<editor id="org.eclipse.wst.css.core.csssource.source" name="geral.css" partName="geral.css" path="C:/My Dropbox/ZYCWeb/LugarMedico/css/geral.css" title="geral.css" tooltip="LugarMedico/css/geral.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/css/geral.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="2643" selectionTopPixel="2196"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="roomNew.ztag" partName="roomNew.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/roomNew.ztag" title="roomNew.ztag" tooltip="LugarMedico/roomNew.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/roomNew.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="479" selectionOffset="4082" selectionTopPixel="1139"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="friendInvite.ztag" partName="friendInvite.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/friendInvite.ztag" title="friendInvite.ztag" tooltip="LugarMedico/friendInvite.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/friendInvite.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="327" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="textView.ztag" partName="textView.ztag" path="C:/Dropbox/ZYCWeb/LugarMedico/textView.ztag" title="textView.ztag" tooltip="LugarMedico/textView.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/textView.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1470" selectionTopPixel="153"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="followmeList.ztag" partName="followmeList.ztag" path="C:/Dropbox/ZYCWeb/LugarMedico/followmeList.ztag" title="followmeList.ztag" tooltip="LugarMedico/followmeList.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/followmeList.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="88" selectionOffset="2748" selectionTopPixel="635"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="quemSomos.ztag" partName="quemSomos.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/quemSomos.ztag" title="quemSomos.ztag" tooltip="LugarMedico/quemSomos.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/quemSomos.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3513" selectionTopPixel="612"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="index.ztag" partName="index.ztag" path="C:/My Dropbox/ZYCWeb/LugarMedico/index.ztag" title="index.ztag" tooltip="LugarMedico/index.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/index.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="162" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.html.core.htmlsource.source" name="classifiedList.ztag" partName="classifiedList.ztag" path="C:/Dropbox/ZYCWeb/LugarMedico/classifiedList.ztag" title="classifiedList.ztag" tooltip="LugarMedico/classifiedList.ztag" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/classifiedList.ztag"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3396" selectionTopPixel="731"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.wst.css.core.csssource.source" name="comentarios.css" partName="comentarios.css" path="C:/Dropbox/ZYCWeb/LugarMedico/css/comentarios.css" title="comentarios.css" tooltip="LugarMedico/css/comentarios.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LugarMedico/css/comentarios.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="787" selectionTopPixel="269"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.dltk.ui.TypeHierarchy" partName="Type Hierarchy"/>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<columnWidths org.eclipse.ui.ide.locationField="54" org.eclipse.ui.ide.markerType="79" org.eclipse.ui.ide.pathField="104" org.eclipse.ui.ide.resourceField="79" org.eclipse.ui.ide.severityAndDescriptionField="250"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.php.ui.explorer" partName="PHP Explorer">
+<viewState group_libraries="1" isWindowWorkingSet="false" layout="1" linkWithEditor="0" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.php.ui.explorer.EmptyInnerPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.PHPHTMLFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.NonScriptElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.NonScriptProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.RSEProjectFilter" isEnabled="true"/>
+<child filterId="org.eclipse.php.ui.explorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.ContainMembersFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.UseStatementFilter" isEnabled="true"/>
+<child filterId="org.eclipse.php.ui.explorer.SMFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.DotFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.php.ui.explorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.php.ui.explorer.ClosedProjectsFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console"/>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List"/>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.wst.css.core.csssource.source" activePerspective="org.eclipse.php.perspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.php.internal.ui.PHPPerspectiveFactory" id="org.eclipse.php.perspective" label="PHP"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.php.ui.PHPActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.php.ui.text.php.actionSet.presentation"/>
+<show_view_action id="org.eclipse.php.ui.explorer"/>
+<show_view_action id="org.eclipse.dltk.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.php.ui.functions"/>
+<show_view_action id="org.eclipse.php.ui.projectOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
+<new_wizard_action id="org.eclipse.php.ui.wizards.PHPProjectCreationWizard"/>
+<new_wizard_action id="org.eclipse.php.ui.wizards.PHPFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.php.ui.wizards.UntitledPHPDocumentWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.wst.css.ui.internal.wizard.NewCSSWizard"/>
+<new_wizard_action id="org.eclipse.wst.html.ui.internal.wizard.NewHTMLWizard"/>
+<new_wizard_action id="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<perspective_action id="org.eclipse.php.perspective"/>
+<perspective_action id="org.eclipse.php.debug.ui.PHPDebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.php.ui.explorer"/>
+<view id="org.eclipse.dltk.ui.TypeHierarchy"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.views.ProblemView" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="1024" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.php.ui.explorer" appearance="2" expanded="2">
+<page content="org.eclipse.php.ui.explorer" label="PHP Explorer"/>
+<page content="org.eclipse.dltk.ui.TypeHierarchy" label="Type Hierarchy"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.18203309" ratioLeft="231" ratioRight="1038" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.74960876" ratioLeft="479" ratioRight="160" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.74968237" ratioLeft="590" ratioRight="197" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<page content="org.eclipse.php.ui.projectOutline" label="LabelNotFound"/>
+<page content="org.eclipse.php.ui.functions" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/messageList.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/eventList.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/commentList.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/friendList.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/home.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/roomList.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/roomView.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/roomNew.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/friendInvite.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/commentView.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/textView.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/followmeList.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/circleList.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/eventCalendar.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/eventNew.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/faleConosco.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/messageNew.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/messageNewValidate.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/messageView.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/textList.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/textNew.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/userMens.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/userProfile.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/userSetup.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/front.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/quemSomos.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/index.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/classifiedList.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/textView.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/LugarMedico/followmeList.ztag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/LugarMedico/css/comentarios.css"/>
+</editors>
+<item historyLabel="circleList.ztag" index="12">
+<position info="not_deleted" x="1567" y="0"/>
+</item>
+<item historyLabel="commentList.ztag" index="2">
+<position info="not_deleted" x="1475" y="0"/>
+</item>
+<item historyLabel="commentView.ztag" index="9">
+<position info="not_deleted" x="1481" y="0"/>
+</item>
+<item historyLabel="eventCalendar.ztag" index="13">
+<position info="not_deleted" x="1570" y="0"/>
+</item>
+<item historyLabel="eventList.ztag" index="1">
+<position info="not_deleted" x="1567" y="0"/>
+</item>
+<item historyLabel="eventNew.ztag" index="14">
+<position info="not_deleted" x="1571" y="0"/>
+</item>
+<item historyLabel="faleConosco.ztag" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="followmeList.ztag" index="11">
+<position info="not_deleted" x="1471" y="0"/>
+</item>
+<item historyLabel="friendInvite.ztag" index="8">
+<position info="not_deleted" x="1471" y="0"/>
+</item>
+<item historyLabel="friendList.ztag" index="3">
+<position info="not_deleted" x="1471" y="0"/>
+</item>
+<item historyLabel="messageList.ztag" index="0">
+<position info="not_deleted" x="1474" y="0"/>
+</item>
+<item historyLabel="messageNew.ztag" index="16">
+<position info="not_deleted" x="1475" y="0"/>
+</item>
+<item historyLabel="messageNewValidate.ztag" index="17">
+<position info="not_deleted" x="1475" y="0"/>
+</item>
+<item historyLabel="messageView.ztag" index="18">
+<position info="not_deleted" x="1475" y="0"/>
+</item>
+<item historyLabel="roomList.ztag" index="5">
+<position info="not_deleted" x="1467" y="0"/>
+</item>
+<item historyLabel="roomNew.ztag" index="7">
+<position info="not_deleted" x="1471" y="0"/>
+</item>
+<item historyLabel="roomView.ztag" index="6">
+<position info="not_deleted" x="1470" y="0"/>
+</item>
+<item historyLabel="textList.ztag" index="19">
+<position info="not_deleted" x="1475" y="0"/>
+</item>
+<item historyLabel="textNew.ztag" index="20">
+<position info="not_deleted" x="1570" y="0"/>
+</item>
+<item historyLabel="textView.ztag" index="10">
+<position info="not_deleted" x="1470" y="0"/>
+</item>
+<item historyLabel="userMens.ztag" index="21">
+<position info="not_deleted" x="1978" y="0"/>
+</item>
+<item historyLabel="userProfile.ztag" index="22">
+<position info="not_deleted" x="2165" y="0"/>
+</item>
+<item historyLabel="userSetup.ztag" index="23">
+<position info="not_deleted" x="1473" y="0"/>
+</item>
+<item historyLabel="followmeList.ztag" index="11">
+<position info="not_deleted" x="3683" y="0"/>
+</item>
+<item historyLabel="front.ztag" index="24">
+<position info="not_deleted" x="3258" y="0"/>
+</item>
+<item historyLabel="quemSomos.ztag" index="25">
+<position info="not_deleted" x="3513" y="0"/>
+</item>
+<item historyLabel="index.ztag" index="26">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="home.ztag" index="4">
+<position info="not_deleted" x="1042" y="0"/>
+</item>
+<item historyLabel="front.ztag" index="24">
+<position info="not_deleted" x="1581" y="0"/>
+</item>
+<item historyLabel="roomNew.ztag" index="7">
+<position info="not_deleted" x="4533" y="0"/>
+</item>
+<item historyLabel="friendInvite.ztag" index="8">
+<position info="not_deleted" x="327" y="0"/>
+</item>
+<item historyLabel="textList.ztag" index="19">
+<position info="not_deleted" x="1475" y="0"/>
+</item>
+<item historyLabel="roomNew.ztag" index="7">
+<position info="not_deleted" x="4082" y="479"/>
+</item>
+<item historyLabel="textList.ztag" index="19">
+<position info="not_deleted" x="5338" y="0"/>
+</item>
+<item historyLabel="textNew.ztag" index="20">
+<position info="not_deleted" x="4632" y="0"/>
+</item>
+<item historyLabel="textList.ztag" index="19">
+<position info="not_deleted" x="4249" y="335"/>
+</item>
+<item historyLabel="textNew.ztag" index="20">
+<position info="not_deleted" x="4361" y="0"/>
+</item>
+<item historyLabel="textList.ztag" index="19">
+<position info="not_deleted" x="4249" y="335"/>
+</item>
+<item historyLabel="textNew.ztag" index="20">
+<position info="not_deleted" x="4093" y="231"/>
+</item>
+<item historyLabel="textList.ztag" index="19">
+<position info="not_deleted" x="3979" y="0"/>
+</item>
+<item historyLabel="home.ztag" index="4">
+<position info="not_deleted" x="3067" y="0"/>
+</item>
+<item historyLabel="followmeList.ztag" index="11">
+<position info="not_deleted" x="4464" y="0"/>
+</item>
+<item historyLabel="home.ztag" index="4">
+<position info="not_deleted" x="0" y="6259"/>
+</item>
+<item historyLabel="classifiedList.ztag" index="27">
+<position info="not_deleted" x="0" y="6257"/>
+</item>
+<item historyLabel="textView.ztag" index="28">
+<position info="not_deleted" x="1470" y="0"/>
+</item>
+<item historyLabel="followmeList.ztag" index="29">
+<position info="not_deleted" x="4464" y="0"/>
+</item>
+<item historyLabel="followmeList.ztag" index="29">
+<position info="not_deleted" x="2662" y="0"/>
+</item>
+<item historyLabel="followmeList.ztag" index="29">
+<position info="not_deleted" x="2556" y="84"/>
+</item>
+<item historyLabel="followmeList.ztag" index="29">
+<position info="not_deleted" x="2748" y="88"/>
+</item>
+<item active="true" historyLabel="comentarios.css" index="30">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="right"/>
+<trimItem IMemento.internal.id="topLeft"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="comentarios.css" tooltip="LugarMedico/css/comentarios.css">
+<persistable path="/LugarMedico/css/comentarios.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="classifiedList.ztag" tooltip="LugarMedico/classifiedList.ztag">
+<persistable path="/LugarMedico/classifiedList.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="index.ztag" tooltip="LugarMedico/index.ztag">
+<persistable path="/LugarMedico/index.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="quemSomos.ztag" tooltip="LugarMedico/quemSomos.ztag">
+<persistable path="/LugarMedico/quemSomos.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="followmeList.ztag" tooltip="LugarMedico/followmeList.ztag">
+<persistable path="/LugarMedico/followmeList.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="textView.ztag" tooltip="LugarMedico/textView.ztag">
+<persistable path="/LugarMedico/textView.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="friendInvite.ztag" tooltip="LugarMedico/friendInvite.ztag">
+<persistable path="/LugarMedico/friendInvite.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="roomNew.ztag" tooltip="LugarMedico/roomNew.ztag">
+<persistable path="/LugarMedico/roomNew.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="geral.css" tooltip="LugarMedico/css/geral.css">
+<persistable path="/LugarMedico/css/geral.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="favicon.ico" tooltip="LugarMedico/favicon.ico">
+<persistable path="/LugarMedico/favicon.ico"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="circleList.ztag" tooltip="LugarMedico/circleList.ztag">
+<persistable path="/LugarMedico/circleList.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="textNew.ztag" tooltip="LugarMedico/textNew.ztag">
+<persistable path="/LugarMedico/textNew.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="textList.ztag" tooltip="LugarMedico/textList.ztag">
+<persistable path="/LugarMedico/textList.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="userSetup.ztag" tooltip="LugarMedico/userSetup.ztag">
+<persistable path="/LugarMedico/userSetup.ztag"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="userMens.ztag" tooltip="LugarMedico/userMens.ztag">
+<persistable path="/LugarMedico/userMens.ztag"/>
+</file>
+</mruList>
+</workbench>

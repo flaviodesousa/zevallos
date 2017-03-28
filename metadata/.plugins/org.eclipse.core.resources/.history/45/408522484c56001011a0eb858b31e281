@@ -1,0 +1,126 @@
+<zheader:locationif use="!userLogged" notcondition="len()" value="/index.ztag" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<zhtml:title value="Eventos !userNameFull | #sysName" />
+
+		<link rel="stylesheet" type="text/css" href="/css/geral.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/box.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/menu.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/pags.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/logon.css" media="screen, projection"></link>
+		<link type="text/css" href="/CometChat/cometchatcss.php" rel="stylesheet" charset="utf-8">
+		<script type="text/javascript" src="/CometChat/cometchatjs.php" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="root">
+				<div class="box-logo"><a href="/"><img src="/img/logo.png" alt="Lugar Médico" /></a></div>
+				<div class="box-loggeduser"><zhtml:a href="/userProfile.ztag" value="!userName" /> - <a href="userSetup.ztag">Configurações</a> - <a href="logoff.ztag">Sair</a></div>
+			</div>
+		</div>
+		<div id="menu">
+			<div class="root">
+				<ul>
+					<li><a href="/messageList.ztag" title="Gerencia a sua caixa postal">Correio</a></li>
+					<li><a href="/friendList.ztag" title="Administra a lista de colegas">Colegas</a></li>
+					<li><a href="/commentList.ztag" title="Visualiza e modera os comentários recebidos">Comentários</a></li>
+					<li><a href="/roomList.ztag" title="Gerencia suas salas e as que voce participa">Salas</a></li>
+					<li><a href="/textList.ztag" title="Gerencia suas salas e as que voce participa">Textos</a></li>
+					<li><a href="/eventList.ztag" title="Visualiza os eventos">Eventos</a></li>
+					<li><a href="/help.ztag">Ajuda</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="container">
+			<div class="root">
+				<div id="box">
+					<zhtml:div value="!userNameFull" class="header blue" />
+					<div class="body perfil-box">
+						<zhtml:img src="!userAvatar" alt="!userNameFull" title="!userNameFull" width="120px" class="img" />
+						<div class="perfil-user-name">
+							<a href="<zsession:show name="userURLPerfil" />"><zhtml:b value="!userNameFull" /></a>
+							<br />
+							<zhtml:a href="/userProfile.ztag" title="Editar o perfil" value="Editar o perfil" />
+						</div>
+						<div class="perfil-options">
+							<dl>
+								<dt>Atualizações</dt>
+								<dd><zhtml:a href="/messageList.ztag" title="Mensagens na caixa postal" value="Mensagens" /><span class="perfil-option-qtd">99</span></dd>
+								<dd><zhtml:a href="/eventList.ztag" title="Eventos" value="Eventos" /><span class="perfil-option-qtd">99</span></dd>
+								<dd><zhtml:a href="/friendList.ztag" title="Amigos" value="Colegas" /><span class="perfil-option-qtd">99</span></dd>
+								<dd><zhtml:a href="/commentList.ztag" title="Comentários" value="Comentários" /><span class="perfil-option-qtd">99</span></dd>
+
+								<dt><zhtml:a href="/circleList.ztag" title="Círculo" value="Círculo" /> - <zhtml:a href="/circleNew.ztag" title="Novo Círculo" value="Novo" /></dt>
+								<dd><zhtml:a href="/circleView.ztag?t=geral" title="Círculo geral" value="Geral" /><span class="perfil-option-qtd">99</span></dd>
+
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div id="box">
+					<div class="header gray">Eventos</div>
+						<div class="body message-list">
+							<div class="busca">
+								Busca
+								<input type="text" name="busca" id="busca" caption="Buscar Eventos" width="40">
+								<input type="submit" name="enviar" id="enviar" value="Buscar">
+								<br /><a href="/eventNew.ztag">Novo</a>
+							</div>
+							<div class="eventos">
+								<div class="date">
+									10<br>
+									Mar<br>
+									2011
+								</div>
+								<div class="info">
+									<div class="title">Pix Clube</div>
+									<div class="descricao">Show com os melhores dj do brasil e o melhor do eletro hause.
+									<br>Homens por 2000R$
+									</div>
+								</div>
+							</div>
+							<div class="eventos">
+								<div class="date">
+									10<br>
+									Mar<br>
+									2011
+								</div>
+								<div class="info">
+									<div class="title">Pix Clube</div>
+									<div class="descricao">Show com os melhores dj do brasil e o melhor do eletro hause.
+									<br>Homens por 2000R$
+									</div>
+								</div>
+							</div>
+							<div class="eventos">
+								<div class="date">
+									10<br>
+									Mar<br>
+									2011
+								</div>
+								<div class="info">
+									<div class="title">Pix Clube</div>
+									<div class="descricao">Show com os melhores dj do brasil e o melhor do eletro hause.
+									<br>Homens por 2000R$
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="box">
+						<zhtml:div value="Eventos" class="header blue" />
+						<div class="body perfil-events">
+							<ul><li>Dica</li></ul>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="root">Copyright &copy; 2011 Lugar Médico todos os direitos reservados</div>
+		</div>
+	</body>
+</html>
+

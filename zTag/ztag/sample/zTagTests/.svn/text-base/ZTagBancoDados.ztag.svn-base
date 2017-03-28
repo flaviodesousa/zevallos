@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>Banco de Dados - ZTags</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}      
+    </style>
+  </head>
+  <body>
+		<h3>Gestão de Templates</h3>
+		<hr />
+		<dl>
+		  <dt>ZTemplate:</dt>
+		    <dd>Load:<b>templateFile</b>=<ztemplate:load id="templateFile" filename="/ztag/ZTagVariaveis.htm" /></dd>
+		    <dd>Create:<b>templateCreate01</b>=<ztemplate:create id="templateCreate01">
+																			       <li><ztag:field name="PA.pagCodigo" /></li>
+																			     </ztemplate:create></dd>  
+        <dd>Create:<b>templateCreate01</b>=<ztemplate:create id="templateCreate02">
+																			       <![CDATA[
+																			         <dd><ztag:field name="PA.pagCodigo" /></dd>
+																			       ]]>
+																			     </ztemplate:create></dd>  
+        <dd>Show:<b>templateCreate01</b>=<ztemplate:show use="templateCreate01" /> </dd>
+    </dl>
+
+<zdb:model id="CaminhoAna">
+  <table name="Cliente" alias="C" primarykey="Codigo">
+    <table name="Pedido" alias="Pe" primarykey="Codigo" relates="C:Cliente">
+      <table name="PedidoItem" alias="Pi" primarykey="Codigo" relates="Pe:Pedido">
+			  <table name="Produto" alias="Pr" primarykey="Codigo" relates="Pi:Produto" />
+			  <table name="Unidade" alias="U" primarykey="Codigo" relates="Pi:Unidade" />
+      </table>
+    </table>
+    <table name="NotaFiscal" alias="NF" primarykey="Codigo" relates="C:Cliente">
+      <table name="NotaFiscalItem" alias="NFI" primarykey="Codigo" relates="NF:Pedido">
+        <table name="Produto" alias="NFPr" primarykey="Codigo" relates="NFI:Produto" />
+        <table name="Unidade" alias="NFU" primarykey="Codigo" relates="NFI:Unidade" />
+      </table>
+    </table>
+  </table>
+</zdb:model>
+
+Path
+C  - 1 - Cliente
+Pe - 2 - Pedido
+Pi - 3 - PedidoItem
+Pr - 4 - Produto
+U  - 4 - Unidade
+
+<ul>
+  <ztag:sql times="6" model="CaminhoAna" where="Pe.Inclusao between 1/marco to 31/marco " orderby="C.Nome, Pr.Nome">
+    <li><ztag:field name="C.Nome" /> - <ztag:field name="Pr.Nome" /></li>
+  </ztag:sql>
+</ul>
+
+<zdb:model id="RAUD0001">
+  <table name="TB_GUIA" alias="G" primarykey="NU_GUIA">
+    <table name="TB_GUIA_CM" alias="GC" primarykey="NU_CONTA_MEDICA,CD_SEQUENCIA_GUIA" relates="G:NU_GUIA">
+      <table name="TB_CONTA_MEDICA" alias="CM" primarykey="NU_CONTA_MEDICA" relates="GC:NU_CONTA_MEDICA" override="NU_CONTA_MEDICA">
+        <table name="TB_PESSOA" alias="PP" primarykey="CD_PESSOA" relates="CM:CD_PESSOA" override="CD_PESSOA_PRESTADOR" />
+      </table>
+		  <table name="TB_USUARIO" alias="U" primarykey="CD_USUARIO" relates="G:CD_USUARIO" override="CD_USUARIO">
+		    <table name="TB_PESSOA" alias="UP" primarykey="CD_PESSOA" relates="U:CD_PESSOA_USUARIO" />
+		  </table>
+    </table>
+  </table>
+  <view name="V_GUIA_CM_TOTAIS" alias="GCT" relates="GC:CD_SEQUENCIA_GUIA,NU_GUIA,CM:NU_CONTA_MEDICA" override="CD_SEQUENCIA_GUIA,NU_GUIA,NU_CONTA_MEDICA" />
+  <view name="V_GUIA_QUANTIDADE" alias="GQ" relates="GC:NU_GUIA,CM:NU_CONTA_MEDICA" override="NU_GUIA,NU_CONTA_MEDICA" />
+</zdb:model>
+
+<table border="1">
+  <tr>
+    <th>CM.NU_CONTA_MEDICA</th>
+    <th>CM.CD_PESSOA_PRESTADOR</th>
+    <th>PP.NM_PESSOA NM_PRESTADOR</th>
+    <th>CM.DS_COMPETENCIA</th>
+    <th>CM.DT_FECHAMENTO</th>
+    <th>CM.DT_PAGAMENTO</th>
+    <th>CM.QT_SERVICO</th>
+    <th>CM.VL_TOTAL_CONTA_MEDICA</th>
+    <th>CM.VL_IMPOSTOS</th>
+    <th>CM.VL_LIQUIDO_A_PAGAR</th>
+    <th>GC.NU_GUIA</th>
+    <th>G.FL_GUIA_AUTORIZADA</th>
+    <th>U.CD_USUARIO</th>
+    <th>UP.NM_PESSOA NM_USUARIO</th>
+    <th>CM.DT_SOLICITACAO</th>
+    <th>CM.DT_AUTORIZACAO</th>
+    <th>GCT.QT_PROCEDIMENTO</th>
+    <th>GCT.VL_TOTAL_A_PAGAR</th>
+    <th>GCT.VL_TOTAL_COBRADO</th>
+    <th>GQ.QT_GUIA</th>
+  </tr>
+  <ztag:sql times="6" model="RAUD0001" where="GQ.QT_GUIA > 1 AND CM.DT_FECHAMENTO IS NOT NULL AND CM.DT_PAGAMENTO IS NULL AND AND CM.DT_FECHAMENTO IS NOT NULL AND CM.DT_PAGAMENTO IS NOT NULL AND AND GC.CD_PERITO_INICIAL <> CM.CD_PESSOA_PRESTADOR AND GC.CD_PERITO_FINAL <> CM.CD_PESSOA_PRESTADOR" orderby="CM.CD_PESSOA_PRESTADOR, PP.NM_PESSOA, CM.NU_CONTA_MEDICA, GC.NU_GUIA, GC.CD_SEQUENCIA_GUIA">
+    <tr>
+      <td><ztag:field use="CM.NU_CONTA_MEDICA" /></td>
+      <td><ztag:field use="CM.CD_PESSOA_PRESTADOR" /></td>
+      <td><ztag:field use="PP.NM_PESSOA NM_PRESTADOR" /></td>
+      <td><ztag:field use="CM.DS_COMPETENCIA" /></td>
+      <td><ztag:field use="CM.DT_FECHAMENTO" /></td>
+      <td><ztag:field use="CM.DT_PAGAMENTO" /></td>
+      <td><ztag:field use="CM.QT_SERVICO" /></td>
+      <td><ztag:field use="CM.VL_TOTAL_CONTA_MEDICA" /></td>
+      <td><ztag:field use="CM.VL_IMPOSTOS" /></td>
+      <td><ztag:field use="CM.VL_LIQUIDO_A_PAGAR" /></td>
+      <td><ztag:field use="GC.NU_GUIA" /></td>
+      <td><ztag:field use="G.FL_GUIA_AUTORIZADA" /></td>
+      <td><ztag:field use="U.CD_USUARIO" /></td>
+      <td><ztag:field use="UP.NM_PESSOA NM_USUARIO" /></td>
+      <td><ztag:field use="DT_SOLICITACAO" /></td>
+      <td><ztag:field use="DT_AUTORIZACAO" /></td>
+      <td><ztag:field use="GCT.QT_PROCEDIMENTO" /></td>
+      <td><ztag:field use="GCT.VL_TOTAL_A_PAGAR" /></td>
+      <td><ztag:field use="GCT.VL_TOTAL_COBRADO" /></td>
+      <td><ztag:field use="GQ.QT_GUIA" /></td>
+    </tr>
+  </ztag:sql>
+</table>
+
+<ztemplate:create id="oracleTemplate">
+  <td><zdb:field name="CD_PESSOA_USUARIO" /></td>
+  <td><zdb:field name="NM_USUARIO" /></td>
+  <td><zdb:field name="NU_LOGIN_ERROS" /></td>
+</ztemplate:create>
+
+<zconstant:copy var="oracleHost" id="L_oracleHost" />
+ 
+<zdb:open id="oracleConn" driver="oci" host="@@P_oracleHost[@@id]" user="@@oracleUser", password="@@oraclePassword" />
+  <zdb:query id="oracleQuery"> 
+    SELECT *
+    FROM TB_USUARIO_SISTEMA
+    WHERE CD_PESSOA_USUARIO = :P_CD_PESSOA_USUARIO
+    OR NM_USUARIO = :P_NM_USUARIO
+    ORDER BY CD_PESSOA_USUARIO
+  </zdb:query>
+
+  <zdb:prepare conn="oracleConn" use="oracleQuery" /> 
+  
+  <zvar:set id="P_CD_PESSOA_USUARIO" value="123" />
+  <zvar:set id="P_NM_USUARIO" value="RUBEN%" />
+  
+  <zdb:param conn="oracleConn" param="P_CD_PESSOA_USUARIO" var="" type="PARAM_INT" /> 
+  <zdb:param conn="oracleConn" param="P_NM_USUARIO" var="" type="PARAM_STR" length="12" /> 
+  
+  <zdb:execute conn="oracleConn" /> 
+
+  <table border="1">
+    <tr>  
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Erros</th>
+    </tr>
+    
+    <zdb:fetch conn="oracleConn" var="oracleRow" />
+    <tr>  
+      <td align="right"><zdb:field use="oracleRow" name="CD_PESSOA_USUARIO" /></td>
+      <td><zdb:field use="oracleRow" name="NM_USUARIO" /></td>
+      <td><zdb:field use="oracleRow" name="NU_LOGIN_ERROS" /></td>
+    </tr>
+    
+    <zdb:fetch conn="oracleConn" var="oracleRow" />
+    <tr>  
+      <td align="right"><zdb:field name="CD_PESSOA_USUARIO" /></td>
+      <td><zdb:field name="NM_USUARIO" /></td>
+      <td><zdb:field name="NU_LOGIN_ERROS" /></td>
+    </tr>
+    
+    <zdb:fetch conn="oracleConn" var="oracleRow" />
+    <tr>  
+      <td align="right"><zdb:field name="CD_PESSOA_USUARIO" /></td>
+      <td><zdb:field name="NM_USUARIO" /></td>
+      <td><zdb:field name="NU_LOGIN_ERROS" /></td>
+    </tr>
+  </table>
+  
+  <zarray:show use="oracleRow" template="oracleTemplate" />
+
+  <zdb:eof use="query002" />
+  <zdb:bof use="query002" />
+<zdb:close use="oracleConn02" />  
+
+<zdb:open id="mssqlConn" driver="mssql" host="@@SQLHost" database="@@SQLDatabase" user="@@SQLUser", password="@@SQLPassword" />
+  <zdb:param use="query002" param="P_CD_PESSOA_USUARIO" var="" type="PARAM_INT" /> 
+  <zdb:param use="query002" param="P_NM_USUARIO" var="" type="PARAM_STR" length="12" /> 
+  
+  <zdb:execute conn="mssqlConn" use="query002" /> 
+
+  <zdb:fetch use="query002" var="queryrow" /> 
+
+  <zarray:show name="queryrow" node="CD_PESSOA_USUARIO" />
+
+  <zdb:eof use="query002" />
+  <zdb:bof use="query002" />
+<zdb:close use="mssqlConn01" />
+    		
+  </body>
+</html>

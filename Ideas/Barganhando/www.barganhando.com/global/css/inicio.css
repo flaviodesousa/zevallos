@@ -1,0 +1,31 @@
+#overlayt {position:fixed; z-index:100; top:0; left:0; visibility:hidden; width:100%; height:100%; min-height:100%; background:#000; opacity:0.5}
+#conteudoInicio {position:absolute; z-index:200; visibility:hidden; width:610px; left:50%; margin-left:-305px; }
+#corpoInicio {width:610px; margin:0 auto 0 auto; /*background:#fff;*/}
+
+.btnFechar {display:block; text-indent:-90000px; float:right; width:28px; height:20px; margin:0 15px 0 0;  background:url(../images/btnFechar.png) no-repeat;}
+
+#topInicio {clear:both; width:100%; height:10px; background:url(../images/bgTopInicio.png) no-repeat;}
+#meioInicio {width:auto; padding:10px 30px 10px 30px; background:#fff url(../images/bgMeioInicio.jpg) no-repeat 30px 0;}
+#meioInicio .txt {margin:0 0 0 183px;}
+#meioInicio h3, #meioInicio .sem-cidade, #meioInicio .sugira-cidade {color:#820000}
+#meioInicio h3 {margin:0 0 10px 0; font-size:1.3em;}
+#meioInicio .sem-cidade, #meioInicio .sugira-cidade { font-size:1.2em;}
+#meioInicio form p {margin:0 0 20px 0;}
+#cadastroInicio input, #sugiraInicio input {border:1px solid #ccc; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; color:#999}
+#cadastroInicio input {width:327px !important; padding:7px 7px 7px 40px; background:url(../images/icoAssineOferta.png) no-repeat 10px 50%;}
+#sugiraInicio input {width:270px !important; padding:7px;}
+
+#meioInicio .jqTransformSelectWrapper span {width:180px !important; color:#999}
+
+#meioInicio form button, #meioInicio .lkns li a {display:block; text-indent:-90000px;}
+
+#meioInicio form button {float:left; margin:0 0 10px 20px; width:40px; height:33px; background:url(../images/spriteInicio.png) no-repeat 0 0; cursor:pointer}
+
+#meioInicio .lkns {float:left; width:100%; margin:20px 0 20px 0}
+#meioInicio .lkns li {float:left; margin:0 20px 0 0;}
+#meioInicio .lkns li:first-child {width:160px;}
+#meioInicio .lkns li a {display:block; text-indent:-90000px;}
+#meioInicio .lkns li a.sugira {width:160px; height:33px; background:url(../images/spriteInicio.png) no-repeat 0 -37px;}
+#meioInicio .lkns li a.cadastrado {width:339px; height:33px; background:url(../images/spriteInicio.png) no-repeat left bottom;}
+
+#baixoInicio {width:100%; height:10px; background:url(../images/bgBottomInicio.png) no-repeat;}

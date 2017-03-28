@@ -1,0 +1,4 @@
+Oi
+<zrequest:get name="nome_usuario" var="var_nome_usuario" transform="upper()/>
+
+<zhtml:b value="$var_nome_usuario" />

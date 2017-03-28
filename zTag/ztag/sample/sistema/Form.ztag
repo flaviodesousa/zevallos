@@ -1,0 +1,19 @@
+
+<DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Form </title>
+<link rel="stylesheet" type="text/css" href="generateForm.css"> 
+</head>
+<body>
+  <div id="stylized" class="myform">
+    <form action="File" method="post">
+      <h1> form</h1>
+      <p>Form generated for table </p>
+      
+  
+      <button type="submit">Submit button</button>
+    </form>
+  <div>  
+</body>

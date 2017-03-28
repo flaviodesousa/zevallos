@@ -1,0 +1,97 @@
+/**********************************************************************/
+/*	ZYC
+	Design: André Mácola Machado
+	xHTML/CSS: André Mácola Machado
+/**********************************************************************/
+
+/**********************************************************************/
+/****************** Definições de HTML, estruturais  ******************/
+/**********************************************************************/
+* { margin:0px; padding:0px; }
+html { background:url(../imagens/bgbody.jpg) no-repeat center top #FFF; }
+body{ font-family:Arial, Helvetica, sans-serif; color: #333; font-size:12px; background:url(../imagens/bgtop.png) repeat-x; }
+img, abbr, fieldset { border:none; }
+a { text-decoration:none; color:#333; }
+a:hover { text-decoration:underline; }
+p { line-height:130%; }
+.left { float:left; }
+.right { float:right; }
+.cleft { clear:left; }
+.cright { clear:right; }
+.center { text-align:center; }
+.strong { font-weight:bold; }
+.hidden { display:none; }
+h1, h2, h3, h4, h5, h6 { line-height:100%; }
+
+/**********************************************************************/
+/**************************** CONTEÚDO ********************************/
+/**********************************************************************/
+
+#geral { width: 990px; margin: auto; display: table; overflow: hidden; }
+
+#topo { width: 990px; float: left; clear: left; position: relative; height: 150px; }
+#topo #logo a { width: 201px; height: 76px; display: block; float: left; background: url(../imagens/logo.gif) no-repeat left top; text-indent:-500px; overflow: hidden; margin: 10px 0px 0px 0px;  }
+
+#topo #nav { width: 200px; float: right; margin: 10px 20px 0px 0px; position: relative; }
+#topo #nav ul li { list-style: none; float: left; margin: 0px 10px 5px 0px; }
+#topo #nav ul li a { display: block; text-indent: -500px; overflow: hidden; }
+#topo #nav ul li.l a { background:url(../imagens/lm.gif) no-repeat left top; width: 39px; height: 13px;  }
+#topo #nav ul li.m a { background:url(../imagens/lm.gif) no-repeat right top; width: 51px; height: 14px; }
+#topo #nav ul li.l a:hover { background:url(../imagens/lm.gif) no-repeat left bottom; }
+#topo #nav ul li.m a:hover { background:url(../imagens/lm.gif) no-repeat right bottom; }
+#topo #nav form { float: left; clear: left; position: relative; }
+#topo #nav form input[type=text] { background:url(../imagens/bgbusca.gif) left top no-repeat; width: 160px; height: 30px; border: none; padding: 0px 30px 0px 10px; color: #999999; font-size: 12px; }
+#topo #nav form input[type=submit] { background: none; border:none; cursor: pointer; width: 20px; height: 20px; position: absolute; right:10px; top:5px; text-indent: -500px; overflow: hidden; }
+
+#topo #menu { width: 100%; float: left; clear: left;  margin: 20px 0px 0px 0px; }
+#topo #menu li { float: left; position: relative; margin: 0px 30px 0px 0px; list-style: none; }
+#topo #menu li a.sub { background: url('../imagens/arr2.gif') no-repeat left center; padding:0px 0px 0px 15px; }
+#topo #menu li:hover a.sub { background: url('../imagens/arr.gif') no-repeat left center; }
+#topo #menu li a { color: #90CADF; font-size: 20px; display: block; }
+#topo #menu li:hover a { color: #FFF; text-decoration: none; }
+#topo #menu li span { display: block; font-size: 11px; }
+
+#topo #menu li ul { position: absolute; left: 0px;top:36px; visibility: hidden; width:auto; background:url(../imagens/bm.png); z-index:10000; padding: 10px; border-radius: 5px; }
+#topo #menu li ul li a { font-size: 16px; background: url(../imagens/arr4.gif) left center no-repeat; text-indent: 12px; padding: 5px 0px 0px 0px; color: #90CADF !important; }
+#topo #menu li ul li:hover a { background: url(../imagens/arr3.gif) left center no-repeat; color: #FFF !important; }
+
+#topo #menu li:hover ul, #topo #menu li.over ul { visibility: visible;}
+#topo #menu li:hover ul ul, #topo #menu li.over ul ul { visibility: hidden; }
+#topo #menu ul li:hover ul, #topo #menu ul li.over ul { visibility: visible; }
+
+
+.description { font-size:28px; font-family: Arial, Helvetica, sans-serif; color: #FFF; letter-spacing: -1px; width: 990px; float: left; margin: 255px 0px 0px 0px; }
+
+#content { background: url(../imagens/bgc.png); float: left; clear: left; margin: 11px 0px 0px 0px; width: 100%; padding: 20px 0px 20px 0px; height: 148px; }
+#content #cols, #rodape div, #areatexto { width: 990px; margin: auto;}
+#content #cols div { float: left; width: 300px; }
+#content #cols h2 a { font-size: 35px; color: #002C39; text-shadow: 2px 2px 0 #FFF; margin: 0px 0px 15px 0px; display: block; line-height: 100%; }
+#content #cols h2 a:hover { text-shadow: 2px 2px 0 #002C39; color: #FFF; text-decoration: none; }
+#content #cols p { color:#333; line-height: 140%; }
+#content #cols #center { margin: 0px 35px 0px 35px; }
+
+#rodape { background: url(../imagens/bgr.jpg) repeat-x #FFF; float: left; clear: left; margin: 0px 0px 0px 0px; width: 100%; height: 90px; padding: 10px 0px 0px 0px; color: #999999; }
+#rodape a  { color: #999999; }
+#rodape a:hover { color: #90CADF; text-decoration: none; }
+#rodape address { background: url(../imagens/lr.gif) left center no-repeat; height: 56px; padding: 8px 0px 0px 75px; line-height: 140%; float: left; }
+#rodape ul { float: right; }
+#rodape ul li { list-style: none; float: left; margin: 20px 10px 0px 0px; }
+
+/**********************************************************************/
+/**************************** INTERNAS ********************************/
+/**********************************************************************/
+#trackingline { font-size:12px;  color: #FFF;  width: 990px; float: left; margin: 255px 0px 0px 0px; }
+#trackingline strong { font-size: 15px; margin: 0px 10px 0px 0px; }
+#trackingline a  { color: #FFF; }
+#trackingline a:hover { color: #90CADF; text-decoration: none; }
+
+.i { background: url(../imagens/bgi.jpg) repeat-x !important; height: auto !important; position: relative; }
+
+#areatexto h1 { font-size: 50px; color: #002C39; text-shadow: 2px 2px 0 #FFF; margin: 0px 0px 10px 0px; display: block; font-weight: normal; }
+#areatexto h2 { font-size: 30px; color: #002C39; text-shadow: 2px 2px 0 #FFF; margin: 0px 0px 20px 0px; display: block; font-weight: normal; }
+#areatexto .foguete { font-size: 20px; color: #999; text-shadow: 2px 2px 0 #FFF; margin: 0px 0px 30px 5px; display: block; border-bottom: 1px #E6E7E7 dotted; padding: 0px 0px 20px 0px; }
+#areatexto p { font-size:115%; line-height:1.65em; margin:0px 0px 15px 0px; color: #999999; }
+#areatexto ul {  }
+#areatexto ul li { background: url(../imagens/list.gif) left center no-repeat; padding: 0px 0px 0px 12px; list-style: none; color: #999999; margin: 0px 0px 10px 0px; display: block; }
+
+#acqua { background: url(../imagens/acqua.gif) right top no-repeat; width: 100%; min-height: 606px; }

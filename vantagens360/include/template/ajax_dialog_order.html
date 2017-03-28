@@ -1,0 +1,8 @@
+<div id="order-pay-dialog" class="order-pay-dialog-c" style="width:380px;">
+	<h3><span id="order-pay-dialog-close" class="close" onclick="return X.boxClose();">Fechar</span></h3>
+	<p class="info">Por favor complete o pagamento na próxima aba</p>
+	<p class="notice">Não feche esta tela até que o pagamento seja concluído.<br> Clique no link se o pagamento foi efetuado: </p>
+	<p class="act"><input id="order-pay-dialog-succ" class="formbutton" value="Paguei" type="submit" onclick="location.href=WEB_ROOT + '/order/pay.php?id={$order_id}';" />&nbsp;&nbsp;&nbsp;<input id="order-pay-dialog-fail" class="formbutton" value="Problema no pagamento" type="submit" onclick="location.href=WEB_ROOT + '/order/pay.php?id={$order_id}';" /></p>
+	<p class="retry"><!--{if $order_id=='charge'}--><a href="/credit/charge.php"><!--{else}--><a href="/order/check.php?id={$order_id}"><!--{/if}-->&raquo;Voltar e tentar outra forma de pagamento</a></p>
+</div>
+

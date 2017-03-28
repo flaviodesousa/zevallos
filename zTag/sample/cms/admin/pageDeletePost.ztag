@@ -1,0 +1,24 @@
+<!-- zheader:locationif use="!userLogged" notcondition="len()" value="/logOn.php" /-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="Delete Post - Page" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Delete Post - Page (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Source" />)</h1>
+    <zhtml:a href="." value="back" />
+
+    <zrequest:get name="CD_PAGE" var="CD_PAGE" transform="stripTags()" />
+
+    <zdbal:open id="myConn" driver="mysql" host="localhost" database="zcms" user="zcmsuser" password="z4321" />
+    	<zdbal:execute use="myConn">
+    	DELETE FROM pages
+    	WHERE CD_PAGE = $CD_PAGE
+    	</zdbal:execute>
+    <zdbal:close use="myConn" />
+  </body>
+</html>
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>zDBal Tests</title>
+</head>
+<body>
+  <zhtml:h1 value="zDBal Tests" />
+
+  <zdbal:open id="myConn" driver="mysql" host="localhost" database="controle_venda" user="controlevenda" password="cv4321" />
+    <zdbal:query use="myConn" id="myQuery">
+      SELECT 
+      CD_PRODUTO
+      , DS_PRODUTO
+      , FABRICANTE 
+      FROM tb_produto
+    </zdbal:query>
+
+    <table border="1" cellspacing="0">
+      <tr bgcolor="gray">
+        <zHTML:cellhead value="#" />
+        <zHTML:cellhead value="Id" />
+        <zHTML:cellhead value="Nome" />
+        <zHTML:cellhead value="Fabricante" />
+      </tr>
+
+      <zvar:set id="rowCount" value="0" />
+
+      <zvar:set id="rowBGColor" value="0" />
+
+      <zdbal:fetchuntil use="myQuery" id="myRow" var="myRow">
+        <zvar:inc use="rowCount" />
+        <zvar:inc use="rowBGColor" />
+        <zctrl:if value="$rowBGColor" operator="e" with="1">
+          <tr>
+        </zctrl:if>
+        <zctrl:if value="$rowBGColor" operator="gte" with="2">
+          <tr bgcolor="lightgray">
+          <zvar:update use="rowBGColor" value="0"/>
+        </zctrl:if>
+          <zHTML:cell value="$rowCount" align="right" />
+          <zHTML:cell value="$myRow[CD_PRODUTO]" align="right" transform="FormatNumber(0)" />
+          <zHTML:cell value="$myRow[DS_PRODUTO]" nowrap="nowrap" transform="sentence()" />
+          <zHTML:cell value="$myRow[FABRICANTE]" nowrap="nowrap" transform="sentence()" />
+        </tr>
+      </zdbal:fetchuntil>
+    </table>
+  <zdbal:close use="myConn" />
+</body>
+</html>

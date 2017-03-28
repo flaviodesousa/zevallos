@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/1/ztag/sample/Inscricao
+END
+createIngressos.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1/ztag/sample/Inscricao/createIngressos.ztag
+END
+dropIngressos.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1/ztag/sample/Inscricao/dropIngressos.ztag
+END
+formularioIngressos.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/1/ztag/sample/Inscricao/formularioIngressos.ztag
+END
+mostraIngressos.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1/ztag/sample/Inscricao/mostraIngressos.ztag
+END
+listaIngressos.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1/ztag/sample/Inscricao/listaIngressos.ztag
+END
+getIngressos.ztag
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1/ztag/sample/Inscricao/getIngressos.ztag
+END
+Config.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/1/ztag/sample/Inscricao/Config.inc.php
+END

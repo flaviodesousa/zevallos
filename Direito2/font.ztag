@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>TESTE FONTS</title>
+	<style type="text/css">
+		* { margin: 0px 0px 5px 0px;}
+		h1 { font-family: MyriadPro, Arial, Helvetica, sans-serif; font-weight: bold; font-size: 20px; }
+		h2 { font-family: MyriadPro, Arial, Helvetica, sans-serif; font-weight: lighter; font-size: 20px; }
+		h3 { font-family: MyriadPro, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 20px; }
+		
+		h4 { font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 20px; }
+		h5 { font-family: Arial, Helvetica, sans-serif; font-weight: lighter; font-size: 20px; }
+		h6 { font-family: Arial, Helvetica, sans-serif; font-weight: normal; font-size: 20px; }
+
+		@font-face{ 
+			font-family: 'MyriadPro';
+			font-weight: normal;
+			src: url('http://fonts.ecr.me/myriadpro-regular.eot');
+			src: url('http://fonts.ecr.me/myriadpro-regular.eot?#iefix') format('embedded-opentype'),
+			     url('http://fonts.ecr.me/myriadpro-regular.otf') format('OpenType');
+		}
+		
+		@font-face{ 
+			font-family: 'MyriadPro';
+			font-weight: lighter;
+			src: url('http://fonts.ecr.me/myriadpro-light.eot');
+			src: url('http://fonts.ecr.me/myriadpro-light.eot?#iefix') format('embedded-opentype'),
+			     url('http://fonts.ecr.me/myriadpro-light.otf') format('OpenType');
+		}
+		
+		@font-face{ 
+			font-family: 'MyriadPro';
+			font-weight: bold;
+			src: url('http://fonts.ecr.me/myriadpro-bold.eot');
+			src: url('http://fonts.ecr.me/myriadpro-bold.eot?#iefix') format('embedded-opentype'),
+			     url('http://fonts.ecr.me/myriadpro-bold.otf') format('OpenType');
+		}
+	</style>
+</head>
+<body>
+	<h1>André Mácola Machado</h1>
+	<h2>Ruben Zevallos Jr.</h2>
+	<h3>Marcos Dyonny</h3>
+	
+	<h4>André Mácola Machado</h4>
+	<h5>Ruben Zevallos Jr.</h5>
+	<h6>Marcos Dyonny</h6>
+</body>
+</html>

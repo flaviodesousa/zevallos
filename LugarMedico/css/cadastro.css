@@ -1,0 +1,126 @@
+body {
+    background: url(/img/home/bg-home.png) repeat-x #f1f1f1;
+    margin:  0px;
+    padding: 0px;
+    font-size: 12px;
+    font-family: arial;
+}
+#root {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+}
+/*______________________________________________________________________________( Topo )*/
+#header{
+    height: 100px;
+    font-family: arial;
+    width: 960px;
+    margin: auto;
+}
+#header .left{
+    float: left;
+    width: 200px;
+    height: 139px;
+    margin: 0px 5px;
+}
+#header .right{
+    float: right;
+    width: 700px;
+    height: 100px;
+}
+/*______________________________________________________________________________( Corpo )*/
+#body{
+    height: 435px;
+    width: 960px;
+    margin: auto;
+}
+#body #box-left{
+    float: left;
+    width: 384px;
+    height: 400px;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+#body #box-right{
+    float: right;width: 383px;height: 400px;margin-top: 15px;margin-right: 20px;background: #fff;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+}
+#box-right .header{
+    width: 98%;
+    margin-bottom: 5px;
+    margin: auto;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif !important;
+    border-bottom: 1px solid #000;
+}
+#box-right .header .headerTitle{
+    color: #000;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 8px;
+    min-width: 150px;
+}
+#box-right .header .headerSubtitle{
+    color: #000;
+    font-size: 16px;
+    margin-left: 20px;
+    min-width: 150px;
+    margin-bottom: 9px;
+}
+#box-right .content{
+    width: 98%;
+    margin: 8px 0;
+}
+#box-right .content .label{
+    height: 35px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+#box-right .content .label .text{
+    width: 100px;
+    text-align: right;
+    float: left;
+    font-size: 14px;
+    padding-top: 9px;
+}
+#box-right .content .input{
+    width: 250px;
+    float: left;
+    margin-left: 4px;
+}
+#box-right .content .input input{
+    padding: 5px;
+    width: 240px;
+    height: 20px;
+    font-size: 16px;
+}
+#box-right .content .button{
+    margin-top: 9px;
+    min-width: 90px;
+    float: right;
+}
+#box-right .content .button input{
+    padding: 3px;
+    background:url(/img/greenheaderbox.png);
+    color: #fff;
+    text-shadow:0 1px 0 #666666;
+    border: 0px;
+}
+/*______________________________________________________________________________(Roda Pe)*/
+#footer{
+    height: 100px;
+    margin: auto;
+    width: 960px;
+}
+#footer_direita{
+    height: 60px;
+    padding: 40px 0;
+    width: 450px;
+    margin-right: 50px;
+}

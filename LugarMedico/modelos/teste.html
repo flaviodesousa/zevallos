@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+p { background:#dad;
+font-weight:bold;
+font-size:16px; }
+</style>
+  <script src="http://code.jquery.com/jquery-1.5.js"></script>
+</head>
+<body>
+<div id="clickme">
+  Click here
+</div>
+    <div id="book">udfhgsdhgfsgf</div>
+    <script>
+  $('#book').hide();
+  $('#clickme').click(function() {
+
+  $('#book').toggle('', function() {
+    // Animation complete.
+  });
+});
+
+    </script>
+</body>
+</html>

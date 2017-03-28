@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zTransform - ZTags</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}      
+    </style>
+  </head>
+  <body>
+    <h3>zTransform - zTags</h3>
+    <hr />
+    <zvar:set id="stringSentence" value="teste PARA o Sentence" />
+		<br />&lt;zhtml:span value="$stringSentence" transform="<b>sentence()</b>" /&gt;
+    <br /><zhtml:span value="$stringSentence" transform="sentence()" />
+		<br />
+		<zvar:set id="stringSubstr" value="teste PARA o Substr" />
+    <br />&lt;zhtml:span value="$stringSubstr" transform="<b>substr(3, 10)</b>" /&gt;
+		<br /><zhtml:span value="$stringSubstr" transform="substr(3, 10)" />
+		<br />
+		<zvar:set id="dateDateBR" value="teste PARA o DateBR" />
+    <br />&lt;zhtml:span value="$dateDateBR" transform="<b>datebr()</b>" /&gt;
+		<br /><zhtml:span value="$dateDateBR" transform="datebr()" />
+		<br />
+		<zvar:set id="dateDateTimeBR" value="teste PARA o DateTimeBR" />
+    <br />&lt;zhtml:span value="$dateDateTimeBR" transform="<b>datetimebr()</b>" /&gt;
+		<br /><zhtml:span value="$dateDateTimeBR" transform="datetimebr()" />
+		<br />
+		<zvar:set id="dateDate" value="teste PARA o Date" />
+    <br />&lt;zhtml:span value="$dateDate" transform="<b>date()</b>" /&gt;
+		<br /><zhtml:span value="$dateDate" transform="date()" />
+		<br />
+		<zvar:set id="dateDateTime" value="teste PARA o DateTime" />
+    <br />&lt;zhtml:span value="$dateDateTime" transform="<b>datetime()</b>" /&gt;
+		<br /><zhtml:span value="$dateDateTime" transform="datetime()" />
+		<br />
+		<zvar:set id="stringHTML" value="teste PARA o HTML" />
+    <br />&lt;zhtml:span value="$stringHTML" transform="<b>html()</b>" /&gt;
+		<br /><zhtml:span value="$stringHTML" transform="html()" />
+		<br />
+		<zvar:set id="stringLen" value="0123456789" />
+    <br />&lt;zhtml:span value="$stringLen" transform="<b>len()</b>" /&gt;
+		<br /><zhtml:span value="$stringLen" transform="len()" />
+		<br />
+		<zvar:set id="stringElipsis" value="Teste para o Elipsis" />
+    <br />&lt;zhtml:span value="$stringElipsis" transform="<b>elipsis(10)</b>" /&gt;
+		<br /><zhtml:span value="$stringElipsis" transform="elipsis(10)" />
+		<br />
+		<zvar:set id="stringToLower" value="teste PARA o lower" />
+    <br />&lt;zhtml:span value="$stringToLower" transform="<b>tolower()</b>" /&gt;
+		<br /><zhtml:span value="$stringToLower" transform="tolower()" />
+		<br />
+		<zvar:set id="stringToUpper" value="teste PARA o upper" />
+    <br />&lt;zhtml:span value="$stringToUpper" transform="<b>toupper()</b>" /&gt;
+		<br /><zhtml:span value="$stringToUpper" transform="toupper()" />
+		<br />
+		<zvar:set id="stringTrim" value="teste PARA o Trim     " />
+    <br />&lt;zhtml:span value="$stringTrim" transform="<b>trim()</b>" /&gt;
+		<br /><zhtml:span value="$stringTrim" transform="trim()" />
+		<br />
+    <zvar:set id="stringRTrim" value="teste PARA o RTrim     " />
+    <br />&lt;zhtml:span value="$stringRTrim" transform="<b>rtrim()</b>" /&gt;
+		<br /><zhtml:span value="$stringRTrim" transform="rtrim()" />
+		<br />
+		<zvar:set id="stringLTrim" value="    teste PARA o LTrim" />
+    <br />&lt;zhtml:span value="$stringLTrim" transform="<b>ltrim()</b>" /&gt;
+		<br /><zhtml:span value="$stringLTrim" transform="ltrim()" />
+		<br />
+		<zvar:set id="stringAllTrim" value="teste PARA o AllTrim" />
+    <br />&lt;zhtml:span value="$stringAllTrim" transform="<b>alltrim()</b>" /&gt;
+		<br /><zhtml:span value="$stringAllTrim" transform="alltrim()" />
+		<br />
+		<zvar:set id="stringIFF" value="teste PARA o upper" />
+    <br />&lt;zhtml:span value="$stringIFF" transform="<b>iif()</b>" /&gt;
+		<br /><zhtml:span value="$stringIFF" transform="iif()" />
+		<br />
+		<zvar:set id="stringEmpty" value="teste PARA o upper" />
+		<br /><zhtml:span value="$stringEmpty" transform="empty()" />
+		<br />
+		<zvar:set id="stringCPF" value="123456789012" />
+    <br />&lt;zhtml:span value="$stringCPF" transform="<b>formatcpf()</b>" /&gt;
+		<br /><zhtml:span value="$stringCPF" transform="formatcpf()" />
+		<br />
+		<zvar:set id="numerFormatNumber" value="123456.66" />
+    <br />&lt;zhtml:span value="$numerFormatNumber" transform="<b>formatnumber()</b>" /&gt;
+		<br /><zhtml:span value="$numerFormatNumber" transform="formatnumber()" />
+		<br />
+    <zvar:set id="numerFormatNumberBR" value="123456.66" />
+    <br />&lt;zhtml:span value="$numerFormatNumberBR" transform="<b>formatnumberbr()</b>" /&gt;
+    <br /><zhtml:span value="$numerFormatNumberBR" transform="formatnumberbr()" />
+		<br />
+		<zvar:set id="stringCapitalize" value="teste PARA o Capitalize" />
+    <br />&lt;zhtml:span value="$stringCapitalize" transform="<b>capitalize()</b>" /&gt;
+		<br /><zhtml:span value="$stringCapitalize" transform="capitalize()" />
+		<br />
+		<zvar:set id="stringCount" value="teste PARA o Count" />
+    <br />&lt;zhtml:span value="$stringCount" transform="<b>count()</b>" /&gt;
+		<br /><zhtml:span value="$stringCount" transform="count()" />
+		<br />
+		<zvar:set id="stringCat" value="teste PARA o Cat" />
+    <br />&lt;zhtml:span value="$stringCat" transform="<b>cat()</b>" /&gt;
+		<br /><zhtml:span value="$stringCat" transform="cat()" />
+		<br />
+		<zvar:set id="stringCountP" value="teste PARA o CountP" />
+    <br />&lt;zhtml:span value="$stringCountP" transform="<b>countp()</b>" /&gt;
+		<br /><zhtml:span value="$stringCountP" transform="countp()" />
+		<br />
+		<zvar:set id="stringCountParagraph" value="teste PARA o CountParagraph" />
+    <br />&lt;zhtml:span value="$stringCountParagraph" transform="<b>countparagraph()</b>" /&gt;
+		<br /><zhtml:span value="$stringCountParagraph" transform="countparagraph()" />
+		<br />
+		<zvar:set id="stringCountS" value="teste PARA o CountS. Mais uma sentença. E outra." />
+    <br />&lt;zhtml:span value="$stringCountS" transform="<b>counts()</b>" /&gt;
+		<br /><zhtml:span value="$stringCountS" transform="counts()" />
+		<br />
+    <zvar:set id="stringCountSentences" value="teste PARA o CountSentences. Mais uma sentença. E outra." />
+    <br />&lt;zhtml:span value="$stringCountSentences" transform="<b>countsentences()</b>" /&gt;
+		<br /><zhtml:span value="$stringCountSentences" transform="countsentences()" />
+		<br />
+		<zvar:set id="stringCountW" value="teste PARA o CountW" />
+    <br />&lt;zhtml:span value="$stringCountW" transform="<b>countw()</b>" /&gt;
+		<br /><zhtml:span value="$stringCountW" transform="countw()" />
+		<br />
+    <zvar:set id="stringCountWords" value="teste PARA o CountWords" />
+    <br />&lt;zhtml:span value="$stringCountWords" transform="<b>countwords()</b>" /&gt;
+		<br /><zhtml:span value="$stringCountWords" transform="countwords()" />
+		<br />
+		<zvar:set id="dateDateFormat" value="teste PARA o upper" />
+    <br />&lt;zhtml:span value="$dateDateFormat" transform="<b>dateformat()</b>" /&gt;
+		<br /><zhtml:span value="$dateDateFormat" transform="dateformat()" />
+		<br />
+		<zvar:set id="stringEscape" value="teste PARA o Escape & other HTML <b>Tags</b>" />
+    <br />&lt;zhtml:span value="$stringEscape" transform="<b>escape()</b>" /&gt;
+		<br /><zhtml:span value="$stringEscape" transform="escape()" />
+		<br />
+		<zvar:set id="stringIndent" value="teste PARA o Indent. Segundo parágrafo. E o terceiro." />
+    <br />&lt;zhtml:span value="$stringIndent" transform="<b>indent()</b>" /&gt;
+		<br /><zhtml:span value="$stringIndent" transform="indent()" />
+		<br />
+		<zvar:set id="stringLower" value="teste PARA o Lower" />
+    <br />&lt;zhtml:span value="$stringLower" transform="<b>lower()</b>" /&gt;
+		<br /><zhtml:span value="$stringLower" transform="lower()" />
+		<br />
+		<zvar:set id="stringUpper" value="teste PARA o upper" />
+    <br />&lt;zhtml:span value="$stringUpper" transform="<b>upper()</b>" /&gt;
+		<br /><zhtml:span value="$stringUpper" transform="upper()" />
+		<br />
+		<zvar:set id="stringNL2BR" value="teste PARA o NL2BR\nOutra linha\n e mais outra" />
+    <br />&lt;zhtml:span value="$stringNL2BR" transform="<b>nl2br()</b>" /&gt;
+		<br /><zhtml:span value="$stringNL2BR" transform="nl2br()" />
+		<br />
+		<zvar:set id="stringNL2P" value="teste PARA o NL2P.\nOutro parágrafo\e mais outro." />
+    <br />&lt;zhtml:span value="$stringUpper" transform="<b>nl2p()</b>" /&gt;
+		<br /><zhtml:span value="$stringUpper" transform="nl2p()" />
+		<br />
+    <zvar:set id="stringNL2Tag" value="teste PARA o NL2Tag.\nOutro parágrafo\e mais outro." />
+		<br />&lt;zhtml:span value="$stringNL2Tag" transform="<b>nl2tag('b')</b>" /&gt;
+    <br /><zhtml:span value="$stringNL2Tag" transform="nl2tag('b')" />
+		<br />
+		<zvar:set id="stringRegExReplace" value="teste PARA o RegExReplace" />
+    <br />&lt;zhtml:span value="$stringRegExReplace" transform="<b>regexreplace()</b>" /&gt;
+		<br /><zhtml:span value="$stringRegExReplace" transform="regexreplace()" />
+		<br />
+		<zvar:set id="stringReplace" value="teste PARA o Replace" />
+    <br />&lt;zhtml:span value="$stringReplace" transform="<b>replace()</b>" /&gt;
+		<br /><zhtml:span value="$stringReplace" transform="replace()" />
+		<br />
+		<zvar:set id="stringSpacify" value="teste PARA o Spacify" />
+    <br />&lt;zhtml:span value="$stringSpacify" transform="<b>spacify()</b>" /&gt;
+		<br /><zhtml:span value="$stringSpacify" transform="spacify()" />
+		<br />
+		<zvar:set id="stringStringFormat" value="teste PARA o StringFormat" />
+    <br />&lt;zhtml:span value="$stringStringFormat" transform="<b>stringformat()</b>" /&gt;
+		<br /><zhtml:span value="$stringStringFormat" transform="stringformat()" />
+		<br />
+		<zvar:set id="stringStrip" value="teste PARA o Strip" />
+    <br />&lt;zhtml:span value="$stringStrip" transform="<b>strip()</b>" /&gt;
+		<br /><zhtml:span value="$stringStrip" transform="strip()" />
+		<br />
+		<zvar:set id="stringStripTags" value="teste PARA o <b>StripTags</b>" />
+    <br />&lt;zhtml:span value="$stringStripTags" transform="<b>striptags()</b>" /&gt;
+		<br /><zhtml:span value="$stringStripTags" transform="striptags()" />
+		<br />
+		<zvar:set id="stringTruncate" value="teste PARA o Truncate" />
+    <br />&lt;zhtml:span value="$stringTruncate" transform="truncate(10)" /&gt;
+		<br /><zhtml:span value="$stringTruncate" transform="truncate(10)" />
+		<br />
+		<zvar:set id="stringWordWrap" value="teste PARA o WordWrap para quebrar no 10." />
+    <br />&lt;zhtml:span value="$stringUpper" transform="wordwrap(10)" /&gt;
+		<br /><zhtml:span value="$stringUpper" transform="wordwrap(10)" />
+  </body>
+</html>

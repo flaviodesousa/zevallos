@@ -1,0 +1,102 @@
+<zheader:locationif use="!userLogged" notcondition="len()" value="/index.ztag" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<zhtml:title value="Mensagem 3232 !userNameFull | #sysName" />
+
+		<link rel="stylesheet" type="text/css" href="/css/geral.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/box.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/menu.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/logon.css" media="screen, projection"></link>
+		<link type="text/css" href="/CometChat/cometchatcss.php" rel="stylesheet" charset="utf-8">
+		<script type="text/javascript" src="/CometChat/cometchatjs.php" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="root">
+				<div class="box-logo"><a href="/"><img src="/img/logo.png" alt="Lugar Médico" /></a></div>
+				<div class="box-loggeduser"><zhtml:a href="/userProfile.ztag" value="!userName" /> - <a href="userSetup.ztag">Configurações</a> - <a href="logoff.ztag">Sair</a></div>
+			</div>
+		</div>
+		<div id="menu">
+			<div class="root">
+				<ul>
+					<li><a href="/messageList.ztag" title="Gerencia a sua caixa postal">Correio</a></li>
+					<li><a href="/friendList.ztag" title="Administra a lista de colegas">Colegas</a></li>
+					<li><a href="/commentList.ztag" title="Visualiza e modera os comentários recebidos">Comentários</a></li>
+					<li><a href="roomList.ztag" title="Gerencia suas salas e as que voce participa">Salas</a></li>
+					<li><a href="/eventList.ztag" title="Visualiza os eventos">Eventos</a></li>
+					<li><a href="/help.ztag">Ajuda</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="container">
+			<div class="root">
+				<div id="box">
+					<zhtml:div value="!userNameFull" class="header blue" />
+					<div class="body perfil-box">
+						<zhtml:img src="!userAvatar" alt="!userNameFull" title="!userNameFull" width="120px" class="img" />
+						<div class="perfil-user-name">
+							<a href="<zsession:show name="userURLPerfil" />"><zhtml:b value="!userNameFull" /></a>
+							<br />
+							<zhtml:a href="/userProfile.ztag" title="Editar o perfil" value="Editar o perfil" />
+						</div>
+						<div class="perfil-options">
+							<dl>
+								<dt>Atualizações</dt>
+								<dd><zhtml:a href="/messageList.ztag" title="Mensagens na caixa postal" value="Mensagens" /><span class="perfil-option-qtd">99</span></dd>
+								<dd><zhtml:a href="/eventList.ztag" title="Eventos" value="Eventos" /><span class="perfil-option-qtd">99</span></dd>
+								<dd><zhtml:a href="/friendList.ztag" title="Amigos" value="Colegas" /><span class="perfil-option-qtd">99</span></dd>
+								<dd><zhtml:a href="/commentList.ztag" title="Comentários" value="Comentários" /><span class="perfil-option-qtd">99</span></dd>
+
+								<dt>Círculo</dt>
+								<dd>+ Criar um círculo</dd>
+
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div id="box">
+					<div class="header gray">Mensagens</div>
+					<div class="body message-list">
+						<table border="0">
+							<tr>
+								<td>De:</td>
+								<td><zhtml:a href="/messageView.ztag?t=120" title="Vizualisa mensagem" value="Flávio de Sousa" /></td>
+								<td><zhtml:a href="/messageReply.ztag?t=120" title="Responder ao remetente" value="Responder" /></td>
+							</tr>							
+							<tr>
+								<td>Assunto:</td>
+								<td>Teste do Correio</td>
+								<td><zhtml:a href="/messageForward.ztag?t=120" title="Encaminhar a mensagem" value="Encaminhar" /></td>
+							</tr>							
+							<tr>
+								<td>Data e hora:</td>
+								<td>Há 10 minutos</td>
+								<td><zhtml:a href="/messageDelete.ztag?t=120" title="Deletar a mensagem" value="Deletar" /></td>
+							</tr>							
+							<tr>
+								<td colspan="4"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat gravida aliquet. Vestibulum quis velit velit, ut fringilla magna. Donec a mauris mi, quis interdum nisi. Quisque dolor diam, semper porttitor vestibulum sit amet, aliquam non eros. Pellentesque ultrices vulputate massa ac suscipit. In condimentum ligula eget purus iaculis eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus magna turpis, ornare in aliquam eget, ultricies eu libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer rutrum ipsum id sapien fringilla eget lacinia eros elementum. Proin lacinia laoreet turpis in venenatis.</p>
+									<p>Suspendisse viverra auctor malesuada. Nunc elementum ultrices imperdiet. Nullam vestibulum convallis tincidunt. Cras facilisis, felis vitae pulvinar tincidunt, eros orci porttitor nibh, a feugiat turpis lectus vel odio. Fusce egestas eros dolor. Pellentesque vitae magna in lectus lobortis tristique quis non mi. Quisque pharetra egestas felis vel sagittis. Vivamus tellus lorem, sagittis eget fermentum nec, cursus placerat nisl. Mauris dapibus, metus ac venenatis convallis, mauris risus dignissim ipsum, ut consequat ligula sapien et nunc. Vivamus vulputate odio a ligula blandit viverra. Morbi feugiat nisi justo. Etiam posuere neque eu velit ornare tincidunt. Donec id ante libero, vitae pretium metus. Mauris vitae lacus nec erat imperdiet scelerisque. Integer venenatis consequat tellus, a tempus lectus dictum a. Pellentesque sollicitudin fermentum consequat.</p>
+									<p>Pellentesque nunc velit, tempus et interdum et, aliquam quis nibh. Curabitur semper tellus eu erat gravida volutpat. Nam eget libero vitae augue tincidunt vestibulum quis non orci. Phasellus egestas dignissim consequat. Nunc sit amet quam sed est pellentesque varius nec vitae mi. Sed vestibulum aliquam quam, in mattis felis faucibus sit amet. Proin vel neque massa. Phasellus nec sem eros, vel rutrum quam. Etiam massa est, rhoncus vitae tempus hendrerit, facilisis sed lacus. Vivamus auctor, lorem in condimentum suscipit, nulla dolor bibendum mi, nec pretium ligula mauris eget tellus. Sed id quam urna, in lobortis odio. Vivamus vehicula quam vel nisl egestas pretium. Pellentesque purus ipsum, ultrices ut adipiscing scelerisque, varius sed sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vulputate elementum arcu quis sollicitudin. Mauris interdum magna non neque sodales in molestie ligula commodo.</p>
+									<p>In eget diam dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus leo elit, luctus vitae convallis eget, condimentum a dui. Quisque ultricies imperdiet elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam mattis risus, non malesuada orci molestie ac. Praesent eget arcu quis est hendrerit gravida sed at metus. Nam molestie pulvinar blandit. Mauris tortor ipsum, ultrices id hendrerit sit amet, ornare at eros. Maecenas ut velit at turpis mattis accumsan. Curabitur feugiat gravida fermentum.</p></td>
+							</tr>
+						</table>							
+					</div>
+				</div>
+				<div id="box">
+					<zhtml:div value="Eventos" class="header blue" />
+					<div class="body perfil-events">
+						<ul><li>Dica</li></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="root">Copyright &copy; 2011 Lugar Médico todos os direitos reservados</div>
+		</div>
+	</body>
+</html>
+

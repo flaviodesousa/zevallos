@@ -1,0 +1,142 @@
+/*
+LUGAR MÉDICO - REDE SOCIAL
+LAST UPDATE: 28 ABRIL 2011
+*/
+
+/*ELEMENTOS HTML*/
+
+* { margin:0px; padding: 0px; border:none; outline:none; }
+a { text-decoration:none; color:#333; }
+a:hover { text-decoration:none; color: #00A1DC !important; }
+p { line-height:130%; }
+.left { float:left; }
+.right { float:right; }
+.cleft { clear:left; }
+.cright { clear:right; }
+.center { text-align:center; }
+.strong { font-weight:bold; }
+.hidden { display:none; }
+
+body { background:url(../img/bgt.png) left top repeat-x;  font-family: 'Lucida Grande', Arial, Helvetica, sans-serif; font-size: 11px; }
+
+/*ESTRUTURA DO SITE*/
+#topo { margin: auto; width: 990px; height: 145px; position: relative; overflow: hidden; }
+#topo #logotipo a { background:url(../img/logo.gif) left top no-repeat; width: 232px; height: 120px; margin: 10px 0px 0px 30px; display: block; float: left; text-indent: -5000px; overflow: hidden; }
+#topo #tr { width: 480px; float: right; margin: 10px 30px 0px 0px; }
+#topo #tr form { width: 380px; float: left; margin: 20px 0px 0px 0px; }
+#topo #tr form label input { border: 1px #00A1DC solid; border-radius: 5px; }
+#topo #tr form label { -moz-box-shadow:0 0 10px #CCCCCC; -webkit-box-shadow:0 0 10px #CCCCCC; box-shadow:0 0 10px #CCCCCC; float: left; display: block; border-radius: 5px; margin: 0px 8px 0px 0px; }
+#topo #tr form label input { -moz-box-shadow:inset 0 0 7px #CCCCCC; -webkit-box-shadow:inset 0 0 7px #CCCCCC; box-shadow:inset 0 0 7px #CCCCCC; color: #999999; width: 119px; height: 17px; padding: 3px 5px 3px 5px; }
+#topo #tr form label input:focus { border: 1px #51A8B1 solid; box-shadow:inset 0 0 7px #51A8B1; }
+#topo #tr form input#oklog { width: 60px; height: 24px; padding: 3px 0px 3px 0px; display: block; font-weight: bold; cursor: pointer;}
+
+#topo #tr form .options { float: left; clear: left; display: block; width: 255px; background: none; margin: 8px 0px 0px 0px; }
+#topo #tr form .options label { box-shadow:none !important; }
+#topo #tr form .options a, #topo #tr form .options { color: #666; }
+#topo #tr form .options a { float: right; }
+#topo #tr form .options label input { width: 14px; height: 14px; float: left; margin: 0px 5px 0px 0px; padding: 0px !important; border:none !important; box-shadow: none !important; }
+#topo #tr form .options label input:focus { border:none !important; }
+
+#topo #tr ul { float: left; clear: left; width: 365px; margin: 20px 0px 0px 0px; }
+#topo #tr ul li { list-style: none; float: left; display: inline; }
+#topo #tr ul li a { font-family: 'MyriadPro', 'Lucida Grande', Arial, Helvetica, sans-serif; font-weight: normal; font-size: 20px; color: #0299D0; margin: 0px 10px 0px 0px; display: block; padding:5px; text-align: center; border-radius: 10px; }
+#topo #tr ul li a:hover, #topo #tr ul li a.current { background:url(../img/hm.gif) left top; color: #FFF !important; }
+
+#topo #tr #selo { position: absolute; top:20px; right: 30px; }
+
+#middle { float: left; clear: left; position: relative; width: 100%;  height: 550px; margin: 3px 0px 0px 0px;  }
+.int { background:url(../img/bg.jpg) center top no-repeat; }
+.bg1, .bg2, .bg3, .bg4, .bg5 { position: absolute; width: 100%; height: 550px; top:0px; left:0px; z-index: 1; }
+.bg1 { background:url(../img/bg.jpg) center top no-repeat; }
+.bg2 { background:url(../img/bg2.jpg) center top no-repeat; }
+.bg3 { background:url(../img/bg.jpg) center top no-repeat; }
+.bg4 { background:url(../img/bg2.jpg) center top no-repeat; }
+.bg5 { background:url(../img/bg.jpg) center top no-repeat; }
+
+#middle #corpo { width: 990px; margin: auto; position: relative; z-index: 2 }
+#middle #corpo * { z-index: 2 }
+#middle #corpo ul, #middle #corpo #areatexto { width: 497px; float: right; margin: 30px 0px 0px 0px; }
+#middle #corpo ul li { list-style: none; float: left; clear: left; margin: 0px 0px 20px 0px; }
+#middle #corpo ul li a { display: block; background:url(../img/ar.png) left top no-repeat; width: 390px; height: 70px; font-size: 24px; font-family: 'MyriadPro', 'Lucida Grande', Arial, Helvetica, sans-serif; color: #999999; line-height: 100%; padding: 10px 52px 0px 55px; }
+#middle #corpo ul li a:hover, #middle #corpo ul li a.current { color: #FFF !important; background:url(../img/ar.png) left bottom no-repeat; }
+
+#corpo #areatexto p { font-size: 14px; color: #999999; line-height: 130%; margin: 0px 0px 20px 0px; }
+#corpo #areatexto h1 { color: #718DC6; font-size: 35px; line-height: 100%; margin: 0px 0px 20px 0px; font-weight: normal; }
+#corpo #areatexto p.botao a { font-size:20px; color: #FFF !important; display: block; padding:8px; text-align: center; border-radius: 10px; background:url(../img/hm.gif) left top; }
+#corpo #areatexto p.botao a:hover { /*box-shadow:0 0 10px #00A1DC;*/ }
+
+#rodape { float: left; clear: left; width:100%; margin: 0px 0px 0px 0px; border-top:2px #F0F0F0 solid; padding: 10px 0px 20px 0px;  }
+#rodape div { width: 990px; margin: auto; color: #718EC7; }
+#rodape div address, #rodape div ul { font-style: normal; margin: 0px 0px 0px 30px; }
+#rodape div ul li { float: left; list-style: none; margin: 5px 5px 0px 0px; }
+#rodape div ul li a { color: #718EC7; }
+
+
+/*BOTÕES*/
+
+/* blue */
+.blue {
+	color: #d9eef7 !important;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+.blue:hover {
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+.blue:active {
+	color: #80bed6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+	background: -moz-linear-gradient(top,  #0078a5,  #00adee);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+
+/* button 
+---------------------------------------------- */
+.button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+ 
+.bigrounded {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}
+.medium {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.small {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+

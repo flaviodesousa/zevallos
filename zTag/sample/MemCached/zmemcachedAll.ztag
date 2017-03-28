@@ -1,0 +1,48 @@
+<zserver:get use="HTTP_HOST" var="serverHost" />
+<zserver:get use="REQUEST_URI" var="serverURI" />
+<zserver:get use="SERVER_PORT" var="serverPort" />
+
+<zmemcached:open id="memCached" host="localhost" port="11211" />
+
+<zvar:set id="varKey" value="$serverHost$serverURI:$serverPort" />
+
+<zmemcached:key key="$varKey" var="contentKey" type="md5" />
+
+<zmemcached:get use="memCached" key="$contentKey" var="contentVar" />
+
+<zctrl:if value="$contentVar" transform="len()" operator="gt" with="0">
+  <zvar:show use="contentVar" />
+</zctrl:if>
+<zctrl:if value="$contentVar" transform="len()" operator="e" with="0" var="contentIfVar">
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+  <html lang="en:us">
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+      <zhtml:title value="Using - zMemCached" />
+      <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+      <style type="text/css" media="screen, projection">
+        body {margin: 0px 0px 0px 10px;
+              padding:0px 0px 0px 0px;
+              font-family:Arial, Verdana, Helvetica, sans-serif;
+              color:#444444; ;
+              line-height:125%;}
+        h3 {margin:10px 0px 0px 0px;}
+        h4 {margin:10px 0px 0px 0px;}
+        hr {margin:0px 0px 10px 0px;}
+        dl {font-size:90%; line-height:125%; margin:0px;}
+        dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+        dd {margin:0px 0px 0px 10px;}   
+      </style>
+    </head>
+    <body>
+      <h3>All - zMemCached - (<zhtml:a href="/ztag/sample/zCode.ztag?file=/#ztagFile" value="Source" />)</h3>
+      <hr />
+      This sample use entire function set of zMemCachedTag in a way to show most of all it's features.
+    
+    </body>
+  </html>
+</zctrl:if>
+<zctrl:if value="$contentIfVar" transform="len()" operator="gt" with="0">
+  <zmemcached:set use="memCached" key="$contentKey" value="$contentIfVar" />
+</zctrl:if>
+<zmemcached:close use="memCached" />

@@ -1,0 +1,124 @@
+<!-- zheader:locationif use="!userLogged" notcondition="len()" value="/logOn.php" /-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>Lista Prestadores - Aliança 8 - #sysSign</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}      
+    </style>
+  </head>
+  <body>
+    <h3>Lista Prestadores - Aliança 8 (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Fonte" />)</h3>
+    <hr />
+    <zget:get name="FL_CPF_VAZIO" var="FL_CPF_VAZIO" transform="stripTags()" />
+    <zget:get name="FL_CPF_ZERADO" var="FL_CPF_ZERADO" transform="stripTags()" />
+
+    <zget:get name="NU_CPF_TITULAR" var="NU_CPF_TITULAR" transform="allTrim(' ')->stripTags()" />
+    <zget:get name="NM_PESSOA_TITULAR" var="NM_PESSOA_TITULAR" transform="toUpper()->allTrim(' ')->stripTags()" />
+
+    <zget:get name="NU_CPF_DEPENDENTE" var="NU_CPF_DEPENDENTE" transform="allTrim(' ')->stripTags()" />
+    <zget:get name="NM_PESSOA_DEPENDENTE" var="NM_PESSOA_DEPENDENTE" transform="toUpper()->allTrim(' ')->stripTags()" />
+
+    <zget:get name="FL_MAIOR" var="FL_MAIOR" transform="allTrim(' ')->stripTags()" />
+
+    <zget:get name="NU_LINHAS" var="NU_LINHAS" transform="allTrim(' ')->stripTags()" />
+
+    <zget:get name="FL_FORM" var="FL_FORM" transform="allTrim(' ')->stripTags()" />
+        
+    <form
+      id="frmForm"
+      name="frmForm"
+      method="get"
+      action="<zhtml:echo value="/#ztagFile" />"
+      >
+
+      <zform:inputhidden name="FL_FORM" value="1" />
+
+      <zform:boxtext caption="&Nome Titular" name="NM_PESSOA_TITULAR" tagid="NM_PESSOA_TITULAR" value="$NM_PESSOA_TITULAR" />
+      <br /><zform:boxtext caption="&CPF Titular" name="NU_CPF_TITULAR" tagid="NU_CPF_TITULAR" value="$NU_CPF_TITULAR" />
+      
+      <br /><zform:boxtext caption="&Nome Dependente" name="NM_PESSOA_DEPENDENTE" tagid="NM_PESSOA_DEPENDENTE" value="$NM_PESSOA_DEPENDENTE" />
+      <br /><zform:boxtext caption="&CPF Dependente" name="NU_CPF_DEPENDENTE" tagid="NU_CPF_DEPENDENTE" value="$NU_CPF_DEPENDENTE" />
+
+      <br /><zform:boxselect caption="&CPF Vazio" name="FL_CPF_VAZIO" tagid="FL_CPF_VAZIO" value="$FL_CPF_VAZIO" options="0,-;1,Somente os vazios;2,Exlui os vazios" />
+      <br /><zform:boxselect caption="&CPF Zerado" name="FL_CPF_ZERADO" tagid="FL_CPF_ZERADO" value="$FL_CPF_ZERADO" options="0,-;1,Somente os zerados;2,Exlui os zerados" />
+
+      <br /><zform:boxselect caption="&Somente maiores" name="FL_MAIOR" tagid="FL_MAIOR" value="$FL_MAIOR" options="0,Não;1,Sim" />
+
+      <br /><zform:boxselect caption="&Linhas" name="NU_LINHAS" tagid="NU_LINHAS" value="$NU_LINHAS" options="10,10;50,50;100,100;200,200;500,500;1000,1000;2000,2000;3000,3000" />
+      
+      <br /><zform:inputsubmit name="bmtEnviar" tagid="bmtEnviar" value="Enviar" />
+    </form>
+
+    <zvar:set id="sqlFORM" value="AND 1=0" />
+
+    <zvar:setif use="FL_FORM" condition="iif(0$FL_FORM == 1, 1, 0)" var="sqlFORM" then="AND 1=1" />
+    
+    <zvar:setif use="NU_LINHAS" condition="iif(0$NU_LINHAS > 0, 1, 0)" var="sqlLinhas" then="WHERE ROWNUM <= $NU_LINHAS" />
+
+    <zvar:setif use="FL_CPF_VAZIO" condition="iif(0$FL_CPF_VAZIO == 1, 1, 0)" var="sqlCPFVazio" then="AND PRES.NU_CPF_CGC IS NULL AND PU.NU_CPF_CGC IS NULL" />
+    <zvar:setif use="FL_CPF_VAZIO" condition="iif(0$FL_CPF_VAZIO == 2, 1, 0)" var="sqlCPFVazio" then="AND PRES.NU_CPF_CGC IS NOT NULL AND PU.NU_CPF_CGC IS NOT NULL" />
+
+    <zvar:setif use="FL_CPF_ZERADO" condition="iif(0$FL_CPF_ZERADO == 1, 1, 0)" var="sqlCPFZerado" then="AND PRES.NU_CPF_CGC = '00000000000' AND PU.NU_CPF_CGC = '00000000000'" />
+    <zvar:setif use="FL_CPF_ZERADO" condition="iif(0$FL_CPF_ZERADO == 2, 1, 0)" var="sqlCPFZerado" then="AND PRES.NU_CPF_CGC <> '00000000000' AND PU.NU_CPF_CGC <> '00000000000'" />
+
+    <zvar:setif use="NU_CPF_TITULAR" condition="iif('$NU_CPF_TITULAR' > '', 1, 0)" var="sqlCPFTitular" then="AND PRES.NU_CPF_CGC LIKE '%$NU_CPF_TITULAR%'" />
+    <zvar:setif use="NM_PESSOA_TITULAR" condition="iif('$NM_PESSOA_TITULAR' > '', 1, 0)" var="sqlNomeTitular" then="AND PRES.NM_PESSOA LIKE '%$NM_PESSOA_TITULAR%'" />
+
+    <zvar:setif use="NU_CPF_DEPENDENTE" condition="iif('$NU_CPF_DEPENDENTE' > '', 1, 0)" var="sqlCPFDependente" then="AND PU.NU_CPF_CGC LIKE '%$NU_CPF_DEPENDENTE%'" />
+    <zvar:setif use="NM_PESSOA_DEPENDENTE" condition="iif('$NM_PESSOA_DEPENDENTE' > '', 1, 0)" var="sqlNomeDependente" then="AND PU.NM_PESSOA LIKE '%$NM_PESSOA_DEPENDENTE%'" />
+
+    <zvar:setif use="FL_MAIOR" condition="iif(0$FL_MAIOR == 1, 1, 0)" var="sqlMaior" then="AND ROUND(MONTHS_BETWEEN(CURRENT_TIMESTAMP, PU.DT_SURGIMENTO) / 12) >= 18" />
+    
+    <zdb:open id="fbConn" driver="firebird" database="#fbDatabase" user="#fbUser", password="#fbPassword" />
+      <zdb:query use="fbConn" id="fbQuery">
+				SELECT
+          CODIGO_PRESTADOR
+				, NOME_PRESTADOR
+				, SEXO
+				, DATA_NASCIMENTO_FUNDACAO
+				, TIPO_PESSOA
+				, DATA_DESCREDENCIAMENTO
+				, CODIGO_ANTIGO
+				FROM PS5000
+        ORDER BY CODIGO_PRESTADOR
+      </zdb:query>
+             
+      <table border="1" cellspacing="0">
+        <tr>
+          <zHTML:cellhead value="Id" />
+          <zHTML:cellhead value="Nome" />
+          <zHTML:cellhead value="Sexo" />
+          <zHTML:cellhead value="Nascimento" />
+          <zHTML:cellhead value="Tipo" />
+          <zHTML:cellhead value="Descredenciamento" />
+          <zHTML:cellhead value="Id Antigo" />
+        </tr>
+              
+        <zdb:fetchuntil use="fbQuery" id="fbRow" var="fbRow">
+          <tr>
+            <zHTML:cell value="$fbRow[CODIGO_PRESTADOR]" align="right" />
+            <zHTML:cell value="$fbRow[NOME_PRESTADOR]" transform="sentence()" />
+            <zHTML:cell value="$fbRow[SEXO]" align="center" />
+            <zHTML:cell value="$fbRow[DATA_NASCIMENTO_FUNDACAO]" align="center"/>
+            <zHTML:cell value="$fbRow[TIPO_PESSOA]" align="center"/>
+            <zHTML:cell value="$fbRow[DATA_DESCREDENCIAMENTO]" align="center"/>
+            <zHTML:cell value="$fbRow[CODIGO_ANTIGO]" align="right"/>
+            </tr>
+        </zdb:fetchuntil>
+      </table>
+    <zdb:close use="fbConn" />
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="zCMS - Index" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <style type="text/css"></style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="logo">zCMS</div>
+      </div>
+      <div id="middle">
+        <div id="nav">
+          <ul>
+            <li><a href=".">Home</a></li>
+            <li><a href="/articles">Articles</a></li>
+          </ul>
+          <div class="feed-icon"><a type="application/rss+xml" rel="alternate" title="Zend Developer Zone - Home Page RSS Feed" href="rss.ztag"><img src="img/feed-icon-28x28.png"></a></div>
+          <div id="search"><form id="search_form" method="post" action="search.ztag" name="search.form"><div>
+          <input type="text" class="input-text" id="search_text" maxlength="80" name="search_text">
+          <input type="image" class="input-button" id="search_submit" value="Go" alt="Search" src="img/btn_search.gif">
+          </div>
+          </form>
+        </div>
+        <div class="clearfix"></div>
+        <div id="content">
+          <div id="post-content">
+            <div class="post_title">
+              <h2><a title="Aplicativo oficial do Twitter para Android recebe nova versão" rel="bookmark" href="http://meiobit.com/80662/aplicativo-oficial-do-twitter-para-android-recebe-nova-verso/">Aplicativo oficial do Twitter para Android recebe nova versão</a></h2>
+              <div class="post_meta">
+                <span class="alignleft">
+                por <a title="Posts de Ticiano Sampaio" href="http://meiobit.com/author/ticianogsampaio/">Ticiano Sampaio</a>
+                &nbsp;em <a title="Link direto para este post" rel="bookmark" href="http://meiobit.com/80662/aplicativo-oficial-do-twitter-para-android-recebe-nova-verso/">12/02/2011</a>
+                </span>
+                <hr class="clear">
+              </div>
+            </div>
+  					<p>Tables and views are stored in RDB$RELATIONS system table. System tables and views have RDB$SYSTEM_FLAG set, while user defined ones have zero or NULL. You can distinguish views from tables as they have field RDB$VIEW_BLR set. Please note that there is also a field RDB$VIEW_SOURCE which stored human-readable view source and can be set to NULL - database would still be completely functional as it uses precompiled BLR. Here's query to list all user tables:</p>
+           <p>Tables and views are stored in RDB$RELATIONS system table. System tables and views have RDB$SYSTEM_FLAG set, while user defined ones have zero or NULL. You can distinguish views from tables as they have field RDB$VIEW_BLR set. Please note that there is also a field RDB$VIEW_SOURCE which stored human-readable view source and can be set to NULL - database would still be completely functional as it uses precompiled BLR. Here's query to list all user tables:</p>
+           <p>Tables and views are stored in RDB$RELATIONS system table. System tables and views have RDB$SYSTEM_FLAG set, while user defined ones have zero or NULL. You can distinguish views from tables as they have field RDB$VIEW_BLR set. Please note that there is also a field RDB$VIEW_SOURCE which stored human-readable view source and can be set to NULL - database would still be completely functional as it uses precompiled BLR. Here's query to list all user tables:</p>
+           <p>Tables and views are stored in RDB$RELATIONS system table. System tables and views have RDB$SYSTEM_FLAG set, while user defined ones have zero or NULL. You can distinguish views from tables as they have field RDB$VIEW_BLR set. Please note that there is also a field RDB$VIEW_SOURCE which stored human-readable view source and can be set to NULL - database would still be completely functional as it uses precompiled BLR. Here's query to list all user tables:</p>
+          </div>
+          <div id="post-content">
+            <div class="post_title">
+              <h2><a title="Aplicativo oficial do Twitter para Android recebe nova versão" rel="bookmark" href="http://meiobit.com/80662/aplicativo-oficial-do-twitter-para-android-recebe-nova-verso/">Aplicativo oficial do Twitter para Android recebe nova versão</a></h2>
+              <div class="post_meta">
+                <span class="alignleft">
+                por <a title="Posts de Ticiano Sampaio" href="http://meiobit.com/author/ticianogsampaio/">Ticiano Sampaio</a>
+                &nbsp;em <a title="Link direto para este post" rel="bookmark" href="http://meiobit.com/80662/aplicativo-oficial-do-twitter-para-android-recebe-nova-verso/">12/02/2011</a>
+                </span>
+                <hr class="clear">
+              </div>
+            </div>
+  					<p>Tables and views are stored in RDB$RELATIONS system table. System tables and views have RDB$SYSTEM_FLAG set, while user defined ones have zero or NULL. You can distinguish views from tables as they have field RDB$VIEW_BLR set. Please note that there is also a field RDB$VIEW_SOURCE which stored human-readable view source and can be set to NULL - database would still be completely functional as it uses precompiled BLR. Here's query to list all user tables:</p>
+           <p>Tables and views are stored in RDB$RELATIONS system table. System tables and views have RDB$SYSTEM_FLAG set, while user defined ones have zero or NULL. You can distinguish views from tables as they have field RDB$VIEW_BLR set. Please note that there is also a field RDB$VIEW_SOURCE which stored human-readable view source and can be set to NULL - database would still be completely functional as it uses precompiled BLR. Here's query to list all user tables:</p>
+           <p>Tables and views are stored in RDB$RELATIONS system table. System tables and views have RDB$SYSTEM_FLAG set, while user defined ones have zero or NULL. You can distinguish views from tables as they have field RDB$VIEW_BLR set. Please note that there is also a field RDB$VIEW_SOURCE which stored human-readable view source and can be set to NULL - database would still be completely functional as it uses precompiled BLR. Here's query to list all user tables:</p>
+           <p>Tables and views are stored in RDB$RELATIONS system table. System tables and views have RDB$SYSTEM_FLAG set, while user defined ones have zero or NULL. You can distinguish views from tables as they have field RDB$VIEW_BLR set. Please note that there is also a field RDB$VIEW_SOURCE which stored human-readable view source and can be set to NULL - database would still be completely functional as it uses precompiled BLR. Here's query to list all user tables:</p>
+          </div>
+        </div>
+        <div id="col-right">
+          <br />col-right
+          <br />col-right
+          <br />col-right
+          <br />col-right
+          <br />col-right
+        </div>
+        <div class="clearfix"></div>
+        <div id="footer">
+          <strong>Copyright &copy; 2011 by zTag. All rights reserved.</strong><br />zCMD is powerd by <a href="http://code.google.com/p/ztag/">zTag</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

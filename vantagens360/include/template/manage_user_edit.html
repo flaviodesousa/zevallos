@@ -1,0 +1,82 @@
+<!--{include manage_header}-->
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+<div id="user">
+	<div class="dashboard" id="dashboard">
+		<ul>${mcurrent_user(null)}<li class="current"><a href="/manage/user/edit.php?id={$user['id']}">Editar Usuário</a><span></span></li></ul>
+	</div>
+	<div id="content" class="clear mainwide">
+        <div class="clear box">
+            <div class="box-top"></div>
+            <div class="box-content">
+                <div class="head"><h2>Editar Usuário</h2><b style="margin-left:20px;font-size:16px;">（{$user['email']}/{$user['username']}）</b></div>
+                <div class="sect">
+                    <form id="login-user-form" method="post" action="/manage/user/edit.php?id={$user['id']}">
+					<input type="hidden" name="id" value="{$user['id']}" />
+						<div class="wholetip clear"><h3>1. Informações</h3></div>
+                        <div class="field">
+                            <label>Email</label>
+                            <input type="text" size="30" name="email" id="user-edit-email" class="f-input" value="{$user['email']}" readonly />
+						</div>
+						<div class="field">
+                            <label>Usuário</label>
+                            <input type="text" size="30" name="username" id="user-edit-username" class="f-input" value="{$user['username']}" readonly />
+                        </div>
+						<div class="field">
+                            <label>Nome</label>
+                            <input type="text" size="30" name="realname" id="user-edit-realname" class="f-input" value="{$user['realname']}" />
+                        </div>
+						<div class="field">
+                            <label>MSN</label>
+                            <input type="text" size="30" name="qq" id="user-edit-qq" class="number" value="{$user['qq']}" />
+                        </div>
+                        <div class="field password">
+                            <label>Senha</label>
+                            <input type="text" size="30" name="password" id="settings-password" class="f-input" />
+                            <span class="hint">Deixe em branco para não alterar.</span>
+                        </div>
+						<div class="wholetip clear"><h3>2. Informações basicas</h3></div>
+                        <div class="field">
+                            <label>CEP</label>
+                            <input type="text" size="30" name="zipcode" id="user-edit-zipcode" class="f-input" value="{$user['zipcode']}"/>
+                        </div>
+                        <div class="field">
+                            <label>Endereço</label>
+                            <input type="text" size="30" name="address" id="user-edit-address" class="f-input" value="{$user['address']}"/>
+						</div>
+                        <div class="field">
+                            <label>Celular</label>
+                            <input type="text" size="30" name="mobile" id="user-edit-mobile" class="number" value="{$user['mobile']}" maxLength="11" />
+						</div>
+						<div class="wholetip clear"><h3>3. Adicional</h3></div>
+                        <div class="field">
+                            <label>Verificação/email</label>
+                            <input type="text" size="30" name="secret" id="user-edit-secret" class="f-input" value="{$user['secret']}"/>
+                            <span class="hint">Se a vereficação foi feita, deixe em branco</span>
+                        </div>
+						<!--{if $login_user_id==1}-->
+                        <div class="field">
+                            <label>Admin</label>
+                            <input type="text" size="30" name="manager" id="user-edit-manager" class="number" value="{$user['manager']}" maxLength="1" require="true" datatype="require" style="text-transform:uppercase;" /><span class="inputtip">Y:Sim N:Não</span>
+						</div>
+						<!--{/if}-->
+                        <div class="act">
+                            <input type="submit" value="Editar" name="commit" id="user-submit" class="formbutton"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="box-bottom"></div>
+        </div>
+	</div>
+
+<div id="sidebar">
+</div>
+
+</div>
+</div> <!-- bd end -->
+</div> <!-- bdw end -->
+
+<!--{include manage_footer}-->
+

@@ -1,0 +1,133 @@
+<zheader:locationif use="!userLogged" notcondition="len()" value="/index.ztag" />
+<zrequest:get name="t" var="target" transform="stripTags()" />
+<zdb:open id="myConn" driver="mysql" host="#myHost" database="#myDatabase" user="#myUser" password="#myPassword" />
+	<zctrl:if value="$target" operator="gt" with="0">
+		<zlmprofile:cirle use="myConn" circle="$target" var="circle" />
+		<zvar:set var="temp" value="$circle[nome]" />
+		<zvar:setif use="temp" condition="len()" var="circleName" then=" - $circle[nome]" />
+		
+	</zctrl:if>
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<zhtml:title value="Colegas do !userNameFull | #sysName" />
+
+		<link rel="stylesheet" type="text/css" href="/css/geral.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/box.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/menu.css" media="screen, projection"></link>
+		<link rel="stylesheet" type="text/css" href="/css/pags.css" media="screen, projection"></link>
+		<link type="text/css" href="/CometChat/cometchatcss.php" rel="stylesheet" charset="utf-8">
+		<script type="text/javascript" src="/CometChat/cometchatjs.php" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="root">
+				<div class="box-logo"><a href="/"><img src="/img/logo.png" alt="Lugar Médico" /></a></div>
+				<div class="box-loggeduser"><zhtml:a href="/userProfile.ztag" value="!userName" /> - <a href="userSetup.ztag">Configurações</a> - <a href="logoff.ztag">Sair</a></div>
+			</div>
+		</div>
+		<div id="menu">
+			<div class="root">
+				<ul>
+					<li><a href="/followmeList.ztag" title="Gerencia o siga-me">Siga-me</a></li>
+					<li><a href="/messageList.ztag" title="Gerencia a sua caixa postal">Correio</a></li>
+					<li><a href="/friendList.ztag" title="Administra a lista de colegas">Colegas</a></li>
+					<li><a href="/commentList.ztag" title="Visualiza e modera os comentários recebidos">Comentários</a></li>
+					<li><a href="/roomList.ztag" title="Gerencia suas salas e as que voce participa">Salas</a></li>
+					<li><a href="/textList.ztag" title="Gerencia suas salas e as que voce participa">Textos</a></li>
+					<li><a href="/eventList.ztag" title="Visualiza os eventos">Eventos</a></li>
+					<li><a href="/help.ztag">Ajuda</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="container">
+			<div class="root">
+				<div id="box">
+					<zhtml:div value="!userNameFull" class="header blue" />
+					<div class="body perfil-box">
+						<zhtml:img src="!userAvatar" alt="!userNameFull" title="!userNameFull" width="120px" class="img" />
+						<div class="perfil-user-name">
+							<a href="<zsession:show name="userURLPerfil" />"><zhtml:b value="!userNameFull" /></a>
+							<br />
+							<zhtml:a href="/userProfile.ztag" title="Editar o perfil" value="Editar o perfil" />
+						</div>
+						<div class="perfil-options">
+							<dl>
+								<dt>Atualizações</dt>
+								<dd><zhtml:a href="/messageList.ztag" title="Mensagens na caixa postal" value="Mensagens" /><span class="perfil-option-qtd">99</span></dd>
+								<dd><zhtml:a href="/eventList.ztag" title="Eventos" value="Eventos" /><span class="perfil-option-qtd">99</span></dd>
+								<dd><zhtml:a href="/friendList.ztag" title="Amigos" value="Colegas" /><span class="perfil-option-qtd">99</span></dd>
+								<dd><zhtml:a href="/commentList.ztag" title="Comentários" value="Comentários" /><span class="perfil-option-qtd">99</span></dd>
+
+								<dt><zhtml:a href="/circleList.ztag" title="Círculo" value="Círculo" /> - <zhtml:a href="/circleNew.ztag" title="Novo Círculo" value="Novo" /></dt>
+								<dd><zhtml:a href="/circleView.ztag?t=geral" title="Círculo geral" value="Geral" /><span class="perfil-option-qtd">99</span></dd>
+
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div id="box">
+					<div class="header gray">Colegas<zvar:show use="circleName" /></div>
+					<div class="body message-list">
+						<div class="busca">
+							Busca <input type="text" name="busca" id="busca" caption="Buscar Eventos" width="20"><input type="submit" name="enviar" id="enviar" value="Buscar">
+							<a href="/friendInvite.ztag">Convidar</a>
+
+							<zlmprofile:cirles use="myConn" user="!userLogged" var="cirles" />
+							
+							<zvar:set id="itemBold" value="" />
+							<zvar:set id="itemCount" value="0" />
+							
+							<zctrl:foreach use="cirles" value="value">
+			          <zvar:inc use="itemCount" />
+			
+			          <zvar:update use="itemBold" value=""/>
+			          
+			          <zctrl:if value="$value[id]" operator="e" with="$target">
+			            <zvar:update use="itemBold" value=" bold"/>
+			          </zctrl:if>
+								<zhtml:a class="circle$itemBold" href="/friendList.ztag?t=$value[id]" value="$value[nome]" />
+							</zctrl:foreach>
+						</div>
+						<table border="0" width="100%">
+							<tr class="list-title">
+								<td><a href="/userProfile.ztag?t=120" title="Ruben Zevallos Jr."><img src="/avatar/df/Ruben_1.jpg" align="left"/>&nbsp;<b>Dr. Ruben Zevallos Jr.</b></a>
+								<br />&nbsp;<zhtml:a href="/circleView.ztag?t=Geral" value="Geral" />, <zhtml:a href="/circleView.ztag?t=Faculdade_Gama_Filho" value="Faculdade Gama Filho" /></td>
+								<td align="center"><zhtml:a href="/perfilDelete.ztag?t=123" value="Excluir" />
+								<br /><zhtml:a href="/messageNew.ztag?t=123" value="Mensagem" />
+								<br /><zhtml:a href="/chatCall.ztag?t=123" value="Chat" /></td>
+							</tr>							
+							<tr class="list-title">
+								<td><a href="/userProfile.ztag?t=120" title="Ruben Zevallos Jr."><img src="/avatar/df/Ruben_1.jpg" align="left"/>&nbsp;<b>Dr. Ruben Zevallos Jr.</b></a>
+								<br />&nbsp;<zhtml:a href="/circleView.ztag?t=Geral" value="Geral" />, <zhtml:a href="/circleView.ztag?t=Faculdade_Gama_Filho" value="Faculdade Gama Filho" /></td>
+								<td align="center"><zhtml:a href="/perfilDelete.ztag?t=123" value="Excluir" />
+								<br /><zhtml:a href="/messageNew.ztag?t=123" value="Mensagem" />
+								<br /><zhtml:a href="/chatCall.ztag?t=123" value="Chat" /></td>
+							</tr>							
+							<tr class="list-title">
+								<td><a href="/userProfile.ztag?t=120" title="Ruben Zevallos Jr."><img src="/avatar/df/Ruben_1.jpg" align="left"/>&nbsp;<b>Dr. Ruben Zevallos Jr.</b></a>
+								<br />&nbsp;<zhtml:a href="/circleView.ztag?t=Geral" value="Geral" />, <zhtml:a href="/circleView.ztag?t=Faculdade_Gama_Filho" value="Faculdade Gama Filho" /></td>
+								<td align="center"><zhtml:a href="/perfilDelete.ztag?t=123" value="Excluir" />
+								<br /><zhtml:a href="/messageNew.ztag?t=123" value="Mensagem" />
+								<br /><zhtml:a href="/chatCall.ztag?t=123" value="Chat" /></td>
+							</tr>							
+						</table>
+					</div>
+				</div>
+				<div id="box">
+					<zhtml:div value="Eventos" class="header blue" />
+					<div class="body perfil-events">
+						<ul><li>Dica</li></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="root">Copyright &copy; 2011 Lugar Médico todos os direitos reservados</div>
+		</div>
+	</body>
+</html>
+<zdb:close use="myConn" />

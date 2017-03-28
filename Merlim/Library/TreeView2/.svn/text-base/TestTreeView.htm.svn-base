@@ -1,0 +1,205 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: auto;
+        width: 600px;
+        height: auto;
+        font-family: verdana, arial, helvetica;
+        font-size: 12px;
+        cursor:auto;
+      }
+
+      .Treeview {
+        font-family: verdana, arial, helvetica;
+        font-size: 10px;
+        line-height: 1;
+        list-style:none;
+        width: 200px;
+      }
+
+      .Treeview, .Treeview ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .Treeview img {
+        margin: 0px 4px 0px 0px;
+        padding: 0px;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .Treeview li {
+        font-size: 10px;
+        line-height: 15px;
+        background-image:url(/Library/TreeView2/Line.gif);
+        background-position: left;
+        width: 100%;
+        list-style: none;
+        float: left;
+        margin: 0px;
+        padding: 0px 0px 0px 18px;
+        text-indent: -18px;
+        line-height: 16px;
+      }
+
+      .Treeview li.nobackgrond {
+        background-image: none !important;
+      }
+
+      li.on ul {display: block;}
+      li.off ul {display: none;}
+
+
+    </style>
+  </head>
+  <body>
+    <h3 align="center">Teste do TreeView</h3>
+
+    <ul id="objTreeview" class="Treeview">
+      <li class="onhover"><img src="/Library/TreeView2/Middle.gif" />1 - Relatórios</li>
+      <li class="onhover"><img src="/Library/TreeView2/Middle.gif" />2 - Tabelas</li>
+      <li id="TV_1" class="off"><img src="/Library/TreeView2/Plus.gif" onclick="TreeviewToggle(event);" />3 - Things
+        <ul>
+          <li class="onhover"><img src="/Library/TreeView2/Middle.gif" />3.0 - Zero</li>
+          <li id="TV_2" class="off"><img src="/Library/TreeView2/Plus.gif" onclick="TreeviewToggle(event);" />3.1 - Integrado
+            <ul>
+              <li class="onhover"><img src="/Library/TreeView2/Middle.gif" />3.1.1 - Dados do Integrado</li>
+              <li class="onhover nobackgrond"><img src="/Library/TreeView2/MiddleEnd.gif" />3.2.1 - Tabelas do Integrado<br />Tabelas do Integrado</li>
+            </ul>
+          </li>
+          <li class="onhover nobackgrond"><img src="/Library/TreeView2/MiddleEnd.gif" />3.2 - Tabelas</li>
+        </ul>
+      </li>
+      <li id="TV_3" class="off nobackgrond"><img src="/Library/TreeView2/Plus.gif" onclick="TreeviewToggle(event);" />4 - Other Things</li>
+    </ul>
+    <script type="text/javascript" language="Javascript1.2" src="LibraryAjax.js"></script>
+
+    <script type="text/javascript" language="Javascript1.2">
+
+    var arrTimer = new Array();
+
+    var sstrTreeviewURL = "/Library/TreeView2/TreeViewAjax.php";
+
+    var strIMGOn = "/Library/TreeView2/Minus.gif";
+    var strIMGOff = "/Library/TreeView2/Plus.gif";
+
+    Array.prototype.indexOf = IndexOf;
+
+    // Procura e retorna o índice dentro de uma array
+    function IndexOf(item){
+      for (var i=0; i < this.length; i++){
+        if (this[i] == item){
+        return i;}
+      }
+      return -1;
+    }
+
+    // Trata a troca do on e off
+    function TreeviewToggle(event) {
+    	if (window.event) {
+        event = window.event;
+
+    	  var objCurrent = window.event.srcElement;
+
+        objParent = objCurrent.parentElement;
+
+    	} else {
+    	  var objCurrent = event.target;
+
+        objParent = objCurrent.parentNode;
+
+    	}
+
+      event.cancelBubble = true;
+
+      var arrClasses = objParent.className.split(" ");
+
+      var intOn = arrClasses.indexOf("on");
+      var intOff = arrClasses.indexOf("off");
+
+      if (intOn == -1 && intOff == -1) {
+        arrClasses[arrClasses.length] = "off";
+
+      } else if (intOn != -1) {
+        arrClasses[intOn] = "off";
+        objCurrent.src = strIMGOff;
+
+      } else {
+        arrClasses[intOff] = "on";
+        objCurrent.src = strIMGOn;
+
+        carregaLIs(objParent);
+      }
+
+      objParent.className = arrClasses.join(" ");
+
+    }
+
+    // Executa a chamda AJAX para recuperar os LIs internos
+    function carregaLIs(objParent) {
+      var objLIs = objParent.getElementsByTagName("li");
+      var objULs = objParent.getElementsByTagName("ul");
+
+      objNodes = objParent.childNodes;
+
+      blnUL = false;
+
+      for (var i=0; i < objNodes.length; i++) {
+        if (objNodes[i].tagName == "UL") {
+          blnUL = true;
+          break;
+        }
+      }
+
+      if (!blnUL) {
+        // 1|4|4 - Other Things|/Teste.php?o=4
+        // 0||5 - Dados do Integrado|/Teste.php?o=4
+        // 0||6 - Tabelas do Integrado|/Teste.php?o=4
+
+        // <li class="off nobackgrond"><img src="/Library/TreeView2/Plus.gif" onclick="TreeviewToggle(event);" />4 - Other Things</li>
+        // <li class="onhover"><img src="/Library/TreeView2/Middle.gif" />3.1.1 - Dados do Integrado</li>
+        // <li id="TV_4" class="onhover nobackgrond"><img src="/Library/TreeView2/MiddleEnd.gif" />3.2.1 - Tabelas do Integrado<br />Tabelas do Integrado</li>
+
+        strTarget = objParent.id;
+
+        if (strTarget.length > 0) {
+          arrTarget = strTarget.split("_");
+
+          strSelect = ReadHTTP(sstrTreeviewURL + "?t=" + arrTarget[1]);
+
+          if (strSelect.length > 0) {
+            var strLIs = "";
+
+            arrLines = strSelect.split("\r\n");
+
+            for (var i=0; i < arrLines.length; i++) {
+              arrFields = arrLines[i].split("|");
+
+              strCaption = arrFields[2];
+
+              if (arrFields[3].length > 0) strCaption = '<a href="' + arrFields[3] + '">' + strCaption + '</a>';
+
+              if (arrFields[0] == "1") {
+                strLIs += '<li id="TV_' + arrFields[1] + '" class="off nobackgrond"><img src="/Library/TreeView2/Plus.gif" onclick="TreeviewToggle(event);" />' + strCaption + '</li>';
+
+              } else if (arrFields[0] == "0") {
+                strIMG = "Middle";
+
+                if (i == arrLines.length) strIMG = "MiddleEnd";
+
+                strLIs += '<li class="onhover"><img src="/Library/TreeView2/' + strIMG + '.gif" />' + strCaption + '</li>';
+              }
+            }
+
+            if (strLIs.length > 0) objParent.innerHTML += "<ul>" + strLIs + "</ul>";
+          }
+        }
+      }
+
+    }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <title>zDB - ZTags</title>
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <style type="text/css" media="screen, projection">
+      body {margin: 0px 0px 0px 10px;
+            padding:0px 0px 0px 0px;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+            color:#444444; ;
+            line-height:125%;}
+      h3 {margin:10px 0px 0px 0px;}
+      h4 {margin:10px 0px 0px 0px;}
+      hr {margin:0px 0px 10px 0px;}
+      dl {font-size:90%; line-height:125%; margin:0px;}
+      dt {color:navy; font-size:90%; padding-left:0px; margin:3px 0px 0px 0px; font-weight:bold;}
+      dd {margin:0px 0px 0px 10px;}      
+    </style>
+  </head>
+  <body>
+    <h3>zDB OCI - Gestão dos DBMS</h3>
+    <hr />
+    <br />
+    <h4>OCI:</h4>
+    <hr />
+    <zdb:open id="ociConn" driver="oci" host="#ociHost" database="#ociDatabase" user="#ociUser", password="#ociPassword" />
+      <zdb:query use="ociConn" id="ociQueryFetch">
+        SELECT CD_CODIGO
+        , NM_NOME
+        , DS_INCLUSAO
+        FROM zDBTeste
+        ORDER BY NM_NOME
+      </zdb:query> 
+
+      <zdb:fetch use="ociQueryFetch" id="ociFetch" /> 
+
+      <br />BOF: <zdb:bof use="ociFetch" />
+
+      <table border="1">
+        <tr><th>Id</th><th>Nome</th><th>Inclusão</th></tr>
+        <tr>
+	        <td><zdb:field use="ociFetch" name="CD_CODIGO" /></td>
+	        <td><zdb:field use="ociFetch" name="NM_NOME" /></td>
+	        <td><zdb:field use="ociFetch" name="DS_INCLUSAO" /></td>
+        </tr>
+      </table>
+
+      <br />EOF: <zdb:eof use="ociFetch" />
+
+      <!-- zdb:param use="query002" param="P_CD_PESSOA_USUARIO" var="" type="PARAM_INT" /--> 
+      <!--zdb:param use="query002" param="P_NM_USUARIO" var="" type="PARAM_STR" length="12" /--> 
+      
+      <!-- zarray:show name="queryrow" node="CD_PESSOA_USUARIO" /-->
+
+      <zdb:query use="ociConn" id="ociQueryFetchUntil">
+				SELECT DISTINCT
+				PP.CD_PESSOA
+				, PP.NM_PESSOA
+				, GCT.QT_PROCEDIMENTO
+				FROM TB_CONTA_MEDICA CM 
+				LEFT JOIN TB_GUIA_CM GC ON GC.NU_CONTA_MEDICA = CM.NU_CONTA_MEDICA
+				LEFT JOIN TB_GUIA G ON G.NU_GUIA = GC.NU_GUIA
+				LEFT JOIN TB_PESSOA PP ON CM.CD_PESSOA_PRESTADOR = PP.CD_PESSOA
+				LEFT JOIN TB_USUARIO U ON G.CD_USUARIO = U.CD_USUARIO
+				LEFT JOIN TB_PESSOA UP ON U.CD_PESSOA_USUARIO = UP.CD_PESSOA
+				LEFT JOIN V_GUIA_CM_TOTAIS GCT ON GC.CD_SEQUENCIA_GUIA = GCT.CD_SEQUENCIA_GUIA AND GC.NU_GUIA = GCT.NU_GUIA AND CM.NU_CONTA_MEDICA = GCT.NU_CONTA_MEDICA
+      </zdb:query>
+       
+      <table border="1">
+        <tr><th>CD_PESSOA</th><th>NM_PESSOA</th><th>QT_PROCEDIMENTO</th></tr>
+        <zdb:fetchuntil times="10" condition="eof" use="ociQueryFetchUntil" id="ociFetchUntil"> 
+          <tr>
+            <td><zdb:field use="ociFetchUntil" name="CD_PESSOA" /></td>
+            <td><zdb:field use="ociFetchUntil" name="NM_PESSOA" /></td>
+            <td align="right"><zdb:field use="ociFetchUntil" name="QT_PROCEDIMENTO" /></td>
+          </tr>
+        </zdb:fetchuntil>
+      </table>
+    <zdb:close use="ociConn" />
+        
+  </body>
+</html>

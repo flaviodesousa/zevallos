@@ -1,0 +1,63 @@
+/* ::::: http://www.mywebcareer.com/css/all_homepage.css?v=15 ::::: */
+
+* { margin: 0pt; padding: 0pt; }
+:active { outline: medium none; }
+html { overflow-y: scroll; }
+body, select, textarea, input, button { font-family: Arial,Helvetica,sans-serif; }
+body { font-size: 62.5%; line-height: normal; color: rgb(51, 51, 51); background: none repeat-x scroll left top rgb(255, 255, 255); }
+img { border: 0pt none; vertical-align: top; }
+p { margin: 0.8em 0pt 0.5em; font-size: 1.2em; line-height: 1.6em; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; line-height: normal; }
+ul, ol { margin: 0.5em 0pt; padding: 0pt 0pt 0pt 1.5em; }
+li { font-size: 1.2em; line-height: 1.4em; margin: 0pt 0pt 0.8em 0.8em; }
+ul li { list-style: disc outside none; }
+a { text-decoration: none; }
+a:link, a:visited, a:active { color: rgb(14, 87, 150); }
+a:hover { text-decoration: underline; }
+.clearer { clear: both; float: none; line-height: 0pt; font-size: 0pt; height: 0pt; overflow: hidden; }
+.clearerfix:after { clear: both; content: "."; display: block; height: 0pt; visibility: hidden; }
+.fltL { float: left; margin: 0pt; text-align: left; }
+.fltR { float: right; margin: 0pt; text-align: right; }
+input { font-family: Arial,Helvetica,sans-serif; font-size: 1em; line-height: normal; overflow: hidden; }
+#tpl_anchor { background: url('bg_tpl-anchor_x.png') repeat-x scroll left top transparent; }
+#tpl_page { width: 1002px; margin: 0pt auto; }
+#tpl_header { background: url('bg_tpl-header_x.gif') repeat-x scroll left top transparent; height: 96px; margin-bottom: 8px; overflow: hidden; }
+#tpl_header .logo { width: 142px; height: 94px; overflow: hidden; }
+/* ::::: http://www.mywebcareer.com/css/pages.css?v=15 ::::: */
+
+body.home #tpl_anchor { background: url('bg_tpl-anchor_x.gif') repeat-x scroll left top transparent; }
+body.home #tpl_header { background: url('bg_tpl-header_x.gif') repeat-x scroll left top transparent; height: 141px; margin-bottom: 0pt; overflow: hidden; }
+body.home #tpl_header .logo { width: 192px; height: 139px; }
+body.home #tpl_header .txt { width: 810px; padding-top: 16px; }
+body.home h2.txt-online-presence { font-family: "Helvetica-Light","Helvetica Light",Helvetica,Arial,sans-serif; font-weight: 300; color: rgb(255, 255, 255); font-size: 2.4em; text-align: center; background: url('what-does-your-online-presence.png') no-repeat scroll center center transparent; line-height: 49px; height: 49px; width: 768px; overflow: hidden; margin: 0pt 0pt 0pt 17px; text-indent: -10000px; }
+body.home .stats { padding: 6px 0pt 0pt 30px; }
+body.home .stats dl .one { color: rgb(96, 186, 252); }
+body.home .stats dl .two { color: rgb(145, 208, 254); }
+body.home .stats dl .three { color: rgb(194, 227, 252); }
+body.home .stats dl dt { float: left; width: 64px; margin-top: -2px; }
+body.home .stats dl dt span { font-weight: bold; font-size: 2.8em; text-shadow: -2px -2px 2px rgba(0, 0, 0, 0.25); }
+body.home .stats dl dd { float: left; width: 175px; margin-right: 22px; font-size: 1.1em; }
+body.home .stats dl dd.last { margin-right: 0pt; width: 190px; }
+body.home #tpl_content { padding-top: 30px; }
+body.home #tpl_content .bullets { height: 341px; }
+body.home #tpl_content .bullets .users-logo { margin-left: 51px; }
+body.home #tpl_content .bullets .info { margin-left: 48px; }
+body.home #tpl_content .bullets .info h3 { font-family: "Helvetica-Light","Helvetica Light",Helvetica,Arial,sans-serif; font-weight: 300; color: rgb(255, 255, 255); font-size: 2.9em; text-align: center; background: url('discover-evaluate-monitor-web-brand.png') no-repeat scroll center center transparent; line-height: normal; height: 83px; width: 425px; overflow: hidden; margin: 0pt 0pt 0pt 17px; text-indent: -10000px; }
+body.home #tpl_content .bullets .info ul { margin: 10px 0pt 0pt 10px; }
+body.home #tpl_content .bullets .info ul li { color: rgb(145, 199, 234); font-size: 1.4em; list-style: none outside none; background: url('bg_li_info.png') no-repeat scroll left center transparent; margin-bottom: 1em; padding-left: 48px; }
+body.home #tpl_content .bullets .info ul li em { display: block; font-style: normal; font-size: 1.143em; color: rgb(255, 255, 255); }
+body.home #tpl_content .sign-up { height: 100px; }
+body.home #tpl_content .sign-up .txt { width: 525px; }
+body.home #tpl_content .sign-up .txt h4 { font-family: "Helvetica-Light","Helvetica Light",Helvetica,Arial,sans-serif; font-weight: 300; color: rgb(255, 255, 255); font-size: 3em; text-align: center; background: url('sign-up-for-free-today.png') no-repeat scroll center top transparent; line-height: normal; height: 43px; width: 498px; overflow: hidden; margin: 10px 0pt 0pt; text-indent: -10000px; }
+body.home #tpl_content .sign-up .txt p { font-size: 1.4em; color: rgb(255, 255, 255); margin: 0pt 0pt 0pt 10px; }
+body.home #tpl_content .sign-up .txt p a { color: rgb(189, 246, 128); margin: 0pt 6px; text-decoration: underline; }
+body.home #tpl_content .sign-up .txt p a:hover { text-decoration: none; }
+body.home #tpl_content .sign-up .buttons { margin-top: 24px; }
+body.home #tpl_footer { margin-top: 5px; padding-bottom: 16px; clear: both; }
+body.home #tpl_footer p { color: rgb(102, 102, 102); text-transform: uppercase; font-size: 1em; }
+body.home #tpl_footer p a { color: rgb(102, 102, 102); margin: 0pt 3px; text-decoration: underline; }
+body.home #tpl_footer p a:hover { text-decoration: none; }
+body.home #tpl_footer p a.first { margin-left: 8px; }
+body.home #tpl_footer p a.last { margin-right: 8px; }
+body.home #tpl_footer .follow-us p { color: rgb(20, 106, 168); margin-left: 12px; }
+body.home #tpl_footer .copyright p { margin-right: 24px; }

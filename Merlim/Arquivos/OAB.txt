@@ -1,0 +1,11 @@
+http://www.oabdf.org.br/noticias/457/relacaoNoticias/
+"/noticias/\d+/\d+/[^"]+"
+
+http://curl.d2.net.br/curlnew.php?o=10&file=OABL&url=http://www.oabdf.org.br/noticias/457/relacaoNoticias/
+data">(\d+)/(\d+)/(\d+) - (\d+):(\d+)</div>.*?descricao"><a href="(/noticias/\d+/\d+/[^"]+)"
+
+Título
+<div class="titNot">(.*?)</div>
+
+Corpo
+<p>(.*?)</p>

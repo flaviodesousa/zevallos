@@ -1,0 +1,7 @@
+syntax:glob
+.DS_Store
+.*.swp*
+var*
+trac-data.tar.bz2
+trac-data
+glob:config.ini

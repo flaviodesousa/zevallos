@@ -1,0 +1,34 @@
+<!-- zheader:locationif use="!userLogged" notcondition="len()" value="/logOn.php" /-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt:br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <zhtml:title value="Update Post - Page" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Update Post - Page (<zhtml:a href="/ztag/sample/zCode.ztag?file=#ztagFile" value="Source" />)</h1>
+    <zhtml:a href="." value="back" />
+
+    <zrequest:get name="CD_PAGE" var="CD_PAGE" transform="stripTags()" />
+    <zrequest:get name="DS_TITLE" var="DS_TITLE" transform="stripTags()" />
+    <zrequest:get name="CD_FATHER" var="CD_FATHER" transform="stripTags()" />
+    <zrequest:get name="DS_CONTENT" var="DS_CONTENT" transform="stripTags()" />
+    <zrequest:get name="DS_KEYWORDS" var="DS_KEYWORDS" transform="stripTags()" />
+
+    <zvar:setif use="CD_FATHER" condition="iif(0$CD_FATHER > 0, 1, 0)" var="CD_FATHER" then="CD_FATHER = $CD_FATHER ," />
+
+    <zdbal:open id="myConn" driver="mysql" host="localhost" database="zcms" user="zcmsuser" password="z4321" />
+    	<zdbal:execute use="myConn">
+    	UPDATE pages
+    	SET $CD_FATHER
+        DS_TITLE = '$DS_TITLE'
+    	, DS_CONTENT = '$DS_CONTENT'
+    	, DS_KEYWORDS = '$DS_KEYWORDS'
+    	WHERE CD_PAGE = $CD_PAGE
+    	</zdbal:execute>
+    <zdbal:close use="myConn" />
+  </body>
+</html>
+
+

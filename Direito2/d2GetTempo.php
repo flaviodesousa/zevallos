@@ -1,0 +1,2 @@
+<?php require_once('d2lib.inc.php'); ?>
+<div id="barraTempo"><strong class="first"><?php echo accentString2Latin1($saveWeek[date('w')][3]); ?></strong><br /><strong><?php echo date('j'); ?></strong> de <?php echo accentString2Latin1($saveMonth[date('n')][0]); ?> de <?php echo date('Y'); ?></div>

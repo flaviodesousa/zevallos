@@ -1,0 +1,25 @@
+<zdb:open id="mysqlConn" driver="mysql" host="mysqlhost" database="mysqldatabase" user="mysqluser" password="mysqlpassword" />
+	<zdb:execute use="mysqlConn">
+    CREATE TABLE cadIngressos (
+    ingCodigo TINYINT NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'PK da linha'
+    , ingNome VARCHAR( 100 ) NOT NULL COMMENT 'Nome'
+    , ingEMail VARCHAR( 100 ) NOT NULL  COMMENT 'E-Mail'
+    , ingLogradouro VARCHAR( 50 ) NOT NULL
+    , ingNumero VARCHAR( 10 ) NOT NULL
+    , ingComplemento VARCHAR( 50 ) NOT NULL
+    , ingBairro VARCHAR( 50 ) NOT NULL
+    , ingCidade VARCHAR( 50 ) NOT NULL
+    , ingUF VARCHAR( 2 ) NOT NULL
+    , ingCEP VARCHAR( 8 ) NOT NULL
+    , ingTelefones VARCHAR( 50 ) NOT NULL
+    , ingRG VARCHAR( 20 ) NOT NULL
+    , ingCPF VARCHAR( 20 ) NOT NULL
+    , intTipoIngresso VARCHAR( 20 ) NOT NULL  COMMENT 'Tipo de Ingressos'
+    , intCidadeEvento VARCHAR( 20 ) NOT NULL  COMMENT 'Cidade onde acontecerá o evento'
+    , ingQuantidade TINYINT NOT NULL  COMMENT 'Quantidade de ingressos comprados'
+    , ingValor DECIMAL NOT NULL  COMMENT 'Valor total escolhido'
+    , ingInclusao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    , ingAtivo TINYINT NOT NULL DEFAULT '1'
+    ) ENGINE = MYISAM COMMENT = 'Cadastro dos Ingressos'
+  </zdb:execute>
+<zdb:close use="mysqlConn" />

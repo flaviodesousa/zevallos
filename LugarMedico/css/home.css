@@ -1,0 +1,135 @@
+body {
+    background: url(/img/home/bg-home.gif) repeat-x #f1f1f1;
+    margin:  0px;
+    padding: 0px;
+    font-size: 12px;
+    font-family: arial;
+}
+/*______________________________________________________________________________( Topo )*/
+#header{
+    height: 141px;
+    font-family: arial;
+    width: 960px;
+    margin: auto;
+}
+#box .logo{
+    float: left;
+    width: 200px;
+    height: 93px;
+    margin: 0px 5px;
+    background: url(/img/LogoLugarMedico1New.png) no-repeat center;
+}
+#box .conteudo{
+    float: left;
+    width: 550px;
+    height: 100px;
+}
+#box .login{
+    float: left;
+    width: 180px;
+    position:relative;
+}
+
+/*______________________________________________________________________________( Corpo )*/
+#body{
+    height: 370px;
+    width: 960px;
+    margin: auto;
+}
+body .right{
+    float: right;
+    width: 400px;
+    margin-top: 10px;
+}
+#body .img{
+    width: 560px;
+    min-height: 360px;
+    float: left;
+    margin-top: 10px;
+		position:relative;
+}
+#body .img h1{
+		width: 550px;
+		min-height: 40px;
+		margin: auto;
+		position: absolute;
+		bottom: 20px;
+		text-align: center;
+		display: block;
+}
+#body .title{
+    width: 400px;
+    float: right;
+    text-align: left;
+}
+#body .title h3{
+    color: #FFFFFF;
+    font-family: "Helvetica-Light","Helvetica Light",Helvetica,Arial,sans-serif;
+    font-size: 2.9em;
+    font-weight: 300;
+    padding: 5px 0;
+    line-height: normal;
+    margin: 0 0 0 17px;
+    overflow: hidden;
+    text-align: center;
+}
+#body ul{
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+}
+#body ul li{
+    text-decoration: none;
+    width: 360px;
+    height: 55px;
+    background: url(/img/home/bg_li_info.png) no-repeat scroll left center transparent;
+    margin-bottom: 1em;
+    padding-left: 40px;
+    color: black;
+    font-size: 1em;
+}
+#body ul li em{
+    color: #FFFFFF;
+    display: block;
+    font-size: 1.6em;
+    font-style: normal;
+}
+
+/*______________________________________________________________________________(Roda Pe)*/
+#footer{
+    height: 100px;
+    margin: auto;
+    width: 960px;
+    overflow:hidden;
+}
+
+#footer ul {
+    width: 460px;
+    float: right;
+    list-style: none;
+}
+#footer ul li{
+    padding: 0 6px 0 6px;
+    margin: 0;
+    float:left;
+    text-decoration: none;
+}
+#footer ul li a{
+    color:#000000;
+    font-size:14px;
+   text-shadow:0 1px 0 #fff;
+    text-decoration: none;
+}
+#footer ul li a:hover{
+    background-color:#FFFFFF;
+    padding: 0 6px 0 6px;
+    margin: 0;
+    text-decoration: none;
+}
+#footer p {
+    text-align:left;
+    float: left;
+    margin-right: 15px;
+    min-width: 250px;
+}
+/*http://portuguesbrasileiro.istockphoto.com/stock-photo-1750425-female-doctor-with-team-1.php?st=41db3c9*/

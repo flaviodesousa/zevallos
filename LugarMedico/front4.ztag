@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Lugar Médico</title>
+
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+
+<link rel="stylesheet" type="text/css" href="/css/login.css">
+<link rel="stylesheet" type="text/css" href="/css/box.css">
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+      $(".signin").click(function(e) {
+      e.preventDefault();
+      $("fieldset#signin_menu").toggle();
+      $(".signin").toggleClass("menu-open");
+      });
+
+      $("fieldset#signin_menu").mouseup(function() {
+      return false
+      });
+      $(document).mouseup(function(e) {
+      if($(e.target).parent("a.signin").length==0) {
+      $(".signin").removeClass("menu-open");
+      $("fieldset#signin_menu").hide();
+      }
+      });
+
+      });
+    </script>
+    <script src="/js/jquery.tipsy.js" type="text/javascript"></script>
+    <script type='text/javascript'>
+      $(function() {
+      $('#forgot_username_link').tipsy({gravity: 'w'});
+      });
+    </script>
+    <style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+-->
+    </style>
+</head>
+
+<body>
+<div id="header">
+    <div id="box">
+        <div class="logo">
+        </div>
+    </div>
+    <div id="box">
+        <div class="conteudo">
+        </div>
+    </div>
+    <div id="box">
+        <div class="login">
+            <div id="topnav" class="topnav">
+                <span class="style1">Já possui login? </span><a href="login" class="signin"><span>Logar-se</span></a>
+            </div>
+            <fieldset id="signin_menu">
+                <form method="post" id="signin" action="/logonValidate.ztag">
+                    <label for="username">E-mail</label>
+                    <input id="username" name="USERNAME" value="" title="e-mail do usu?rio" tabindex="4" type="text">
+                    </p>
+                    <p>
+                    <label for="password">Senha</label>
+                    <input id="password" name="PASSWORD" value="" title="Senha do usu?rio" tabindex="5" type="password">
+                    </p>
+                    <p class="remember">
+                    <input id="signin_submit" value="Entrar" tabindex="6" type="submit">
+                    <input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
+                    <label for="remember">Lembrar de mim?</label>
+                    </p>
+                    <p class="forgot"> <a href="/logonForgotPassword.ztag" id="resend_password_link">Esqueceu a senha?</a> </p>
+                    <p class="forgot"> <a href="/logonNew.ztag" id="new_user">Novo cadastro?</a> </p>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<div id="body">
+    <div class="img">
+      <img src="/img/home/medicos_novo_finalizado3.png"/>
+        
+    <h1 style="color:black">Este é nosso site, este é o nosso lugar!</h3>
+    </div>
+    <div class="right">
+			<div class="title">
+				<zhtml:h3 value="O seu lugar na Internet" />
+			</div>
+			<ul>
+				<li><em>Exclusiva dos médicos</em>O <b>Lugar Médico</b> é uma comunidade virtual exclusiva para médicos</li>
+				<li><em>Democrático</em>As decisões serão exclusivas da comunidade.</li>
+				<li><em>Proponha, Publique e Participe</em>No <b>Lugar Médico</b> voce poderá propor temas para discussão, trocar informações, participar de trabalhos, salas virtuais e muito mais.</li>
+				<li><em>Encontre e faça novas amizades</em>Encontre colegas de faculdade e profissão. Faça novas amizades e expanda o seu círculo de amizades</li>
+        </ul>
+    </div>
+</div>
+<div id="footer">
+    <p>Copyright © 2011 Lugar Médico todos os direitos reservados</p>
+    <ul>
+			<li><a href="/quemSomos.ztag">Quem Somos</a></li>
+			<li><a href="/public.ztag">Noticias</a></li>
+			<li><a href="/logonNew.ztag">Novo Cadastro</a></li>
+			<li><a href="/faleConosco.ztag">Fale Conosco</a></li>
+    </ul>
+</div>
+</body>
+</html>

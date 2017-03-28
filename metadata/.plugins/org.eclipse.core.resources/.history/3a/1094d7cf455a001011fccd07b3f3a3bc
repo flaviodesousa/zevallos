@@ -1,0 +1,488 @@
+<?php
+/**
+ * zHTML
+ *
+ * Processa as tags para simplificar o uso do HTML
+ *
+ * @package ztag
+ * @subpackage html
+ * @category HTML
+ * @version 1.0
+ * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @copyright 2007-2010 by Ruben Zevallos(r) Jr.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * This software consists of voluntary contributions made by many individuals
+ * and is licensed under the LGPL. For more information, see
+ * <http://ztag.zyc.com.br> *
+ */
+
+define("zhtmlVersion", 1.0, 1);
+define("zhtmlVersionSufix", "ALFA 0.1", 1);
+
+/**
+ * Just to check if zTag was loaded
+ *
+ * <code>
+ * zhtml_exist();
+ * </code>
+ *
+ * @return boolean 1 if exist
+ *
+ * @since 1.0
+ */
+function zhtml_exist() {
+  return 1;
+}
+
+/**
+ * Return this zTag version
+ *
+ * <code>
+ * zhtml_version();
+ * </code>
+ *
+ * @return string with zTag version
+ *
+ * @since 1.0
+ */
+function zhtml_version() {
+  return zhtmlVersion." ".zhtmlVersionSufix;
+}
+
+/**
+ * Compare the version parameter with current version
+ *
+ * <code>
+ * zhtml_compare();
+ * </code>
+ *
+ * @param number $version the version to compare
+ *
+ * @return boolean true if match with current version
+ *
+ * @since 1.0
+ */
+function zhtml_compare($version) {
+  return zhtmlVersion === $version;
+}
+
+/**
+ * Main zTag functions selector
+ *
+ * <code>
+ * zhtml_zexecute($tagId, $tagFunction, $arrayTag, $arrayTagId, $arrayOrder);
+ * </code>
+ *
+ * @param integer $tagId array id of current zTag of $arrayTag array
+ * @param string $tagFunction name of zTag function
+ * @param array $arrayTag array with all compiled zTags
+ * @param array $arrayTagId array with all Ids values
+ * @param array $arrayOrder array with zTag executing order
+ *
+ * @since 1.0
+ */
+function zhtml_zexecute($tagId, $tagFunction, &$arrayTag, &$arrayTagId, $arrayOrder) {
+	$arrParam = $arrayTag[$tagId][ztagParam];
+
+	$strId        = $arrParam["id"];
+
+	$strTagId     = $arrParam["tagid"];
+
+	$strValue     = $arrParam["value"];
+	$strTransform = $arrParam["transform"];
+
+	$strContent = $arrayTag[$tagId][ztagContent];
+
+  if (strlen($strContent)) $strContent = ztagVars($strContent, $arrayTagId);
+
+	if (strlen($strValue)) $strContent = $strValue;
+
+	$arrParam["value"] = $strContent;
+
+	if (!$strTagId) $strTagId = $strName;
+
+	$arrParam["id"] = $strTagId;
+
+	$strTag = strtolower($tagFunction);
+
+	$errorMessage = "";
+
+	switch (strtolower($tagFunction)) {
+    /*+
+     * Cell
+     *
+     * <code>
+     * <zhmtl:cell value="text" />
+     * </code>
+     *
+     * @param string value="text"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+	  case "cell":
+			$strTag = "td";
+
+      $errorMessage = ztagParamCheck($arrParam, "value");
+
+			$strParam = ztagParam($arrParam, "alt,align,border,height,width,id,class,style,nowrap,colspan");
+
+			if ($strTransform) $strContent = ztagTransform($strContent, $strTransform);
+
+			$arrayTag[$tagId][ztagResult] = "<$strTag$strParam>$strContent</$strTag>";
+			break;
+
+    /*+
+     * Echo
+     *
+     * <code>
+     * <zhmtl:echo value="text" />
+     * </code>
+     *
+     * @param string value="text"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "echo":
+			$strParam = ztagParam($arrParam, "value");
+
+			$errorMessage = ztagParamCheck($arrParam, "value");
+
+			$arrayTag[$tagId][ztagResult] = $strValue;
+			break;
+
+    /*+
+     * Img
+     *
+     * <code>
+     * <zhmtl:img value="text" />
+     * </code>
+     *
+     * @param string value="text"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "img":
+			$strParam = ztagParam($arrParam, "src,alt,align,border,height,width,id,class,style");
+
+			$errorMessage = ztagParamCheck($arrParam, "src,alt");
+
+			$arrayTag[$tagId][ztagResult] = "<$strTag$strParam />";
+			break;
+
+    /*+
+     * Base Font
+     *
+     * <code>
+     * <zhmtl:basefont value="text" />
+     * </code>
+     *
+     * @param string value="text"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "basefont":
+			$strParam = ztagParam($arrParam, "color,face,size");
+
+			$arrayTag[$tagId][ztagResult] = "<$strTag$strParam />";
+			break;
+
+    /*+
+     * Base
+     *
+     * <code>
+     * <zhmtl:base value="text" />
+     * </code>
+     *
+     * @param string value="text"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "base":
+			$strParam = ztagParam($arrParam, "href,target");
+
+			$errorMessage = ztagParamCheck($arrParam, "href");
+
+			$arrayTag[$tagId][ztagResult] = "<$strTag$strParam />";
+			break;
+
+    /*+
+     * Link
+     *
+     * <code>
+     * <zhmtl:link value="text" />
+     * </code>
+     *
+     * @param string value="text"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "link":
+			$strParam = ztagParam($arrParam, "href,target,id,class,style");
+
+			$errorMessage = ztagParamCheck($arrParam, "href");
+
+			$arrayTag[$tagId][ztagResult] = "<a$strParam>$strContent</a>";
+			break;
+
+    /*+
+     * Commment
+     *
+     * <code>
+     * <zhmtl:commment value="text" />
+     * </code>
+     *
+     * @param string value="text"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "commment":
+      if ($strTransform) $strContent = ztagTransform($strContent, $strTransform);
+
+			$arrayTag[$tagId][ztagResult] = "<!-- $strContent -->";
+			break;
+
+    /*+
+     * H1
+     *
+     * <code>
+     * <zhtml:h1 value="tagValueH1" style="tagStle" />
+     * </code>
+     *
+     * @param string value="tagValueH1"
+     * @param string style="tagStle"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "h1":
+
+    /*+
+     * H2
+     *
+     * <code>
+     * <zhtml:h2 value="tagValueH2" style="tagStle" />
+     * </code>
+     *
+     * @param string value="tagValueH2"
+     * @param string style="tagStle"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "h2":
+
+    /*+
+     * H3
+     *
+     * <code>
+     * <zhtml:h3 value="tagValueH3" style="tagStle" />
+     * </code>
+     *
+     * @param string value="tagValueH3"
+     * @param string style="tagStle"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "h3":
+
+    /*+
+     * H4
+     *
+     * <code>
+     * <zhtml:h4 value="tagValueH4" style="tagStle" />
+     * </code>
+     *
+     * @param string value="tagValueH4"
+     * @param string style="tagStle"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "h4":
+
+    /*+
+     * H5
+     *
+     * <code>
+     * <zhtml:h5 value="tagValueH5" style="tagStle" />
+     * </code>
+     *
+     * @param string value="tagValueH5"
+     * @param string style="tagStle"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "h5":
+
+    /*+
+     * H6
+     *
+     * <code>
+     * <zhtml:h6 value="tagValueH6" style="tagStle" />
+     * </code>
+     *
+     * @param string value="tagValueH6"
+     * @param string style="tagStle"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "h6":
+			$strParam = ztagParam($arrParam, "align,id,style");
+
+      if ($strTransform) $strContent = ztagTransform($strContent, $strTransform);
+
+			$arrayTag[$tagId][ztagResult] = "<$tagFunction$strParam>$strContent</$tagFunction>";
+			break;
+
+    /*+
+     * A
+     *
+     * <code>
+     * <zhtml:a href="tagURI" value="tagValue" target="tagTarget" />
+     * </code>
+     *
+     * @param string href="tagURI"
+     * @param string value="tagValue"
+     * @param string target="tagTarget"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+		case "a":
+			$strParam = ztagParam($arrParam, "href,target,id,class,style");
+
+      if ($strTransform) $strContent = ztagTransform($strContent, $strTransform);
+
+			$arrayTag[$tagId][ztagResult] = "<a$strParam>$strContent</a>";
+			break;
+
+    /*+
+     * PRE
+     *
+     * <code>
+     * <zhtml:pre value="tagValue" target="tagTarget" />
+     * </code>
+     *
+     * @param string value="tagValue"
+     * @param string target="tagTarget"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "pre":
+			$strParam = ztagParam($arrParam, "id,class,style");
+
+      if ($strTransform) $strContent = ztagTransform($strContent, $strTransform);
+
+			$arrayTag[$tagId][ztagResult] = "<a$strParam>$strContent</a>";
+			break;
+
+    /*+
+     * CODE
+     *
+     * <code>
+     * <zhtml:code value="tagValue" target="tagTarget" />
+     * </code>
+     *
+     * @param string value="tagValue"
+     * @param string target="tagTarget"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "code":
+      // @TODO Include Documentation for all zTags
+
+		case "title":
+		case "code":
+		case "u":
+		case "b":
+		case "s":
+		case "i":
+		case "em":
+		case "cite":
+		case "sup":
+		case "sub":
+		case "center":
+		case "kbd":
+		case "ins":
+		case "dfn":
+		case "del":
+		case "address":
+		case "p":
+		case "span":
+		case "div":
+			$strParam = ztagParam($arrParam, "align,style,class");
+
+      if ($strTransform) $strContent = ztagTransform($strContent, $strTransform);
+
+			$arrayTag[$tagId][ztagResult] = "<$strTag$strParam>$strContent</$strTag>";
+			break;
+
+    /*+
+     * FRAME
+     *
+     * <code>
+     * <zhtml:frame name="Body" src="$strSession" scrolling="auto" marginheight="0" marginwidth="0" />
+     * </code>
+     *
+     * @param string name="Body" src="$strSession"
+     * @param string scrolling="auto"
+     * @param string marginheight="0"
+     * @param string marginwidth="0"
+     *
+     * @author Ruben Zevallos Jr. <zevallos@zevallos.com.br>
+     */
+    case "frame":
+      $strParam = ztagParam($arrParam, "src,name,scrolling,marginheight,marginwidth");
+
+      $arrayTag[$tagId][ztagResult] = "<$strTag$strParam>$strContent>";
+      break;
+
+		default:
+			$errorMessage .= "<br />Undefined function \"$tagFunction\"";
+
+	}
+
+	ztagError($errorMessage, $arrayTag, $tagId);
+}
+
+function zhtml_cellhead($tagId, &$arrayTag, &$arrayTagId, $arrayOrder) {
+	$arrParam = $arrayTag[$tagId][ztagParam];
+
+	$strTagId     = $arrParam["tagid"];
+
+	$strValue     = $arrParam["value"];
+	$strTransform = $arrParam["transform"];
+
+	$strContent = $arrayTag[$tagId][ztagContent];
+
+	if (strlen($strValue)) $strContent = $strValue;
+
+  $arrParam["value"] = $strContent;
+
+  if (!$strTagId) $strTagId = $strName;
+
+  $arrParam["id"] = $strTagId;
+
+	$strTag = "th";
+
+	$strParam = ztagParam($arrParam, "alt,align,border,height,width,id,class,style,nowrap,colspan");
+
+	$errorMessage = ztagParamCheck($arrParam, "value");
+
+	if ($strTransform) $strContent = ztagTransform($strContent, $strTransform);
+
+	$arrayTag[$tagId][ztagResult] = "<$strTag$strParam>$strContent</$strTag>";
+
+	ztagError($errorMessage, $arrayTag, $tagId);
+}
+
+?>

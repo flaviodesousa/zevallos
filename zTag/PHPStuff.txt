@@ -1,0 +1,45 @@
+$conf_path = realpath(dirname(__FILE__) . '/fixtures/bookstore/build/conf/bookstore-conf.php');
+
+Enviando arquivos pelo PHP
+$file = file_get_contents('some.zip');
+header('Content-Type: application/zip');
+header('Content-Disposition: attachment; filename="some.zip"');
+header('Content-Length: ' . strlen($file));
+echo $file;
+
+
+http://phpbench.com/ <-- Melhorando a performance
+Faster
+$i = 0; while($i < 1000000) ++$i;
+
+Faster than FOREACH
+$key = array_keys($aHash);
+$size = sizeOf($key);
+for ($i=0; $i<$size; $i++) $aHash[$key[$i]] .= "a";
+
+Faster
+if, elseif and else (using ===)
+
+Faster - Single array
+$alias = &$aSingleDimArray[$i]
+
+$alias = $aMultiDimArray[$i]["aaaaa"]["aaaaaaaaaa"]
+
+
+Faster
+foreach($aHash as $val);
+
+foreach($aHash as $key => $val);
+
+Faster
+$var = '';
+
+Usando XML
+$oXml = new DOMDocument();
+$xmlLoad = $oXml->loadXML( $sXml );
+$domXPath = new DOMXPath($oXml);
+$domXPath->registerNamespace("xsi",
+"http://www.log.sk/standards/subxml/schema/MARC21slim.xsd");
+
+$nodes = $domXPath->query("/xsi:datafield/xsi:subfield");
+var_dump($nodes->item(0)->textContent);

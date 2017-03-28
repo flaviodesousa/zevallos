@@ -1,0 +1,508 @@
+/************** CSS Style for forms elements ***************/
+
+/**************
+	Header
+**************/
+#innerHeader #newsletterForm {
+	padding:14px 0 0 36px;
+	position:relative
+}
+#innerHeader #newsletterForm label { position:relative}
+#newsletterEmailField {
+	background:url("img/bullet-carta.png") no-repeat scroll 5px 2px transparent;
+	border:1px solid #DBDBDB;
+	color:#A7A7A7;
+	font-size:15px;
+	font-weight:bold;
+	height:26px;
+	padding:5px 0 1px 50px;
+	_padding:7px 0 1px 50px;
+	*padding:7px 0 1px 50px;
+	width:254px;
+}
+#innerHeader #newsletterForm .submitNewsletter {
+	background:url("img/btn-cadastrar.png") no-repeat 0 0;
+	/*background:url("img/btn-cadastrar-natal.png") no-repeat 0 0;*/
+	border:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:13px;
+	font-weight:bold;
+	height:34px;
+	padding:1px 5px 3px 0;
+	width:85px
+}
+#innerHeader #navLogin label.login {
+	padding-right:10px;
+	*padding-right:5px
+}
+#innerHeader #navLogin label.password { margin-right:7px}
+#innerHeader #navLogin input.inputText {width:134px}
+#innerHeader #navLogin input.inputPass {width:92px}
+/* End Header */
+
+/*******************
+	Global Forms
+********************/
+#contactForm .personalInfo {margin:0}
+#contactForm label, #resetPasswordForm label, #loginForm label, #registrationForm label, #accountForm label, #passwordForm label, #inviteFriendsForm label, #loginForm_0 label {font-size:12px}
+#contactForm select {width:298px}
+#contactForm textarea {
+	border:1px solid silver;
+	margin-top:10px;
+	width:280px
+}
+#contactForm input:focus, #contactForm textarea:focus, #resetPasswordForm input:focus, #loginForm input:focus, #registrationForm input:focus, #accountForm input:focus, #passwordForm input:focus, #inviteFriendsForm input:focus, #inviteFriendsForm textarea:focus, #inviteFriendsUploadForm input:focus, #loginForm_0 input:focus {
+	-moz-box-shadow:1px 1px 2px #226ACC;
+	-webkit-box-shadow:1px 1px 2px #226ACC;
+	border-color:#226ACC
+}
+#contactForm .validation-error input {border-color:red}
+#loginForm_0 li.reqPass {font-size:12px}
+#loginForm_0 fieldset.personalInfo {margin:0}
+#contactForm li, #resetPasswordForm li, #loginForm li, #registrationForm li, #loginForm_0 li {margin:10px 0 0 0}
+#contactForm .control, #resetPasswordForm .control, #loginForm .control, #registrationForm .control, #accountForm .control, #passwordForm .control, #inviteFriendsForm .control, #inviteFriendsUploadForm .control, #pagamentodigital .control, #loginForm_0 .control{
+	margin:0;
+	padding-top:10px;
+	text-align:center !important
+}
+#pagamentodigital .control input { margin-top:20px}
+#resetPasswordForm .personalInfo, #loginForm .personalInfo, #registrationForm .personalInfo {margin:0}
+#registrationForm .pwd { float:none}
+#registrationForm #agreeCheckbox {
+	border:none;
+	margin-right:5px
+}
+#registrationForm #agreeCheckbox-label { line-height:17px}
+
+/**** Referral Friends ****/
+form#inviteFriendsForm fieldset {
+	border:0 none;
+	float:left;
+	margin:1em 10px 5px -15px;
+	padding:0;
+	width:auto;
+	position:relative;
+}
+.referralLink {
+	color:#2e579b;
+	float:left;
+	padding:4px !important;
+	width:250px;
+}
+#inviteFriendsForm input, #inviteFriendsForm textarea, .linkPessoal .inputText  {
+	border:1px solid silver;
+	font-size:14px;
+	margin:0;
+	padding:5px;
+}
+#inviteFriendsForm input {width:300px}
+#inviteFriendsForm textarea {float:left; height:60px; margin-right:10px; width:680px;}
+/**** End Referral Friends ****/
+#contactForm input, #contactForm select, #contactForm textarea, #resetPasswordForm input, #loginForm input, #registrationForm input, #accountForm input,
+#passwordForm input, #inviteFriendsUploadForm input, #loginForm_0 input {
+	margin:10px 0 0;
+	padding:8px
+}
+.inputText {wid}
+#inviteFriendsForm input.button, .control input.button, .import_email_submit {
+	background:url("img/modulo_botoes.jpg") scroll 0 0 transparent;
+	border:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	float:left;
+	font-size:125%;
+	font-weight:bold;
+	height:72px;
+	margin:0;
+	width:186px
+}
+.control input.submit_mail_importados {
+	background:url('img/modulo_botoes.jpg') 0 -88px scroll no-repeat;
+	border:0px !important;
+	color:#FFFFFF !important;
+	font-size:22px !important;
+	height:45px;
+	margin-top:16px;
+	padding-top:15px;
+	text-align:center;
+	width:184px
+}
+input#emailUploadComponent {
+	wight:300px;
+	height:30px;
+	margin:0;
+	border:2px solid #dadada
+}
+#invite .linkPessoal button {
+	background:url("img/btn-copy.png") no-repeat 0 0;
+	border:medium none;
+	color:#FFFFFF;
+	font-size:12px;
+	font-weight:bold;
+	height:26px;
+	width:51px
+}
+#invite form.linkPessoal label {
+	color:#577DC0;
+	display:block;
+	font-size:20px;
+	font-weight:bold;
+	margin-left:60px
+}
+#invite form.linkPessoal span {
+	color:#5F5F5F;
+	display:block;
+	font-size:11px;
+	margin:20px 0 5px
+}
+#invite form.linkPessoal input.inputText {
+	border:1px solid #9AB1E1;
+	height:22px;
+	width:270px
+}
+#login_mail input {
+	width:300px;
+	border:1px solid silver;
+	font-size:14px;
+	margin:0;
+	padding:5px;
+}
+#login_clientmail input {
+	width:250px;
+	border:1px solid silver;
+	font-size:14px;
+	margin:0;
+	padding:5px;
+}
+.import_email_submit {
+	float:none !important
+}
+#contactForm .control input, #resetPasswordForm .control input, #loginForm .control input, #registrationForm .control input, #accountForm .control input, #pagamentodigital .control input, #loginForm_0 .control input, #passwordForm .control input {
+	background:url("img/bg_bt.png") no-repeat scroll 0 0 transparent;
+	border:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:125%;
+	font-weight:bold;
+	height:47px;
+	margin:0;
+	width:163px
+}
+fieldset.control {
+	clear:left;
+	float:none;
+	text-align:center;
+	width:auto;
+}
+#inviteFriendsForm label {
+	margin:10px 0;	
+}
+
+/***** Landing Page *****/
+#landingpage #form_login_bc input#emailField {
+	background-color:#fff;
+	border:1px solid #6B6B6B;
+	color:#3c3c3c;
+	font-size:20px;
+	margin:15px 0;
+	padding:10px;
+	width:352px;
+}
+/*.selectbg {
+	background:url("img/bg_select.png") no-repeat scroll right top transparent;
+	border:1px solid #6B6B6B;
+	color:#2B2B2B;
+	font-size:20px;
+	height:19px;
+	left:0;
+	overflow:hidden;
+	padding:10px;
+	position:absolute;
+	top:0;
+	width:352px;
+}*/
+#landingpage #form_login_bc select#citySelect {
+	background-color:#fff;
+	height:40px;
+	width:375px;
+	border:1px solid #6B6B6B;
+	color:#2B2B2B;
+	font-size:20px;
+	padding:5px 7px;
+	z-index:5;
+}
+select#addressSelect, select#addressSelectChild1, select#addressSelectChild2 {
+	border:1px solid #CCC;
+	color:#494949;
+	font-size:16px;
+	margin:5px 0;
+	padding:2px;
+	width:420px !important;
+}
+#inviteFriendsForm li {
+	margin:1em 0 0 15px;
+}
+li.message_error {
+	color:#ee0000;
+	font-size:12px;
+	margin-top:0 !important;
+}
+/****************
+	BC Connect
+****************/
+#formulario_bc_conect {}
+#formulario_bc_conect div.right {
+	height:361px;
+	padding-left:350px;
+	width:340px
+}
+#formulario_bc_conect form {
+	clear:both;
+	float:right
+}
+#formulario_bc_conect form label {color:#7B7B7B}
+#formulario_bc_conect form li.chk {margin-top:5px}
+#formulario_bc_conect form li.chk input {
+	border:none;
+	margin-right:6px
+}
+#formulario_bc_conect form div.esq {margin-top:8px}
+#formulario_bc_conect form .control {width:320px}
+#formulario_bc_conect form .control input {
+	background-image:url("img/btn-entrar.png");
+	height:17px;
+	margin-top:15px;
+	width:88px
+}
+/* End */
+/****************
+	 Payment 
+*****************/
+.loginTopPurchase input.go {
+	background:url("img/btnFormLogin.png") no-repeat 0 0;
+	border:medium none;
+	color:#FFFFFF;
+	font-size:14px;
+	font-weight:bold;
+	height:37px;
+	margin:0 0px;
+	width:125px
+}
+
+
+/**********************
+	Tooltip Créditos
+***********************/
+#cd_header #tooltip {
+	background:url("img/tooltip_bg.png");
+	display:none;
+	font-size:11px;
+	height:109px;
+	position:absolute;
+	right:-10px;
+	top:30px;
+	width:286px;
+	z-index:9999999;
+}
+#cd_header #tooltip input {
+	border:1px solid silver;
+	color:#3D3D3D;
+	float:left;
+	font-size:12px;
+	margin:0;
+	padding:6px;
+	width:180px;
+}
+#cd_header #tooltip a.close {
+	background:url("img/tooltip_btnclose.png") no-repeat;
+	cursor:pointer;
+	height:23px;
+	position:absolute;
+	right:4px;
+	top:16px;
+	width:25px;
+}
+#cd_header #tooltip a.close span {display:none;}
+#cd_header #tooltip p {margin:10px 0 5px !important;}
+#cd_header #tooltip p.validation-msg {margin:0 !important;}
+#cd_header #tooltip #couponDisplay {
+	position:relative;
+	padding:15px;	
+}
+#cd_header #tooltip  a.btn_submit {
+	background:url("img/modulo_botoes.jpg") repeat scroll 0 -153px transparent;
+	border:medium none;
+	color:#FFFFFF !important;
+	cursor:pointer;
+	float:left;
+	font-size:13px !important;
+	font-weight:bold !important;
+	height:22px;
+	padding:7px 0 0 7px;
+	width:48px;
+}
+/**********************
+	Tooltip Vale Presente
+***********************/
+.innerPage ul.coupon_list li .tooltip {
+	background:url("img/tooltip_bg.png");
+	display:none;
+	font-size:11px;
+	height:109px;
+	position:absolute;
+	right:-10px;
+	top:10px;
+	width:286px;
+	z-index:9999999 !important;
+}
+.innerPage ul.coupon_list li .tooltip input {
+	border:1px solid silver;
+	color:#3D3D3D;
+	float:left;
+	font-size:12px;
+	margin:0;
+	padding:6px;
+	width:180px;
+}
+.innerPage ul.coupon_list li .tooltip a.close {
+	background:url("img/tooltip_btnclose.png") no-repeat;
+	cursor:pointer;
+	height:23px;
+	position:absolute;
+	right:4px;
+	top:16px;
+	width:25px;
+}
+.innerPage ul.coupon_list li .tooltip a.close span {display:none;}
+.innerPage ul.coupon_list li .tooltip p {margin:10px 0 5px !important;}
+.innerPage ul.coupon_list li .tooltip p.validation-msg {margin:0 !important;}
+.innerPage ul.coupon_list li .tooltip #couponDisplay {
+	position:relative;
+	padding:15px;	
+}
+.innerPage ul.coupon_list li .tooltip  input.btn_submit {
+	background:url("img/modulo_botoes.jpg") repeat scroll 0 -153px transparent;
+	border:medium none;
+	color:#FFFFFF !important;
+	cursor:pointer;
+	float:left;
+	font-size:13px !important;
+	font-weight:bold !important;
+	height:29px;
+	width:55px;
+}
+
+/**************
+	Partners
+**************/
+form#contactForm fieldset.partners {
+	border:0 none;
+	float:none !important;
+	margin:30px 0 !important;
+	padding:0;
+	width:auto !important;
+}
+form#contactForm fieldset.partners h5 {
+	color:#666;
+	font-size:15px;
+	font-weight:bold;
+	margin:0 0 20px 0;	
+}
+form#contactForm fieldset.partners h5 span {
+	font-size:12px;
+	font-weight:normal;
+}
+form#contactForm fieldset.partners h5 label {
+	float:none;	
+	font-size:15px;
+	font-weight:normal;
+	width:auto;
+}
+form#contactForm fieldset.partners ol {
+	border-bottom:2px dotted #BBB;
+	margin:0 0 20px 0;
+	padding:0 0 20px 0;	
+}
+form#contactForm fieldset.partners ol li {
+	float:left;
+	width:445px;
+}
+form#contactForm fieldset.partners ol li .validation-msg {
+	line-height:auto !important;
+	padding:0 0 5px 90px !important;
+	margin:0 !important;
+	width:280px;
+}
+form#contactForm fieldset.partners label {
+	color:#666;
+	font-size:12px;
+	float:left;
+	margin:8px 10px 0 0;
+	width:80px;
+}
+form#contactForm fieldset.partners input, form#contactForm fieldset.partners textarea{
+	float:left;	
+	font-size:16px;
+	margin:0 !important;
+	padding:4px !important;
+	width:300px;
+}
+form#contactForm fieldset.partners textarea {
+	font-family:arial;
+	height:150px;
+	width:890px;
+}
+form#contactForm fieldset.partners select {
+	border:1px solid silver;
+	float:left;
+	font-size:16px;
+	margin:0 !important;
+	padding:2px;
+	width:310px;
+}
+form#contactForm fieldset.partners input.btn_partner {
+	background:url("img/modulo_botoes.jpg") no-repeat scroll 0 -466px transparent;
+	border:0 none;
+	color:#FFFFFF !important;
+	cursor:pointer;
+	display:block;
+	float:none;
+	font-size:19px !important;
+	height:46px;
+	margin:16px auto !important;
+	padding-top:15px;
+	text-align:center;
+	text-decoration:none;
+	width:352px;
+}
+form#contactForm fieldset.partners input.btn_partner:focus {
+	border:0 none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+/* End */
+
+/********** Hack IE 7 **********/
+*+html #landingpage #form_login_bc select#citySelect {
+	border:2px solid #6B6B6B;
+	height:40px !important;
+	width:375px;
+	z-index:5 !important;
+}
+*+html #friend_offer ul li input{
+	display:block;
+	margin-left:-15px !important;
+	float:none !important;
+}
+* html #friend_offer ul li input{
+	display:block;
+	margin-left:-15px !important;
+	float:none !important;
+	width:180px;
+}
+/*********** Hack IE 6 **********/
+
+* html #cd_header #tooltip, * html .innerPage ul.coupon_list li .tooltip {
+	background:url("img/tooltip_bg_ie.png");
+}

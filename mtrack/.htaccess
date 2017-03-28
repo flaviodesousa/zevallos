@@ -1,0 +1,14 @@
+php_value upload_max_filesize 1024M
+php_value post_max_size 1024M
+
+RewriteEngine On
+Options +Followsymlinks
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.* - [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*/images/(.*)$ /images/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*/uploads_user/(.*)$ /uploads_user/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/?$ /Profile.php?user=$1 [L]

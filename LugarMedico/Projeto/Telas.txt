@@ -1,0 +1,70 @@
+Roteiro de execução
+
+.htaccess
+  + Rewrite - Perfil /lugarmedico.com/perfil_usuario
+    /index.ztag?d=/perfil_usuario <-- Recupera o id do usuário redireciona para o
+    /perfil.ztag?ud=id_usuario
+
+    O / será a página home do perfil do usuário
+
+    Obs: Estudar outra forma, talvez criando uma pasta com a URL do usuário e incluir um index.ztag com o redirect lá, o que ficar mais rápido.
+
+/index.ztag
+  + Valida o login, se não, manda para a tela pública do site
+
+  Mostra a tela home do usuário, que terá dicas para a navegação nas facilidades do site.
+
+Login:
+  /logon.ztag <-- Tela de login
+    + valida se o usuário está logado se estiver, manda para o /index.ztag
+    + link esqueceu a senha, vai para o /logonPassword.ztag
+
+  /logonValidate.ztag <-- Valida o login
+    + Deu certo, manda para o /index.ztag
+    + Deu erro, manda para o /logon.ztag
+
+/join/index.ztag
+  + valida se o usuário está logado, se estiver, manda para o /perfil.ztag
+
+/Publico/index.ztag
+  Conteúdo público do portal que conterá:
+  + Eventos públicos
+  + Notícias selecionadas
+  + Últimos comentários
+
+/perfil_usuario/index.ztag
+  Página pessoal do usuário, será apresentado o conteúdo de acordo com o nível do usuário e a privacidade definida pelo usuário.
+
+  Teremos pelo menos:
+  - Foto do usuário
+  - Último trabalho, Pos-graduação, Universidade e escola
+  - Lista dos últimos trabalhos publicados
+  -
+
+/perfil_usuario/artigo
+/perfil_usuario/trabalho
+/perfil_usuario/pesquisa
+/perfil_usuario/publicacao
+/perfil_usuario/monografia
+/perfil_usuario/dica
+
+  Rewrite para a lista de acordo com o tipo de documentos acima;
+
+/perfil_usuario/artigo/titulo_do_texto
+/perfil_usuario/trabalho/titulo_do_texto
+/perfil_usuario/pesquisa/titulo_do_texto
+/perfil_usuario/publicacao/titulo_do_texto
+/perfil_usuario/monografia/titulo_do_texto
+/perfil_usuario/dica/titulo_do_texto
+
+  Rewrite para o documento de acordo com o tipo de documentos acima
+
+/perfil_usuario/blog/index.ztag
+  Mostra as últimas atualizações do blog do usuário
+
+/perfil_usuario/albums/index.ztag
+  + mostra lista dos albuns de acordo com o nível do usuário
+
+/perfil_usuario/album/nome_album/index.ztag
+  + Mostra as imagens do album de acordo com o direito do usuário.
+
